@@ -1,0 +1,540 @@
+{
+  "development_query": true,
+  "not_formal_v14_result": true,
+  "target_executed": false,
+  "source_file": "/workspace/callscope/reports/astra-iteration12/responsibility-operations-winwincode-development.json",
+  "source_sha256": "dda6ee5d9825e1308b71219825597b2edc3e09a38a1d28666d46231c0abf5804",
+  "architecture_module_sha256": "6bd9558a7b7ed239ce10c15a0a30f09427ad25065f0c3554f9bda2cecf082489",
+  "architecture_module_bytes_stable": true,
+  "declarations_count": 489,
+  "selected_declarations": [
+    {
+      "actual_owner": {
+        "file": "crates/kernel/src/lib.rs",
+        "symbol": "Kernel.submit_turn",
+        "graph_node_id": "rust:crates/kernel/src/lib#Kernel.submit_turn",
+        "location": {
+          "file": "crates/kernel/src/lib.rs",
+          "line": 1333,
+          "column": 5,
+          "start_byte": 48933,
+          "end_byte": 49881,
+          "source_hash": "ffdcb685328a358e681b2bc9972068493523f36b6ba5bebb9b1523c172d0d2a7",
+          "location_ref": "/source_location_index/04a13edcab240be5b67a224a",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「async {\\n            if text.trim().is_empty() {\\n                return Err(KernelFailure::new(\\n                    \"EMPTY_INPUT\",\\n                    \"turn input must contain text\",\\n                ));\\n            }\\n            let runtime = self.runtime().await?;\\n            let session = self.session(&runtime, session_id).await?;\\n            self.…［展示截断；完整操作保留］」作为第 1 个实参交给已绑定接口「rust:crates/kernel/src/lib#Kernel.guard」，对应捕获形参「future: impl Future<Output = KernelResult<T>> + Send + 'a」。该普通调用关系不替代进程或网络协议关系。 捕获 binding「runtime」的初始化来源为「self.runtime().await?」；保留该声明与初始化表达式，不推任意后续读取的当前值。 条件「text.trim().is_empty()」的捕获提前退出分支为「Err_return：Err(KernelFailure::new(\\n                    \"EMPTY_INPUT\",\\n                    \"turn input must contain text\",\\n                ))」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return Err(KernelFailure::new(\\n                    \"EMPTY_INPUT\",\\n                    \"turn input must contain text\",\\n                ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「05a7b6a446cf68f0b16dcf80」先于语句位置「1」的操作「893aaca0503e52454ab926ad」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+      "summary_statement_ids": [
+        "a66856e89ba84789f043cbbc",
+        "7178d2825b2f6d0ef6a1c8ee",
+        "04e50d44279234dd5fe93cb3",
+        "939bfd9f7f193333cf463ca1",
+        "0cbee69b30f352d1c7566be7"
+      ],
+      "statements": [
+        {
+          "id": "a66856e89ba84789f043cbbc",
+          "text": "将「async {\\n            if text.trim().is_empty() {\\n                return Err(KernelFailure::new(\\n                    \"EMPTY_INPUT\",\\n                    \"turn input must contain text\",\\n                ));\\n            }\\n            let runtime = self.runtime().await?;\\n            let session = self.session(&runtime, session_id).await?;\\n            self.…［展示截断；完整操作保留］」作为第 1 个实参交给已绑定接口「rust:crates/kernel/src/lib#Kernel.guard」，对应捕获形参「future: impl Future<Output = KernelResult<T>> + Send + 'a」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "67bd9dce95cb7715a83f7396",
+          "operation_pointer": "/operations/6038"
+        },
+        {
+          "id": "e5d475b3a013eca5881289c9",
+          "text": "以无显式实参的调用形式「text.trim().is_empty」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "05a7b6a446cf68f0b16dcf80",
+          "operation_pointer": "/operations/6039"
+        },
+        {
+          "id": "6a2c4992a63882124db15b73",
+          "text": "以无显式实参的调用形式「text.trim」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "19893008fc37a59ed3829858",
+          "operation_pointer": "/operations/6040"
+        },
+        {
+          "id": "04e50d44279234dd5fe93cb3",
+          "text": "条件「text.trim().is_empty()」的捕获提前退出分支为「Err_return：Err(KernelFailure::new(\\n                    \"EMPTY_INPUT\",\\n                    \"turn input must contain text\",\\n                ))」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "23852b5151be5daf808ffc0d",
+          "operation_pointer": "/operations/6041"
+        },
+        {
+          "id": "939bfd9f7f193333cf463ca1",
+          "text": "以「return Err(KernelFailure::new(\\n                    \"EMPTY_INPUT\",\\n                    \"turn input must contain text\",\\n                ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "c4095c80af2ecc90986df749",
+          "operation_pointer": "/operations/6042"
+        },
+        {
+          "id": "f5279574289e553b3a37b72c",
+          "text": "在调用形式「Err」中提供第 1 个实参「KernelFailure::new(\\n                    \"EMPTY_INPUT\",\\n                    \"turn input must contain text\",\\n                )」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "21772e6645564b7a0cf4b14c",
+          "operation_pointer": "/operations/6043"
+        },
+        {
+          "id": "d311d5675d8cb7720c66a4c6",
+          "text": "在调用形式「KernelFailure::new」中提供第 1 个实参「\"EMPTY_INPUT\"」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "314bdc77e2a190e715008f4a",
+          "operation_pointer": "/operations/6044"
+        },
+        {
+          "id": "af9c344cda04bb299b6bc0e1",
+          "text": "在调用形式「KernelFailure::new」中提供第 2 个实参「\"turn input must contain text\"」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "a70352b5e970b71fd1c5d876",
+          "operation_pointer": "/operations/6045"
+        },
+        {
+          "id": "7178d2825b2f6d0ef6a1c8ee",
+          "text": "捕获 binding「runtime」的初始化来源为「self.runtime().await?」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "893aaca0503e52454ab926ad",
+          "operation_pointer": "/operations/6046"
+        },
+        {
+          "id": "0cbee69b30f352d1c7566be7",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「05a7b6a446cf68f0b16dcf80」先于语句位置「1」的操作「893aaca0503e52454ab926ad」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "55a222796ff1b4444df77bfc",
+          "operation_pointer": "/operations/6047"
+        },
+        {
+          "id": "1d02f94782dfb66ad0a9bbbe",
+          "text": "以无显式实参的调用形式「self.runtime」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "0bd100b53e7ee2bd52bd63b4",
+          "operation_pointer": "/operations/6048"
+        },
+        {
+          "id": "cee5a7e64007b9e088940f4b",
+          "text": "捕获 binding「session」的初始化来源为「self.session(&runtime, session_id).await?」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "dba75357e84e26ef1e9a3a34",
+          "operation_pointer": "/operations/6049"
+        },
+        {
+          "id": "dc37598704adde2734d37a53",
+          "text": "保留同一块中的正常源码顺序：语句位置「1」的操作「893aaca0503e52454ab926ad」先于语句位置「2」的操作「dba75357e84e26ef1e9a3a34」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "c8874c06fd7dacaac9943fe6",
+          "operation_pointer": "/operations/6050"
+        },
+        {
+          "id": "39d3ff513318495bfb2d030a",
+          "text": "在调用形式「self.session」中提供第 2 个实参「session_id」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "4df29b89217a0268c7ea1e7b",
+          "operation_pointer": "/operations/6051"
+        },
+        {
+          "id": "5871cdf0e924d390c33a881a",
+          "text": "在调用形式「self.session」中提供第 1 个实参「&runtime」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "9e9c1b11b4561af5915dc23e",
+          "operation_pointer": "/operations/6052"
+        },
+        {
+          "id": "7fb4da86bbdf3f79d19eee79",
+          "text": "以无显式实参的调用形式「self.enforce_private_permissions」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "fd3655e0934d1039188ee4d2",
+          "operation_pointer": "/operations/6053"
+        },
+        {
+          "id": "1c95dcdd094ca07c287029a6",
+          "text": "捕获 binding「submission」的初始化来源为「session\\n                .thread\\n                .start_or_steer_turn(user_text_request(text, &options))\\n                .await\\n                .map_err(|error| KernelFailure::new(\"TURN_SUBMIT_FAILED\", error.to_string()))?」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "99f2749cb0a8c052c18b155e",
+          "operation_pointer": "/operations/6055"
+        },
+        {
+          "id": "3ca0e35c8d4728d1c2a4b699",
+          "text": "在调用形式「session\\n                .thread\\n                .start_or_steer_turn(user_text_request(text, &options))\\n                .await\\n                .map_err」中提供第 1 个实参「|error| KernelFailure::new(\"TURN_SUBMIT_FAILED\", error.to_string())」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "9b1ff7f4e828db79b7e3822c",
+          "operation_pointer": "/operations/6057"
+        },
+        {
+          "id": "d012e98e260897675a1a3178",
+          "text": "在调用形式「session\\n                .thread\\n                .start_or_steer_turn」中提供第 1 个实参「user_text_request(text, &options)」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "a3479ec996a969df73dd7fc4",
+          "operation_pointer": "/operations/6058"
+        },
+        {
+          "id": "06d2e2753d51905d1c43c140",
+          "text": "在调用形式「user_text_request」中提供第 2 个实参「&options」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "ed6e888c12dc21e470a42e65",
+          "operation_pointer": "/operations/6059"
+        },
+        {
+          "id": "64931e996104d73db6c3e3f5",
+          "text": "在调用形式「user_text_request」中提供第 1 个实参「text」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "f4c34be6a4a2d6ca391b07bb",
+          "operation_pointer": "/operations/6060"
+        },
+        {
+          "id": "6df3d4f48a5bad863aafc07c",
+          "text": "以无显式实参的调用形式「self.enforce_private_permissions」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "fc50825650a634abbdd49e80",
+          "operation_pointer": "/operations/6064"
+        },
+        {
+          "id": "5aede12383362867b677dc83",
+          "text": "在调用形式「Ok」中提供第 1 个实参「submission_info(submission)」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "5b3ae4fed0e64c361cc18917",
+          "operation_pointer": "/operations/6066"
+        },
+        {
+          "id": "9f2cb7123c9f13ce5ea71c17",
+          "text": "在调用形式「submission_info」中提供第 1 个实参「submission」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。",
+          "operation_id": "0514469679d9c2e2f9f92048",
+          "operation_pointer": "/operations/6068"
+        }
+      ],
+      "all_operation_count": 28
+    },
+    {
+      "actual_owner": {
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+        "graph_node_id": "rust:crates/winwincode-codex/src/adapter#<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+        "location": {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "line": 3511,
+          "column": 5,
+          "start_byte": 137533,
+          "end_byte": 142538,
+          "source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+          "location_ref": "/source_location_index/ae2f995943dfb53587c7444b",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「&run_key」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.persist_run」，对应捕获形参「run_key: &str」。该普通调用关系不替代进程或网络协议关系。 包含赋值/更新「run.record.submission_digest = Some(submission_digest)」，捕获目标为「run.record.submission_digest」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。 捕获 binding「last_tokens」的初始化来源为「terminal\\n                    .token_usage\\n                    .as_ref()\\n                    .map_or(0, |usage| usage.last_token_usage.total_tokens.max(0))」；保留该声明与初始化表达式，不推任意后续读取的当前值。 条件「goal != expected_goal」的捕获提前退出分支为「Err_return：Err(conflict())」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return Err(conflict())」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「4e383597569a7a31651589fa」先于语句位置「1」的操作「63f4d1d6afb9e3b2891d0257」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。 将「thread_id」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.session_for_thread」，对应捕获形参「thread_id: &CodexThreadId」。该普通调用关系不替代进程或网络协议关系。",
+      "summary_statement_ids": [
+        "01ffb67779f6c7c4a0b48763",
+        "5d8c579dc64c57bfbe3a3f92",
+        "3a4e7e2dbb9251df2012036e",
+        "2cd950f9bcf24b4c868fafa6",
+        "5e0b2d1b49dabf9a0df0d627",
+        "6ad3879d9faa21a1f570e154",
+        "52a2bae7017afc0012a0f205"
+      ],
+      "statements": [
+        {
+          "id": "37b7f89ae8c00619061afaa2",
+          "text": "将「thread_id」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.run_key_for_thread」，对应捕获形参「thread_id: &CodexThreadId」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "aa14c231ac8bdf76ac43b8ce",
+          "operation_pointer": "/operations/6449"
+        },
+        {
+          "id": "6ad3879d9faa21a1f570e154",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「4e383597569a7a31651589fa」先于语句位置「1」的操作「63f4d1d6afb9e3b2891d0257」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "522f4c28dfc590a50c0747df",
+          "operation_pointer": "/operations/6451"
+        },
+        {
+          "id": "6692b7fb8c35de86eab981bb",
+          "text": "在调用形式「self.runs.get」中提供第 1 个实参「&run_key」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "92d5e3a79826a936952f6324",
+          "operation_pointer": "/operations/6453"
+        },
+        {
+          "id": "84d5b45463de2e3e56b2e999",
+          "text": "在调用形式「self.runs.get(&run_key).ok_or_else」中提供第 1 个实参「unknown_thread」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "dcdbe03844d6144464a88408",
+          "operation_pointer": "/operations/6454"
+        },
+        {
+          "id": "d8f1d2e0edce213faa721b59",
+          "text": "将「&run.record.job」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/stage_product#stage_product_prompt」，对应捕获形参「job: &ExecutionJob」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "8892b96e3eb3c757bca9ac64",
+          "operation_pointer": "/operations/6456"
+        },
+        {
+          "id": "2cd950f9bcf24b4c868fafa6",
+          "text": "条件「goal != expected_goal」的捕获提前退出分支为「Err_return：Err(conflict())」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "799dc91d08350e2382d0ca36",
+          "operation_pointer": "/operations/6459"
+        },
+        {
+          "id": "5e0b2d1b49dabf9a0df0d627",
+          "text": "以「return Err(conflict())」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "3c596c1da481faa1ed5c1efc",
+          "operation_pointer": "/operations/6460"
+        },
+        {
+          "id": "15845c5ee6c0974ce3e7150b",
+          "text": "以无显式实参的调用形式「conflict」调用已绑定接口「rust:crates/winwincode-codex/src/adapter#conflict」；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "978982f40bacb1b789153523",
+          "operation_pointer": "/operations/6462"
+        },
+        {
+          "id": "d5c578ced27153f640ab7d27",
+          "text": "将「&run.record」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#turn_submission_options」，对应捕获形参「record: &StoredRun」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "955fbbcbf65ecbe187f63a4b",
+          "operation_pointer": "/operations/6468"
+        },
+        {
+          "id": "e23d94a1154667a921cc7e7b",
+          "text": "将「goal」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#submission_input_digest」，对应捕获形参「input: &str」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "ed88be2b8c60d631370fe39f",
+          "operation_pointer": "/operations/6473"
+        },
+        {
+          "id": "bf2e0feff447ad92c0ebc422",
+          "text": "在调用形式「self.runs.get_mut」中提供第 1 个实参「&run_key」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "45207e47479d66885ec61ffd",
+          "operation_pointer": "/operations/6475"
+        },
+        {
+          "id": "5d8c579dc64c57bfbe3a3f92",
+          "text": "包含赋值/更新「run.record.submission_digest = Some(submission_digest)」，捕获目标为「run.record.submission_digest」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。",
+          "operation_id": "97808b5e4a9aa8d81379f7a8",
+          "operation_pointer": "/operations/6482"
+        },
+        {
+          "id": "8f693775133d9977d4c72d19",
+          "text": "在调用形式「Some」中提供第 1 个实参「submission_digest」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "2eabec4f531bb67c0735656f",
+          "operation_pointer": "/operations/6483"
+        },
+        {
+          "id": "01ffb67779f6c7c4a0b48763",
+          "text": "将「&run_key」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.persist_run」，对应捕获形参「run_key: &str」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "fd2b5a7949bfbf22be753a75",
+          "operation_pointer": "/operations/6497"
+        },
+        {
+          "id": "52a2bae7017afc0012a0f205",
+          "text": "将「thread_id」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.session_for_thread」，对应捕获形参「thread_id: &CodexThreadId」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "9fb018a9b2d005cfdd588a9e",
+          "operation_pointer": "/operations/6512"
+        },
+        {
+          "id": "2263ea7f8c92f2dc853cb325",
+          "text": "在调用形式「self\\n            .kernel\\n            .reconcile_turn_exact」中提供第 1 个实参「&session」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "2d482facd3948f37dabf7a9f",
+          "operation_pointer": "/operations/6515"
+        },
+        {
+          "id": "e033e1f85c5fe6ea16c75505",
+          "text": "将「&run_key」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.retain_submission_failure」，对应捕获形参「run_key: &str」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "810999e524666c2f780c6e92",
+          "operation_pointer": "/operations/6521"
+        },
+        {
+          "id": "8c434a72135d794cc9c6dd2c",
+          "text": "以无显式实参的调用形式「kernel_error」调用已绑定接口「rust:crates/winwincode-codex/src/adapter#kernel_error」；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "b2ea620ebd311a9d74894090",
+          "operation_pointer": "/operations/6525"
+        },
+        {
+          "id": "3a4e7e2dbb9251df2012036e",
+          "text": "捕获 binding「last_tokens」的初始化来源为「terminal\\n                    .token_usage\\n                    .as_ref()\\n                    .map_or(0, |usage| usage.last_token_usage.total_tokens.max(0))」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "98524994a6a945786bd71c01",
+          "operation_pointer": "/operations/6526"
+        },
+        {
+          "id": "821deef356182d4dee7cec42",
+          "text": "将「self」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#complete_reconciled_turn」，对应捕获形参「adapter: &mut ProductionCodexAdapter」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "e58da99fef419092e97ea0d5",
+          "operation_pointer": "/operations/6536"
+        },
+        {
+          "id": "95e3fdb9768ff4cfb5928309",
+          "text": "在调用形式「self.store\\n                    .commit_provider_final_model_calls」中提供第 1 个实参「&run_key」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "76b678e56180b6365b93a404",
+          "operation_pointer": "/operations/6541"
+        },
+        {
+          "id": "0c4ed01d16513341fe663c3e",
+          "text": "在调用形式「self\\n                    .runs\\n                    .get」中提供第 1 个实参「&run_key」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "4eeabc6170f3d677147ed564",
+          "operation_pointer": "/operations/6545"
+        },
+        {
+          "id": "245b96e26fb4842d34ffa071",
+          "text": "将「&run_key」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.retain_failed_terminal」，对应捕获形参「run_key: &str」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "4addf0a8b184fd81eceb6fb7",
+          "operation_pointer": "/operations/6547"
+        },
+        {
+          "id": "669b9547faaa6bd1de7e82f8",
+          "text": "在调用形式「self.runs\\n            .get_mut」中提供第 1 个实参「&run_key」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "272e0bcabaa392c290a749ac",
+          "operation_pointer": "/operations/6556"
+        }
+      ],
+      "all_operation_count": 112
+    },
+    {
+      "actual_owner": {
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.accept_dispatch",
+        "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.accept_dispatch",
+        "location": {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "line": 2634,
+          "column": 5,
+          "start_byte": 105503,
+          "end_byte": 108706,
+          "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "location_ref": "/source_location_index/f99ef2845ea3fe1e850055c3",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/contract#CodexRunKey.from_dispatch」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。 捕获 binding「status」的初始化来源为「if record.run_key == run_key && record.job_digest == job_digest {\\n                JobDispatchResultMessageStatus::Duplicate\\n            } else {\\n                JobDispatchResultMessageStatus::Conflict\\n            }」；保留该声明与初始化表达式，不推任意后续读取的当前值。 条件「self.lifecycle != WorkerLifecycleState::Active」的捕获提前退出分支为「Err_return：Err(worker_error(\\n                WorkerErrorCode::InvalidLifecycle,\\n                \"dispatch requires an active registered Worker\",\\n            ))」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return Err(worker_error(\\n                WorkerErrorCode::InvalidLifecycle,\\n                \"dispatch requires an active registered Worker\",\\n            ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「02ef2bb8a57ff196a9592cb1」先于语句位置「1」的操作「4bcd06a9f9b05dbc93033eab」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。 将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#WorkerMain.start_dispatch」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。",
+      "summary_statement_ids": [
+        "fdb3378be5274e8ffc0121f0",
+        "6fc481855083b5b9fed92664",
+        "71afdb07d489e6272899af77",
+        "7233e84bbdd273ffd6776c81",
+        "6e5ce25e567be07298690371",
+        "1ad42953b942b58e433e3086"
+      ],
+      "statements": [
+        {
+          "id": "71afdb07d489e6272899af77",
+          "text": "条件「self.lifecycle != WorkerLifecycleState::Active」的捕获提前退出分支为「Err_return：Err(worker_error(\\n                WorkerErrorCode::InvalidLifecycle,\\n                \"dispatch requires an active registered Worker\",\\n            ))」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "6a2417a65d6624b075200e9d",
+          "operation_pointer": "/operations/8114"
+        },
+        {
+          "id": "7233e84bbdd273ffd6776c81",
+          "text": "以「return Err(worker_error(\\n                WorkerErrorCode::InvalidLifecycle,\\n                \"dispatch requires an active registered Worker\",\\n            ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "32374de4cd626ba7743c656c",
+          "operation_pointer": "/operations/8115"
+        },
+        {
+          "id": "23930b858d120ae165aff555",
+          "text": "在调用形式「Err」中提供第 1 个实参「worker_error(\\n                WorkerErrorCode::InvalidLifecycle,\\n                \"dispatch requires an active registered Worker\",\\n            )」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "a6d106ca3ab2cfc0635e1ee2",
+          "operation_pointer": "/operations/8116"
+        },
+        {
+          "id": "d47b6a3f62b26c41addc4e06",
+          "text": "将「WorkerErrorCode::InvalidLifecycle」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#worker_error」，对应捕获形参「code: WorkerErrorCode」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "3aa9343ee167ba521f63963e",
+          "operation_pointer": "/operations/8117"
+        },
+        {
+          "id": "249943d0bcd9735834778a4e",
+          "text": "将「dispatch」作为第 2 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#dispatch_authority_rejection」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "208b8d8f21f95c4d89ffc777",
+          "operation_pointer": "/operations/8120"
+        },
+        {
+          "id": "82e96697e170bda1eed8b7a8",
+          "text": "将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#WorkerMain.send_dispatch_result」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "02ef2bb8a57ff196a9592cb1",
+          "operation_pointer": "/operations/8122"
+        },
+        {
+          "id": "3c4f2168c96f44ebfc6dbbbc",
+          "text": "在调用形式「Some」中提供第 1 个实参「error」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "9fb12696cd654eb4850f26fb",
+          "operation_pointer": "/operations/8127"
+        },
+        {
+          "id": "f22a7a143d9438527daf5a70",
+          "text": "条件「let Some((status, error)) = dispatch_authority_rejection(&self.config, dispatch, &now)」的捕获提前退出分支为「return：Ok(())」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "26b159ff0b1a840de34dcf8a",
+          "operation_pointer": "/operations/8128"
+        },
+        {
+          "id": "6e5ce25e567be07298690371",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「02ef2bb8a57ff196a9592cb1」先于语句位置「1」的操作「4bcd06a9f9b05dbc93033eab」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "8e0832cbf1e2231c3b01a690",
+          "operation_pointer": "/operations/8129"
+        },
+        {
+          "id": "6583e1eaf6ee9b017e4cb5ba",
+          "text": "在调用形式「Ok」中提供第 1 个实参「()」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "d43d0ab4aeeacb93c29cb79b",
+          "operation_pointer": "/operations/8131"
+        },
+        {
+          "id": "fdb3378be5274e8ffc0121f0",
+          "text": "将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/contract#CodexRunKey.from_dispatch」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "d63eea1f677b7f4c19624cea",
+          "operation_pointer": "/operations/8134"
+        },
+        {
+          "id": "3cd5ba1cc38e754057b91a06",
+          "text": "在调用形式「winwincode_codex::stage_product::stage_product_job_digest(&dispatch.job)\\n            .map_err」中提供第 1 个实参「|_| {\\n            worker_error(\\n                WorkerErrorCode::UnexpectedMessage,\\n                \"dispatch Job cannot be sealed for duplicate detection\",\\n            )\\n        }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "38b74f7a8ae11c2037567f4d",
+          "operation_pointer": "/operations/8137"
+        },
+        {
+          "id": "35c65bb5f86f0697a72de6da",
+          "text": "将「&dispatch.job」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/stage_product#stage_product_job_digest」，对应捕获形参「job: &ExecutionJob」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "56994543ad490f3a63bee8d5",
+          "operation_pointer": "/operations/8138"
+        },
+        {
+          "id": "f48eb7ffb3fc2ad5e5aaed07",
+          "text": "在调用形式「self.dispatches.get」中提供第 1 个实参「&dispatch.job.job_id.0」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "8a39bdefd3f4756e8c245a87",
+          "operation_pointer": "/operations/8141"
+        },
+        {
+          "id": "f4e941a708ebe12e823bc8ca",
+          "text": "以无显式实参的调用形式「self.dispatches.get(&dispatch.job.job_id.0).cloned」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "cde4d07adf9496a79d1619e2",
+          "operation_pointer": "/operations/8142"
+        },
+        {
+          "id": "6fc481855083b5b9fed92664",
+          "text": "捕获 binding「status」的初始化来源为「if record.run_key == run_key && record.job_digest == job_digest {\\n                JobDispatchResultMessageStatus::Duplicate\\n            } else {\\n                JobDispatchResultMessageStatus::Conflict\\n            }」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "3271ce15d9be95912849e803",
+          "operation_pointer": "/operations/8144"
+        },
+        {
+          "id": "b3fc7093030ed04076aac8ea",
+          "text": "以无显式实参的调用形式「winwincode_codex::stage_product::stage_product_prompt(&dispatch.job).is_err」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "37f91b9034bd34b73f281f99",
+          "operation_pointer": "/operations/8156"
+        },
+        {
+          "id": "f55e4d7c1014604da04873e3",
+          "text": "将「&dispatch.job」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/stage_product#stage_product_prompt」，对应捕获形参「job: &ExecutionJob」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "911af8d7e0ad0f06dcfbee7b",
+          "operation_pointer": "/operations/8157"
+        },
+        {
+          "id": "016cef0674ff12faafa7883b",
+          "text": "将「ExecutionPortErrorCode::CapabilityMismatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#port_error」，对应捕获形参「code: ExecutionPortErrorCode」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "01122f9a0807dc0d4094bdb6",
+          "operation_pointer": "/operations/8165"
+        },
+        {
+          "id": "7e448f82765912b4f7bb3ac9",
+          "text": "在调用形式「usize::try_from」中提供第 1 个实参「self.config.capabilities.max_concurrent_jobs」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "4a0cd0c539990c805a6a116b",
+          "operation_pointer": "/operations/8174"
+        },
+        {
+          "id": "b2f02cc55e4dd3c2d7f21d30",
+          "text": "在调用形式「usize::try_from(self.config.capabilities.max_concurrent_jobs).unwrap_or」中提供第 1 个实参「0」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "e8b140feb7f359d324b426a4",
+          "operation_pointer": "/operations/8175"
+        },
+        {
+          "id": "2ef890a019ee80a0f00d2bdb",
+          "text": "以无显式实参的调用形式「self.active.len」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "85f95d8e003c48e33c353ece",
+          "operation_pointer": "/operations/8176"
+        },
+        {
+          "id": "99c17b25eb5052d8a55a0ea6",
+          "text": "将「&dispatch.job.scope」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#scope_identity」，对应捕获形参「scope: &ExecutionScope」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "5b0cb908425a7023ae21e354",
+          "operation_pointer": "/operations/8187"
+        },
+        {
+          "id": "1ad42953b942b58e433e3086",
+          "text": "将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#WorkerMain.start_dispatch」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "3c2bf9f881ef5c841f4f8c57",
+          "operation_pointer": "/operations/8190"
+        }
+      ],
+      "all_operation_count": 80
+    }
+  ]
+}

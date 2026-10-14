@@ -1,0 +1,743 @@
+{
+  "id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+  "project_id": "ac6694a563ea5a6ef75f",
+  "project_name": "CodePatchBay — static source review",
+  "root": "/workspace/codepatchbay",
+  "status": "partial",
+  "source_hash": "d7e98cbcd1d5c8051ba92546903ebdfad7d0c2286c0b1d391e086a94a3d0fc17",
+  "policy_hash": "a9607312f965e4b149d225436b8809b5862c0cca60cdafad2621ee43246239d7",
+  "analyzer_version": "static-multilang-2",
+  "detector_version": "call-rules-2",
+  "schema_version": "1",
+  "finding_count": 40388,
+  "stats": {
+    "ambiguous_calls": 428,
+    "ambiguous_symbols": 1,
+    "by_language": {
+      "python": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 41,
+        "edges": 74,
+        "external_callback_boundaries": 16,
+        "external_calls": 24,
+        "files_failed": 0,
+        "files_parsed": 2,
+        "files_total": 2,
+        "nodes": 28,
+        "resolved_calls": 9,
+        "unresolved_calls": 0
+      },
+      "typescript": {
+        "ambiguous_calls": 428,
+        "dynamic_calls": 18138,
+        "edges": 60072,
+        "external_callback_boundaries": 11792,
+        "external_calls": 18261,
+        "files_failed": 3,
+        "files_parsed": 325,
+        "files_total": 328,
+        "nodes": 10971,
+        "resolved_calls": 23090,
+        "unresolved_calls": 155
+      }
+    },
+    "call_resolution_incomplete": true,
+    "component_versions": {
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      }
+    },
+    "coverage_incomplete": true,
+    "dynamic_calls": 18179,
+    "edges": 60146,
+    "entrypoints_count": 5,
+    "excluded_paths": [
+      ".agents",
+      ".beads",
+      ".git",
+      ".test-tmp",
+      "tests"
+    ],
+    "external_callback_boundaries": 11808,
+    "external_calls": 18285,
+    "files_failed": 6,
+    "files_parsed": 327,
+    "files_total": 333,
+    "frontend_stats": {
+      "python": {
+        "ambiguous_calls": 0,
+        "ambiguous_symbols": 0,
+        "attribute_invalidations": [
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_base_url"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_project"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_reconnect_interval"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_stopped"
+          ],
+          [
+            "skills.openclaw.adapter.CPBClient",
+            "base_url"
+          ]
+        ],
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": false,
+        "dynamic_calls": 41,
+        "edges": 74,
+        "excluded_paths": [],
+        "external_callback_boundaries": 16,
+        "external_calls": 24,
+        "files_failed": 0,
+        "files_parsed": 2,
+        "files_total": 2,
+        "incomplete": true,
+        "limitations": [
+          "不证明分支可执行、调用顺序、返回值或业务结果",
+          "不执行代码/测试/构建，不验证外部依赖可用性",
+          "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+          "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+          "构造器内部调用保持未知，不推断初始化路径"
+        ],
+        "nodes": 28,
+        "parser_version": "cpython-3.12.14",
+        "resolution_model": "static lexical binding; no runtime execution",
+        "resolved_calls": 9,
+        "scan_errors": [],
+        "source_roots": [
+          "."
+        ],
+        "stubs_not_analyzed": [],
+        "symlinks_skipped": [],
+        "unknown_attribute_writes": [],
+        "unresolved_calls": 0
+      },
+      "typescript": {
+        "ambiguous_calls": 428,
+        "ambiguous_symbols": 1,
+        "analyzer_version": "typescript-tree-sitter-call-1",
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": true,
+        "dynamic_calls": 18138,
+        "edges": 60072,
+        "external_callback_boundaries": 11792,
+        "external_calls": 18261,
+        "files_failed": 3,
+        "files_parsed": 325,
+        "files_total": 328,
+        "incomplete": true,
+        "language": "typescript",
+        "limitations": [
+          "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+          "类型/接口不证明对象运行时目标",
+          "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+          "不证明分支、顺序、返回值、加载成功或业务结果"
+        ],
+        "nodes": 10971,
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "resolved_calls": 23090,
+        "unresolved_calls": 155
+      }
+    },
+    "incomplete": true,
+    "languages_requested": [
+      "python",
+      "typescript"
+    ],
+    "limitations": [
+      "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+      "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+      "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+      "快照是读取到的源码集合，不是工作区原子捕获"
+    ],
+    "nodes": 10999,
+    "resolution_model": "explicit static lexical bindings; no target execution",
+    "resolved_calls": 23099,
+    "rules_count": 10,
+    "scan_errors": [],
+    "source_roots": [
+      "."
+    ],
+    "supported_languages": [
+      "python",
+      "typescript",
+      "rust"
+    ],
+    "symlinks_skipped": [],
+    "unresolved_calls": 155,
+    "unsupported_files": [
+      {
+        "language": "shell",
+        "path": "scripts/cutover-orchestrator.sh"
+      },
+      {
+        "language": "shell",
+        "path": "scripts/install.sh"
+      },
+      {
+        "language": "shell",
+        "path": "skills/claude-code/install.sh"
+      }
+    ]
+  },
+  "finding_counts": [
+    {
+      "type": "call_cycle",
+      "status": "open",
+      "count": 2
+    },
+    {
+      "type": "external_callback_boundary",
+      "status": "uncertain",
+      "count": 11808
+    },
+    {
+      "type": "forbidden_call",
+      "status": "uncertain",
+      "count": 1
+    },
+    {
+      "type": "recursive_call",
+      "status": "open",
+      "count": 51
+    },
+    {
+      "type": "required_path",
+      "status": "uncertain",
+      "count": 1
+    },
+    {
+      "type": "suspected_unreachable",
+      "status": "uncertain",
+      "count": 9763
+    },
+    {
+      "type": "unresolved_call",
+      "status": "uncertain",
+      "count": 18762
+    }
+  ],
+  "rule_findings": [
+    {
+      "description": "未找到禁止的确定连接，但相关解析缺口使检查不完整。",
+      "edge_ids": [],
+      "evidence": [
+        {
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "call_path_interpretation": "静态结构可达，不代表必然执行或行为正确。",
+            "completeness_scope": "explicit_static_call_model",
+            "detector_version": "call-rules-2",
+            "executed": false,
+            "full_gap_evidence": "snapshot_edges_diagnostics_and_source_statuses",
+            "gap_count": 7,
+            "gap_sample_limit": 8,
+            "gap_scope": {
+              "kind": "direct_source",
+              "source_ids": [
+                "ts:cli/commands/task#humanResultLine"
+              ]
+            },
+            "gap_snapshot_id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+            "gaps": [
+              {
+                "file": "core/indexing/local-code-index/gc.ts",
+                "kind": "source_coverage",
+                "reason": "Tree-sitter 语法错误/不支持语法，行：225, 378, 390, 441, 453, 495",
+                "status": "parse_error"
+              },
+              {
+                "file": "core/indexing/local-code-index/rules/types.ts",
+                "kind": "source_coverage",
+                "reason": "Tree-sitter 语法错误/不支持语法，行：30",
+                "status": "parse_error"
+              },
+              {
+                "file": "scripts/cutover-orchestrator.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "file": "scripts/install.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "file": "shared/primitives/process-tree.ts",
+                "kind": "source_coverage",
+                "reason": "Tree-sitter 语法错误/不支持语法，行：952",
+                "status": "parse_error"
+              },
+              {
+                "file": "skills/claude-code/install.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "kind": "snapshot_coverage",
+                "reason": "分析器标记 coverage_incomplete，源码扫描范围不完整。"
+              }
+            ],
+            "gaps_truncated": false,
+            "matched_source_ids": [
+              "ts:cli/commands/task#humanResultLine"
+            ],
+            "matched_target_ids": [
+              "ts:core/engine/run-job#runJob"
+            ],
+            "minimum_call_edges": 1,
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+            "policy_hash": "a9607312f965e4b149d225436b8809b5862c0cca60cdafad2621ee43246239d7",
+            "proven_violation": false,
+            "quantifier": "each_source_to_at_least_one_target",
+            "rule": {
+              "description": "负向工具核对基准：已读源码的纯结果文案 helper 没有直接调用 runJob。仅核对这两个已存在端点的直接边，不推广为整个 task 命令或传递依赖无副作用。",
+              "evaluation_only": true,
+              "expected_model_result": "forbidden_connection_absent",
+              "from": "ts:cli/commands/task#humanResultLine",
+              "id": "cpb-observed-pure-result-helper-no-engine-call",
+              "intent_basis": "source_observed_absence",
+              "kind": "forbidden_call",
+              "severity": "info",
+              "source_locations": [
+                "cli/commands/task.ts:141",
+                "cli/commands/task.ts:142",
+                "cli/commands/task.ts:65"
+              ],
+              "to": "ts:core/engine/run-job#runJob"
+            },
+            "schema_version": "1",
+            "search_complete": false,
+            "snapshot_id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+            "source_hash": "d7e98cbcd1d5c8051ba92546903ebdfad7d0c2286c0b1d391e086a94a3d0fc17",
+            "source_id": "ts:cli/commands/task#humanResultLine",
+            "witness_edge_ids": [],
+            "witness_node_ids": [],
+            "world_assumption": "explicit_static_calls_only"
+          },
+          "edge_ids": [],
+          "id": "evidence:5cf5937e73e6430988de73484eb0ec5f",
+          "kind": "static_call_graph",
+          "locations": [
+            {
+              "column": 0,
+              "file": "cli/commands/task.ts",
+              "line": 141
+            },
+            {
+              "column": 0,
+              "file": "core/engine/run-job.ts",
+              "line": 65
+            },
+            {
+              "column": 0,
+              "file": "core/indexing/local-code-index/gc.ts",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "core/indexing/local-code-index/rules/types.ts",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "scripts/cutover-orchestrator.sh",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "scripts/install.sh",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "shared/primitives/process-tree.ts",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "skills/claude-code/install.sh",
+              "line": 1
+            }
+          ],
+          "message": "未找到禁止的确定连接，但相关解析缺口使检查不完整。",
+          "node_ids": [
+            "ts:cli/commands/task#humanResultLine",
+            "ts:core/engine/run-job#runJob"
+          ]
+        }
+      ],
+      "fingerprint": "20060b7811a75f2af90bd69a5db5a1aca1011a2022a35281a292f5bce28ab409",
+      "id": "finding:816067afa41baabc304d9d3ef727b389",
+      "metadata": {
+        "detector_version": "call-rules-2",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "node_ids": [
+        "ts:cli/commands/task#humanResultLine",
+        "ts:core/engine/run-job#runJob"
+      ],
+      "rule_id": "cpb-observed-pure-result-helper-no-engine-call",
+      "severity": "info",
+      "snapshot_id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+      "status": "uncertain",
+      "title": "ts:cli/commands/task#humanResultLine 的禁止关系无法完整排除",
+      "type": "forbidden_call"
+    },
+    {
+      "description": "未找到满足规则的确定连接，相关分析缺口可能隐藏连接，不能确认遗漏。",
+      "edge_ids": [],
+      "evidence": [
+        {
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "call_path_interpretation": "静态结构可达，不代表必然执行或行为正确。",
+            "completeness_scope": "explicit_static_call_model",
+            "detector_version": "call-rules-2",
+            "executed": false,
+            "full_gap_evidence": "snapshot_edges_diagnostics_and_source_statuses",
+            "gap_count": 66,
+            "gap_sample_limit": 8,
+            "gap_scope": {
+              "kind": "source_closure",
+              "source_ids": [
+                "ts:cli/cpb#main"
+              ]
+            },
+            "gap_snapshot_id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+            "gaps": [
+              {
+                "file": "core/indexing/local-code-index/gc.ts",
+                "kind": "source_coverage",
+                "reason": "Tree-sitter 语法错误/不支持语法，行：225, 378, 390, 441, 453, 495",
+                "status": "parse_error"
+              },
+              {
+                "file": "core/indexing/local-code-index/rules/types.ts",
+                "kind": "source_coverage",
+                "reason": "Tree-sitter 语法错误/不支持语法，行：30",
+                "status": "parse_error"
+              },
+              {
+                "file": "scripts/cutover-orchestrator.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "file": "scripts/install.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "file": "shared/primitives/process-tree.ts",
+                "kind": "source_coverage",
+                "reason": "Tree-sitter 语法错误/不支持语法，行：952",
+                "status": "parse_error"
+              },
+              {
+                "file": "skills/claude-code/install.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "kind": "snapshot_coverage",
+                "reason": "分析器标记 coverage_incomplete，源码扫描范围不完整。"
+              },
+              {
+                "candidates": [],
+                "column": 4,
+                "edge_id": "e002efd311a320ec1ab32495",
+                "expression": "missing.push",
+                "file": "cli/cpb.ts",
+                "kind": "call_resolution",
+                "line": 77,
+                "reason": "对象/this/类方法分派不推断为确定调用",
+                "resolution": "dynamic",
+                "source": "ts:cli/cpb#checkDeps",
+                "target": null
+              }
+            ],
+            "gaps_truncated": true,
+            "matched_source_ids": [
+              "ts:cli/cpb#main"
+            ],
+            "matched_target_ids": [
+              "ts:cli/commands/task#run"
+            ],
+            "minimum_call_edges": 1,
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+            "policy_hash": "a9607312f965e4b149d225436b8809b5862c0cca60cdafad2621ee43246239d7",
+            "proven_violation": false,
+            "quantifier": "each_source_to_at_least_one_target",
+            "rule": {
+              "description": "能力边界核对项：CLI 根据 COMMANDS 和计算路径动态 import 后调用 mod.run。期望工具报告 uncertain；自设规则不是仓库缺陷或漏接命令的证据。",
+              "evaluation_only": true,
+              "expected_model_result": "uncertain",
+              "from": "ts:cli/cpb#main",
+              "id": "cpb-capability-dynamic-command-boundary",
+              "intent_basis": "dynamic_dispatch_capability_probe_from_source",
+              "kind": "required_path",
+              "severity": "info",
+              "source_locations": [
+                "cli/cpb.ts:154",
+                "cli/cpb.ts:186"
+              ],
+              "to": "ts:cli/commands/task#run"
+            },
+            "schema_version": "1",
+            "search_complete": false,
+            "snapshot_id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+            "source_hash": "d7e98cbcd1d5c8051ba92546903ebdfad7d0c2286c0b1d391e086a94a3d0fc17",
+            "source_id": "ts:cli/cpb#main",
+            "witness_edge_ids": [],
+            "witness_node_ids": [],
+            "world_assumption": "explicit_static_calls_only"
+          },
+          "edge_ids": [],
+          "id": "evidence:fe3fb61f5c9419a85e63d6072512b13a",
+          "kind": "static_call_graph",
+          "locations": [
+            {
+              "column": 0,
+              "file": "cli/cpb.ts",
+              "line": 127
+            },
+            {
+              "column": 0,
+              "file": "cli/commands/task.ts",
+              "line": 259
+            },
+            {
+              "column": 0,
+              "file": "core/indexing/local-code-index/gc.ts",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "core/indexing/local-code-index/rules/types.ts",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "scripts/cutover-orchestrator.sh",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "scripts/install.sh",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "shared/primitives/process-tree.ts",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "skills/claude-code/install.sh",
+              "line": 1
+            },
+            {
+              "column": 4,
+              "file": "cli/cpb.ts",
+              "line": 77
+            }
+          ],
+          "message": "未找到满足规则的确定连接，相关分析缺口可能隐藏连接，不能确认遗漏。",
+          "node_ids": [
+            "ts:cli/cpb#main",
+            "ts:cli/commands/task#run"
+          ]
+        }
+      ],
+      "fingerprint": "3d7dee11d16b6e92f1dcd435a45419ca9d20ad2cb865de3c50cc61d70f8b3ddd",
+      "id": "finding:956062646510e02f7869a16f629c243a",
+      "metadata": {
+        "detector_version": "call-rules-2",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "node_ids": [
+        "ts:cli/cpb#main",
+        "ts:cli/commands/task#run"
+      ],
+      "rule_id": "cpb-capability-dynamic-command-boundary",
+      "severity": "info",
+      "snapshot_id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+      "status": "uncertain",
+      "title": "ts:cli/cpb#main 的必需路径未确认",
+      "type": "required_path"
+    }
+  ],
+  "problem_files": [
+    {
+      "path": "core/indexing/local-code-index/gc.ts",
+      "hash": "33255f5489b611224e0c6ff07c44c557075c86cb3e6de011c9a76e48d5b13b6f",
+      "status": "parse_error",
+      "language": "typescript",
+      "error": "Tree-sitter 语法错误/不支持语法，行：225, 378, 390, 441, 453, 495",
+      "module": "ts:core/indexing/local-code-index/gc"
+    },
+    {
+      "path": "core/indexing/local-code-index/rules/types.ts",
+      "hash": "0bfbf006ca1f9d3c1562ba3132e1640872172bae5093f15cfb1ebe631ab865e8",
+      "status": "parse_error",
+      "language": "typescript",
+      "error": "Tree-sitter 语法错误/不支持语法，行：30",
+      "module": "ts:core/indexing/local-code-index/rules/types"
+    },
+    {
+      "path": "scripts/cutover-orchestrator.sh",
+      "hash": "b778bdd63930cf5c6949c59f1edbd7e479fd174e67061415c9060dc057cdf173",
+      "status": "unsupported",
+      "language": "shell",
+      "error": "此源码语言不在当前分析能力或配置范围中",
+      "module": ""
+    },
+    {
+      "path": "scripts/install.sh",
+      "hash": "66ff4f1fe9117c5eaea89fddfa9833fa39f6a623ca0d19226592fc51363515cb",
+      "status": "unsupported",
+      "language": "shell",
+      "error": "此源码语言不在当前分析能力或配置范围中",
+      "module": ""
+    },
+    {
+      "path": "shared/primitives/process-tree.ts",
+      "hash": "abfec6d1fead9de5f5f2edd0414fbcecbef816f5fbb72011c0c6ebd75e5cb82a",
+      "status": "parse_error",
+      "language": "typescript",
+      "error": "Tree-sitter 语法错误/不支持语法，行：952",
+      "module": "ts:shared/primitives/process-tree"
+    },
+    {
+      "path": "skills/claude-code/install.sh",
+      "hash": "9b39d3047e51fcca47b307aab8306e59b6a1302a445c05ca8aa762aa4544af38",
+      "status": "unsupported",
+      "language": "shell",
+      "error": "此源码语言不在当前分析能力或配置范围中",
+      "module": ""
+    }
+  ],
+  "project_diagnostics": [
+    {
+      "level": "warning",
+      "code": "unsupported_sources",
+      "message": "扫描范围包含未分析语言文件：{'shell': 3}",
+      "file": "",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "ts_parse_error",
+      "message": "语法节点 ; (missing) 未解析；保留文件覆盖缺口。",
+      "file": "core/indexing/local-code-index/gc.ts",
+      "line": 225
+    },
+    {
+      "level": "warning",
+      "code": "ts_parse_error",
+      "message": "语法节点 ; (missing) 未解析；保留文件覆盖缺口。",
+      "file": "core/indexing/local-code-index/gc.ts",
+      "line": 378
+    },
+    {
+      "level": "warning",
+      "code": "ts_parse_error",
+      "message": "语法节点 ; (missing) 未解析；保留文件覆盖缺口。",
+      "file": "core/indexing/local-code-index/gc.ts",
+      "line": 390
+    },
+    {
+      "level": "warning",
+      "code": "ts_parse_error",
+      "message": "语法节点 ; (missing) 未解析；保留文件覆盖缺口。",
+      "file": "core/indexing/local-code-index/gc.ts",
+      "line": 441
+    },
+    {
+      "level": "warning",
+      "code": "ts_parse_error",
+      "message": "语法节点 ; (missing) 未解析；保留文件覆盖缺口。",
+      "file": "core/indexing/local-code-index/gc.ts",
+      "line": 453
+    },
+    {
+      "level": "warning",
+      "code": "ts_parse_error",
+      "message": "语法节点 ; (missing) 未解析；保留文件覆盖缺口。",
+      "file": "core/indexing/local-code-index/gc.ts",
+      "line": 495
+    },
+    {
+      "level": "warning",
+      "code": "ts_parse_error",
+      "message": "语法节点 ERROR 未解析；保留文件覆盖缺口。",
+      "file": "core/indexing/local-code-index/rules/types.ts",
+      "line": 30
+    },
+    {
+      "level": "warning",
+      "code": "ts_module_identity_collision",
+      "message": "不同扩展名/重复输入共享模块身份，相关节点与调用保持歧义。",
+      "file": "scripts/workflows/local-code-index-v2.js",
+      "line": 1
+    },
+    {
+      "level": "warning",
+      "code": "ts_duplicate_definition",
+      "message": "同一词法符号 module:ts:scripts/workflows/local-code-index-v2 有多个定义，保留歧义。",
+      "file": "scripts/workflows/local-code-index-v2.ts",
+      "line": 1
+    },
+    {
+      "level": "warning",
+      "code": "ts_parse_error",
+      "message": "语法节点 ERROR 未解析；保留文件覆盖缺口。",
+      "file": "shared/primitives/process-tree.ts",
+      "line": 952
+    }
+  ],
+  "rule_observation_counts": {
+    "total": 10,
+    "required_connection_reproduced": 8,
+    "rules_with_uncertainty": 2,
+    "forbidden_connection_observed": 0
+  },
+  "calls_by_resolution": {
+    "resolved": 23099,
+    "external": 18285,
+    "dynamic": 18179,
+    "unresolved": 155,
+    "ambiguous": 428
+  }
+}

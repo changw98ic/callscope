@@ -1,0 +1,49 @@
+{
+  "repository": "winwincode",
+  "old_snapshot": "6819e89b03661687e4e7c56654c20cd69f23a4c573bc218ae834eb82e41ee1e5",
+  "new_snapshot": "f3b86812dec2cb36ae9188715fbd95482380aee55bdaa47d89ae92c042e42a5b",
+  "observations": [
+    {
+      "rule_id": "baseline-wwc-ts-scope-selection",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-ts-surface-hash",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-ts-auth-format",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-ts-workspace-path",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-ts-nested-import",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-rust-canonical-id",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-rust-local-function",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-rust-module-use",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-rust-crate-root",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "baseline-wwc-rust-binary-library",
+      "same_observed_structure_and_source_evidence": true
+    }
+  ],
+  "source_hash_unchanged": true,
+  "policy_hash_unchanged": true
+}

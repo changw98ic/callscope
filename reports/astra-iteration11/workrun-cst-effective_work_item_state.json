@@ -1,0 +1,725 @@
+{
+  "type": "function_item",
+  "text": "fn effective_work_item_state(item: &WorkItem, items: &[WorkItem]) -> WorkItemState {\n    if matches!(\n        item.state,\n        WorkItemState::Ready | WorkItemState::WaitingDependency\n    ) && item.depends_on.iter().any(|dependency| {\n        !item",
+  "fields": {
+    "name": "identifier",
+    "parameters": "parameters",
+    "return_type": "type_identifier",
+    "body": "block"
+  },
+  "children": [
+    {
+      "type": "identifier",
+      "text": "effective_work_item_state",
+      "fields": {},
+      "children": []
+    },
+    {
+      "type": "parameters",
+      "text": "(item: &WorkItem, items: &[WorkItem])",
+      "fields": {},
+      "children": [
+        {
+          "type": "parameter",
+          "text": "item: &WorkItem",
+          "fields": {
+            "pattern": "identifier",
+            "type": "reference_type"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "item",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "reference_type",
+              "text": "&WorkItem",
+              "fields": {
+                "type": "type_identifier"
+              },
+              "children": [
+                {
+                  "type": "type_identifier",
+                  "text": "WorkItem",
+                  "fields": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "parameter",
+          "text": "items: &[WorkItem]",
+          "fields": {
+            "pattern": "identifier",
+            "type": "reference_type"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "items",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "reference_type",
+              "text": "&[WorkItem]",
+              "fields": {
+                "type": "array_type"
+              },
+              "children": [
+                {
+                  "type": "array_type",
+                  "text": "[WorkItem]",
+                  "fields": {
+                    "element": "type_identifier"
+                  },
+                  "children": [
+                    {
+                      "type": "type_identifier",
+                      "text": "WorkItem",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "type_identifier",
+      "text": "WorkItemState",
+      "fields": {},
+      "children": []
+    },
+    {
+      "type": "block",
+      "text": "{\n    if matches!(\n        item.state,\n        WorkItemState::Ready | WorkItemState::WaitingDependency\n    ) && item.depends_on.iter().any(|dependency| {\n        !items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && c",
+      "fields": {},
+      "children": [
+        {
+          "type": "expression_statement",
+          "text": "if matches!(\n        item.state,\n        WorkItemState::Ready | WorkItemState::WaitingDependency\n    ) && item.depends_on.iter().any(|dependency| {\n        !items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candida",
+          "fields": {},
+          "children": [
+            {
+              "type": "if_expression",
+              "text": "if matches!(\n        item.state,\n        WorkItemState::Ready | WorkItemState::WaitingDependency\n    ) && item.depends_on.iter().any(|dependency| {\n        !items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candida",
+              "fields": {
+                "condition": "binary_expression",
+                "consequence": "block",
+                "alternative": "else_clause"
+              },
+              "children": [
+                {
+                  "type": "binary_expression",
+                  "text": "matches!(\n        item.state,\n        WorkItemState::Ready | WorkItemState::WaitingDependency\n    ) && item.depends_on.iter().any(|dependency| {\n        !items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candidate.",
+                  "fields": {
+                    "left": "macro_invocation",
+                    "operator": "&&",
+                    "right": "call_expression"
+                  },
+                  "children": [
+                    {
+                      "type": "macro_invocation",
+                      "text": "matches!(\n        item.state,\n        WorkItemState::Ready | WorkItemState::WaitingDependency\n    )",
+                      "fields": {
+                        "macro": "identifier"
+                      },
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "text": "matches",
+                          "fields": {},
+                          "children": []
+                        },
+                        {
+                          "type": "token_tree",
+                          "text": "(\n        item.state,\n        WorkItemState::Ready | WorkItemState::WaitingDependency\n    )",
+                          "fields": {},
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "text": "item",
+                              "fields": {},
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "text": "state",
+                              "fields": {},
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "text": "WorkItemState",
+                              "fields": {},
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "text": "Ready",
+                              "fields": {},
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "text": "WorkItemState",
+                              "fields": {},
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "text": "WaitingDependency",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "call_expression",
+                      "text": "item.depends_on.iter().any(|dependency| {\n        !items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candidate.state == WorkItemState::Done)\n    })",
+                      "fields": {
+                        "function": "field_expression",
+                        "arguments": "arguments"
+                      },
+                      "children": [
+                        {
+                          "type": "field_expression",
+                          "text": "item.depends_on.iter().any",
+                          "fields": {
+                            "value": "call_expression",
+                            "field": "field_identifier"
+                          },
+                          "children": [
+                            {
+                              "type": "call_expression",
+                              "text": "item.depends_on.iter()",
+                              "fields": {
+                                "function": "field_expression",
+                                "arguments": "arguments"
+                              },
+                              "children": [
+                                {
+                                  "type": "field_expression",
+                                  "text": "item.depends_on.iter",
+                                  "fields": {
+                                    "value": "field_expression",
+                                    "field": "field_identifier"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "field_expression",
+                                      "text": "item.depends_on",
+                                      "fields": {
+                                        "value": "identifier",
+                                        "field": "field_identifier"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "identifier",
+                                          "text": "item",
+                                          "fields": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "field_identifier",
+                                          "text": "depends_on",
+                                          "fields": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "field_identifier",
+                                      "text": "iter",
+                                      "fields": {},
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "arguments",
+                                  "text": "()",
+                                  "fields": {},
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "field_identifier",
+                              "text": "any",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "arguments",
+                          "text": "(|dependency| {\n        !items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candidate.state == WorkItemState::Done)\n    })",
+                          "fields": {},
+                          "children": [
+                            {
+                              "type": "closure_expression",
+                              "text": "|dependency| {\n        !items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candidate.state == WorkItemState::Done)\n    }",
+                              "fields": {
+                                "parameters": "closure_parameters",
+                                "body": "block"
+                              },
+                              "children": [
+                                {
+                                  "type": "closure_parameters",
+                                  "text": "|dependency|",
+                                  "fields": {},
+                                  "children": [
+                                    {
+                                      "type": "identifier",
+                                      "text": "dependency",
+                                      "fields": {},
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "block",
+                                  "text": "{\n        !items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candidate.state == WorkItemState::Done)\n    }",
+                                  "fields": {},
+                                  "children": [
+                                    {
+                                      "type": "unary_expression",
+                                      "text": "!items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candidate.state == WorkItemState::Done)",
+                                      "fields": {},
+                                      "children": [
+                                        {
+                                          "type": "call_expression",
+                                          "text": "items\n            .iter()\n            .any(|candidate| candidate.id == *dependency && candidate.state == WorkItemState::Done)",
+                                          "fields": {
+                                            "function": "field_expression",
+                                            "arguments": "arguments"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "field_expression",
+                                              "text": "items\n            .iter()\n            .any",
+                                              "fields": {
+                                                "value": "call_expression",
+                                                "field": "field_identifier"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "call_expression",
+                                                  "text": "items\n            .iter()",
+                                                  "fields": {
+                                                    "function": "field_expression",
+                                                    "arguments": "arguments"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "field_expression",
+                                                      "text": "items\n            .iter",
+                                                      "fields": {
+                                                        "value": "identifier",
+                                                        "field": "field_identifier"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "items",
+                                                          "fields": {},
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "field_identifier",
+                                                          "text": "iter",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "arguments",
+                                                      "text": "()",
+                                                      "fields": {},
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "field_identifier",
+                                                  "text": "any",
+                                                  "fields": {},
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "arguments",
+                                              "text": "(|candidate| candidate.id == *dependency && candidate.state == WorkItemState::Done)",
+                                              "fields": {},
+                                              "children": [
+                                                {
+                                                  "type": "closure_expression",
+                                                  "text": "|candidate| candidate.id == *dependency && candidate.state == WorkItemState::Done",
+                                                  "fields": {
+                                                    "parameters": "closure_parameters",
+                                                    "body": "binary_expression"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "closure_parameters",
+                                                      "text": "|candidate|",
+                                                      "fields": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "candidate",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "binary_expression",
+                                                      "text": "candidate.id == *dependency && candidate.state == WorkItemState::Done",
+                                                      "fields": {
+                                                        "left": "binary_expression",
+                                                        "operator": "&&",
+                                                        "right": "binary_expression"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "binary_expression",
+                                                          "text": "candidate.id == *dependency",
+                                                          "fields": {
+                                                            "left": "field_expression",
+                                                            "operator": "==",
+                                                            "right": "unary_expression"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "field_expression",
+                                                              "text": "candidate.id",
+                                                              "fields": {
+                                                                "value": "identifier",
+                                                                "field": "field_identifier"
+                                                              },
+                                                              "children": [
+                                                                {
+                                                                  "type": "identifier",
+                                                                  "text": "candidate",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "field_identifier",
+                                                                  "text": "id",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "unary_expression",
+                                                              "text": "*dependency",
+                                                              "fields": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "identifier",
+                                                                  "text": "dependency",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "binary_expression",
+                                                          "text": "candidate.state == WorkItemState::Done",
+                                                          "fields": {
+                                                            "left": "field_expression",
+                                                            "operator": "==",
+                                                            "right": "scoped_identifier"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "field_expression",
+                                                              "text": "candidate.state",
+                                                              "fields": {
+                                                                "value": "identifier",
+                                                                "field": "field_identifier"
+                                                              },
+                                                              "children": [
+                                                                {
+                                                                  "type": "identifier",
+                                                                  "text": "candidate",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "field_identifier",
+                                                                  "text": "state",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "scoped_identifier",
+                                                              "text": "WorkItemState::Done",
+                                                              "fields": {
+                                                                "path": "identifier",
+                                                                "name": "identifier"
+                                                              },
+                                                              "children": [
+                                                                {
+                                                                  "type": "identifier",
+                                                                  "text": "WorkItemState",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "identifier",
+                                                                  "text": "Done",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "block",
+                  "text": "{\n        WorkItemState::WaitingDependency\n    }",
+                  "fields": {},
+                  "children": [
+                    {
+                      "type": "scoped_identifier",
+                      "text": "WorkItemState::WaitingDependency",
+                      "fields": {
+                        "path": "identifier",
+                        "name": "identifier"
+                      },
+                      "children": [
+                        {
+                          "type": "identifier",
+                          "text": "WorkItemState",
+                          "fields": {},
+                          "children": []
+                        },
+                        {
+                          "type": "identifier",
+                          "text": "WaitingDependency",
+                          "fields": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "else_clause",
+                  "text": "else if item.state == WorkItemState::WaitingDependency {\n        WorkItemState::Ready\n    } else {\n        item.state.clone()\n    }",
+                  "fields": {},
+                  "children": [
+                    {
+                      "type": "if_expression",
+                      "text": "if item.state == WorkItemState::WaitingDependency {\n        WorkItemState::Ready\n    } else {\n        item.state.clone()\n    }",
+                      "fields": {
+                        "condition": "binary_expression",
+                        "consequence": "block",
+                        "alternative": "else_clause"
+                      },
+                      "children": [
+                        {
+                          "type": "binary_expression",
+                          "text": "item.state == WorkItemState::WaitingDependency",
+                          "fields": {
+                            "left": "field_expression",
+                            "operator": "==",
+                            "right": "scoped_identifier"
+                          },
+                          "children": [
+                            {
+                              "type": "field_expression",
+                              "text": "item.state",
+                              "fields": {
+                                "value": "identifier",
+                                "field": "field_identifier"
+                              },
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "text": "item",
+                                  "fields": {},
+                                  "children": []
+                                },
+                                {
+                                  "type": "field_identifier",
+                                  "text": "state",
+                                  "fields": {},
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "scoped_identifier",
+                              "text": "WorkItemState::WaitingDependency",
+                              "fields": {
+                                "path": "identifier",
+                                "name": "identifier"
+                              },
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "text": "WorkItemState",
+                                  "fields": {},
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "text": "WaitingDependency",
+                                  "fields": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "block",
+                          "text": "{\n        WorkItemState::Ready\n    }",
+                          "fields": {},
+                          "children": [
+                            {
+                              "type": "scoped_identifier",
+                              "text": "WorkItemState::Ready",
+                              "fields": {
+                                "path": "identifier",
+                                "name": "identifier"
+                              },
+                              "children": [
+                                {
+                                  "type": "identifier",
+                                  "text": "WorkItemState",
+                                  "fields": {},
+                                  "children": []
+                                },
+                                {
+                                  "type": "identifier",
+                                  "text": "Ready",
+                                  "fields": {},
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "else_clause",
+                          "text": "else {\n        item.state.clone()\n    }",
+                          "fields": {},
+                          "children": [
+                            {
+                              "type": "block",
+                              "text": "{\n        item.state.clone()\n    }",
+                              "fields": {},
+                              "children": [
+                                {
+                                  "type": "call_expression",
+                                  "text": "item.state.clone()",
+                                  "fields": {
+                                    "function": "field_expression",
+                                    "arguments": "arguments"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "field_expression",
+                                      "text": "item.state.clone",
+                                      "fields": {
+                                        "value": "field_expression",
+                                        "field": "field_identifier"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "field_expression",
+                                          "text": "item.state",
+                                          "fields": {
+                                            "value": "identifier",
+                                            "field": "field_identifier"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "identifier",
+                                              "text": "item",
+                                              "fields": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "field_identifier",
+                                              "text": "state",
+                                              "fields": {},
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "field_identifier",
+                                          "text": "clone",
+                                          "fields": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "arguments",
+                                      "text": "()",
+                                      "fields": {},
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

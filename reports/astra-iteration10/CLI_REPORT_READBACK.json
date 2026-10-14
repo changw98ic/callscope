@@ -1,0 +1,10 @@
+{
+  "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+  "operation": "normal_saved_snapshot_cli_report_query",
+  "report_matches_saved_publication": true,
+  "markdown_sha256": "56163f3779b0a1d563c931eec57bc69b6e09676fc5a705d05af1e430cddca199",
+  "tool_source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f",
+  "target_imported_or_executed": false,
+  "target_tests_run": false,
+  "tool_test_suite_run": false
+}

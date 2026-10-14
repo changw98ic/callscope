@@ -1,0 +1,12 @@
+{
+  "development_artifact_only": true,
+  "snapshot": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28",
+  "current_module_sha256": "6f6da497d4554ea8acb6c162330d5b84bd59fd05a5e2ed89266f9c6ef3d74b4b",
+  "source_location_count": 2635,
+  "source_file_count": 6,
+  "all_source_and_span_hashes_match": true,
+  "failures": [],
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

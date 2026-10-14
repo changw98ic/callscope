@@ -1,0 +1,188 @@
+{
+  "schema_version": 1,
+  "kind": "original_complete_report_remaining_work_tracking",
+  "publication_target": "v14/astra-iteration12",
+  "primary_benchmark": "the_two_original_complete_analysis_reports",
+  "report_scope_is_not_replaced_by_this_tracking_list": true,
+  "functional_coverage_denominator": null,
+  "whole_report_equivalence_percentage_computed": false,
+  "original_reports": {
+    "codepatchbay": {
+      "path": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "sha256": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+      "frozen_v13_hash_matches": true
+    },
+    "winwincode": {
+      "path": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "sha256": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+      "frozen_v13_hash_matches": true
+    }
+  },
+  "full_report_navigation_catalog": {
+    "path": "../astra-iteration11/REPORT_ALIGNMENT_CATALOG.json",
+    "sha256": "4498259053d6b813b69edcef701f69f647e4143f8e31e1ebc08f9c2a2f8a33e0",
+    "role": "navigation only; section/statement counts are not coverage denominators"
+  },
+  "prior_scope_comparison": {
+    "path": "../astra-iteration11/REPORT_SCOPE_GAPS.md",
+    "sha256": "0bf7fab712fd9a232478282ee78e827a2c0fe489c8387fc96621bca1ff3d46bb"
+  },
+  "preserved_prior_tracking_context": {
+    "original_five_judgments_thirty_relations": "regression context only; not the full-report benchmark denominator",
+    "v13_thirty_one_source_rules": "conditional source-query navigation only; not thirty-one passed business functions"
+  },
+  "tracked_remaining_finite_statements": [
+    {
+      "tracking_id": "WWC-DOCUMENT-DEVICE-CREDENTIAL",
+      "title": "Device 文档具体绝对表述与实际部署来源的局部比较",
+      "repository": "winwincode",
+      "original_statement": {
+        "file": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+        "file_sha256": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+        "start_line": 88,
+        "end_line": 88,
+        "start_byte": 11521,
+        "end_byte": 11937,
+        "span_sha256": "81a336d7935e1aa6c5f9742c4b6f405a5b06b395f0ae54046c865ff44747826b",
+        "quoted_text": "`docs/architecture.md` 把长期 Credential/Provider 路由绝对归为 Control Plane，与当前 Device 生产路径至少存在说明口径差异。更稳妥的结论是文档应按 local/Device 部署明确所有权，而不是将 Device 分流判为违反唯一 Kernel 原则：Provider 所在位置与执行 Kernel 是否唯一是不同问题。本轮不提供所有 secret 路径的完整安全审计结论。\n",
+        "origin": "benchmark-reference-not-target-code-evidence"
+      },
+      "v13_saved_comparison": {
+        "comparison_status": "specific_document_deployment_statement_comparison_not_generated",
+        "formal_report_file": "winwincode-automatic-report.json",
+        "formal_report_sha256": "01b324f5d68c082a673d034dc6117e53e7fb05c7c252f06107a794e388249135",
+        "formal_evidence_pointers": [
+          "/functional_chains/5/pattern",
+          "/functional_chains/1/pattern/unreviewed_scope"
+        ]
+      },
+      "finite_report_outcome_to_implement": "从实际已捕获文档提取责任主体、唯一/长期等限定词及其真实适用范围，与保存的 Server/Worker/Device 构造和安装来源作局部比较；允许得到具体差异、限定范围内相容或原报告判断需收窄，不能强制复述原 Astra 的差异结论。",
+      "limits": [
+        "原文这个文档表述与具体部署来源的对应比较；不要求全体架构文档规范语言或所有凭据路径审计。",
+        "文档声明、代码来源、条件和比较结果必须分别标注；不能把引用的原 Astra 结论或规则期待当代码证据。",
+        "文档若明确限定 Control Plane 内部等范围，必须保留；比较能力的完成不以推翻全项目凭据唯一性为条件。"
+      ],
+      "required_evidence_form": [
+        "真实保存源码/文档身份及 source/model/policy/unresolved 分类",
+        "实际字段、receiver、类型/组合或协议接口来源，及必要正常到达条件",
+        "新正式 finding/evidence/snapshot 和可读报告指针",
+        "原文同样的限制和对应反证；不需要另一个模型再次批准"
+      ],
+      "v14_status": "not_yet_evaluated",
+      "v14_formal_snapshot_id": null,
+      "v14_finding_id": null,
+      "v14_evidence_id": null,
+      "v14_report_pointers": [],
+      "adds_stronger_acceptance_requirement": false,
+      "new_functional_coverage_denominator": false
+    },
+    {
+      "tracking_id": "CPB-FINITE-RESPONSIBILITY-EXPLANATION",
+      "title": "CodePatchBay 已读层级的有限职责解释",
+      "repository": "codepatchbay",
+      "original_statement": {
+        "file": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "file_sha256": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+        "start_line": 30,
+        "end_line": 40,
+        "start_byte": 4609,
+        "end_byte": 5882,
+        "span_sha256": "8d61eb7c541849d05acd6dbc4195301c15389885f8fe7b38f050430de730efd8",
+        "quoted_text": "## 架构职责和所有权\n\n| 层 | 实际职责 | 关键边界 |\n| --- | --- | --- |\n| `cli/` | 命令选择、参数解释、任务提交和面向用户的投影 | 动态 import 选 handler；`task` 主要读取，不等于其所有传递依赖均无副作用 |\n| `server/orchestrator/` | 队列候选、assignment/attempt、worker 生命周期及失败路由 | 队列和 worker 状态更新的原子条件、leader fencing 与任务身份 |\n| `runtime/worker/`、`bridges/` | 工作区、inbox、执行进程以及从 worker 到引擎的适配 | 进程和持久消息边界，不应压成虚假的普通函数调用 |\n| `core/engine/` | 任务准备、checklist 冻结、DAG、阶段和完成门 | 从 `ctx` 获取端口；禁止源码反向依赖 server 与允许调用注入的 server 实现是两回事 |\n| `core/workflow/` | checklist、probe、证据格式和可判定条件 | 结构范围证据不能直接证明业务验收条件成立 |\n| `server/services/` | job/event/queue、ACP/provider、GitHub、审计与 finalizer 实现 | 存储、外部副作用及恢复的权威操作需要在本层维持约束 |\n| `shared/` | 文件、进程、身份、网络、锁与公共类型 | 广泛复用不意味着“上帝对象”；应按职责和修改耦合判断 |\n",
+        "origin": "benchmark-reference-not-target-code-evidence"
+      },
+      "v13_saved_comparison": {
+        "comparison_status": "formal_source_references_available_finite_layer_explanation_not_generated",
+        "formal_report_file": "codepatchbay-automatic-report.json",
+        "formal_report_sha256": "6fe5fe8a23ce386b3d5641ed6f8964d6bb5aa90f19b735ff03d0f2bf6b046fb0",
+        "formal_evidence_pointers": [
+          "/architecture/meaning",
+          "/architecture/captured_writer_references/0",
+          "/functional_chains/0/pattern/responsibility_interpretation"
+        ]
+      },
+      "finite_report_outcome_to_implement": "将已捕获命令选择/参数提交、assignment/attempt、inbox/worker/bridge、engine 的注入端口和 service 实现来源，汇总为原职责表范围内的具体分工解释；每句能下钻到实际源关系、数据字段或接口交接。",
+      "limits": [
+        "原表是有限源码解释，既非唯一 owner 证明，也不是所有写入/全部权限证明。",
+        "不能按目录名、函数名或 benchmark 原句直接贴职责；代码作用、字段和接口来源不足时保留有限未知。"
+      ],
+      "required_evidence_form": [
+        "真实保存源码/文档身份及 source/model/policy/unresolved 分类",
+        "实际字段、receiver、类型/组合或协议接口来源，及必要正常到达条件",
+        "新正式 finding/evidence/snapshot 和可读报告指针",
+        "原文同样的限制和对应反证；不需要另一个模型再次批准"
+      ],
+      "v14_status": "not_yet_evaluated",
+      "v14_formal_snapshot_id": null,
+      "v14_finding_id": null,
+      "v14_evidence_id": null,
+      "v14_report_pointers": [],
+      "adds_stronger_acceptance_requirement": false,
+      "new_functional_coverage_denominator": false
+    },
+    {
+      "tracking_id": "WWC-FINITE-RESPONSIBILITY-EXPLANATION",
+      "title": "WinWinCode 已读层级的有限职责与身份解释",
+      "repository": "winwincode",
+      "original_statement": {
+        "file": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+        "file_sha256": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+        "start_line": 30,
+        "end_line": 42,
+        "start_byte": 4519,
+        "end_byte": 6269,
+        "span_sha256": "838fea67327f35fc8ed914e3c7646bd9f7016fe79a866668fafe929917bc1471",
+        "quoted_text": "## 架构与职责\n\n| 区域 | 所有权与接口 | 独立判断 |\n| --- | --- | --- |\n| `apps/client`、`packages/browser-*` | 页面、路由、表单、投影和浏览器状态 | UI 可以组织请求，但产品写入仍要经 canonical command；页面存在不等于其所需上下文已接线 |\n| `packages/control-plane-client`、生成合同 | HTTP command/query、WS projection/event | 网络关系应由协议/命令类型连接，不应该伪造成跨语言普通函数调用 |\n| `winwincode-server` | 认证、公开网络边界、dispatcher、模块组合 | 不应仅按模块大判断职责混乱；检查是否另建事实所有权更重要 |\n| `winwincode-control-plane`、Delivery/domain/session | 产品状态、审批、WorkContract/WorkItem/WorkRun 与候选/证据关联 | revision、来源身份和条件 authority 决定能否写入；调用是否存在只是一部分 |\n| `winwincode-worker`、execution-port | Job、Lease、fencing、工作区、运行/结果/产物消息 | generic adapter 是扩展边界，不等于实现缺失；分派需要真实类型和组合证据 |\n| `winwincode-codex`、Kernel/helper | durable adapter、嵌入式 Codex session/turn、工具与权限；helper 身份校验 | 生产代码通过 Kernel API，不能用安装的 Codex CLI 作为补缺假设 |\n| Device/provider | managed worker、设备本地 provider 配置/凭据和流转发 | 当前生产 Device 路径需要与旧文档“Control Plane 唯一长期凭据使用者”区分 |\n\n产品的 ProductSession、WorkerSession、CodexThread、WorkRun 身份分离有实际意义：重试或换 worker 不能靠一个 session_id 代表全部历史。静态分析应保留这些字段的连接来源，避免只按同名方法拼路径。\n",
+        "origin": "benchmark-reference-not-target-code-evidence"
+      },
+      "v13_saved_comparison": {
+        "comparison_status": "formal_source_references_available_finite_layer_explanation_not_generated",
+        "formal_report_file": "winwincode-automatic-report.json",
+        "formal_report_sha256": "01b324f5d68c082a673d034dc6117e53e7fb05c7c252f06107a794e388249135",
+        "formal_evidence_pointers": [
+          "/architecture/meaning",
+          "/architecture/captured_writer_references/0",
+          "/functional_chains/1/pattern/responsibility_interpretation"
+        ]
+      },
+      "finite_report_outcome_to_implement": "汇总 Client 表现/协议、Control Plane/Delivery 产品状态、Worker 执行事实、adapter/Kernel 的实际接口与记录来源，并解释所选 ProductSession/WorkerSession/CodexThread/WorkRun 身份为何在来源上分开。",
+      "limits": [
+        "范围是原已读表格及紧接的身份说明，不要求全 HTTP/WS/ExecutionPort 协议或全状态机。",
+        "新写者/消息模式已有证据可作为基础；partial ownership 的强边界 false 不自动否定原有限句子被承接。"
+      ],
+      "required_evidence_form": [
+        "真实保存源码/文档身份及 source/model/policy/unresolved 分类",
+        "实际字段、receiver、类型/组合或协议接口来源，及必要正常到达条件",
+        "新正式 finding/evidence/snapshot 和可读报告指针",
+        "原文同样的限制和对应反证；不需要另一个模型再次批准"
+      ],
+      "v14_status": "not_yet_evaluated",
+      "v14_formal_snapshot_id": null,
+      "v14_finding_id": null,
+      "v14_evidence_id": null,
+      "v14_report_pointers": [],
+      "adds_stronger_acceptance_requirement": false,
+      "new_functional_coverage_denominator": false
+    }
+  ],
+  "not_added_as_remaining_acceptance_targets": [
+    "global canonical owner uniqueness",
+    "all writers or all mutation authorization",
+    "complete HTTP/WS/ExecutionPort protocols",
+    "all entry branches and whole domain state machine",
+    "physical IO success, real external ack, all crash recovery",
+    "runtime/E2E/build execution, tests or Astra reapproval",
+    "performance, low latency or cache-hit preservation"
+  ],
+  "source_and_publication_rules": [
+    "Original quoted report text chooses comparison scope; it is not fed to an analyzer as expected code outcome.",
+    "Develop implementation and normal static source queries, then freeze tool/policy and perform ordinary full formal scans on both unchanged targets.",
+    "Preserve original reports, old formal DB/JSON/ledger/policy and source hashes; any cache reclaim is separate and does not change historical reuse metadata.",
+    "Only after actual v14 publication, copy real assessments/conditions/gaps/IDs into these pending fields; do not prefill success."
+  ],
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "analyzer_invoked_for_this_ledger": false,
+  "database_opened_for_this_ledger": false
+}

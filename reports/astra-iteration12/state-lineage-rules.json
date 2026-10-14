@@ -1,0 +1,130 @@
+[
+  {
+    "severity": "info",
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-conditional-event-lineage-publication-source-v1"
+    ],
+    "provenance": {
+      "authority": "original-static-report-benchmark",
+      "reviewer": "captured-conditional-lineage-publication",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md:80",
+      "note": "Declaration locators only; no configured expected event, mode, guard, calls or success."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Captured authenticated declarations are active and the specific source branch is reached normally.",
+        "Ordinary stable record/closure values and explicitly modeled finite Boolean/enum expressions; all opaque operations before a selected step complete normally."
+      ],
+      "counterexamples": [
+        "Callback activation, persistence, actual queue creation, external authorization and remote effects remain conditional.",
+        "Earlier return/throw branches, alternate states, local/review-bundle paths and generic optional callback configurations remain distinct."
+      ]
+    },
+    "id": "cpb-review-fixed-state-lineage",
+    "type": "conditional_state_lineage",
+    "sources": [
+      {
+        "role": "completion",
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "completeRemediation"
+      },
+      {
+        "role": "callback_runner",
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "withHeldWorkflowLockRelease"
+      },
+      {
+        "role": "status_parser",
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "parseRemediationStatus"
+      },
+      {
+        "role": "superseder",
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "markJobSuperseded"
+      },
+      {
+        "role": "event_writer",
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "recordRemediationEvent"
+      },
+      {
+        "role": "lineage_builder",
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "createRemediationLineageTask"
+      },
+      {
+        "role": "event_authority",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "appendEvent"
+      },
+      {
+        "role": "queue_authority",
+        "file": "server/services/hub/hub-queue.ts",
+        "symbol": "enqueue"
+      }
+    ]
+  },
+  {
+    "severity": "info",
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-conditional-event-lineage-publication-source-v1"
+    ],
+    "provenance": {
+      "authority": "original-static-report-benchmark",
+      "reviewer": "captured-conditional-lineage-publication",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md:80",
+      "note": "Declaration locators only; no configured expected event, mode, guard, calls or success."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Captured authenticated declarations are active and the specific source branch is reached normally.",
+        "Ordinary stable record/closure values and explicitly modeled finite Boolean/enum expressions; all opaque operations before a selected step complete normally."
+      ],
+      "counterexamples": [
+        "Callback activation, persistence, actual queue creation, external authorization and remote effects remain conditional.",
+        "Earlier return/throw branches, alternate states, local/review-bundle paths and generic optional callback configurations remain distinct."
+      ]
+    },
+    "id": "cpb-finalizer-conditional-publication",
+    "type": "conditional_publication_boundary",
+    "sources": [
+      {
+        "role": "finalizer",
+        "file": "server/services/auto-finalizer.ts",
+        "symbol": "finalizeSuccessfulQueueEntry"
+      },
+      {
+        "role": "pr_boundary",
+        "file": "server/services/github/github-issues.ts",
+        "symbol": "openDraftPullRequest"
+      },
+      {
+        "role": "push_boundary",
+        "file": "server/services/github/github-issues.ts",
+        "symbol": "pushGithubCommitWithControlledTransport"
+      },
+      {
+        "role": "git_executor",
+        "file": "server/services/github/github-issues.ts",
+        "symbol": "runGit"
+      },
+      {
+        "role": "local_git_executor",
+        "file": "server/services/auto-finalizer.ts",
+        "symbol": "runGit"
+      },
+      {
+        "role": "review_bundle",
+        "file": "server/services/auto-finalizer.ts",
+        "symbol": "finalizeAsReviewBundle"
+      }
+    ]
+  }
+]

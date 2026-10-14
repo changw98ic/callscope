@@ -1,0 +1,95 @@
+{
+  "id": "cpb-report-conditional-delivery-result",
+  "type": "conditional_delivery_result",
+  "severity": "info",
+  "sources": [
+    {
+      "role": "finalizer",
+      "file": "runtime/worker/assignment-finalizer.ts",
+      "symbol": "finalizeAndWriteSuccessfulResult"
+    },
+    {
+      "role": "failure_result",
+      "file": "runtime/worker/assignment-finalizer.ts",
+      "symbol": "failedJobResult"
+    },
+    {
+      "role": "worker",
+      "file": "runtime/worker/managed-worker.ts",
+      "symbol": "main.processInbox"
+    },
+    {
+      "role": "publication",
+      "file": "runtime/worker/managed-worker.ts",
+      "symbol": "publishTerminalResultAfterWorktreeCleanup"
+    },
+    {
+      "role": "writer",
+      "file": "runtime/worker/managed-worker.ts",
+      "symbol": "writeTerminalResultOnceVerified"
+    },
+    {
+      "role": "assignment_sync",
+      "file": "runtime/worker/managed-worker.ts",
+      "symbol": "completeAssignmentStateFromResult"
+    },
+    {
+      "role": "reconcile",
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "Reconciler.reconcileAssignments"
+    },
+    {
+      "role": "attempt_read",
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "Reconciler._readAttemptResult"
+    },
+    {
+      "role": "queue_projection",
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "Reconciler._finalizeQueue"
+    },
+    {
+      "role": "finalizer_contract",
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "persistedFinalizerSuccessContractValid"
+    },
+    {
+      "role": "git_readback",
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "persistedFinalizerGitReadbackValid"
+    },
+    {
+      "role": "journal",
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "persistedFinalizerJournalValid"
+    },
+    {
+      "role": "recovery",
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "buildFinalizerOnlyRecoveryPlan"
+    }
+  ],
+  "models": [
+    "captured-normal-statement-control-v1"
+  ],
+  "provenance": {
+    "authority": "independent-static-report-benchmark",
+    "reviewer": "source-derived-report-chains",
+    "author_approved": false,
+    "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+    "note": "Locator-only selection for execution, finalization, terminal publication and queue projection. The detector derives intermediate formulas, bindings, fields, guards and calls from authenticated saved source."
+  },
+  "applicability": {
+    "kind": "conditional",
+    "conditions": [
+      "Selected source declarations, lexical identities and call edges belong to the same authenticated snapshot.",
+      "Extracted normal source control describes attempted finalization, deferred publication and current-attempt projection. Provider ports, callback activation, physical I/O and receipt truth remain conditional.",
+      "Execution result, delivery result and queue projection are interpreted separately; captured source structure does not establish remote success, global exactly-once publication or eventual recovery completion."
+    ],
+    "counterexamples": [
+      "Auto-finalization can be disabled, and blocked/cancelled/finalizer-only paths retain their own guards and result sources.",
+      "Terminal publication rejects invalid writer results and unequal existing results; cleanup, retention and mutation fences can stop publication.",
+      "Readback and journal requirements depend on finalization mode; a recovery plan is not evidence that all recovery has completed."
+    ]
+  }
+}

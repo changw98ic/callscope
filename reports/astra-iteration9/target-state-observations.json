@@ -1,0 +1,16 @@
+[
+  {
+    "repository": "codepatchbay",
+    "commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+    "porcelain": "",
+    "clean": true,
+    "operation": "read-only git status/rev-parse with hooks and fsmonitor disabled"
+  },
+  {
+    "repository": "winwincode",
+    "commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+    "porcelain": "",
+    "clean": true,
+    "operation": "read-only git status/rev-parse with hooks and fsmonitor disabled"
+  }
+]

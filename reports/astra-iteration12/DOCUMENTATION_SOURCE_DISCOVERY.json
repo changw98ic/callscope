@@ -1,0 +1,931 @@
+{
+  "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+  "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+  "policy_hash": "c085aff2d4adffa22410a5ce818a1f3ec431665a595de0c4f2d575326c982aaa",
+  "saved_documentation": {
+    "docs/architecture.md": {
+      "status": "captured",
+      "hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+      "text_hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+      "selected_lines": [
+        {
+          "line": 135,
+          "text": "  InProgress -->|需要人工决定| WaitingHuman[Waiting Human]"
+        },
+        {
+          "line": 136,
+          "text": "  Validating -->|需要人工决定| WaitingHuman"
+        },
+        {
+          "line": 137,
+          "text": "  WaitingHuman --> Ready"
+        },
+        {
+          "line": 138,
+          "text": "  InProgress --> Failed[Failed]"
+        },
+        {
+          "line": 139,
+          "text": "  Backlog --> Cancelled[Cancelled]"
+        },
+        {
+          "line": 140,
+          "text": "```"
+        },
+        {
+          "line": 141,
+          "text": ""
+        },
+        {
+          "line": 142,
+          "text": "最终结论由当前候选、冻结提交、运行结果和独立角色计算。`submitVerdict()` 不接受调用方直接制作的 Evidence 或 Verdict；Server 重新验证候选、事件身份、角色完整性和每项条件后才写入结论。Agent 的文本回复不是交付证据。最终结果使用 `winwincode.independent-verification-result.v1` 结构。"
+        },
+        {
+          "line": 143,
+          "text": ""
+        },
+        {
+          "line": 144,
+          "text": "### 执行图状态"
+        },
+        {
+          "line": 145,
+          "text": ""
+        },
+        {
+          "line": 146,
+          "text": "架构图和流程图贯穿三个公开状态："
+        },
+        {
+          "line": 147,
+          "text": ""
+        },
+        {
+          "line": 148,
+          "text": "| 状态 | 展示 | 内容边界 |"
+        },
+        {
+          "line": 149,
+          "text": "| --- | --- | --- |"
+        },
+        {
+          "line": 150,
+          "text": "| `before-execution` | 节点为绿色 | 只展示已审核的节点和关系 |"
+        },
+        {
+          "line": 151,
+          "text": "| `executing` | 变化节点为浅蓝色 | 展示影响范围，不返回候选文件和原始日志 |"
+        },
+        {
+          "line": 152,
+          "text": "| `execution-finished` | 变化节点为黄色 | 展示当前候选、Diff、运行活动和 Evidence 引用 |"
+        },
+        {
+          "line": 153,
+          "text": ""
+        },
+        {
+          "line": 154,
+          "text": "结束状态从明确的 base commit、candidate commit 和摘要重新计算，不使用执行中缓存的文件内容。"
+        },
+        {
+          "line": 155,
+          "text": ""
+        },
+        {
+          "line": 156,
+          "text": "## Provider、Credential 与外部副作用"
+        },
+        {
+          "line": 157,
+          "text": ""
+        },
+        {
+          "line": 158,
+          "text": "Provider Gateway 是 Control Plane 内部的唯一模型路由和长期 Credential 使用者。Worker 只通过 `execution-port-model-stream` 请求模型并接收流；请求中只带短期引用、路由和预算事实。Credential 服务保存受保护引用，公开合同和持久 Delivery 不保存原始密钥。"
+        },
+        {
+          "line": 159,
+          "text": ""
+        },
+        {
+          "line": 160,
+          "text": "Publication 先在 Control Plane 写入审批绑定、操作键和本地 receipt，再执行外部写入；重试通过同一操作键查询已存在的结果。Audit Ledger 保存主体、范围、操作、结果和摘要链，不复制命令正文、模型正文或凭据。"
+        },
+        {
+          "line": 161,
+          "text": ""
+        },
+        {
+          "line": 162,
+          "text": "## 本地与企业部署"
+        },
+        {
+          "line": 163,
+          "text": ""
+        },
+        {
+          "line": 164,
+          "text": "### 本地部署"
+        },
+        {
+          "line": 165,
+          "text": ""
+        },
+        {
+          "line": 166,
+          "text": "```text"
+        },
+        {
+          "line": 167,
+          "text": "winwincode-local"
+        },
+        {
+          "line": 168,
+          "text": "├─ winwincode-control-plane"
+        },
+        {
+          "line": 169,
+          "text": "└─ winwincode-worker"
+        },
+        {
+          "line": 170,
+          "text": "   ├─ winwincode-codex"
+        },
+        {
+          "line": 171,
+          "text": "   ├─ winwincode-kernel"
+        },
+        {
+          "line": 172,
+          "text": "   └─ winwincode-kernel-helper"
+        },
+        {
+          "line": 173,
+          "text": "```"
+        },
+        {
+          "line": 174,
+          "text": ""
+        },
+        {
+          "line": 175,
+          "text": "[`winwincode-local`](../crates/winwincode-local/src/lib.rs) 只负责生命周期和组合。它通过注入的 Control Plane 端点和 `LocalWorkerAdapter` 传递 typed frame，并为每个进程生成独立数据根；SQLite、租约、收据和 outbox 的语义与企业部署相同。"
+        },
+        {
+          "line": 176,
+          "text": ""
+        },
+        {
+          "line": 177,
+          "text": "### 企业部署"
+        },
+        {
+          "line": 178,
+          "text": ""
+        },
+        {
+          "line": 179,
+          "text": "```text"
+        },
+        {
+          "line": 180,
+          "text": "winwincode-server"
+        }
+      ]
+    }
+  },
+  "source_roles": {
+    "crates/winwincode-worker/src/device_model.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "DeviceModels.open",
+          "graph_node_id": "rust:crates/winwincode-worker/src/device_model#DeviceModels.open",
+          "location": {
+            "file": "crates/winwincode-worker/src/device_model.rs",
+            "line": 41,
+            "column": 5,
+            "end_line": 65,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 1771,
+            "end_byte": 2789,
+            "original_file_start_byte": 1771,
+            "original_file_end_byte": 2789,
+            "source_hash": "040b363a5c5714e788121c5345d2c5ac28b984178befc915c9a8e0d540b8ee4d",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "00427bca6111473dc62aa4a51010cfe91c717b1182f6e6eede58674ed2e3b2cb",
+            "source_line": "    pub(crate) fn open(directory: &Path) -> Result<Self, DeviceProviderError> {",
+            "source_excerpt": "pub(crate) fn open(directory: &Path) -> Result<Self, DeviceProviderError> {\n        DeviceProviderStore::open(directory)?;\n        let intake_log = std::env::var_os(\"WWC_MODEL_INTAKE_LOG\")\n            .map(PathBuf::from)\n            .or_else(|| {\n                // Managed workers keep durable diagnostics beside Codex runtime.\n                // The provider directory itself is shared across Worker sessions\n                // on one Device, so prefer an explicit env path when present.\n                None\n            });\n        let (sender, receiver) = mpsc::channel();\n        Ok(Self {\n            directory: directory.to_owned(),\n            pending: HashMap::new(),\n            sender,\n            receiver,\n            chunks: VecDeque::new(),\n            delivered_high_water: HashMap::new(),\n            owned_exchanges: HashSet::new(),\n            session_ids: HashSet::new(),\n            instance_ids: HashSet::new(),\n            logged_foreign: HashSet::new(),\n            intake_log,\n        })\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "5fe1ef42a4d187d279214bb42e187a91f004d638bceac87c762c3e1a77ff1f16",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "040b363a5c5714e788121c5345d2c5ac28b984178befc915c9a8e0d540b8ee4d",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub(crate) fn open(directory: &Path) -> Result<Self, DeviceProviderError> {\n        DeviceProviderStore::open(directory)?;\n        let intake_log = std::env::var_os(\"WWC_MODEL_INTAKE_LOG\")\n            .map(PathBuf::from)\n            .or_else(|| {\n                // Managed workers keep durable diagnostics beside Codex runtime.\n                // The provider directory itself is shared across Worker sessions\n                // on one Device, so prefer an explicit env path when present.\n                None\n            });\n        let (sender, receiver) = mpsc::channel();\n        Ok(Self {\n            directory: directory.to_owned(),\n            pending: HashMap::new(),\n            sender,\n            receiver,\n            chunks: VecDeque::new(),\n            delivered_high_water: HashMap::new(),\n            owned_exchanges: HashSet::new(),\n            session_ids: HashSet::new(),\n            instance_ids: HashSet::new(),\n            logged_foreign: HashSet::new(),\n            intake_log,\n        })\n    }"
+        },
+        {
+          "symbol": "DeviceModels.send",
+          "graph_node_id": "rust:crates/winwincode-worker/src/device_model#DeviceModels.send",
+          "location": {
+            "file": "crates/winwincode-worker/src/device_model.rs",
+            "line": 122,
+            "column": 5,
+            "end_line": 181,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 4841,
+            "end_byte": 7592,
+            "original_file_start_byte": 4841,
+            "original_file_end_byte": 7592,
+            "source_hash": "040b363a5c5714e788121c5345d2c5ac28b984178befc915c9a8e0d540b8ee4d",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "a7a7410ae029dd5418cd49e13a331991ee94a236a7e3d628e6dab74ed71082e9",
+            "source_line": "    pub(crate) fn send(",
+            "source_excerpt": "pub(crate) fn send(\n        &mut self,\n        message: &ExecutionPortMessage,\n    ) -> Result<bool, DeviceProviderError> {\n        match message {\n            ExecutionPortMessage::ModelOpenMessage(open) => {\n                let id = open.model_exchange_id.0.clone();\n                let digest = format!(\"{:x}\", Sha256::digest(serde_json::to_vec(open)?));\n                self.note_open_identity(open);\n                if let Some(previous) = self.pending.get(&id) {\n                    return if previous == &digest {\n                        Ok(true)\n                    } else {\n                        Err(DeviceProviderError)\n                    };\n                }\n                if self.pending.len() >= 16 {\n                    return Err(DeviceProviderError);\n                }\n                self.pending.insert(id.clone(), digest);\n                let directory = self.directory.clone();\n                let sender = self.sender.clone();\n                let open = open.clone();\n                // ponytail: bounded blocking HTTPS runs outside the Worker loop; adapter deadlines\n                // bound cancellation cleanup while heartbeats and tool approval remain responsive.\n                if std::thread::Builder::new()\n                    .name(\"device-provider\".to_owned())\n                    .spawn(move || {\n                        let chunks = DeviceProviderStore::open(&directory)\n                            .and_then(|store| store.execute_model(&open))\n                            .unwrap_or_else(|_| {\n                                vec![model_failure(\n                                    &open,\n                                    \"DEVICE_MODEL_FAILED: local request could not complete\",\n                                )]\n                            });\n                        let _ = sender.send((open.model_exchange_id.0, chunks));\n                    })\n                    .is_err()\n                {\n                    self.pending.remove(&id);\n                    return Err(DeviceProviderError);\n                }\n                Ok(true)\n            }\n            ExecutionPortMessage::ModelAckMessage(ack) => {\n                let store = DeviceProviderStore::open(&self.directory)?;\n                if ack.error.is_some() {\n                    store.cancel_model(&ack.model_exchange_id.0)?;\n                    self.chunks\n                        .retain(|chunk| chunk.model_exchange_id != ack.model_exchange_id);\n                } else if let Some(from) = &ack.replay_from_sequence {\n                    self.chunks\n                        .extend(store.replay_model(&ack.model_exchange_id.0, from.0)?);\n                }\n                Ok(true)\n            }\n            _ => Ok(false),\n        }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "5fe1ef42a4d187d279214bb42e187a91f004d638bceac87c762c3e1a77ff1f16",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "040b363a5c5714e788121c5345d2c5ac28b984178befc915c9a8e0d540b8ee4d",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub(crate) fn send(\n        &mut self,\n        message: &ExecutionPortMessage,\n    ) -> Result<bool, DeviceProviderError> {\n        match message {\n            ExecutionPortMessage::ModelOpenMessage(open) => {\n                let id = open.model_exchange_id.0.clone();\n                let digest = format!(\"{:x}\", Sha256::digest(serde_json::to_vec(open)?));\n                self.note_open_identity(open);\n                if let Some(previous) = self.pending.get(&id) {\n                    return if previous == &digest {\n                        Ok(true)\n                    } else {\n                        Err(DeviceProviderError)\n                    };\n                }\n                if self.pending.len() >= 16 {\n                    return Err(DeviceProviderError);\n                }\n                self.pending.insert(id.clone(), digest);\n                let directory = self.directory.clone();\n                let sender = self.sender.clone();\n                let open = open.clone();\n                // ponytail: bounded blocking HTTPS runs outside the Worker loop; adapter deadlines\n                // bound cancellation cleanup while heartbeats and tool approval remain responsive.\n                if std::thread::Builder::new()\n                    .name(\"device-provider\".to_owned())\n                    .spawn(move || {\n                        let chunks = DeviceProviderStore::open(&directory)\n                            .and_then(|store| store.execute_model(&open))\n                            .unwrap_or_else(|_| {\n                                vec![model_failure(\n                                    &open,\n                                    \"DEVICE_MODEL_FAILED: local request could not complete\",\n                                )]\n                            });\n                        let _ = sender.send((open.model_exchange_id.0, chunks));\n                    })\n                    .is_err()\n                {\n                    self.pending.remove(&id);\n                    return Err(DeviceProviderError);\n                }\n                Ok(true)\n            }\n            ExecutionPortMessage::ModelAckMessage(ack) => {\n                let store = DeviceProviderStore::open(&self.directory)?;\n                if ack.error.is_some() {\n                    store.cancel_model(&ack.model_exchange_id.0)?;\n                    self.chunks\n                        .retain(|chunk| chunk.model_exchange_id != ack.model_exchange_id);\n                } else if let Some(from) = &ack.replay_from_sequence {\n                    self.chunks\n                        .extend(store.replay_model(&ack.model_exchange_id.0, from.0)?);\n                }\n                Ok(true)\n            }\n            _ => Ok(false),\n        }\n    }"
+        }
+      ]
+    },
+    "crates/winwincode-worker/src/main.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "run_remote",
+          "graph_node_id": "rust:crates/winwincode-worker/src/main#run_remote",
+          "location": {
+            "file": "crates/winwincode-worker/src/main.rs",
+            "line": 97,
+            "column": 1,
+            "end_line": 111,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 3451,
+            "end_byte": 4295,
+            "original_file_start_byte": 3451,
+            "original_file_end_byte": 4295,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "c312bb11fbf5c818b667fb722ee53d785f571bbde7e79940b84c773ebd9472ec",
+            "source_line": "async fn run_remote() -> Result<(), Box<dyn std::error::Error>> {",
+            "source_excerpt": "async fn run_remote() -> Result<(), Box<dyn std::error::Error>> {\n    let bootstrap = WorkerBootstrap {\n        exit_after_work: false,\n        worker_id: WorkerId(required(\"WWC_WORKER_ID\")?),\n        worker_instance_id: WorkerInstanceId(required(\"WWC_WORKER_INSTANCE_ID\")?),\n        started_at: env::var(\"WWC_WORKER_STARTED_AT\").map_or(now_instant()?, Instant),\n        data_directory: PathBuf::from(required(\"WWC_WORKER_DATA_DIRECTORY\")?),\n        provider_directory: PathBuf::from(required(\"WWC_DEVICE_PROVIDER_DIRECTORY\")?),\n        source_directory: PathBuf::from(required(\"WWC_WORKER_SOURCE_ROOT\")?),\n        server_origin: required(\"WWC_WORKER_SERVER_ORIGIN\")?,\n        credential_path: PathBuf::from(required(\"WWC_WORKER_CREDENTIAL_FILE\")?),\n        model_route: default_model_route(),\n    };\n    Box::pin(run_worker(bootstrap)).await\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "e8c2b0cfaff9565247aa8b8afe28cf7b9dc2457a9073e9d9b7711b1ad9b8db6c",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "async fn run_remote() -> Result<(), Box<dyn std::error::Error>> {\n    let bootstrap = WorkerBootstrap {\n        exit_after_work: false,\n        worker_id: WorkerId(required(\"WWC_WORKER_ID\")?),\n        worker_instance_id: WorkerInstanceId(required(\"WWC_WORKER_INSTANCE_ID\")?),\n        started_at: env::var(\"WWC_WORKER_STARTED_AT\").map_or(now_instant()?, Instant),\n        data_directory: PathBuf::from(required(\"WWC_WORKER_DATA_DIRECTORY\")?),\n        provider_directory: PathBuf::from(required(\"WWC_DEVICE_PROVIDER_DIRECTORY\")?),\n        source_directory: PathBuf::from(required(\"WWC_WORKER_SOURCE_ROOT\")?),\n        server_origin: required(\"WWC_WORKER_SERVER_ORIGIN\")?,\n        credential_path: PathBuf::from(required(\"WWC_WORKER_CREDENTIAL_FILE\")?),\n        model_route: default_model_route(),\n    };\n    Box::pin(run_worker(bootstrap)).await\n}"
+        },
+        {
+          "symbol": "run_managed",
+          "graph_node_id": "rust:crates/winwincode-worker/src/main#run_managed",
+          "location": {
+            "file": "crates/winwincode-worker/src/main.rs",
+            "line": 118,
+            "column": 1,
+            "end_line": 149,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 4636,
+            "end_byte": 6055,
+            "original_file_start_byte": 4636,
+            "original_file_end_byte": 6055,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "6d80bf35a9aa9f813aeb2156617f055c780dd04bd306d0c83218ed1a704eb4f1",
+            "source_line": "async fn run_managed(config_path: &str) -> Result<(), Box<dyn std::error::Error>> {",
+            "source_excerpt": "async fn run_managed(config_path: &str) -> Result<(), Box<dyn std::error::Error>> {\n    let config = ManagedSessionConfig::read(std::path::Path::new(config_path))?;\n    let credential = WorkerSessionCredential::load(&config.worker_credential_path)?;\n    eprintln!(\n        \"winwincode-worker: managed session {} for worker {} instance {} under lease {} with fencing token {} on {} (client {} instance {}); worker session credential digest {}\",\n        config.worker_session_id.0,\n        config.worker_id.0,\n        config.worker_instance_id.0,\n        config.occupancy_lease_id.0,\n        config.occupancy_fencing_token,\n        config.repository_binding_id.0,\n        config.client_node_id.0,\n        config.client_instance_id.0,\n        credential.digest().0,\n    );\n    Box::pin(run_worker(WorkerBootstrap {\n        exit_after_work: true,\n        worker_id: config.worker_id.clone(),\n        worker_instance_id: config.worker_instance_id.clone(),\n        started_at: now_instant()?,\n        data_directory: config.data_directory.clone(),\n        provider_directory: config.provider_directory.clone(),\n        source_directory: config.source_directory.clone(),\n        server_origin: config.server_origin.clone(),\n        credential_path: credential.path().to_path_buf(),\n        model_route: config\n            .model_route\n            .clone()\n            .unwrap_or_else(default_model_route),\n    }))\n    .await\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "e8c2b0cfaff9565247aa8b8afe28cf7b9dc2457a9073e9d9b7711b1ad9b8db6c",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "async fn run_managed(config_path: &str) -> Result<(), Box<dyn std::error::Error>> {\n    let config = ManagedSessionConfig::read(std::path::Path::new(config_path))?;\n    let credential = WorkerSessionCredential::load(&config.worker_credential_path)?;\n    eprintln!(\n        \"winwincode-worker: managed session {} for worker {} instance {} under lease {} with fencing token {} on {} (client {} instance {}); worker session credential digest {}\",\n        config.worker_session_id.0,\n        config.worker_id.0,\n        config.worker_instance_id.0,\n        config.occupancy_lease_id.0,\n        config.occupancy_fencing_token,\n        config.repository_binding_id.0,\n        config.client_node_id.0,\n        config.client_instance_id.0,\n        credential.digest().0,\n    );\n    Box::pin(run_worker(WorkerBootstrap {\n        exit_after_work: true,\n        worker_id: config.worker_id.clone(),\n        worker_instance_id: config.worker_instance_id.clone(),\n        started_at: now_instant()?,\n        data_directory: config.data_directory.clone(),\n        provider_directory: config.provider_directory.clone(),\n        source_directory: config.source_directory.clone(),\n        server_origin: config.server_origin.clone(),\n        credential_path: credential.path().to_path_buf(),\n        model_route: config\n            .model_route\n            .clone()\n            .unwrap_or_else(default_model_route),\n    }))\n    .await\n}"
+        },
+        {
+          "symbol": "run_worker",
+          "graph_node_id": "rust:crates/winwincode-worker/src/main#run_worker",
+          "location": {
+            "file": "crates/winwincode-worker/src/main.rs",
+            "line": 154,
+            "column": 1,
+            "end_line": 262,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 6268,
+            "end_byte": 10828,
+            "original_file_start_byte": 6268,
+            "original_file_end_byte": 10828,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "ab106e71bf791a0283412d398b3b36bdc13d453808b0b2a0c49ccb285c8b5982",
+            "source_line": "async fn run_worker(bootstrap: WorkerBootstrap) -> Result<(), Box<dyn std::error::Error>> {",
+            "source_excerpt": "async fn run_worker(bootstrap: WorkerBootstrap) -> Result<(), Box<dyn std::error::Error>> {\n    let WorkerBootstrap {\n        exit_after_work,\n        worker_id,\n        worker_instance_id,\n        started_at,\n        data_directory,\n        provider_directory,\n        source_directory,\n        server_origin,\n        credential_path,\n        model_route,\n    } = bootstrap;\n    let capabilities = worker_capabilities()?;\n    let execution_mode = configured_execution_mode(\"WWC_WORKER_EXECUTION_MODE\")?;\n    let observer_mode = configured_observer_mode(\"WWC_WORKER_OBSERVER_MODE\")?;\n    let observation_model = configured_observation_model(observer_mode, required)?;\n    let (port, handle) = RemoteWorkerPort::open(\n        &server_origin,\n        &fs::read(required(\"WWC_WORKER_TLS_ROOT_DER_FILE\")?)?,\n        credential_path,\n        worker_id.clone(),\n        worker_instance_id.clone(),\n        Duration::from_secs(15),\n    )?;\n    let codex = production_codex(\n        &data_directory,\n        &provider_directory,\n        model_route,\n        capabilities.clone(),\n        execution_mode,\n        observer_mode,\n    )?;\n    let validation_artifacts =\n        DurableValidationArtifactStore::open(data_directory.join(\"worker-validation-artifacts\"))?;\n    let workspaces =\n        JobWorkspaceRuntime::open(data_directory.join(\"worker-workspaces\"), &source_directory)?\n            .with_validation_artifact_port(validation_artifacts);\n    let config = WorkerConfig {\n        worker_id,\n        worker_instance_id: worker_instance_id.clone(),\n        started_at: started_at.clone(),\n        capabilities,\n    };\n    let intake_log = data_directory.join(\"codex-runtime\").join(\"model-intake.log\");\n    let mut worker = WorkerMain::new(config, port, codex, workspaces)\n        .with_device_providers(&provider_directory)?\n        .with_observer_mode(observer_mode)\n        .with_registration_request_namespace(&worker_instance_id, &started_at)\n        .with_model_intake_log(&intake_log);\n    if let Some(observation_model) = observation_model {\n        worker = worker.with_observation_model(observation_model);\n    }\n\n    while worker.lifecycle() == WorkerLifecycleState::Booting\n        || worker.lifecycle() == WorkerLifecycleState::Registering\n    {\n        match Box::pin(worker.start(started_at.clone())).await {\n            Ok(()) => {\n                Box::pin(drain_controls(&mut worker, &handle)).await?;\n            }\n            Err(error) => {\n                // Secret-safe lifecycle category only: a Device StrongFlow\n                // Worker that silently retries registration forever is\n                // indistinguishable from a hung process in production logs.\n                eprintln!(\n                    \"winwincode-worker: registration/start retry category={:?} reason={} lifecycle={:?}\",\n                    error.code,\n                    error.reason,\n                    worker.lifecycle()\n                );\n            }\n        }\n        if worker.lifecycle() != WorkerLifecycleState::Active {\n            tokio::time::sleep(Duration::from_millis(250)).await;\n        }\n    }\n\n    let mut heartbeat = tokio::time::interval(Duration::from_secs(1));\n    let mut drive = tokio::time::interval(Duration::from_millis(25));\n    loop {\n        tokio::select! {\n            _ = tokio::signal::ctrl_c() => break,\n            _ = heartbeat.tick() => {\n                let now = now_instant()?;\n                if Box::pin(worker.heartbeat(now.clone())).await.is_ok() {\n                    Box::pin(drain_controls(&mut worker, &handle)).await?;\n                }\n            }\n            _ = drive.tick() => {\n                let now = now_instant()?;\n                Box::pin(drain_controls(&mut worker, &handle)).await?;\n                // Retry pending Worker→Server evidence every drive tick so a\n                // Server restart / Connection-refused window cannot strand\n                // runtime.event / artifact.chunk / JobOutcome in the outbox.\n                if worker.lifecycle() == WorkerLifecycleState::Active\n                    && Box::pin(worker.flush_",
+            "source_excerpt_truncated": true,
+            "semantic_parse_id": "e8c2b0cfaff9565247aa8b8afe28cf7b9dc2457a9073e9d9b7711b1ad9b8db6c",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "async fn run_worker(bootstrap: WorkerBootstrap) -> Result<(), Box<dyn std::error::Error>> {\n    let WorkerBootstrap {\n        exit_after_work,\n        worker_id,\n        worker_instance_id,\n        started_at,\n        data_directory,\n        provider_directory,\n        source_directory,\n        server_origin,\n        credential_path,\n        model_route,\n    } = bootstrap;\n    let capabilities = worker_capabilities()?;\n    let execution_mode = configured_execution_mode(\"WWC_WORKER_EXECUTION_MODE\")?;\n    let observer_mode = configured_observer_mode(\"WWC_WORKER_OBSERVER_MODE\")?;\n    let observation_model = configured_observation_model(observer_mode, required)?;\n    let (port, handle) = RemoteWorkerPort::open(\n        &server_origin,\n        &fs::read(required(\"WWC_WORKER_TLS_ROOT_DER_FILE\")?)?,\n        credential_path,\n        worker_id.clone(),\n        worker_instance_id.clone(),\n        Duration::from_secs(15),\n    )?;\n    let codex = production_codex(\n        &data_directory,\n        &provider_directory,\n        model_route,\n        capabilities.clone(),\n        execution_mode,\n        observer_mode,\n    )?;\n    let validation_artifacts =\n        DurableValidationArtifactStore::open(data_directory.join(\"worker-validation-artifacts\"))?;\n    let workspaces =\n        JobWorkspaceRuntime::open(data_directory.join(\"worker-workspaces\"), &source_directory)?\n            .with_validation_artifact_port(validation_artifacts);\n    let config = WorkerConfig {\n        worker_id,\n        worker_instance_id: worker_instance_id.clone(),\n        started_at: started_at.clone(),\n        capabilities,\n    };\n    let intake_log = data_directory.join(\"codex-runtime\").join(\"model-intake.log\");\n    let mut worker = WorkerMain::new(config, port, codex, workspaces)\n        .with_device_providers(&provider_directory)?\n        .with_observer_mode(observer_mode)\n        .with_registration_request_namespace(&worker_instance_id, &started_at)\n        .with_model_intake_log(&intake_log);\n    if let Some(observation_model) = observation_model {\n        worker = worker.with_observation_model(observation_model);\n    }\n\n    while worker.lifecycle() == WorkerLifecycleState::Booting\n        || worker.lifecycle() == WorkerLifecycleState::Registering\n    {\n        match Box::pin(worker.start(started_at.clone())).await {\n            Ok(()) => {\n                Box::pin(drain_controls(&mut worker, &handle)).await?;\n            }\n            Err(error) => {\n                // Secret-safe lifecycle category only: a Device StrongFlow\n                // Worker that silently retries registration forever is\n                // indistinguishable from a hung process in production logs.\n                eprintln!(\n                    \"winwincode-worker: registration/start retry category={:?} reason={} lifecycle={:?}\",\n                    error.code,\n                    error.reason,\n                    worker.lifecycle()\n                );\n            }\n        }\n        if worker.lifecycle() != WorkerLifecycleState::Active {\n            tokio::time::sleep(Duration::from_millis(250)).await;\n        }\n    }\n\n    let mut heartbeat = tokio::time::interval(Duration::from_secs(1));\n    let mut drive = tokio::time::interval(Duration::from_millis(25));\n    loop {\n        tokio::select! {\n            _ = tokio::signal::ctrl_c() => break,\n            _ = heartbeat.tick() => {\n                let now = now_instant()?;\n                if Box::pin(worker.heartbeat(now.clone())).await.is_ok() {\n                    Box::pin(drain_controls(&mut worker, &handle)).await?;\n                }\n            }\n            _ = drive.tick() => {\n                let now = now_instant()?;\n                Box::pin(drain_controls(&mut worker, &handle)).await?;\n                // Retry pending Worker→Server evidence every drive tick so a\n                // Server restart / Connection-refused window cannot strand\n                // runtime.event / artifact.chunk / JobOutcome in the outbox.\n                if worker.lifecycle() == WorkerLifecycleState::Active\n                    && Box::pin(worker.flush_durable_outbox()).await.is_err()\n                    && env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some()\n                {\n                    eprintln!(\"winwincode-worker: durable outbox flush retry failed\");\n                }\n                let _ = Box::pin(worker.poll_codex(now)).await;\n                if exit_after_work && worker.work_drained() { break; }\n            }\n        }\n    }\n    let _ = Box::pin(worker.shutdown(now_instant()?)).await;\n    Ok(())\n}"
+        },
+        {
+          "symbol": "production_codex",
+          "graph_node_id": "rust:crates/winwincode-worker/src/main#production_codex",
+          "location": {
+            "file": "crates/winwincode-worker/src/main.rs",
+            "line": 315,
+            "column": 1,
+            "end_line": 375,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 13028,
+            "end_byte": 15782,
+            "original_file_start_byte": 13028,
+            "original_file_end_byte": 15782,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "b272e828de1bffb3cc79d3615a702afdaf04bab16da6525157bf1f2564bec563",
+            "source_line": "fn production_codex(",
+            "source_excerpt": "fn production_codex(\n    data_directory: &std::path::Path,\n    provider_directory: &std::path::Path,\n    model_route: ModelGatewayRoute,\n    capabilities: WorkerCapabilitySet,\n    execution_mode: ExecutionMode,\n    observer_mode: ObserverMode,\n) -> Result<ProductionCodexAdapter, Box<dyn std::error::Error>> {\n    let helper_release_manifest = HelperReleaseManifest::from_file(&PathBuf::from(required(\n        \"WWC_WORKER_HELPER_RELEASE_MANIFEST\",\n    )?))?;\n    let store = winwincode_provider::DeviceProviderStore::open(provider_directory)?;\n    let snapshot = store.snapshot(\"local\")?;\n    let extensions = store.restore_extensions(&data_directory.join(\"codex-runtime/kernel-home\"))?;\n    let mut discovered_capabilities = Vec::new();\n    for server in extensions {\n        for tool in server.tools {\n            discovered_capabilities.push(\n                winwincode_execution_port::capability_adapter::CapabilityDescriptor::mcp(\n                    &server.server,\n                    &tool,\n                    server.digest.trim_start_matches(\"sha256:\"),\n                    winwincode_execution_port::capability_adapter::CapabilityHealth::Healthy,\n                    winwincode_execution_port::capability_adapter::CapabilityOrigin::CodexCoreMcp,\n                )?,\n            );\n        }\n    }\n    let default_provider = snapshot\n        .providers\n        .iter()\n        .find(|provider| provider.config.enabled && provider.credential_configured)\n        .ok_or(\"configure a Provider on this Device before starting a Worker\")?;\n    let provider_id = env::var(\"WWC_WORKER_MODEL_PROVIDER_ID\")\n        .unwrap_or_else(|_| default_provider.config.provider_id.clone());\n    let model_id = env::var(\"WWC_WORKER_MODEL_ID\")\n        .unwrap_or_else(|_| default_provider.config.model_ids[0].clone());\n    let options = ProductionCodexOptions {\n        data_directory: data_directory.join(\"codex-runtime\"),\n        helper_executable: PathBuf::from(required(\"WWC_WORKER_HELPER_EXECUTABLE\")?),\n        helper_release_manifest,\n        provider: provider_id,\n        model: model_id,\n        gateway_route: model_route,\n        registered_capabilities: capabilities,\n        discovered_capabilities,\n        action_signing_key: ActionEnforcementSigningKey::from_bytes(parse_hex_key(&required(\n            \"WWC_WORKER_ACTION_SIGNING_KEY_HEX\",\n        )?)?)?,\n        execution_envelope: ExecutionEnvelopeToken {\n            version: 1,\n            digest: Sha256Digest(required(\"WWC_WORKER_EXECUTION_ENVELOPE_DIGEST\")?),\n        },\n        execution_mode,\n        observer_mode,\n    };\n    Ok(\n        ProductionCodexAdapter::open(ProductionCodexConfig::try_new(options)?)?\n            .with_device_extensions(provider_directory.to_path_buf())?,\n    )\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "e8c2b0cfaff9565247aa8b8afe28cf7b9dc2457a9073e9d9b7711b1ad9b8db6c",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn production_codex(\n    data_directory: &std::path::Path,\n    provider_directory: &std::path::Path,\n    model_route: ModelGatewayRoute,\n    capabilities: WorkerCapabilitySet,\n    execution_mode: ExecutionMode,\n    observer_mode: ObserverMode,\n) -> Result<ProductionCodexAdapter, Box<dyn std::error::Error>> {\n    let helper_release_manifest = HelperReleaseManifest::from_file(&PathBuf::from(required(\n        \"WWC_WORKER_HELPER_RELEASE_MANIFEST\",\n    )?))?;\n    let store = winwincode_provider::DeviceProviderStore::open(provider_directory)?;\n    let snapshot = store.snapshot(\"local\")?;\n    let extensions = store.restore_extensions(&data_directory.join(\"codex-runtime/kernel-home\"))?;\n    let mut discovered_capabilities = Vec::new();\n    for server in extensions {\n        for tool in server.tools {\n            discovered_capabilities.push(\n                winwincode_execution_port::capability_adapter::CapabilityDescriptor::mcp(\n                    &server.server,\n                    &tool,\n                    server.digest.trim_start_matches(\"sha256:\"),\n                    winwincode_execution_port::capability_adapter::CapabilityHealth::Healthy,\n                    winwincode_execution_port::capability_adapter::CapabilityOrigin::CodexCoreMcp,\n                )?,\n            );\n        }\n    }\n    let default_provider = snapshot\n        .providers\n        .iter()\n        .find(|provider| provider.config.enabled && provider.credential_configured)\n        .ok_or(\"configure a Provider on this Device before starting a Worker\")?;\n    let provider_id = env::var(\"WWC_WORKER_MODEL_PROVIDER_ID\")\n        .unwrap_or_else(|_| default_provider.config.provider_id.clone());\n    let model_id = env::var(\"WWC_WORKER_MODEL_ID\")\n        .unwrap_or_else(|_| default_provider.config.model_ids[0].clone());\n    let options = ProductionCodexOptions {\n        data_directory: data_directory.join(\"codex-runtime\"),\n        helper_executable: PathBuf::from(required(\"WWC_WORKER_HELPER_EXECUTABLE\")?),\n        helper_release_manifest,\n        provider: provider_id,\n        model: model_id,\n        gateway_route: model_route,\n        registered_capabilities: capabilities,\n        discovered_capabilities,\n        action_signing_key: ActionEnforcementSigningKey::from_bytes(parse_hex_key(&required(\n            \"WWC_WORKER_ACTION_SIGNING_KEY_HEX\",\n        )?)?)?,\n        execution_envelope: ExecutionEnvelopeToken {\n            version: 1,\n            digest: Sha256Digest(required(\"WWC_WORKER_EXECUTION_ENVELOPE_DIGEST\")?),\n        },\n        execution_mode,\n        observer_mode,\n    };\n    Ok(\n        ProductionCodexAdapter::open(ProductionCodexConfig::try_new(options)?)?\n            .with_device_extensions(provider_directory.to_path_buf())?,\n    )\n}"
+        }
+      ]
+    },
+    "crates/winwincode-worker/src/lib.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "WorkerMain.with_device_providers",
+          "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.with_device_providers",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 409,
+            "column": 5,
+            "end_line": 420,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 16382,
+            "end_byte": 16898,
+            "original_file_start_byte": 16382,
+            "original_file_end_byte": 16898,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "88a8845a03c0c347c04d63e215a703f88ff1d96432d125f7fb54e1946a23d502",
+            "source_line": "    pub fn with_device_providers(",
+            "source_excerpt": "pub fn with_device_providers(\n        mut self,\n        directory: &std::path::Path,\n    ) -> Result<Self, winwincode_provider::DeviceProviderError> {\n        let mut models = device_model::DeviceModels::open(directory)?;\n        models.note_worker_instance_id(&self.config.worker_instance_id.0);\n        if let Some(path) = std::env::var_os(\"WWC_MODEL_INTAKE_LOG\") {\n            models.set_intake_log(Some(std::path::PathBuf::from(path)));\n        }\n        self.device_models = Some(models);\n        Ok(self)\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "00da1f2d5c6040485acc1742ce0b927f381aa1895fdeef61fb11ef1076833a40",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn with_device_providers(\n        mut self,\n        directory: &std::path::Path,\n    ) -> Result<Self, winwincode_provider::DeviceProviderError> {\n        let mut models = device_model::DeviceModels::open(directory)?;\n        models.note_worker_instance_id(&self.config.worker_instance_id.0);\n        if let Some(path) = std::env::var_os(\"WWC_MODEL_INTAKE_LOG\") {\n            models.set_intake_log(Some(std::path::PathBuf::from(path)));\n        }\n        self.device_models = Some(models);\n        Ok(self)\n    }"
+        },
+        {
+          "symbol": "same_replacement_scope",
+          "graph_node_id": "rust:crates/winwincode-worker/src/lib#same_replacement_scope",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 4791,
+            "column": 1,
+            "end_line": 4808,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 193098,
+            "end_byte": 193904,
+            "original_file_start_byte": 193098,
+            "original_file_end_byte": 193904,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "d8d7b32ed269c922639a7cfc9f147ca19f4e3fa53fdeed9b87ccfdd8718723fd",
+            "source_line": "fn same_replacement_scope(left: &ExecutionScope, right: &ExecutionScope) -> bool {",
+            "source_excerpt": "fn same_replacement_scope(left: &ExecutionScope, right: &ExecutionScope) -> bool {\n    match (left, right) {\n        (ExecutionScope::WorkRunExecutionScope(a), ExecutionScope::WorkRunExecutionScope(b)) => {\n            a.kind == b.kind\n                && a.product_session_id == b.product_session_id\n                && a.rework_authorization == b.rework_authorization\n                && a.work_contract_id == b.work_contract_id\n                && a.work_contract_revision == b.work_contract_revision\n                && a.work_item_id == b.work_item_id\n                && a.work_item_revision == b.work_item_revision\n        }\n        (\n            ExecutionScope::ProductSessionExecutionScope(a),\n            ExecutionScope::ProductSessionExecutionScope(b),\n        ) => a == b,\n        _ => false,\n    }\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "00da1f2d5c6040485acc1742ce0b927f381aa1895fdeef61fb11ef1076833a40",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn same_replacement_scope(left: &ExecutionScope, right: &ExecutionScope) -> bool {\n    match (left, right) {\n        (ExecutionScope::WorkRunExecutionScope(a), ExecutionScope::WorkRunExecutionScope(b)) => {\n            a.kind == b.kind\n                && a.product_session_id == b.product_session_id\n                && a.rework_authorization == b.rework_authorization\n                && a.work_contract_id == b.work_contract_id\n                && a.work_contract_revision == b.work_contract_revision\n                && a.work_item_id == b.work_item_id\n                && a.work_item_revision == b.work_item_revision\n        }\n        (\n            ExecutionScope::ProductSessionExecutionScope(a),\n            ExecutionScope::ProductSessionExecutionScope(b),\n        ) => a == b,\n        _ => false,\n    }\n}"
+        }
+      ]
+    },
+    "crates/winwincode-provider/src/device_store.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "DeviceProviderStore.open",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 79,
+            "column": 5,
+            "end_line": 145,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 2554,
+            "end_byte": 5876,
+            "original_file_start_byte": 2554,
+            "original_file_end_byte": 5876,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "46621f0438ba1f3d718584948520fa2e8352a621e48419d9387093fd1766a907",
+            "source_line": "    pub fn open(directory: &Path) -> Result<Self, DeviceProviderError> {",
+            "source_excerpt": "pub fn open(directory: &Path) -> Result<Self, DeviceProviderError> {\n        fs::DirBuilder::new()\n            .recursive(true)\n            .mode(0o700)\n            .create(directory)?;\n        let meta = fs::symlink_metadata(directory)?;\n        if !meta.is_dir() || meta.permissions().mode() & 0o077 != 0 {\n            return Err(DeviceProviderError);\n        }\n        let path = directory.join(\"providers.sqlite3\");\n        match fs::OpenOptions::new()\n            .write(true)\n            .create_new(true)\n            .mode(0o600)\n            .open(&path)\n        {\n            Ok(file) => file.sync_all()?,\n            Err(error) if error.kind() == std::io::ErrorKind::AlreadyExists => {}\n            Err(error) => return Err(error.into()),\n        }\n        let meta = fs::symlink_metadata(&path)?;\n        if !meta.is_file() || meta.permissions().mode() & 0o077 != 0 {\n            return Err(DeviceProviderError);\n        }\n        let mut connection = Connection::open(path)?;\n        connection.busy_timeout(Duration::from_secs(5))?;\n        connection.execute_batch(\n            \"PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA secure_delete=ON;\",\n        )?;\n        let transaction =\n            connection.transaction_with_behavior(rusqlite::TransactionBehavior::Immediate)?;\n        let version: i64 = transaction.query_row(\"PRAGMA user_version\", [], |row| row.get(0))?;\n        if version == 0 {\n            transaction.execute_batch(\n                \"CREATE TABLE identity (singleton INTEGER PRIMARY KEY CHECK(singleton=1), private_key BLOB NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));\n                 CREATE TABLE providers (provider_id TEXT PRIMARY KEY, config TEXT NOT NULL, secret BLOB NOT NULL);\n                 CREATE TABLE receipts (request_id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);\n                 CREATE TABLE exchanges (exchange_id TEXT PRIMARY KEY, digest TEXT NOT NULL, chunks TEXT, cancelled INTEGER NOT NULL DEFAULT 0);\n                 PRAGMA user_version=1;\"\n            )?;\n            let key = new_secret_key()?;\n            transaction.execute(\n                \"INSERT INTO identity VALUES (1, ?1, 0)\",\n                [key.to_bytes().as_slice()],\n            )?;\n        } else if ![1, 2].contains(&version) {\n            return Err(DeviceProviderError);\n        }\n        if version < 2 {\n            transaction.execute_batch(\n                \"CREATE TABLE extension_state (singleton INTEGER PRIMARY KEY CHECK(singleton=1), revision INTEGER NOT NULL CHECK(revision>=0));\n                 INSERT INTO extension_state VALUES (1, 0);\n                 CREATE TABLE extensions (kind TEXT NOT NULL, id TEXT NOT NULL, data TEXT NOT NULL, projection TEXT NOT NULL, PRIMARY KEY(kind,id));\n                 CREATE TABLE extension_receipts (request_id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);\n                 PRAGMA user_version=2;\",\n            )?;\n        }\n        let mut bytes: Vec<u8> = transaction.query_row(\n            \"SELECT private_key FROM identity WHERE singleton=1\",\n            [],\n            |row| row.get(0),\n        )?;\n        let key = SecretKey::from_slice(&bytes).map_err(|_| DeviceProviderError)?;\n        bytes.fill(0);\n        transaction.commit()?;\n        Ok(Self { connection, key })\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn open(directory: &Path) -> Result<Self, DeviceProviderError> {\n        fs::DirBuilder::new()\n            .recursive(true)\n            .mode(0o700)\n            .create(directory)?;\n        let meta = fs::symlink_metadata(directory)?;\n        if !meta.is_dir() || meta.permissions().mode() & 0o077 != 0 {\n            return Err(DeviceProviderError);\n        }\n        let path = directory.join(\"providers.sqlite3\");\n        match fs::OpenOptions::new()\n            .write(true)\n            .create_new(true)\n            .mode(0o600)\n            .open(&path)\n        {\n            Ok(file) => file.sync_all()?,\n            Err(error) if error.kind() == std::io::ErrorKind::AlreadyExists => {}\n            Err(error) => return Err(error.into()),\n        }\n        let meta = fs::symlink_metadata(&path)?;\n        if !meta.is_file() || meta.permissions().mode() & 0o077 != 0 {\n            return Err(DeviceProviderError);\n        }\n        let mut connection = Connection::open(path)?;\n        connection.busy_timeout(Duration::from_secs(5))?;\n        connection.execute_batch(\n            \"PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA secure_delete=ON;\",\n        )?;\n        let transaction =\n            connection.transaction_with_behavior(rusqlite::TransactionBehavior::Immediate)?;\n        let version: i64 = transaction.query_row(\"PRAGMA user_version\", [], |row| row.get(0))?;\n        if version == 0 {\n            transaction.execute_batch(\n                \"CREATE TABLE identity (singleton INTEGER PRIMARY KEY CHECK(singleton=1), private_key BLOB NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));\n                 CREATE TABLE providers (provider_id TEXT PRIMARY KEY, config TEXT NOT NULL, secret BLOB NOT NULL);\n                 CREATE TABLE receipts (request_id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);\n                 CREATE TABLE exchanges (exchange_id TEXT PRIMARY KEY, digest TEXT NOT NULL, chunks TEXT, cancelled INTEGER NOT NULL DEFAULT 0);\n                 PRAGMA user_version=1;\"\n            )?;\n            let key = new_secret_key()?;\n            transaction.execute(\n                \"INSERT INTO identity VALUES (1, ?1, 0)\",\n                [key.to_bytes().as_slice()],\n            )?;\n        } else if ![1, 2].contains(&version) {\n            return Err(DeviceProviderError);\n        }\n        if version < 2 {\n            transaction.execute_batch(\n                \"CREATE TABLE extension_state (singleton INTEGER PRIMARY KEY CHECK(singleton=1), revision INTEGER NOT NULL CHECK(revision>=0));\n                 INSERT INTO extension_state VALUES (1, 0);\n                 CREATE TABLE extensions (kind TEXT NOT NULL, id TEXT NOT NULL, data TEXT NOT NULL, projection TEXT NOT NULL, PRIMARY KEY(kind,id));\n                 CREATE TABLE extension_receipts (request_id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);\n                 PRAGMA user_version=2;\",\n            )?;\n        }\n        let mut bytes: Vec<u8> = transaction.query_row(\n            \"SELECT private_key FROM identity WHERE singleton=1\",\n            [],\n            |row| row.get(0),\n        )?;\n        let key = SecretKey::from_slice(&bytes).map_err(|_| DeviceProviderError)?;\n        bytes.fill(0);\n        transaction.commit()?;\n        Ok(Self { connection, key })\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.snapshot",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.snapshot",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 151,
+            "column": 5,
+            "end_line": 181,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 6056,
+            "end_byte": 7216,
+            "original_file_start_byte": 6056,
+            "original_file_end_byte": 7216,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "fa71d9bc812962dcf223d942976efe7184aacdf072c80ab4b5b8767b18f1fdc2",
+            "source_line": "    pub fn snapshot(",
+            "source_excerpt": "pub fn snapshot(\n        &self,\n        client_node_id: &str,\n    ) -> Result<DeviceProviderSnapshot, DeviceProviderError> {\n        let revision = self.revision()?;\n        let mut query = self\n            .connection\n            .prepare(\"SELECT config, length(secret)>0 FROM providers ORDER BY provider_id\")?;\n        let rows = query.query_map([], |row| {\n            Ok((row.get::<_, String>(0)?, row.get::<_, bool>(1)?))\n        })?;\n        let mut providers = Vec::new();\n        for row in rows {\n            let (config, credential_configured) = row?;\n            let config = serde_json::from_str(&config)?;\n            if !valid_device_provider_config(&config) {\n                return Err(DeviceProviderError);\n            }\n            providers.push(DeviceProviderProjection {\n                config,\n                credential_configured,\n            });\n        }\n        Ok(DeviceProviderSnapshot {\n            client_node_id: client_node_id.to_owned(),\n            revision,\n            encryption_public_key: STANDARD\n                .encode(self.key.public_key().to_encoded_point(false).as_bytes()),\n            providers,\n        })\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn snapshot(\n        &self,\n        client_node_id: &str,\n    ) -> Result<DeviceProviderSnapshot, DeviceProviderError> {\n        let revision = self.revision()?;\n        let mut query = self\n            .connection\n            .prepare(\"SELECT config, length(secret)>0 FROM providers ORDER BY provider_id\")?;\n        let rows = query.query_map([], |row| {\n            Ok((row.get::<_, String>(0)?, row.get::<_, bool>(1)?))\n        })?;\n        let mut providers = Vec::new();\n        for row in rows {\n            let (config, credential_configured) = row?;\n            let config = serde_json::from_str(&config)?;\n            if !valid_device_provider_config(&config) {\n                return Err(DeviceProviderError);\n            }\n            providers.push(DeviceProviderProjection {\n                config,\n                credential_configured,\n            });\n        }\n        Ok(DeviceProviderSnapshot {\n            client_node_id: client_node_id.to_owned(),\n            revision,\n            encryption_public_key: STANDARD\n                .encode(self.key.public_key().to_encoded_point(false).as_bytes()),\n            providers,\n        })\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.decrypt_configuration",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.decrypt_configuration",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 290,
+            "column": 5,
+            "end_line": 338,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 11305,
+            "end_byte": 13191,
+            "original_file_start_byte": 11305,
+            "original_file_end_byte": 13191,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "b4b95d5c736d868521bcb5012695e33aae148e97727d2add55f62aa67f00bd6e",
+            "source_line": "    pub fn decrypt_configuration<T: serde::de::DeserializeOwned>(",
+            "source_excerpt": "pub fn decrypt_configuration<T: serde::de::DeserializeOwned>(\n        &self,\n        envelope: &DeviceConfigurationEnvelope,\n        context: &str,\n    ) -> Result<T, DeviceProviderError> {\n        if envelope.ciphertext.len() > 65_536\n            || envelope.public_key.len() > 128\n            || envelope.nonce.len() > 24\n        {\n            return Err(DeviceProviderError);\n        }\n        let public = PublicKey::from_sec1_bytes(\n            &STANDARD\n                .decode(&envelope.public_key)\n                .map_err(|_| DeviceProviderError)?,\n        )\n        .map_err(|_| DeviceProviderError)?;\n        let shared = diffie_hellman(self.key.to_nonzero_scalar(), public.as_affine());\n        let aad = format!(\n            \"{context}\\n{}\\n{}\\n{}\",\n            envelope.client_node_id, envelope.request_id, envelope.expected_revision\n        );\n        let mut key = [0u8; 32];\n        Hkdf::<Sha256>::new(Some(context.as_bytes()), shared.raw_secret_bytes())\n            .expand(aad.as_bytes(), &mut key)\n            .map_err(|_| DeviceProviderError)?;\n        let cipher = Aes256Gcm::new_from_slice(&key).map_err(|_| DeviceProviderError)?;\n        key.fill(0);\n        let nonce = STANDARD\n            .decode(&envelope.nonce)\n            .map_err(|_| DeviceProviderError)?;\n        if nonce.len() != 12 {\n            return Err(DeviceProviderError);\n        }\n        let mut plaintext = cipher\n            .decrypt(\n                Nonce::from_slice(&nonce),\n                Payload {\n                    msg: &STANDARD\n                        .decode(&envelope.ciphertext)\n                        .map_err(|_| DeviceProviderError)?,\n                    aad: aad.as_bytes(),\n                },\n            )\n            .map_err(|_| DeviceProviderError)?;\n        let mutation = serde_json::from_slice(&plaintext);\n        plaintext.fill(0);\n        Ok(mutation?)\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn decrypt_configuration<T: serde::de::DeserializeOwned>(\n        &self,\n        envelope: &DeviceConfigurationEnvelope,\n        context: &str,\n    ) -> Result<T, DeviceProviderError> {\n        if envelope.ciphertext.len() > 65_536\n            || envelope.public_key.len() > 128\n            || envelope.nonce.len() > 24\n        {\n            return Err(DeviceProviderError);\n        }\n        let public = PublicKey::from_sec1_bytes(\n            &STANDARD\n                .decode(&envelope.public_key)\n                .map_err(|_| DeviceProviderError)?,\n        )\n        .map_err(|_| DeviceProviderError)?;\n        let shared = diffie_hellman(self.key.to_nonzero_scalar(), public.as_affine());\n        let aad = format!(\n            \"{context}\\n{}\\n{}\\n{}\",\n            envelope.client_node_id, envelope.request_id, envelope.expected_revision\n        );\n        let mut key = [0u8; 32];\n        Hkdf::<Sha256>::new(Some(context.as_bytes()), shared.raw_secret_bytes())\n            .expand(aad.as_bytes(), &mut key)\n            .map_err(|_| DeviceProviderError)?;\n        let cipher = Aes256Gcm::new_from_slice(&key).map_err(|_| DeviceProviderError)?;\n        key.fill(0);\n        let nonce = STANDARD\n            .decode(&envelope.nonce)\n            .map_err(|_| DeviceProviderError)?;\n        if nonce.len() != 12 {\n            return Err(DeviceProviderError);\n        }\n        let mut plaintext = cipher\n            .decrypt(\n                Nonce::from_slice(&nonce),\n                Payload {\n                    msg: &STANDARD\n                        .decode(&envelope.ciphertext)\n                        .map_err(|_| DeviceProviderError)?,\n                    aad: aad.as_bytes(),\n                },\n            )\n            .map_err(|_| DeviceProviderError)?;\n        let mutation = serde_json::from_slice(&plaintext);\n        plaintext.fill(0);\n        Ok(mutation?)\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.mutate",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.mutate",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 340,
+            "column": 5,
+            "end_line": 391,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 13197,
+            "end_byte": 15726,
+            "original_file_start_byte": 13197,
+            "original_file_end_byte": 15726,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "e53feb5ac0fbd455b381c0205cf78c1fded6fc59c165b54ff77a1f515193ee1b",
+            "source_line": "    fn mutate(&self, mut mutation: Mutation) -> Result<DeviceProviderOutcome, DeviceProviderError> {",
+            "source_excerpt": "fn mutate(&self, mut mutation: Mutation) -> Result<DeviceProviderOutcome, DeviceProviderError> {\n        if !valid_device_provider_config(&mutation.config) {\n            return Ok(DeviceProviderOutcome::InvalidRequest);\n        }\n        match mutation.operation.as_str() {\n            \"save\" => {\n                let secret = match mutation.api_key.take() {\n                    Some(value)\n                        if !value.is_empty()\n                            && value.len() <= 8192\n                            && !value.chars().any(char::is_control) =>\n                    {\n                        ResolvedSecret::from_bytes(value.into_bytes())\n                            .map_err(|_| DeviceProviderError)?\n                    }\n                    None => match self.resolve(&mutation.config.provider_id) {\n                        Ok((_, secret)) => secret,\n                        Err(_) => return Ok(DeviceProviderOutcome::InvalidRequest),\n                    },\n                    _ => return Ok(DeviceProviderOutcome::InvalidRequest),\n                };\n                let count: i64 = self.connection.query_row(\n                    \"SELECT count(*) FROM providers WHERE provider_id != ?1\",\n                    [&mutation.config.provider_id],\n                    |row| row.get(0),\n                )?;\n                if count >= 100 {\n                    return Ok(DeviceProviderOutcome::InvalidRequest);\n                }\n                self.connection.execute(\"INSERT INTO providers VALUES (?1, ?2, ?3) ON CONFLICT(provider_id) DO UPDATE SET config=excluded.config, secret=excluded.secret\",\n                    params![mutation.config.provider_id, serde_json::to_string(&mutation.config)?, secret.expose()])?;\n                self.connection.execute(\n                    \"UPDATE identity SET revision=revision+1 WHERE singleton=1\",\n                    [],\n                )?;\n                Ok(DeviceProviderOutcome::Saved)\n            }\n            \"test\" => Ok(DeviceProviderOutcome::Interrupted),\n            \"delete\" => {\n                self.connection.execute(\n                    \"DELETE FROM providers WHERE provider_id=?1\",\n                    [&mutation.config.provider_id],\n                )?;\n                self.connection.execute(\n                    \"UPDATE identity SET revision=revision+1 WHERE singleton=1\",\n                    [],\n                )?;\n                Ok(DeviceProviderOutcome::Deleted)\n            }\n            _ => Ok(DeviceProviderOutcome::InvalidRequest),\n        }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn mutate(&self, mut mutation: Mutation) -> Result<DeviceProviderOutcome, DeviceProviderError> {\n        if !valid_device_provider_config(&mutation.config) {\n            return Ok(DeviceProviderOutcome::InvalidRequest);\n        }\n        match mutation.operation.as_str() {\n            \"save\" => {\n                let secret = match mutation.api_key.take() {\n                    Some(value)\n                        if !value.is_empty()\n                            && value.len() <= 8192\n                            && !value.chars().any(char::is_control) =>\n                    {\n                        ResolvedSecret::from_bytes(value.into_bytes())\n                            .map_err(|_| DeviceProviderError)?\n                    }\n                    None => match self.resolve(&mutation.config.provider_id) {\n                        Ok((_, secret)) => secret,\n                        Err(_) => return Ok(DeviceProviderOutcome::InvalidRequest),\n                    },\n                    _ => return Ok(DeviceProviderOutcome::InvalidRequest),\n                };\n                let count: i64 = self.connection.query_row(\n                    \"SELECT count(*) FROM providers WHERE provider_id != ?1\",\n                    [&mutation.config.provider_id],\n                    |row| row.get(0),\n                )?;\n                if count >= 100 {\n                    return Ok(DeviceProviderOutcome::InvalidRequest);\n                }\n                self.connection.execute(\"INSERT INTO providers VALUES (?1, ?2, ?3) ON CONFLICT(provider_id) DO UPDATE SET config=excluded.config, secret=excluded.secret\",\n                    params![mutation.config.provider_id, serde_json::to_string(&mutation.config)?, secret.expose()])?;\n                self.connection.execute(\n                    \"UPDATE identity SET revision=revision+1 WHERE singleton=1\",\n                    [],\n                )?;\n                Ok(DeviceProviderOutcome::Saved)\n            }\n            \"test\" => Ok(DeviceProviderOutcome::Interrupted),\n            \"delete\" => {\n                self.connection.execute(\n                    \"DELETE FROM providers WHERE provider_id=?1\",\n                    [&mutation.config.provider_id],\n                )?;\n                self.connection.execute(\n                    \"UPDATE identity SET revision=revision+1 WHERE singleton=1\",\n                    [],\n                )?;\n                Ok(DeviceProviderOutcome::Deleted)\n            }\n            _ => Ok(DeviceProviderOutcome::InvalidRequest),\n        }\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.test_provider",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.test_provider",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 393,
+            "column": 5,
+            "end_line": 465,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 15732,
+            "end_byte": 19038,
+            "original_file_start_byte": 15732,
+            "original_file_end_byte": 19038,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "fead27adaee46edd2c97d7608833715822c30b51e5178a096271be93b806c24d",
+            "source_line": "    fn test_provider(",
+            "source_excerpt": "fn test_provider(\n        &self,\n        mut mutation: Mutation,\n        request_id: &str,\n    ) -> Result<(), DeviceProviderError> {\n        use crate::{\n            CredentialLeakGate, ProviderAdapterInvocation, ProviderAdapterPort,\n            ProviderGatewayOpenReceipt, ProviderStreamControlAction,\n        };\n        use winwincode_api::generated::ModelRoute;\n        use winwincode_domain::{CredentialReferenceId, ModelExchangeId, RequestId};\n        let secret = match mutation.api_key.take() {\n            Some(key)\n                if !key.is_empty() && key.len() <= 8192 && !key.chars().any(char::is_control) =>\n            {\n                ResolvedSecret::from_bytes(key.into_bytes()).map_err(|_| DeviceProviderError)?\n            }\n            None => self.resolve(&mutation.config.provider_id)?.1,\n            _ => return Err(DeviceProviderError),\n        };\n        let model = mutation\n            .config\n            .model_ids\n            .first()\n            .ok_or(DeviceProviderError)?\n            .clone();\n        let id = format!(\n            \"0{}\",\n            &format!(\"{:X}\", Sha256::digest(request_id.as_bytes()))[..25]\n        );\n        let exchange = ModelExchangeId(format!(\"mdl_{id}\"));\n        let request = RequestId(format!(\"req_{id}\"));\n        let adapter_id = format!(\"device-probe-{id}\");\n        let payload = serde_json::to_vec(\n            &serde_json::json!({\"requestId\":request.0,\"provider\":mutation.config.provider_id,\"sessionId\":\"provider-connection-test\",\"threadId\":\"provider-connection-test\", \"request\":{\"model\":model,\"instructions\":\"Reply concisely.\",\"input\":[{\"type\":\"message\",\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"Reply OK.\"}]}],\"stream\":true,\"store\":false,\"tool_choice\":\"none\",\"parallel_tool_calls\":false}}),\n        )?;\n        let adapter = adapter(&mutation.config)?;\n        let mut leak_gate = CredentialLeakGate::new();\n        leak_gate.track_secret(&secret);\n        adapter\n            .open(\n                &ProviderAdapterInvocation {\n                    model_exchange_id: &exchange,\n                    request_id: &request,\n                    adapter_request_id: &adapter_id,\n                    model_id: &model,\n                    content_type: \"application/json\",\n                    payload: &payload,\n                },\n                &secret,\n            )\n            .map_err(|_| DeviceProviderError)?;\n        drop(secret);\n        let receipt = ProviderGatewayOpenReceipt {\n            model_exchange_id: exchange.clone(),\n            request_id: request,\n            route: ModelRoute {\n                provider_id: mutation.config.provider_id,\n                model_id: model,\n                credential_reference_id: CredentialReferenceId(format!(\"crd_{id}\")),\n            },\n            adapter_request_id: adapter_id.clone(),\n            idempotent_replay: false,\n            stream_leak_gate: leak_gate,\n        };\n        let result = adapter.drain_canonical(&receipt);\n        let _ = adapter.control(&exchange, &adapter_id, ProviderStreamControlAction::Release);\n        let completion = result.map_err(|_| DeviceProviderError)?;\n        if completion.terminal.outcome() != crate::ProviderGatewayTerminalOutcome::Succeeded {\n            return Err(DeviceProviderError);\n        }\n        Ok(())\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn test_provider(\n        &self,\n        mut mutation: Mutation,\n        request_id: &str,\n    ) -> Result<(), DeviceProviderError> {\n        use crate::{\n            CredentialLeakGate, ProviderAdapterInvocation, ProviderAdapterPort,\n            ProviderGatewayOpenReceipt, ProviderStreamControlAction,\n        };\n        use winwincode_api::generated::ModelRoute;\n        use winwincode_domain::{CredentialReferenceId, ModelExchangeId, RequestId};\n        let secret = match mutation.api_key.take() {\n            Some(key)\n                if !key.is_empty() && key.len() <= 8192 && !key.chars().any(char::is_control) =>\n            {\n                ResolvedSecret::from_bytes(key.into_bytes()).map_err(|_| DeviceProviderError)?\n            }\n            None => self.resolve(&mutation.config.provider_id)?.1,\n            _ => return Err(DeviceProviderError),\n        };\n        let model = mutation\n            .config\n            .model_ids\n            .first()\n            .ok_or(DeviceProviderError)?\n            .clone();\n        let id = format!(\n            \"0{}\",\n            &format!(\"{:X}\", Sha256::digest(request_id.as_bytes()))[..25]\n        );\n        let exchange = ModelExchangeId(format!(\"mdl_{id}\"));\n        let request = RequestId(format!(\"req_{id}\"));\n        let adapter_id = format!(\"device-probe-{id}\");\n        let payload = serde_json::to_vec(\n            &serde_json::json!({\"requestId\":request.0,\"provider\":mutation.config.provider_id,\"sessionId\":\"provider-connection-test\",\"threadId\":\"provider-connection-test\", \"request\":{\"model\":model,\"instructions\":\"Reply concisely.\",\"input\":[{\"type\":\"message\",\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"Reply OK.\"}]}],\"stream\":true,\"store\":false,\"tool_choice\":\"none\",\"parallel_tool_calls\":false}}),\n        )?;\n        let adapter = adapter(&mutation.config)?;\n        let mut leak_gate = CredentialLeakGate::new();\n        leak_gate.track_secret(&secret);\n        adapter\n            .open(\n                &ProviderAdapterInvocation {\n                    model_exchange_id: &exchange,\n                    request_id: &request,\n                    adapter_request_id: &adapter_id,\n                    model_id: &model,\n                    content_type: \"application/json\",\n                    payload: &payload,\n                },\n                &secret,\n            )\n            .map_err(|_| DeviceProviderError)?;\n        drop(secret);\n        let receipt = ProviderGatewayOpenReceipt {\n            model_exchange_id: exchange.clone(),\n            request_id: request,\n            route: ModelRoute {\n                provider_id: mutation.config.provider_id,\n                model_id: model,\n                credential_reference_id: CredentialReferenceId(format!(\"crd_{id}\")),\n            },\n            adapter_request_id: adapter_id.clone(),\n            idempotent_replay: false,\n            stream_leak_gate: leak_gate,\n        };\n        let result = adapter.drain_canonical(&receipt);\n        let _ = adapter.control(&exchange, &adapter_id, ProviderStreamControlAction::Release);\n        let completion = result.map_err(|_| DeviceProviderError)?;\n        if completion.terminal.outcome() != crate::ProviderGatewayTerminalOutcome::Succeeded {\n            return Err(DeviceProviderError);\n        }\n        Ok(())\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.resolve",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.resolve",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 471,
+            "column": 5,
+            "end_line": 486,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 19226,
+            "end_byte": 19887,
+            "original_file_start_byte": 19226,
+            "original_file_end_byte": 19887,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "9dc06a25f0ab2f8a2970d644009e84cd3794d1f937d92c430022669301c01185",
+            "source_line": "    pub fn resolve(",
+            "source_excerpt": "pub fn resolve(\n        &self,\n        provider_id: &str,\n    ) -> Result<(DeviceProviderConfig, ResolvedSecret), DeviceProviderError> {\n        let (config, secret): (String, Vec<u8>) = self.connection.query_row(\n            \"SELECT config, secret FROM providers WHERE provider_id=?1\",\n            [provider_id],\n            |row| Ok((row.get(0)?, row.get(1)?)),\n        )?;\n        let secret = ResolvedSecret::from_bytes(secret).map_err(|_| DeviceProviderError)?;\n        let config = serde_json::from_str(&config)?;\n        if !valid_device_provider_config(&config) {\n            return Err(DeviceProviderError);\n        }\n        Ok((config, secret))\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn resolve(\n        &self,\n        provider_id: &str,\n    ) -> Result<(DeviceProviderConfig, ResolvedSecret), DeviceProviderError> {\n        let (config, secret): (String, Vec<u8>) = self.connection.query_row(\n            \"SELECT config, secret FROM providers WHERE provider_id=?1\",\n            [provider_id],\n            |row| Ok((row.get(0)?, row.get(1)?)),\n        )?;\n        let secret = ResolvedSecret::from_bytes(secret).map_err(|_| DeviceProviderError)?;\n        let config = serde_json::from_str(&config)?;\n        if !valid_device_provider_config(&config) {\n            return Err(DeviceProviderError);\n        }\n        Ok((config, secret))\n    }"
+        },
+        {
+          "symbol": "new_secret_key",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#new_secret_key",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 489,
+            "column": 1,
+            "end_line": 499,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 19891,
+            "end_byte": 20220,
+            "original_file_start_byte": 19891,
+            "original_file_end_byte": 20220,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "dee584c6982eed64dbe6d84a2f8cdf1fa43270df8808e5006afbfdb222647d76",
+            "source_line": "fn new_secret_key() -> Result<SecretKey, DeviceProviderError> {",
+            "source_excerpt": "fn new_secret_key() -> Result<SecretKey, DeviceProviderError> {\n    loop {\n        let mut bytes = [0u8; 32];\n        getrandom::fill(&mut bytes).map_err(|_| DeviceProviderError)?;\n        let key = SecretKey::from_slice(&bytes);\n        bytes.fill(0);\n        if let Ok(key) = key {\n            return Ok(key);\n        }\n    }\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn new_secret_key() -> Result<SecretKey, DeviceProviderError> {\n    loop {\n        let mut bytes = [0u8; 32];\n        getrandom::fill(&mut bytes).map_err(|_| DeviceProviderError)?;\n        let key = SecretKey::from_slice(&bytes);\n        bytes.fill(0);\n        if let Ok(key) = key {\n            return Ok(key);\n        }\n    }\n}"
+        }
+      ]
+    },
+    "crates/winwincode-provider/src/provider_anthropic.rs": {
+      "issues": [],
+      "definitions": []
+    },
+    "crates/winwincode-provider/src/lib.rs": {
+      "issues": [],
+      "definitions": []
+    },
+    "crates/winwincode-server/src/main.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "<DeviceModelBoundary as winwincode_control_plane::DurableExecutionPortDelegate>.accept",
+          "graph_node_id": "rust:crates/winwincode-server/src/main#<DeviceModelBoundary as winwincode_control_plane::DurableExecutionPortDelegate>.accept",
+          "location": {
+            "file": "crates/winwincode-server/src/main.rs",
+            "line": 340,
+            "column": 5,
+            "end_line": 347,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 13130,
+            "end_byte": 13509,
+            "original_file_start_byte": 13130,
+            "original_file_end_byte": 13509,
+            "source_hash": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "7d944a347d86b109437b7240f2a86fa8144f974bc260f37f5d18ab30cd6d125d",
+            "source_line": "    fn accept(",
+            "source_excerpt": "fn accept(\n        &mut self,\n        _context: winwincode_control_plane::DurableExecutionPortContext<'_>,\n        _message: winwincode_control_plane::DurableExecutionPortSupplement<'_>,\n    ) -> Result<Vec<ExecutionPortMessage>, winwincode_control_plane::DurableExecutionPortError>\n    {\n        Err(winwincode_control_plane::DurableExecutionPortError::UnsupportedMessage)\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "262a57fef16ac89527419a4409d6cd05ac7ac9aa02a098a553c1984aa528979c",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn accept(\n        &mut self,\n        _context: winwincode_control_plane::DurableExecutionPortContext<'_>,\n        _message: winwincode_control_plane::DurableExecutionPortSupplement<'_>,\n    ) -> Result<Vec<ExecutionPortMessage>, winwincode_control_plane::DurableExecutionPortError>\n    {\n        Err(winwincode_control_plane::DurableExecutionPortError::UnsupportedMessage)\n    }"
+        },
+        {
+          "symbol": "local_production_configs",
+          "graph_node_id": "rust:crates/winwincode-server/src/main#local_production_configs",
+          "location": {
+            "file": "crates/winwincode-server/src/main.rs",
+            "line": 518,
+            "column": 1,
+            "end_line": 553,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 19488,
+            "end_byte": 21000,
+            "original_file_start_byte": 19488,
+            "original_file_end_byte": 21000,
+            "source_hash": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "1997796bd917ac77d23e024c47d327aeeef1468642f3e7cde021ca43c258e7dc",
+            "source_line": "fn local_production_configs() -> Result<",
+            "source_excerpt": "fn local_production_configs() -> Result<\n    (\n        LocalDeliveryAdapterConfig,\n        LocalPublicationAdapterConfig,\n        RepositoryScope,\n    ),\n    Box<dyn std::error::Error>,\n> {\n    let scope = RepositoryScope {\n        kind: RepositoryScopeKind::Repository,\n        organization_id: OrganizationId(required_environment(\"WWC_SERVER_ORGANIZATION_ID\")?),\n        workspace_id: WorkspaceId(required_environment(\"WWC_SERVER_WORKSPACE_ID\")?),\n        project_id: ProjectId(required_environment(\"WWC_SERVER_PROJECT_ID\")?),\n        repository_id: RepositoryId(required_environment(\"WWC_SERVER_REPOSITORY_ID\")?),\n    };\n    let delivery = LocalDeliveryAdapterConfig::new(\n        PathBuf::from(required_environment(\"WWC_SERVER_REPOSITORY_ROOT\")?),\n        scope.clone(),\n    );\n    let requester_ids = comma_separated_environment(\"PUBLICATION_REQUESTERS\")?;\n    let approvers = comma_separated_environment(\"PUBLICATION_APPROVERS\")?\n        .into_iter()\n        .map(UserId)\n        .collect();\n    let publication = LocalPublicationAdapterConfig::try_new(\n        scope.clone(),\n        required_environment(\"GITHUB_REPOSITORY\")?,\n        CredentialReferenceId(required_environment(\"GITHUB_CREDENTIAL_REFERENCE_ID\")?),\n        required_environment(\"GITHUB_API_BASE_URL\")?,\n        PathBuf::from(required_environment(\"SECRET_DIRECTORY\")?),\n        requester_ids,\n        approvers,\n        required_environment(\"PUBLICATION_APPROVAL_MAX_AGE_MILLIS\")?.parse()?,\n    )?;\n    Ok((delivery, publication, scope))\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "262a57fef16ac89527419a4409d6cd05ac7ac9aa02a098a553c1984aa528979c",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn local_production_configs() -> Result<\n    (\n        LocalDeliveryAdapterConfig,\n        LocalPublicationAdapterConfig,\n        RepositoryScope,\n    ),\n    Box<dyn std::error::Error>,\n> {\n    let scope = RepositoryScope {\n        kind: RepositoryScopeKind::Repository,\n        organization_id: OrganizationId(required_environment(\"WWC_SERVER_ORGANIZATION_ID\")?),\n        workspace_id: WorkspaceId(required_environment(\"WWC_SERVER_WORKSPACE_ID\")?),\n        project_id: ProjectId(required_environment(\"WWC_SERVER_PROJECT_ID\")?),\n        repository_id: RepositoryId(required_environment(\"WWC_SERVER_REPOSITORY_ID\")?),\n    };\n    let delivery = LocalDeliveryAdapterConfig::new(\n        PathBuf::from(required_environment(\"WWC_SERVER_REPOSITORY_ROOT\")?),\n        scope.clone(),\n    );\n    let requester_ids = comma_separated_environment(\"PUBLICATION_REQUESTERS\")?;\n    let approvers = comma_separated_environment(\"PUBLICATION_APPROVERS\")?\n        .into_iter()\n        .map(UserId)\n        .collect();\n    let publication = LocalPublicationAdapterConfig::try_new(\n        scope.clone(),\n        required_environment(\"GITHUB_REPOSITORY\")?,\n        CredentialReferenceId(required_environment(\"GITHUB_CREDENTIAL_REFERENCE_ID\")?),\n        required_environment(\"GITHUB_API_BASE_URL\")?,\n        PathBuf::from(required_environment(\"SECRET_DIRECTORY\")?),\n        requester_ids,\n        approvers,\n        required_environment(\"PUBLICATION_APPROVAL_MAX_AGE_MILLIS\")?.parse()?,\n    )?;\n    Ok((delivery, publication, scope))\n}"
+        }
+      ]
+    }
+  },
+  "target_executed": false
+}

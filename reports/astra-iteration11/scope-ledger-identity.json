@@ -1,0 +1,177 @@
+{
+  "kind": "scope_saved_goal_and_baseline_identity_comparison",
+  "new_assessment_performed": false,
+  "database_opened": false,
+  "goal_ledger_sha256": "5ac8f449e78e95e976830eb539e971cccf0198f7960f181cb86c9644648d372d",
+  "freeze_sha256": "56ff9ced7d93122f21b82260f71ecd69d906300bf26250647e2153203252a9c1",
+  "publication_identity_sha256": "4885ff6bd4fc175dc659c340982efab638024acf0cbddc377601c027c1f27344",
+  "original_baseline_comparison_sha256": "bf022418067e53824b2e4077f8b7af4a7f0873bcfea777a98ddf5e1f7719bdd4",
+  "goal_checks": [
+    {
+      "goal_id": "CPB-01",
+      "repository": "codepatchbay",
+      "snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+      "report_finding_id": "1978d3f48218391a36a82e8f",
+      "report_evidence_id": "3df40e7e4b2844a5dd6506ca",
+      "ledger_goal_pointer": "/goals/0",
+      "report_judgment_pointer": "/judgments/0",
+      "saved_assessment_matches": true,
+      "assessment": {
+        "status": "scoped_static_judgment_reproduced",
+        "complete_assessment": true,
+        "full_goal_supported": true,
+        "origin": "copied_saved_registered_result_not_independently_rated",
+        "unclosed_required_obligations": [],
+        "derived_judgment": "On the checked normal pipeline record/message path, the submitted retries field is transported as metadata but the managed worker constructs an independent selected literal. Actual queue, phase and infrastructure decisions use their distinct local authorities. Existing records, finalizer-only, early returns, opaque consumers and unsuccessful/not-run operations bound this finding; retry capability is present."
+      },
+      "necessary_gaps": []
+    },
+    {
+      "goal_id": "CPB-02",
+      "repository": "codepatchbay",
+      "snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+      "report_finding_id": "e465a1162af15e0336a0c410",
+      "report_evidence_id": "f493e9c9e901101b279f221c",
+      "ledger_goal_pointer": "/goals/1",
+      "report_judgment_pointer": "/judgments/1",
+      "saved_assessment_matches": true,
+      "assessment": {
+        "status": "scoped_static_judgment_reproduced",
+        "complete_assessment": true,
+        "full_goal_supported": true,
+        "origin": "copied_saved_registered_result_not_independently_rated",
+        "unclosed_required_obligations": [],
+        "derived_judgment": {
+          "authority_terminal_membership": true,
+          "classification_differs": true,
+          "kind": "conditional_terminal_classification_difference",
+          "recovery_is_required_or_authorized": false,
+          "status": "superseded",
+          "terminal_state_can_be_illegally_mutated": false,
+          "valid_identity_predicate_result": false
+        }
+      },
+      "necessary_gaps": []
+    },
+    {
+      "goal_id": "CPB-03",
+      "repository": "codepatchbay",
+      "snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+      "report_finding_id": "d55451aeec7a362795d8447d",
+      "report_evidence_id": "1dddaf6898b23e4f45015e0d",
+      "ledger_goal_pointer": "/goals/2",
+      "report_judgment_pointer": "/judgments/2",
+      "saved_assessment_matches": true,
+      "assessment": {
+        "status": "scoped_static_judgment_reproduced",
+        "complete_assessment": true,
+        "full_goal_supported": true,
+        "origin": "copied_saved_registered_result_not_independently_rated",
+        "unclosed_required_obligations": [],
+        "derived_judgment": "Two same-project/key/description default submissions can both observe no row; the first protected insert can be guardedly scheduled before the second protected check; the pending-only inner check then inserts a second nonterminal row"
+      },
+      "necessary_gaps": []
+    },
+    {
+      "goal_id": "WWC-01",
+      "repository": "winwincode",
+      "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+      "report_finding_id": "8587a3dad0bef1ede9bfd666",
+      "report_evidence_id": "e8f805eaeedf86b71cf0237b",
+      "ledger_goal_pointer": "/goals/3",
+      "report_judgment_pointer": "/judgments/0",
+      "saved_assessment_matches": true,
+      "assessment": {
+        "status": "scoped_static_judgment_reproduced",
+        "complete_assessment": true,
+        "full_goal_supported": true,
+        "origin": "copied_saved_registered_result_not_independently_rated",
+        "unclosed_required_obligations": [],
+        "derived_judgment": "The selected source-derived absent-query path reaches the actual production port callback and rejects its create before command calls, under the retained platform/form conditions."
+      },
+      "necessary_gaps": []
+    },
+    {
+      "goal_id": "WWC-02",
+      "repository": "winwincode",
+      "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+      "report_finding_id": "7e7dc738afda264f3b24a0d8",
+      "report_evidence_id": "9144dc2875788bfdba88323b",
+      "ledger_goal_pointer": "/goals/4",
+      "report_judgment_pointer": "/judgments/1",
+      "saved_assessment_matches": true,
+      "assessment": {
+        "status": "scoped_static_judgment_reproduced",
+        "complete_assessment": true,
+        "full_goal_supported": true,
+        "origin": "copied_saved_registered_result_not_independently_rated",
+        "unclosed_required_obligations": [],
+        "derived_judgment": "Under the explicitly retained normal production, JSON/Serde and active Device conditions, the closed UI command field omission reaches None and the nonblank authority guard rejects before criterion use/commit."
+      },
+      "necessary_gaps": []
+    }
+  ],
+  "saved_ledger_assessment": {
+    "goal_status_counts": {
+      "scoped_static_judgment_reproduced": 5
+    },
+    "obligation_status_counts": {
+      "supported": 30
+    },
+    "status": "recorded_saved_implementation_results",
+    "new_rating_computed": false,
+    "unclosed_required_obligations": []
+  },
+  "original_baseline_comparison": {
+    "schema_version": 1,
+    "kind": "original_26_observation_comparison",
+    "baseline_id": "astra-static-two-repositories-v1",
+    "baseline_total": 26,
+    "selected_total": 26,
+    "repositories": [
+      {
+        "repository": "codepatchbay",
+        "snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+        "counts": {
+          "reproduced": 4,
+          "unknown": 2,
+          "mismatch": 0,
+          "evidence_only": 7,
+          "source_changed": 0,
+          "source_missing": 0,
+          "evidence_unavailable": 0,
+          "endpoint_missing": 0,
+          "ambiguous": 0
+        },
+        "changes": [],
+        "selected_total": 13,
+        "comparison_artifact": "codepatchbay-baseline-v13-and-v12.json"
+      },
+      {
+        "repository": "winwincode",
+        "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+        "counts": {
+          "reproduced": 6,
+          "unknown": 1,
+          "mismatch": 0,
+          "evidence_only": 6,
+          "source_changed": 0,
+          "source_missing": 0,
+          "evidence_unavailable": 0,
+          "endpoint_missing": 0,
+          "ambiguous": 0
+        },
+        "changes": [],
+        "selected_total": 13,
+        "comparison_artifact": "winwincode-baseline-v13-and-v12.json"
+      }
+    ],
+    "publication_identity_verified": true,
+    "interpretation": "All 26 frozen source observations remain in the denominator. Evidence-only and intentional unknown items are preserved. This comparison is not precision, recall, functional coverage, runtime success, a business judgment, or approval."
+  },
+  "both_formal_snapshots_match": true,
+  "formal_scope_projections": {
+    "codepatchbay": "scope-codepatchbay-formal-observations.json",
+    "winwincode": "scope-winwincode-formal-observations.json"
+  }
+}

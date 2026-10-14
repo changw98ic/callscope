@@ -1,0 +1,673 @@
+{
+  "mode": "normal queries of saved snapshots",
+  "queries": [
+    {
+      "repository": "codepatchbay",
+      "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+      "capabilities": {
+        "mode": "static",
+        "languages": [
+          "python",
+          "typescript",
+          "rust"
+        ],
+        "execution": false,
+        "tests": false,
+        "incremental_computation": false,
+        "incremental_granularity": null,
+        "maintenance_engine": "full",
+        "global_detection": "full",
+        "static_contracts": [
+          "literal_set_consistency",
+          "required_object_fields"
+        ],
+        "value_contracts": [
+          "call_argument_value"
+        ],
+        "navigation_contracts": [
+          "navigation_query_context"
+        ],
+        "port_wiring": [
+          "boot",
+          "factory_branch",
+          "injection",
+          "returned_method_use"
+        ],
+        "atomicity_contracts": [
+          "protected_deduplication"
+        ],
+        "field_contracts": [
+          "parameter_field_flow"
+        ],
+        "budget_contracts": [
+          "bounded_for_loop",
+          "counter_exhaustion_guard"
+        ],
+        "semantic_ir": "finite_immutable_field_state",
+        "semantic_environment": "captured_scope_conditional_model",
+        "completion_summaries": "finite_normal_completion_relations",
+        "interleaving_inference": false,
+        "support_input_capture": true,
+        "graph_backend": "axon-graph-core-1"
+      },
+      "configured_constraints_count": 18,
+      "queries": [
+        {
+          "query_kind": "static_contract_literal_set_consistency",
+          "findings": [
+            {
+              "id": "1c6d8c2c962139ebc8ec639d",
+              "rule_id": "cpb-astra-terminal-initializer-members",
+              "status": "open",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "合同仅比较这两个已配置声明初始化中的封闭字符串成员集合，忽略元素顺序与重复成员。",
+                    "未证明运行时 Set 永不修改、全局内建构造器永不替换或所有终态写入合法。"
+                  ],
+                  "counterexamples": [
+                    "terminal 与 recoverable 是不同职责；本初始化集合规则不能据成员差推断所有恢复分支都错误。",
+                    "出现别名、展开、非字面元素或未知构造器绑定时保留未知，不把可见部分当成完整集合。"
+                  ],
+                  "kind": "unconditional"
+                },
+                "contract_analyzer_version": "static-contracts-1",
+                "contract_hash": "3cbceb399081fb2060a9b636c454eb592983770f06b7e66336624910b5a4b941",
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Astra 的终态集合一致性观察；此规则只把明确配置的两个声明初始化字符串成员集合设为相等合同，不按同名自动推断业务等价。",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "runtime_proof": false,
+                "source_fact_confirmed": true
+              },
+              "saved_sources": [
+                {
+                  "file": "server/services/event/event-materializer.ts",
+                  "hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                },
+                {
+                  "file": "server/services/job/job-store.ts",
+                  "hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "query_kind": "static_value_call_argument_value",
+          "findings": [
+            {
+              "id": "a0163dc1d1dd2c66b5809a48",
+              "rule_id": "cpb-astra-pipeline-retry-source-form",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "比较限定 pipeline 提交经默认队列、assignment、inbox 到受管理 worker 的正常执行分支；finalizer-only 分支不运行所选调用。",
+                    "enqueue 未复用旧 pending 项，metadata 经 resolveAgentsForEntry、assignment 构造及持久消息仍对应本次请求；这些中间传递尚未由本检查器自动证明。",
+                    "消费者调用的动态桥接目标与默认生产接入相符；调用选择器只匹配源码调用表达式，不证明动态导入或函数执行成功。",
+                    "本合同要求消费者以 metadata.maxRetries 的来源形式构造该字段；源码表达式差异不证明某次运行数值不同，也不证明完整重试语义失效。"
+                  ],
+                  "counterexamples": [
+                    "用户输入恰好为 3 时，两个来源形式仍不同，但本次运行值可能相同。",
+                    "另有 queue failure budget、phase retry 和 DAG node retry；本合同不把它们当成同一预算或证明其失效。",
+                    "源表达式经等价别名、默认或转换仍可能正确，未证明语义等价不能把不同 AST 直接判成值错误。"
+                  ],
+                  "kind": "conditional"
+                },
+                "comparison": "mismatch",
+                "contract_hash": "d1f5515ac3c8aed55cd7d28b68267e1a692e910bbd033baa4bc0edac0c2de516",
+                "producer_comparison": "matches",
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "CPB-01 的有限源码来源形式复核；中间传输与生产适用性作为显式前提，保留未知。",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "runtime_proof": false,
+                "source_fact_confirmed": true,
+                "source_form_difference_confirmed": true,
+                "transport_proof": false,
+                "value_analyzer_version": "static-value-contracts-1",
+                "value_policy_version": "static-value-policy-v1"
+              },
+              "saved_sources": [
+                {
+                  "file": "runtime/worker/managed-worker.ts",
+                  "hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                },
+                {
+                  "file": "cli/commands/pipeline.ts",
+                  "hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "query_kind": "static_atomicity_protected_deduplication",
+          "findings": [
+            {
+              "id": "4c3f4cdd8ba1cdf23cc1a77c",
+              "rule_id": "cpb-astra-active-key-authority",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "评审默认deps的所选成功预查与写入路径；没有建立额外外层串行或唯一性保证。",
+                    "本规则不提供预计算交错；未实现交错求解时只能支持保护范围和谓词关系等局部义务。"
+                  ],
+                  "counterexamples": [
+                    "顺序预查已见活动记录会复用；权威写入已见同复合key的pending记录也会复用。",
+                    "读、写、锁、调度guard或状态更新失败可能阻止提交，不能推导任意双提交必然重复。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assembly_state": "policy_declared",
+                "atomicity_analyzer_version": "static-atomicity-contracts-2-shared",
+                "atomicity_policy_version": "static-atomicity-policy-v1",
+                "authority_region_state": "source_backed_protocol_model",
+                "bounded_interleaving": false,
+                "contract_hash": "47ab6b31e85f9d19586531167a0f65b7d1e8d4958dc33fa2a419bdfebf2eea2e",
+                "facade_to_authority_execution_chain_proved": false,
+                "interleaving_inferred": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "配置仅选择来源与受信保护模型；实际保护范围、查重谓词和状态转换必须从保存AST抽取。",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-iteration3/ATOMICITY_EVIDENCE.md"
+                },
+                "relation_scope": "selected facade/authority source regions under declared default assembly and protocol; not a proved whole execution chain",
+                "runtime_proof": false,
+                "shared_model_versions": {
+                  "builtin_environment": "captured-builtin-environment-1",
+                  "completion": "captured-completion-summaries-1"
+                },
+                "source_fact_confirmed": true
+              },
+              "saved_sources": [
+                {
+                  "file": "cli/commands/fix.ts",
+                  "hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                },
+                {
+                  "file": "server/services/hub/hub-queue.ts",
+                  "hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                },
+                {
+                  "file": "shared/primitives/durable-directory-lock.ts",
+                  "hash": "505dfb1c6c373911fbbedfadf273d982ccf459abacb643c6310c5ef46d8e510c",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                },
+                {
+                  "file": "core/contracts/idempotency.ts",
+                  "hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                },
+                {
+                  "file": "server/orchestrator/hub-orchestrator.ts",
+                  "hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "query_kind": "static_parameter_field_flow",
+          "findings": [
+            {
+              "id": "0a94082ba81d36a745050c6c",
+              "rule_id": "cpb-astra-field-queue-agent-input",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "saved_sources": [
+                {
+                  "file": "server/services/hub/hub-queue.ts",
+                  "hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                },
+                {
+                  "file": "core/job/meta.ts",
+                  "hash": "2e40a285e1ea4c28af9fb7d949e026a3edd74c2471e726ff702f1aa2a9ac0319",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                }
+              ]
+            },
+            {
+              "id": "ed9da8fdb9b3184b35b98b32",
+              "rule_id": "cpb-astra-field-agent-metadata-return",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "saved_sources": [
+                {
+                  "file": "server/services/agent/agent-config.ts",
+                  "hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                }
+              ]
+            },
+            {
+              "id": "ca2a9c8edc2d485b6c1c4724",
+              "rule_id": "cpb-astra-field-engine-options",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 1,
+                "assessment_counts": {
+                  "source_form_preserved_when_present": 1
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": true,
+                "source_form_complete": true,
+                "transport_proven": false
+              },
+              "saved_sources": [
+                {
+                  "file": "server/services/engine-runner.ts",
+                  "hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "query_kind": "static_local_budget",
+          "findings": [
+            {
+              "id": "72135ed62eba788597a096f1",
+              "rule_id": "cpb-verification-infra-local-budget",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "Subject and selected declarations resolve uniquely within the captured source; assessment describes lexical source operations only."
+                  ],
+                  "counterexamples": [
+                    "Actual activation, runtime budget values, opaque callees and metadata transport are outside this local assessment."
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_counts": {
+                  "source_backed_local_pattern": 1
+                },
+                "budget_analyzer_version": "static-local-budget-contracts-1",
+                "budget_policy_version": "static-local-budget-policy-v1",
+                "numeric_bound_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "reviewer",
+                  "note": "Selectors locate actual source only; no budget value, operator, consumer connection or whole retry verdict is supplied.",
+                  "reviewer": "CallScope independent static architecture review",
+                  "source_doc": "reports/astra-iteration6/BUDGET_SOURCE_REVIEW.md"
+                },
+                "runtime_budget_consumption_proven": false,
+                "source_form_complete": true,
+                "termination_proven": false,
+                "whole_function_domination_proven": false,
+                "whole_project_unconsumed_check_performed": false
+              },
+              "saved_sources": [
+                {
+                  "file": "core/engine/run-job-execute-dag.ts",
+                  "hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                }
+              ]
+            },
+            {
+              "id": "ae5109c5ed7f352e89240ac2",
+              "rule_id": "cpb-phase-retry-local-budget",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "Subject and selected declarations resolve uniquely within the captured source; assessment describes lexical source operations only."
+                  ],
+                  "counterexamples": [
+                    "Actual activation, runtime budget values, opaque callees and metadata transport are outside this local assessment."
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_counts": {
+                  "source_backed_local_pattern": 1
+                },
+                "budget_analyzer_version": "static-local-budget-contracts-1",
+                "budget_policy_version": "static-local-budget-policy-v1",
+                "numeric_bound_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "reviewer",
+                  "note": "Selectors locate actual source only; no budget value, operator, consumer connection or whole retry verdict is supplied.",
+                  "reviewer": "CallScope independent static architecture review",
+                  "source_doc": "reports/astra-iteration6/BUDGET_SOURCE_REVIEW.md"
+                },
+                "runtime_budget_consumption_proven": false,
+                "source_form_complete": true,
+                "termination_proven": false,
+                "whole_function_domination_proven": false,
+                "whole_project_unconsumed_check_performed": false
+              },
+              "saved_sources": [
+                {
+                  "file": "core/engine/phase-retry.ts",
+                  "hash": "9a5b5b06fb5e120f3708e3999e90a14e8bdf05334828e930a7f92eaa18d7083c",
+                  "status": "parsed",
+                  "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+                  "content_returned": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "repository": "winwincode",
+      "snapshot_id": "7dd584497ca438b6d19a269935666b757c4bd4f78e4741716ba30f75202906d1",
+      "capabilities": {
+        "mode": "static",
+        "languages": [
+          "python",
+          "typescript",
+          "rust"
+        ],
+        "execution": false,
+        "tests": false,
+        "incremental_computation": false,
+        "incremental_granularity": null,
+        "maintenance_engine": "full",
+        "global_detection": "full",
+        "static_contracts": [
+          "literal_set_consistency",
+          "required_object_fields"
+        ],
+        "value_contracts": [
+          "call_argument_value"
+        ],
+        "navigation_contracts": [
+          "navigation_query_context"
+        ],
+        "port_wiring": [
+          "boot",
+          "factory_branch",
+          "injection",
+          "returned_method_use"
+        ],
+        "atomicity_contracts": [
+          "protected_deduplication"
+        ],
+        "field_contracts": [
+          "parameter_field_flow"
+        ],
+        "budget_contracts": [
+          "bounded_for_loop",
+          "counter_exhaustion_guard"
+        ],
+        "semantic_ir": "finite_immutable_field_state",
+        "semantic_environment": "captured_scope_conditional_model",
+        "completion_summaries": "finite_normal_completion_relations",
+        "interleaving_inference": false,
+        "support_input_capture": true,
+        "graph_backend": "axon-graph-core-1"
+      },
+      "configured_constraints_count": 12,
+      "queries": [
+        {
+          "query_kind": "static_contract_required_object_fields",
+          "findings": [
+            {
+              "id": "f31f0dcd8c0ac2b35a63ecb4",
+              "rule_id": "wwc-astra-device-spec-field-construction",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "请求用于 delivery.update_spec，且进入 LocalDeliveryAuthority.specification。",
+                    "source_product_session_id 能解析到有效的 Device WorkerLaunchGrant，device_target 返回 Some。",
+                    "Device HEAD 与 baseRevision 一致，授权等其余前置条件也满足。",
+                    "生产者进入跨语言 Device 消费分支的可达性由本规则作为外部假设保留，未自动推导。",
+                    "字段存在不等同于 verificationCommand 非空、类型正确或完整消费者校验通过。"
+                  ],
+                  "counterexamples": [
+                    "device_target 返回 None 的本地非 Device 分支通过仓库上下文 select_verification_command 选择方法，不能泛化为所有规格编辑失败。",
+                    "ChatDeliveryCreator 的创建请求明确构造 verificationCommand，创建链完整不能作为需求编辑链已保留该字段的证明。"
+                  ],
+                  "guard": {
+                    "branch": "then",
+                    "enclosing_condition": "let Some(device) = device",
+                    "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+                    "node_type": "field_expression",
+                    "role": "guard",
+                    "symbol": "LocalDeliveryAuthority.specification",
+                    "text": "spec.verification_command"
+                  },
+                  "kind": "conditional"
+                },
+                "contract_analyzer_version": "static-contracts-1",
+                "contract_hash": "8543f89585c9e89e5ad118ea3eda9e008c1d92dda16d75c2e48509844228cc67",
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "WWC-02 独立源码观察。只自动确认封闭返回字面对象未构造指定字段；Device 条件、生产接入与非空需求由显式合同和消费者源码出处提供。",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+                },
+                "runtime_proof": false,
+                "source_fact_confirmed": true
+              },
+              "saved_sources": [
+                {
+                  "file": "apps/client/src/decision-clarification-view-model.ts",
+                  "hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+                  "status": "parsed",
+                  "snapshot_id": "7dd584497ca438b6d19a269935666b757c4bd4f78e4741716ba30f75202906d1",
+                  "content_returned": true
+                },
+                {
+                  "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+                  "hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+                  "status": "parsed",
+                  "snapshot_id": "7dd584497ca438b6d19a269935666b757c4bd4f78e4741716ba30f75202906d1",
+                  "content_returned": true
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "query_kind": "static_navigation_query_context",
+          "findings": [
+            {
+              "id": "045da28c5329d79ba7c89c28",
+              "rule_id": "wwc-astra-navigation-context",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "评审默认生产端口的看板新任务入口，用户满足表单前置条件并发起create。",
+                    "导航到ambient hash的接缝由显式环境模型承载；未分析的boot、端口使用或UI派发仍属于分析缺口，不能由此条件补足。"
+                  ],
+                  "counterexamples": [
+                    "传入taskSeed时可走fake端口分支。",
+                    "手工带有效delivery的URL或独立Chat创建流程不属于此入口的缺键结论。"
+                  ],
+                  "kind": "conditional"
+                },
+                "full_functionality_proven": false,
+                "missing_query_keys": [
+                  "delivery"
+                ],
+                "navigation_analyzer_version": "static-navigation-contracts-2-shared",
+                "navigation_policy_version": "static-navigation-policy-v1",
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "只声明所选生产者、端口、模型和真实环境接缝；键集合、调用绑定、回调关系和拒绝链必须从保存源码生成。",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+                },
+                "runtime_proof": false,
+                "source_condition_chain_confirmed": true,
+                "source_fact_confirmed": true
+              },
+              "saved_sources": [
+                {
+                  "file": "apps/client/src/home-dashboard-page.ts",
+                  "hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+                  "status": "parsed",
+                  "snapshot_id": "7dd584497ca438b6d19a269935666b757c4bd4f78e4741716ba30f75202906d1",
+                  "content_returned": true
+                },
+                {
+                  "file": "packages/browser-core/src/scope-context.ts",
+                  "hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+                  "status": "parsed",
+                  "snapshot_id": "7dd584497ca438b6d19a269935666b757c4bd4f78e4741716ba30f75202906d1",
+                  "content_returned": true
+                },
+                {
+                  "file": "apps/client/src/community-control-plane-client.ts",
+                  "hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+                  "status": "parsed",
+                  "snapshot_id": "7dd584497ca438b6d19a269935666b757c4bd4f78e4741716ba30f75202906d1",
+                  "content_returned": true
+                },
+                {
+                  "file": "apps/client/src/application.ts",
+                  "hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "status": "parsed",
+                  "snapshot_id": "7dd584497ca438b6d19a269935666b757c4bd4f78e4741716ba30f75202906d1",
+                  "content_returned": true
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

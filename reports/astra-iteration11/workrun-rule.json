@@ -1,0 +1,16 @@
+{
+  "id": "wwc-report-workrun-finite-selection",
+  "type": "rust_finite_state_selection",
+  "severity": "info",
+  "sources": [
+    {"role": "aggregate_selector", "file": "crates/winwincode-delivery/src/application/workrun.rs", "symbol": "WorkRunAggregate.start_next"},
+    {"role": "item_selector", "file": "crates/winwincode-delivery/src/application/workrun.rs", "symbol": "WorkRunAggregate.start_item"},
+    {"role": "selector", "file": "crates/winwincode-delivery/src/application/workrun.rs", "symbol": "start_next_work_run"},
+    {"role": "runnable", "file": "crates/winwincode-delivery/src/application/workrun.rs", "symbol": "work_item_is_runnable"},
+    {"role": "effective_state", "file": "crates/winwincode-delivery/src/application/workrun.rs", "symbol": "effective_work_item_state"},
+    {"role": "validator", "file": "crates/winwincode-delivery/src/application/workrun.rs", "symbol": "WorkRunAggregate.validate"}
+  ],
+  "models": ["captured-normal-statement-control-v1", "rust-finite-iterator-enum-source-v1"],
+  "provenance": {"authority": "project-source-claim", "author_approved": false, "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md:60", "note": "Locators select captured source only; predicate and finite state values are derived from CST."},
+  "applicability": {"kind": "conditional", "conditions": ["Captured ordinary WorkRun selection bodies are reached normally; finite standard iterator, enum and matches source model applies."], "counterexamples": ["No assertion that all WorkRun transitions, concurrent schedules or concrete stored records have been checked."]}
+}

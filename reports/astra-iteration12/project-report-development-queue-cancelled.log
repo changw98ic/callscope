@@ -1,0 +1,2 @@
+No helper output had been emitted. Verified recorded helper cmdline. FD symlink permissions were recorded without treating unreadable descriptors as evidence of absence. Sent SIGTERM only to PID 12444 at coordinator request. Normal report validation will run inside the forthcoming v14 formal scan helper.
+Progress before cancellation is unknown: the process may have acquired the lock and begun the configured readonly immutable v13 read, but produced no saved_data_loaded/result output. Session exit 143 was observed. No database-absence claim is made.

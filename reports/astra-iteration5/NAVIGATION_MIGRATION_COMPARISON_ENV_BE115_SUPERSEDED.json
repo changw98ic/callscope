@@ -1,0 +1,158 @@
+{
+  "report_kind": "real_saved_source_migration_comparison",
+  "not_a_test_result": true,
+  "published": false,
+  "source_snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+  "baseline_artifact": "NAVIGATION_MIGRATION_BASELINE.json",
+  "initial_development_artifact": "NAVIGATION_SHARED_PROTOCOL_INITIAL_OBSERVATIONS.json",
+  "final_development_artifact": "NAVIGATION_SHARED_PROTOCOL_OBSERVATIONS.json",
+  "artifact_sha256": {
+    "NAVIGATION_MIGRATION_BASELINE.json": "3073b19f1673d3cd6719399d170020bb29078a50289c89e51ac552001dd83a62",
+    "NAVIGATION_SHARED_PROTOCOL_INITIAL_OBSERVATIONS.json": "e077f31df9ec987c7c97decd9ec601211a570f9dba37580e2102712ad0130935",
+    "NAVIGATION_SHARED_PROTOCOL_OBSERVATIONS.json": "69b1a9c8d5ed8f46e6a78c4135925194de5895c507cffe37670184be3b25fc8a"
+  },
+  "source_relation_comparison": {
+    "same_captured_snapshot_id": true,
+    "same_captured_source_hash": true,
+    "same_saved_policy_hash": true,
+    "same_node_ids": true,
+    "same_edge_ids": true,
+    "same_producer_query_domain": true,
+    "same_required_query_keys": true,
+    "same_missing_query_keys": true,
+    "same_conditional_chain_state": true,
+    "same_selected_callback_identity": true,
+    "same_factory_call_identity": true,
+    "same_null_guards": true,
+    "same_factory_null_throw_guards": true,
+    "same_existing_query_counterexamples": true,
+    "same_trace_source_relation_sequence": true,
+    "same_port_fact_source_relation_sequence": true,
+    "same_residual_gap_codes_in_order": true,
+    "same_port_assembly_state": true,
+    "same_port_end_to_end_state": true,
+    "same_finding_uncertain_status": true,
+    "tool_sources_stable_during_observation": true
+  },
+  "actual_final_outcome": {
+    "source_condition_chain": true,
+    "producer_query_domain": {
+      "guaranteed_keys": [],
+      "possible_keys": [
+        "organizationId",
+        "projectId",
+        "repositoryId",
+        "workspaceId"
+      ],
+      "keyset_closed": true,
+      "unknown_keys": false,
+      "unknown_reasons": [],
+      "invariant": "guaranteed subset actual subset possible only when keyset_closed"
+    },
+    "consumer_required_query_keys": [
+      "delivery"
+    ],
+    "missing_query_keys": [
+      "delivery"
+    ],
+    "status": "uncertain",
+    "counterexample_summary": [
+      {
+        "selector": {
+          "callee": "scopeHash",
+          "file": "apps/client/src/home-dashboard-page.ts",
+          "site": "call",
+          "symbol": "homeDecisionHash"
+        },
+        "source_complete": true,
+        "query_domain": {
+          "guaranteed_keys": [
+            "delivery"
+          ],
+          "possible_keys": [
+            "delivery",
+            "organizationId",
+            "projectId",
+            "repositoryId",
+            "workspaceId"
+          ],
+          "keyset_closed": true,
+          "unknown_keys": false,
+          "unknown_reasons": [],
+          "invariant": "guaranteed subset actual subset possible only when keyset_closed"
+        },
+        "location": {
+          "file": "apps/client/src/home-dashboard-page.ts",
+          "source_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+          "start_byte": 8751,
+          "end_byte": 8841,
+          "span_hash": "37a6bb71e84d60b80259cbb25cd94d9beb10b1074cd93640d12f965106f0bc82",
+          "semantic_parse_id": "0cb5c78aa259da2f16042dc8d7240e2bae9d612c61a9cb45eaccd8cdf7d95ea8"
+        }
+      }
+    ],
+    "port_assembly_complete": true,
+    "port_end_to_end_complete": false,
+    "navigation_context_identity_matched": true,
+    "port_segments": {
+      "boot": "confirmed_static",
+      "port_selection": "modeled",
+      "injection": "modeled",
+      "view_model": "modeled",
+      "use": "modeled",
+      "route_activation": "unknown"
+    },
+    "residual_gap_codes": [
+      "helper_object_or_effect_semantics_not_modeled",
+      "navigation_effect_not_observed",
+      "ambient_hash_read_timing_unknown",
+      "ui_route_dispatch_not_followed",
+      "snapshot_injection_call_not_resolved",
+      "other_port_method_effects_unknown",
+      "other_port_method_effects_unknown",
+      "public_returned_object_not_frozen",
+      "route_dispatch_not_analyzed",
+      "event_activation_unknown"
+    ]
+  },
+  "shared_completion_evidence": [
+    {
+      "context": "actual_factory_callback_call",
+      "callback_kind": "ordinary_async",
+      "normal_relation_preconditions": [
+        "the selected invocation actually executes and fulfills normally",
+        "the selected consuming expression or return is reached",
+        "standard JS/TS execution semantics"
+      ],
+      "relation": {
+        "version": "captured-completion-summaries-1",
+        "state": "source_normal_completion_relation",
+        "direct_await": true,
+        "normal_value_relation_closed": true,
+        "completion_guaranteed": false,
+        "body_activation_proved": false,
+        "runtime_verified": false,
+        "whole_function_completion_proved": false
+      }
+    },
+    {
+      "context": "actual_Promise_all_import_namespace_consumption",
+      "normal_relation_preconditions": [
+        "the selected invocation actually executes and fulfills normally",
+        "the selected consuming expression or return is reached",
+        "standard JS/TS execution semantics"
+      ],
+      "relation": {
+        "version": "captured-completion-summaries-1",
+        "state": "source_normal_completion_relation",
+        "direct_await": true,
+        "normal_value_relation_closed": true,
+        "completion_guaranteed": false,
+        "body_activation_proved": false,
+        "runtime_verified": false,
+        "whole_function_completion_proved": false
+      }
+    }
+  ],
+  "scope_note": "Compare captured source relations, not event counts or runtime correctness. Shared supported audits remain fixed-host model assumptions for one authenticated document. Route/event/public-object gaps and conditional findings remain."
+}

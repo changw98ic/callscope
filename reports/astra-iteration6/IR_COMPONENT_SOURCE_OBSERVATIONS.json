@@ -1,0 +1,523 @@
+{
+  "operation": "normal component-level finite source-state observation on saved v8 source; no target execution/tests/synthetic sources",
+  "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+  "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+  "semantic_parse_id": "44f983f80da338858f372d0778dedb25ab08d5b50eaa29e802b185de2cfb5c3b",
+  "ir_version": "finite-immutable-semantic-ir-1",
+  "ir_component_sha256": "1abb91c5a29f55d6988c2a568f2164132143a197cfa4e5e878bc6dffc065a999",
+  "scope": "listed AST-derived component operations, not a complete function/control-flow or field-adapter assessment",
+  "runtime_verified": false,
+  "model_conditions": {
+    "record": "ModelGuard",
+    "guard_id": "18fbb959239e3be26ef238076571f0428c2d60e0378b4fcdb302a6b874a28f13",
+    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+    "evidence": [
+      {
+        "record": "EvidenceRef",
+        "evidence_id": "1cf04470296177a93a58f5214f37a784b042b35a90dca8b37fa33a46aa47f7b0",
+        "file": "server/services/engine-runner.ts",
+        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "start_byte": 5602,
+        "end_byte": 5606,
+        "model_id": "ecmascript-own-enumerable-field-copy-v1",
+        "guard_ids": [],
+        "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+        "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+        "kind": "source"
+      },
+      {
+        "record": "EvidenceRef",
+        "evidence_id": "1a3130c0626c0ee8a6c1c4d409e11f675b34283a82349ed6f043707be9158c3a",
+        "file": "server/services/engine-runner.ts",
+        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "start_byte": 5753,
+        "end_byte": 5766,
+        "model_id": "ecmascript-own-enumerable-field-copy-v1",
+        "guard_ids": [],
+        "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+        "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+        "kind": "source"
+      },
+      {
+        "record": "EvidenceRef",
+        "evidence_id": "0fbe78133dc94dbbc1b4521e47bdb7630c9862729fb23c28b01d5a99fe83bd65",
+        "file": "server/services/engine-runner.ts",
+        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "start_byte": 3589,
+        "end_byte": 5322,
+        "model_id": "ecmascript-own-enumerable-field-copy-v1",
+        "guard_ids": [],
+        "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+        "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+        "kind": "source"
+      }
+    ],
+    "capabilities": [
+      "own_data_copy",
+      "own_data_shape",
+      "own_data_write"
+    ],
+    "supported": true,
+    "assumptions": [
+      "normal source prefix is reached",
+      "entire copied source surface is ordinary enumerable own data without getter/proxy; this does not certify children"
+    ],
+    "runtime_verified": false
+  },
+  "source_call_binding": {
+    "edge_id": "fde7f8eaa64a8b1209e61834",
+    "target": "ts:server/services/engine-runner#buildServices",
+    "issues": []
+  },
+  "parameter_binding": "d505db0138a1d91f346616031e2e90d22cbc3e35699427f7a3777ec8e5fa143f",
+  "rest_binding": "7e64bde1c2e46f3a1a6d2f6971df7286d1d04512adb34ac0df7a7101c401abf4",
+  "actual_excluded_keys": [
+    "cpbRoot",
+    "project",
+    "sourcePath",
+    "hubRoot",
+    "workerBrokerClient"
+  ],
+  "job_options": {
+    "record": "ValueRef",
+    "value_id": "a809ca430e5a59bf5c473885e4cd5ef481380ec27706a9555939c8edc61a99bc",
+    "kind": "object",
+    "evidence": [
+      {
+        "record": "EvidenceRef",
+        "evidence_id": "37a90cd9ab223818af578ab8c914f9ea3d100978528c007fd94e37f432f1a8da",
+        "file": "server/services/engine-runner.ts",
+        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "start_byte": 5753,
+        "end_byte": 5766,
+        "model_id": "ecmascript-own-enumerable-field-copy-v1",
+        "guard_ids": [
+          "18fbb959239e3be26ef238076571f0428c2d60e0378b4fcdb302a6b874a28f13"
+        ],
+        "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+        "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+        "kind": "source"
+      }
+    ],
+    "object_ref": {
+      "record": "ObjectRef",
+      "alloc_id": "151dc590ffb8aa736323d18c9b04c247269eb4e74cbfcc0f22c8de85a5b7b1bf"
+    },
+    "provenance": [],
+    "literal_kind": "",
+    "source_text": "",
+    "alternatives": [],
+    "alias_roots": [],
+    "external_alias": false,
+    "capture_unknown": false,
+    "captured_bindings": [],
+    "barriers": []
+  },
+  "source_current_versions": {
+    "before": "b8b70703904d9b40974ddd3e58c2f86929e7a5e1b2f959dcf35560213104aad6",
+    "after": "8857341733cc239b8d23201ab0fc4ec8a4d77a660e4a41eb8ddbdb4180a10819"
+  },
+  "selected_copy_field_before": {
+    "record": "Projection",
+    "presence": "unknown",
+    "value": {
+      "record": "ValueRef",
+      "value_id": "b2c138ddfdcaca62ec97253a75a52e12d452b9684ced6e4a972c91e577018afd",
+      "kind": "symbolic",
+      "evidence": [
+        {
+          "record": "EvidenceRef",
+          "evidence_id": "37a90cd9ab223818af578ab8c914f9ea3d100978528c007fd94e37f432f1a8da",
+          "file": "server/services/engine-runner.ts",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "start_byte": 5753,
+          "end_byte": 5766,
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "guard_ids": [
+            "18fbb959239e3be26ef238076571f0428c2d60e0378b4fcdb302a6b874a28f13"
+          ],
+          "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+          "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+          "kind": "source"
+        }
+      ],
+      "object_ref": null,
+      "provenance": [
+        {
+          "record": "ProvenanceRef",
+          "kind": "parameter_field_reference",
+          "evidence": {
+            "record": "EvidenceRef",
+            "evidence_id": "1cf04470296177a93a58f5214f37a784b042b35a90dca8b37fa33a46aa47f7b0",
+            "file": "server/services/engine-runner.ts",
+            "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "start_byte": 5602,
+            "end_byte": 5606,
+            "model_id": "ecmascript-own-enumerable-field-copy-v1",
+            "guard_ids": [],
+            "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+            "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+            "kind": "source"
+          },
+          "binding": {
+            "record": "BindingKey",
+            "declaration_id": "d505db0138a1d91f346616031e2e90d22cbc3e35699427f7a3777ec8e5fa143f",
+            "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices"
+          },
+          "parameter_index": 0,
+          "field_path": [
+            "maxRetries"
+          ]
+        }
+      ],
+      "literal_kind": "",
+      "source_text": "",
+      "alternatives": [],
+      "alias_roots": [
+        {
+          "record": "ObjectRef",
+          "alloc_id": "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0"
+        }
+      ],
+      "external_alias": true,
+      "capture_unknown": false,
+      "captured_bindings": [],
+      "barriers": []
+    },
+    "closed": true,
+    "whole_closed": false,
+    "observations": [
+      {
+        "record": "ObservationRef",
+        "observation_id": "314416c4a3171009a0ad9db711b6533d846308b1753ce3964facc1f14dfa8be4",
+        "evidence": {
+          "record": "EvidenceRef",
+          "evidence_id": "37a90cd9ab223818af578ab8c914f9ea3d100978528c007fd94e37f432f1a8da",
+          "file": "server/services/engine-runner.ts",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "start_byte": 5753,
+          "end_byte": 5766,
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "guard_ids": [
+            "18fbb959239e3be26ef238076571f0428c2d60e0378b4fcdb302a6b874a28f13"
+          ],
+          "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+          "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+          "kind": "source"
+        },
+        "alloc_id": "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "version_id": "b8b70703904d9b40974ddd3e58c2f86929e7a5e1b2f959dcf35560213104aad6",
+        "key": "maxRetries",
+        "captured_value_id": "b2c138ddfdcaca62ec97253a75a52e12d452b9684ced6e4a972c91e577018afd",
+        "presence": "unknown"
+      }
+    ],
+    "barriers": []
+  },
+  "selected_copy_field_after": {
+    "record": "Projection",
+    "presence": "unknown",
+    "value": {
+      "record": "ValueRef",
+      "value_id": "b2c138ddfdcaca62ec97253a75a52e12d452b9684ced6e4a972c91e577018afd",
+      "kind": "symbolic",
+      "evidence": [
+        {
+          "record": "EvidenceRef",
+          "evidence_id": "37a90cd9ab223818af578ab8c914f9ea3d100978528c007fd94e37f432f1a8da",
+          "file": "server/services/engine-runner.ts",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "start_byte": 5753,
+          "end_byte": 5766,
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "guard_ids": [
+            "18fbb959239e3be26ef238076571f0428c2d60e0378b4fcdb302a6b874a28f13"
+          ],
+          "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+          "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+          "kind": "source"
+        }
+      ],
+      "object_ref": null,
+      "provenance": [
+        {
+          "record": "ProvenanceRef",
+          "kind": "parameter_field_reference",
+          "evidence": {
+            "record": "EvidenceRef",
+            "evidence_id": "1cf04470296177a93a58f5214f37a784b042b35a90dca8b37fa33a46aa47f7b0",
+            "file": "server/services/engine-runner.ts",
+            "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "start_byte": 5602,
+            "end_byte": 5606,
+            "model_id": "ecmascript-own-enumerable-field-copy-v1",
+            "guard_ids": [],
+            "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+            "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+            "kind": "source"
+          },
+          "binding": {
+            "record": "BindingKey",
+            "declaration_id": "d505db0138a1d91f346616031e2e90d22cbc3e35699427f7a3777ec8e5fa143f",
+            "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices"
+          },
+          "parameter_index": 0,
+          "field_path": [
+            "maxRetries"
+          ]
+        }
+      ],
+      "literal_kind": "",
+      "source_text": "",
+      "alternatives": [],
+      "alias_roots": [
+        {
+          "record": "ObjectRef",
+          "alloc_id": "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0"
+        }
+      ],
+      "external_alias": true,
+      "capture_unknown": false,
+      "captured_bindings": [],
+      "barriers": []
+    },
+    "closed": true,
+    "whole_closed": false,
+    "observations": [
+      {
+        "record": "ObservationRef",
+        "observation_id": "314416c4a3171009a0ad9db711b6533d846308b1753ce3964facc1f14dfa8be4",
+        "evidence": {
+          "record": "EvidenceRef",
+          "evidence_id": "37a90cd9ab223818af578ab8c914f9ea3d100978528c007fd94e37f432f1a8da",
+          "file": "server/services/engine-runner.ts",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "start_byte": 5753,
+          "end_byte": 5766,
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "guard_ids": [
+            "18fbb959239e3be26ef238076571f0428c2d60e0378b4fcdb302a6b874a28f13"
+          ],
+          "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+          "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+          "kind": "source"
+        },
+        "alloc_id": "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "version_id": "b8b70703904d9b40974ddd3e58c2f86929e7a5e1b2f959dcf35560213104aad6",
+        "key": "maxRetries",
+        "captured_value_id": "b2c138ddfdcaca62ec97253a75a52e12d452b9684ced6e4a972c91e577018afd",
+        "presence": "unknown"
+      }
+    ],
+    "barriers": []
+  },
+  "opaque_effect": {
+    "record": "EffectRef",
+    "effect_id": "a5ebc81c4877027d03c6664afef44ae0e263bb7bfb674745307dfcb538a789d8",
+    "evidence": {
+      "record": "EvidenceRef",
+      "evidence_id": "5cd79ea393c32341fd2b976b9dd0f8ff835b27a596a99a90fdd2eb23299ce4f6",
+      "file": "server/services/engine-runner.ts",
+      "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+      "start_byte": 5882,
+      "end_byte": 5917,
+      "model_id": "ecmascript-own-enumerable-field-copy-v1",
+      "guard_ids": [
+        "80954385e424e0c045b3b665e49c8e929fc2d5ad3e0567769a707c44fedd04b2"
+      ],
+      "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+      "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+      "kind": "opaque_effect"
+    },
+    "reason": "saved_source_mkdir_opaque_effect",
+    "root_allocations": [
+      "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+      "7f2e3512da9c9c43eb5679322bdbd9773d9da39d58577095a88e4d0f14762457"
+    ],
+    "affected_allocations": [
+      "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+      "7f2e3512da9c9c43eb5679322bdbd9773d9da39d58577095a88e4d0f14762457"
+    ],
+    "protected_fresh_allocations": [
+      "151dc590ffb8aa736323d18c9b04c247269eb4e74cbfcc0f22c8de85a5b7b1bf"
+    ],
+    "roots_complete": true,
+    "captures_complete": true,
+    "include_escaped": true,
+    "reflection": false,
+    "budget_exceeded": false,
+    "runtime_effect_verified": false,
+    "visible_scope_restricted": true,
+    "visible_root_allocations": [],
+    "guard": {
+      "record": "ModelGuard",
+      "guard_id": "80954385e424e0c045b3b665e49c8e929fc2d5ad3e0567769a707c44fedd04b2",
+      "model_id": "ecmascript-own-enumerable-field-copy-v1",
+      "evidence": [
+        {
+          "record": "EvidenceRef",
+          "evidence_id": "ea27acebb7c250b364002dc13bb8eebf7c710288a1a540f65c2ea83603773393",
+          "file": "server/services/engine-runner.ts",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "start_byte": 5882,
+          "end_byte": 5917,
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "guard_ids": [],
+          "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+          "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+          "kind": "source"
+        },
+        {
+          "record": "EvidenceRef",
+          "evidence_id": "a490e906b0c8d3a4e9591f0b98bc32d53245f8e0a5aa65c36199383b4f24a8d5",
+          "file": "server/services/engine-runner.ts",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "start_byte": 375,
+          "end_byte": 416,
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "guard_ids": [],
+          "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+          "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+          "kind": "source"
+        }
+      ],
+      "capabilities": [
+        "effect_roots",
+        "external_value_domain",
+        "lexical_capture_domain"
+      ],
+      "supported": true,
+      "assumptions": [
+        "the captured module import executes under module lexical scope and cannot directly capture caller-private cells",
+        "arguments/receiver, their aliases, escaped callbacks and external-world objects may be affected",
+        "reflection and uncaptured local callable invocation are outside this finite root model"
+      ],
+      "runtime_verified": false
+    },
+    "reachability_edges": [
+      [
+        "",
+        "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "escaped_or_external_world"
+      ],
+      [
+        "",
+        "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "possible_external_alias"
+      ],
+      [
+        "",
+        "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "possible_referent_root_alias"
+      ],
+      [
+        "",
+        "7f2e3512da9c9c43eb5679322bdbd9773d9da39d58577095a88e4d0f14762457",
+        "explicit_root"
+      ],
+      [
+        "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "open_surface_possible_child_alias"
+      ],
+      [
+        "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "5bc4c4c5b4d308e295213cdb26a4d98a554193b5d9984fa23b2c238eb3430fa0",
+        "possible_external_object_alias"
+      ]
+    ]
+  },
+  "source_services_keys": [
+    "createJob",
+    "startPhase",
+    "completePhase",
+    "completeJob",
+    "failJob",
+    "blockJob",
+    "appendEvent",
+    "prepareTask",
+    "getPool",
+    "getArtifactIndex",
+    "providerServices"
+  ],
+  "services": {
+    "record": "ValueRef",
+    "value_id": "ff49527d1a5d0a778c40922d4d65355838d466e7f67c61d734c1ac4701feb395",
+    "kind": "object",
+    "evidence": [
+      {
+        "record": "EvidenceRef",
+        "evidence_id": "0f297a79855c71946f4dd4f09824babe11028cfb2bf3ffcb196a84779cc26863",
+        "file": "server/services/engine-runner.ts",
+        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "start_byte": 3589,
+        "end_byte": 5322,
+        "model_id": "ecmascript-own-enumerable-field-copy-v1",
+        "guard_ids": [
+          "18fbb959239e3be26ef238076571f0428c2d60e0378b4fcdb302a6b874a28f13"
+        ],
+        "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+        "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+        "kind": "source"
+      }
+    ],
+    "object_ref": {
+      "record": "ObjectRef",
+      "alloc_id": "9a103c1f37841675f80cb1cc0b0cc26c6ecab46504c13d33aa74c7ef515c5043"
+    },
+    "provenance": [],
+    "literal_kind": "",
+    "source_text": "",
+    "alternatives": [],
+    "alias_roots": [],
+    "external_alias": false,
+    "capture_unknown": false,
+    "captured_bindings": [],
+    "barriers": []
+  },
+  "services_selected_field": {
+    "record": "Projection",
+    "presence": "absent",
+    "value": {
+      "record": "ValueRef",
+      "value_id": "7f95c5de33d249a47be9bcb87f9feda34dbf22a29f91dbb9d6ce19f76c1e031d",
+      "kind": "absent",
+      "evidence": [
+        {
+          "record": "EvidenceRef",
+          "evidence_id": "0f297a79855c71946f4dd4f09824babe11028cfb2bf3ffcb196a84779cc26863",
+          "file": "server/services/engine-runner.ts",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "start_byte": 3589,
+          "end_byte": 5322,
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "guard_ids": [
+            "18fbb959239e3be26ef238076571f0428c2d60e0378b4fcdb302a6b874a28f13"
+          ],
+          "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+          "context_id": "saved-source:fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8:runJobWithServices",
+          "kind": "source"
+        }
+      ],
+      "object_ref": null,
+      "provenance": [],
+      "literal_kind": "",
+      "source_text": "",
+      "alternatives": [],
+      "alias_roots": [],
+      "external_alias": false,
+      "capture_unknown": false,
+      "captured_bindings": [],
+      "barriers": []
+    },
+    "closed": true,
+    "whole_closed": true,
+    "observations": [],
+    "barriers": []
+  },
+  "unresolved": [
+    "initializer values and callable captures are not interpreted in this component observation",
+    "full source order, async/await completion and final caller argument are left to the actual field adapter",
+    "copy observations do not establish current input value or child referent contents"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "status": "incomplete_candidate_scope_superseded",
+  "process_id": 14092,
+  "termination_signal": "SIGTERM",
+  "reason": "Original CPB CLI row includes task read/projection responsibility but actual task command declaration has not been selected. Existing source-only core is frozen and retained; a new complete-scope publication will use added data locators.",
+  "last_observed_scan_phase": "cold_started",
+  "formal_report_or_completion_claimed": false,
+  "original_freeze_and_artifacts_preserved": true,
+  "next_publication_directory": "astra-iteration12-scope2",
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

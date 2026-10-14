@@ -1,0 +1,849 @@
+{
+  "snapshot_id": "24997ddb7ac245abb12a7da4387b77d1f605b50e6719e8b131322cfe4f164f31",
+  "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+  "policy_hash": "70cb40bf6d55a4ee7b019441e28b5064a8198aa9085482f32564efebab75d3e0",
+  "detector_version": "call-rules-7-field-summaries",
+  "component_versions": {
+    "completion_summaries": "captured-completion-summaries-1",
+    "lexical_bindings": "captured-lexical-bindings-2",
+    "maintenance": {
+      "backend": "cocoindex",
+      "global_detection": "full",
+      "granularity": "language",
+      "protocol": 1,
+      "version": "1.0.25"
+    },
+    "navigation_contracts": {
+      "analyzer": "static-navigation-contracts-2-shared",
+      "policy_schema": "static-navigation-policy-v1"
+    },
+    "port_wiring": "finite-port-wiring-2-shared",
+    "python": {
+      "analyzer": "python-ast-3-captured",
+      "parser": "cpython-3.12.14"
+    },
+    "rust": {
+      "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+      "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+    },
+    "semantic_environment": "captured-builtin-environment-1",
+    "semantic_sources": "semantic-snapshot-sources-1",
+    "static_contracts": {
+      "analyzer": "static-contracts-1",
+      "policy_schema": "static-contract-policy-v1"
+    },
+    "support_input_capture": "support-input-capture-1",
+    "tool": {
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+      "graph_backend": "axon-graph-core-1",
+      "source_hash": "900090668e899bc07134e5d2c9b73f338f29a4302924247f8aa4e1850bb4a47e"
+    },
+    "typescript": {
+      "analyzer": "typescript-tree-sitter-call-2-projection-1",
+      "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+      "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+    }
+  },
+  "target_executed": false,
+  "target_tests_run": false,
+  "observations": [
+    {
+      "rule_id": "baseline-wwc-ts-scope-selection",
+      "kind": "required_call",
+      "from": "ts:packages/browser-core/src/scope-context#resolveScopeContext",
+      "to": "ts:packages/browser-core/src/scope-context#scopeSelectionFromHash",
+      "matched_source_ids": [
+        "ts:packages/browser-core/src/scope-context#resolveScopeContext"
+      ],
+      "matched_target_ids": [
+        "ts:packages/browser-core/src/scope-context#scopeSelectionFromHash"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:packages/browser-core/src/scope-context#resolveScopeContext",
+          "node_ids": [
+            "ts:packages/browser-core/src/scope-context#resolveScopeContext",
+            "ts:packages/browser-core/src/scope-context#scopeSelectionFromHash"
+          ],
+          "edge_ids": [
+            "d718dde61e6f81e28a12f562"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "d718dde61e6f81e28a12f562",
+              "file": "packages/browser-core/src/scope-context.ts",
+              "line": 222,
+              "column": 20,
+              "expression": "scopeSelectionFromHash",
+              "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+              "source_line": "  const selection = scopeSelectionFromHash(hash)"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 2,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "23c7e60b47cd84e7fcfcc975",
+          "file": "packages/browser-core/src/scope-context.ts",
+          "line": 233,
+          "column": 8,
+          "expression": "scopes.filter",
+          "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_line": "      ? scopes.filter((scope): scope is RepositoryScope => scope.kind === 'repository')",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "8bfabba1274077cfc4ae98b2",
+          "file": "packages/browser-core/src/scope-context.ts",
+          "line": 259,
+          "column": 19,
+          "expression": "scopes.filter",
+          "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_line": "  const matching = scopes.filter(scope => matchesSelection(scope, selection))",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-ts-surface-hash",
+      "kind": "required_call",
+      "from": "ts:packages/browser-core/src/scope-context#surfaceHash",
+      "to": "ts:packages/browser-core/src/scope-context#scopeHash",
+      "matched_source_ids": [
+        "ts:packages/browser-core/src/scope-context#surfaceHash"
+      ],
+      "matched_target_ids": [
+        "ts:packages/browser-core/src/scope-context#scopeHash"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:packages/browser-core/src/scope-context#surfaceHash",
+          "node_ids": [
+            "ts:packages/browser-core/src/scope-context#surfaceHash",
+            "ts:packages/browser-core/src/scope-context#scopeHash"
+          ],
+          "edge_ids": [
+            "d03d234e002a7889c6ca8273"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "d03d234e002a7889c6ca8273",
+              "file": "packages/browser-core/src/scope-context.ts",
+              "line": 272,
+              "column": 9,
+              "expression": "scopeHash",
+              "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+              "source_line": "  return scopeHash(`#${path}`, selection)"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-ts-auth-format",
+      "kind": "required_call",
+      "from": "ts:apps/client/src/auth-page#statusText",
+      "to": "ts:apps/client/src/format-instant#formatInstant",
+      "matched_source_ids": [
+        "ts:apps/client/src/auth-page#statusText"
+      ],
+      "matched_target_ids": [
+        "ts:apps/client/src/format-instant#formatInstant"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:apps/client/src/auth-page#statusText",
+          "node_ids": [
+            "ts:apps/client/src/auth-page#statusText",
+            "ts:apps/client/src/format-instant#formatInstant"
+          ],
+          "edge_ids": [
+            "9456d3a412ed03b601fd6862"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "9456d3a412ed03b601fd6862",
+              "file": "apps/client/src/auth-page.ts",
+              "line": 35,
+              "column": 36,
+              "expression": "formatInstant",
+              "source_hash": "623a23bf09d24d3da1c02041a9dc81c651d609dd1b6cae0eebef1ae2ef8f9a80",
+              "source_line": "      : `已登录，有效期至 ${formatInstant(state.session.expiresAt)}`"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-ts-workspace-path",
+      "kind": "required_path",
+      "from": "ts:apps/client/src/application#mountWinWinCodeClient.diagnosticScope",
+      "to": "ts:packages/browser-core/src/scope-context#scopeSelectionFromHash",
+      "matched_source_ids": [
+        "ts:apps/client/src/application#mountWinWinCodeClient.diagnosticScope"
+      ],
+      "matched_target_ids": [
+        "ts:packages/browser-core/src/scope-context#scopeSelectionFromHash"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:apps/client/src/application#mountWinWinCodeClient.diagnosticScope",
+          "node_ids": [
+            "ts:apps/client/src/application#mountWinWinCodeClient.diagnosticScope",
+            "ts:packages/browser-core/src/scope-context#resolveScopeContext",
+            "ts:packages/browser-core/src/scope-context#scopeSelectionFromHash"
+          ],
+          "edge_ids": [
+            "8504a40e391f017281b97963",
+            "d718dde61e6f81e28a12f562"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "8504a40e391f017281b97963",
+              "file": "apps/client/src/application.ts",
+              "line": 359,
+              "column": 23,
+              "expression": "resolveScopeContext",
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "source_line": "    const resolution = resolveScopeContext("
+            },
+            {
+              "edge_id": "d718dde61e6f81e28a12f562",
+              "file": "packages/browser-core/src/scope-context.ts",
+              "line": 222,
+              "column": 20,
+              "expression": "scopeSelectionFromHash",
+              "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+              "source_line": "  const selection = scopeSelectionFromHash(hash)"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-ts-nested-import",
+      "kind": "required_call",
+      "from": "ts:packages/browser-ui/src/status-badge#mountStatusBadge.update",
+      "to": "ts:packages/browser-ui/src/mounted-view#assertMounted",
+      "matched_source_ids": [
+        "ts:packages/browser-ui/src/status-badge#mountStatusBadge.update"
+      ],
+      "matched_target_ids": [
+        "ts:packages/browser-ui/src/mounted-view#assertMounted"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:packages/browser-ui/src/status-badge#mountStatusBadge.update",
+          "node_ids": [
+            "ts:packages/browser-ui/src/status-badge#mountStatusBadge.update",
+            "ts:packages/browser-ui/src/mounted-view#assertMounted"
+          ],
+          "edge_ids": [
+            "8976e3a5cf44a96aa68f6b2f"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "8976e3a5cf44a96aa68f6b2f",
+              "file": "packages/browser-ui/src/status-badge.ts",
+              "line": 47,
+              "column": 4,
+              "expression": "assertMounted",
+              "source_hash": "09130acf7bcc9d22c6f661ae38816cff72c71a16d1bc6a0db98de9386dc98eec",
+              "source_line": "    assertMounted(open, 'StatusBadge')"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 4,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "7b37f4546c406bb111e504c8",
+          "file": "packages/browser-ui/src/status-badge.ts",
+          "line": 55,
+          "column": 6,
+          "expression": "root.removeAttribute",
+          "source_hash": "09130acf7bcc9d22c6f661ae38816cff72c71a16d1bc6a0db98de9386dc98eec",
+          "source_line": "      root.removeAttribute?.('role')",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "a61ac901102532e34339c00f",
+          "file": "packages/browser-ui/src/status-badge.ts",
+          "line": 58,
+          "column": 6,
+          "expression": "root.setAttribute",
+          "source_hash": "09130acf7bcc9d22c6f661ae38816cff72c71a16d1bc6a0db98de9386dc98eec",
+          "source_line": "      root.setAttribute('role', live === 'assertive' ? 'alert' : 'status')",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "b7fb27df9c0fd090172e2d4f",
+          "file": "packages/browser-ui/src/status-badge.ts",
+          "line": 59,
+          "column": 6,
+          "expression": "root.setAttribute",
+          "source_hash": "09130acf7bcc9d22c6f661ae38816cff72c71a16d1bc6a0db98de9386dc98eec",
+          "source_line": "      root.setAttribute('aria-live', live)",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "df2f9c14f722abec81d3686b",
+          "file": "packages/browser-ui/src/status-badge.ts",
+          "line": 56,
+          "column": 6,
+          "expression": "root.removeAttribute",
+          "source_hash": "09130acf7bcc9d22c6f661ae38816cff72c71a16d1bc6a0db98de9386dc98eec",
+          "source_line": "      root.removeAttribute?.('aria-live')",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-rust-canonical-id",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-domain/src/lib#is_canonical_delivery_id",
+      "to": "rust:crates/winwincode-domain/src/lib#is_canonical_prefixed_id",
+      "matched_source_ids": [
+        "rust:crates/winwincode-domain/src/lib#is_canonical_delivery_id"
+      ],
+      "matched_target_ids": [
+        "rust:crates/winwincode-domain/src/lib#is_canonical_prefixed_id"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "rust:crates/winwincode-domain/src/lib#is_canonical_delivery_id",
+          "node_ids": [
+            "rust:crates/winwincode-domain/src/lib#is_canonical_delivery_id",
+            "rust:crates/winwincode-domain/src/lib#is_canonical_prefixed_id"
+          ],
+          "edge_ids": [
+            "rust-call:cca96efb5d8fbd9d7ff91257"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "rust-call:cca96efb5d8fbd9d7ff91257",
+              "file": "crates/winwincode-domain/src/lib.rs",
+              "line": 26,
+              "column": 4,
+              "expression": "is_canonical_prefixed_id",
+              "source_hash": "b147f59f1d14a681f1d6394c161d063324653d1908b3bda56e66b8d39c5e698e",
+              "source_line": "    is_canonical_prefixed_id(value, \"dlv_\")"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-rust-local-function",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-device-client/src/connect_code#generate_connect_code",
+      "to": "rust:crates/winwincode-device-client/src/connect_code#random_digits",
+      "matched_source_ids": [
+        "rust:crates/winwincode-device-client/src/connect_code#generate_connect_code"
+      ],
+      "matched_target_ids": [
+        "rust:crates/winwincode-device-client/src/connect_code#random_digits"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "rust:crates/winwincode-device-client/src/connect_code#generate_connect_code",
+          "node_ids": [
+            "rust:crates/winwincode-device-client/src/connect_code#generate_connect_code",
+            "rust:crates/winwincode-device-client/src/connect_code#random_digits"
+          ],
+          "edge_ids": [
+            "rust-call:b41d4de3a7fb317de7b83d07"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "rust-call:b41d4de3a7fb317de7b83d07",
+              "file": "crates/winwincode-device-client/src/connect_code.rs",
+              "line": 192,
+              "column": 21,
+              "expression": "random_digits",
+              "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+              "source_line": "        let digits = random_digits(CONNECT_CODE_DIGITS)?;"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 7,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "rust-call:3c2b4a7585001347d2a659dc",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 198,
+          "column": 8,
+          "expression": "ConnectCodeError::Protocol",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "    Err(ConnectCodeError::Protocol(",
+          "resolution": "dynamic",
+          "reason": "相关 trait 的声明/默认成员来源不完整，不能排除默认方法影响接收器选择"
+        },
+        {
+          "edge_id": "rust-call:4c8a2b27b9be837b624addb2",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 193,
+          "column": 27,
+          "expression": "digits.iter().map",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        let code: String = digits.iter().map(|digit| (b'0' + digit) as char).collect();",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:62ec211707f3bc2a463eb6ac",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 199,
+          "column": 8,
+          "expression": "\"the connect code entropy source never produced a strong shape\".to_owned",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        \"the connect code entropy source never produced a strong shape\".to_owned(),",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:655459e6a6ebd076dbb6b8cd",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 195,
+          "column": 22,
+          "expression": "ConnectCodePlaintext::from_digits",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "            return Ok(ConnectCodePlaintext::from_digits(code));",
+          "resolution": "dynamic",
+          "reason": "相关 trait 的声明/默认成员来源不完整，不能排除默认方法影响接收器选择"
+        },
+        {
+          "edge_id": "rust-call:6a4489a1f8703a0543828672",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 193,
+          "column": 45,
+          "expression": "|digit| (b'0' + digit) as char",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        let code: String = digits.iter().map(|digit| (b'0' + digit) as char).collect();",
+          "resolution": "dynamic",
+          "reason": "闭包/Future 构造不证明调用或轮询其主体"
+        },
+        {
+          "edge_id": "rust-call:d9d53ac4c0870415e552a010",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 193,
+          "column": 27,
+          "expression": "digits.iter().map(|digit| (b'0' + digit) as char).collect",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        let code: String = digits.iter().map(|digit| (b'0' + digit) as char).collect();",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:dc5b05cb2beadf185a47935c",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 193,
+          "column": 27,
+          "expression": "digits.iter",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        let code: String = digits.iter().map(|digit| (b'0' + digit) as char).collect();",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-rust-module-use",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-device-client/src/connect_code#publish_connect_code",
+      "to": "rust:crates/winwincode-device-client/src/identity#generate_prefixed_id",
+      "matched_source_ids": [
+        "rust:crates/winwincode-device-client/src/connect_code#publish_connect_code"
+      ],
+      "matched_target_ids": [
+        "rust:crates/winwincode-device-client/src/identity#generate_prefixed_id"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "rust:crates/winwincode-device-client/src/connect_code#publish_connect_code",
+          "node_ids": [
+            "rust:crates/winwincode-device-client/src/connect_code#publish_connect_code",
+            "rust:crates/winwincode-device-client/src/identity#generate_prefixed_id"
+          ],
+          "edge_ids": [
+            "rust-call:3c0a3239f91b88a35350aedf"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "rust-call:3c0a3239f91b88a35350aedf",
+              "file": "crates/winwincode-device-client/src/connect_code.rs",
+              "line": 292,
+              "column": 25,
+              "expression": "generate_prefixed_id",
+              "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+              "source_line": "        connect_code_id: generate_prefixed_id(CONNECT_CODE_ID_PREFIX)?,"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 12,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "rust-call:0494d363006c0cac05805c87",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 288,
+          "column": 14,
+          "expression": "time::Duration::try_from(ttl)\n            .map_err",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        now + time::Duration::try_from(ttl)",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:346a974b6bbe366292d69f2f",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 301,
+          "column": 4,
+          "expression": "store.replace_connect_code_state",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "    store.replace_connect_code_state(&record)?;",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:5d8ea51615ebb4f2c65ab606",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 279,
+          "column": 12,
+          "expression": "\"the issuing client instance id must be non-empty and bounded\".to_owned",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "            \"the issuing client instance id must be non-empty and bounded\".to_owned(),",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:7e2842aab730b8ca6938b21a",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 289,
+          "column": 21,
+          "expression": "|error| ConnectCodeError::Protocol(format!(\"ttl out of range: {error}\"))",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "            .map_err(|error| ConnectCodeError::Protocol(format!(\"ttl out of range: {error}\")))?,",
+          "resolution": "dynamic",
+          "reason": "闭包/Future 构造不证明调用或轮询其主体"
+        },
+        {
+          "edge_id": "rust-call:9ce9b401882302eff87cb837",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 278,
+          "column": 19,
+          "expression": "ConnectCodeError::Protocol",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        return Err(ConnectCodeError::Protocol(",
+          "resolution": "dynamic",
+          "reason": "相关 trait 的声明/默认成员来源不完整，不能排除默认方法影响接收器选择"
+        },
+        {
+          "edge_id": "rust-call:9cecdcbd3f7dbaee6c7e0ae9",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 277,
+          "column": 43,
+          "expression": "issued_by_instance_id.len",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "    if issued_by_instance_id.is_empty() || issued_by_instance_id.len() > MAX_ID_BYTES {",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:a33963069d2fc54e295c9c57",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 285,
+          "column": 19,
+          "expression": "|stored| stored.generation + 1",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        .map_or(1, |stored| stored.generation + 1);",
+          "resolution": "dynamic",
+          "reason": "闭包/Future 构造不证明调用或轮询其主体"
+        },
+        {
+          "edge_id": "rust-call:abc254c1a6859e99c0ac4c19",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 295,
+          "column": 31,
+          "expression": "issued_by_instance_id.to_owned",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        issued_by_instance_id: issued_by_instance_id.to_owned(),",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:be4f73a75923675579463fc2",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 298,
+          "column": 20,
+          "expression": "stamp.clone",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "        created_at: stamp.clone(),",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:cf77d3900128daf10984abfa",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 277,
+          "column": 7,
+          "expression": "issued_by_instance_id.is_empty",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "    if issued_by_instance_id.is_empty() || issued_by_instance_id.len() > MAX_ID_BYTES {",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:edfa417b8978cc16c93b21eb",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 283,
+          "column": 21,
+          "expression": "store\n        .connect_code_state",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "    let generation = store",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:f423d78781b513a815c716ba",
+          "file": "crates/winwincode-device-client/src/connect_code.rs",
+          "line": 283,
+          "column": 21,
+          "expression": "store\n        .connect_code_state()?\n        .map_or",
+          "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+          "source_line": "    let generation = store",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-rust-crate-root",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-device-client/src/connect_code#rfc3339",
+      "to": "rust:crates/winwincode-device-client/src/lib#canonical_rfc3339",
+      "matched_source_ids": [
+        "rust:crates/winwincode-device-client/src/connect_code#rfc3339"
+      ],
+      "matched_target_ids": [
+        "rust:crates/winwincode-device-client/src/lib#canonical_rfc3339"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "rust:crates/winwincode-device-client/src/connect_code#rfc3339",
+          "node_ids": [
+            "rust:crates/winwincode-device-client/src/connect_code#rfc3339",
+            "rust:crates/winwincode-device-client/src/lib#canonical_rfc3339"
+          ],
+          "edge_ids": [
+            "rust-call:85488e78e1c7fb0eb36cf1d1"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "rust-call:85488e78e1c7fb0eb36cf1d1",
+              "file": "crates/winwincode-device-client/src/connect_code.rs",
+              "line": 485,
+              "column": 4,
+              "expression": "crate::canonical_rfc3339",
+              "source_hash": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+              "source_line": "    crate::canonical_rfc3339(time)"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "baseline-wwc-rust-binary-library",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-cli/src/main#main",
+      "to": "rust:crates/winwincode-cli/src/launcher#default_state_root",
+      "matched_source_ids": [
+        "rust:crates/winwincode-cli/src/main#main"
+      ],
+      "matched_target_ids": [
+        "rust:crates/winwincode-cli/src/launcher#default_state_root"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "rust:crates/winwincode-cli/src/main#main",
+          "node_ids": [
+            "rust:crates/winwincode-cli/src/main#main",
+            "rust:crates/winwincode-cli/src/launcher#default_state_root"
+          ],
+          "edge_ids": [
+            "rust-call:04c86747f431dfda62d638ee"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "rust-call:04c86747f431dfda62d638ee",
+              "file": "crates/winwincode-cli/src/main.rs",
+              "line": 4,
+              "column": 27,
+              "expression": "default_state_root",
+              "source_hash": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+              "source_line": "    let state_root = match default_state_root() {"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 7,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "rust-call:444f4a275a36181faa49b8be",
+          "file": "crates/winwincode-cli/src/main.rs",
+          "line": 17,
+          "column": 8,
+          "expression": "outcome.stderr.is_empty",
+          "source_hash": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+          "source_line": "    if !outcome.stderr.is_empty() {",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:4609521a67de483807ac1ede",
+          "file": "crates/winwincode-cli/src/main.rs",
+          "line": 12,
+          "column": 20,
+          "expression": "std::env::args().skip(1).collect",
+          "source_hash": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+          "source_line": "    let arguments = std::env::args().skip(1).collect::<Vec<_>>();",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:895d8f949c533b6df0c00122",
+          "file": "crates/winwincode-cli/src/main.rs",
+          "line": 12,
+          "column": 20,
+          "expression": "std::env::args().skip",
+          "source_hash": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+          "source_line": "    let arguments = std::env::args().skip(1).collect::<Vec<_>>();",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:a1827b3b4f725a35537a6547",
+          "file": "crates/winwincode-cli/src/main.rs",
+          "line": 18,
+          "column": 8,
+          "expression": "eprint",
+          "source_hash": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+          "source_line": "        eprint!(\"{}\", outcome.stderr);",
+          "resolution": "dynamic",
+          "reason": "宏未展开；生成的调用/声明与隐式行为未知"
+        },
+        {
+          "edge_id": "rust-call:b2a1864b3c130002b68d8ecc",
+          "file": "crates/winwincode-cli/src/main.rs",
+          "line": 15,
+          "column": 8,
+          "expression": "print",
+          "source_hash": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+          "source_line": "        print!(\"{}\", outcome.stdout);",
+          "resolution": "dynamic",
+          "reason": "宏未展开；生成的调用/声明与隐式行为未知"
+        },
+        {
+          "edge_id": "rust-call:cd57c2fbf59ae06a9a04dc31",
+          "file": "crates/winwincode-cli/src/main.rs",
+          "line": 14,
+          "column": 8,
+          "expression": "outcome.stdout.is_empty",
+          "source_hash": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+          "source_line": "    if !outcome.stdout.is_empty() {",
+          "resolution": "dynamic",
+          "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+        },
+        {
+          "edge_id": "rust-call:eb23e4880d90413f68faa458",
+          "file": "crates/winwincode-cli/src/main.rs",
+          "line": 7,
+          "column": 12,
+          "expression": "eprintln",
+          "source_hash": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+          "source_line": "            eprintln!(\"WinWinCode 本地状态目录不可用：{error}\");",
+          "resolution": "dynamic",
+          "reason": "宏未展开；生成的调用/声明与隐式行为未知"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    }
+  ]
+}

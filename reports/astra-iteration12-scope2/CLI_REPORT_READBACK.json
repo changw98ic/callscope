@@ -1,0 +1,215 @@
+{
+  "kind": "normal_saved_report_cli_readback",
+  "repository": "winwincode",
+  "started_at": "2026-10-14T09:51:36.408793+00:00",
+  "completed_at": "2026-10-14T09:54:33.843362+00:00",
+  "snapshot_id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+  "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+  "policy_hash": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+  "identity": {
+    "freeze_sha256": "17ec8c6a86863e1fc3b9ec8961188dd8d3ba5d2081da0721dfb027844b9c4059",
+    "tool_identity": {
+      "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+      "graph_backend": "axon-graph-core-1",
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+    },
+    "package_module_count": 65,
+    "pyproject_sha256": "698714a37e9e1b3fff6e7248eeb3d74faa44a6d004a6fe9f1cc13e0110724381",
+    "policy_files": {
+      "codepatchbay-policy.json": "f3f0ba2eecdeb156eea3d4038e5e8ac2dd03b7ee94f9e989b9ce8d9f994a174f",
+      "winwincode-policy.json": "24dd004b2130a963fa2e60724203c60e41c87ee780123bc27eccffc71bae3005"
+    },
+    "effective_policy_sha256": {
+      "codepatchbay": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887",
+      "winwincode": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499"
+    },
+    "package_version": "0.14.0",
+    "publication_series": "v14",
+    "analyzer_version": "static-multilang-14",
+    "detector_version": "call-rules-13-architecture-explanations",
+    "schema_version": "2"
+  },
+  "formal_publications": {
+    "codepatchbay": {
+      "integration_sha256": "14ec2da687fc96870a5b511d86bebc7ab5d262334e9f52fb3b2f3d65108f815c",
+      "snapshot_id": "dd5d4e3cc349b57eb87d0f810a415560bfd5f6b1022a990a35190a44d0e50ebb",
+      "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+      "policy_hash": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887",
+      "database": "/workspace/callscope/reports/astra-iteration12-scope2/codepatchbay-v14.sqlite3",
+      "database_closed": true,
+      "wal": {
+        "path": "/workspace/callscope/reports/astra-iteration12-scope2/codepatchbay-v14.sqlite3-wal",
+        "exists": false,
+        "size_bytes": 0,
+        "empty_or_absent": true
+      }
+    },
+    "winwincode": {
+      "integration_sha256": "df8ea8684b5de5b142fa129bef9587153c126082cb13d83c62150af8fa89a6f8",
+      "snapshot_id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+      "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+      "policy_hash": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+      "database": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-v14.sqlite3",
+      "database_closed": true,
+      "wal": {
+        "path": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-v14.sqlite3-wal",
+        "exists": false,
+        "size_bytes": 0,
+        "empty_or_absent": true
+      }
+    }
+  },
+  "formal_publications_after_cli": {
+    "codepatchbay": {
+      "integration_sha256": "14ec2da687fc96870a5b511d86bebc7ab5d262334e9f52fb3b2f3d65108f815c",
+      "snapshot_id": "dd5d4e3cc349b57eb87d0f810a415560bfd5f6b1022a990a35190a44d0e50ebb",
+      "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+      "policy_hash": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887",
+      "database": "/workspace/callscope/reports/astra-iteration12-scope2/codepatchbay-v14.sqlite3",
+      "database_closed": true,
+      "wal": {
+        "path": "/workspace/callscope/reports/astra-iteration12-scope2/codepatchbay-v14.sqlite3-wal",
+        "exists": false,
+        "size_bytes": 0,
+        "empty_or_absent": true
+      }
+    },
+    "winwincode": {
+      "integration_sha256": "df8ea8684b5de5b142fa129bef9587153c126082cb13d83c62150af8fa89a6f8",
+      "snapshot_id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+      "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+      "policy_hash": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+      "database": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-v14.sqlite3",
+      "database_closed": true,
+      "wal": {
+        "path": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-v14.sqlite3-wal",
+        "exists": false,
+        "size_bytes": 0,
+        "empty_or_absent": true
+      }
+    }
+  },
+  "command": [
+    "/workspace/callscope/.analysis-tools/runtime/bin/python",
+    "-m",
+    "callscope",
+    "report",
+    "--db",
+    "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-v14.sqlite3",
+    "--snapshot",
+    "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+    "--format",
+    "markdown",
+    "--output",
+    "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-cli-report-readback.md"
+  ],
+  "cwd": "/workspace/callscope",
+  "fixed_pythonpath": "/workspace/callscope",
+  "fixed_pythondontwritebytecode": "1",
+  "fixed_python_no_user_site": "1",
+  "returncode": 0,
+  "stdout": "",
+  "stderr": "",
+  "reference_artifact": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-automatic-report.md",
+  "reference_sha256": "b01a2e2a063467d82e6d53d9d85e5161628b4ed9097a9628e706ec1a9e9c1922",
+  "exported_artifact": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-cli-report-readback.md",
+  "exported_sha256": "b01a2e2a063467d82e6d53d9d85e5161628b4ed9097a9628e706ec1a9e9c1922",
+  "markdown_bytes_equal": true,
+  "markdown_sha256_equal": true,
+  "database_before": {
+    "database_file_sha256": "98998243828e306f75195b79d260fe66c549ba3b49a7f715fa635a1495d0b0f0",
+    "database_size_bytes": 1178353664,
+    "logical_content_sha256": "836bf3414aeead7bb639c70f58a0c327e97813cf1f6bf6068ad86cd2d8658da4",
+    "table_records": {
+      "decisions": {
+        "row_count": 0,
+        "row_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "findings": {
+        "row_count": 139561,
+        "row_content_sha256": "25b1a6acfed1c7c9716b077066ce09ab5670a093e1fbbd529c8633ee86b2da48"
+      },
+      "project_latest": {
+        "row_count": 1,
+        "row_content_sha256": "2dee9aaa672368a6645a0ff803459c65eefd5c1ffa6efcbc6ad5226a90f09dd0"
+      },
+      "snapshots": {
+        "row_count": 1,
+        "row_content_sha256": "2d4bb843897e45d7352ae42a4b69a78952b772984a1fbffcb2535ba06c71395a"
+      },
+      "sqlite_sequence": {
+        "row_count": 1,
+        "row_content_sha256": "6aca735f05df28d17c830e3ee911c9486a84e7a974a50994bd8ddce28e5ea53b"
+      }
+    },
+    "schema_sha256": "f1c99f6b4bc9794ef117012951eeafad176a74f3fbe2fb5c65c9e5f393468b18",
+    "application_id": 1128352844,
+    "user_version": 1,
+    "wal": {
+      "path": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-v14.sqlite3-wal",
+      "exists": false,
+      "size_bytes": 0,
+      "empty_or_absent": true
+    },
+    "fingerprint_connection": "sqlite3 mode=ro&immutable=1; incremental existing TEXT/BLOB reads"
+  },
+  "database_after": {
+    "database_file_sha256": "0dbb240e049d44efc1b2dfa9e9f73988ced23fa2ff00a0a0145ffc72cbc90efb",
+    "database_size_bytes": 1178353664,
+    "logical_content_sha256": "836bf3414aeead7bb639c70f58a0c327e97813cf1f6bf6068ad86cd2d8658da4",
+    "table_records": {
+      "decisions": {
+        "row_count": 0,
+        "row_content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "findings": {
+        "row_count": 139561,
+        "row_content_sha256": "25b1a6acfed1c7c9716b077066ce09ab5670a093e1fbbd529c8633ee86b2da48"
+      },
+      "project_latest": {
+        "row_count": 1,
+        "row_content_sha256": "2dee9aaa672368a6645a0ff803459c65eefd5c1ffa6efcbc6ad5226a90f09dd0"
+      },
+      "snapshots": {
+        "row_count": 1,
+        "row_content_sha256": "2d4bb843897e45d7352ae42a4b69a78952b772984a1fbffcb2535ba06c71395a"
+      },
+      "sqlite_sequence": {
+        "row_count": 1,
+        "row_content_sha256": "6aca735f05df28d17c830e3ee911c9486a84e7a974a50994bd8ddce28e5ea53b"
+      }
+    },
+    "schema_sha256": "f1c99f6b4bc9794ef117012951eeafad176a74f3fbe2fb5c65c9e5f393468b18",
+    "application_id": 1128352844,
+    "user_version": 1,
+    "wal": {
+      "path": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-v14.sqlite3-wal",
+      "exists": false,
+      "size_bytes": 0,
+      "empty_or_absent": true
+    },
+    "fingerprint_connection": "sqlite3 mode=ro&immutable=1; incremental existing TEXT/BLOB reads"
+  },
+  "logical_database_rows_schema_and_identity_unchanged": true,
+  "database_physical_bytes_unchanged": false,
+  "ordinary_tool_store_initialization": {
+    "normal_store_constructor_invoked": true,
+    "connection_was_not_readonly": true,
+    "source_contract": "Store.__init__ performs WAL/synchronous/application_id/user_version and CREATE IF NOT EXISTS setup",
+    "initialization_physical_effects_were_permitted_and_measured": true,
+    "publish_scan_or_decision_command_invoked": false
+  },
+  "freeze_identity_unchanged": true,
+  "integration_and_prerequisite_state_unchanged": true,
+  "formal_markdown_unchanged": true,
+  "common_lock": "/workspace/callscope/.analysis-tools/goal-source-query.lock",
+  "target_worktree_opened": false,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "analysis_rescanned": false,
+  "tool_test_suite_run": false,
+  "synthetic_fixture_used": false,
+  "successful_readback": true
+}

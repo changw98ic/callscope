@@ -1,0 +1,1205 @@
+{
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "versions": [
+        {
+          "version": "v8",
+          "snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+          "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+          "policy_hash": "f88623213218cf284750ba5da3a9b490a091e8faa1b02df96cd93b9a91517da6",
+          "policy_bytes_sha256": "7841a273394bb40276133d99d6984c024388e36425ffcbaf6a719d965ba4429c",
+          "component_versions": {
+            "atomicity_contracts": {
+              "analyzer": "static-atomicity-contracts-2-shared",
+              "policy_schema": "static-atomicity-policy-v1"
+            },
+            "completion_summaries": "captured-completion-summaries-1",
+            "field_contracts": {
+              "analyzer": "static-field-contracts-1",
+              "policy_schema": "static-field-policy-v1"
+            },
+            "field_summaries": "finite-field-summaries-2",
+            "lexical_bindings": "captured-lexical-bindings-2",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "900090668e899bc07134e5d2c9b73f338f29a4302924247f8aa4e1850bb4a47e"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            },
+            "value_contracts": {
+              "analyzer": "static-value-contracts-1",
+              "policy_schema": "static-value-policy-v1"
+            }
+          },
+          "field_assessments": [
+            {
+              "rule_id": "cpb-astra-field-engine-options",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供，并且所选字段为普通对象上的可枚举自有数据属性；不认证运行时对象、Proxy、getter或外部代码行为。",
+                    "只评审所选正常到达或正常履约关系；没有执行目标代码，其他异常、外部作用和跨函数传输缺口必须保留。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 1,
+                "assessment_counts": {
+                  "unknown": 1
+                },
+                "field_analyzer_version": "static-field-contracts-1",
+                "field_summary_version": "finite-field-summaries-2",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 401
+              },
+              "assessment_counts": {
+                "unknown": 1
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 157,
+                    "column": 10
+                  },
+                  "field_presence": "maybe",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_container_or_callback_escape_unknown",
+                    "field_temporary_shallow_value_epoch_unknown"
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 155,
+                    "column": 20
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#buildServices",
+                  "selected_field_presence": "present",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 155,
+                    "column": 20
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#buildServices",
+                  "selected_field_presence": "absent",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-queue-agent-input",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供，并且所选字段为普通对象上的可枚举自有数据属性；不认证运行时对象、Proxy、getter或外部代码行为。",
+                    "只评审所选正常到达或正常履约关系；没有执行目标代码，其他异常、外部作用和跨函数传输缺口必须保留。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-1",
+                "field_summary_version": "finite-field-summaries-2",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 322
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_receiver_effect_unknown",
+                    "field_receiver_effect_unknown"
+                  ]
+                },
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_receiver_effect_unknown",
+                    "field_receiver_effect_unknown"
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1554,
+                    "column": 19
+                  },
+                  "target_graph_node_id": "ts:core/job/meta#buildMeta",
+                  "selected_field_presence": "present",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                },
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1554,
+                    "column": 19
+                  },
+                  "target_graph_node_id": "ts:core/job/meta#buildMeta",
+                  "selected_field_presence": "present",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                },
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1554,
+                    "column": 19
+                  },
+                  "target_graph_node_id": "ts:core/job/meta#buildMeta",
+                  "selected_field_presence": "present",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                },
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1554,
+                    "column": 19
+                  },
+                  "target_graph_node_id": "ts:core/job/meta#buildMeta",
+                  "selected_field_presence": "present",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-agent-metadata-return",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供，并且所选字段为普通对象上的可枚举自有数据属性；不认证运行时对象、Proxy、getter或外部代码行为。",
+                    "只评审所选正常到达或正常履约关系；没有执行目标代码，其他异常、外部作用和跨函数传输缺口必须保留。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-1",
+                "field_summary_version": "finite-field-summaries-2",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 69
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 487,
+                    "column": 66
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_callee_expression_effect_unknown",
+                    "field_callee_expression_effect_unknown",
+                    "field_expression_effect_unsupported",
+                    "field_expression_effect_unsupported",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown"
+                  ]
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 489,
+                    "column": 3
+                  },
+                  "field_presence": "maybe",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_callee_expression_effect_unknown",
+                    "field_callee_expression_effect_unknown",
+                    "field_expression_effect_unsupported",
+                    "field_expression_effect_unsupported",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_container_or_callback_escape_unknown",
+                    "field_temporary_shallow_value_epoch_unknown"
+                  ]
+                }
+              ],
+              "helper_returns": []
+            }
+          ]
+        },
+        {
+          "version": "v9",
+          "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+          "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+          "policy_hash": "920edf6ba07f0a43821cd940b211848556ace921d2d8c3e76f05face4dc73ef0",
+          "policy_bytes_sha256": "134671b5cb1cc7f6acb3514e63eac6a1e7bd3d53d48b750d38d8d35b9b63faa0",
+          "component_versions": {
+            "atomicity_contracts": {
+              "analyzer": "static-atomicity-contracts-2-shared",
+              "policy_schema": "static-atomicity-policy-v1"
+            },
+            "budget_contracts": {
+              "analyzer": "static-local-budget-contracts-1",
+              "policy_schema": "static-local-budget-policy-v1"
+            },
+            "completion_summaries": "captured-completion-summaries-1",
+            "field_contracts": {
+              "analyzer": "static-field-contracts-2-ir",
+              "policy_schema": "static-field-policy-v2"
+            },
+            "field_summaries": "finite-field-summaries-3-ir",
+            "lexical_bindings": "captured-lexical-bindings-2",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_ir": "finite-immutable-semantic-ir-1",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "35aedb73739399068219e6b9b46840c27441f5b1f74430031234ffb285c8b7fc"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            },
+            "value_contracts": {
+              "analyzer": "static-value-contracts-1",
+              "policy_schema": "static-value-policy-v1"
+            }
+          },
+          "field_assessments": [
+            {
+              "rule_id": "cpb-astra-field-engine-options",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 1,
+                "assessment_counts": {
+                  "unknown": 1
+                },
+                "field_analyzer_version": "static-field-contracts-2-ir",
+                "field_summary_version": "finite-field-summaries-3-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 299
+              },
+              "assessment_counts": {
+                "unknown": 1
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 157,
+                    "column": 10
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_actual_get_unregistered_or_receiver_unknown"
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 151,
+                    "column": 8
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#envRecord",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 79,
+                    "column": 22
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#envRecord",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 155,
+                    "column": 20
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#buildServices",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-agent-metadata-return",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-2-ir",
+                "field_summary_version": "finite-field-summaries-3-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 941
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 487,
+                    "column": 66
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "ir_captured_binding_write_possible"
+                  ]
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 489,
+                    "column": 3
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_actual_get_unregistered_or_receiver_unknown"
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 455,
+                    "column": 24
+                  },
+                  "target_graph_node_id": "ts:server/services/agent/agent-config#normalizeAgentSpec",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 481,
+                    "column": 18
+                  },
+                  "target_graph_node_id": "ts:server/services/agent/agent-config#mergeAgentConfig",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-queue-agent-input",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-2-ir",
+                "field_summary_version": "finite-field-summaries-3-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 246
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_actual_get_unknown"
+                  ]
+                },
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_actual_get_unknown"
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1554,
+                    "column": 19
+                  },
+                  "target_graph_node_id": "ts:core/job/meta#buildMeta",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "version": "v10",
+          "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+          "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+          "policy_hash": "920edf6ba07f0a43821cd940b211848556ace921d2d8c3e76f05face4dc73ef0",
+          "policy_bytes_sha256": "134671b5cb1cc7f6acb3514e63eac6a1e7bd3d53d48b750d38d8d35b9b63faa0",
+          "component_versions": {
+            "atomicity_contracts": {
+              "analyzer": "static-atomicity-contracts-2-shared",
+              "policy_schema": "static-atomicity-policy-v1"
+            },
+            "budget_contracts": {
+              "analyzer": "static-local-budget-contracts-1",
+              "policy_schema": "static-local-budget-policy-v1"
+            },
+            "completion_summaries": "captured-completion-summaries-1",
+            "field_contracts": {
+              "analyzer": "static-field-contracts-3-ir",
+              "policy_schema": "static-field-policy-v2"
+            },
+            "field_summaries": "finite-field-summaries-4-ir",
+            "lexical_bindings": "captured-lexical-bindings-2",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_ir": "finite-immutable-semantic-ir-2",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "dc5abc91496bf810ded9af95323a0b4bfe5050160e17896071e27b26ab289aa3"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            },
+            "value_contracts": {
+              "analyzer": "static-value-contracts-1",
+              "policy_schema": "static-value-policy-v1"
+            }
+          },
+          "field_assessments": [
+            {
+              "rule_id": "cpb-astra-field-queue-agent-input",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 246
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_get_value_origin_unknown"
+                  ]
+                },
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_get_value_origin_unknown"
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1554,
+                    "column": 19
+                  },
+                  "target_graph_node_id": "ts:core/job/meta#buildMeta",
+                  "selected_field_presence": "absent",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-engine-options",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 1,
+                "assessment_counts": {
+                  "source_form_preserved_when_present": 1
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": true,
+                "source_form_complete": true,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 299
+              },
+              "assessment_counts": {
+                "source_form_preserved_when_present": 1
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 157,
+                    "column": 10
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "source_form_preserved_when_present",
+                  "pre_completion_source_form_relation": "source_form_preserved_when_present",
+                  "gaps": []
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 151,
+                    "column": 8
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#envRecord",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 79,
+                    "column": 22
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#envRecord",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 155,
+                    "column": 20
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#buildServices",
+                  "selected_field_presence": "absent",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-agent-metadata-return",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 941
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 487,
+                    "column": 66
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "ir_captured_binding_write_possible"
+                  ]
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 489,
+                    "column": 3
+                  },
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "ir_copy_surface_or_exclusions_not_certified"
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 455,
+                    "column": 24
+                  },
+                  "target_graph_node_id": "ts:server/services/agent/agent-config#normalizeAgentSpec",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 481,
+                    "column": 18
+                  },
+                  "target_graph_node_id": "ts:server/services/agent/agent-config#mergeAgentConfig",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "target_source_identical_all_three": true,
+      "v9_v10_policy_bytes_identical": true,
+      "v9_v10_policy_hash_identical": true,
+      "v8_v9_policy_bytes_identical": false,
+      "v8_v9_field_contracts_identical": false,
+      "changed_policy_sections_v8_v9": [
+        "budget_contracts",
+        "field_contracts"
+      ]
+    },
+    {
+      "repository": "winwincode",
+      "versions": [
+        {
+          "version": "v8",
+          "snapshot_id": "24997ddb7ac245abb12a7da4387b77d1f605b50e6719e8b131322cfe4f164f31",
+          "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+          "policy_hash": "70cb40bf6d55a4ee7b019441e28b5064a8198aa9085482f32564efebab75d3e0",
+          "policy_bytes_sha256": "623fec73702bb7e6a7004fcc4b17c25798acf051c779f19b15dddf04acbff8e0",
+          "component_versions": {
+            "completion_summaries": "captured-completion-summaries-1",
+            "lexical_bindings": "captured-lexical-bindings-2",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "navigation_contracts": {
+              "analyzer": "static-navigation-contracts-2-shared",
+              "policy_schema": "static-navigation-policy-v1"
+            },
+            "port_wiring": "finite-port-wiring-2-shared",
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "rust": {
+              "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+              "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "900090668e899bc07134e5d2c9b73f338f29a4302924247f8aa4e1850bb4a47e"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            }
+          },
+          "field_assessments": []
+        },
+        {
+          "version": "v9",
+          "snapshot_id": "640931a5622d449ab3aa8a141336e6b45818397c97cbcc35e4491645bc55eae7",
+          "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+          "policy_hash": "fbd78ddcacdd0c5615e5bea85b13987f5ad6d78fd60ac40fcbdda23d2e597f4c",
+          "policy_bytes_sha256": "7331e395f929c6fe031265a9e8c8190cdad5fb158b35b54b7d614c30c899a11b",
+          "component_versions": {
+            "completion_summaries": "captured-completion-summaries-1",
+            "lexical_bindings": "captured-lexical-bindings-2",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "navigation_contracts": {
+              "analyzer": "static-navigation-contracts-2-shared",
+              "policy_schema": "static-navigation-policy-v1"
+            },
+            "port_wiring": "finite-port-wiring-2-shared",
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "rust": {
+              "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+              "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "35aedb73739399068219e6b9b46840c27441f5b1f74430031234ffb285c8b7fc"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            }
+          },
+          "field_assessments": []
+        },
+        {
+          "version": "v10",
+          "snapshot_id": "7dd584497ca438b6d19a269935666b757c4bd4f78e4741716ba30f75202906d1",
+          "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+          "policy_hash": "fbd78ddcacdd0c5615e5bea85b13987f5ad6d78fd60ac40fcbdda23d2e597f4c",
+          "policy_bytes_sha256": "7331e395f929c6fe031265a9e8c8190cdad5fb158b35b54b7d614c30c899a11b",
+          "component_versions": {
+            "completion_summaries": "captured-completion-summaries-1",
+            "lexical_bindings": "captured-lexical-bindings-2",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "navigation_contracts": {
+              "analyzer": "static-navigation-contracts-2-shared",
+              "policy_schema": "static-navigation-policy-v1"
+            },
+            "port_wiring": "finite-port-wiring-2-shared",
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "rust": {
+              "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+              "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "dc5abc91496bf810ded9af95323a0b4bfe5050160e17896071e27b26ab289aa3"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            }
+          },
+          "field_assessments": []
+        }
+      ],
+      "target_source_identical_all_three": true,
+      "v9_v10_policy_bytes_identical": true,
+      "v9_v10_policy_hash_identical": true,
+      "v8_v9_policy_bytes_identical": false,
+      "v8_v9_field_contracts_identical": true,
+      "changed_policy_sections_v8_v9": [
+        "budget_contracts"
+      ]
+    }
+  ],
+  "precision_metric_computed": false,
+  "full_goal_acceptance_computed": false
+}

@@ -1,0 +1,122 @@
+{
+  "kind": "source-lineage-final-handoff",
+  "development_only": true,
+  "module": "callscope/state_lineage_relations.py",
+  "module_sha256": "541ca28aa7b5b931c6996fe7b5449d32e4b0375bafe905f10d2d5d595ecf62b2",
+  "module_ast_valid": true,
+  "model": "finite-conditional-event-lineage-publication-source-v1",
+  "entrypoint": "analyze_pattern(analysis)",
+  "rules_file": "reports/astra-iteration12/state-lineage-rules.json",
+  "last_completed_development_query": "state-lineage-source-query-final.json",
+  "last_completed_development_query_sha256": "be5f08aee79c2a11fb7f2a287099cf7dcdfd5ab2327bff37ea8a16fb90d9b9ed",
+  "last_queried_module_sha256": "dc886c6543b03a956dcc5b8d3ca7c6410878393813df0cc0cb1033b6003e87f1",
+  "last_queried_module_stable": true,
+  "saved_v13_snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+  "results": [
+    {
+      "rule_id": "cpb-review-fixed-state-lineage",
+      "assessment": {
+        "state": "scoped_source_relations_supported",
+        "scoped_source_supported": true,
+        "captured_source_structure_supported": true,
+        "normal_control_model_registered": true,
+        "runtime_verified": false,
+        "full_functionality_proven": false,
+        "whole_report_reproduced": false,
+        "original_five_goal_acceptance_computed": false
+      },
+      "role_binding_closed": {
+        "completion": true,
+        "callback_runner": true,
+        "status_parser": true,
+        "superseder": true,
+        "event_writer": true,
+        "lineage_builder": true,
+        "event_authority": true,
+        "queue_authority": true
+      },
+      "necessary_gaps": [],
+      "source_statement_relation_closed": true,
+      "finite_rows": 0,
+      "source_fact_count": 99,
+      "source_fact_reference_readback": {
+        "all_references_resolve": true,
+        "reference_occurrences": 22,
+        "unique_referenced_fact_ids": 20,
+        "unique_fact_ids": 99
+      },
+      "actual_statement": "所选回调到达实际条件 (remediationStatus === \"FIXED\") 且前序 await 正常完成时，源码先调用 supersession 接口，再调用 lineage 接口；前一接口向已绑定事件写者传递的字面字段为 [{\"type\":\"job_superseded\",\"reason\":\"external_remediation_fixed\"}]。后续 queue 入参中与该事件共享同一词法输入的字段为 [{\"event_field\":\"jobId\",\"queue_field\":\"/metadata/originJobId\",\"input\":\"jobId\"},{\"event_field\":\"jobId\",\"queue_field\":\"/metadata/sourceContext/remediation/previousJobId\",\"input\":\"jobId\"},{\"event_field\":\"jobId\",\"queue_field\":\"/metadata/sourceContext/retry/previousJobId\",\"input\":\"jobId\"},{\"event_field\":\"project\",\"queue_field\":\"/projectId\",\"input\":\"project\"}]；lineage helper 内的提前返回、抛出及外部操作失败仍可阻止实际入队。"
+    },
+    {
+      "rule_id": "cpb-finalizer-conditional-publication",
+      "assessment": {
+        "state": "scoped_source_relations_supported",
+        "scoped_source_supported": true,
+        "captured_source_structure_supported": true,
+        "normal_control_model_registered": true,
+        "runtime_verified": false,
+        "full_functionality_proven": false,
+        "whole_report_reproduced": false,
+        "original_five_goal_acceptance_computed": false
+      },
+      "role_binding_closed": {
+        "finalizer": true,
+        "pr_boundary": true,
+        "push_boundary": true,
+        "git_executor": true,
+        "local_git_executor": true,
+        "review_bundle": true
+      },
+      "necessary_gaps": [],
+      "source_statement_relation_closed": true,
+      "finite_rows": 20,
+      "source_fact_count": 617,
+      "source_fact_reference_readback": {
+        "all_references_resolve": true,
+        "reference_occurrences": 613,
+        "unique_referenced_fact_ids": 139,
+        "unique_fact_ids": 617
+      },
+      "actual_statement": "源码实际模式字面量为 [\"dry-run\", \"local\", \"pr\", \"remote\"]，声明的 plan 字段为 [\"closeIssue\", \"commit\", \"merge\", \"pullRequest\", \"pullRequestPreview\", \"push\"]。有限表组合这些模式与源码中的布尔 opt-in，并保留字段 unknown；plan 不是已发生的写入。PR 调用的真实选项绑定到 callee 形参后，源码中早于条件 transport 且成立时 return 的条件包括 [\"(!allowLive)\", \"(!isPass(verdict))\", \"(!remoteCapability || !remoteAuthorityValidator || !remoteCommitVerifier)\", \"(dryRun)\"]。另有实际 review-bundle 分支在所选模式/权限 guard 之前调用其他接口，不能把后续 guard 推广为整个函数无本地 IO 的保证。远端命令接口的实际 Git 首参数为 [\"push\"]；注入 callback、授权结果、命令执行及远端后置条件保持未知。"
+    }
+  ],
+  "later_conservative_fallbacks": [
+    "Unsupported object literal member makes the entire record unknown; no unsupported member is ignored while retaining known fields.",
+    "PR preview object shorthand is read from its captured source; unknown member/computed key clears previous known option fields."
+  ],
+  "later_fallbacks_not_requeried_in_development": true,
+  "next_verification": "Root-authorized normal v14 cold/warm scans; no extra development snapshot/query.",
+  "cancelled_after_root_instruction": {
+    "log": "state-lineage-query-final2.log",
+    "loaded_source_only": true,
+    "no_result_file_written": true
+  },
+  "formal_v14_freeze_or_scan_run_by_this_agent": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "additional_probe_source_authentication": {
+    "rule_id": "cpb-report-trusted-probe-command-source",
+    "development_policy_path": "reports/astra-iteration12/codepatchbay-policy.json",
+    "development_policy_file_sha256": "38acb0b64547d783bebaa12dfc6bb3ecf56a3433f431d268302829eb4149186b",
+    "not_the_saved_snapshot_policy": true,
+    "source_role_authentication_only": true,
+    "pattern_not_run_or_reinterpreted": true,
+    "all_selected_declarations_authenticated": true,
+    "all_selected_graph_bindings_closed": true,
+    "role_binding_closed": {
+      "loader": true,
+      "resolver": true,
+      "executor": true,
+      "invoker": true,
+      "runner": true,
+      "parser": true,
+      "spec": true,
+      "scope_counter": true,
+      "scope_predicate": true,
+      "scope_path_normalization": true,
+      "scope_text_normalization": true
+    },
+    "gaps": []
+  }
+}

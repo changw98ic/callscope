@@ -1,0 +1,699 @@
+{
+  "schema_version": 1,
+  "baseline_id": "astra-static-two-repositories-v1",
+  "baseline_status": "final",
+  "baseline_sha256": "16b4b05c8818fa1eecf396132ebe2ea29a8f0068801165f0649da379d9041dd7",
+  "baseline_total": 26,
+  "status_counts": {
+    "reproduced": 10,
+    "unknown": 3,
+    "mismatch": 0,
+    "evidence_only": 13,
+    "source_changed": 0,
+    "source_missing": 0,
+    "evidence_unavailable": 0,
+    "endpoint_missing": 0,
+    "ambiguous": 0
+  },
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+      "snapshot_id": "3952ccb24bb530f5acf7096329ab085043c8e8bf8ee25f77e0ed623cb3be3ec5",
+      "snapshot_status": "partial",
+      "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+      "policy_hash": "a1751b6c3e579d5781d137ed528657884ec82aa635d3a9820171afe0290b87b7",
+      "component_versions": {
+        "maintenance": {
+          "backend": "cocoindex",
+          "global_detection": "full",
+          "granularity": "language",
+          "protocol": 1,
+          "version": "1.0.25"
+        },
+        "python": {
+          "analyzer": "python-ast-3-captured",
+          "parser": "cpython-3.12.14"
+        },
+        "static_contracts": {
+          "analyzer": "static-contracts-1",
+          "policy_schema": "static-contract-policy-v1"
+        },
+        "support_input_capture": "support-input-capture-1",
+        "tool": {
+          "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+          "graph_backend": "axon-graph-core-1",
+          "source_hash": "79d3ec0c1eadc16578d7fc7c52a381ea80ea89dd6ff427d602ca5d0a49c6391e"
+        },
+        "typescript": {
+          "analyzer": "typescript-tree-sitter-call-2-projection-1",
+          "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+        },
+        "value_contracts": {
+          "analyzer": "static-value-contracts-1",
+          "policy_schema": "static-value-policy-v1"
+        }
+      },
+      "files_total": 333,
+      "files_parsed": 330,
+      "files_failed": 3,
+      "nodes": 11085,
+      "edges": 60571,
+      "calls_by_resolution": {
+        "resolved": 23380,
+        "external": 18429,
+        "dynamic": 18326,
+        "ambiguous": 429,
+        "unresolved": 7
+      },
+      "support_inputs_count": 0,
+      "support_inputs_incomplete": false,
+      "static_contracts_count": 1,
+      "value_contracts_count": 1,
+      "cold_and_warm": [
+        {
+          "phase": "cold",
+          "snapshot_id": "3952ccb24bb530f5acf7096329ab085043c8e8bf8ee25f77e0ed623cb3be3ec5",
+          "created": true,
+          "maintenance": {
+            "engine": "cocoindex",
+            "version": "1.0.25",
+            "recomputed_languages": [
+              "python",
+              "typescript"
+            ],
+            "reused_languages": [],
+            "uncached_languages": [],
+            "global_detection": "full"
+          }
+        },
+        {
+          "phase": "warm",
+          "snapshot_id": "3952ccb24bb530f5acf7096329ab085043c8e8bf8ee25f77e0ed623cb3be3ec5",
+          "created": false,
+          "maintenance": {
+            "engine": "cocoindex",
+            "version": "1.0.25",
+            "recomputed_languages": [],
+            "reused_languages": [
+              "python",
+              "typescript"
+            ],
+            "uncached_languages": [],
+            "global_detection": "full"
+          }
+        }
+      ],
+      "frozen_positive_total": 4,
+      "frozen_positive_reproduced": 4,
+      "baseline_counts": {
+        "reproduced": 4,
+        "unknown": 2,
+        "mismatch": 0,
+        "evidence_only": 7,
+        "source_changed": 0,
+        "source_missing": 0,
+        "evidence_unavailable": 0,
+        "endpoint_missing": 0,
+        "ambiguous": 0
+      },
+      "source_checks": [
+        {
+          "path": "cli/commands/fix.ts",
+          "expected_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "cli/commands/pipeline.ts",
+          "expected_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+          "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "cli/cpb.ts",
+          "expected_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "core/contracts/idempotency.ts",
+          "expected_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+          "source_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "core/engine/run-job-checklist-dag.ts",
+          "expected_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+          "source_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "core/engine/run-job-execute-dag.ts",
+          "expected_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+          "source_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "core/engine/run-job.ts",
+          "expected_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "core/workflow/probe-runner.ts",
+          "expected_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "runtime/worker/assignment-finalizer.ts",
+          "expected_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+          "source_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "runtime/worker/managed-worker.ts",
+          "expected_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+          "source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/orchestrator/failure-router.ts",
+          "expected_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+          "source_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/orchestrator/hub-orchestrator.ts",
+          "expected_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+          "source_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/orchestrator/worker-supervisor.ts",
+          "expected_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+          "source_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/engine-runner.ts",
+          "expected_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/event/event-materializer.ts",
+          "expected_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+          "source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/event/event-store.ts",
+          "expected_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+          "source_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/hub/hub-queue.ts",
+          "expected_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+          "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/job/job-store.ts",
+          "expected_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+          "source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/review/review-dispatch.ts",
+          "expected_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+          "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ],
+      "changes_since_v5": [],
+      "observations": [
+        {
+          "id": "cpb.engine.checklist-materialization-call",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "cpb.engine.service-to-run-call",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "cpb.engine.service-to-dag-path",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_path",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "cpb.probe.trusted-policy-call",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "cpb.cli.dynamic-command-boundary",
+          "status": "unknown",
+          "expected_static_outcome": "unknown_required",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "cpb.engine.injected-append-boundary",
+          "status": "unknown",
+          "expected_static_outcome": "unknown_required",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "cpb.engine.production-port-composition",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "cpb.fix.readiness-before-enqueue",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "cpb.dispatch.queue-inbox-process-chain",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "cpb.finalization.completed-is-not-published",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "cpb.gap.pipeline-retry-budget-disconnected",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "cpb.gap.superseded-terminal-disagreement",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "cpb.gap.active-key-dedupe-window",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        }
+      ]
+    },
+    {
+      "repository": "winwincode",
+      "commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+      "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+      "snapshot_status": "partial",
+      "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+      "policy_hash": "0d21fa84b075ea1d8f4ac76c8d4fc3a4f85ad1b317a02fa91cafa531543f444e",
+      "component_versions": {
+        "maintenance": {
+          "backend": "cocoindex",
+          "global_detection": "full",
+          "granularity": "language",
+          "protocol": 1,
+          "version": "1.0.25"
+        },
+        "python": {
+          "analyzer": "python-ast-3-captured",
+          "parser": "cpython-3.12.14"
+        },
+        "rust": {
+          "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+          "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+        },
+        "static_contracts": {
+          "analyzer": "static-contracts-1",
+          "policy_schema": "static-contract-policy-v1"
+        },
+        "support_input_capture": "support-input-capture-1",
+        "tool": {
+          "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+          "graph_backend": "axon-graph-core-1",
+          "source_hash": "79d3ec0c1eadc16578d7fc7c52a381ea80ea89dd6ff427d602ca5d0a49c6391e"
+        },
+        "typescript": {
+          "analyzer": "typescript-tree-sitter-call-2-projection-1",
+          "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+        }
+      },
+      "files_total": 471,
+      "files_parsed": 465,
+      "files_failed": 6,
+      "nodes": 32407,
+      "edges": 171983,
+      "calls_by_resolution": {
+        "external": 24597,
+        "dynamic": 129600,
+        "resolved": 16293,
+        "ambiguous": 62,
+        "unresolved": 1431
+      },
+      "support_inputs_count": 4,
+      "support_inputs_incomplete": false,
+      "static_contracts_count": 1,
+      "value_contracts_count": 0,
+      "cold_and_warm": [
+        {
+          "phase": "cold",
+          "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+          "created": true,
+          "maintenance": {
+            "engine": "cocoindex",
+            "version": "1.0.25",
+            "recomputed_languages": [
+              "python",
+              "rust",
+              "typescript"
+            ],
+            "reused_languages": [],
+            "uncached_languages": [],
+            "global_detection": "full"
+          }
+        },
+        {
+          "phase": "warm",
+          "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+          "created": false,
+          "maintenance": {
+            "engine": "cocoindex",
+            "version": "1.0.25",
+            "recomputed_languages": [],
+            "reused_languages": [
+              "python",
+              "rust",
+              "typescript"
+            ],
+            "uncached_languages": [],
+            "global_detection": "full"
+          }
+        }
+      ],
+      "frozen_positive_total": 6,
+      "frozen_positive_reproduced": 6,
+      "baseline_counts": {
+        "reproduced": 6,
+        "unknown": 1,
+        "mismatch": 0,
+        "evidence_only": 6,
+        "source_changed": 0,
+        "source_missing": 0,
+        "evidence_unavailable": 0,
+        "endpoint_missing": 0,
+        "ambiguous": 0
+      },
+      "source_checks": [
+        {
+          "path": "apps/client/src/application.ts",
+          "expected_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/auth-view-model.ts",
+          "expected_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+          "source_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/boot.ts",
+          "expected_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+          "source_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/chat-delivery-creator.ts",
+          "expected_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+          "source_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/community-control-plane-client.ts",
+          "expected_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+          "source_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/decision-clarification-view-model.ts",
+          "expected_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+          "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/generated/control-plane-client.ts",
+          "expected_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "source_status": "captured_support_input",
+          "status": "matched",
+          "evidence_origin": "support_input",
+          "support_input_available": true,
+          "support_source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "support_text_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24"
+        },
+        {
+          "path": "apps/client/src/home-dashboard-page.ts",
+          "expected_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+          "source_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/task-entry-view-model.ts",
+          "expected_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+          "source_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-codex/src/adapter.rs",
+          "expected_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+          "source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "expected_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+          "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-delivery/src/application/workrun.rs",
+          "expected_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+          "source_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-server/src/dispatcher.rs",
+          "expected_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-server/src/server.rs",
+          "expected_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-worker/src/lib.rs",
+          "expected_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-worker/src/main.rs",
+          "expected_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+          "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "packages/browser-core/src/scope-context.ts",
+          "expected_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ],
+      "changes_since_v5": [
+        {
+          "id": "wwc.worker.control-to-dispatch-call",
+          "before": "unknown",
+          "after": "reproduced",
+          "before_expectation_satisfied": false,
+          "after_expectation_satisfied": true
+        }
+      ],
+      "observations": [
+        {
+          "id": "wwc.client.diagnostic-scope-call",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "wwc.scope.surface-hash-call",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "wwc.delivery.start-next-to-item",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "wwc.delivery.start-item-validation",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "wwc.codex.submit-turn-persist-call",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "wwc.worker.control-to-dispatch-call",
+          "status": "reproduced",
+          "expected_static_outcome": "confirmed_static_call",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "wwc.worker.generic-codex-boundary",
+          "status": "unknown",
+          "expected_static_outcome": "unknown_required",
+          "expectation_satisfied": true
+        },
+        {
+          "id": "wwc.client.auth-factory-composition",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "wwc.protocol.client-to-rust-dispatch",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "wwc.codex.intent-before-kernel",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "wwc.device.production-provider-composition",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "wwc.gap.dashboard-new-task-context",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        },
+        {
+          "id": "wwc.gap.device-clarification-verification",
+          "status": "evidence_only",
+          "expected_static_outcome": "evidence_only",
+          "expectation_satisfied": null
+        }
+      ]
+    }
+  ],
+  "configured_finite_contract_findings_count": 3,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "interpretation": "Frozen source-observation reproduction and separately configured source facts; not functional coverage"
+}

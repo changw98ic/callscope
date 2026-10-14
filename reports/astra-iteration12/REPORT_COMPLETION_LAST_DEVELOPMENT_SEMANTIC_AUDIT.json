@@ -1,0 +1,2914 @@
+{
+  "kind": "original_finite_content_last_development_reconciliation",
+  "inputs": [
+    {
+      "file": "/workspace/callscope/reports/astra-iteration12/REPORT_COMPLETION_CONTRACT.json",
+      "sha256": "3e6663a4fc5e97c7fd334c222210db32584e06b1f1d676029f6ea6228f660e71"
+    },
+    {
+      "file": "/workspace/callscope/reports/astra-iteration12/RESPONSIBILITY_ACTUAL_BODY_DEVELOPMENT_INDEX.json",
+      "sha256": "3d2e46ec0695d3c8ede4d8af081738ab45740e1743b5d78970cb7a559c3c7b6d"
+    },
+    {
+      "file": "/workspace/callscope/reports/astra-iteration12/STATE_LINEAGE_FINAL_HANDOFF.json",
+      "sha256": "9a7c1918258d350296bac236d4d9c441057fe3e7cf643ce3718854b3391be304"
+    },
+    {
+      "file": "/workspace/callscope/reports/astra-iteration12/documentation-source-query.json",
+      "sha256": "493c408b8e924b53915c8fcd72d4521ed7f27170f662742cd8749d3b6413bacf"
+    },
+    {
+      "file": "/workspace/callscope/reports/astra-iteration12/WWC_PROTOCOL_EXISTING_EVIDENCE_READBACK.json",
+      "sha256": "3c9e96942d8efbe074c79ff58c53ebdf570a8f0567f0d0d194aef9aee3a70369"
+    },
+    {
+      "file": "/workspace/callscope/reports/astra-iteration12/WWC_PROTOCOL_COMPUTED_SEAM_SOURCE_READBACK.json",
+      "sha256": "da3a8870dae2b8bcd568b82f3f7c270a9c16cc5af8a230c28eb9a0b5b5a2bb54"
+    }
+  ],
+  "original_ten_domains": [
+    {
+      "id": "cpb-command-queue",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:285ab864b671946f02b1",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 5930,
+            "end_byte": 6256,
+            "start_line": 46,
+            "end_line": 46,
+            "span_hash": "71a3a7070311cc87bed9e31bb025ed79f06c5c3920d0e5e584272f23971f0b1c"
+          },
+          "original_statement": "`cli/cpb.ts` 的命令表选择文件，`main` 在第 154 行动态加载并在第 186 行调用 `mod.run`。`CPB_EXECUTOR_ROOT` 可由环境覆盖，命令表也不是一套已证明封闭的运行时模块集合。因此可以提取声明候选与命令 key，但不能把所有候选 handler 都当作必然直接调用。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:214c005d881a6b1ed1ad",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 6257,
+            "end_byte": 6565,
+            "start_line": 48,
+            "end_line": 48,
+            "span_hash": "e3131389a5732eddf14f4d046fbceb270a8ed7956f4741d33876759a2c8b4f76"
+          },
+          "original_statement": "`fix.run` 的主顺序是解析项目 → `assertFixReadiness` → 同键查询 → 组装 route/metadata → `enqueue`。`fix.ts:505–508` 的 readiness 失败分支在提交前返回，说明这里确实有保护分支；调用图单有 readiness 和 enqueue 两条边，不能证明这个顺序约束。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:c8295096739eb4a9da08",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 6566,
+            "end_byte": 6806,
+            "start_line": 50,
+            "end_line": 50,
+            "span_hash": "c875644cd5df56493c9aebb5e50fa69b2d538761fdb33ff370eed905dbc1f917"
+          },
+          "original_statement": "`pipeline` 同样把任务、workflow、plan mode、agent 配置及重试参数交给队列。命令参数被接受、传入 metadata 与最后被执行策略消费必须分开检查，`--retries` 的问题正发生在这一层间契约。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:2dcd7d79bf715800236e",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 6840,
+            "end_byte": 7268,
+            "start_line": 54,
+            "end_line": 54,
+            "span_hash": "3a68c38a9abfa80e486839c8ae8a9f3eb81a283036f0c3053671aa5c2d737443"
+          },
+          "original_statement": "`HubOrchestrator.tick` 先调和 assignment，再取得候选、以条件更新预约队列、创建 assignment/attempt、选择 worker，并写 inbox（`hub-orchestrator.ts:315–450`）。worker supervisor 启动独立 managed-worker；worker 领取 inbox，在工作区和任务身份确定后，经动态 bridge 调用服务适配器（`managed-worker.ts:1349`、`:1393`、`:1797`；`bridges/engine-bridge.ts:17–18`）。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:83ccf61946fed64577f2",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 7269,
+            "end_byte": 7585,
+            "start_line": 56,
+            "end_line": 56,
+            "span_hash": "122cc004067529479641cfa90a73c933d1b5c550ba6794d5f0cb04be1e8af5fc"
+          },
+          "original_statement": "这是一条可由源码和协议串联的端到端结构链，但中间包括持久消息和进程启动。不能因函数可达性搜索停在 `spawn`、`writeInbox` 或 `import()` 就报“执行入口没接上”；也不能在图里跳过它们，假装任务身份、租约和提交时序已经得到证明。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "有限动态命令/环境覆盖、readiness和队列/assignment/inbox/worker来源有正文；CPB-01/03及既有production_assembly/channels保留字段预算/原子窗口与持久进程接缝，不用普通CALLS替代。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "cli/cpb.ts",
+          "actual_owner": "main",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/7/statements/9",
+          "operation_pointer": "/operations/388",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「import」中提供第 1 个实参「path.join(CPB_EXECUTOR_ROOT, \"cli\", \"commands\", COMMANDS[cmd])」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "server/services/executor-root.ts",
+          "actual_owner": "resolveExecutorRoot",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/231/statements/3",
+          "operation_pointer": "/operations/11194",
+          "operation_kind": "return_transfer",
+          "text": "以「return path.resolve(stringValue(envRecord.CPB_EXECUTOR_ROOT) || stringValue(fallbackRoot));」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "server/services/executor-root.ts",
+          "actual_owner": "resolveExecutorRoot",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/231/statements/4",
+          "operation_pointer": "/operations/11195",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「path.resolve」中提供第 1 个实参「stringValue(envRecord.CPB_EXECUTOR_ROOT) || stringValue(fallbackRoot)」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "cli/commands/fix.ts",
+          "actual_owner": "run",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/4/statements/11",
+          "operation_pointer": "/operations/64",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「deps.assertFixReadiness」中提供第 1 个实参「{ cpbRoot, project }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "cli/commands/fix.ts",
+          "actual_owner": "run",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/4/statements/13",
+          "operation_pointer": "/operations/68",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「readiness」作为第 1 个实参交给已绑定接口「ts:cli/commands/fix#isReadinessFailure」，对应捕获形参「r: FixReadinessResult」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "cli/commands/fix.ts",
+          "actual_owner": "run",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/4/statements/14",
+          "operation_pointer": "/operations/70",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「out.err」中提供第 1 个实参「readiness.nextAction」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "server/orchestrator/hub-orchestrator.ts",
+          "actual_owner": "HubOrchestrator.tick",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/132/statements/9",
+          "operation_pointer": "/operations/5800",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「updateEntry」中提供第 3 个实参「{\\n          status: \"scheduled\",\\n          claimedBy: `orchestrator:${epoch}`,\\n          claimedAt: new Date().toISOString(),\\n          // Persist the exact smart-scheduler score/rank/evidence that led to\\n          // dispatch. Keeping this only on the in-memory candidate made the\\n          // decision disappear on a leader crash before assignment crea…［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "server/orchestrator/hub-orchestrator.ts",
+          "actual_owner": "HubOrchestrator.tick",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/132/statements/12",
+          "operation_pointer": "/operations/5816",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「this.assignmentStore.getOrCreateAssignmentForEntry」中提供第 1 个实参「{\\n          entryId: candidate.id,\\n          projectId: candidate.projectId,\\n          projectRuntimeRoot: registeredProject.projectRuntimeRoot,\\n          task: candidate.description || candidate.metadata?.task || \"\",\\n          sourcePath: candidate.sourcePath || candidate.metadata?.sourcePath,\\n          workflow: candidate.metadata?.workflow || \"stand…［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "server/orchestrator/hub-orchestrator.ts",
+          "actual_owner": "HubOrchestrator.tick",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/132/statements/14",
+          "operation_pointer": "/operations/5825",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「this.scheduler.findIdleWorker」中提供第 1 个实参「candidate.projectId」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "runtime/worker/managed-worker.ts",
+          "actual_owner": "main.processInbox",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/86/statements/0",
+          "operation_pointer": "/operations/4168",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「assignment」的初始化来源为「claim.assignment as AssignmentPayload」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "runtime/worker/managed-worker.ts",
+          "actual_owner": "main.processInbox",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/86/statements/2",
+          "operation_pointer": "/operations/4205",
+          "operation_kind": "record_field_projection",
+          "text": "以字段投影形式「assignment.entryId」关联路径「assignment.entryId」；只描述捕获来源，不证明当时的字段值。"
+        },
+        {
+          "file": "runtime/worker/managed-worker.ts",
+          "actual_owner": "main.processInbox",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/86/statements/4",
+          "operation_pointer": "/operations/4311",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「workerId ← workerId；assignmentId ← assignmentId；attempt ← attemptNum；phase ← \"starting\"；activePhase ← null；activeJobId ← null；status ← \"running\"；executionBoundary ← executionBoundary；sourcePath ← assignment.sourcePath；pid ← process.pid；workerIncarnation ← workerIncarnationToken；processIdentity ← {\\n          pid: workerProcessIdentity.pid,\\n          startTimeTicks: workerProcessIdentity.birthId,\\n          birthIdPrecision: workerProcessIdentity.birthI…［展示截断；完整操作保留］」；其余字段见完整操作。不据构造形式推断物理持久化。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "CPB-01",
+        "CPB-03",
+        "cpb-report-readiness-abrupt-guard"
+      ],
+      "additional_saved_model_artifacts": [],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "cpb-engine-audit",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:4cce2be6577c5887af7c",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 7624,
+            "end_byte": 8044,
+            "start_line": 60,
+            "end_line": 60,
+            "span_hash": "a0066a100f56c8768df6502872e7b75688d6ac5bc9a1ed94761d6d940eec2db3"
+          },
+          "original_statement": "`runJobWithServices`（`engine-runner.ts:130`）调用 `buildServices`，再在第 157 行调用 `runJob`。端口有 broker 与本地存储两类分支：`createJob`、`appendEvent`、phase/job 终态写入、pool、artifact index、provider services 均由这里组装。`runJob(ctxInput: unknown)` 仍允许不同调用者提供上下文，故不能把引擎中的每个 `ctx.method()` 全局绑定到唯一实现。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:2a325ca64befe031b5f1",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 8045,
+            "end_byte": 8401,
+            "start_line": 62,
+            "end_line": 62,
+            "span_hash": "23d2a01b53be2dc6532551fc241985386c66542f406c5ba6a510f272aa15c211"
+          },
+          "original_statement": "`runJob → runJobInner`（`run-job.ts:75`）内的顺序清楚：创建/阻塞检查 `:121` → task/risk 准备 `:146` →高保障规划 `:152` →冻结 checklist 与构建 DAG `:159` →执行 DAG `:177`。前置步骤可返回 blocked/failed；高保障规划在范围冻结之前。仅保留无条件结构路径不足以表达这些保护分支。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:7c5122b2ba1faad5bf92",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 8402,
+            "end_byte": 8678,
+            "start_line": 64,
+            "end_line": 64,
+            "span_hash": "d7a682b51579ef6ed0a522c4207f3ae83581ac23dada3604f288338cf43d9020"
+          },
+          "original_statement": "外层 crash barrier 将未处理异常交给 `handleRunJobPanic`。`finalizeAuditTrail` 在正常和 panic 路径均尝试执行，但失败被捕获。这是 job 尾部的 best-effort 收尾，不能和 Hub 访问审计必须成功后响应的另一份合同混为一谈。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "正文给出broker/local字段构造、ctx实际接口实参、create/规划/冻结/DAG及blocked返回；正常和panic audit调用由旧best-effort及access-audit不同模型保持对象分离。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "server/services/engine-runner.ts",
+          "actual_owner": "buildServices",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/210/statements/4",
+          "operation_pointer": "/operations/10566",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「broker」的初始化来源为「workerBrokerClient instanceof WorkerBrokerClient ? workerBrokerClient : null」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "server/services/engine-runner.ts",
+          "actual_owner": "buildServices",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/210/statements/6",
+          "operation_pointer": "/operations/10578",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「ports」的初始化来源为「{\\n    createJob: buildCreateJobPort(broker, runtimeDataRoot),\\n    startPhase: broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase),\\n    completePhase: broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase),\\n    completeJob: broker\\n      ? broker.completeJob.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string,…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "server/services/engine-runner.ts",
+          "actual_owner": "buildServices",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/210/statements/7",
+          "operation_pointer": "/operations/10580",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「createJob ← buildCreateJobPort(broker, runtimeDataRoot)；startPhase ← broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase)；completePhase ← broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase)；completeJob ← broker\\n      ? broker.completeJob.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, opts: LooseRecord = {}) => comp…［展示截断；完整操作保留］；failJob ← broker ? broker.failJob.bind(broker) : withJobOptions(failJob)；blockJob ← broker ? broker.blockJob.bind(broker) : withJobOptions(blockJob)；appendEvent ← broker\\n      ? broker.appendEvent.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, event: EventRecord, opts: Loose…［展示截断；完整操作保留］；prepareTask ← prepareTaskForEnv(runtimeEnv)；getPool ← () => getManagedAcpPool({ cpbRoot, hubRoot, env: runtimeEnv })；getArtifactIndex ← broker\\n      ? broker.getArtifactIndex.bind(broker)\\n      : (root: string, project: string, jobId: string, opts: LooseRecord = {}) =>\\n        buildArtifactIn…［展示截断；完整操作保留］；providerServices ← {\\n      assertProviderAvailable,\\n      getProviderAdapter,\\n      delegateMarkProviderUnavailable,\\n      delegateEnqueueProviderUsage,\\n      readAgentRoutin…［展示截断；完整操作保留］」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/3",
+          "operation_pointer": "/operations/1754",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「created」的初始化来源为「await createJobAndHandleBlocked(ctx)」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/4",
+          "operation_pointer": "/operations/1756",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「ctx」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-prepare#createJobAndHandleBlocked」，对应捕获形参「ctx: RunJobPrepareContext」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/18",
+          "operation_pointer": "/operations/1791",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「ctx」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-assurance#runHighAssurancePlanning」，对应捕获形参「ctx: AssuranceContext」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/20",
+          "operation_pointer": "/operations/1803",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「ctx」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-checklist-dag#freezeChecklistAndMaterializeDag」，对应捕获形参「ctx: RunJobChecklistDagContext」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/23",
+          "operation_pointer": "/operations/1830",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「ctx」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-execute-dag#executeWorkflowDag」，对应捕获形参「ctx: ExecuteWorkflowDagContext」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJob",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/30/statements/12",
+          "operation_pointer": "/operations/1733",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「{\\n        cpbRoot: ctx.cpbRoot,\\n        project: ctx.project || \"unknown\",\\n        jobId: result?.jobId || ctx._jobId,\\n        attemptId: ctx._attemptId || result?.jobId || ctx._jobId,\\n        appendEvent: ctx.appendEvent,\\n        result,\\n        sourceContext: ctx.sourceContext ?? undefined,\\n      }」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-lifecycle#finalizeAuditTrail」，对应捕获形参「{\\n  cpbRoot,\\n  project,\\n  jobId,\\n  attemptId,\\n  appendEvent,\\n  result,\\n  sourceContext,\\n  now = ts,\\n}: FinalizeAuditTrailInput」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJob",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/30/statements/18",
+          "operation_pointer": "/operations/1740",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「result」的初始化来源为「await handleRunJobPanic(ctx, panic)」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJob",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/30/statements/19",
+          "operation_pointer": "/operations/1741",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「panic」作为第 2 个实参交给已绑定接口「ts:core/engine/run-job-lifecycle#handleRunJobPanic」，对应捕获形参「panic: unknown」。该普通调用关系不替代进程或网络协议关系。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "CPB-01",
+        "cpb-report-engine-stage-chain",
+        "cpb-report-job-audit-best-effort",
+        "cpb-report-access-audit-response"
+      ],
+      "additional_saved_model_artifacts": [],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "cpb-probe-gates",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:ea8f1cd042bae9e0082e",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 8715,
+            "end_byte": 9131,
+            "start_line": 68,
+            "end_line": 68,
+            "span_hash": "edc4aeb1846245327d055e26f1a90f47bccffb7a13b33c6ee39501a5c4d91bf7"
+          },
+          "original_statement": "`runAgent` 先检查允许的 agent，再通过注入的 pool 执行，检查只读阶段的变更违规并分类失败（`agent-runner.ts:475–589`）。`pool.execute` 的唯一实现不是仅凭方法名可以得出的结论。子进程环境过滤、required/strict 沙箱失败分支确实存在；配置为 native/off/custom 与平台能力改变边界，源码有检查不等于实际隔离效果已验收。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:5c04092c60202213fee5",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 9132,
+            "end_byte": 9481,
+            "start_line": 70,
+            "end_line": 70,
+            "span_hash": "b8166ccaf14bf3419d44a3490759fe6f5f94e381dbc16596bba94b3568467bd8"
+          },
+          "original_statement": "`probe-runner.ts:147–160` 只从 `HEAD:.cpb/verification-probes.json` 读取可信 probe；`:435–438` 按 predicateId 选择结构化 executable/args；`:527–534` 使用 `execFile` 且 `shell: false`。模型的 `expectedEvidence` 文本不被用作命令。这里描述的是目标系统的源码行为，本审查没有调用任何 probe。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:2bb437011f809db6d8ab",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 9482,
+            "end_byte": 9949,
+            "start_line": 72,
+            "end_line": 72,
+            "span_hash": "7df3a1cadb8d9d70d5102137d02f5ca77eadd1e8dac0e9252af346badd99c59a"
+          },
+          "original_statement": "`static` probe 统计允许范围内的文件变化（`:613–637`），能证明“声明范围有改动”，不能证明需求语义。command/test 没有可信策略时保留失败证据；event/manual/absence 等方法在 `:707–726` 明确保留未实现 probe 的失败记录。不能把这解释成静默放行，也不能宣传这类自动验证已齐备。证据计划能接收额外 hardGate observation，是未支持自动采集方法的反证边界。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:3dc4d7f828972e4bf88d",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 9950,
+            "end_byte": 10237,
+            "start_line": 74,
+            "end_line": 74,
+            "span_hash": "a8137c084531267cc048bd58ae216509f4751e751ed759ef5888d06935dc9e44"
+          },
+          "original_statement": "`completion-gate.ts` 先检查 checklist，再按 mutating 工作流检查 verify/adversarial verdict 等门；readonly/docs/parent 等分支有豁免语义。能核对门的存在和支配分支，不能单凭“调用了 completion gate”证明每个外部执行结果真实可靠。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "allowlist/pool/readonly、可信命令/execFile参数、scope count初始化/更新/返回和completion guards均有真实正文；trusted lineage/unsupported retention/hardGate有限反证由既有实际pattern保存，不把范围计量当业务语义或沙箱实效。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "core/agents/agent-runner.ts",
+          "actual_owner": "runAgent",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/14/statements/5",
+          "operation_pointer": "/operations/654",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「executionEnv.CPB_ALLOWED_AGENTS_JSON」作为第 1 个实参交给已绑定接口「ts:core/agents/agent-runner#allowedAgentsFromEnv」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/agents/agent-runner.ts",
+          "actual_owner": "runAgent",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/14/statements/6",
+          "operation_pointer": "/operations/655",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「allowedAgents.includes」中提供第 1 个实参「agentName」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "core/agents/agent-runner.ts",
+          "actual_owner": "runAgent",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/14/statements/13",
+          "operation_pointer": "/operations/675",
+          "operation_kind": "guard_rejection",
+          "text": "条件「(!execPool)」的捕获提前退出分支为「throw：new TypeError(\"agent pool does not expose execute()\")」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "runDeclaredCommandOnce",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/65/statements/0",
+          "operation_pointer": "/operations/3367",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「result」的初始化来源为「await execFileAsync(command.executable, command.args, {\\n      cwd,\\n      env: commandProbeEnv(cwd, env),\\n      shell: false,\\n      timeout: COMMAND_PROBE_TIMEOUT_MS,\\n      maxBuffer: 8 * 1024 * 1024,\\n    })」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "runDeclaredCommandOnce",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/65/statements/1",
+          "operation_pointer": "/operations/3369",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「execFileAsync」中提供第 1 个实参「command.executable」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "runDeclaredCommandOnce",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/65/statements/2",
+          "operation_pointer": "/operations/3371",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「cwd ← cwd；env ← commandProbeEnv(cwd, env)；shell ← false；timeout ← COMMAND_PROBE_TIMEOUT_MS；maxBuffer ← 8 * 1024 * 1024」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "scopeMatches",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/53/statements/3",
+          "operation_pointer": "/operations/3223",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「count」的初始化来源为「0」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "scopeMatches",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/53/statements/5",
+          "operation_pointer": "/operations/3225",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「changed.some」中提供第 1 个实参「(changedFile) => scopePathMatches(changedFile, text(f))」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "scopeMatches",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/53/statements/6",
+          "operation_pointer": "/operations/3229",
+          "operation_kind": "binding_update",
+          "text": "对捕获 binding「count」存在源更新「count += 1」；循环和分支条件见操作上下文，未推执行次数或最终数值。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "scopeMatches",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/53/statements/8",
+          "operation_pointer": "/operations/3231",
+          "operation_kind": "return_transfer",
+          "text": "以「return count;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/5",
+          "operation_pointer": "/operations/998",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「job」作为第 1 个实参交给已绑定接口「ts:core/engine/completion-gate#isMutatingJob」，对应捕获形参「job: CompletionGateJob | null | undefined」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/7",
+          "operation_pointer": "/operations/1000",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「checklistResult」的初始化来源为「evaluateChecklistCompletion({\\n      checklist,\\n      verdict: checklistVerdict,\\n      evidenceLedger,\\n      executionMap,\\n      runtimeFailures,\\n      attemptId,\\n      multiAttempt,\\n    })」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/8",
+          "operation_pointer": "/operations/1001",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「{\\n      checklist,\\n      verdict: checklistVerdict,\\n      evidenceLedger,\\n      executionMap,\\n      runtimeFailures,\\n      attemptId,\\n      multiAttempt,\\n    }」作为第 1 个实参交给已绑定接口「ts:core/workflow/checklist-match#evaluateChecklistCompletion」，对应捕获形参「{ checklist, verdict, evidenceLedger, executionMap, runtimeFailures, attemptId, multiAttempt }: {\\n  checklist: unknown;\\n  verdict: unknown;\\n  evidenceLedger?: LooseRecord | null;\\n  executionMap?: LooseRecord | null;\\n  runtimeFailures?: unknown;\\n  attemptId?: unknown;\\n  multiAttempt?: boolean;\\n}」。该普通调用关系不替代进程或网络协议关系。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "cpb-report-agent-execution-policy",
+        "cpb-report-trusted-probe-command-source",
+        "cpb-trusted-command-lineage",
+        "cpb-report-unsupported-probe-evidence",
+        "cpb-unsupported-record-retention",
+        "cpb-report-completion-gate-conditions"
+      ],
+      "additional_saved_model_artifacts": [],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "cpb-events-delivery",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:18b7d28e2299409a4c35",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 10271,
+            "end_byte": 10590,
+            "start_line": 78,
+            "end_line": 78,
+            "span_hash": "425a3322ed82b782d658217906b1636bd889e648d9ae5ea9f74d13a82c22f10f"
+          },
+          "original_statement": "事件流是 job 状态的重要来源，`event-store.ts:1188–1197` 在事件锁内重建状态并对终态业务变更封口。索引是投影，事件持久化和后续索引更新失败不是同一个提交边界；重建/doctor/调和路径存在，不能因暂时分歧直接宣称事件丢失或永久损坏。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:b5fe1396107f5d90c827",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 10591,
+            "end_byte": 10975,
+            "start_line": 80,
+            "end_line": 80,
+            "span_hash": "f21dc00866032b1380a26b7d5c8f85f454e85a8088017c6b3f66888b2af94975"
+          },
+          "original_statement": "review/remediation 的 FIXED 分支会记录 `job_superseded` 并创建新的 lineage task（`review-dispatch.ts:4468–4470`），这解释了为何原 job 的终态分类必须统一。finalizer 又有独立 journal 和恢复路径；外部 GitHub 写入与本地 dry-run 的区别应保留为配置/授权条件，不能按“有 GitHub API 调用”自动判断发生了发布。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "codepatchbay:statement:1c16d95bdbc8cd9e4d0e",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 10976,
+            "end_byte": 11430,
+            "start_line": 82,
+            "end_line": 82,
+            "span_hash": "99f3efaf1419988686313cf968324d0c3cdfc8e2aeebae9dca8f944e978f0a56"
+          },
+          "original_statement": "核心 job 的 `completed` 还不是 assignment 或远端发布的最终成功。`runtime/worker/assignment-finalizer.ts:1236–1242` 按 `autoFinalize` 决定是否要求收尾成功，失败会转换持久结果；managed-worker 还有工作区清理和终态写入/读回，reconciler 才继续校验 attempt、finalizer 与 journal 并收敛队列。应把执行、交付与投影分别建模，不能只沿 `completeJob` 调用把整条链标绿。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "旧record投影模型及正文保留event/index/rebuild/doctor和finalizer/reconciler分离；新增state-lineage开发statement保留FIXED/job_superseded/同源queue字段与模式/opt-in/早退，不承诺必然入队或远端成功。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "server/services/event/event-store.ts",
+          "actual_owner": "appendEvent",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/223/statements/16",
+          "operation_pointer": "/operations/11023",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「written」的初始化来源为「await withEventLock(file, async () => {\\n    // Terminal seal: reject business-state mutations on terminal job event logs.\\n    const existing = await readEvents(cpbRoot, project, jobId, opts);\\n    if (existing.length > 0) {\\n      const state = materializeJob(existing);\\n      const eventType = text(tracedEvent.type);\\n      if (TERMINAL_STATUSES.has(state…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "server/services/job/job-store.ts",
+          "actual_owner": "rebuildJobsIndex",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/271/statements/0",
+          "operation_pointer": "/operations/12898",
+          "operation_kind": "return_transfer",
+          "text": "以「return enqueueWrite(cpbRoot, opts, () => rebuildJobsIndexLocked(cpbRoot, opts));」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "server/services/job/job-store.ts",
+          "actual_owner": "rebuildJobsIndex",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/271/statements/1",
+          "operation_pointer": "/operations/12899",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「() => rebuildJobsIndexLocked(cpbRoot, opts)」作为第 3 个实参交给已绑定接口「ts:server/services/job/job-store#enqueueWrite」，对应捕获形参「fn: () => Promise<T>」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "cli/commands/doctor.ts",
+          "actual_owner": "checkRuntimeHealth",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/1/statements/1",
+          "operation_pointer": "/operations/3",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「health」的初始化来源为「await collectRuntimeHealth({ cpbRoot, executorRoot })」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "cli/commands/doctor.ts",
+          "actual_owner": "checkRuntimeHealth",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/1/statements/3",
+          "operation_pointer": "/operations/5",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「collectRuntimeHealth」中提供第 1 个实参「{ cpbRoot, executorRoot }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "runtime/worker/assignment-finalizer.ts",
+          "actual_owner": "finalizeAndWriteSuccessfulResult",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/76/statements/0",
+          "operation_pointer": "/operations/3698",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「{\\n    cpbRoot,\\n    hubRoot,\\n    dataRoot,\\n    assignment,\\n    attemptNum,\\n    jobId,\\n    result,\\n    worktreeInfo,\\n    log,\\n    resolveTransport,\\n    resolveDataRoot,\\n    finalizeQueueEntry,\\n    assertMutationLease,\\n    mutationFence,\\n    validateMutationReceipt,\\n  }」作为第 1 个实参交给已绑定接口「ts:runtime/worker/assignment-finalizer#maybeFinalizeSuccessfulAssignment」，对应捕获形参「{\\n  cpbRoot,\\n  hubRoot,\\n  dataRoot,\\n  assignment,\\n  attemptNum,\\n  jobId,\\n  result,\\n  worktreeInfo,\\n  log = null,\\n  resolveTransport = resolveGithubTransport,\\n  resolveDataRoot = resolveProjectDataRoot,\\n  finalizeQueueEntry = finalizeSuccessfulQueueEntry,\\n  assertMutationLease = null,\\n  mutationFence = null,\\n  validateMutationReceipt = validate…［展示截断；完整操作保留］」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "runtime/worker/assignment-finalizer.ts",
+          "actual_owner": "finalizeAndWriteSuccessfulResult",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/76/statements/1",
+          "operation_pointer": "/operations/3699",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「cpbRoot ← cpbRoot；hubRoot ← hubRoot；dataRoot ← dataRoot；assignment ← assignment；attemptNum ← attemptNum；jobId ← jobId；result ← result；worktreeInfo ← worktreeInfo；log ← log；resolveTransport ← resolveTransport；resolveDataRoot ← resolveDataRoot；finalizeQueueEntry ← finalizeQueueEntry」；其余字段见完整操作。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "runtime/worker/assignment-finalizer.ts",
+          "actual_owner": "finalizeAndWriteSuccessfulResult",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/76/statements/4",
+          "operation_pointer": "/operations/3717",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「finalizeResult」作为第 1 个实参交给已绑定接口「ts:core/contracts/types#isRecord」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "CPB-02",
+        "cpb-event-index-projection",
+        "cpb-report-conditional-delivery-result",
+        "cpb-review-fixed-state-lineage",
+        "cpb-finalizer-conditional-publication"
+      ],
+      "additional_saved_model_artifacts": [
+        "STATE_LINEAGE_FINAL_HANDOFF.json"
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "wwc-browser-protocol",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:f9005cb0764dcebfff8f",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 6338,
+            "end_byte": 6750,
+            "start_line": 48,
+            "end_line": 48,
+            "span_hash": "cf00fb62e95db6377a45a3c7268e14de06408bcde81426a89542640b0c80ee83"
+          },
+          "original_statement": "`boot.ts:23` 调用 `mountWinWinCodeClient({root, serverUrl})`，没有注入 fake task seed。`application.ts` 根据 runtime/auth/scope 创建真实端口，使用 lazy import 挂页面并以 render generation/abort 等条件防止旧页面结果回写。`diagnosticScope` 在第 359 行明确调用 `resolveScopeContext`，后者继续调用 `scopeSelectionFromHash`；该跨包关系可以由源码确定。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:37125ef460eaf95cae0d",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 6751,
+            "end_byte": 7134,
+            "start_line": 50,
+            "end_line": 50,
+            "span_hash": "48a62a7dfe834225b6247c0706783d92d684af9a118ccaa12cf3a671b6451f64"
+          },
+          "original_statement": "v0.3 因 `application.ts:966` 的 inline import 类型语法缺口而失去整个组合文件的确定节点。这是严重的工具覆盖问题，不能解释为项目缺少入口。类似语法还在 client/probe 相关文件中出现；部分文件含字符串中的真实 U+0000，修复解析必须保留原始源码和位置映射，不能抹掉 ERROR 后声称语义完整。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:57e56bb490b74c450ac1",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 7135,
+            "end_byte": 7449,
+            "start_line": 52,
+            "end_line": 52,
+            "span_hash": "16d892090674937a7325fd4df3893d89ac4278c1288d1f96e15c3033a3bf7f3d"
+          },
+          "original_statement": "Client 的请求经过 typed facade 和生成合同进入 Rust dispatcher，再交给 Control Plane 应用服务。HTTP/WS 的消息名称、requestId、scope、expectedRevision 才是跨语言连接证据。只凭 `client.command` 和某个同名 Rust 方法，不足以确定所有调用目标或授权顺序。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "浏览器scope/continuation正文与旧lifecycle模型保留generation/abort条件。boot无fake虽无通用boot正文，旧WWC-01 navigation_source.port_wiring有实际boot分支事实。D3既有真实生成JSON/Serde/route/typed模型现有窄seam开发正文；原语法/hash映射由冻结观察保存。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "apps/client/src/application.ts",
+          "actual_owner": "mountWinWinCodeClient.diagnosticScope",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/13/statements/4",
+          "operation_pointer": "/operations/295",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「resolution」的初始化来源为「resolveScopeContext(\\n      session.authorizedScopes,\\n      browser.location.hash,\\n      'repository',\\n    )」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "apps/client/src/application.ts",
+          "actual_owner": "mountWinWinCodeClient.diagnosticScope",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/13/statements/6",
+          "operation_pointer": "/operations/297",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「'repository'」作为第 3 个实参交给已绑定接口「ts:packages/browser-core/src/scope-context#resolveScopeContext」，对应捕获形参「requirement: 'scope' | 'repository'」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "apps/client/src/application.ts",
+          "actual_owner": "mountWinWinCodeClient.performRender",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/103/statements/0",
+          "operation_pointer": "/operations/2156",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「generation」的初始化来源为「renderGeneration」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "apps/client/src/application.ts",
+          "actual_owner": "mountWinWinCodeClient.performRender",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/103/statements/11",
+          "operation_pointer": "/operations/2286",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「generation」作为第 1 个实参交给已绑定接口「ts:apps/client/src/application#mountWinWinCodeClient.ensureAttentionMonitor」，对应捕获形参「generation: number」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/476/statements/0",
+          "operation_pointer": "/operations/9240",
+          "operation_kind": "return_transfer",
+          "text": "以「return execute(command, requestOptions, fetchImplementation => (\\n        httpClient(fetchImplementation).submitCommand(command)\\n      ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/476/statements/1",
+          "operation_pointer": "/operations/9241",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「requestOptions」作为第 2 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.execute」，对应捕获形参「requestOptions: ControlPlaneRequestOptions | undefined」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.query",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/478/statements/0",
+          "operation_pointer": "/operations/9246",
+          "operation_kind": "return_transfer",
+          "text": "以「return execute(query, requestOptions, fetchImplementation => (\\n        httpClient(fetchImplementation).submitQuery(query)\\n      ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.subscribe",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/0",
+          "operation_pointer": "/operations/9252",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「requireOpen」调用已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.requireOpen」；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.subscribe",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/1",
+          "operation_pointer": "/operations/9253",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「subscriptionOptions.signal」作为第 1 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#signalIsAborted」，对应捕获形参「signal: AbortSignal | undefined」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/0",
+          "operation_pointer": "/operations/7661",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「envelope」的初始化来源为「decode(request.clone())?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/1",
+          "operation_pointer": "/operations/7662",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「request.clone()」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#decode」，对应捕获形参「value: Value」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/3",
+          "operation_pointer": "/operations/7664",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&envelope.actor」作为第 2 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#validate_actor」，对应捕获形参「actor: &Actor」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/4",
+          "operation_pointer": "/operations/7665",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「principal」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#validate_actor」，对应捕获形参「principal: &AuthenticatedPrincipal」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/9",
+          "operation_pointer": "/operations/7670",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「typed」的初始化来源为「decode(request)?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "WWC-01",
+        "WWC-02",
+        "wwc-browser-continuation-lifecycle"
+      ],
+      "additional_saved_model_artifacts": [
+        "WWC_PROTOCOL_EXISTING_EVIDENCE_READBACK.json",
+        "WWC_PROTOCOL_COMPUTED_SEAM_SOURCE_READBACK.json"
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "wwc-chat-workrun",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:29344ef3d4b3395727ec",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 6018,
+            "end_byte": 6269,
+            "start_line": 42,
+            "end_line": 42,
+            "span_hash": "0f3ee12932662d86675326cbb9df4822f621dd6b1e53db3b3c65c3c9887a9837"
+          },
+          "original_statement": "产品的 ProductSession、WorkerSession、CodexThread、WorkRun 身份分离有实际意义：重试或换 worker 不能靠一个 session_id 代表全部历史。静态分析应保留这些字段的连接来源，避免只按同名方法拼路径。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:b626befbf9a5693bf5f5",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 7484,
+            "end_byte": 7826,
+            "start_line": 56,
+            "end_line": 56,
+            "span_hash": "7b1cce7fe486a514846071fbb75b01cf5a473d8fd1131cfdbc827d89c10513f0"
+          },
+          "original_statement": "`chat-delivery-creator.ts` 有实际 `DeliveryCreate` 请求（第 235 行）、规范 spec（第 239–254 行）、后续 WorkItem/WorkRun 请求（约第 299–309 行），并保留请求身份用于重试。该路径是看板新任务缺口的重要反证：不能把一个入口的问题推广成“系统完全不能创建任务”。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:cf4441708b354e3f7934",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 7827,
+            "end_byte": 8180,
+            "start_line": 58,
+            "end_line": 58,
+            "span_hash": "49d62c94caff033e1448d91c1e505c5714f6b41123c5d53f3b1bc29171730db7"
+          },
+          "original_statement": "Control Plane 的 specification authority 根据命令区分 create/update，验证 scope、repository、Device baseline 和 verification command（`delivery_production_adapters.rs:583–654`）。随后领域 aggregate 负责推进约束。这里存在条件必填字段：TypeScript 类型上 optional 不代表所有运行上下文中都可省略。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:8ca667ca22fd1372b205",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 8181,
+            "end_byte": 8585,
+            "start_line": 60,
+            "end_line": 60,
+            "span_hash": "a1118be69955a00fecfecd4d3be3320002d52216818dd1690373aac7725ac1b0"
+          },
+          "original_statement": "`WorkRunAggregate.start_next`（`workrun.rs:391`）先 `self.validate()`，从已持久 runs/items 求候选，再调 `self.start_item`（`:411`）。`start_item`（`:418`）再次验证并排除依赖未满足、Leased/Running/CandidateReady 的活动尝试。这些都是具体自身类型上的固有方法，适合新增有限 Rust 方法解析，不能与任意 trait 对象的分派混在一起。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "独立Chat请求和保留身份、条件authority以及WorkRun候选/依赖/活动排除/重查已有有限pattern与实际正文，身份record分列。没有要求所有create/update/所有角色均成功。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "apps/client/src/chat-delivery-creator.ts",
+          "actual_owner": "createChatDeliveryCreator.create",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/124/statements/2",
+          "operation_pointer": "/operations/2627",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「'STRONGFLOW_CREATE_VIEW_MODEL_CLOSED'」作为第 1 个实参交给已绑定接口「ts:apps/client/src/chat-delivery-creator#clientFailure」，对应捕获形参「code: string」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "apps/client/src/chat-delivery-creator.ts",
+          "actual_owner": "createChatDeliveryCreator.create",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/124/statements/8",
+          "operation_pointer": "/operations/2662",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「'STRONGFLOW_CREATE_TITLE_REQUIRED'」作为第 1 个实参交给已绑定接口「ts:apps/client/src/chat-delivery-creator#createChatDeliveryCreator.invalid」，对应捕获形参「code: string」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "apps/client/src/chat-delivery-creator.ts",
+          "actual_owner": "createChatDeliveryCreator.create",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/124/statements/9",
+          "operation_pointer": "/operations/2689",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「JSON.stringify」中提供第 1 个实参「{\\n      title,\\n      goal,\\n      baseRevision,\\n      deliveryScope,\\n      outOfScope,\\n      constraints,\\n      sourceProductSessionId: input.sourceProductSessionId,\\n      acceptanceCriteria,\\n      verificationCommand: input.verificationCommand?.trim() ?? '',\\n    }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "actual_owner": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/342/statements/0",
+          "operation_pointer": "/operations/6966",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&request」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-control-plane/src/delivery_production_adapters#LocalDeliveryAuthority.require_scope」，对应捕获形参「request: &DeliveryAuthorityRequest<'_>」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "actual_owner": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/342/statements/9",
+          "operation_pointer": "/operations/6986",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「spec.source_product_session_id.as_ref()」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-control-plane/src/delivery_production_adapters#LocalDeliveryAuthority.device_target」，对应捕获形参「source: Option<&ProductSessionId>」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "actual_owner": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/342/statements/11",
+          "operation_pointer": "/operations/6993",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「spec\\n                .verification_command\\n                .filter(|command| !command.trim().is_empty())\\n                .ok_or_else」中提供第 1 个实参「|| {\\n                    DeliveryAuthorityError::new(\\n                        \"Device delivery requires a confirmed verification command\",\\n                    )\\n                }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "actual_owner": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/342/statements/12",
+          "operation_pointer": "/operations/6994",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「spec\\n                .verification_command\\n                .filter」中提供第 1 个实参「|command| !command.trim().is_empty()」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/0",
+          "operation_pointer": "/operations/7246",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「self.validate」调用已绑定接口「rust:crates/winwincode-delivery/src/application/workrun#WorkRunAggregate.validate」；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/1",
+          "operation_pointer": "/operations/7247",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「item」的初始化来源为「self\\n            .items\\n            .iter()\\n            .find(|item| {\\n                &item.id == id\\n                    && work_item_is_runnable(item, &self.items)\\n                    && !self.runs.iter().any(|run| {\\n                        &run.work_item_id == id\\n                            && matches!(\\n                                run.state,\\…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/3",
+          "operation_pointer": "/operations/7249",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「self\\n            .items\\n            .iter()\\n            .find」中提供第 1 个实参「|item| {\\n                &item.id == id\\n                    && work_item_is_runnable(item, &self.items)\\n                    && !self.runs.iter().any(|run| {\\n                        &run.work_item_id == id\\n                            && matches!(\\n                                run.state,\\n                                WorkRunState::Leased\\n          …［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/0",
+          "operation_pointer": "/operations/6561",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/1",
+          "operation_pointer": "/operations/6562",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/0",
+          "operation_pointer": "/operations/6616",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「job_id ← dispatch.job.job_id.clone()；attempt ← dispatch.job.attempt；fencing_token ← dispatch.lease.fencing_token.clone()；payload_digest ← dispatch.job.payload_digest.clone()」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/4",
+          "operation_pointer": "/operations/6620",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「dispatch.lease.fencing_token.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "WWC-02",
+        "wwc-report-chat-delivery-workrun-requests",
+        "wwc-report-chat-retained-request-identities",
+        "wwc-report-workrun-finite-selection"
+      ],
+      "additional_saved_model_artifacts": [],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "wwc-worker",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:be4be903a70e21d199d6",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 8617,
+            "end_byte": 8894,
+            "start_line": 64,
+            "end_line": 64,
+            "span_hash": "6a4405cfb716216570950fb5ae1ab987a6f5fc0a3c39b5f818b816bd881d2d60"
+          },
+          "original_statement": "`worker/main.rs` 的 remote 与 managed-session 两入口最终进入同一个 `run_worker`；构造 RemoteWorkerPort、ProductionCodexAdapter、workspace runtime 和 WorkerMain。managed-session 的配置、租约身份和短期凭据来源，与 Server 产品状态分开。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:6f332d03daab1adcfc0c",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 8895,
+            "end_byte": 9322,
+            "start_line": 66,
+            "end_line": 66,
+            "span_hash": "7232fc4ecc6843bb222c4e1d37cba82703b8c488437824a89b8f1e4f4f11043f"
+          },
+          "original_statement": "`WorkerMain.accept_control` 在 `worker/lib.rs:743–766` 按 typed message 分派；JobDispatch 会先处理 durable replay 再交给 `accept_dispatch`。dispatch 检查 job/workspace/profile 和容量，然后 `start_dispatch` 准备 checkout，再调用注入的 `CodexCoreAdapter.ensure_thread`（`:2744–2754`）。失败分支会拒绝并收尾；结构路径存在不能证明所有资源均在所有故障点回收。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:514dd127b245d5331e16",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 9323,
+            "end_byte": 9578,
+            "start_line": 68,
+            "end_line": 68,
+            "span_hash": "baba6a084eef3e4c2487979daceef12b8ac0d4ecff267758ef92f7de1fb4613f"
+          },
+          "original_statement": "`Codex` 是泛型端口。即使生产 main 组装了 ProductionCodexAdapter，也不能把类定义中 `self.codex.ensure_thread` 全局写成唯一的确定实现边；应保留组合上下文、候选及剩余未知，尤其不能混入测试实现。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "两入口/credential path/run_worker及typed dispatch真实正文与旧construction/message模型相互对应；保留generic候选，未把生产装配改成全局唯一边或所有故障收尾保证。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_managed",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/413/statements/3",
+          "operation_pointer": "/operations/8330",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「credential」的初始化来源为「WorkerSessionCredential::load(&config.worker_credential_path)?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_managed",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/413/statements/5",
+          "operation_pointer": "/operations/8332",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「WorkerSessionCredential::load」中提供第 1 个实参「&config.worker_credential_path」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_worker",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/414/statements/6",
+          "operation_pointer": "/operations/8368",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&server_origin」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/remote_transport#RemoteWorkerPort.open」，对应捕获形参「origin: &str」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_worker",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/414/statements/10",
+          "operation_pointer": "/operations/8383",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「capabilities.clone()」作为第 4 个实参交给已绑定接口「rust:crates/winwincode-worker/src/main#production_codex」，对应捕获形参「capabilities: WorkerCapabilitySet」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_worker",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/414/statements/17",
+          "operation_pointer": "/operations/8412",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「WorkerMain::new」中提供第 1 个实参「config」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_control",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/398/statements/5",
+          "operation_pointer": "/operations/8039",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「true」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#WorkerMain.flush_durable_execution_deliveries_with_core_replay」，对应捕获形参「replay_core_interactions: bool」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_control",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/398/statements/6",
+          "operation_pointer": "/operations/8041",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#WorkerMain.accept_dispatch」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/405/statements/10",
+          "operation_pointer": "/operations/8134",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/contract#CodexRunKey.from_dispatch」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/405/statements/19",
+          "operation_pointer": "/operations/8174",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「usize::try_from」中提供第 1 个实参「self.config.capabilities.max_concurrent_jobs」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/405/statements/20",
+          "operation_pointer": "/operations/8175",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「usize::try_from(self.config.capabilities.max_concurrent_jobs).unwrap_or」中提供第 1 个实参「0」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/0",
+          "operation_pointer": "/operations/6561",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/1",
+          "operation_pointer": "/operations/6562",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/0",
+          "operation_pointer": "/operations/6616",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「job_id ← dispatch.job.job_id.clone()；attempt ← dispatch.job.attempt；fencing_token ← dispatch.lease.fencing_token.clone()；payload_digest ← dispatch.job.payload_digest.clone()」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/4",
+          "operation_pointer": "/operations/6620",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「dispatch.lease.fencing_token.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "wwc-report-worker-bootstrap-entries",
+        "wwc-report-worker-production-construction",
+        "wwc-report-worker-typed-dispatch",
+        "wwc-report-worker-adapter-record-identities"
+      ],
+      "additional_saved_model_artifacts": [],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "wwc-kernel",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:6f3fb108ae23264fecfa",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 9626,
+            "end_byte": 9884,
+            "start_line": 72,
+            "end_line": 72,
+            "span_hash": "7eea73e653d28afad1401580c6156ff6e0f96eaa5f7189a17676e928bcad0e30"
+          },
+          "original_statement": "`ProductionCodexAdapter::open`（`adapter.rs:412`）建立私有目录、封存/校验 helper、打开 adapter store/outbox、组装 action/model bridge，并在 `:459` 调用 `Kernel::new`。这是实际生产接线，不是从 README 推断内核存在。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:d7d4500892a9e5c0951b",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 9885,
+            "end_byte": 10222,
+            "start_line": 74,
+            "end_line": 74,
+            "span_hash": "070a30c1e05c2984ef47386c659efcdb7acc34cbfaa3e144d17f272b7865a44e"
+          },
+          "original_statement": "`impl CodexCoreAdapter for ProductionCodexAdapter` 中 `submit_turn` 先比较规范 stage prompt/digest，设置 submission intent，调用 `self.persist_run`（`:3558`），然后调用 Kernel 的 `reconcile_turn_exact`（`:3574`）。这个顺序解释了恢复设计，但本轮不据源码宣称已经做过崩溃一致性演练。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:484f3388080f77aa3445",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 10223,
+            "end_byte": 10579,
+            "start_line": 76,
+            "end_line": 76,
+            "span_hash": "a7e6e2a538a33f271d78592cb8db2c3bcca2d30225fbae825469dcb45307b02d"
+          },
+          "original_statement": "Kernel 的 `create_session`（`kernel/src/lib.rs:1220`）通过 runtime manager 创建线程；`submit_turn`（`:1333`）验证输入并对 session thread 调用 start/steer；`reconcile_turn_exact`（`:1369`）检查指定 turn 的 durable history。普通 `submit_turn` 与精确 reconcile 是不同接口，不能只因名称相近合并成一条链。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "open的helper/store/outbox/Kernel调用、digest/persist/exact接口及三个独立Kernel API有实际正文和旧normal-order/source-join模型。部分SubmissionIntent写未被24句展示选中，完整源操作与旧actual message pattern保留，不将展示cap当source缺失。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "ProductionCodexAdapter.open",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/288/statements/2",
+          "operation_pointer": "/operations/6124",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「ensure_private_directory(&config.kernel_home).map_err」中提供第 1 个实参「|_| unavailable()」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "ProductionCodexAdapter.open",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/288/statements/4",
+          "operation_pointer": "/operations/6128",
+          "operation_kind": "field_write",
+          "text": "包含赋值/更新「config.helper_executable = seal_helper(\\n            &config.helper_executable,\\n            Some(config.helper_bytes.as_ref()),\\n            &config.data_directory,\\n            &config.helper_release_manifest,\\n        )?」，捕获目标为「config.helper_executable」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "ProductionCodexAdapter.open",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/288/statements/5",
+          "operation_pointer": "/operations/6133",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&config.helper_executable」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#seal_helper」，对应捕获形参「source: &Path」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "ProductionCodexAdapter.open",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/288/statements/9",
+          "operation_pointer": "/operations/6145",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「AdapterStore::open」中提供第 1 个实参「&config.data_directory」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/302/statements/5",
+          "operation_pointer": "/operations/6459",
+          "operation_kind": "guard_rejection",
+          "text": "条件「goal != expected_goal」的捕获提前退出分支为「Err_return：Err(conflict())」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/302/statements/11",
+          "operation_pointer": "/operations/6482",
+          "operation_kind": "field_write",
+          "text": "包含赋值/更新「run.record.submission_digest = Some(submission_digest)」，捕获目标为「run.record.submission_digest」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/302/statements/12",
+          "operation_pointer": "/operations/6483",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「Some」中提供第 1 个实参「submission_digest」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/302/statements/13",
+          "operation_pointer": "/operations/6497",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&run_key」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.persist_run」，对应捕获形参「run_key: &str」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/kernel/src/lib.rs",
+          "actual_owner": "Kernel.create_session",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/281/statements/0",
+          "operation_pointer": "/operations/6017",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「async {\\n            let runtime = self.runtime().await?;\\n            let config = Self::session_config(&runtime, &options).await?;\\n            let thread = runtime\\n                .manager\\n                .start_thread(StartThreadOptions::new(config.clone()))\\n                .await\\n                .map_err(|error| KernelFailure::new(\"SESSION_CREATE_FA…［展示截断；完整操作保留］」作为第 1 个实参交给已绑定接口「rust:crates/kernel/src/lib#Kernel.guard」，对应捕获形参「future: impl Future<Output = KernelResult<T>> + Send + 'a」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/kernel/src/lib.rs",
+          "actual_owner": "Kernel.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/283/statements/16",
+          "operation_pointer": "/operations/6055",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「submission」的初始化来源为「session\\n                .thread\\n                .start_or_steer_turn(user_text_request(text, &options))\\n                .await\\n                .map_err(|error| KernelFailure::new(\"TURN_SUBMIT_FAILED\", error.to_string()))?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/kernel/src/lib.rs",
+          "actual_owner": "Kernel.reconcile_turn_exact",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/285/statements/11",
+          "operation_pointer": "/operations/6090",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「session\\n                .thread\\n                .inspect_durable_turn」中提供第 1 个实参「&turn_id」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "wwc-report-production-adapter-embedded-kernel",
+        "wwc-report-adapter-durable-exact-turn",
+        "wwc-report-submission-intent-kernel-order",
+        "wwc-report-kernel-create-session-interface",
+        "wwc-report-kernel-submit-turn-interface",
+        "wwc-report-kernel-reconcile-exact-interface"
+      ],
+      "additional_saved_model_artifacts": [],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "wwc-evidence-delivery",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:3ad145bcfb741362c357",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 10619,
+            "end_byte": 10946,
+            "start_line": 80,
+            "end_line": 80,
+            "span_hash": "f4c7caeb157b38199edbcab31d0ab9131fef12b5b882c01d805e6eb0d76d5ace"
+          },
+          "original_statement": "项目将候选、冻结提交、WorkRun/lease/fencing、角色和 evidence source 纳入交付合同；WorkRun 侧有具体 revision/活动 run 检查，adapter 有 durable outbox/ack。静态审查能确认这些机制和接口存在，尚不能证明外部日志、candidate bytes、签名和 provider 结果的真实性。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:65dda395f122fcc49edd",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 10947,
+            "end_byte": 11208,
+            "start_line": 82,
+            "end_line": 82,
+            "span_hash": "d6cef8d9a2abe4fc8a0a23514c8412b703164b83c70f429bf776736a50a75c2c"
+          },
+          "original_statement": "Publication、audit、export 和 connector 是单列模块，有自己的操作键、receipt 和持久化职责。未逐一审核这些外部副作用适配器，不能从通用架构宣称 exactly-once 发布、完全防泄漏或所有连接器实现完整。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "WorkRun/lease/fencing/worker/session/outbox/ack已有有限身份/记录正文；原句冻结提交、角色、evidence source纳入交付合同尚无对应选中声明/有限fact/解释，保留该子句待来源定位。外部真实性及未审adapter仍排除。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/0",
+          "operation_pointer": "/operations/6561",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/1",
+          "operation_pointer": "/operations/6562",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/0",
+          "operation_pointer": "/operations/6616",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「job_id ← dispatch.job.job_id.clone()；attempt ← dispatch.job.attempt；fencing_token ← dispatch.lease.fencing_token.clone()；payload_digest ← dispatch.job.payload_digest.clone()」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/4",
+          "operation_pointer": "/operations/6620",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「dispatch.lease.fencing_token.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/0",
+          "operation_pointer": "/operations/7246",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「self.validate」调用已绑定接口「rust:crates/winwincode-delivery/src/application/workrun#WorkRunAggregate.validate」；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/1",
+          "operation_pointer": "/operations/7247",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「item」的初始化来源为「self\\n            .items\\n            .iter()\\n            .find(|item| {\\n                &item.id == id\\n                    && work_item_is_runnable(item, &self.items)\\n                    && !self.runs.iter().any(|run| {\\n                        &run.work_item_id == id\\n                            && matches!(\\n                                run.state,\\…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/3",
+          "operation_pointer": "/operations/7249",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「self\\n            .items\\n            .iter()\\n            .find」中提供第 1 个实参「|item| {\\n                &item.id == id\\n                    && work_item_is_runnable(item, &self.items)\\n                    && !self.runs.iter().any(|run| {\\n                        &run.work_item_id == id\\n                            && matches!(\\n                                run.state,\\n                                WorkRunState::Leased\\n          …［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/outbox.rs",
+          "actual_owner": "ExecutionOutbox.retain_in_transaction",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/317/statements/5",
+          "operation_pointer": "/operations/6639",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「transaction\\n            .query_row(\\n                \"SELECT delivery_id, frame_digest, frame_json FROM execution_outbox\\n                 WHERE delivery_id = ?1 OR (family = ?2 AND correlation_key = ?3)\\n                 ORDER BY position LIMIT 1\",\\n                params![\\n                    metadata.delivery_id,\\n                    metadata.family,\\n …［展示截断；完整操作保留］」中提供第 1 个实参「|_| AdapterStoreError::Unavailable」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/outbox.rs",
+          "actual_owner": "ExecutionOutbox.retain_in_transaction",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/317/statements/15",
+          "operation_pointer": "/operations/6663",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「transaction\\n            .execute」中提供第 1 个实参「\"INSERT INTO execution_outbox(\\n                   delivery_id, family, correlation_key, acknowledgement_required,\\n                   state, frame_digest, frame_json\\n                 ) VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7)\"」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/outbox.rs",
+          "actual_owner": "ExecutionOutbox.acknowledge_response",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/319/statements/3",
+          "operation_pointer": "/operations/6686",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「accepted_response」中提供第 1 个实参「acknowledgement」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/outbox.rs",
+          "actual_owner": "ExecutionOutbox.acknowledge_response",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/319/statements/4",
+          "operation_pointer": "/operations/6687",
+          "operation_kind": "guard_rejection",
+          "text": "条件「!accepted_response(acknowledgement)」的捕获提前退出分支为「Err_return：Err(AdapterStoreError::Conflict)」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "wwc-report-workrun-finite-selection",
+        "wwc-report-worker-adapter-record-identities",
+        "wwc-report-outbox-ack-correlation-fields"
+      ],
+      "additional_saved_model_artifacts": [],
+      "unclosed_original_clause_ids": [
+        "original-wwc-selected-delivery-evidence-contract-inventory"
+      ],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    },
+    {
+      "id": "wwc-device",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:89a9b2390ee744083511",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 11242,
+            "end_byte": 11520,
+            "start_line": 86,
+            "end_line": 86,
+            "span_hash": "039d32d8caab239a979271ba9970d2ce21a1c9862db37091b8aa507fcfd64cc2"
+          },
+          "original_statement": "当前 Server 的 DeviceModelBoundary 对模型消息返回 unsupported，不能单独判为模型能力缺失。Worker main 会组装设备 provider；`DeviceModels` 打开设备存储，device provider 解析配置/secret 后调用 adapter。此路径有独立实现来源。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        },
+        {
+          "catalog_statement_id": "winwincode:statement:4e94fc99d8287221bd66",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 11521,
+            "end_byte": 11937,
+            "start_line": 88,
+            "end_line": 88,
+            "span_hash": "81a336d7935e1aa6c5f9742c4b6f405a5b06b395f0ae54046c865ff44747826b"
+          },
+          "original_statement": "`docs/architecture.md` 把长期 Credential/Provider 路由绝对归为 Control Plane，与当前 Device 生产路径至少存在说明口径差异。更稳妥的结论是文档应按 local/Device 部署明确所有权，而不是将 Device 分流判为违反唯一 Kernel 原则：Provider 所在位置与执行 Kernel 是否唯一是不同问题。本轮不提供所有 secret 路径的完整安全审计结论。",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "新增实际三项文档比较有literal/heading/scope与source fact refs，旧Device provider模型保留unsupported反证；实际比较限定Control Plane内部口径、凭据长期性unknown、protocol_bypass=false，不要求推翻全局Kernel原则。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.with_device_providers",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/396/statements/0",
+          "operation_pointer": "/operations/7992",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「models」的初始化来源为「device_model::DeviceModels::open(directory)?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-provider/src/types.rs",
+          "actual_owner": "ResolvedSecret.from_bytes",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/379/statements/0",
+          "operation_pointer": "/operations/7576",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「bytes.is_empty」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        }
+      ],
+      "prior_finite_model_contract_entries": [
+        "wwc-report-device-provider-deployment",
+        "wwc-document-device-provider-deployment-scope",
+        "wwc-device-documentation-deployment-comparison"
+      ],
+      "additional_saved_model_artifacts": [
+        "documentation-source-query.json"
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "decl_names_used_as_locators_not_purpose_proof": true
+    }
+  ],
+  "original_fourteen_responsibility_rows": [
+    {
+      "id": "codepatchbay-responsibility-row-34",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:7b9e4a8364323250df1e",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 4696,
+            "end_byte": 4874,
+            "start_line": 34,
+            "end_line": 34,
+            "span_hash": "f20f1c64de63683d6f04e55bb815782649370713e6e3a8676a3abc1bba31a1ff"
+          },
+          "original_statement": "| `cli/` | 命令选择、参数解释、任务提交和面向用户的投影 | 动态 import 选 handler；`task` 主要读取，不等于其所有传递依赖均无副作用 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "CLI选择/提交正文可用，但task主要读取这一原句缺实际选中body，整行不能关闭。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "cli/cpb.ts",
+          "actual_owner": "main",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/7/statements/9",
+          "operation_pointer": "/operations/388",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「import」中提供第 1 个实参「path.join(CPB_EXECUTOR_ROOT, \"cli\", \"commands\", COMMANDS[cmd])」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "server/services/executor-root.ts",
+          "actual_owner": "resolveExecutorRoot",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/231/statements/3",
+          "operation_pointer": "/operations/11194",
+          "operation_kind": "return_transfer",
+          "text": "以「return path.resolve(stringValue(envRecord.CPB_EXECUTOR_ROOT) || stringValue(fallbackRoot));」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "server/services/executor-root.ts",
+          "actual_owner": "resolveExecutorRoot",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/231/statements/4",
+          "operation_pointer": "/operations/11195",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「path.resolve」中提供第 1 个实参「stringValue(envRecord.CPB_EXECUTOR_ROOT) || stringValue(fallbackRoot)」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "cli/commands/fix.ts",
+          "actual_owner": "run",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/4/statements/11",
+          "operation_pointer": "/operations/64",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「deps.assertFixReadiness」中提供第 1 个实参「{ cpbRoot, project }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "cli/commands/fix.ts",
+          "actual_owner": "run",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/4/statements/13",
+          "operation_pointer": "/operations/68",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「readiness」作为第 1 个实参交给已绑定接口「ts:cli/commands/fix#isReadinessFailure」，对应捕获形参「r: FixReadinessResult」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "cli/commands/fix.ts",
+          "actual_owner": "run",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/4/statements/14",
+          "operation_pointer": "/operations/70",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「out.err」中提供第 1 个实参「readiness.nextAction」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        }
+      ],
+      "unclosed_original_clause_ids": [
+        "original-cpb-task-read-source"
+      ],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "codepatchbay-responsibility-row-35",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:e3df509076fded00b1f4",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 4874,
+            "end_byte": 5054,
+            "start_line": 35,
+            "end_line": 35,
+            "span_hash": "0de9bbeb63f1760a453e5b9a3d0f3beef4866cde662bdb585ed871bc23bcc66c"
+          },
+          "original_statement": "| `server/orchestrator/` | 队列候选、assignment/attempt、worker 生命周期及失败路由 | 队列和 worker 状态更新的原子条件、leader fencing 与任务身份 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "队列/assignment/attempt/inbox及旧权威原子/fencing/channel来源可用；不是全生命周期运行验证。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "server/orchestrator/hub-orchestrator.ts",
+          "actual_owner": "HubOrchestrator.tick",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/132/statements/9",
+          "operation_pointer": "/operations/5800",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「updateEntry」中提供第 3 个实参「{\\n          status: \"scheduled\",\\n          claimedBy: `orchestrator:${epoch}`,\\n          claimedAt: new Date().toISOString(),\\n          // Persist the exact smart-scheduler score/rank/evidence that led to\\n          // dispatch. Keeping this only on the in-memory candidate made the\\n          // decision disappear on a leader crash before assignment crea…［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "server/orchestrator/hub-orchestrator.ts",
+          "actual_owner": "HubOrchestrator.tick",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/132/statements/12",
+          "operation_pointer": "/operations/5816",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「this.assignmentStore.getOrCreateAssignmentForEntry」中提供第 1 个实参「{\\n          entryId: candidate.id,\\n          projectId: candidate.projectId,\\n          projectRuntimeRoot: registeredProject.projectRuntimeRoot,\\n          task: candidate.description || candidate.metadata?.task || \"\",\\n          sourcePath: candidate.sourcePath || candidate.metadata?.sourcePath,\\n          workflow: candidate.metadata?.workflow || \"stand…［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "server/orchestrator/hub-orchestrator.ts",
+          "actual_owner": "HubOrchestrator.tick",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/132/statements/14",
+          "operation_pointer": "/operations/5825",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「this.scheduler.findIdleWorker」中提供第 1 个实参「candidate.projectId」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "codepatchbay-responsibility-row-36",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:12840042fcb3955e4b86",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 5054,
+            "end_byte": 5231,
+            "start_line": 36,
+            "end_line": 36,
+            "span_hash": "8c28961accf729df74ccc5f2366d0262f845a953f72d8926d33c4061fde4d544"
+          },
+          "original_statement": "| `runtime/worker/`、`bridges/` | 工作区、inbox、执行进程以及从 worker 到引擎的适配 | 进程和持久消息边界，不应压成虚假的普通函数调用 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "workspace/inbox/bridge正文与真实Node process和持久channel seam可用；没有虚构普通跨进程调用。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "runtime/worker/managed-worker.ts",
+          "actual_owner": "main.processInbox",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/86/statements/0",
+          "operation_pointer": "/operations/4168",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「assignment」的初始化来源为「claim.assignment as AssignmentPayload」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "runtime/worker/managed-worker.ts",
+          "actual_owner": "main.processInbox",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/86/statements/2",
+          "operation_pointer": "/operations/4205",
+          "operation_kind": "record_field_projection",
+          "text": "以字段投影形式「assignment.entryId」关联路径「assignment.entryId」；只描述捕获来源，不证明当时的字段值。"
+        },
+        {
+          "file": "runtime/worker/managed-worker.ts",
+          "actual_owner": "main.processInbox",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/86/statements/4",
+          "operation_pointer": "/operations/4311",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「workerId ← workerId；assignmentId ← assignmentId；attempt ← attemptNum；phase ← \"starting\"；activePhase ← null；activeJobId ← null；status ← \"running\"；executionBoundary ← executionBoundary；sourcePath ← assignment.sourcePath；pid ← process.pid；workerIncarnation ← workerIncarnationToken；processIdentity ← {\\n          pid: workerProcessIdentity.pid,\\n          startTimeTicks: workerProcessIdentity.birthId,\\n          birthIdPrecision: workerProcessIdentity.birthI…［展示截断；完整操作保留］」；其余字段见完整操作。不据构造形式推断物理持久化。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "codepatchbay-responsibility-row-37",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:0bd3ce11e6df353e8222",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 5231,
+            "end_byte": 5421,
+            "start_line": 37,
+            "end_line": 37,
+            "span_hash": "4c12400ff0d1504404c3d2daa06d2a1151697d249290900d7cfdfcaed8f03c10"
+          },
+          "original_statement": "| `core/engine/` | 任务准备、checklist 冻结、DAG、阶段和完成门 | 从 `ctx` 获取端口；禁止源码反向依赖 server 与允许调用注入的 server 实现是两回事 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "ctx/分支服务record、准备/规划/冻结/DAG/完成门有源码正文；注入目标与源码依赖方向不混为全局唯一实现。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "server/services/engine-runner.ts",
+          "actual_owner": "buildServices",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/210/statements/4",
+          "operation_pointer": "/operations/10566",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「broker」的初始化来源为「workerBrokerClient instanceof WorkerBrokerClient ? workerBrokerClient : null」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "server/services/engine-runner.ts",
+          "actual_owner": "buildServices",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/210/statements/6",
+          "operation_pointer": "/operations/10578",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「ports」的初始化来源为「{\\n    createJob: buildCreateJobPort(broker, runtimeDataRoot),\\n    startPhase: broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase),\\n    completePhase: broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase),\\n    completeJob: broker\\n      ? broker.completeJob.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string,…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "server/services/engine-runner.ts",
+          "actual_owner": "buildServices",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/210/statements/7",
+          "operation_pointer": "/operations/10580",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「createJob ← buildCreateJobPort(broker, runtimeDataRoot)；startPhase ← broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase)；completePhase ← broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase)；completeJob ← broker\\n      ? broker.completeJob.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, opts: LooseRecord = {}) => comp…［展示截断；完整操作保留］；failJob ← broker ? broker.failJob.bind(broker) : withJobOptions(failJob)；blockJob ← broker ? broker.blockJob.bind(broker) : withJobOptions(blockJob)；appendEvent ← broker\\n      ? broker.appendEvent.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, event: EventRecord, opts: Loose…［展示截断；完整操作保留］；prepareTask ← prepareTaskForEnv(runtimeEnv)；getPool ← () => getManagedAcpPool({ cpbRoot, hubRoot, env: runtimeEnv })；getArtifactIndex ← broker\\n      ? broker.getArtifactIndex.bind(broker)\\n      : (root: string, project: string, jobId: string, opts: LooseRecord = {}) =>\\n        buildArtifactIn…［展示截断；完整操作保留］；providerServices ← {\\n      assertProviderAvailable,\\n      getProviderAdapter,\\n      delegateMarkProviderUnavailable,\\n      delegateEnqueueProviderUsage,\\n      readAgentRoutin…［展示截断；完整操作保留］」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/3",
+          "operation_pointer": "/operations/1754",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「created」的初始化来源为「await createJobAndHandleBlocked(ctx)」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/4",
+          "operation_pointer": "/operations/1756",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「ctx」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-prepare#createJobAndHandleBlocked」，对应捕获形参「ctx: RunJobPrepareContext」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/18",
+          "operation_pointer": "/operations/1791",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「ctx」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-assurance#runHighAssurancePlanning」，对应捕获形参「ctx: AssuranceContext」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/20",
+          "operation_pointer": "/operations/1803",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「ctx」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-checklist-dag#freezeChecklistAndMaterializeDag」，对应捕获形参「ctx: RunJobChecklistDagContext」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJobInner",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/31/statements/23",
+          "operation_pointer": "/operations/1830",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「ctx」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-execute-dag#executeWorkflowDag」，对应捕获形参「ctx: ExecuteWorkflowDagContext」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/5",
+          "operation_pointer": "/operations/998",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「job」作为第 1 个实参交给已绑定接口「ts:core/engine/completion-gate#isMutatingJob」，对应捕获形参「job: CompletionGateJob | null | undefined」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/7",
+          "operation_pointer": "/operations/1000",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「checklistResult」的初始化来源为「evaluateChecklistCompletion({\\n      checklist,\\n      verdict: checklistVerdict,\\n      evidenceLedger,\\n      executionMap,\\n      runtimeFailures,\\n      attemptId,\\n      multiAttempt,\\n    })」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/8",
+          "operation_pointer": "/operations/1001",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「{\\n      checklist,\\n      verdict: checklistVerdict,\\n      evidenceLedger,\\n      executionMap,\\n      runtimeFailures,\\n      attemptId,\\n      multiAttempt,\\n    }」作为第 1 个实参交给已绑定接口「ts:core/workflow/checklist-match#evaluateChecklistCompletion」，对应捕获形参「{ checklist, verdict, evidenceLedger, executionMap, runtimeFailures, attemptId, multiAttempt }: {\\n  checklist: unknown;\\n  verdict: unknown;\\n  evidenceLedger?: LooseRecord | null;\\n  executionMap?: LooseRecord | null;\\n  runtimeFailures?: unknown;\\n  attemptId?: unknown;\\n  multiAttempt?: boolean;\\n}」。该普通调用关系不替代进程或网络协议关系。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "codepatchbay-responsibility-row-38",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:4bc4d25f3070a1b890ec",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 5421,
+            "end_byte": 5558,
+            "start_line": 38,
+            "end_line": 38,
+            "span_hash": "1c41f72b1cbcad7e4b24125180b77c76d9fdc69b3d0afb0a05f2404d08f7bd67"
+          },
+          "original_statement": "| `core/workflow/` | checklist、probe、证据格式和可判定条件 | 结构范围证据不能直接证明业务验收条件成立 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "probe计量与可信输入、失败证据、completion/额外hardGate条件有有限内容；不声称结构范围证明业务需求。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "runDeclaredCommandOnce",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/65/statements/0",
+          "operation_pointer": "/operations/3367",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「result」的初始化来源为「await execFileAsync(command.executable, command.args, {\\n      cwd,\\n      env: commandProbeEnv(cwd, env),\\n      shell: false,\\n      timeout: COMMAND_PROBE_TIMEOUT_MS,\\n      maxBuffer: 8 * 1024 * 1024,\\n    })」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "runDeclaredCommandOnce",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/65/statements/1",
+          "operation_pointer": "/operations/3369",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「execFileAsync」中提供第 1 个实参「command.executable」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "runDeclaredCommandOnce",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/65/statements/2",
+          "operation_pointer": "/operations/3371",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「cwd ← cwd；env ← commandProbeEnv(cwd, env)；shell ← false；timeout ← COMMAND_PROBE_TIMEOUT_MS；maxBuffer ← 8 * 1024 * 1024」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "scopeMatches",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/53/statements/3",
+          "operation_pointer": "/operations/3223",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「count」的初始化来源为「0」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "scopeMatches",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/53/statements/5",
+          "operation_pointer": "/operations/3225",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「changed.some」中提供第 1 个实参「(changedFile) => scopePathMatches(changedFile, text(f))」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "scopeMatches",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/53/statements/6",
+          "operation_pointer": "/operations/3229",
+          "operation_kind": "binding_update",
+          "text": "对捕获 binding「count」存在源更新「count += 1」；循环和分支条件见操作上下文，未推执行次数或最终数值。"
+        },
+        {
+          "file": "core/workflow/probe-runner.ts",
+          "actual_owner": "scopeMatches",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/53/statements/8",
+          "operation_pointer": "/operations/3231",
+          "operation_kind": "return_transfer",
+          "text": "以「return count;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/5",
+          "operation_pointer": "/operations/998",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「job」作为第 1 个实参交给已绑定接口「ts:core/engine/completion-gate#isMutatingJob」，对应捕获形参「job: CompletionGateJob | null | undefined」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/7",
+          "operation_pointer": "/operations/1000",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「checklistResult」的初始化来源为「evaluateChecklistCompletion({\\n      checklist,\\n      verdict: checklistVerdict,\\n      evidenceLedger,\\n      executionMap,\\n      runtimeFailures,\\n      attemptId,\\n      multiAttempt,\\n    })」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/engine/completion-gate.ts",
+          "actual_owner": "evaluateCompletionGate",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/21/statements/8",
+          "operation_pointer": "/operations/1001",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「{\\n      checklist,\\n      verdict: checklistVerdict,\\n      evidenceLedger,\\n      executionMap,\\n      runtimeFailures,\\n      attemptId,\\n      multiAttempt,\\n    }」作为第 1 个实参交给已绑定接口「ts:core/workflow/checklist-match#evaluateChecklistCompletion」，对应捕获形参「{ checklist, verdict, evidenceLedger, executionMap, runtimeFailures, attemptId, multiAttempt }: {\\n  checklist: unknown;\\n  verdict: unknown;\\n  evidenceLedger?: LooseRecord | null;\\n  executionMap?: LooseRecord | null;\\n  runtimeFailures?: unknown;\\n  attemptId?: unknown;\\n  multiAttempt?: boolean;\\n}」。该普通调用关系不替代进程或网络协议关系。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "codepatchbay-responsibility-row-39",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:6fc3cfacc917d322f33d",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 5558,
+            "end_byte": 5730,
+            "start_line": 39,
+            "end_line": 39,
+            "span_hash": "3c5d9ecbcc617de359151fc7ff46ae40d9396ce6b1193448c0ea0219a9d5f568"
+          },
+          "original_statement": "| `server/services/` | job/event/queue、ACP/provider、GitHub、审计与 finalizer 实现 | 存储、外部副作用及恢复的权威操作需要在本层维持约束 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "服务写入/投影/audit/finalizer正文与新publication/lineage有限来源可用；外部效果未知保持。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "server/services/event/event-store.ts",
+          "actual_owner": "appendEvent",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/223/statements/16",
+          "operation_pointer": "/operations/11023",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「written」的初始化来源为「await withEventLock(file, async () => {\\n    // Terminal seal: reject business-state mutations on terminal job event logs.\\n    const existing = await readEvents(cpbRoot, project, jobId, opts);\\n    if (existing.length > 0) {\\n      const state = materializeJob(existing);\\n      const eventType = text(tracedEvent.type);\\n      if (TERMINAL_STATUSES.has(state…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "server/services/job/job-store.ts",
+          "actual_owner": "rebuildJobsIndex",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/271/statements/0",
+          "operation_pointer": "/operations/12898",
+          "operation_kind": "return_transfer",
+          "text": "以「return enqueueWrite(cpbRoot, opts, () => rebuildJobsIndexLocked(cpbRoot, opts));」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "server/services/job/job-store.ts",
+          "actual_owner": "rebuildJobsIndex",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/271/statements/1",
+          "operation_pointer": "/operations/12899",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「() => rebuildJobsIndexLocked(cpbRoot, opts)」作为第 3 个实参交给已绑定接口「ts:server/services/job/job-store#enqueueWrite」，对应捕获形参「fn: () => Promise<T>」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJob",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/30/statements/12",
+          "operation_pointer": "/operations/1733",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「{\\n        cpbRoot: ctx.cpbRoot,\\n        project: ctx.project || \"unknown\",\\n        jobId: result?.jobId || ctx._jobId,\\n        attemptId: ctx._attemptId || result?.jobId || ctx._jobId,\\n        appendEvent: ctx.appendEvent,\\n        result,\\n        sourceContext: ctx.sourceContext ?? undefined,\\n      }」作为第 1 个实参交给已绑定接口「ts:core/engine/run-job-lifecycle#finalizeAuditTrail」，对应捕获形参「{\\n  cpbRoot,\\n  project,\\n  jobId,\\n  attemptId,\\n  appendEvent,\\n  result,\\n  sourceContext,\\n  now = ts,\\n}: FinalizeAuditTrailInput」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJob",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/30/statements/18",
+          "operation_pointer": "/operations/1740",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「result」的初始化来源为「await handleRunJobPanic(ctx, panic)」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "core/engine/run-job.ts",
+          "actual_owner": "runJob",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/30/statements/19",
+          "operation_pointer": "/operations/1741",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「panic」作为第 2 个实参交给已绑定接口「ts:core/engine/run-job-lifecycle#handleRunJobPanic」，对应捕获形参「panic: unknown」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "runtime/worker/assignment-finalizer.ts",
+          "actual_owner": "finalizeAndWriteSuccessfulResult",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/76/statements/0",
+          "operation_pointer": "/operations/3698",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「{\\n    cpbRoot,\\n    hubRoot,\\n    dataRoot,\\n    assignment,\\n    attemptNum,\\n    jobId,\\n    result,\\n    worktreeInfo,\\n    log,\\n    resolveTransport,\\n    resolveDataRoot,\\n    finalizeQueueEntry,\\n    assertMutationLease,\\n    mutationFence,\\n    validateMutationReceipt,\\n  }」作为第 1 个实参交给已绑定接口「ts:runtime/worker/assignment-finalizer#maybeFinalizeSuccessfulAssignment」，对应捕获形参「{\\n  cpbRoot,\\n  hubRoot,\\n  dataRoot,\\n  assignment,\\n  attemptNum,\\n  jobId,\\n  result,\\n  worktreeInfo,\\n  log = null,\\n  resolveTransport = resolveGithubTransport,\\n  resolveDataRoot = resolveProjectDataRoot,\\n  finalizeQueueEntry = finalizeSuccessfulQueueEntry,\\n  assertMutationLease = null,\\n  mutationFence = null,\\n  validateMutationReceipt = validate…［展示截断；完整操作保留］」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "runtime/worker/assignment-finalizer.ts",
+          "actual_owner": "finalizeAndWriteSuccessfulResult",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/76/statements/1",
+          "operation_pointer": "/operations/3699",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「cpbRoot ← cpbRoot；hubRoot ← hubRoot；dataRoot ← dataRoot；assignment ← assignment；attemptNum ← attemptNum；jobId ← jobId；result ← result；worktreeInfo ← worktreeInfo；log ← log；resolveTransport ← resolveTransport；resolveDataRoot ← resolveDataRoot；finalizeQueueEntry ← finalizeQueueEntry」；其余字段见完整操作。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "runtime/worker/assignment-finalizer.ts",
+          "actual_owner": "finalizeAndWriteSuccessfulResult",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/76/statements/4",
+          "operation_pointer": "/operations/3717",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「finalizeResult」作为第 1 个实参交给已绑定接口「ts:core/contracts/types#isRecord」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "codepatchbay-responsibility-row-40",
+      "repository": "codepatchbay",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "codepatchbay:statement:0ff80e8347ca46b34ffa",
+          "source": {
+            "file": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+            "source_hash": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+            "start_byte": 5730,
+            "end_byte": 5882,
+            "start_line": 40,
+            "end_line": 40,
+            "span_hash": "9e123fcbbf83d943abae06f5fa9c2aaf4f669254ff13411fc348005a61cd995a"
+          },
+          "original_statement": "| `shared/` | 文件、进程、身份、网络、锁与公共类型 | 广泛复用不意味着“上帝对象”；应按职责和修改耦合判断 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "公共文件/JSON/消息接口和已认证复用可见；原God-object/按耦合判断句是限制，不新增全项目所有权/复杂度证明。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "shared/fs-utils.ts",
+          "actual_owner": "writeJsonAtomic",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/307/statements/7",
+          "operation_pointer": "/operations/13671",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「activeHooks.open」中提供第 1 个实参「tmp」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "shared/fs-utils.ts",
+          "actual_owner": "writeJsonAtomic",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/307/statements/9",
+          "operation_pointer": "/operations/13678",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「fh.writeFile」中提供第 1 个实参「content」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "shared/fs-utils.ts",
+          "actual_owner": "writeJsonAtomic",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/307/statements/15",
+          "operation_pointer": "/operations/13695",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「activeHooks.rename」中提供第 2 个实参「filePath」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "shared/orchestrator/worker-broker-client.ts",
+          "actual_owner": "WorkerBrokerClient.#call",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/327/statements/0",
+          "operation_pointer": "/operations/14432",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「response」的初始化来源为「await this.#fetch(this.#url, {\\n      method: \"POST\",\\n      headers: {\\n        authorization: `Bearer ${this.#token}`,\\n        \"content-type\": \"application/json\",\\n      },\\n      body: JSON.stringify({\\n        workerId: this.#workerId,\\n        incarnationToken: this.#incarnationToken,\\n        op,\\n        args,\\n      }),\\n      signal: AbortSignal.ti…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "shared/orchestrator/worker-broker-client.ts",
+          "actual_owner": "WorkerBrokerClient.#call",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/327/statements/1",
+          "operation_pointer": "/operations/14433",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「this.#fetch」中提供第 2 个实参「{\\n      method: \"POST\",\\n      headers: {\\n        authorization: `Bearer ${this.#token}`,\\n        \"content-type\": \"application/json\",\\n      },\\n      body: JSON.stringify({\\n        workerId: this.#workerId,\\n        incarnationToken: this.#incarnationToken,\\n        op,\\n        args,\\n      }),\\n      signal: AbortSignal.timeout(15_000),\\n    }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "shared/orchestrator/worker-broker-client.ts",
+          "actual_owner": "WorkerBrokerClient.#call",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/327/statements/2",
+          "operation_pointer": "/operations/14435",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「method ← \"POST\"；headers ← {\\n        authorization: `Bearer ${this.#token}`,\\n        \"content-type\": \"application/json\",\\n      }；body ← JSON.stringify({\\n        workerId: this.#workerId,\\n        incarnationToken: this.#incarnationToken,\\n        op,\\n        args,\\n      })；signal ← AbortSignal.timeout(15_000)」。不据构造形式推断物理持久化。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "winwincode-responsibility-row-34",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:910833541d1f6256c3db",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 4606,
+            "end_byte": 4821,
+            "start_line": 34,
+            "end_line": 34,
+            "span_hash": "ccf05e13c6804e4b225870b5bcc8da351f0c1d8aea15fd21ca00e485f42160a0"
+          },
+          "original_statement": "| `apps/client`、`packages/browser-*` | 页面、路由、表单、投影和浏览器状态 | UI 可以组织请求，但产品写入仍要经 canonical command；页面存在不等于其所需上下文已接线 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "页面、scope/request/port和旧真实导航拒绝模型可用；不把页面存在当上下文已接线。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "apps/client/src/application.ts",
+          "actual_owner": "mountWinWinCodeClient.diagnosticScope",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/13/statements/4",
+          "operation_pointer": "/operations/295",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「resolution」的初始化来源为「resolveScopeContext(\\n      session.authorizedScopes,\\n      browser.location.hash,\\n      'repository',\\n    )」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "apps/client/src/application.ts",
+          "actual_owner": "mountWinWinCodeClient.diagnosticScope",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/13/statements/6",
+          "operation_pointer": "/operations/297",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「'repository'」作为第 3 个实参交给已绑定接口「ts:packages/browser-core/src/scope-context#resolveScopeContext」，对应捕获形参「requirement: 'scope' | 'repository'」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "apps/client/src/application.ts",
+          "actual_owner": "mountWinWinCodeClient.performRender",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/103/statements/0",
+          "operation_pointer": "/operations/2156",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「generation」的初始化来源为「renderGeneration」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "apps/client/src/application.ts",
+          "actual_owner": "mountWinWinCodeClient.performRender",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/103/statements/11",
+          "operation_pointer": "/operations/2286",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「generation」作为第 1 个实参交给已绑定接口「ts:apps/client/src/application#mountWinWinCodeClient.ensureAttentionMonitor」，对应捕获形参「generation: number」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "apps/client/src/chat-delivery-creator.ts",
+          "actual_owner": "createChatDeliveryCreator.create",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/124/statements/2",
+          "operation_pointer": "/operations/2627",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「'STRONGFLOW_CREATE_VIEW_MODEL_CLOSED'」作为第 1 个实参交给已绑定接口「ts:apps/client/src/chat-delivery-creator#clientFailure」，对应捕获形参「code: string」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "apps/client/src/chat-delivery-creator.ts",
+          "actual_owner": "createChatDeliveryCreator.create",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/124/statements/8",
+          "operation_pointer": "/operations/2662",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「'STRONGFLOW_CREATE_TITLE_REQUIRED'」作为第 1 个实参交给已绑定接口「ts:apps/client/src/chat-delivery-creator#createChatDeliveryCreator.invalid」，对应捕获形参「code: string」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "apps/client/src/chat-delivery-creator.ts",
+          "actual_owner": "createChatDeliveryCreator.create",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/124/statements/9",
+          "operation_pointer": "/operations/2689",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「JSON.stringify」中提供第 1 个实参「{\\n      title,\\n      goal,\\n      baseRevision,\\n      deliveryScope,\\n      outOfScope,\\n      constraints,\\n      sourceProductSessionId: input.sourceProductSessionId,\\n      acceptanceCriteria,\\n      verificationCommand: input.verificationCommand?.trim() ?? '',\\n    }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "winwincode-responsibility-row-35",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:0e03cad1683c65174644",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 4821,
+            "end_byte": 5009,
+            "start_line": 35,
+            "end_line": 35,
+            "span_hash": "77bda07606c65ef946979c4a2534b511e4067eb462c2f31f7bd1dbe02b221015"
+          },
+          "original_statement": "| `packages/control-plane-client`、生成合同 | HTTP command/query、WS projection/event | 网络关系应由协议/命令类型连接，不应该伪造成跨语言普通函数调用 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "command/query/subscribe有真实正文；所选D3生成JSON/Serde命令接缝有真实模型，不扩大所有query/WS codec。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/476/statements/0",
+          "operation_pointer": "/operations/9240",
+          "operation_kind": "return_transfer",
+          "text": "以「return execute(command, requestOptions, fetchImplementation => (\\n        httpClient(fetchImplementation).submitCommand(command)\\n      ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/476/statements/1",
+          "operation_pointer": "/operations/9241",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「requestOptions」作为第 2 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.execute」，对应捕获形参「requestOptions: ControlPlaneRequestOptions | undefined」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.query",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/478/statements/0",
+          "operation_pointer": "/operations/9246",
+          "operation_kind": "return_transfer",
+          "text": "以「return execute(query, requestOptions, fetchImplementation => (\\n        httpClient(fetchImplementation).submitQuery(query)\\n      ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.subscribe",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/0",
+          "operation_pointer": "/operations/9252",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「requireOpen」调用已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.requireOpen」；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "packages/control-plane-client/src/index.ts",
+          "actual_owner": "createControlPlaneClient.<object@1149:9>.subscribe",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/1",
+          "operation_pointer": "/operations/9253",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「subscriptionOptions.signal」作为第 1 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#signalIsAborted」，对应捕获形参「signal: AbortSignal | undefined」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/0",
+          "operation_pointer": "/operations/7661",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「envelope」的初始化来源为「decode(request.clone())?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/1",
+          "operation_pointer": "/operations/7662",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「request.clone()」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#decode」，对应捕获形参「value: Value」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/3",
+          "operation_pointer": "/operations/7664",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&envelope.actor」作为第 2 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#validate_actor」，对应捕获形参「actor: &Actor」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/4",
+          "operation_pointer": "/operations/7665",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「principal」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#validate_actor」，对应捕获形参「principal: &AuthenticatedPrincipal」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/9",
+          "operation_pointer": "/operations/7670",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「typed」的初始化来源为「decode(request)?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "winwincode-responsibility-row-36",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:b13e03b4b552fefb2349",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 5009,
+            "end_byte": 5178,
+            "start_line": 36,
+            "end_line": 36,
+            "span_hash": "35891ec372e641e4735fc33b545c985ad3f8dfe4af2bfdf5178e5ae8fcfe8578"
+          },
+          "original_statement": "| `winwincode-server` | 认证、公开网络边界、dispatcher、模块组合 | 不应仅按模块大判断职责混乱；检查是否另建事实所有权更重要 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "公开解析/版本/actor/scope/typed dispatcher正文与有限D3模型可用；没有按模块大小评分或全权限定理。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/0",
+          "operation_pointer": "/operations/7661",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「envelope」的初始化来源为「decode(request.clone())?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/1",
+          "operation_pointer": "/operations/7662",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「request.clone()」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#decode」，对应捕获形参「value: Value」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/3",
+          "operation_pointer": "/operations/7664",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&envelope.actor」作为第 2 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#validate_actor」，对应捕获形参「actor: &Actor」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/4",
+          "operation_pointer": "/operations/7665",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「principal」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#validate_actor」，对应捕获形参「principal: &AuthenticatedPrincipal」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "actual_owner": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/9",
+          "operation_pointer": "/operations/7670",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「typed」的初始化来源为「decode(request)?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "winwincode-responsibility-row-37",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:6efc050ed0c9a3566195",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 5178,
+            "end_byte": 5414,
+            "start_line": 37,
+            "end_line": 37,
+            "span_hash": "6e05874e4df60ee9cf92d6f76135852513ee3f34ec600d294e8f673ca549e8af"
+          },
+          "original_statement": "| `winwincode-control-plane`、Delivery/domain/session | 产品状态、审批、WorkContract/WorkItem/WorkRun 与候选/证据关联 | revision、来源身份和条件 authority 决定能否写入；调用是否存在只是一部分 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "产品authority/WorkRun来源已有；原候选/证据字段合同盘点中的冻结提交/角色/evidence-source子句待补选中来源。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "actual_owner": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/342/statements/0",
+          "operation_pointer": "/operations/6966",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&request」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-control-plane/src/delivery_production_adapters#LocalDeliveryAuthority.require_scope」，对应捕获形参「request: &DeliveryAuthorityRequest<'_>」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "actual_owner": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/342/statements/9",
+          "operation_pointer": "/operations/6986",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「spec.source_product_session_id.as_ref()」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-control-plane/src/delivery_production_adapters#LocalDeliveryAuthority.device_target」，对应捕获形参「source: Option<&ProductSessionId>」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "actual_owner": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/342/statements/11",
+          "operation_pointer": "/operations/6993",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「spec\\n                .verification_command\\n                .filter(|command| !command.trim().is_empty())\\n                .ok_or_else」中提供第 1 个实参「|| {\\n                    DeliveryAuthorityError::new(\\n                        \"Device delivery requires a confirmed verification command\",\\n                    )\\n                }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "actual_owner": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/342/statements/12",
+          "operation_pointer": "/operations/6994",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「spec\\n                .verification_command\\n                .filter」中提供第 1 个实参「|command| !command.trim().is_empty()」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/0",
+          "operation_pointer": "/operations/7246",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「self.validate」调用已绑定接口「rust:crates/winwincode-delivery/src/application/workrun#WorkRunAggregate.validate」；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/1",
+          "operation_pointer": "/operations/7247",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「item」的初始化来源为「self\\n            .items\\n            .iter()\\n            .find(|item| {\\n                &item.id == id\\n                    && work_item_is_runnable(item, &self.items)\\n                    && !self.runs.iter().any(|run| {\\n                        &run.work_item_id == id\\n                            && matches!(\\n                                run.state,\\…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-delivery/src/application/workrun.rs",
+          "actual_owner": "WorkRunAggregate.start_item",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/361/statements/3",
+          "operation_pointer": "/operations/7249",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「self\\n            .items\\n            .iter()\\n            .find」中提供第 1 个实参「|item| {\\n                &item.id == id\\n                    && work_item_is_runnable(item, &self.items)\\n                    && !self.runs.iter().any(|run| {\\n                        &run.work_item_id == id\\n                            && matches!(\\n                                run.state,\\n                                WorkRunState::Leased\\n          …［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/0",
+          "operation_pointer": "/operations/6561",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/1",
+          "operation_pointer": "/operations/6562",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/0",
+          "operation_pointer": "/operations/6616",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「job_id ← dispatch.job.job_id.clone()；attempt ← dispatch.job.attempt；fencing_token ← dispatch.lease.fencing_token.clone()；payload_digest ← dispatch.job.payload_digest.clone()」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/4",
+          "operation_pointer": "/operations/6620",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「dispatch.lease.fencing_token.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        }
+      ],
+      "unclosed_original_clause_ids": [
+        "original-wwc-selected-delivery-evidence-contract-inventory"
+      ],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "winwincode-responsibility-row-38",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:a18f2b6399e70c021296",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 5414,
+            "end_byte": 5620,
+            "start_line": 38,
+            "end_line": 38,
+            "span_hash": "da3e4c0f4af15d15321a77b7cbedec07ab37879db65682279e084da91afe59af"
+          },
+          "original_statement": "| `winwincode-worker`、execution-port | Job、Lease、fencing、工作区、运行/结果/产物消息 | generic adapter 是扩展边界，不等于实现缺失；分派需要真实类型和组合证据 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "Job/lease/fencing/typed消息和generic生产装配的有限正文可用，不证明所有注入目标或故障资源回收。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_managed",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/413/statements/3",
+          "operation_pointer": "/operations/8330",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「credential」的初始化来源为「WorkerSessionCredential::load(&config.worker_credential_path)?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_managed",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/413/statements/5",
+          "operation_pointer": "/operations/8332",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「WorkerSessionCredential::load」中提供第 1 个实参「&config.worker_credential_path」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_worker",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/414/statements/6",
+          "operation_pointer": "/operations/8368",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&server_origin」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/remote_transport#RemoteWorkerPort.open」，对应捕获形参「origin: &str」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_worker",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/414/statements/10",
+          "operation_pointer": "/operations/8383",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「capabilities.clone()」作为第 4 个实参交给已绑定接口「rust:crates/winwincode-worker/src/main#production_codex」，对应捕获形参「capabilities: WorkerCapabilitySet」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/main.rs",
+          "actual_owner": "run_worker",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/414/statements/17",
+          "operation_pointer": "/operations/8412",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「WorkerMain::new」中提供第 1 个实参「config」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_control",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/398/statements/5",
+          "operation_pointer": "/operations/8039",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「true」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#WorkerMain.flush_durable_execution_deliveries_with_core_replay」，对应捕获形参「replay_core_interactions: bool」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_control",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/398/statements/6",
+          "operation_pointer": "/operations/8041",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#WorkerMain.accept_dispatch」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/405/statements/10",
+          "operation_pointer": "/operations/8134",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「dispatch」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/contract#CodexRunKey.from_dispatch」，对应捕获形参「dispatch: &JobDispatchMessage」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/405/statements/19",
+          "operation_pointer": "/operations/8174",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「usize::try_from」中提供第 1 个实参「self.config.capabilities.max_concurrent_jobs」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.accept_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/405/statements/20",
+          "operation_pointer": "/operations/8175",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「usize::try_from(self.config.capabilities.max_concurrent_jobs).unwrap_or」中提供第 1 个实参「0」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/0",
+          "operation_pointer": "/operations/6561",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "session_identity",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/305/statements/1",
+          "operation_pointer": "/operations/6562",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「scope.product_session_id.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/0",
+          "operation_pointer": "/operations/6616",
+          "operation_kind": "record_construction",
+          "text": "构造捕获记录，字段按源码次序为「job_id ← dispatch.job.job_id.clone()；attempt ← dispatch.job.attempt；fencing_token ← dispatch.lease.fencing_token.clone()；payload_digest ← dispatch.job.payload_digest.clone()」。不据构造形式推断物理持久化。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/contract.rs",
+          "actual_owner": "CodexRunKey.from_dispatch",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/316/statements/4",
+          "operation_pointer": "/operations/6620",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「dispatch.lease.fencing_token.clone」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "winwincode-responsibility-row-39",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:5185b303f90977ffb76a",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 5620,
+            "end_byte": 5830,
+            "start_line": 39,
+            "end_line": 39,
+            "span_hash": "8a724926b72697482828710c4dbc987afc02a7cbbbd0d70eb1331d1c1ea37177"
+          },
+          "original_statement": "| `winwincode-codex`、Kernel/helper | durable adapter、嵌入式 Codex session/turn、工具与权限；helper 身份校验 | 生产代码通过 Kernel API，不能用安装的 Codex CLI 作为补缺假设 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "adapter/Kernel独立接口、helper调用与persist/exact来源可用；不假设安装的Codex CLI或声称完整helper算法安全证明。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "ProductionCodexAdapter.open",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/288/statements/2",
+          "operation_pointer": "/operations/6124",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「ensure_private_directory(&config.kernel_home).map_err」中提供第 1 个实参「|_| unavailable()」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "ProductionCodexAdapter.open",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/288/statements/4",
+          "operation_pointer": "/operations/6128",
+          "operation_kind": "field_write",
+          "text": "包含赋值/更新「config.helper_executable = seal_helper(\\n            &config.helper_executable,\\n            Some(config.helper_bytes.as_ref()),\\n            &config.data_directory,\\n            &config.helper_release_manifest,\\n        )?」，捕获目标为「config.helper_executable」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "ProductionCodexAdapter.open",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/288/statements/5",
+          "operation_pointer": "/operations/6133",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&config.helper_executable」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#seal_helper」，对应捕获形参「source: &Path」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "ProductionCodexAdapter.open",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/288/statements/9",
+          "operation_pointer": "/operations/6145",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「AdapterStore::open」中提供第 1 个实参「&config.data_directory」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/302/statements/5",
+          "operation_pointer": "/operations/6459",
+          "operation_kind": "guard_rejection",
+          "text": "条件「goal != expected_goal」的捕获提前退出分支为「Err_return：Err(conflict())」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/302/statements/11",
+          "operation_pointer": "/operations/6482",
+          "operation_kind": "field_write",
+          "text": "包含赋值/更新「run.record.submission_digest = Some(submission_digest)」，捕获目标为「run.record.submission_digest」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/302/statements/12",
+          "operation_pointer": "/operations/6483",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「Some」中提供第 1 个实参「submission_digest」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。"
+        },
+        {
+          "file": "crates/winwincode-codex/src/adapter.rs",
+          "actual_owner": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/302/statements/13",
+          "operation_pointer": "/operations/6497",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「&run_key」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.persist_run」，对应捕获形参「run_key: &str」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/kernel/src/lib.rs",
+          "actual_owner": "Kernel.create_session",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/281/statements/0",
+          "operation_pointer": "/operations/6017",
+          "operation_kind": "call_argument_transfer",
+          "text": "将「async {\\n            let runtime = self.runtime().await?;\\n            let config = Self::session_config(&runtime, &options).await?;\\n            let thread = runtime\\n                .manager\\n                .start_thread(StartThreadOptions::new(config.clone()))\\n                .await\\n                .map_err(|error| KernelFailure::new(\"SESSION_CREATE_FA…［展示截断；完整操作保留］」作为第 1 个实参交给已绑定接口「rust:crates/kernel/src/lib#Kernel.guard」，对应捕获形参「future: impl Future<Output = KernelResult<T>> + Send + 'a」。该普通调用关系不替代进程或网络协议关系。"
+        },
+        {
+          "file": "crates/kernel/src/lib.rs",
+          "actual_owner": "Kernel.submit_turn",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/283/statements/16",
+          "operation_pointer": "/operations/6055",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「submission」的初始化来源为「session\\n                .thread\\n                .start_or_steer_turn(user_text_request(text, &options))\\n                .await\\n                .map_err(|error| KernelFailure::new(\"TURN_SUBMIT_FAILED\", error.to_string()))?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/kernel/src/lib.rs",
+          "actual_owner": "Kernel.reconcile_turn_exact",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/285/statements/11",
+          "operation_pointer": "/operations/6090",
+          "operation_kind": "call_argument_transfer",
+          "text": "在调用形式「session\\n                .thread\\n                .inspect_durable_turn」中提供第 1 个实参「&turn_id」；目标绑定为「captured_source_only」，不指定唯一实现或物理效果。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    },
+    {
+      "id": "winwincode-responsibility-row-40",
+      "repository": "winwincode",
+      "original_anchors": [
+        {
+          "catalog_statement_id": "winwincode:statement:5d08649b2b9a59addfae",
+          "source": {
+            "file": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+            "source_hash": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+            "start_byte": 5830,
+            "end_byte": 6017,
+            "start_line": 40,
+            "end_line": 40,
+            "span_hash": "5c2607ce2d863a864cbb29aa7bf1ad763e164253eb4e2664acbbc2eeb0d65bdb"
+          },
+          "original_statement": "| Device/provider | managed worker、设备本地 provider 配置/凭据和流转发 | 当前生产 Device 路径需要与旧文档“Control Plane 唯一长期凭据使用者”区分 |",
+          "origin": "unchanged_original_report_scope_not_new_target_evidence"
+        }
+      ],
+      "actual_content_readback": "Device/本地provider来源与文档3方面实际比较可用；没有把内部唯一改写成全局唯一或推断凭据长期性。",
+      "actual_automatic_body_examples": [
+        {
+          "file": "crates/winwincode-worker/src/lib.rs",
+          "actual_owner": "WorkerMain.with_device_providers",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/396/statements/0",
+          "operation_pointer": "/operations/7992",
+          "operation_kind": "binding_initializer",
+          "text": "捕获 binding「models」的初始化来源为「device_model::DeviceModels::open(directory)?」；保留该声明与初始化表达式，不推任意后续读取的当前值。"
+        },
+        {
+          "file": "crates/winwincode-provider/src/types.rs",
+          "actual_owner": "ResolvedSecret.from_bytes",
+          "pointer": "/architecture/responsibility_explanations/declaration_explanations/379/statements/0",
+          "operation_pointer": "/operations/7576",
+          "operation_kind": "call_argument_transfer",
+          "text": "以无显式实参的调用形式「bytes.is_empty」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。"
+        }
+      ],
+      "unclosed_original_clause_ids": [],
+      "formal_completion": null,
+      "role_labels_or_example_count_do_not_establish_completion": true
+    }
+  ],
+  "remaining_original_finite_content": [
+    {
+      "id": "original-cpb-task-read-source",
+      "repository": "codepatchbay",
+      "original_line": 34,
+      "original_clause": "task 主要读取，不等于其所有传递依赖均无副作用",
+      "affected_units": [
+        "codepatchbay-responsibility-row-34"
+      ],
+      "actual_artifact_observation": "没有cli/commands/task.ts选中声明/正文；旧26引用也只有COMMANDS的task候选字符串。",
+      "needed_source_scope": {
+        "file": "cli/commands/task.ts",
+        "symbol_locator_candidate": "run",
+        "actual_declaration_and_relevant_branch_authentication_required": true,
+        "symbol_not_yet_verified_by_this_artifact_only_agent": true
+      },
+      "finite_expected_content": "从真实选中task入口/分支的读取调用、投影字段/返回值解释所读职责；完整传递副作用未知保留。",
+      "not_required": [
+        "all CLI commands",
+        "full task purity",
+        "all transitive side effects"
+      ],
+      "formal_completion": null,
+      "scope2_development_resolution": {
+        "state": "actual_source_and_generated_body_readback_available_formal_pending",
+        "actual_readback": {
+          "file": "reports/astra-iteration12/TASK_FINITE_CONTENT_DEVELOPMENT_READBACK.json",
+          "sha256": "36dfd9befd3e940ca2ff46c5172f63f93ae3509279cef532b413caec47e4bda0",
+          "bytes": 268795
+        },
+        "normal_system_result": "reports/astra-iteration12-scope2/cpb-task-development-report.json",
+        "normal_report_sha256": "8a64d3c1e31e6a43d9291b933698461041861f5435cba3ef56af919fac57fe29",
+        "rule_id": "cpb-task-read-projection",
+        "actual_finding_id": "a8de27ed8b905f79159044bc",
+        "finite_content": "Actual run to projector/queue and job source, ten-field raw record, sanitize and render source transfers preserve the read/projection role without claiming all transitive effects are absent."
+      }
+    },
+    {
+      "id": "original-wwc-selected-delivery-evidence-contract-inventory",
+      "repository": "winwincode",
+      "original_line": 80,
+      "original_clause": "项目将候选、冻结提交、WorkRun/lease/fencing、角色和 evidence source 纳入交付合同",
+      "affected_units": [
+        "wwc-evidence-delivery",
+        "winwincode-responsibility-row-37"
+      ],
+      "actual_artifact_observation": "现实际输出已覆盖WorkRun/lease/fencing/记录身份/outbox/ack；冻结提交、角色和evidence source的所选合同字段/校验来源未在实际选中声明/旧有限pattern中建立。不能让DOM role或通用request记录代替。",
+      "needed_source_scope": {
+        "actual_file_and_symbols": "parent saved-source query must locate the original-read Delivery/domain/session contract declarations or validators; not guessed by this artifact-only agent"
+      },
+      "finite_expected_content": "只盘点原有限合同中实际冻结提交/候选/角色/evidence-source字段及相关来源或validator约束；区分WorkRun/lease/fencing，不要求外部内容真实或所有角色授权。",
+      "not_required": [
+        "candidate bytes or signature truth",
+        "full role authorization",
+        "all evidence sources",
+        "all publication/connector adapters",
+        "remote success"
+      ],
+      "formal_completion": null,
+      "scope2_development_resolution": {
+        "state": "actual_source_and_generated_body_readback_available_formal_pending",
+        "actual_readback": {
+          "file": "reports/astra-iteration12/WWC_DELIVERY_EVIDENCE_FINITE_CONTENT_DEVELOPMENT_READBACK.json",
+          "sha256": "89a351b79fe6da44f0feaec9c90dcc5a9857362a1e47bf36ec8663f7336d39b9",
+          "bytes": 695725
+        },
+        "normal_system_result": "reports/astra-iteration12-scope2/winwincode-delivery-evidence-contract-report.json",
+        "normal_report_sha256": "1f4a165b47e99c1d178ce4ffc479881bd0031d2a9a6ada29573ac8ba00511d75",
+        "rule_id": "wwc-delivery-evidence-frozen-contract-slice",
+        "actual_finding_id": "7221871f53add43c022a5cea",
+        "finite_content": "Actual CandidateCommit/Runtime input and evidence records, frozen commit getter source, role/WorkRun/lease/fencing field record and mismatch guards, source refs/sequences and unique source event lookup address the limited contract inventory; external truth and full authorization remain excluded."
+      }
+    }
+  ],
+  "meaning": "This compares original finite report content with actual saved machine prose/models. It supplies no new target-code finding, role assignment, semantic percentage or formal result. Available content must still be read from the next normal frozen reports.",
+  "non_gaps_preserved": [
+    "boot no-fake is already in actual navigation port-wiring model despite no generic boot body",
+    "SubmissionIntent and other unselected display statements remain in full source/model data; display truncation is not absent source",
+    "unknown trait/macro/heap/runtime/credential lifetime/remote success are original boundaries, not new goals",
+    "Publication/audit/export/connector areas retain original structural/interface depth; no all-adapter audit is required"
+  ],
+  "formal_completion": false,
+  "overall_original_goal_complete": false,
+  "target_source_read": false,
+  "database_read": false,
+  "analyzer_run": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "current_followup_state": {
+    "preflight_ready": true,
+    "current_known_unclosed_finite_source_content": [],
+    "formal_completion": false,
+    "full_scope_saved_report_readback_pending": true,
+    "development_resolutions": {
+      "original-cpb-task-read-source": {
+        "actual_readback": {
+          "file": "reports/astra-iteration12/TASK_FINITE_CONTENT_DEVELOPMENT_READBACK.json",
+          "sha256": "36dfd9befd3e940ca2ff46c5172f63f93ae3509279cef532b413caec47e4bda0",
+          "bytes": 268795
+        },
+        "normal_system_result": "reports/astra-iteration12-scope2/cpb-task-development-report.json",
+        "normal_report_sha256": "8a64d3c1e31e6a43d9291b933698461041861f5435cba3ef56af919fac57fe29",
+        "rule_id": "cpb-task-read-projection",
+        "actual_finding_id": "a8de27ed8b905f79159044bc",
+        "finite_content": "Actual run to projector/queue and job source, ten-field raw record, sanitize and render source transfers preserve the read/projection role without claiming all transitive effects are absent."
+      },
+      "original-wwc-selected-delivery-evidence-contract-inventory": {
+        "actual_readback": {
+          "file": "reports/astra-iteration12/WWC_DELIVERY_EVIDENCE_FINITE_CONTENT_DEVELOPMENT_READBACK.json",
+          "sha256": "89a351b79fe6da44f0feaec9c90dcc5a9857362a1e47bf36ec8663f7336d39b9",
+          "bytes": 695725
+        },
+        "normal_system_result": "reports/astra-iteration12-scope2/winwincode-delivery-evidence-contract-report.json",
+        "normal_report_sha256": "1f4a165b47e99c1d178ce4ffc479881bd0031d2a9a6ada29573ac8ba00511d75",
+        "rule_id": "wwc-delivery-evidence-frozen-contract-slice",
+        "actual_finding_id": "7221871f53add43c022a5cea",
+        "finite_content": "Actual CandidateCommit/Runtime input and evidence records, frozen commit getter source, role/WorkRun/lease/fencing field record and mismatch guards, source refs/sequences and unique source event lookup address the limited contract inventory; external truth and full authorization remain excluded."
+      }
+    }
+  }
+}

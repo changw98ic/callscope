@@ -1,0 +1,308 @@
+{
+  "kind": "actual-gzip-archive-byte-readback",
+  "manifest_file": "publication/COMPRESSED_REPORT_ARTIFACTS.json",
+  "manifest_sha256": "9b5d764cbc62d3d95f05bea638e4f308352cc8ba3423a23763377395a3cf082f",
+  "restoration_script_sha256": "2eefd33c83b06ad3f500fdd18dfa84336bbdb9ea5a1bb11b8266e63beb756d7b",
+  "summary": {
+    "artifacts": 58,
+    "verified_or_listed_original_bytes": 2840095111,
+    "target_code_executed": false,
+    "target_tests_run": false
+  },
+  "actual_artifact_results": [
+    {
+      "file": "reports/astra-iteration12-scope2/GOAL_JUDGMENT_EVIDENCE.json",
+      "bytes": 152193981,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/ORIGINAL_CODEPATCHBAY_CONTENT_READBACK.json",
+      "bytes": 54894863,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/ORIGINAL_WINWINCODE_CONTENT_READBACK.json",
+      "bytes": 63305808,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/REPORT_ALIGNMENT_RESULTS.json",
+      "bytes": 10713125,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/codepatchbay-automatic-report.json",
+      "bytes": 900595346,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/codepatchbay-configured-findings.json",
+      "bytes": 758438293,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/goal-ledger.json",
+      "bytes": 169112868,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/winwincode-automatic-report.json",
+      "bytes": 329339598,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/winwincode-configured-findings.json",
+      "bytes": 188936151,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/winwincode-delivery-evidence-contract-query.json",
+      "bytes": 18261345,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12-scope2/winwincode-delivery-evidence-contract-report.json",
+      "bytes": 26989144,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration10/ATOMICITY_DEVELOPMENT_OBSERVATIONS.json",
+      "bytes": 3838175,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration10/DEVICE_SUPPORT_CAPTURE.json",
+      "bytes": 1417335,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration10/NAVIGATION_PREFREEZE_OBSERVATIONS.json",
+      "bytes": 2189672,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration10/PIPELINE_CHANNEL_OBSERVATION.json",
+      "bytes": 2406843,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration10/REPORT_ALIGNMENT_RESULTS.json",
+      "bytes": 6410321,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration10/status-source-query.json",
+      "bytes": 2292862,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration11/RELEASE_REPORT_INPUTS.json",
+      "bytes": 2721030,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration11/REPORT_ALIGNMENT_RESULTS.json",
+      "bytes": 9794377,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration11/RUST_REPORT_CLAIMS_DEVELOPMENT_QUERY.json",
+      "bytes": 10224977,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration11/scope-winwincode-formal-observations.json",
+      "bytes": 8117462,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration11/workrun-source-query.json",
+      "bytes": 9684024,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12/COMPLETION_CODEPATCHBAY_DEVELOPMENT_PROJECTION.json",
+      "bytes": 7120277,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12/COMPLETION_WINWINCODE_DEVELOPMENT_PROJECTION.json",
+      "bytes": 4636665,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12/RESPONSIBILITY_ACTUAL_BODY_DEVELOPMENT_INDEX.json",
+      "bytes": 4763336,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12/documentation-source-query.initial.json",
+      "bytes": 4775236,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration12/documentation-source-query.json",
+      "bytes": 4794878,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration4/NAVIGATION_DEVELOPMENT_OBSERVATIONS.json",
+      "bytes": 1180514,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration4/finite-contract-witnesses.json",
+      "bytes": 1937266,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration4/winwincode-summary.json",
+      "bytes": 1264258,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/FIELD_DEVELOPMENT_OBSERVATIONS.json",
+      "bytes": 2067888,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/NAVIGATION_MIGRATION_BASELINE.json",
+      "bytes": 1180473,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/NAVIGATION_SHARED_PROTOCOL_ENV_BE115_SUPERSEDED.json",
+      "bytes": 1610127,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/NAVIGATION_SHARED_PROTOCOL_INITIAL_OBSERVATIONS.json",
+      "bytes": 1397680,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/NAVIGATION_SHARED_PROTOCOL_OBSERVATIONS.json",
+      "bytes": 1615635,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/codepatchbay-summary-superseded-field-v1.json",
+      "bytes": 2877694,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/codepatchbay-summary.json",
+      "bytes": 2885134,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/field-assessments.json",
+      "bytes": 2212187,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/finite-contract-witnesses.json",
+      "bytes": 4494729,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration5/winwincode-summary.json",
+      "bytes": 1698484,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration6/IR_MIGRATION_COMPARISON.json",
+      "bytes": 6509468,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration6/ir-migration-baseline.json",
+      "bytes": 3164848,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration6/winwincode-summary.json",
+      "bytes": 1698520,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration7/CALLABLE_CAPTURE_DEVELOPMENT.json",
+      "bytes": 3346532,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration7/CALLEE_DOMAIN_DEVELOPMENT.json",
+      "bytes": 3416873,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration7/JOIN_DOMAIN_DEVELOPMENT.json",
+      "bytes": 3477676,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration7/LITERAL_LIFETIME_DEVELOPMENT.json",
+      "bytes": 3307591,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration7/PRIMITIVE_JOIN_DEVELOPMENT.json",
+      "bytes": 3416873,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration7/ROOT_EVIDENCE_DEVELOPMENT.json",
+      "bytes": 3380562,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration7/winwincode-configured-findings.json",
+      "bytes": 1638102,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration7/winwincode-summary.json",
+      "bytes": 1698520,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration8/winwincode-configured-findings.json",
+      "bytes": 1638100,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration8/winwincode-summary.json",
+      "bytes": 1698518,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration9/INDEPENDENT_REVIEW_EVIDENCE.json",
+      "bytes": 4736614,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration9/PREFREEZE_ENGINE_OBSERVATIONS.json",
+      "bytes": 5628620,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration9/field-relations.json",
+      "bytes": 3611010,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration9/winwincode-configured-findings.json",
+      "bytes": 1638102,
+      "status": "verified"
+    },
+    {
+      "file": "reports/astra-iteration9/winwincode-summary.json",
+      "bytes": 1698521,
+      "status": "verified"
+    }
+  ],
+  "data_restored_to_disk": false,
+  "target_code_executed": false,
+  "target_tests_run": false,
+  "tool_test_suite_run": false
+}

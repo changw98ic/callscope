@@ -1,0 +1,77 @@
+{
+  "kind": "ordinary_saved_source_pipeline_query",
+  "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336",
+  "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+  "policy_hash": "920edf6ba07f0a43821cd940b211848556ace921d2d8c3e76f05face4dc73ef0",
+  "contract_hash": "83f83b81bedf603ce438e157e21014ad8bec091e60f5a90317a710a5f5986efc",
+  "contract_hash_matches_current_rule": true,
+  "assessment": "scoped_static_judgment_reproduced",
+  "complete_assessment": true,
+  "full_goal_supported": true,
+  "obligations": [
+    {
+      "id": "P1",
+      "status": "supported",
+      "gaps": [],
+      "necessary_gaps": []
+    },
+    {
+      "id": "P2",
+      "status": "supported",
+      "gaps": [],
+      "necessary_gaps": []
+    },
+    {
+      "id": "P3",
+      "status": "supported",
+      "gaps": [],
+      "necessary_gaps": []
+    },
+    {
+      "id": "P4",
+      "status": "supported",
+      "gaps": [],
+      "necessary_gaps": []
+    },
+    {
+      "id": "P5",
+      "status": "supported",
+      "gaps": [],
+      "necessary_gaps": []
+    },
+    {
+      "id": "P6",
+      "status": "supported",
+      "gaps": [],
+      "necessary_gaps": []
+    }
+  ],
+  "necessary_gaps": [],
+  "analysis_gaps": [],
+  "evidence_counts": {
+    "source_facts": 3423,
+    "value_expressions": 8971,
+    "flow_links": 1966
+  },
+  "summary_budget": {
+    "operations": 12575,
+    "limit": 50000,
+    "functions": 92,
+    "function_limit": 256
+  },
+  "current_files_sha256": {
+    "callscope/pipeline_flow.py": "5cdc18c91500132491aa53e01ea11de82307dd230cdad92a82fe76a4de8e7bdc",
+    "callscope/pipeline_channels.py": "32df938a2b82ec32bd57bb6d8638e2e54658d031d74019507e9fc8014f89bfa4",
+    "callscope/lexical_bindings.py": "4f53f2750d52aebdfac7488b086a221ae0b27b88d1e30eb7da85c1ebdad1a56d",
+    "callscope/semantic_sources.py": "dab9108e47787b451665563bc08aab62e906eb0e02d3f77c2f70182bf00f5381",
+    "callscope/field_summaries.py": "8ecda3c6be660b4d911b22b0c5dd1f586ecdd748bb31930071e8ad4a4f52d7d8",
+    "callscope/semantic_ir.py": "8b220fb90d07656289e175cc0aa3d92bec5f7d0daa357322e825f71039320c56",
+    "callscope/completion_summaries.py": "35dd3124f2bd6a33156d9e48a716172f11fff79ec90d1e0340166dc34510c77e",
+    "reports/astra-iteration10/pipeline-rule.json": "8f23207750b10863eef85b3ab22bdb61549243e2afc03eb5d0c1bfa86ccb5da8",
+    "reports/astra-iteration10/observe_pipeline_sources.py": "2c13593dafa5b721512b14975a3475c3d599f5f9e85a766904f91668d48938fb"
+  },
+  "loaded_file_hash_recording": "Current files checked immediately after this query; fresh unified freeze/cold-warm scans independently attest loaded tool identity.",
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

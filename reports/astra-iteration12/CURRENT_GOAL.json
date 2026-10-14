@@ -1,0 +1,120 @@
+{
+  "objective": "以最初两份完整 Astra 报告的实际已读有限命题为依据，完成可重复的纯静态功能分析、具体职责解释及文档部署对照。版本发布不是停止条件。",
+  "state": "completed_original_report_finite_static_scope",
+  "reference_reports": [
+    "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+    "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+  ],
+  "stop_only_when": [
+    "原报告实际已读的有限命题已在正式自动产物中得到对应证据或解释；发现新遗漏后继续实现",
+    "原五项具体判断与必要关系、原二十六项观察的口径保留并实际比较",
+    "新功能进入产品正常分析和报告接口，并完成两库正式静态分析、身份核对和证据下钻",
+    "原明确未审范围和更强命题边界保留，不将它们扩大为新验收要求"
+  ],
+  "non_completion_signals": [
+    "完成一个版本、生成一份报告或结束一个子任务",
+    "五项判断或三十一条查询的完成计数",
+    "解析比例、图规模、事实数量或章节数量"
+  ],
+  "constraints": {
+    "target_execution": false,
+    "target_import": false,
+    "target_tests_build_install": false,
+    "synthetic_fixtures_and_test_suites": false,
+    "repeat_astra_approval": false,
+    "reference_report_used_as_detector_answer": false,
+    "preserve_all_previous_formal_artifacts": true
+  },
+  "goal_interface": {
+    "callable_slash_goal_exposed_in_current_tools": false,
+    "activation_claimed": false
+  },
+  "source_freeze": {
+    "file": "../astra-iteration12-scope2/CORE_FREEZE.json",
+    "package_version": "0.14.0",
+    "python_source_files": 65,
+    "tool_source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc"
+  },
+  "current_formal_work": {
+    "directory": "../astra-iteration12-scope2",
+    "repositories": [
+      "codepatchbay",
+      "winwincode"
+    ],
+    "status": "formal_saved_artifacts_published",
+    "complete": true,
+    "formal_original_clause_readback_complete": true,
+    "current_step": "completed"
+  },
+  "remaining_original_finite_content": [],
+  "updated_at": "2026-10-14T10:02:34.483809+00:00",
+  "preserved_superseded_attempt": {
+    "directory": ".",
+    "record": "FORMAL_ATTEMPT_SUPERSEDED.json",
+    "completion_claimed": false
+  },
+  "remaining_verification": [],
+  "completed_repository_publications": [
+    {
+      "repository": "codepatchbay",
+      "integration_file": "../astra-iteration12-scope2/codepatchbay-integration.json",
+      "snapshot_id": "dd5d4e3cc349b57eb87d0f810a415560bfd5f6b1022a990a35190a44d0e50ebb",
+      "database_closed": true,
+      "shared_reference_failures": 0
+    },
+    {
+      "repository": "winwincode",
+      "integration_file": "../astra-iteration12-scope2/winwincode-integration.json",
+      "snapshot_id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+      "database_closed": true,
+      "shared_reference_failures": 0
+    }
+  ],
+  "completed_work": [
+    "文档中的具体绝对归属表述与所选 Device 部署和模型路由来源的有限比较",
+    "从实际源码操作、字段、消息和接口自动生成两库具体职责与边界解释",
+    "核对原报告已读子句，补齐仍缺少自动证据或解释的实际内容",
+    "Task read/projection and frozen candidate/role/evidence-source finite contract source selection integrated in both formal reports",
+    "both full cold/warm scans, original finite content readback, historical observations, identities, normal CLI export, release and current documentation closed"
+  ],
+  "previous_gap_record": "reports/astra-iteration11/REPORT_SCOPE_GAPS.md",
+  "formal_directory": "../astra-iteration12-scope2",
+  "completion": {
+    "complete": true,
+    "scope": "original_already_read_finite_source_report_content",
+    "basis": "../astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.json",
+    "release_report": "../astra-iteration12-scope2/REPORT.md",
+    "documentation_readback": "../astra-iteration12-scope2/DOCUMENTATION_READBACK.json",
+    "whole_program_functional_completeness_proven": false,
+    "runtime_or_business_success_verified": false,
+    "exceeds_all_original_report_content_claimed": false,
+    "native_slash_goal_activation_claimed": false,
+    "closed_from_version_or_item_count": false
+  },
+  "completion_artifacts": [
+    {
+      "file": "../astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.json",
+      "sha256": "a6524127b107948075e9af21127f9c9f5e5a0f35cb2e85b71c3e3d5504a9b2f6"
+    },
+    {
+      "file": "../astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md",
+      "sha256": "87222021d5ec43fb65ec4ceb9cd4feae917bc6326fe76d2fb6663660cb5ec28d"
+    },
+    {
+      "file": "../astra-iteration12-scope2/REPORT_SCOPE_GAPS.md",
+      "sha256": "7fd0974129c2cf54863114002085259c06581f73175d62a29cd6aea53adaff39"
+    },
+    {
+      "file": "../astra-iteration12-scope2/REPORT.md",
+      "sha256": "c967974adad26203dcec358b85937cb508ac7e095c4d82723e9f5d5216dcf1f3"
+    },
+    {
+      "file": "../astra-iteration12-scope2/RELEASE_REPORT_INPUTS.json",
+      "sha256": "e930a37433b499743bcde6af2139e84fc18aee46d918586174c1fee4c095f383"
+    },
+    {
+      "file": "../astra-iteration12-scope2/DOCUMENTATION_READBACK.json",
+      "sha256": "e498ffd83b4051844a988b1d30e1da7b859e44a45cf3d2731c9d07da2c8ea1e5"
+    }
+  ]
+}

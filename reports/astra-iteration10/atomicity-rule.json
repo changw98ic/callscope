@@ -1,0 +1,162 @@
+{
+  "id": "cpb-astra-active-key-complete",
+  "type": "protected_deduplication",
+  "severity": "medium",
+  "facade": {
+    "owner": {
+      "file": "cli/commands/fix.ts",
+      "symbol": "run"
+    },
+    "read": {
+      "callee": "deps.loadQueue",
+      "resource_argument_index": 0,
+      "implementation": {
+        "file": "server/services/hub/hub-queue.ts",
+        "symbol": "loadQueue"
+      }
+    },
+    "select": {
+      "callee": "selectIdempotentEntry",
+      "implementation": {
+        "file": "core/contracts/idempotency.ts",
+        "symbol": "selectIdempotentEntry"
+      }
+    },
+    "write": {
+      "callee": "deps.enqueue",
+      "resource_argument_index": 0
+    }
+  },
+  "authority": {
+    "file": "server/services/hub/hub-queue.ts",
+    "symbol": "enqueue"
+  },
+  "dependency_assembly": {
+    "file": "cli/commands/fix.ts",
+    "symbol": "resolveDeps"
+  },
+  "predicate_sources": {
+    "terminal_predicate": {
+      "file": "core/contracts/idempotency.ts",
+      "symbol": "isTerminalQueueStatus"
+    },
+    "terminal_values": {
+      "file": "core/contracts/idempotency.ts",
+      "symbol": "TERMINAL_QUEUE_STATUSES"
+    },
+    "key": {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "entryKey"
+    }
+  },
+  "protection": {
+    "id": "cpb-directory-owner-queue-v1",
+    "version": "1",
+    "kind": "directory_owner_lock",
+    "wrappers": [
+      {
+        "owner": {
+          "file": "server/services/hub/hub-queue.ts",
+          "symbol": "withQueueMutation"
+        },
+        "callee": "withQueueLock",
+        "callback_parameter_index": 1,
+        "callback_argument_index": 1,
+        "resource_parameter_index": 0,
+        "resource_argument_index": 0
+      }
+    ],
+    "lifecycle": {
+      "owner": {
+        "file": "server/services/hub/hub-queue.ts",
+        "symbol": "withQueueLock"
+      },
+      "callback_parameter_index": 1,
+      "resource_parameter_index": 0,
+      "acquire": {
+        "callee": "mkdir",
+        "resource_argument_index": 0,
+        "resource_binding": "lockDir"
+      },
+      "fresh_read": {
+        "callee": "loadLocalQueue",
+        "resource_argument_index": 0
+      },
+      "persist": {
+        "callee": "saveLocalQueue",
+        "resource_argument_index": 0
+      },
+      "release": {
+        "callee": "releaseQueueLockExact",
+        "resource_argument_index": 0
+      },
+      "acquired_binding": "acquired",
+      "process_fence": {
+        "callee": "withQueueProcessFence",
+        "implementation": {
+          "file": "server/services/hub/hub-queue.ts",
+          "symbol": "withQueueProcessFence"
+        },
+        "callback_argument_index": 1
+      }
+    }
+  },
+  "transition": {
+    "owner": {
+      "file": "server/orchestrator/hub-orchestrator.ts",
+      "symbol": "HubOrchestrator.tick"
+    },
+    "callee": "updateEntry",
+    "patch_argument_index": 2,
+    "guard_argument_index": 3
+  },
+  "resource": {
+    "id": "hub-queue",
+    "authority": "source_declared",
+    "conditions": [
+      "在默认依赖装配下比较同一逻辑hubRoot队列；物理路径别名与跨进程部署身份未证明。",
+      "目录owner锁协议从成功取得到释放期间具有互斥语义；完整锁和文件系统正确性未经静态认证。"
+    ]
+  },
+  "provenance": {
+    "authority": "reviewer",
+    "reviewer": "CallScope independent static architecture review",
+    "author_approved": false,
+    "source_doc": "reports/astra-iteration4/GOAL_ACCEPTANCE.md",
+    "note": "CPB-03 A1..A7 original obligations; source selectors plus registered conditional models and source product invariant only, no precomputed predicates, relations or schedules."
+  },
+  "applicability": {
+    "kind": "conditional",
+    "conditions": [
+      "Only default nullish ctx.deps selections and successful normal source-created receiver paths are judged.",
+      "Actual source relations, protected operations and conditional interleavings are computed from authenticated saved AST.",
+      "Physical filesystem/lock correctness, distinct generated ids and actual passing runtime gates remain explicit trusted-model/environment conditions."
+    ],
+    "counterexamples": [
+      "顺序预查已见活动记录会复用；权威写入已见同复合key的pending记录也会复用。",
+      "读、写、锁、调度guard或状态更新失败可能阻止提交，不能推导任意双提交必然重复。"
+    ]
+  },
+  "completion": {
+    "models": [
+      "ecmascript-literal-module-import-v1",
+      "ecmascript-plain-json-record-array-v1",
+      "ecmascript-source-closed-instance-v1",
+      "node-logical-path-identity-v1",
+      "directory-owner-lock-normal-operation-v1",
+      "atomic-file-normal-publish-v1",
+      "finite-queue-interleaving-v1",
+      "node-source-hash-key-v1"
+    ],
+    "invariant": {
+      "kind": "reuse_nonterminal_same_project_key",
+      "project_path": [
+        "projectId"
+      ],
+      "key_path": [
+        "metadata",
+        "queueDedupeKey"
+      ]
+    }
+  }
+}

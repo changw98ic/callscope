@@ -1,0 +1,1269 @@
+{
+  "kind": "frozen_scope2_policy_extension_from_v13",
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-14T08:40:29.502547+00:00",
+  "previous_directory": "reports/astra-iteration11",
+  "current_directory": "reports/astra-iteration12-scope2",
+  "comparison_method": "Read the actual frozen JSON files; compare object values and each existing rule by exact id. Policy-file SHA256 authenticates original bytes; canonical object hashes below only identify the documented JSON values and are not the effective-policy normalization hash.",
+  "current_freeze": {
+    "file": "reports/astra-iteration12-scope2/CORE_FREEZE.json",
+    "sha256": "17ec8c6a86863e1fc3b9ec8961188dd8d3ba5d2081da0721dfb027844b9c4059",
+    "tool_identity": {
+      "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+      "graph_backend": "axon-graph-core-1",
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+    },
+    "python_source_file_count": 65,
+    "publication_series": "v14",
+    "package_version": "0.14.0"
+  },
+  "completion_status": "This auxiliary comparison does not read or decide in-progress formal scan results.",
+  "same_policy_precision_or_performance_comparison": false,
+  "rule_or_locator_counts_are_full_report_coverage_denominators": false,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "database_opened": false,
+  "policy_or_core_modified": false,
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "previous_policy": {
+        "file": "reports/astra-iteration11/codepatchbay-policy.json",
+        "sha256": "10b62fde7dc4980cfd3ed1a84282497b02b088bc160f39c5d14e5d7c946fcfd9"
+      },
+      "current_policy": {
+        "file": "reports/astra-iteration12-scope2/codepatchbay-policy.json",
+        "sha256": "f3f0ba2eecdeb156eea3d4038e5e8ac2dd03b7ee94f9e989b9ce8d9f994a174f",
+        "matches_frozen_policy_file_hash": true,
+        "effective_policy_sha256_from_freeze": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887"
+      },
+      "previous_report_claim_count": 13,
+      "current_report_claim_count": 16,
+      "previous_rule_ids": [
+        "cpb-report-engine-stage-chain",
+        "cpb-report-job-audit-best-effort",
+        "cpb-report-trusted-probe-command-source",
+        "cpb-report-unsupported-probe-evidence",
+        "cpb-report-conditional-delivery-result",
+        "cpb-report-agent-execution-policy",
+        "cpb-report-readiness-abrupt-guard",
+        "cpb-report-completion-gate-conditions",
+        "cpb-report-access-audit-response",
+        "cpb-event-index-projection",
+        "cpb-trusted-command-lineage",
+        "cpb-unsupported-record-retention",
+        "cpb-captured-record-resource-writers"
+      ],
+      "current_rule_ids": [
+        "cpb-report-engine-stage-chain",
+        "cpb-report-job-audit-best-effort",
+        "cpb-report-trusted-probe-command-source",
+        "cpb-report-unsupported-probe-evidence",
+        "cpb-report-conditional-delivery-result",
+        "cpb-report-agent-execution-policy",
+        "cpb-report-readiness-abrupt-guard",
+        "cpb-report-completion-gate-conditions",
+        "cpb-report-access-audit-response",
+        "cpb-event-index-projection",
+        "cpb-trusted-command-lineage",
+        "cpb-unsupported-record-retention",
+        "cpb-captured-record-resource-writers",
+        "cpb-review-fixed-state-lineage",
+        "cpb-finalizer-conditional-publication",
+        "cpb-task-read-projection"
+      ],
+      "preserved_old_rule_count": 13,
+      "unchanged_old_rule_count": 12,
+      "removed_old_rule_ids": [],
+      "added_rules": [
+        {
+          "rule_id": "cpb-review-fixed-state-lineage",
+          "policy_pointer": "/report_claims/13",
+          "type": "conditional_state_lineage",
+          "models": [
+            "captured-normal-statement-control-v1",
+            "finite-conditional-event-lineage-publication-source-v1"
+          ],
+          "sources": [
+            {
+              "role": "completion",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "completeRemediation"
+            },
+            {
+              "role": "callback_runner",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "withHeldWorkflowLockRelease"
+            },
+            {
+              "role": "status_parser",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "parseRemediationStatus"
+            },
+            {
+              "role": "superseder",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "markJobSuperseded"
+            },
+            {
+              "role": "event_writer",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "recordRemediationEvent"
+            },
+            {
+              "role": "lineage_builder",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "createRemediationLineageTask"
+            },
+            {
+              "role": "event_authority",
+              "file": "server/services/event/event-store.ts",
+              "symbol": "appendEvent"
+            },
+            {
+              "role": "queue_authority",
+              "file": "server/services/hub/hub-queue.ts",
+              "symbol": "enqueue"
+            }
+          ],
+          "documents": [],
+          "provenance": {
+            "authority": "original-static-report-benchmark",
+            "reviewer": "captured-conditional-lineage-publication",
+            "author_approved": false,
+            "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md:80",
+            "note": "Declaration locators only; no configured expected event, mode, guard, calls or success."
+          },
+          "applicability": {
+            "kind": "conditional",
+            "conditions": [
+              "Captured authenticated declarations are active and the specific source branch is reached normally.",
+              "Ordinary stable record/closure values and explicitly modeled finite Boolean/enum expressions; all opaque operations before a selected step complete normally."
+            ],
+            "counterexamples": [
+              "Callback activation, persistence, actual queue creation, external authorization and remote effects remain conditional.",
+              "Earlier return/throw branches, alternate states, local/review-bundle paths and generic optional callback configurations remain distinct."
+            ]
+          },
+          "rule_canonical_object_sha256": "1b51ccb973c5a4903418a7d4deb3bd47e6f1529cde67220cc6dbb2eff4c10c9e"
+        },
+        {
+          "rule_id": "cpb-finalizer-conditional-publication",
+          "policy_pointer": "/report_claims/14",
+          "type": "conditional_publication_boundary",
+          "models": [
+            "captured-normal-statement-control-v1",
+            "finite-conditional-event-lineage-publication-source-v1"
+          ],
+          "sources": [
+            {
+              "role": "finalizer",
+              "file": "server/services/auto-finalizer.ts",
+              "symbol": "finalizeSuccessfulQueueEntry"
+            },
+            {
+              "role": "pr_boundary",
+              "file": "server/services/github/github-issues.ts",
+              "symbol": "openDraftPullRequest"
+            },
+            {
+              "role": "push_boundary",
+              "file": "server/services/github/github-issues.ts",
+              "symbol": "pushGithubCommitWithControlledTransport"
+            },
+            {
+              "role": "git_executor",
+              "file": "server/services/github/github-issues.ts",
+              "symbol": "runGit"
+            },
+            {
+              "role": "local_git_executor",
+              "file": "server/services/auto-finalizer.ts",
+              "symbol": "runGit"
+            },
+            {
+              "role": "review_bundle",
+              "file": "server/services/auto-finalizer.ts",
+              "symbol": "finalizeAsReviewBundle"
+            }
+          ],
+          "documents": [],
+          "provenance": {
+            "authority": "original-static-report-benchmark",
+            "reviewer": "captured-conditional-lineage-publication",
+            "author_approved": false,
+            "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md:80",
+            "note": "Declaration locators only; no configured expected event, mode, guard, calls or success."
+          },
+          "applicability": {
+            "kind": "conditional",
+            "conditions": [
+              "Captured authenticated declarations are active and the specific source branch is reached normally.",
+              "Ordinary stable record/closure values and explicitly modeled finite Boolean/enum expressions; all opaque operations before a selected step complete normally."
+            ],
+            "counterexamples": [
+              "Callback activation, persistence, actual queue creation, external authorization and remote effects remain conditional.",
+              "Earlier return/throw branches, alternate states, local/review-bundle paths and generic optional callback configurations remain distinct."
+            ]
+          },
+          "rule_canonical_object_sha256": "936e4f92a5b57922cb128d68a9a6fd579dcf1e05d40fba57c0f7767d45480626"
+        },
+        {
+          "rule_id": "cpb-task-read-projection",
+          "policy_pointer": "/report_claims/15",
+          "type": "guarded_call_sequence",
+          "models": [
+            "captured-normal-statement-control-v1"
+          ],
+          "sources": [
+            {
+              "role": "task_entry",
+              "file": "cli/commands/task.ts",
+              "symbol": "run"
+            },
+            {
+              "role": "project_selection",
+              "file": "cli/commands/task.ts",
+              "symbol": "autoResolveProject"
+            },
+            {
+              "role": "task_render",
+              "file": "cli/commands/task.ts",
+              "symbol": "renderTaskView"
+            },
+            {
+              "role": "task_projection",
+              "file": "server/services/task/task-view.ts",
+              "symbol": "projectTaskView"
+            },
+            {
+              "role": "queue_interface",
+              "file": "server/services/hub/hub-queue.ts",
+              "symbol": "loadQueue"
+            },
+            {
+              "role": "queue_read",
+              "file": "server/services/hub/hub-queue.ts",
+              "symbol": "loadLocalQueue"
+            },
+            {
+              "role": "linked_record_lookup",
+              "file": "server/services/job/job-store.ts",
+              "symbol": "getJobByQueueEntryId"
+            },
+            {
+              "role": "record_filter",
+              "file": "core/contracts/task-view-fields.ts",
+              "symbol": "sanitizeTaskView"
+            }
+          ],
+          "documents": [],
+          "provenance": {
+            "authority": "original-static-report-benchmark",
+            "reviewer": "finite-source-task-operation-extraction",
+            "author_approved": false,
+            "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md:18,34",
+            "note": "Data-only declaration locators; source controls, fields, actual calls and unknown ports are computed independently. Benchmark prose and source comments are not expected answers."
+          },
+          "applicability": {
+            "kind": "conditional",
+            "conditions": [
+              "The selected captured declarations are active and the recorded source expressions are reached normally.",
+              "Recorded statement order is conditional on preceding asynchronous calls returning normally; opaque dependency effects and current object values remain unknown."
+            ],
+            "counterexamples": [
+              "Missing input, missing projected records, read failures and callback activation remain distinct source branches.",
+              "The selected facade and projection source do not certify transitive purity, absence of effects in all dependencies, authorization, external I/O success or complete business semantics."
+            ]
+          },
+          "rule_canonical_object_sha256": "f59ce9e3b755b5501d9be68fbe4f1aa7bb590a916f61240c0384eb228a3320d6"
+        }
+      ],
+      "changed_old_rules": [
+        {
+          "rule_id": "cpb-report-trusted-probe-command-source",
+          "previous_policy_pointer": "/report_claims/2",
+          "current_policy_pointer": "/report_claims/2",
+          "unchanged_rule_object": false,
+          "changed_rule_fields": [
+            "/sources"
+          ],
+          "old_source_locator_count": 7,
+          "current_source_locator_count": 11,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [
+            {
+              "current_policy_pointer": "/report_claims/2/sources/7",
+              "role": "scope_counter",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "scopeMatches"
+            },
+            {
+              "current_policy_pointer": "/report_claims/2/sources/8",
+              "role": "scope_predicate",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "scopePathMatches"
+            },
+            {
+              "current_policy_pointer": "/report_claims/2/sources/9",
+              "role": "scope_path_normalization",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "posixify"
+            },
+            {
+              "current_policy_pointer": "/report_claims/2/sources/10",
+              "role": "scope_text_normalization",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "text"
+            }
+          ],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "73c689fc8887920388adb2d510905f47bd7a6b694ffdcbb07a697dae9c6cc7e3",
+          "current_rule_canonical_object_sha256": "534a1fa43be3f4e8995125c76ed1f18a1d688986db0a5c4280821b5605c77dd8"
+        }
+      ],
+      "preserved_old_rules": [
+        {
+          "rule_id": "cpb-report-engine-stage-chain",
+          "previous_policy_pointer": "/report_claims/0",
+          "current_policy_pointer": "/report_claims/0",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 2,
+          "current_source_locator_count": 2,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "2681eba373d648da292db33557b0c022811d6c73536837fbf4330c95ae040b0c",
+          "current_rule_canonical_object_sha256": "2681eba373d648da292db33557b0c022811d6c73536837fbf4330c95ae040b0c"
+        },
+        {
+          "rule_id": "cpb-report-job-audit-best-effort",
+          "previous_policy_pointer": "/report_claims/1",
+          "current_policy_pointer": "/report_claims/1",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 1,
+          "current_source_locator_count": 1,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "6483ec603109ab574690412cf2a1df998f8d1d07f4d4d3f8f0f3b8326732eea7",
+          "current_rule_canonical_object_sha256": "6483ec603109ab574690412cf2a1df998f8d1d07f4d4d3f8f0f3b8326732eea7"
+        },
+        {
+          "rule_id": "cpb-report-trusted-probe-command-source",
+          "previous_policy_pointer": "/report_claims/2",
+          "current_policy_pointer": "/report_claims/2",
+          "unchanged_rule_object": false,
+          "changed_rule_fields": [
+            "/sources"
+          ],
+          "old_source_locator_count": 7,
+          "current_source_locator_count": 11,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [
+            {
+              "current_policy_pointer": "/report_claims/2/sources/7",
+              "role": "scope_counter",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "scopeMatches"
+            },
+            {
+              "current_policy_pointer": "/report_claims/2/sources/8",
+              "role": "scope_predicate",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "scopePathMatches"
+            },
+            {
+              "current_policy_pointer": "/report_claims/2/sources/9",
+              "role": "scope_path_normalization",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "posixify"
+            },
+            {
+              "current_policy_pointer": "/report_claims/2/sources/10",
+              "role": "scope_text_normalization",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "text"
+            }
+          ],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "73c689fc8887920388adb2d510905f47bd7a6b694ffdcbb07a697dae9c6cc7e3",
+          "current_rule_canonical_object_sha256": "534a1fa43be3f4e8995125c76ed1f18a1d688986db0a5c4280821b5605c77dd8"
+        },
+        {
+          "rule_id": "cpb-report-unsupported-probe-evidence",
+          "previous_policy_pointer": "/report_claims/3",
+          "current_policy_pointer": "/report_claims/3",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 2,
+          "current_source_locator_count": 2,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "fc5ae93e52fc8c8866118225714c2285519e734c976b468f6d5f67a2799651a3",
+          "current_rule_canonical_object_sha256": "fc5ae93e52fc8c8866118225714c2285519e734c976b468f6d5f67a2799651a3"
+        },
+        {
+          "rule_id": "cpb-report-conditional-delivery-result",
+          "previous_policy_pointer": "/report_claims/4",
+          "current_policy_pointer": "/report_claims/4",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 13,
+          "current_source_locator_count": 13,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "d7c74bf317abcfa8e7d43d77f499d53b734d61a73d5825dbd425523b17b0266f",
+          "current_rule_canonical_object_sha256": "d7c74bf317abcfa8e7d43d77f499d53b734d61a73d5825dbd425523b17b0266f"
+        },
+        {
+          "rule_id": "cpb-report-agent-execution-policy",
+          "previous_policy_pointer": "/report_claims/5",
+          "current_policy_pointer": "/report_claims/5",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 18,
+          "current_source_locator_count": 18,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "4c37e4f4567405a5a0a4a65028265317948accd4a59ad9290263ee91539cf271",
+          "current_rule_canonical_object_sha256": "4c37e4f4567405a5a0a4a65028265317948accd4a59ad9290263ee91539cf271"
+        },
+        {
+          "rule_id": "cpb-report-readiness-abrupt-guard",
+          "previous_policy_pointer": "/report_claims/6",
+          "current_policy_pointer": "/report_claims/6",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 2,
+          "current_source_locator_count": 2,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "e71f8f913d6ff26c97dddec09129230e3dd7b74f3cdbd5b58078c2d514efcf04",
+          "current_rule_canonical_object_sha256": "e71f8f913d6ff26c97dddec09129230e3dd7b74f3cdbd5b58078c2d514efcf04"
+        },
+        {
+          "rule_id": "cpb-report-completion-gate-conditions",
+          "previous_policy_pointer": "/report_claims/7",
+          "current_policy_pointer": "/report_claims/7",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 3,
+          "current_source_locator_count": 3,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "e407a4a589cdb222407452aab78cc5b9e9cf690a062f2449841ed857ca620614",
+          "current_rule_canonical_object_sha256": "e407a4a589cdb222407452aab78cc5b9e9cf690a062f2449841ed857ca620614"
+        },
+        {
+          "rule_id": "cpb-report-access-audit-response",
+          "previous_policy_pointer": "/report_claims/8",
+          "current_policy_pointer": "/report_claims/8",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 3,
+          "current_source_locator_count": 3,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "17b567d65e7855f08762d64324f3d6392931e61242eaa384cbb8fc2935589132",
+          "current_rule_canonical_object_sha256": "17b567d65e7855f08762d64324f3d6392931e61242eaa384cbb8fc2935589132"
+        },
+        {
+          "rule_id": "cpb-event-index-projection",
+          "previous_policy_pointer": "/report_claims/9",
+          "current_policy_pointer": "/report_claims/9",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 20,
+          "current_source_locator_count": 20,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "d70b354803429c9934a2eaec4fb425b91711daaefac89dd1a2c6f5307cc74bff",
+          "current_rule_canonical_object_sha256": "d70b354803429c9934a2eaec4fb425b91711daaefac89dd1a2c6f5307cc74bff"
+        },
+        {
+          "rule_id": "cpb-trusted-command-lineage",
+          "previous_policy_pointer": "/report_claims/10",
+          "current_policy_pointer": "/report_claims/10",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 10,
+          "current_source_locator_count": 10,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "6551b25c23ee7bfb70680dbc8084bc360e6f058663f186d0e031110af4102b27",
+          "current_rule_canonical_object_sha256": "6551b25c23ee7bfb70680dbc8084bc360e6f058663f186d0e031110af4102b27"
+        },
+        {
+          "rule_id": "cpb-unsupported-record-retention",
+          "previous_policy_pointer": "/report_claims/11",
+          "current_policy_pointer": "/report_claims/11",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 6,
+          "current_source_locator_count": 6,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "78256a93120f064d0fcc2d6c3a202000fb66798662338d34a35f81a41c870c8d",
+          "current_rule_canonical_object_sha256": "78256a93120f064d0fcc2d6c3a202000fb66798662338d34a35f81a41c870c8d"
+        },
+        {
+          "rule_id": "cpb-captured-record-resource-writers",
+          "previous_policy_pointer": "/report_claims/12",
+          "current_policy_pointer": "/report_claims/12",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 10,
+          "current_source_locator_count": 10,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "76d795b5ce1ea3b1e083232614cb33b1b07a7a6f97efcf43b1b9c1a7e8716f83",
+          "current_rule_canonical_object_sha256": "76d795b5ce1ea3b1e083232614cb33b1b07a7a6f97efcf43b1b9c1a7e8716f83"
+        }
+      ],
+      "top_level_changed_sections": [
+        "report_claims"
+      ],
+      "other_configuration_checks": [
+        {
+          "section": "analysis",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4e9d6713b1332ae3d3282801dde1e41992b74f3937bbcb6b976420abdd331578",
+          "current_canonical_object_sha256": "4e9d6713b1332ae3d3282801dde1e41992b74f3937bbcb6b976420abdd331578"
+        },
+        {
+          "section": "atomicity_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "f70370c1b113635d69b4d1b3138ddc037adb8759568b619041f26fd98374c7fc",
+          "current_canonical_object_sha256": "f70370c1b113635d69b4d1b3138ddc037adb8759568b619041f26fd98374c7fc"
+        },
+        {
+          "section": "budget_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "283ca74695c16d20baa135ed60869a32f5e6b8faac54a12725abc8b4d32dc2f1",
+          "current_canonical_object_sha256": "283ca74695c16d20baa135ed60869a32f5e6b8faac54a12725abc8b4d32dc2f1"
+        },
+        {
+          "section": "entrypoints",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "193133d57101d965379e85070cd6c9218c00f27c71f65e9dc5544dc0598a6240",
+          "current_canonical_object_sha256": "193133d57101d965379e85070cd6c9218c00f27c71f65e9dc5544dc0598a6240"
+        },
+        {
+          "section": "evaluation",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "c4af98776fca9e586ef18dcd02eb3283da7f8509fe202c26f1812351afe6b5bd",
+          "current_canonical_object_sha256": "c4af98776fca9e586ef18dcd02eb3283da7f8509fe202c26f1812351afe6b5bd"
+        },
+        {
+          "section": "field_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4700854c8f75f06000f290f05a8367670c5e943f6665e29dbf2db004bf8aad49",
+          "current_canonical_object_sha256": "4700854c8f75f06000f290f05a8367670c5e943f6665e29dbf2db004bf8aad49"
+        },
+        {
+          "section": "goal_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "a7372e0e7255039ea122577ac37e29862ade03ec080381a3826519a226b2b897",
+          "current_canonical_object_sha256": "a7372e0e7255039ea122577ac37e29862ade03ec080381a3826519a226b2b897"
+        },
+        {
+          "section": "layers",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "current_canonical_object_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "section": "navigation_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "current_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "section": "project",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "ae145bde42470a7c7f5c929cf47119dc6b857f04043ec799324f56353ea14a68",
+          "current_canonical_object_sha256": "ae145bde42470a7c7f5c929cf47119dc6b857f04043ec799324f56353ea14a68"
+        },
+        {
+          "section": "rules",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "dee4b8a471b873131a54fe40f8b19532ee72d41bf65bebf5ea058b3391399328",
+          "current_canonical_object_sha256": "dee4b8a471b873131a54fe40f8b19532ee72d41bf65bebf5ea058b3391399328"
+        },
+        {
+          "section": "schema_version",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "current_canonical_object_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "section": "static_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "7bd4968715b07d431419f8f940d698a28fa6955e917ed09e248ee5c8a5e3d625",
+          "current_canonical_object_sha256": "7bd4968715b07d431419f8f940d698a28fa6955e917ed09e248ee5c8a5e3d625"
+        },
+        {
+          "section": "value_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "07088fba8e8ecaf2dffd0eb5d9bca37f34d565d626ab7d430bbf3b21c792d546",
+          "current_canonical_object_sha256": "07088fba8e8ecaf2dffd0eb5d9bca37f34d565d626ab7d430bbf3b21c792d546"
+        }
+      ],
+      "all_other_configuration_values_unchanged": true,
+      "all_old_source_locators_preserved": true,
+      "all_old_document_locators_preserved": true
+    },
+    {
+      "repository": "winwincode",
+      "previous_policy": {
+        "file": "reports/astra-iteration11/winwincode-policy.json",
+        "sha256": "37012e03e3b276e30d511a5f479e05d6f42a5faddf051486c36b126642c9ea38"
+      },
+      "current_policy": {
+        "file": "reports/astra-iteration12-scope2/winwincode-policy.json",
+        "sha256": "24dd004b2130a963fa2e60724203c60e41c87ee780123bc27eccffc71bae3005",
+        "matches_frozen_policy_file_hash": true,
+        "effective_policy_sha256_from_freeze": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499"
+      },
+      "previous_report_claim_count": 18,
+      "current_report_claim_count": 20,
+      "previous_rule_ids": [
+        "wwc-report-workrun-state-guards",
+        "wwc-report-submission-intent-kernel-order",
+        "wwc-report-device-provider-deployment",
+        "wwc-report-worker-bootstrap-entries",
+        "wwc-report-worker-production-construction",
+        "wwc-report-worker-typed-dispatch",
+        "wwc-report-production-adapter-embedded-kernel",
+        "wwc-report-adapter-durable-exact-turn",
+        "wwc-report-kernel-create-session-interface",
+        "wwc-report-kernel-submit-turn-interface",
+        "wwc-report-kernel-reconcile-exact-interface",
+        "wwc-report-chat-delivery-workrun-requests",
+        "wwc-report-workrun-finite-selection",
+        "wwc-report-chat-retained-request-identities",
+        "wwc-report-worker-adapter-record-identities",
+        "wwc-report-outbox-ack-correlation-fields",
+        "wwc-browser-continuation-lifecycle",
+        "wwc-captured-record-resource-writers"
+      ],
+      "current_rule_ids": [
+        "wwc-report-workrun-state-guards",
+        "wwc-report-submission-intent-kernel-order",
+        "wwc-report-device-provider-deployment",
+        "wwc-report-worker-bootstrap-entries",
+        "wwc-report-worker-production-construction",
+        "wwc-report-worker-typed-dispatch",
+        "wwc-report-production-adapter-embedded-kernel",
+        "wwc-report-adapter-durable-exact-turn",
+        "wwc-report-kernel-create-session-interface",
+        "wwc-report-kernel-submit-turn-interface",
+        "wwc-report-kernel-reconcile-exact-interface",
+        "wwc-report-chat-delivery-workrun-requests",
+        "wwc-report-workrun-finite-selection",
+        "wwc-report-chat-retained-request-identities",
+        "wwc-report-worker-adapter-record-identities",
+        "wwc-report-outbox-ack-correlation-fields",
+        "wwc-browser-continuation-lifecycle",
+        "wwc-captured-record-resource-writers",
+        "wwc-document-device-provider-deployment-scope",
+        "wwc-delivery-evidence-frozen-contract-slice"
+      ],
+      "preserved_old_rule_count": 18,
+      "unchanged_old_rule_count": 18,
+      "removed_old_rule_ids": [],
+      "added_rules": [
+        {
+          "rule_id": "wwc-document-device-provider-deployment-scope",
+          "policy_pointer": "/report_claims/18",
+          "type": "document_deployment_consistency",
+          "models": [
+            "captured-normal-statement-control-v1",
+            "captured-document-deployment-qualified-source-v1"
+          ],
+          "sources": [
+            {
+              "role": "server_boundary",
+              "file": "crates/winwincode-server/src/main.rs",
+              "symbol": "<DeviceModelBoundary as winwincode_control_plane::DurableExecutionPortDelegate>.accept"
+            },
+            {
+              "role": "worker_bootstrap",
+              "file": "crates/winwincode-worker/src/main.rs",
+              "symbol": "run_worker"
+            },
+            {
+              "role": "worker_installation",
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "symbol": "WorkerMain.with_device_providers"
+            },
+            {
+              "role": "worker_route",
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "symbol": "WorkerMain.send_execution_message"
+            },
+            {
+              "role": "device_send",
+              "file": "crates/winwincode-worker/src/device_model.rs",
+              "symbol": "DeviceModels.send"
+            },
+            {
+              "role": "store_open",
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "symbol": "DeviceProviderStore.open"
+            },
+            {
+              "role": "model_execute",
+              "file": "crates/winwincode-provider/src/device_model.rs",
+              "symbol": "DeviceProviderStore.execute_model"
+            },
+            {
+              "role": "model_invoke",
+              "file": "crates/winwincode-provider/src/device_model.rs",
+              "symbol": "DeviceProviderStore.invoke_model"
+            },
+            {
+              "role": "secret_resolver",
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "symbol": "DeviceProviderStore.resolve"
+            },
+            {
+              "role": "secret_constructor",
+              "file": "crates/winwincode-provider/src/types.rs",
+              "symbol": "ResolvedSecret.from_bytes"
+            },
+            {
+              "role": "provider_factory",
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "symbol": "adapter"
+            },
+            {
+              "role": "provider_open",
+              "file": "crates/winwincode-provider/src/provider_https_sse.rs",
+              "symbol": "<HttpsSseProviderAdapter as ProviderAdapterPort>.open"
+            }
+          ],
+          "documents": [
+            {
+              "role": "architecture",
+              "file": "docs/architecture.md"
+            }
+          ],
+          "provenance": {
+            "authority": "captured-document-and-source-comparison",
+            "reviewer": "finite-qualified-source-relations",
+            "author_approved": false,
+            "source_doc": "docs/architecture.md",
+            "note": "Document and source selectors are locators only. No expected clauses, paths, predicates or comparison result is configured."
+          },
+          "applicability": {
+            "kind": "conditional",
+            "conditions": [
+              "Selected document bytes, CST declarations and source bindings are authenticated in the same saved snapshot.",
+              "Selected Device composition, fallible prefixes and deferred callbacks reach the recorded source operations normally; this is a source-model comparison."
+            ],
+            "counterexamples": [
+              "Control Plane-internal uniqueness is not automatically a whole-project claim; Device and Server deployment scopes remain distinct.",
+              "Long-term credential lifetime, external provider success and actual secret contents remain unknown. Typed model-stream messages may still be used by a Device-local path."
+            ]
+          },
+          "rule_canonical_object_sha256": "68eabab1ff7daab8a8d39e358f61cb1bab4f0064acf4d985a72ea146afd83178"
+        },
+        {
+          "rule_id": "wwc-delivery-evidence-frozen-contract-slice",
+          "policy_pointer": "/report_claims/19",
+          "type": "guarded_call_sequence",
+          "models": [
+            "captured-normal-statement-control-v1"
+          ],
+          "sources": [
+            {
+              "role": "verdict_root",
+              "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+              "symbol": "resolve_production_verdict"
+            },
+            {
+              "role": "verification_runtime",
+              "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+              "symbol": "resolve_verification_runtime"
+            },
+            {
+              "role": "role_requirements",
+              "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+              "symbol": "required_roles"
+            },
+            {
+              "role": "finding_sources",
+              "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+              "symbol": "resolve_findings"
+            },
+            {
+              "role": "source_event_lookup",
+              "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+              "symbol": "exact_source_event"
+            },
+            {
+              "role": "canonical_evidence",
+              "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+              "symbol": "resolve_delivery_evidence"
+            },
+            {
+              "role": "direct_candidate_source",
+              "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+              "symbol": "resolve_direct_candidate_source"
+            },
+            {
+              "role": "runtime_source",
+              "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+              "symbol": "resolve_runtime_source"
+            },
+            {
+              "role": "runtime_terminal",
+              "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+              "symbol": "validate_runtime_terminal"
+            },
+            {
+              "role": "checkout_guard",
+              "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+              "symbol": "validate_checkout_attestation"
+            },
+            {
+              "role": "runtime_identity",
+              "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+              "symbol": "runtime_source_identity"
+            },
+            {
+              "role": "checkout_capture",
+              "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+              "symbol": "checkout_attestation_from_snapshot"
+            },
+            {
+              "role": "runtime_capture",
+              "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+              "symbol": "accepted_runtime_source"
+            },
+            {
+              "role": "frozen_commit_accessor",
+              "file": "crates/winwincode-delivery/src/domain/candidate.rs",
+              "symbol": "FrozenDeliveryCandidate.candidate_commit_id"
+            }
+          ],
+          "documents": [],
+          "provenance": {
+            "authority": "selected-production-delivery-contract-sources",
+            "reviewer": "captured-normal-source-inventory",
+            "author_approved": false,
+            "source_doc": "crates/winwincode-delivery/src/domain/evidence.rs",
+            "note": "Selectors locate existing production declarations only. No expected record fields, guard predicates, call edges, accepted roles or runtime outcome is configured."
+          },
+          "applicability": {
+            "kind": "conditional",
+            "conditions": [
+              "Only selected captured production Rust declarations, record operands and explicit source guards are inventoried.",
+              "Normal continuation excludes propagated Result errors and explicit rejection branches; no all-path reachability or physical effect is inferred."
+            ],
+            "counterexamples": [
+              "The declaration or transport of a role/lease/fencing/source field does not establish caller authority, runtime authenticity, executor permissions or a complete publish boundary.",
+              "Stored input, derived Evidence classifications and frozen candidate references retain their own provenance; actual runtime event truth and command success remain unknown."
+            ]
+          },
+          "rule_canonical_object_sha256": "c6be50041b5c199b7651d7c194e234831a8ba5f856fa6aaf2badf19f4a580727"
+        }
+      ],
+      "changed_old_rules": [],
+      "preserved_old_rules": [
+        {
+          "rule_id": "wwc-report-workrun-state-guards",
+          "previous_policy_pointer": "/report_claims/0",
+          "current_policy_pointer": "/report_claims/0",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 2,
+          "current_source_locator_count": 2,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "4dea97eaef73bc71a7b9fa6b661c2e43072b5b4286d050d6f25f0204d24ac808",
+          "current_rule_canonical_object_sha256": "4dea97eaef73bc71a7b9fa6b661c2e43072b5b4286d050d6f25f0204d24ac808"
+        },
+        {
+          "rule_id": "wwc-report-submission-intent-kernel-order",
+          "previous_policy_pointer": "/report_claims/1",
+          "current_policy_pointer": "/report_claims/1",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 1,
+          "current_source_locator_count": 1,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "27aaf104ab473975b095862b3e713cb8a0258ff2ae99b0f135710662f48e4f41",
+          "current_rule_canonical_object_sha256": "27aaf104ab473975b095862b3e713cb8a0258ff2ae99b0f135710662f48e4f41"
+        },
+        {
+          "rule_id": "wwc-report-device-provider-deployment",
+          "previous_policy_pointer": "/report_claims/2",
+          "current_policy_pointer": "/report_claims/2",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 4,
+          "current_source_locator_count": 4,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "d63c620940acb45d4a8eeac4137486a953e3fbe9e67755f9ff31455856e5ed94",
+          "current_rule_canonical_object_sha256": "d63c620940acb45d4a8eeac4137486a953e3fbe9e67755f9ff31455856e5ed94"
+        },
+        {
+          "rule_id": "wwc-report-worker-bootstrap-entries",
+          "previous_policy_pointer": "/report_claims/3",
+          "current_policy_pointer": "/report_claims/3",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 3,
+          "current_source_locator_count": 3,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "457fa85468eb723f7790ec1deacf53c70354481661f69790c8aba2818ab080d7",
+          "current_rule_canonical_object_sha256": "457fa85468eb723f7790ec1deacf53c70354481661f69790c8aba2818ab080d7"
+        },
+        {
+          "rule_id": "wwc-report-worker-production-construction",
+          "previous_policy_pointer": "/report_claims/4",
+          "current_policy_pointer": "/report_claims/4",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 3,
+          "current_source_locator_count": 3,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "24a1b7952c30bfe76876d23dcc49ef74b12ccb2aa42e9da6e6e1edb4d85c66bb",
+          "current_rule_canonical_object_sha256": "24a1b7952c30bfe76876d23dcc49ef74b12ccb2aa42e9da6e6e1edb4d85c66bb"
+        },
+        {
+          "rule_id": "wwc-report-worker-typed-dispatch",
+          "previous_policy_pointer": "/report_claims/5",
+          "current_policy_pointer": "/report_claims/5",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 3,
+          "current_source_locator_count": 3,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "0cd3107db9240ba9a7d92ad349fedb0ccba3214505d2674a0ba5702008610f4d",
+          "current_rule_canonical_object_sha256": "0cd3107db9240ba9a7d92ad349fedb0ccba3214505d2674a0ba5702008610f4d"
+        },
+        {
+          "rule_id": "wwc-report-production-adapter-embedded-kernel",
+          "previous_policy_pointer": "/report_claims/6",
+          "current_policy_pointer": "/report_claims/6",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 2,
+          "current_source_locator_count": 2,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "26f88c80b6ad28e2b82be538fb0526ec4f39318fb8098a645cebd4c59a352628",
+          "current_rule_canonical_object_sha256": "26f88c80b6ad28e2b82be538fb0526ec4f39318fb8098a645cebd4c59a352628"
+        },
+        {
+          "rule_id": "wwc-report-adapter-durable-exact-turn",
+          "previous_policy_pointer": "/report_claims/7",
+          "current_policy_pointer": "/report_claims/7",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 1,
+          "current_source_locator_count": 1,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "f8b619ae6f32befcb617c200fa34484240420a73a68194fec889cc0c6a21ada0",
+          "current_rule_canonical_object_sha256": "f8b619ae6f32befcb617c200fa34484240420a73a68194fec889cc0c6a21ada0"
+        },
+        {
+          "rule_id": "wwc-report-kernel-create-session-interface",
+          "previous_policy_pointer": "/report_claims/8",
+          "current_policy_pointer": "/report_claims/8",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 1,
+          "current_source_locator_count": 1,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "764be1085f66d191fac2042dfa2c1007f6e1c4df29bdcaad39ffe89220b370f1",
+          "current_rule_canonical_object_sha256": "764be1085f66d191fac2042dfa2c1007f6e1c4df29bdcaad39ffe89220b370f1"
+        },
+        {
+          "rule_id": "wwc-report-kernel-submit-turn-interface",
+          "previous_policy_pointer": "/report_claims/9",
+          "current_policy_pointer": "/report_claims/9",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 1,
+          "current_source_locator_count": 1,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "69fdf074545a699b8e2e69702853e10a6b52784169cb4833f16733820795cbeb",
+          "current_rule_canonical_object_sha256": "69fdf074545a699b8e2e69702853e10a6b52784169cb4833f16733820795cbeb"
+        },
+        {
+          "rule_id": "wwc-report-kernel-reconcile-exact-interface",
+          "previous_policy_pointer": "/report_claims/10",
+          "current_policy_pointer": "/report_claims/10",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 1,
+          "current_source_locator_count": 1,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "ec3e1c80cfda0e74b1f5d30850fcdbbab7ad7df292adf61d65bd6ca3f2b8aa68",
+          "current_rule_canonical_object_sha256": "ec3e1c80cfda0e74b1f5d30850fcdbbab7ad7df292adf61d65bd6ca3f2b8aa68"
+        },
+        {
+          "rule_id": "wwc-report-chat-delivery-workrun-requests",
+          "previous_policy_pointer": "/report_claims/11",
+          "current_policy_pointer": "/report_claims/11",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 2,
+          "current_source_locator_count": 2,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "684464182bd0815fdcc20adef0caa82bc3134a29652cc100093a8f1f411b5b1b",
+          "current_rule_canonical_object_sha256": "684464182bd0815fdcc20adef0caa82bc3134a29652cc100093a8f1f411b5b1b"
+        },
+        {
+          "rule_id": "wwc-report-workrun-finite-selection",
+          "previous_policy_pointer": "/report_claims/12",
+          "current_policy_pointer": "/report_claims/12",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 6,
+          "current_source_locator_count": 6,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "5f094daa1e434d58255b73af946358aa14a38f4819b95292b820aa085afc9487",
+          "current_rule_canonical_object_sha256": "5f094daa1e434d58255b73af946358aa14a38f4819b95292b820aa085afc9487"
+        },
+        {
+          "rule_id": "wwc-report-chat-retained-request-identities",
+          "previous_policy_pointer": "/report_claims/13",
+          "current_policy_pointer": "/report_claims/13",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 2,
+          "current_source_locator_count": 2,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "11294269d778cb99bd545dcdaf5cb3711565fcabae58d3c4b6ff43be29d23a3f",
+          "current_rule_canonical_object_sha256": "11294269d778cb99bd545dcdaf5cb3711565fcabae58d3c4b6ff43be29d23a3f"
+        },
+        {
+          "rule_id": "wwc-report-worker-adapter-record-identities",
+          "previous_policy_pointer": "/report_claims/14",
+          "current_policy_pointer": "/report_claims/14",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 10,
+          "current_source_locator_count": 10,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "df9e880f443f21bd30d4725fc20aa38768756d719a27b4783db4f7bbf9dc0aad",
+          "current_rule_canonical_object_sha256": "df9e880f443f21bd30d4725fc20aa38768756d719a27b4783db4f7bbf9dc0aad"
+        },
+        {
+          "rule_id": "wwc-report-outbox-ack-correlation-fields",
+          "previous_policy_pointer": "/report_claims/15",
+          "current_policy_pointer": "/report_claims/15",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 5,
+          "current_source_locator_count": 5,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "b31df0660d3c27565d6e9ef0346ebd744ea8f02cd9fcb3eed4e8bfd198c4f1d0",
+          "current_rule_canonical_object_sha256": "b31df0660d3c27565d6e9ef0346ebd744ea8f02cd9fcb3eed4e8bfd198c4f1d0"
+        },
+        {
+          "rule_id": "wwc-browser-continuation-lifecycle",
+          "previous_policy_pointer": "/report_claims/16",
+          "current_policy_pointer": "/report_claims/16",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 19,
+          "current_source_locator_count": 19,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "52cf2d782c9f222f1273860c04c0284c4fea4c0ad3c661594fedf29330e44ec2",
+          "current_rule_canonical_object_sha256": "52cf2d782c9f222f1273860c04c0284c4fea4c0ad3c661594fedf29330e44ec2"
+        },
+        {
+          "rule_id": "wwc-captured-record-resource-writers",
+          "previous_policy_pointer": "/report_claims/17",
+          "current_policy_pointer": "/report_claims/17",
+          "unchanged_rule_object": true,
+          "changed_rule_fields": [],
+          "old_source_locator_count": 8,
+          "current_source_locator_count": 8,
+          "old_source_locators_preserved_in_same_order_at_same_indices": true,
+          "old_document_locators_preserved_in_same_order_at_same_indices": true,
+          "added_source_locators": [],
+          "rule_except_sources_unchanged": true,
+          "previous_rule_canonical_object_sha256": "3bd19b2c207741500665e286180d91d5cfd60d058af81d50412db434526e3de9",
+          "current_rule_canonical_object_sha256": "3bd19b2c207741500665e286180d91d5cfd60d058af81d50412db434526e3de9"
+        }
+      ],
+      "top_level_changed_sections": [
+        "report_claims"
+      ],
+      "other_configuration_checks": [
+        {
+          "section": "analysis",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "748520acd36fd9d27ed7168b6421b4ec3e57465b9d5dc7bc124056d39af6b167",
+          "current_canonical_object_sha256": "748520acd36fd9d27ed7168b6421b4ec3e57465b9d5dc7bc124056d39af6b167"
+        },
+        {
+          "section": "assessment_context",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "368e996309537c56979edff853bff9654472ad486312f4955d361954f990e68c",
+          "current_canonical_object_sha256": "368e996309537c56979edff853bff9654472ad486312f4955d361954f990e68c"
+        },
+        {
+          "section": "atomicity_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "current_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "section": "budget_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "current_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "section": "entrypoints",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "current_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "section": "field_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "current_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        },
+        {
+          "section": "goal_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "ea292e2661d144130e19a184c95a8302e50134b82a0eb573a2489b0902d595e0",
+          "current_canonical_object_sha256": "ea292e2661d144130e19a184c95a8302e50134b82a0eb573a2489b0902d595e0"
+        },
+        {
+          "section": "layers",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+          "current_canonical_object_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+        },
+        {
+          "section": "navigation_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "eef471adc48682849d7fb53764e95134df0e6a7eef72e9a1df16e207038a8cd9",
+          "current_canonical_object_sha256": "eef471adc48682849d7fb53764e95134df0e6a7eef72e9a1df16e207038a8cd9"
+        },
+        {
+          "section": "project",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "a47df1f4cc8c3fa09a0b6adada1c48b9c7112e9a9ba4dc7c2d477120afd79f4f",
+          "current_canonical_object_sha256": "a47df1f4cc8c3fa09a0b6adada1c48b9c7112e9a9ba4dc7c2d477120afd79f4f"
+        },
+        {
+          "section": "rules",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4d94444fdc32b1941feeee69b7741f33ae9403fc36e3c393f1670a04e9a36c01",
+          "current_canonical_object_sha256": "4d94444fdc32b1941feeee69b7741f33ae9403fc36e3c393f1670a04e9a36c01"
+        },
+        {
+          "section": "schema_version",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b",
+          "current_canonical_object_sha256": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+        },
+        {
+          "section": "static_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "5d61b28913340cb17f5410ef53cfb9f0c968e58fd5aa2923964eb35b25a2d1f8",
+          "current_canonical_object_sha256": "5d61b28913340cb17f5410ef53cfb9f0c968e58fd5aa2923964eb35b25a2d1f8"
+        },
+        {
+          "section": "value_contracts",
+          "unchanged": true,
+          "previous_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "current_canonical_object_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+        }
+      ],
+      "all_other_configuration_values_unchanged": true,
+      "all_old_source_locators_preserved": true,
+      "all_old_document_locators_preserved": true
+    }
+  ]
+}

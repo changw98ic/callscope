@@ -1,0 +1,95 @@
+{
+  "kind": "saved_current_candidate_development_completion_readback_index",
+  "inputs": [
+    {
+      "repository": "codepatchbay",
+      "artifact": "reports/astra-iteration12/REPORT_COMPLETION_CODEPATCHBAY_FINAL_DEVELOPMENT_READBACK.json",
+      "sha256": "035e29c5eb1e343cb8d622256808b42c970000d020e26628ae503c3df2f60b8a",
+      "actual_input_identities": [
+        {
+          "repository": "codepatchbay",
+          "file": "/workspace/callscope/reports/astra-iteration12/responsibility-explanations-codepatchbay-development.json",
+          "sha256": "089d1ec9ab4111c4267d7c1187cb2823dc3634330c22b7fc52fa0f422d0ea8a4",
+          "mode": "development",
+          "snapshot": {
+            "snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+            "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+            "policy_hash": "0fff976c5bcee4485b553448ac80df4298b47a8c4656aaab6062324d4e9bbdfc"
+          },
+          "generating_components": null,
+          "development_metadata": {
+            "development_query": true,
+            "not_formal_v14_result": true,
+            "saved_snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+            "saved_source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+            "saved_policy_hash": "0fff976c5bcee4485b553448ac80df4298b47a8c4656aaab6062324d4e9bbdfc",
+            "current_module_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+            "query_module_bytes_stable": true,
+            "explanation_module_sha256": "98bae1b6310422a7d749aaf77032592d625128e9fea4d0e117647744f047dd2f",
+            "explanation_module_bytes_stable": true
+          }
+        }
+      ],
+      "source_reference_issues": [],
+      "development_only": true,
+      "formal_acceptance": false
+    },
+    {
+      "repository": "winwincode",
+      "artifact": "reports/astra-iteration12/REPORT_COMPLETION_WINWINCODE_FINAL_DEVELOPMENT_READBACK.json",
+      "sha256": "4897b78e670b1f84b6f821180b8895057adb9fbcd8952cbbb3f8dc5fd462f562",
+      "actual_input_identities": [
+        {
+          "repository": "winwincode",
+          "file": "/workspace/callscope/reports/astra-iteration12/responsibility-explanations-winwincode-development.json",
+          "sha256": "cb279ba50b299668d90892b3d94aeb1daf9a011e6e5a61218de1b7a86f4279f9",
+          "mode": "development",
+          "snapshot": {
+            "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+            "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+            "policy_hash": "c085aff2d4adffa22410a5ce818a1f3ec431665a595de0c4f2d575326c982aaa"
+          },
+          "generating_components": null,
+          "development_metadata": {
+            "development_query": true,
+            "not_formal_v14_result": true,
+            "saved_snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+            "saved_source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+            "saved_policy_hash": "c085aff2d4adffa22410a5ce818a1f3ec431665a595de0c4f2d575326c982aaa",
+            "current_module_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+            "query_module_bytes_stable": true,
+            "explanation_module_sha256": "98bae1b6310422a7d749aaf77032592d625128e9fea4d0e117647744f047dd2f",
+            "explanation_module_bytes_stable": true
+          }
+        },
+        {
+          "repository": "winwincode",
+          "file": "/workspace/callscope/reports/astra-iteration12/documentation-source-query.json",
+          "sha256": "493c408b8e924b53915c8fcd72d4521ed7f27170f662742cd8749d3b6413bacf",
+          "mode": "development_document_comparison",
+          "saved_snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+          "module_sha256": "fe4a3d0db94ab2c93efa57e057e6f091e55ba063b276f4152cba13767d2c5b75",
+          "module_bytes_stable": true
+        }
+      ],
+      "source_reference_issues": [],
+      "development_only": true,
+      "formal_acceptance": false
+    }
+  ],
+  "content_readback_notes": [
+    "Actual statements and pooled refs were read; navigation labels/counts were not treated as role proof.",
+    "CPB import/environment/conditional-port/scope-counter source operations are retained in actual readback.",
+    "WWC actual client/server/dispatcher body and existing finite protocol model references are separately preserved.",
+    "WWC document aspects preserve Control Plane internal scope, unknown credential lifetime and false protocol-bypass proof."
+  ],
+  "actual_finite_protocol_refs": "WWC_PROTOCOL_EXISTING_EVIDENCE_READBACK.json",
+  "actual_protocol_body_refs": "WWC_PROTOCOL_EXPLANATION_BODY_READBACK.json",
+  "formal_completion": false,
+  "reason": "Formal publication and original finite-clause artifact-content reconciliation remain required.",
+  "database_read": false,
+  "analyzer_run": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "project": { "name": "订单调用结构示例" },
+  "analysis": {
+    "languages": ["python"],
+    "source_roots": ["."],
+    "exclude": [".callscope/**", "__pycache__/**", ".git/**", ".venv/**"],
+    "max_file_bytes": 1048576
+  },
+  "layers": {
+    "API": ["app.api.*"],
+    "DOMAIN": ["app.domain.*", "app.notifications.*"],
+    "STORAGE": ["app.storage.*"],
+    "EXTENSION": ["app.plugins.*"]
+  },
+  "entrypoints": [
+    "app.api.submit_order",
+    "app.api.fetch_order",
+    "app.domain.refresh_order",
+    "app.plugins.dispatch_hook"
+  ],
+  "rules": [
+    {
+      "id": "submit-validation-connected",
+      "kind": "required_path",
+      "from": "app.api.submit_order",
+      "to": "app.domain.validate_order",
+      "severity": "high",
+      "description": "声明的结构约束：提交入口的调用图中必须可达 validate_order。只检查连接，不证明校验执行顺序、覆盖率或正确性。"
+    },
+    {
+      "id": "submit-persistence-connected",
+      "kind": "required_path",
+      "from": "app.api.submit_order",
+      "to": "app.storage.write_order",
+      "severity": "medium",
+      "description": "声明的结构约束：提交入口必须经某条确定调用路径到达持久化入口。"
+    },
+    {
+      "id": "fetch-domain-connected",
+      "kind": "required_path",
+      "from": "app.api.fetch_order",
+      "to": "app.domain.get_order",
+      "severity": "high",
+      "description": "声明的结构约束：读取入口必须连接领域层 get_order；示例刻意保留未接入的实现。"
+    },
+    {
+      "id": "api-cannot-read-storage-directly",
+      "kind": "forbidden_call",
+      "from": "app.api.*",
+      "to": "app.storage.read_order",
+      "severity": "high",
+      "description": "声明的分层约束：API 函数不得直接调用 storage.read_order。是否采用这一边界由项目维护者决定。"
+    },
+    {
+      "id": "save-delegates-write",
+      "kind": "required_call",
+      "from": "app.domain.save_order",
+      "to": "app.storage.write_order",
+      "severity": "medium",
+      "description": "声明的结构约束：save_order 必须包含到 write_order 的确定直接调用。"
+    }
+  ]
+}

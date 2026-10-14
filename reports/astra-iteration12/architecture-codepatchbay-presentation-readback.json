@@ -1,0 +1,1796 @@
+{
+  "development_query": true,
+  "not_formal_v14_result": true,
+  "target_executed": false,
+  "source_file": "reports/astra-iteration12/responsibility-operations-codepatchbay-development.json",
+  "source_sha256": "00522596ade7af90eac7b53b34e5e744c68b3661dd462bbc01d60e9c3b10b827",
+  "operation_module_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+  "architecture_module_sha256": "98bae1b6310422a7d749aaf77032592d625128e9fea4d0e117647744f047dd2f",
+  "architecture_module_bytes_stable": true,
+  "declaration_count": 346,
+  "operation_count": 14958,
+  "selected_declarations": [
+    {
+      "actual_owner": {
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "scopeMatches",
+        "graph_node_id": "ts:core/workflow/probe-runner#scopeMatches",
+        "location": {
+          "file": "core/workflow/probe-runner.ts",
+          "line": 99,
+          "column": 1,
+          "start_byte": 3924,
+          "end_byte": 4237,
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "location_ref": "/source_location_index/7dae5571eb005eeb3bb924ec",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "在调用形式「Array.isArray」中提供第 1 个实参「allowedFiles」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。 捕获 binding「count」的初始化来源为「0」；保留该声明与初始化表达式，不推任意后续读取的当前值。 对捕获 binding「count」存在源更新「count += 1」；循环和分支条件见操作上下文，未推执行次数或最终数值。 条件「(!Array.isArray(allowedFiles) || allowedFiles.length === 0)」的捕获提前退出分支为「return：0」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return 0;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「5a7db009f9a8198b7b1e4564」先于语句位置「1」的操作「cb9517b13bd7a1c668c2b4c5」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+      "summary_statement_ids": [
+        "625fff01e62ef43a63291493",
+        "561b2710463c8db09912ad0a",
+        "658fc5e4880e8e1a585866d9",
+        "eae1af1bca45a6aa2aba9ab6",
+        "76a6d19b1161a06cf770e648",
+        "232a0b26577ec5ae5760d7b8"
+      ],
+      "statements": [
+        {
+          "id": "625fff01e62ef43a63291493",
+          "text": "在调用形式「Array.isArray」中提供第 1 个实参「allowedFiles」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "5a7db009f9a8198b7b1e4564",
+          "operation_pointer": "/operations/3220"
+        },
+        {
+          "id": "eae1af1bca45a6aa2aba9ab6",
+          "text": "条件「(!Array.isArray(allowedFiles) || allowedFiles.length === 0)」的捕获提前退出分支为「return：0」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "fc1d44f0d4e0402184bede39",
+          "operation_pointer": "/operations/3221"
+        },
+        {
+          "id": "76a6d19b1161a06cf770e648",
+          "text": "以「return 0;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "1977de099aabf780cff5fe15",
+          "operation_pointer": "/operations/3222"
+        },
+        {
+          "id": "561b2710463c8db09912ad0a",
+          "text": "捕获 binding「count」的初始化来源为「0」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "cb9517b13bd7a1c668c2b4c5",
+          "operation_pointer": "/operations/3223"
+        },
+        {
+          "id": "232a0b26577ec5ae5760d7b8",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「5a7db009f9a8198b7b1e4564」先于语句位置「1」的操作「cb9517b13bd7a1c668c2b4c5」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "0b1c610427aac14467093fe8",
+          "operation_pointer": "/operations/3224"
+        },
+        {
+          "id": "06704bf0b54c8448c493b103",
+          "text": "在调用形式「changed.some」中提供第 1 个实参「(changedFile) => scopePathMatches(changedFile, text(f))」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "ef39a081c0b8cbcb27b3538d",
+          "operation_pointer": "/operations/3225"
+        },
+        {
+          "id": "658fc5e4880e8e1a585866d9",
+          "text": "对捕获 binding「count」存在源更新「count += 1」；循环和分支条件见操作上下文，未推执行次数或最终数值。",
+          "operation_id": "e88b69c35a0abb488873a0ec",
+          "operation_pointer": "/operations/3229"
+        },
+        {
+          "id": "d2a897ed89ac25689dac76c5",
+          "text": "保留同一块中的正常源码顺序：语句位置「1」的操作「cb9517b13bd7a1c668c2b4c5」先于语句位置「3」的操作「a207e514160dbab89663901e」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "2160a3299746ea0a37600074",
+          "operation_pointer": "/operations/3230"
+        },
+        {
+          "id": "99f674529fc38ace16f9b377",
+          "text": "以「return count;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "a207e514160dbab89663901e",
+          "operation_pointer": "/operations/3231"
+        }
+      ],
+      "all_operation_count": 9
+    },
+    {
+      "actual_owner": {
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "scopeMatches.<loop@102:2>.<block@102:32>.<arrow@103:21>",
+        "graph_node_id": "ts:core/workflow/probe-runner#scopeMatches.<loop@102:2>.<block@102:32>.<arrow@103:21>",
+        "location": {
+          "file": "core/workflow/probe-runner.ts",
+          "line": 103,
+          "column": 22,
+          "start_byte": 4146,
+          "end_byte": 4201,
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "location_ref": "/source_location_index/46135b39a97e0b7839398075",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「changedFile」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#scopePathMatches」，对应捕获形参「changedFile: string」。该普通调用关系不替代进程或网络协议关系。 将「f」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#text」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+      "summary_statement_ids": [
+        "6f554274e14171a79740023d",
+        "e018a52df94b24be171bc258"
+      ],
+      "statements": [
+        {
+          "id": "6f554274e14171a79740023d",
+          "text": "将「changedFile」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#scopePathMatches」，对应捕获形参「changedFile: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "545a0f70a2e8448ffbea07d5",
+          "operation_pointer": "/operations/3226"
+        },
+        {
+          "id": "75298c312202a64f7f35b9c8",
+          "text": "将「text(f)」作为第 2 个实参交给已绑定接口「ts:core/workflow/probe-runner#scopePathMatches」，对应捕获形参「allowedFile: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "de79d6e42de95dd540f7f4ef",
+          "operation_pointer": "/operations/3227"
+        },
+        {
+          "id": "e018a52df94b24be171bc258",
+          "text": "将「f」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#text」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "0e593a3910978d77b3b26a9e",
+          "operation_pointer": "/operations/3228"
+        }
+      ],
+      "all_operation_count": 3
+    },
+    {
+      "actual_owner": {
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "scopePathMatches",
+        "graph_node_id": "ts:core/workflow/probe-runner#scopePathMatches",
+        "location": {
+          "file": "core/workflow/probe-runner.ts",
+          "line": 108,
+          "column": 1,
+          "start_byte": 4239,
+          "end_byte": 4712,
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "location_ref": "/source_location_index/3d4d38f7d176344d26cdd42e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「changedFile」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#posixify」，对应捕获形参「p: string」。该普通调用关系不替代进程或网络协议关系。 捕获 binding「suffix」的初始化来源为「allowed.slice(3)」；保留该声明与初始化表达式，不推任意后续读取的当前值。 条件「(!allowed)」的捕获提前退出分支为「return：false」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return false;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「5289e13e7eb9235c44f7f761」先于语句位置「1」的操作「efe66d4ba88192a49779c24e」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+      "summary_statement_ids": [
+        "d166fff5952ec5fffaa3699e",
+        "2991153ec71dcfd07cc3205d",
+        "8dd9be3448198134267ac9f4",
+        "2257d785c638266ce9aada60",
+        "32db5c476f63c86ed87b7617"
+      ],
+      "statements": [
+        {
+          "id": "6b91a4b058b183d598b40e92",
+          "text": "捕获 binding「changed」的初始化来源为「posixify(changedFile)」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "5289e13e7eb9235c44f7f761",
+          "operation_pointer": "/operations/3232"
+        },
+        {
+          "id": "d166fff5952ec5fffaa3699e",
+          "text": "将「changedFile」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#posixify」，对应捕获形参「p: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "6d81322b5587e9ccd08a7569",
+          "operation_pointer": "/operations/3233"
+        },
+        {
+          "id": "49606850faf1d57416242770",
+          "text": "捕获 binding「allowed」的初始化来源为「posixify(allowedFile)」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "efe66d4ba88192a49779c24e",
+          "operation_pointer": "/operations/3234"
+        },
+        {
+          "id": "32db5c476f63c86ed87b7617",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「5289e13e7eb9235c44f7f761」先于语句位置「1」的操作「efe66d4ba88192a49779c24e」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "b23917db3dcf3a9211221cb6",
+          "operation_pointer": "/operations/3235"
+        },
+        {
+          "id": "4653fccca3cc35e15ce463e5",
+          "text": "将「allowedFile」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#posixify」，对应捕获形参「p: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "aaac0092ad207f06468921a0",
+          "operation_pointer": "/operations/3236"
+        },
+        {
+          "id": "8dd9be3448198134267ac9f4",
+          "text": "条件「(!allowed)」的捕获提前退出分支为「return：false」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "c61c673fccd2f4ae9d870233",
+          "operation_pointer": "/operations/3237"
+        },
+        {
+          "id": "ac5a525d887e46df54ffa3a7",
+          "text": "保留同一块中的正常源码顺序：语句位置「1」的操作「efe66d4ba88192a49779c24e」先于语句位置「2」的操作「e4e3427870610495b698b163」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "bcabbde3723022b8b1cb8eea",
+          "operation_pointer": "/operations/3238"
+        },
+        {
+          "id": "2257d785c638266ce9aada60",
+          "text": "以「return false;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "e4e3427870610495b698b163",
+          "operation_pointer": "/operations/3239"
+        },
+        {
+          "id": "0a55821c53d7d2f692d5218d",
+          "text": "在调用形式「allowed.startsWith」中提供第 1 个实参「\"**/\"」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "f8639ccfe62b5412aac8a1fa",
+          "operation_pointer": "/operations/3240"
+        },
+        {
+          "id": "af16c295eb2cb1e7762a7f66",
+          "text": "保留同一块中的正常源码顺序：语句位置「2」的操作「e4e3427870610495b698b163」先于语句位置「3」的操作「f8639ccfe62b5412aac8a1fa」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "f09cc9ff853c2a63a7d30c05",
+          "operation_pointer": "/operations/3241"
+        },
+        {
+          "id": "2991153ec71dcfd07cc3205d",
+          "text": "捕获 binding「suffix」的初始化来源为「allowed.slice(3)」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "d0a6d3bd810929b4a84cfde7",
+          "operation_pointer": "/operations/3242"
+        },
+        {
+          "id": "8528dde8d14086573b23ce49",
+          "text": "在调用形式「allowed.slice」中提供第 1 个实参「3」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "feb913fbf8f0667931f1cafe",
+          "operation_pointer": "/operations/3243"
+        },
+        {
+          "id": "a7af8bfb2634df9305113150",
+          "text": "条件「(allowed.startsWith(\"**/\"))」的捕获提前退出分支为「return：changed.startsWith(suffix) || changed.includes(`/${suffix}`)」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "1df057fd92cef52b37157814",
+          "operation_pointer": "/operations/3244"
+        },
+        {
+          "id": "d9488a58359a6d0e94326422",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「d0a6d3bd810929b4a84cfde7」先于语句位置「1」的操作「7c9e811719c4c168d94d088b」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "bb792c55f0e2ae28fab45394",
+          "operation_pointer": "/operations/3245"
+        },
+        {
+          "id": "ad9464442a550d350552fe05",
+          "text": "以「return changed.startsWith(suffix) || changed.includes(`/${suffix}`);」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "7c9e811719c4c168d94d088b",
+          "operation_pointer": "/operations/3246"
+        },
+        {
+          "id": "5ca188a5910c327d72759db6",
+          "text": "在调用形式「changed.startsWith」中提供第 1 个实参「suffix」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "070323e13d3573808111351b",
+          "operation_pointer": "/operations/3247"
+        },
+        {
+          "id": "534fe00399c93828b52d4f5f",
+          "text": "在调用形式「changed.includes」中提供第 1 个实参「`/${suffix}`」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "8cf77ec86633429712a9e0ba",
+          "operation_pointer": "/operations/3248"
+        },
+        {
+          "id": "7db20ddd831f287de38b2a98",
+          "text": "在调用形式「allowed.endsWith」中提供第 1 个实参「\"/\"」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "64a0dd237bc144a65008e700",
+          "operation_pointer": "/operations/3249"
+        },
+        {
+          "id": "cd74a4508010cbfd0d14d12b",
+          "text": "保留同一块中的正常源码顺序：语句位置「3」的操作「f8639ccfe62b5412aac8a1fa」先于语句位置「4」的操作「64a0dd237bc144a65008e700」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "9b742ecf82a8e905f24de735",
+          "operation_pointer": "/operations/3250"
+        },
+        {
+          "id": "80f68338fd514095349489ee",
+          "text": "条件「(allowed.endsWith(\"/\"))」的捕获提前退出分支为「return：changed.startsWith(allowed)」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "4b3df81849aa226ebbfd8325",
+          "operation_pointer": "/operations/3251"
+        },
+        {
+          "id": "c241db57fd5a8cbe5a84c3dd",
+          "text": "以「return changed.startsWith(allowed);」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "6586f8a2385e19a1cf42c9bd",
+          "operation_pointer": "/operations/3252"
+        },
+        {
+          "id": "ab58fff5ea37392bbac203b9",
+          "text": "在调用形式「changed.startsWith」中提供第 1 个实参「allowed」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "a1a038394d988e33d1149e7e",
+          "operation_pointer": "/operations/3253"
+        },
+        {
+          "id": "e1943edc6fa8fe5fb74fb922",
+          "text": "以「return changed === allowed || changed.startsWith(`${allowed}/`);」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "f19e8f3943db718c8c2b13aa",
+          "operation_pointer": "/operations/3255"
+        },
+        {
+          "id": "638fc47f71195b7710a0814c",
+          "text": "在调用形式「changed.startsWith」中提供第 1 个实参「`${allowed}/`」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "595f1585419d8f245a875f0e",
+          "operation_pointer": "/operations/3256"
+        }
+      ],
+      "all_operation_count": 25
+    },
+    {
+      "actual_owner": {
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "runChecklistProbes",
+        "graph_node_id": "ts:core/workflow/probe-runner#runChecklistProbes",
+        "location": {
+          "file": "core/workflow/probe-runner.ts",
+          "line": 582,
+          "column": 8,
+          "start_byte": 20629,
+          "end_byte": 26707,
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "location_ref": "/source_location_index/a2f81be3e9fea12c77843d07",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获记录，字段按源码次序为「checklistId ← checklistId；predicateId ← predicateId；probeId ← probeId；observation ← {\\n          checklistId,\\n          predicateId,\\n          probeId,\\n          verificationMethod: \"static\",\\n          queryId: `static-diff-scope:${checklis…［展示截断；完整操作保留］；emitFailedClaim ← true」。不据构造形式推断物理持久化。 将「cwd」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#loadTrustedProbePolicy」，对应捕获形参「cwd: string」。该普通调用关系不替代进程或网络协议关系。 捕获 binding「checklistId」的初始化来源为「text(item.id)」；保留该声明与初始化表达式，不推任意后续读取的当前值。 条件「(!acceptanceChecklist || !Array.isArray(acceptanceChecklist.items))」的捕获提前退出分支为「return：[]」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return [];」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 以字段投影形式「cwd」关联路径「cwd」；只描述捕获来源，不证明当时的字段值。 保留记录复制/展开来源「(worktreeHead ? { worktreeHead } : {})」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。 将「cwd」作为第 2 个实参交给已绑定接口「ts:core/workflow/probe-runner#runDeclaredCommand」，对应捕获形参「cwd: string」。该普通调用关系不替代进程或网络协议关系。",
+      "summary_statement_ids": [
+        "6ed6ef6c495e98485b335923",
+        "6323d5695c9bfad4cabdb3a2",
+        "30a597b3439ab42f3f75c689",
+        "d20be45daeb76b0955ae8d27",
+        "960d6182ae415d7b252cac25",
+        "c97455216ed24f4265fc17e1",
+        "ab4da166301fc0993deb2a47",
+        "fd00430c7f6fc6220e081ab5"
+      ],
+      "statements": [
+        {
+          "id": "1effa1bc524124cc22190955",
+          "text": "在调用形式「Array.isArray」中提供第 1 个实参「acceptanceChecklist.items」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "bf7d8ae1f3b1b451fa3757de",
+          "operation_pointer": "/operations/3407"
+        },
+        {
+          "id": "d20be45daeb76b0955ae8d27",
+          "text": "条件「(!acceptanceChecklist || !Array.isArray(acceptanceChecklist.items))」的捕获提前退出分支为「return：[]」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "ae67395b4b2de1bf852e439e",
+          "operation_pointer": "/operations/3408"
+        },
+        {
+          "id": "960d6182ae415d7b252cac25",
+          "text": "以「return [];」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "b947b3c742df74dcf71a0aa9",
+          "operation_pointer": "/operations/3409"
+        },
+        {
+          "id": "e6a92f70fd4e2f243ca4db72",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「bf7d8ae1f3b1b451fa3757de」先于语句位置「1」的操作「76b1197a8219cb1fa90d2d69」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "fc05e3cdfa7cae2b30102eef",
+          "operation_pointer": "/operations/3411"
+        },
+        {
+          "id": "923025780663543dff9f2173",
+          "text": "在调用形式「acceptanceChecklist.items.filter」中提供第 1 个实参「(item: LooseRecord) => text(item?.id) && text(item?.predicateId)」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "6859bfdb9e05348b40cc5812",
+          "operation_pointer": "/operations/3412"
+        },
+        {
+          "id": "bf4f25150f239fa17a103e1a",
+          "text": "将「finalWorktree?.head」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#text」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "7e8c11aad9e5739d25776eff",
+          "operation_pointer": "/operations/3420"
+        },
+        {
+          "id": "4993f548e11832f0c14a3c09",
+          "text": "将「cwd」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#changedFiles」，对应捕获形参「cwd: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "af689de38be865dd1d61f673",
+          "operation_pointer": "/operations/3430"
+        },
+        {
+          "id": "6323d5695c9bfad4cabdb3a2",
+          "text": "将「cwd」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#loadTrustedProbePolicy」，对应捕获形参「cwd: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "4723a02a3db41a25ec7c22a2",
+          "operation_pointer": "/operations/3435"
+        },
+        {
+          "id": "30a597b3439ab42f3f75c689",
+          "text": "捕获 binding「checklistId」的初始化来源为「text(item.id)」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "fb090d5164fb5ff79dabdb09",
+          "operation_pointer": "/operations/3438"
+        },
+        {
+          "id": "d4e936d9bb580c0964de734b",
+          "text": "在调用形式「item.allowedFiles.map」中提供第 1 个实参「text」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "30c5eaafecee308c657a79a1",
+          "operation_pointer": "/operations/3450"
+        },
+        {
+          "id": "a41895164bc3453a2423aad3",
+          "text": "在调用形式「item.allowedFiles.map(text).filter」中提供第 1 个实参「Boolean」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "f6e0a0e2d76b47afe46f1c5e",
+          "operation_pointer": "/operations/3451"
+        },
+        {
+          "id": "175126c03774bcd3933f0145",
+          "text": "将「changed」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#scopeMatches」，对应捕获形参「changed: string[]」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "231ab22d126fc6cf46b7ba61",
+          "operation_pointer": "/operations/3454"
+        },
+        {
+          "id": "7bbdc78cb8a95384a4d697b0",
+          "text": "在调用形式「checks.push」中提供第 1 个实参「{\\n        checklistId,\\n        predicateId,\\n        probeId,\\n        observation: {\\n          checklistId,\\n          predicateId,\\n          probeId,\\n          verificationMethod: \"static\",\\n          queryId: `static-diff-scope:${checklistId}`,\\n          matchCount,\\n          allowedFiles,\\n          changedFilesInScope: changed.filter((f) => allow…［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "0a323935fcfb3f5602a3aa1c",
+          "operation_pointer": "/operations/3456"
+        },
+        {
+          "id": "6ed6ef6c495e98485b335923",
+          "text": "构造捕获记录，字段按源码次序为「checklistId ← checklistId；predicateId ← predicateId；probeId ← probeId；observation ← {\\n          checklistId,\\n          predicateId,\\n          probeId,\\n          verificationMethod: \"static\",\\n          queryId: `static-diff-scope:${checklis…［展示截断；完整操作保留］；emitFailedClaim ← true」。不据构造形式推断物理持久化。",
+          "operation_id": "b1cc11bdf6a9616d6780ac3b",
+          "operation_pointer": "/operations/3458"
+        },
+        {
+          "id": "2b544a1ecbe2629e0a6b9736",
+          "text": "在调用形式「changed.filter」中提供第 1 个实参「(f) => allowedFiles.some((allowedFile) => scopePathMatches(f, allowedFile))」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "ad3c7dcdc8b5a7e4416e121a",
+          "operation_pointer": "/operations/3468"
+        },
+        {
+          "id": "ab4da166301fc0993deb2a47",
+          "text": "保留记录复制/展开来源「(worktreeHead ? { worktreeHead } : {})」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+          "operation_id": "519fbb8a6c293c269c8ec237",
+          "operation_pointer": "/operations/3472"
+        },
+        {
+          "id": "c230c88a74bd7d89e37e16c5",
+          "text": "将「item」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#resolveDeclaredCommand」，对应捕获形参「item: LooseRecord」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "a36bbb42021b74b004a9f606",
+          "operation_pointer": "/operations/3485"
+        },
+        {
+          "id": "ce3bc6e4ffbbca256a30c471",
+          "text": "将「declaredCommand」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#renderProbeCommand」，对应捕获形参「spec: TrustedProbeSpec」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "dde44cd2734e9904a08d7a66",
+          "operation_pointer": "/operations/3507"
+        },
+        {
+          "id": "fd00430c7f6fc6220e081ab5",
+          "text": "将「cwd」作为第 2 个实参交给已绑定接口「ts:core/workflow/probe-runner#runDeclaredCommand」，对应捕获形参「cwd: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "0f4471e6aa63fcf4091c73ad",
+          "operation_pointer": "/operations/3510"
+        },
+        {
+          "id": "c7dba71d71468aab7c2914d1",
+          "text": "将「item」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#changedOracleFiles」，对应捕获形参「item: LooseRecord」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "e983d8f7888fbf36f4555cba",
+          "operation_pointer": "/operations/3516"
+        },
+        {
+          "id": "7d5d78b7cab99f0804f8405e",
+          "text": "将「cwd」作为第 2 个实参交给已绑定接口「ts:core/workflow/probe-runner#runCleanOracleReplay」，对应捕获形参「cwd: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "c6e04ef8fcdfe9177e9c8775",
+          "operation_pointer": "/operations/3523"
+        },
+        {
+          "id": "c97455216ed24f4265fc17e1",
+          "text": "以字段投影形式「cwd」关联路径「cwd」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "05fba7a49efd6598e6e6eea5",
+          "operation_pointer": "/operations/3536"
+        },
+        {
+          "id": "e12cb06fa0402625794958c0",
+          "text": "在调用形式「EVENT_BASED_METHODS.has」中提供第 1 个实参「method」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "bc47fb507de124d8f0d4ed04",
+          "operation_pointer": "/operations/3565"
+        },
+        {
+          "id": "02295f0ca33c57ed808bcd17",
+          "text": "在调用形式「JSON.stringify」中提供第 1 个实参「method」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "41ad1c8f1b361b783e3616ba",
+          "operation_pointer": "/operations/3595"
+        }
+      ],
+      "all_operation_count": 194
+    },
+    {
+      "actual_owner": {
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "runChecklistProbes.<arrow@595:4>",
+        "graph_node_id": "ts:core/workflow/probe-runner#runChecklistProbes.<arrow@595:4>",
+        "location": {
+          "file": "core/workflow/probe-runner.ts",
+          "line": 595,
+          "column": 5,
+          "start_byte": 21114,
+          "end_byte": 21178,
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "location_ref": "/source_location_index/6c7860ed1f2d3a5b8ce14087",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「item?.id」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#text」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+      "summary_statement_ids": [
+        "c16517283fde95c9e67a27bf"
+      ],
+      "statements": [
+        {
+          "id": "c16517283fde95c9e67a27bf",
+          "text": "将「item?.id」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#text」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "65766c6ae7d3102fecc483e0",
+          "operation_pointer": "/operations/3413"
+        },
+        {
+          "id": "04f93cc4f0f895b34eff1e2f",
+          "text": "将「item?.predicateId」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#text」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "7d85734fa852e72c7c8b8e5a",
+          "operation_pointer": "/operations/3414"
+        }
+      ],
+      "all_operation_count": 2
+    },
+    {
+      "actual_owner": {
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "runChecklistProbes.<loop@607:2>.<block@607:37>.<block@613:29>.<object@617:18>.<object@621:21>.<arrow@629:46>",
+        "graph_node_id": "ts:core/workflow/probe-runner#runChecklistProbes.<loop@607:2>.<block@607:37>.<block@613:29>.<object@617:18>.<object@621:21>.<arrow@629:46>",
+        "location": {
+          "file": "core/workflow/probe-runner.ts",
+          "line": 629,
+          "column": 47,
+          "start_byte": 22343,
+          "end_byte": 22418,
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "location_ref": "/source_location_index/c6f385cf52f087be7bacfac9",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "在调用形式「allowedFiles.some」中提供第 1 个实参「(allowedFile) => scopePathMatches(f, allowedFile)」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "summary_statement_ids": [
+        "acb230ad8778fac2684c24bb"
+      ],
+      "statements": [
+        {
+          "id": "acb230ad8778fac2684c24bb",
+          "text": "在调用形式「allowedFiles.some」中提供第 1 个实参「(allowedFile) => scopePathMatches(f, allowedFile)」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "7aca64d7c14d553393fe95ca",
+          "operation_pointer": "/operations/3469"
+        }
+      ],
+      "all_operation_count": 1
+    },
+    {
+      "actual_owner": {
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "runChecklistProbes.<loop@607:2>.<block@607:37>.<block@613:29>.<object@617:18>.<object@621:21>.<arrow@629:46>.<arrow@629:71>",
+        "graph_node_id": "ts:core/workflow/probe-runner#runChecklistProbes.<loop@607:2>.<block@607:37>.<block@613:29>.<object@617:18>.<object@621:21>.<arrow@629:46>.<arrow@629:71>",
+        "location": {
+          "file": "core/workflow/probe-runner.ts",
+          "line": 629,
+          "column": 72,
+          "start_byte": 22368,
+          "end_byte": 22417,
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "location_ref": "/source_location_index/06cc2a473a142dc1ef40f443",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「f」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#scopePathMatches」，对应捕获形参「changedFile: string」。该普通调用关系不替代进程或网络协议关系。",
+      "summary_statement_ids": [
+        "d4431e3a99c63bc216083e07"
+      ],
+      "statements": [
+        {
+          "id": "3aa3fefa329926988956b0ad",
+          "text": "将「allowedFile」作为第 2 个实参交给已绑定接口「ts:core/workflow/probe-runner#scopePathMatches」，对应捕获形参「allowedFile: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "1db1e8569823b1daab6e4122",
+          "operation_pointer": "/operations/3470"
+        },
+        {
+          "id": "d4431e3a99c63bc216083e07",
+          "text": "将「f」作为第 1 个实参交给已绑定接口「ts:core/workflow/probe-runner#scopePathMatches」，对应捕获形参「changedFile: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "53b0f6224ded06ea6781d549",
+          "operation_pointer": "/operations/3471"
+        }
+      ],
+      "all_operation_count": 2
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/engine-runner.ts",
+        "symbol": "buildServices",
+        "graph_node_id": "ts:server/services/engine-runner#buildServices",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 73,
+          "column": 8,
+          "start_byte": 2978,
+          "end_byte": 5364,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "location_ref": "/source_location_index/e8855ffa7e9a5dcd61e6e4f5",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获记录，字段按源码次序为「createJob ← buildCreateJobPort(broker, runtimeDataRoot)；startPhase ← broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase)；completePhase ← broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase)；completeJob ← broker\\n      ? broker.completeJob.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, opts: LooseRecord = {}) => comp…［展示截断；完整操作保留］；failJob ← broker ? broker.failJob.bind(broker) : withJobOptions(failJob)；blockJob ← broker ? broker.blockJob.bind(broker) : withJobOptions(blockJob)；appendEvent ← broker\\n      ? broker.appendEvent.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, event: EventRecord, opts: Loose…［展示截断；完整操作保留］；prepareTask ← prepareTaskForEnv(runtimeEnv)；getPool ← () => getManagedAcpPool({ cpbRoot, hubRoot, env: runtimeEnv })；getArtifactIndex ← broker\\n      ? broker.getArtifactIndex.bind(broker)\\n      : (root: string, project: string, jobId: string, opts: LooseRecord = {}) =>\\n        buildArtifactIn…［展示截断；完整操作保留］；providerServices ← {\\n      assertProviderAvailable,\\n      getProviderAdapter,\\n      delegateMarkProviderUnavailable,\\n      delegateEnqueueProviderUsage,\\n      readAgentRoutin…［展示截断；完整操作保留］」。不据构造形式推断物理持久化。 将「env」作为第 1 个实参交给已绑定接口「ts:server/services/engine-runner#envRecord」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。 捕获 binding「runtimeEnv」的初始化来源为「envRecord(env)」；保留该声明与初始化表达式，不推任意后续读取的当前值。 以「return ports;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 以字段投影形式「assertProviderAvailable」关联路径「assertProviderAvailable」；只描述捕获来源，不证明当时的字段值。 保留同一块中的正常源码顺序：语句位置「0」的操作「9d9c5174bf3c518511744507」先于语句位置「1」的操作「272365b3c7fca0540a9d5380」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+      "summary_statement_ids": [
+        "fd6f74e42f376ce3e31fc296",
+        "a6f40fb8c63b0711633564f9",
+        "cdc57d974d1c62a1a1032d75",
+        "76a3a6ecd024a38b3c7c2a7b",
+        "92b18dfa5224a45ba2b06c80",
+        "b597f359f46129a255d78337"
+      ],
+      "statements": [
+        {
+          "id": "cdc57d974d1c62a1a1032d75",
+          "text": "捕获 binding「runtimeEnv」的初始化来源为「envRecord(env)」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "9d9c5174bf3c518511744507",
+          "operation_pointer": "/operations/10562"
+        },
+        {
+          "id": "a6f40fb8c63b0711633564f9",
+          "text": "将「env」作为第 1 个实参交给已绑定接口「ts:server/services/engine-runner#envRecord」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "c5d35c6047214d14d23699f5",
+          "operation_pointer": "/operations/10563"
+        },
+        {
+          "id": "81ffe8054bf8dc962cf4f0d2",
+          "text": "捕获 binding「runtimeDataRoot」的初始化来源为「typeof dataRoot === \"string\" ? dataRoot : null」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "272365b3c7fca0540a9d5380",
+          "operation_pointer": "/operations/10564"
+        },
+        {
+          "id": "b597f359f46129a255d78337",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「9d9c5174bf3c518511744507」先于语句位置「1」的操作「272365b3c7fca0540a9d5380」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "c8b7b0b08eb10b11f3d73d8f",
+          "operation_pointer": "/operations/10565"
+        },
+        {
+          "id": "20c7f79fb3a7e3c4939fcb12",
+          "text": "捕获 binding「broker」的初始化来源为「workerBrokerClient instanceof WorkerBrokerClient ? workerBrokerClient : null」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "9dc452c1e3caca46313d622f",
+          "operation_pointer": "/operations/10566"
+        },
+        {
+          "id": "7291cc8fb0ec957977d0df4c",
+          "text": "捕获 binding「withJobOptions」的初始化来源为「(fn: (...args: unknown[]) => unknown) => runtimeDataRoot\\n    ? (root: string, project: string, jobId: string, opts: LooseRecord = {}) => fn(root, project, jobId, { ...opts, dataRoot: runtimeDataRoot })\\n    : fn」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "8441826a173c0e67e52c04bd",
+          "operation_pointer": "/operations/10568"
+        },
+        {
+          "id": "400d6a8fe3d61b5353fced5d",
+          "text": "捕获 binding「ports」的初始化来源为「{\\n    createJob: buildCreateJobPort(broker, runtimeDataRoot),\\n    startPhase: broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase),\\n    completePhase: broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase),\\n    completeJob: broker\\n      ? broker.completeJob.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string,…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "1506a1e6a0adc69e93cb11fb",
+          "operation_pointer": "/operations/10578"
+        },
+        {
+          "id": "fd6f74e42f376ce3e31fc296",
+          "text": "构造捕获记录，字段按源码次序为「createJob ← buildCreateJobPort(broker, runtimeDataRoot)；startPhase ← broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase)；completePhase ← broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase)；completeJob ← broker\\n      ? broker.completeJob.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, opts: LooseRecord = {}) => comp…［展示截断；完整操作保留］；failJob ← broker ? broker.failJob.bind(broker) : withJobOptions(failJob)；blockJob ← broker ? broker.blockJob.bind(broker) : withJobOptions(blockJob)；appendEvent ← broker\\n      ? broker.appendEvent.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, event: EventRecord, opts: Loose…［展示截断；完整操作保留］；prepareTask ← prepareTaskForEnv(runtimeEnv)；getPool ← () => getManagedAcpPool({ cpbRoot, hubRoot, env: runtimeEnv })；getArtifactIndex ← broker\\n      ? broker.getArtifactIndex.bind(broker)\\n      : (root: string, project: string, jobId: string, opts: LooseRecord = {}) =>\\n        buildArtifactIn…［展示截断；完整操作保留］；providerServices ← {\\n      assertProviderAvailable,\\n      getProviderAdapter,\\n      delegateMarkProviderUnavailable,\\n      delegateEnqueueProviderUsage,\\n      readAgentRoutin…［展示截断；完整操作保留］」。不据构造形式推断物理持久化。",
+          "operation_id": "e9f750061378e4b6133c34f4",
+          "operation_pointer": "/operations/10580"
+        },
+        {
+          "id": "d1e176349b5e8221ca80fca7",
+          "text": "将「broker」作为第 1 个实参交给已绑定接口「ts:server/services/engine-runner#buildCreateJobPort」，对应捕获形参「broker: WorkerBrokerClient | null」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "121ee4833f0719bdc8908c8f",
+          "operation_pointer": "/operations/10581"
+        },
+        {
+          "id": "5d0d1d7514f3a51e201e7576",
+          "text": "在调用形式「broker.startPhase.bind」中提供第 1 个实参「broker」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "59baa0bf06efa8db21968c4f",
+          "operation_pointer": "/operations/10583"
+        },
+        {
+          "id": "714c600d56577db69de2cd11",
+          "text": "将「startPhase」作为第 1 个实参交给已绑定接口「ts:server/services/engine-runner#buildServices.withJobOptions」，对应捕获形参「fn: (...args: unknown[]) => unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "6dce510e3c19a44c6f0dce3a",
+          "operation_pointer": "/operations/10584"
+        },
+        {
+          "id": "8805c82ef5d9e59f2258f9bd",
+          "text": "在调用形式「broker.completePhase.bind」中提供第 1 个实参「broker」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "1736a80e23479f14ab23737b",
+          "operation_pointer": "/operations/10585"
+        },
+        {
+          "id": "fda29925452cc1f2489e3cfb",
+          "text": "在调用形式「broker.completeJob.bind」中提供第 1 个实参「broker」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "fb14bd02b9bd01aca00b9902",
+          "operation_pointer": "/operations/10587"
+        },
+        {
+          "id": "5c51e81f6c08642c2009396b",
+          "text": "在调用形式「broker.failJob.bind」中提供第 1 个实参「broker」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "e53267efedfe6d08b57dd805",
+          "operation_pointer": "/operations/10596"
+        },
+        {
+          "id": "0a8ab954a945fd5d743addb9",
+          "text": "在调用形式「broker.blockJob.bind」中提供第 1 个实参「broker」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "ae5c6209ce140ed69f61552e",
+          "operation_pointer": "/operations/10598"
+        },
+        {
+          "id": "495ef51a9cec63a582882a47",
+          "text": "在调用形式「broker.appendEvent.bind」中提供第 1 个实参「broker」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "82306b87e216bee61e966752",
+          "operation_pointer": "/operations/10600"
+        },
+        {
+          "id": "00de310daa76e9a349dac6ea",
+          "text": "将「runtimeEnv」作为第 1 个实参交给已绑定接口「ts:server/services/engine-runner#prepareTaskForEnv」，对应捕获形参「env: Record<string, string | undefined>」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "11a00bf8b73aac9cdf830460",
+          "operation_pointer": "/operations/10617"
+        },
+        {
+          "id": "547a547df12842cf4f18b460",
+          "text": "在调用形式「broker.getArtifactIndex.bind」中提供第 1 个实参「broker」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "b931d5dd190f378c8723a55f",
+          "operation_pointer": "/operations/10623"
+        },
+        {
+          "id": "741f97308204187916c64efb",
+          "text": "构造捕获记录，字段按源码次序为「assertProviderAvailable ← assertProviderAvailable；getProviderAdapter ← getProviderAdapter；delegateMarkProviderUnavailable ← delegateMarkProviderUnavailable；delegateEnqueueProviderUsage ← delegateEnqueueProviderUsage；readAgentRoutingMetrics ← readAgentRoutingMetrics」。不据构造形式推断物理持久化。",
+          "operation_id": "cf917aed306031912a72089f",
+          "operation_pointer": "/operations/10632"
+        },
+        {
+          "id": "92b18dfa5224a45ba2b06c80",
+          "text": "以字段投影形式「assertProviderAvailable」关联路径「assertProviderAvailable」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "04e33adddb57e68e2ae46bb2",
+          "operation_pointer": "/operations/10633"
+        },
+        {
+          "id": "8508334b04383dd3b988384e",
+          "text": "以字段投影形式「getProviderAdapter」关联路径「getProviderAdapter」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "afdb67e4c377b36a7209ea37",
+          "operation_pointer": "/operations/10634"
+        },
+        {
+          "id": "45a67568ee060ea2b9ebcd8f",
+          "text": "以字段投影形式「delegateMarkProviderUnavailable」关联路径「delegateMarkProviderUnavailable」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "b4235f72349ad5a2ade586b5",
+          "operation_pointer": "/operations/10635"
+        },
+        {
+          "id": "2da379272921deec95482d87",
+          "text": "以字段投影形式「delegateEnqueueProviderUsage」关联路径「delegateEnqueueProviderUsage」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "560e7d21ec50cd213be3154e",
+          "operation_pointer": "/operations/10636"
+        },
+        {
+          "id": "76a3a6ecd024a38b3c7c2a7b",
+          "text": "以「return ports;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "5d0d20baab4e710cada1968a",
+          "operation_pointer": "/operations/10639"
+        }
+      ],
+      "all_operation_count": 33
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/engine-runner.ts",
+        "symbol": "buildServices.withJobOptions.<arrow@83:6>",
+        "graph_node_id": "ts:server/services/engine-runner#buildServices.withJobOptions.<arrow@83:6>",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 83,
+          "column": 7,
+          "start_byte": 3424,
+          "end_byte": 3562,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "location_ref": "/source_location_index/fffc539d7398abd33d9c3d80",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获的空记录「{}」；没有从空记录形式推断额外字段或持久效果。 在调用形式「fn」中提供第 4 个实参「{ ...opts, dataRoot: runtimeDataRoot }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。 以字段投影形式「runtimeDataRoot」关联路径「runtimeDataRoot」；只描述捕获来源，不证明当时的字段值。 保留记录复制/展开来源「opts」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+      "summary_statement_ids": [
+        "624ee91b531c1dea640b9145",
+        "8d1be50e81c98add92e7d5db",
+        "6e8fb0588e29c3c3665039b3",
+        "efd7e930c534aef771572608"
+      ],
+      "statements": [
+        {
+          "id": "624ee91b531c1dea640b9145",
+          "text": "构造捕获的空记录「{}」；没有从空记录形式推断额外字段或持久效果。",
+          "operation_id": "7a8355b5939ba8e4fdc4510c",
+          "operation_pointer": "/operations/10570"
+        },
+        {
+          "id": "2a343bd1b44961fad2c96b9d",
+          "text": "在调用形式「fn」中提供第 1 个实参「root」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "3df8a2a7fcaa2bea7ade75cd",
+          "operation_pointer": "/operations/10571"
+        },
+        {
+          "id": "ff5703bafe9ea4f74de67d76",
+          "text": "在调用形式「fn」中提供第 2 个实参「project」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "5a0b12d01687ad19af3a6e2d",
+          "operation_pointer": "/operations/10572"
+        },
+        {
+          "id": "8d1be50e81c98add92e7d5db",
+          "text": "在调用形式「fn」中提供第 4 个实参「{ ...opts, dataRoot: runtimeDataRoot }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "92a0350b5fb9cd11aa6c3206",
+          "operation_pointer": "/operations/10573"
+        },
+        {
+          "id": "48df8c2ce01fab1d1dd8be42",
+          "text": "在调用形式「fn」中提供第 3 个实参「jobId」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "c15386ce0109b3ad89f9e3e7",
+          "operation_pointer": "/operations/10574"
+        },
+        {
+          "id": "5c44943f80504262e2e9659b",
+          "text": "构造捕获记录，字段按源码次序为「dataRoot ← runtimeDataRoot」。不据构造形式推断物理持久化。",
+          "operation_id": "34ace9b3b6b1aea4ca846118",
+          "operation_pointer": "/operations/10575"
+        },
+        {
+          "id": "efd7e930c534aef771572608",
+          "text": "保留记录复制/展开来源「opts」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+          "operation_id": "4ec5b434e5833bda25a039f9",
+          "operation_pointer": "/operations/10576"
+        },
+        {
+          "id": "6e8fb0588e29c3c3665039b3",
+          "text": "以字段投影形式「runtimeDataRoot」关联路径「runtimeDataRoot」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "f1b0f0183375047060f7e628",
+          "operation_pointer": "/operations/10577"
+        }
+      ],
+      "all_operation_count": 8
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/engine-runner.ts",
+        "symbol": "buildServices.ports.<arrow@92:8>",
+        "graph_node_id": "ts:server/services/engine-runner#buildServices.ports.<arrow@92:8>",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 92,
+          "column": 9,
+          "start_byte": 3928,
+          "end_byte": 4075,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "location_ref": "/source_location_index/63532add2ef81546455cdd59",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获的空记录「{}」；没有从空记录形式推断额外字段或持久效果。 将「{ ...opts, dataRoot: runtimeDataRoot }」作为第 4 个实参交给已绑定接口「ts:server/services/job/job-store#completeJob」，对应捕获形参「{ ts = nowIso(), dataRoot }: RuntimePathOptions & { ts?: string } = {}」。该普通调用关系不替代进程或网络协议关系。 以字段投影形式「runtimeDataRoot」关联路径「runtimeDataRoot」；只描述捕获来源，不证明当时的字段值。 保留记录复制/展开来源「opts」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+      "summary_statement_ids": [
+        "21bdedb40d35064d297687db",
+        "1f19c383f87d51cd28331a46",
+        "6447f9ee5acc66f8dfbfa76e",
+        "056f720235ce268fca300dd7"
+      ],
+      "statements": [
+        {
+          "id": "21bdedb40d35064d297687db",
+          "text": "构造捕获的空记录「{}」；没有从空记录形式推断额外字段或持久效果。",
+          "operation_id": "249997d1b876cfaa7e588095",
+          "operation_pointer": "/operations/10588"
+        },
+        {
+          "id": "7e8c2424b1c180c3a6904242",
+          "text": "将「root」作为第 1 个实参交给已绑定接口「ts:server/services/job/job-store#completeJob」，对应捕获形参「cpbRoot: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "151ff395866e579cfa41fd25",
+          "operation_pointer": "/operations/10589"
+        },
+        {
+          "id": "3336242c6da814b88ac412dc",
+          "text": "将「project」作为第 2 个实参交给已绑定接口「ts:server/services/job/job-store#completeJob」，对应捕获形参「project: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "7d2837e2d6798ea0d0cba09b",
+          "operation_pointer": "/operations/10590"
+        },
+        {
+          "id": "1f19c383f87d51cd28331a46",
+          "text": "将「{ ...opts, dataRoot: runtimeDataRoot }」作为第 4 个实参交给已绑定接口「ts:server/services/job/job-store#completeJob」，对应捕获形参「{ ts = nowIso(), dataRoot }: RuntimePathOptions & { ts?: string } = {}」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "cc2a597b78b83e3e2864eeb1",
+          "operation_pointer": "/operations/10591"
+        },
+        {
+          "id": "e039d9dc08c211495fb45f5f",
+          "text": "将「jobId」作为第 3 个实参交给已绑定接口「ts:server/services/job/job-store#completeJob」，对应捕获形参「jobId: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "d23f203bfd3fd61256e96ca7",
+          "operation_pointer": "/operations/10592"
+        },
+        {
+          "id": "99d51338e5aa25df86be9a16",
+          "text": "构造捕获记录，字段按源码次序为「dataRoot ← runtimeDataRoot」。不据构造形式推断物理持久化。",
+          "operation_id": "7a8a558e0d86791e9d91109b",
+          "operation_pointer": "/operations/10593"
+        },
+        {
+          "id": "056f720235ce268fca300dd7",
+          "text": "保留记录复制/展开来源「opts」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+          "operation_id": "144fb3323cfc37a8814bcbc6",
+          "operation_pointer": "/operations/10594"
+        },
+        {
+          "id": "6447f9ee5acc66f8dfbfa76e",
+          "text": "以字段投影形式「runtimeDataRoot」关联路径「runtimeDataRoot」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "113a4408c74ee40d49bda0a1",
+          "operation_pointer": "/operations/10595"
+        }
+      ],
+      "all_operation_count": 8
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/engine-runner.ts",
+        "symbol": "buildServices.ports.<arrow@99:8>",
+        "graph_node_id": "ts:server/services/engine-runner#buildServices.ports.<arrow@99:8>",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 99,
+          "column": 9,
+          "start_byte": 4350,
+          "end_byte": 4732,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "location_ref": "/source_location_index/29e99581e71e624d1c097e37",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获的空记录「{}」；没有从空记录形式推断额外字段或持久效果。 将「{ ...opts, dataRoot: runtimeDataRoot }」作为第 5 个实参交给已绑定接口「ts:server/services/event/event-store#appendEvent」，对应捕获形参「opts: EventStoreOptions = {}」。该普通调用关系不替代进程或网络协议关系。 条件「(typeof jobId !== \"string\" || !/^[A-Za-z0-9][A-Za-z0-9-]*$/.test(jobId))」的捕获提前退出分支为「throw：new Error(`invalid jobId for appendEvent: ${JSON.stringify(jobId)}`)」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「throw new Error(`invalid jobId for appendEvent: ${JSON.stringify(jobId)}`);」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 以字段投影形式「runtimeDataRoot」关联路径「runtimeDataRoot」；只描述捕获来源，不证明当时的字段值。 保留记录复制/展开来源「opts」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「aa1625d1bb959506820b3828」先于语句位置「1」的操作「382b0ad37d6099c0e532ff8a」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+      "summary_statement_ids": [
+        "9724eba525252d288aab7ca2",
+        "2f56e1e4b559957fab293713",
+        "959d4eb71c5212aca307115b",
+        "15a54ed9d6c2b3ecc2ad16b1",
+        "c0c62b19d74c85803b84b0b9",
+        "9ab6f4c2567e29023b3f2be2",
+        "35d98584603888deea42ef80"
+      ],
+      "statements": [
+        {
+          "id": "9724eba525252d288aab7ca2",
+          "text": "构造捕获的空记录「{}」；没有从空记录形式推断额外字段或持久效果。",
+          "operation_id": "a14cc2354ec494994ecc7a43",
+          "operation_pointer": "/operations/10601"
+        },
+        {
+          "id": "287c2227048430ec9d4f9e89",
+          "text": "在调用形式「/^[A-Za-z0-9][A-Za-z0-9-]*$/.test」中提供第 1 个实参「jobId」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "aa1625d1bb959506820b3828",
+          "operation_pointer": "/operations/10602"
+        },
+        {
+          "id": "959d4eb71c5212aca307115b",
+          "text": "条件「(typeof jobId !== \"string\" || !/^[A-Za-z0-9][A-Za-z0-9-]*$/.test(jobId))」的捕获提前退出分支为「throw：new Error(`invalid jobId for appendEvent: ${JSON.stringify(jobId)}`)」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "d03a79bd6c3355b916d95a78",
+          "operation_pointer": "/operations/10603"
+        },
+        {
+          "id": "15a54ed9d6c2b3ecc2ad16b1",
+          "text": "以「throw new Error(`invalid jobId for appendEvent: ${JSON.stringify(jobId)}`);」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "9e797f53fcfe2a926d1078fe",
+          "operation_pointer": "/operations/10604"
+        },
+        {
+          "id": "fc9fb28cdfea3ad131ffb4c6",
+          "text": "在调用形式「Error」中提供第 1 个实参「`invalid jobId for appendEvent: ${JSON.stringify(jobId)}`」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "2cd83326b9fb11dcbd9e826c",
+          "operation_pointer": "/operations/10605"
+        },
+        {
+          "id": "530ec6d97267b841a63a17cb",
+          "text": "在调用形式「JSON.stringify」中提供第 1 个实参「jobId」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "0b2b15a81f201beb9d9f5b75",
+          "operation_pointer": "/operations/10606"
+        },
+        {
+          "id": "35d98584603888deea42ef80",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「aa1625d1bb959506820b3828」先于语句位置「1」的操作「382b0ad37d6099c0e532ff8a」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "fde172e66fa7487df3fa0fca",
+          "operation_pointer": "/operations/10607"
+        },
+        {
+          "id": "ded9c4104108e4ed964522f1",
+          "text": "以「return appendEvent(root, project, jobId, event, { ...opts, dataRoot: runtimeDataRoot });」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "382b0ad37d6099c0e532ff8a",
+          "operation_pointer": "/operations/10608"
+        },
+        {
+          "id": "57a67e6bda4e20d2b4d67bd2",
+          "text": "将「event」作为第 4 个实参交给已绑定接口「ts:server/services/event/event-store#appendEvent」，对应捕获形参「event: EventRecord」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "3b745ef395a82cab3405220c",
+          "operation_pointer": "/operations/10609"
+        },
+        {
+          "id": "8c894082237bc72c98967624",
+          "text": "将「root」作为第 1 个实参交给已绑定接口「ts:server/services/event/event-store#appendEvent」，对应捕获形参「cpbRoot: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "c2d0efc225ae859b6a620c81",
+          "operation_pointer": "/operations/10610"
+        },
+        {
+          "id": "22feb31d45b462b60d2d7ad3",
+          "text": "将「project」作为第 2 个实参交给已绑定接口「ts:server/services/event/event-store#appendEvent」，对应捕获形参「project: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "f06538b436906672f9fc90d0",
+          "operation_pointer": "/operations/10611"
+        },
+        {
+          "id": "16f9a71dc5aa6ade75d0b28f",
+          "text": "将「jobId」作为第 3 个实参交给已绑定接口「ts:server/services/event/event-store#appendEvent」，对应捕获形参「jobId: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "fbe06d6b49cdb88819feae65",
+          "operation_pointer": "/operations/10612"
+        },
+        {
+          "id": "2f56e1e4b559957fab293713",
+          "text": "将「{ ...opts, dataRoot: runtimeDataRoot }」作为第 5 个实参交给已绑定接口「ts:server/services/event/event-store#appendEvent」，对应捕获形参「opts: EventStoreOptions = {}」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "fc11c10f8c633b4c943d3528",
+          "operation_pointer": "/operations/10613"
+        },
+        {
+          "id": "ba104737a54fb467064957e9",
+          "text": "构造捕获记录，字段按源码次序为「dataRoot ← runtimeDataRoot」。不据构造形式推断物理持久化。",
+          "operation_id": "9fde5a2f75f5702448a32337",
+          "operation_pointer": "/operations/10614"
+        },
+        {
+          "id": "9ab6f4c2567e29023b3f2be2",
+          "text": "保留记录复制/展开来源「opts」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+          "operation_id": "cdcc5b43c931fb0867e19ded",
+          "operation_pointer": "/operations/10615"
+        },
+        {
+          "id": "c0c62b19d74c85803b84b0b9",
+          "text": "以字段投影形式「runtimeDataRoot」关联路径「runtimeDataRoot」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "58e9922d373bcf8d2c0b3501",
+          "operation_pointer": "/operations/10616"
+        }
+      ],
+      "all_operation_count": 16
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/engine-runner.ts",
+        "symbol": "buildServices.ports.getPool",
+        "graph_node_id": "ts:server/services/engine-runner#buildServices.ports.getPool",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 107,
+          "column": 14,
+          "start_byte": 4815,
+          "end_byte": 4877,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "location_ref": "/source_location_index/2b30e3d590978d32792c3a08",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获记录，字段按源码次序为「cpbRoot ← cpbRoot；hubRoot ← hubRoot；env ← runtimeEnv」。不据构造形式推断物理持久化。 将「{ cpbRoot, hubRoot, env: runtimeEnv }」作为第 1 个实参交给已绑定接口「ts:server/services/acp/acp-pool#getManagedAcpPool」，对应捕获形参「{ cpbRoot, hubRoot, ...opts }: AcpPoolOptions = {}」。该普通调用关系不替代进程或网络协议关系。 以字段投影形式「cpbRoot」关联路径「cpbRoot」；只描述捕获来源，不证明当时的字段值。",
+      "summary_statement_ids": [
+        "06f6291aee533647fc13767a",
+        "000900e84b0eeb51bc7570d4",
+        "ce94bbd3193ac378dd384789"
+      ],
+      "statements": [
+        {
+          "id": "000900e84b0eeb51bc7570d4",
+          "text": "将「{ cpbRoot, hubRoot, env: runtimeEnv }」作为第 1 个实参交给已绑定接口「ts:server/services/acp/acp-pool#getManagedAcpPool」，对应捕获形参「{ cpbRoot, hubRoot, ...opts }: AcpPoolOptions = {}」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "b16abcda112152c83b621d40",
+          "operation_pointer": "/operations/10618"
+        },
+        {
+          "id": "06f6291aee533647fc13767a",
+          "text": "构造捕获记录，字段按源码次序为「cpbRoot ← cpbRoot；hubRoot ← hubRoot；env ← runtimeEnv」。不据构造形式推断物理持久化。",
+          "operation_id": "8bed39e636ebd0d9aa9fb999",
+          "operation_pointer": "/operations/10619"
+        },
+        {
+          "id": "ce94bbd3193ac378dd384789",
+          "text": "以字段投影形式「cpbRoot」关联路径「cpbRoot」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "9528610415386c8206feb94c",
+          "operation_pointer": "/operations/10620"
+        },
+        {
+          "id": "76b38c38e1fd37f23f8f92ce",
+          "text": "以字段投影形式「hubRoot」关联路径「hubRoot」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "e4c9ff5a0b2b7325dca0aaef",
+          "operation_pointer": "/operations/10621"
+        },
+        {
+          "id": "be217a96146711d9c3ba82b3",
+          "text": "以字段投影形式「runtimeEnv」关联路径「runtimeEnv」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "b0cf42e09bedabe63697051b",
+          "operation_pointer": "/operations/10622"
+        }
+      ],
+      "all_operation_count": 5
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/engine-runner.ts",
+        "symbol": "buildServices.ports.<arrow@110:8>",
+        "graph_node_id": "ts:server/services/engine-runner#buildServices.ports.<arrow@110:8>",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 110,
+          "column": 9,
+          "start_byte": 4961,
+          "end_byte": 5123,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "location_ref": "/source_location_index/2761160cfad14eadccaab061",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获的空记录「{}」；没有从空记录形式推断额外字段或持久效果。 将「{ ...opts, dataRoot: runtimeDataRoot }」作为第 4 个实参交给已绑定接口「ts:server/services/job/job-projection#buildArtifactIndex」，对应捕获形参「{ events, dataRoot, wikiDir, restrictToWiki = false }: ArtifactIndexOptions = {}」。该普通调用关系不替代进程或网络协议关系。 以字段投影形式「runtimeDataRoot」关联路径「runtimeDataRoot」；只描述捕获来源，不证明当时的字段值。 保留记录复制/展开来源「opts」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+      "summary_statement_ids": [
+        "8ad35958ff6cb30cf82d0cb1",
+        "a88720ae059869ec8f4845a3",
+        "3821d2fdfcf0d7f1cf002032",
+        "082ba068a6b349acdff80c09"
+      ],
+      "statements": [
+        {
+          "id": "8ad35958ff6cb30cf82d0cb1",
+          "text": "构造捕获的空记录「{}」；没有从空记录形式推断额外字段或持久效果。",
+          "operation_id": "04a181ae6f1769eecea341d4",
+          "operation_pointer": "/operations/10624"
+        },
+        {
+          "id": "a88720ae059869ec8f4845a3",
+          "text": "将「{ ...opts, dataRoot: runtimeDataRoot }」作为第 4 个实参交给已绑定接口「ts:server/services/job/job-projection#buildArtifactIndex」，对应捕获形参「{ events, dataRoot, wikiDir, restrictToWiki = false }: ArtifactIndexOptions = {}」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "12db9b4b1d728d7b19f7d50f",
+          "operation_pointer": "/operations/10625"
+        },
+        {
+          "id": "90c3113b7a307eabf4e60303",
+          "text": "将「jobId」作为第 3 个实参交给已绑定接口「ts:server/services/job/job-projection#buildArtifactIndex」，对应捕获形参「jobId: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "1644561da8b525f8b27950d0",
+          "operation_pointer": "/operations/10626"
+        },
+        {
+          "id": "d4cc39d8faf895301f7e560e",
+          "text": "将「root」作为第 1 个实参交给已绑定接口「ts:server/services/job/job-projection#buildArtifactIndex」，对应捕获形参「cpbRoot: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "339d7ed5cf4f94d5eeabdf12",
+          "operation_pointer": "/operations/10627"
+        },
+        {
+          "id": "536d7137aef3f4356a38a188",
+          "text": "将「project」作为第 2 个实参交给已绑定接口「ts:server/services/job/job-projection#buildArtifactIndex」，对应捕获形参「project: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "b55e2d9746c7df6020bf7739",
+          "operation_pointer": "/operations/10628"
+        },
+        {
+          "id": "07ea0a910381fb7c10b9c0e6",
+          "text": "构造捕获记录，字段按源码次序为「dataRoot ← runtimeDataRoot」。不据构造形式推断物理持久化。",
+          "operation_id": "0765731acf94c2950d1dc079",
+          "operation_pointer": "/operations/10629"
+        },
+        {
+          "id": "082ba068a6b349acdff80c09",
+          "text": "保留记录复制/展开来源「opts」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+          "operation_id": "2640b7efec695deede137b0c",
+          "operation_pointer": "/operations/10630"
+        },
+        {
+          "id": "3821d2fdfcf0d7f1cf002032",
+          "text": "以字段投影形式「runtimeDataRoot」关联路径「runtimeDataRoot」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "d4088a272c35145ee2a44fb9",
+          "operation_pointer": "/operations/10631"
+        }
+      ],
+      "all_operation_count": 8
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/executor-root.ts",
+        "symbol": "resolveExecutorRoot",
+        "graph_node_id": "ts:server/services/executor-root#resolveExecutorRoot",
+        "location": {
+          "file": "server/services/executor-root.ts",
+          "line": 53,
+          "column": 8,
+          "start_byte": 1772,
+          "end_byte": 2007,
+          "source_hash": "28215bcfb01833099a3fb14c1c9f933faf3d0b7a26cd3bb0769917cd3abaab86",
+          "location_ref": "/source_location_index/f40ae0c95f33f91ca6e156bd",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「env」作为第 1 个实参交给已绑定接口「ts:shared/types#recordValue」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。 捕获 binding「envRecord」的初始化来源为「recordValue(env)」；保留该声明与初始化表达式，不推任意后续读取的当前值。 以「return path.resolve(stringValue(envRecord.CPB_EXECUTOR_ROOT) || stringValue(fallbackRoot));」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「76206fdac0505c12a3308dc8」先于语句位置「1」的操作「2af77f9417ebeb82d5e9fcc6」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+      "summary_statement_ids": [
+        "a7114f3843b466fd4fa204dc",
+        "7348c41a27ee16181398a743",
+        "3593ef62128994ad2ca8b908",
+        "b683dc901db79794c0a48c4f"
+      ],
+      "statements": [
+        {
+          "id": "7348c41a27ee16181398a743",
+          "text": "捕获 binding「envRecord」的初始化来源为「recordValue(env)」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "76206fdac0505c12a3308dc8",
+          "operation_pointer": "/operations/11191"
+        },
+        {
+          "id": "a7114f3843b466fd4fa204dc",
+          "text": "将「env」作为第 1 个实参交给已绑定接口「ts:shared/types#recordValue」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "c87cce1ba87db068b151e373",
+          "operation_pointer": "/operations/11192"
+        },
+        {
+          "id": "b683dc901db79794c0a48c4f",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「76206fdac0505c12a3308dc8」先于语句位置「1」的操作「2af77f9417ebeb82d5e9fcc6」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "70b7f9b559506f59af28e45b",
+          "operation_pointer": "/operations/11193"
+        },
+        {
+          "id": "3593ef62128994ad2ca8b908",
+          "text": "以「return path.resolve(stringValue(envRecord.CPB_EXECUTOR_ROOT) || stringValue(fallbackRoot));」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "2af77f9417ebeb82d5e9fcc6",
+          "operation_pointer": "/operations/11194"
+        },
+        {
+          "id": "ac936862268642a7b8ed17fa",
+          "text": "在调用形式「path.resolve」中提供第 1 个实参「stringValue(envRecord.CPB_EXECUTOR_ROOT) || stringValue(fallbackRoot)」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "67eefc297bb9b8508f9eef12",
+          "operation_pointer": "/operations/11195"
+        },
+        {
+          "id": "073a919d1213fcb96daae209",
+          "text": "将「envRecord.CPB_EXECUTOR_ROOT」作为第 1 个实参交给已绑定接口「ts:server/services/executor-root#stringValue」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "2224ce41360de7b06bdb4543",
+          "operation_pointer": "/operations/11196"
+        },
+        {
+          "id": "2846d784f2337a9a24ff38e1",
+          "text": "将「fallbackRoot」作为第 1 个实参交给已绑定接口「ts:server/services/executor-root#stringValue」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "73847393b0fa9faea45e3802",
+          "operation_pointer": "/operations/11197"
+        }
+      ],
+      "all_operation_count": 7
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "completeRemediation",
+        "graph_node_id": "ts:server/services/review/review-dispatch#completeRemediation",
+        "location": {
+          "file": "server/services/review/review-dispatch.ts",
+          "line": 4398,
+          "column": 8,
+          "start_byte": 161287,
+          "end_byte": 164131,
+          "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+          "location_ref": "/source_location_index/166a102313c2be71d74f949c",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "将「lockDir」作为第 1 个实参交给已绑定接口「ts:server/services/review/review-dispatch#withHeldWorkflowLockRelease」，对应捕获形参「lockDir: string」。该普通调用关系不替代进程或网络协议关系。 条件「(!lockDir)」的捕获提前退出分支为「throw：workflowLockError(\\n      `Remediation for ${project}/${jobId} requires its exact lock lease`,\\n      \"REVIEW_WORKFLOW_LOCK_OWNERSHIP_UNAVAILABLE\",\\n      explicitDataRoot\\n        ? path.join(path.resolve(explicitDataRoot), \"remediation-locks\", project, `${jobId}.lock`)\\n        : `project-runtime-root/remediation-locks/${project}/${jobId}.lock`,\\n    )」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「throw workflowLockError(\\n      `Remediation for ${project}/${jobId} requires its exact lock lease`,\\n      \"REVIEW_WORKFLOW_LOCK_OWNERSHIP_UNAVAILABLE\",\\n      explicitDataRoot\\n        ? path.join(path.resolve(explicitDataRoot), \"remediation-locks\", project, `${jobId}.lock`)\\n        : `project-runtime-root/remediation-locks/${project}/${jobId}.lock`,\\n   …［展示截断；完整操作保留］」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+      "summary_statement_ids": [
+        "fd92aefdc72cf9e566924edf",
+        "586cd2faf00900a50fdfb231",
+        "83e7b2b5cdd3eb5334ad55c7"
+      ],
+      "statements": [
+        {
+          "id": "586cd2faf00900a50fdfb231",
+          "text": "条件「(!lockDir)」的捕获提前退出分支为「throw：workflowLockError(\\n      `Remediation for ${project}/${jobId} requires its exact lock lease`,\\n      \"REVIEW_WORKFLOW_LOCK_OWNERSHIP_UNAVAILABLE\",\\n      explicitDataRoot\\n        ? path.join(path.resolve(explicitDataRoot), \"remediation-locks\", project, `${jobId}.lock`)\\n        : `project-runtime-root/remediation-locks/${project}/${jobId}.lock`,\\n    )」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "9e574c030a89b05e600bd482",
+          "operation_pointer": "/operations/13212"
+        },
+        {
+          "id": "83e7b2b5cdd3eb5334ad55c7",
+          "text": "以「throw workflowLockError(\\n      `Remediation for ${project}/${jobId} requires its exact lock lease`,\\n      \"REVIEW_WORKFLOW_LOCK_OWNERSHIP_UNAVAILABLE\",\\n      explicitDataRoot\\n        ? path.join(path.resolve(explicitDataRoot), \"remediation-locks\", project, `${jobId}.lock`)\\n        : `project-runtime-root/remediation-locks/${project}/${jobId}.lock`,\\n   …［展示截断；完整操作保留］」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "4d3d71a6c878fc73c6b54123",
+          "operation_pointer": "/operations/13213"
+        },
+        {
+          "id": "91da46a0660de5d8b2484847",
+          "text": "将「\"REVIEW_WORKFLOW_LOCK_OWNERSHIP_UNAVAILABLE\"」作为第 2 个实参交给已绑定接口「ts:server/services/review/review-dispatch#workflowLockError」，对应捕获形参「code: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "6cb2e91004eb973bf85bc566",
+          "operation_pointer": "/operations/13214"
+        },
+        {
+          "id": "138af03ea75a409fc53efcbe",
+          "text": "将「explicitDataRoot\\n        ? path.join(path.resolve(explicitDataRoot), \"remediation-locks\", project, `${jobId}.lock`)\\n        : `project-runtime-root/remediation-locks/${project}/${jobId}.lock`」作为第 3 个实参交给已绑定接口「ts:server/services/review/review-dispatch#workflowLockError」，对应捕获形参「lockDir: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "7b97cb2d39f75897796b9811",
+          "operation_pointer": "/operations/13215"
+        },
+        {
+          "id": "fc4eb12b2a9d1457d0d57b97",
+          "text": "将「`Remediation for ${project}/${jobId} requires its exact lock lease`」作为第 1 个实参交给已绑定接口「ts:server/services/review/review-dispatch#workflowLockError」，对应捕获形参「message: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "a98f8caa9646de054ef8cf9c",
+          "operation_pointer": "/operations/13216"
+        },
+        {
+          "id": "1cef3e62d161503363070d61",
+          "text": "在调用形式「path.join」中提供第 2 个实参「\"remediation-locks\"」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "13d86d80d2421ecdeba484a4",
+          "operation_pointer": "/operations/13217"
+        },
+        {
+          "id": "4f5d44d3af6e037f1054caf5",
+          "text": "在调用形式「path.join」中提供第 1 个实参「path.resolve(explicitDataRoot)」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "5745285bd3155d8d6b4764a4",
+          "operation_pointer": "/operations/13218"
+        },
+        {
+          "id": "0047acc5e0f92923d1589764",
+          "text": "在调用形式「path.join」中提供第 3 个实参「project」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "5c9087fb7f615054c8efe3c3",
+          "operation_pointer": "/operations/13219"
+        },
+        {
+          "id": "45f66672a7db6553ec545d4d",
+          "text": "在调用形式「path.join」中提供第 4 个实参「`${jobId}.lock`」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "8d6b55f09047a8c563f9cbc4",
+          "operation_pointer": "/operations/13220"
+        },
+        {
+          "id": "c7dd2e5163079a81345d0189",
+          "text": "在调用形式「path.resolve」中提供第 1 个实参「explicitDataRoot」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "6e0945a90d59e904bb5c476d",
+          "operation_pointer": "/operations/13221"
+        },
+        {
+          "id": "0ebbe23ddf06d1ab35a9d710",
+          "text": "以「return withHeldWorkflowLockRelease(lockDir, \"Remediation\", async () => {\\n    const dataRoot = await resolveRemediationDataRoot(cpbRoot, project, {\\n      hubRoot,\\n      dataRoot: explicitDataRoot,\\n      lockDir,\\n    });\\n    const eventOpts = { dataRoot };\\n    if (status === \"failed\") {\\n      await recordRemediationEvent(cpbRoot, project, jobId, {\\n   …［展示截断；完整操作保留］」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "698549f661ada8bddc801e70",
+          "operation_pointer": "/operations/13222"
+        },
+        {
+          "id": "07d6f48428d11ba4c751362b",
+          "text": "将「\"Remediation\"」作为第 2 个实参交给已绑定接口「ts:server/services/review/review-dispatch#withHeldWorkflowLockRelease」，对应捕获形参「label: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "1c453f970dcd5adba451f364",
+          "operation_pointer": "/operations/13223"
+        },
+        {
+          "id": "263c92ea823c25699944c895",
+          "text": "将「async () => {\\n    const dataRoot = await resolveRemediationDataRoot(cpbRoot, project, {\\n      hubRoot,\\n      dataRoot: explicitDataRoot,\\n      lockDir,\\n    });\\n    const eventOpts = { dataRoot };\\n    if (status === \"failed\") {\\n      await recordRemediationEvent(cpbRoot, project, jobId, {\\n        type: \"external_remediation_failed\",\\n        jobId,\\n…［展示截断；完整操作保留］」作为第 3 个实参交给已绑定接口「ts:server/services/review/review-dispatch#withHeldWorkflowLockRelease」，对应捕获形参「operation: () => Promise<T>」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "430ffda03b2dcfead1a3febf",
+          "operation_pointer": "/operations/13224"
+        },
+        {
+          "id": "fd92aefdc72cf9e566924edf",
+          "text": "将「lockDir」作为第 1 个实参交给已绑定接口「ts:server/services/review/review-dispatch#withHeldWorkflowLockRelease」，对应捕获形参「lockDir: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "b04a6e7f17620914e7e4e443",
+          "operation_pointer": "/operations/13225"
+        }
+      ],
+      "all_operation_count": 14
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "completeRemediation.<arrow@4408:61>",
+        "graph_node_id": "ts:server/services/review/review-dispatch#completeRemediation.<arrow@4408:61>",
+        "location": {
+          "file": "server/services/review/review-dispatch.ts",
+          "line": 4408,
+          "column": 62,
+          "start_byte": 161962,
+          "end_byte": 164127,
+          "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+          "location_ref": "/source_location_index/0a0708e5ef7e8b8c4d56213a",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获记录，字段按源码次序为「type ← \"external_remediation_failed\"；jobId ← jobId；project ← project；artifact ← remediationArtifact；file ← remediationFile；error ← error || \"unknown error\"；ts ← new Date().toISOString()」。不据构造形式推断物理持久化。 将「{ project, jobId, remediationArtifact, remediationStatus, executorRoot, dataRoot }」作为第 2 个实参交给已绑定接口「ts:server/services/review/review-dispatch#createRemediationLineageTask」，对应捕获形参「{ project, jobId, remediationArtifact, remediationStatus, executorRoot, dataRoot }: LineageTaskOptions」。该普通调用关系不替代进程或网络协议关系。 捕获 binding「dataRoot」的初始化来源为「await resolveRemediationDataRoot(cpbRoot, project, {\\n      hubRoot,\\n      dataRoot: explicitDataRoot,\\n      lockDir,\\n    })」；保留该声明与初始化表达式，不推任意后续读取的当前值。 对捕获 binding「remediationContent」存在源更新「remediationContent = await readFileRem(remediationFile, \"utf8\")」；循环和分支条件见操作上下文，未推执行次数或最终数值。 条件「(!remediationStatus)」的捕获提前退出分支为「throw：new Error(\"invalid remediation status\")」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 以字段投影形式「hubRoot」关联路径「hubRoot」；只描述捕获来源，不证明当时的字段值。 将「{\\n        type: \"external_remediation_failed\",\\n        jobId,\\n        project,\\n        artifact: remediationArtifact,\\n        file: remediationFile,\\n        error: error || \"unknown error\",\\n        ts: new Date().toISOString(),\\n      }」作为第 4 个实参交给已绑定接口「ts:server/services/review/review-dispatch#recordRemediationEvent」，对应捕获形参「event: LooseRecord」。该普通调用关系不替代进程或网络协议关系。",
+      "summary_statement_ids": [
+        "99a32e96ee3ed2bd2b1417be",
+        "58f3d934f83198b72bb3e86e",
+        "fd61e8e85603ace19e09cbdb",
+        "f3a055333bf35d3b0924231a",
+        "a91bc74be87687e863b24b58",
+        "9b3df75f34a53e504d029e17",
+        "c4f0d9c56ae817cd093a270d",
+        "e0927a639b01fb9a325bb30c"
+      ],
+      "statements": [
+        {
+          "id": "fd61e8e85603ace19e09cbdb",
+          "text": "捕获 binding「dataRoot」的初始化来源为「await resolveRemediationDataRoot(cpbRoot, project, {\\n      hubRoot,\\n      dataRoot: explicitDataRoot,\\n      lockDir,\\n    })」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "ce906a61a7f86cd9b563c9f4",
+          "operation_pointer": "/operations/13226"
+        },
+        {
+          "id": "d854de87a16136fb9f3ebf49",
+          "text": "将「{\\n      hubRoot,\\n      dataRoot: explicitDataRoot,\\n      lockDir,\\n    }」作为第 3 个实参交给已绑定接口「ts:server/services/review/review-dispatch#resolveRemediationDataRoot」，对应捕获形参「{ hubRoot, dataRoot, lockDir }: ReviewStorageOptions = {}」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "ffe68441fc31ef4c051962a7",
+          "operation_pointer": "/operations/13229"
+        },
+        {
+          "id": "f8e39fab6602b3adbb81c340",
+          "text": "构造捕获记录，字段按源码次序为「hubRoot ← hubRoot；dataRoot ← explicitDataRoot；lockDir ← lockDir」。不据构造形式推断物理持久化。",
+          "operation_id": "ab8b83f3a0995336391f85b8",
+          "operation_pointer": "/operations/13230"
+        },
+        {
+          "id": "c4f0d9c56ae817cd093a270d",
+          "text": "以字段投影形式「hubRoot」关联路径「hubRoot」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "4ec55d071c6a191375c57a51",
+          "operation_pointer": "/operations/13231"
+        },
+        {
+          "id": "36475c8888560fee540c662b",
+          "text": "捕获 binding「eventOpts」的初始化来源为「{ dataRoot }」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "ee8ddcc1f77bf9973d821b30",
+          "operation_pointer": "/operations/13234"
+        },
+        {
+          "id": "1403848220538446c5422a43",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「ce906a61a7f86cd9b563c9f4」先于语句位置「1」的操作「ee8ddcc1f77bf9973d821b30」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "6cd4644ba37f19b8b4e36626",
+          "operation_pointer": "/operations/13235"
+        },
+        {
+          "id": "860c417c90568338b660ce97",
+          "text": "构造捕获记录，字段按源码次序为「dataRoot ← dataRoot」。不据构造形式推断物理持久化。",
+          "operation_id": "e205e04f75d20040c77468e6",
+          "operation_pointer": "/operations/13236"
+        },
+        {
+          "id": "e0927a639b01fb9a325bb30c",
+          "text": "将「{\\n        type: \"external_remediation_failed\",\\n        jobId,\\n        project,\\n        artifact: remediationArtifact,\\n        file: remediationFile,\\n        error: error || \"unknown error\",\\n        ts: new Date().toISOString(),\\n      }」作为第 4 个实参交给已绑定接口「ts:server/services/review/review-dispatch#recordRemediationEvent」，对应捕获形参「event: LooseRecord」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "5d3f7d3974f41ff190780899",
+          "operation_pointer": "/operations/13239"
+        },
+        {
+          "id": "99a32e96ee3ed2bd2b1417be",
+          "text": "构造捕获记录，字段按源码次序为「type ← \"external_remediation_failed\"；jobId ← jobId；project ← project；artifact ← remediationArtifact；file ← remediationFile；error ← error || \"unknown error\"；ts ← new Date().toISOString()」。不据构造形式推断物理持久化。",
+          "operation_id": "30a0ee00e1f76cced86560cc",
+          "operation_pointer": "/operations/13243"
+        },
+        {
+          "id": "258eda78ecba88da3de46dbf",
+          "text": "记录消息形状中的固定文本字段「type」及捕获形式「\"external_remediation_failed\"」。单个文本字段不是跨语言调用或传输成功的证明。",
+          "operation_id": "c1730ff988e97802660763a0",
+          "operation_pointer": "/operations/13244"
+        },
+        {
+          "id": "e899ab4485d686c226fba7a7",
+          "text": "以无显式实参的调用形式「new Date().toISOString」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "1403b9344fa7134b98ae7ffd",
+          "operation_pointer": "/operations/13249"
+        },
+        {
+          "id": "24bae05075239237397e22b1",
+          "text": "以无显式实参的调用形式「Date」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。",
+          "operation_id": "f8e5a246e4b64b1811c20ec0",
+          "operation_pointer": "/operations/13250"
+        },
+        {
+          "id": "64abd43ae9115a4a20a9bd5a",
+          "text": "条件「(status === \"failed\")」的捕获提前退出分支为「return：」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "4bed4f988fefde8dcf19ae40",
+          "operation_pointer": "/operations/13251"
+        },
+        {
+          "id": "9b3df75f34a53e504d029e17",
+          "text": "以「return;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "f5560fab482c62d02c3fc4a5",
+          "operation_pointer": "/operations/13253"
+        },
+        {
+          "id": "f3a055333bf35d3b0924231a",
+          "text": "对捕获 binding「remediationContent」存在源更新「remediationContent = await readFileRem(remediationFile, \"utf8\")」；循环和分支条件见操作上下文，未推执行次数或最终数值。",
+          "operation_id": "bafb0d9935678d37a688827b",
+          "operation_pointer": "/operations/13254"
+        },
+        {
+          "id": "69946b512e1df8f55b454404",
+          "text": "在调用形式「readFileRem」中提供第 1 个实参「remediationFile」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "e616d05557177d594c82b4d4",
+          "operation_pointer": "/operations/13256"
+        },
+        {
+          "id": "2e71dd50a1862826865ea13e",
+          "text": "在调用形式「Error」中提供第 1 个实参「\"remediation report not created\"」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "b2bfb10efccc5b82f27b1a06",
+          "operation_pointer": "/operations/13272"
+        },
+        {
+          "id": "61b9c30bedce92d5ebc2ba70",
+          "text": "捕获 binding「remediationStatus」的初始化来源为「parseRemediationStatus(remediationContent)」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "8e39ecc9aabef09cbe32d349",
+          "operation_pointer": "/operations/13273"
+        },
+        {
+          "id": "e4debe2c2d80028902916176",
+          "text": "将「remediationContent」作为第 1 个实参交给已绑定接口「ts:server/services/review/review-dispatch#parseRemediationStatus」，对应捕获形参「content: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "679937a1d092bc5bf43df2b5",
+          "operation_pointer": "/operations/13275"
+        },
+        {
+          "id": "a91bc74be87687e863b24b58",
+          "text": "条件「(!remediationStatus)」的捕获提前退出分支为「throw：new Error(\"invalid remediation status\")」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "d6cb9bb6c58a995c719509fc",
+          "operation_pointer": "/operations/13289"
+        },
+        {
+          "id": "11a78685fd67ef467dbee85a",
+          "text": "构造捕获记录，字段按源码次序为「type ← \"external_remediation_completed\"；jobId ← jobId；project ← project；artifact ← remediationArtifact；file ← remediationFile；remediationStatus ← remediationStatus；ts ← new Date().toISOString()」。不据构造形式推断物理持久化。",
+          "operation_id": "5b8774ef95b6a21bc16233c4",
+          "operation_pointer": "/operations/13299"
+        },
+        {
+          "id": "8d87d4c688182526b32f1ba9",
+          "text": "将「cpbRoot」作为第 1 个实参交给已绑定接口「ts:server/services/review/review-dispatch#markJobSuperseded」，对应捕获形参「cpbRoot: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "c454a9656579fa28b34475ef",
+          "operation_pointer": "/operations/13310"
+        },
+        {
+          "id": "58f3d934f83198b72bb3e86e",
+          "text": "将「{ project, jobId, remediationArtifact, remediationStatus, executorRoot, dataRoot }」作为第 2 个实参交给已绑定接口「ts:server/services/review/review-dispatch#createRemediationLineageTask」，对应捕获形参「{ project, jobId, remediationArtifact, remediationStatus, executorRoot, dataRoot }: LineageTaskOptions」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "99cb091f499ece9e83238590",
+          "operation_pointer": "/operations/13312"
+        },
+        {
+          "id": "f9b4db1e491d618dc4d46c91",
+          "text": "构造捕获记录，字段按源码次序为「project ← project；jobId ← jobId；remediationArtifact ← remediationArtifact；remediationStatus ← remediationStatus；executorRoot ← executorRoot；dataRoot ← dataRoot」。不据构造形式推断物理持久化。",
+          "operation_id": "94d713d5a468491aa718257a",
+          "operation_pointer": "/operations/13315"
+        }
+      ],
+      "all_operation_count": 98
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "createRemediationLineageTask",
+        "graph_node_id": "ts:server/services/review/review-dispatch#createRemediationLineageTask",
+        "location": {
+          "file": "server/services/review/review-dispatch.ts",
+          "line": 4500,
+          "column": 1,
+          "start_byte": 165033,
+          "end_byte": 168233,
+          "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+          "location_ref": "/source_location_index/ccb199b48c71b76fe0cf46ad",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "构造捕获记录，字段按源码次序为「projectId ← project；sourcePath ← sourcePath；sessionId ← origin?.sessionId || null；workerId ← origin?.workerId || null；cwd ← origin?.cwd || sourcePath；executionBoundary ← origin?.executionBoundary || \"worktree\"；type ← origin?.type || \"pipeline\"；priority ← origin?.priority || \"P2\"；description ← job.task；metadata ← {\\n      ...(origin?.metadata || {}),\\n      originJobId: jobId,\\n      originQueueEntryId: origin?.id || null,\\n      remediationArtifact,\\n      remediationSt…［展示截断；完整操作保留］」。不据构造形式推断物理持久化。 将「cpbRoot」作为第 1 个实参交给已绑定接口「ts:server/services/event/event-store#readEvents」，对应捕获形参「cpbRoot: string」。该普通调用关系不替代进程或网络协议关系。 捕获 binding「metaFile」的初始化来源为「path.join(dataRoot, \"wiki\", \"project.json\")」；保留该声明与初始化表达式，不推任意后续读取的当前值。 对捕获 binding「sourcePath」存在源更新「sourcePath = meta.sourcePath || \"\"」；循环和分支条件见操作上下文，未推执行次数或最终数值。 条件「(!dataRoot)」的捕获提前退出分支为「throw：new Error(\"dataRoot is required for remediation lineage\")」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「throw new Error(\"dataRoot is required for remediation lineage\");」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 以字段投影形式「dataRoot」关联路径「dataRoot」；只描述捕获来源，不证明当时的字段值。 将「{ projectId: project }」作为第 2 个实参交给已绑定接口「ts:server/services/hub/hub-queue#listQueue」，对应捕获形参「{ status, projectId }: QueueEntryInput = {}」。该普通调用关系不替代进程或网络协议关系。",
+      "summary_statement_ids": [
+        "f9bf0805c06e3d4fa675c2a2",
+        "bcfebd8a5fc987a47e872c49",
+        "a2b75e86231c30ebe097a5ce",
+        "ba1db9272425da2d1c097d11",
+        "8e0f56142ed1713db595997e",
+        "cf5f05055e31ded925ee5b22",
+        "4348a7bdc82b5a2c9add10d9",
+        "d147c7820acd2ca36c3d9291"
+      ],
+      "statements": [
+        {
+          "id": "8e0f56142ed1713db595997e",
+          "text": "条件「(!dataRoot)」的捕获提前退出分支为「throw：new Error(\"dataRoot is required for remediation lineage\")」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+          "operation_id": "e504af490f30f724e50e26e8",
+          "operation_pointer": "/operations/13362"
+        },
+        {
+          "id": "cf5f05055e31ded925ee5b22",
+          "text": "以「throw new Error(\"dataRoot is required for remediation lineage\");」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "da9959eba6c9347f8f6d30ae",
+          "operation_pointer": "/operations/13363"
+        },
+        {
+          "id": "1bb62e4e6dae2c688cf51a8b",
+          "text": "在调用形式「Error」中提供第 1 个实参「\"dataRoot is required for remediation lineage\"」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "5359023c61b86cc3a1fbbcd2",
+          "operation_pointer": "/operations/13364"
+        },
+        {
+          "id": "03a1b86cdea9d6bf7a3588c9",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「da9959eba6c9347f8f6d30ae」先于语句位置「1」的操作「ee40b383ab259357fc773c1c」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "603f468192f4945ad9468cfd",
+          "operation_pointer": "/operations/13366"
+        },
+        {
+          "id": "4348a7bdc82b5a2c9add10d9",
+          "text": "以字段投影形式「dataRoot」关联路径「dataRoot」；只描述捕获来源，不证明当时的字段值。",
+          "operation_id": "d0b8266969acd463b85ac81f",
+          "operation_pointer": "/operations/13368"
+        },
+        {
+          "id": "1fd9c873cb1a1f5c0cf6e3c9",
+          "text": "将「await readEventsRem(cpbRoot, project, jobId, eventOpts)」作为第 1 个实参交给已绑定接口「ts:server/services/event/event-materializer#materializeJob」，对应捕获形参「events: EventRecord[]」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "5a0a3ad6284145a56e189f96",
+          "operation_pointer": "/operations/13371"
+        },
+        {
+          "id": "bcfebd8a5fc987a47e872c49",
+          "text": "将「cpbRoot」作为第 1 个实参交给已绑定接口「ts:server/services/event/event-store#readEvents」，对应捕获形参「cpbRoot: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "3e254b38416fb35dce1cc1ad",
+          "operation_pointer": "/operations/13373"
+        },
+        {
+          "id": "e49ea3df03b7a85a1bd6976b",
+          "text": "将「cpbRoot」作为第 1 个实参交给已绑定接口「ts:server/services/job/job-store#readJobsIndex」，对应捕获形参「cpbRoot: string」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "7b829711abf8de4c4e17583f",
+          "operation_pointer": "/operations/13381"
+        },
+        {
+          "id": "c770311b4b155d7088dc1799",
+          "text": "在调用形式「Object.values」中提供第 1 个实参「jobs」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "702ec6ec705904aa018f7ff3",
+          "operation_pointer": "/operations/13387"
+        },
+        {
+          "id": "0db622974a666f9fbc360bf4",
+          "text": "在调用形式「Object.values(jobs).some」中提供第 1 个实参「(j) => {\\n        const candidate = j as LooseRecord;\\n        return candidate && candidate.task === job.task && candidate.status === \"completed\" && candidate.project === project;\\n      }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "da18b70fc094f4dece0d9568",
+          "operation_pointer": "/operations/13388"
+        },
+        {
+          "id": "8f75bb5e669c88027d792a4b",
+          "text": "在调用形式「console.log」中提供第 1 个实参「`Skip lineage task: task already completed — ${String(job.task || \"\").slice(0, 60)}`」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "a97c0da6a7025ac902beff2b",
+          "operation_pointer": "/operations/13392"
+        },
+        {
+          "id": "a4af4e9ae0cbf88d2f380f0d",
+          "text": "在调用形式「String(job.task || \"\").slice」中提供第 1 个实参「0」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "5984b1dbb8a23f84806ac88d",
+          "operation_pointer": "/operations/13393"
+        },
+        {
+          "id": "8a31feb6027ddd11384cf8ea",
+          "text": "在调用形式「String」中提供第 1 个实参「job.task || \"\"」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "c87b609c8cf7bd2eef93c325",
+          "operation_pointer": "/operations/13395"
+        },
+        {
+          "id": "6b03a984257cfe4db4d30e67",
+          "text": "将「cpbRoot」作为第 1 个实参交给已绑定接口「ts:server/services/hub/hub-registry#resolveHubRoot」，对应捕获形参「cpbRoot = process.cwd()」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "7f3351a618027935ecca0017",
+          "operation_pointer": "/operations/13401"
+        },
+        {
+          "id": "d147c7820acd2ca36c3d9291",
+          "text": "将「{ projectId: project }」作为第 2 个实参交给已绑定接口「ts:server/services/hub/hub-queue#listQueue」，对应捕获形参「{ status, projectId }: QueueEntryInput = {}」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "4b1d4ed0228f1bd8e971f4f7",
+          "operation_pointer": "/operations/13405"
+        },
+        {
+          "id": "a2b75e86231c30ebe097a5ce",
+          "text": "捕获 binding「metaFile」的初始化来源为「path.join(dataRoot, \"wiki\", \"project.json\")」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "dad58c486761f86375a15312",
+          "operation_pointer": "/operations/13415"
+        },
+        {
+          "id": "8e7b3ec5fd7c9376553ba365",
+          "text": "在调用形式「path.join」中提供第 1 个实参「dataRoot」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "985c084d2beb26aa99aa1a95",
+          "operation_pointer": "/operations/13418"
+        },
+        {
+          "id": "f348ddd51e8a57c13dbe9dad",
+          "text": "在调用形式「readFileRem」中提供第 1 个实参「metaFile」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+          "operation_id": "bdf7a867f9a5acb934782ea0",
+          "operation_pointer": "/operations/13423"
+        },
+        {
+          "id": "ba1db9272425da2d1c097d11",
+          "text": "对捕获 binding「sourcePath」存在源更新「sourcePath = meta.sourcePath || \"\"」；循环和分支条件见操作上下文，未推执行次数或最终数值。",
+          "operation_id": "eaa6fa470c5a7c24191955d1",
+          "operation_pointer": "/operations/13424"
+        },
+        {
+          "id": "3881e036458292d6738a6fee",
+          "text": "将「{\\n    projectId: project,\\n    sourcePath,\\n    sessionId: origin?.sessionId || null,\\n    workerId: origin?.workerId || null,\\n    cwd: origin?.cwd || sourcePath,\\n    executionBoundary: origin?.executionBoundary || \"worktree\",\\n    type: origin?.type || \"pipeline\",\\n    priority: origin?.priority || \"P2\",\\n    description: job.task,\\n    metadata: {\\n    …［展示截断；完整操作保留］」作为第 2 个实参交给已绑定接口「ts:server/services/hub/hub-queue#enqueue」，对应捕获形参「input: QueueEntryInput = {}」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "790454047e0838b330455b00",
+          "operation_pointer": "/operations/13429"
+        },
+        {
+          "id": "f9bf0805c06e3d4fa675c2a2",
+          "text": "构造捕获记录，字段按源码次序为「projectId ← project；sourcePath ← sourcePath；sessionId ← origin?.sessionId || null；workerId ← origin?.workerId || null；cwd ← origin?.cwd || sourcePath；executionBoundary ← origin?.executionBoundary || \"worktree\"；type ← origin?.type || \"pipeline\"；priority ← origin?.priority || \"P2\"；description ← job.task；metadata ← {\\n      ...(origin?.metadata || {}),\\n      originJobId: jobId,\\n      originQueueEntryId: origin?.id || null,\\n      remediationArtifact,\\n      remediationSt…［展示截断；完整操作保留］」。不据构造形式推断物理持久化。",
+          "operation_id": "f016b721f33bd5d3ced66c3a",
+          "operation_pointer": "/operations/13430"
+        },
+        {
+          "id": "4e256ef82214357c25ff28d1",
+          "text": "保留记录复制/展开来源「(origin?.metadata || {})」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+          "operation_id": "3750a2daea0d15b4200a9959",
+          "operation_pointer": "/operations/13435"
+        },
+        {
+          "id": "ce4dbdddb56deaa294b4df12",
+          "text": "将「origin?.metadata?.sourceContext || job.sourceContext」作为第 1 个实参交给已绑定接口「ts:core/contracts/types#recordValue」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "35ab719ce8ea39f6297f6fae",
+          "operation_pointer": "/operations/13442"
+        },
+        {
+          "id": "141c9fd3189af13ccb2e12a2",
+          "text": "将「job.blockedReason」作为第 1 个实参交给已绑定接口「ts:server/services/review/review-dispatch#stringValue」，对应捕获形参「value: unknown」。该普通调用关系不替代进程或网络协议关系。",
+          "operation_id": "104a5355bb9360cf52843dcb",
+          "operation_pointer": "/operations/13450"
+        }
+      ],
+      "all_operation_count": 89
+    },
+    {
+      "actual_owner": {
+        "file": "server/services/review/review-dispatch.ts",
+        "symbol": "createRemediationLineageTask.<block@4509:6>.<arrow@4513:6>",
+        "graph_node_id": "ts:server/services/review/review-dispatch#createRemediationLineageTask.<block@4509:6>.<arrow@4513:6>",
+        "location": {
+          "file": "server/services/review/review-dispatch.ts",
+          "line": 4513,
+          "column": 7,
+          "start_byte": 165723,
+          "end_byte": 165909,
+          "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+          "location_ref": "/source_location_index/ac94ee33802ad12a451a96f8",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "summary": "捕获 binding「candidate」的初始化来源为「j as LooseRecord」；保留该声明与初始化表达式，不推任意后续读取的当前值。 以「return candidate && candidate.task === job.task && candidate.status === \"completed\" && candidate.project === project;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「0da8fef431aa66eb997a3c8e」先于语句位置「1」的操作「0729130209c5896d38577f82」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+      "summary_statement_ids": [
+        "7811c1bc5307a49d6d6bcb77",
+        "b7e91bc01fd3915065e7cfcf",
+        "bb98c5431172d514e534a4f9"
+      ],
+      "statements": [
+        {
+          "id": "7811c1bc5307a49d6d6bcb77",
+          "text": "捕获 binding「candidate」的初始化来源为「j as LooseRecord」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+          "operation_id": "0da8fef431aa66eb997a3c8e",
+          "operation_pointer": "/operations/13389"
+        },
+        {
+          "id": "bb98c5431172d514e534a4f9",
+          "text": "保留同一块中的正常源码顺序：语句位置「0」的操作「0da8fef431aa66eb997a3c8e」先于语句位置「1」的操作「0729130209c5896d38577f82」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+          "operation_id": "06235b635de073d74119507b",
+          "operation_pointer": "/operations/13390"
+        },
+        {
+          "id": "b7e91bc01fd3915065e7cfcf",
+          "text": "以「return candidate && candidate.task === job.task && candidate.status === \"completed\" && candidate.project === project;」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+          "operation_id": "0729130209c5896d38577f82",
+          "operation_pointer": "/operations/13391"
+        }
+      ],
+      "all_operation_count": 3
+    }
+  ]
+}

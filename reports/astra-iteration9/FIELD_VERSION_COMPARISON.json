@@ -1,0 +1,2991 @@
+{
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "versions": [
+        {
+          "version": "v10",
+          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977",
+          "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+          "policy_hash": "920edf6ba07f0a43821cd940b211848556ace921d2d8c3e76f05face4dc73ef0",
+          "policy_bytes_sha256": "134671b5cb1cc7f6acb3514e63eac6a1e7bd3d53d48b750d38d8d35b9b63faa0",
+          "component_versions": {
+            "atomicity_contracts": {
+              "analyzer": "static-atomicity-contracts-2-shared",
+              "policy_schema": "static-atomicity-policy-v1"
+            },
+            "budget_contracts": {
+              "analyzer": "static-local-budget-contracts-1",
+              "policy_schema": "static-local-budget-policy-v1"
+            },
+            "completion_summaries": "captured-completion-summaries-1",
+            "field_contracts": {
+              "analyzer": "static-field-contracts-3-ir",
+              "policy_schema": "static-field-policy-v2"
+            },
+            "field_summaries": "finite-field-summaries-4-ir",
+            "lexical_bindings": "captured-lexical-bindings-2",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_ir": "finite-immutable-semantic-ir-2",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "7957dad01f30a20b36823058eb245d120074c9f6f11802bd41a55641d8d26e7e"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            },
+            "value_contracts": {
+              "analyzer": "static-value-contracts-1",
+              "policy_schema": "static-value-policy-v1"
+            }
+          },
+          "field_assessments": [
+            {
+              "rule_id": "cpb-astra-field-engine-options",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 1,
+                "assessment_counts": {
+                  "source_form_preserved_when_present": 1
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": true,
+                "source_form_complete": true,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 299
+              },
+              "assessment_counts": {
+                "source_form_preserved_when_present": 1
+              },
+              "source_relation_counts": {},
+              "local_copy_retention_supported_site_count": 0,
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 157,
+                    "column": 10
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 6300,
+                        "end_column": 27,
+                        "end_line": 146,
+                        "file": "server/services/engine-runner.ts",
+                        "grammar": "typescript",
+                        "line": 146,
+                        "original_file_end_byte": 6300,
+                        "original_file_start_byte": 6279,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "dafb41c505ba7532f02696cebca94c143c134e1b2bc94cb159611142efa21b8b",
+                        "source_excerpt": "(!projectRuntimeRoot)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "source_line": "  if (!projectRuntimeRoot) {",
+                        "span_hash": "e2730cd366836bc57692e03cb70e6883efe0c424a466de598887bf0e0317a6ae",
+                        "start_byte": 6279
+                      },
+                      "text": "(!projectRuntimeRoot)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "source_form_preserved_when_present",
+                  "pre_completion_source_form_relation": "source_form_preserved_when_present",
+                  "gaps": [],
+                  "source_relations_version": null,
+                  "source_relations_proof_domain": null,
+                  "source_relation_kind_counts": {},
+                  "direct_write_scan": null,
+                  "source_relation_coverage": null,
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": []
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 151,
+                    "column": 8
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#envRecord",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 79,
+                    "column": 22
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#envRecord",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 155,
+                    "column": 20
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#buildServices",
+                  "selected_field_presence": "absent",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-queue-agent-input",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 246
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "source_relation_counts": {},
+              "local_copy_retention_supported_site_count": 0,
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 53922,
+                        "end_column": 24,
+                        "end_line": 1551,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1551,
+                        "original_file_end_byte": 53922,
+                        "original_file_start_byte": 53904,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "e001bc6f98be2c87048702dc0cff9a5cf2416b48a2c9e851b599e72af0abdc2d",
+                        "source_excerpt": "(!input.projectId)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (!input.projectId) throw new Error(\"projectId is required\");",
+                        "span_hash": "61c91c00d343c28bcfef258779a2f40b488159b635d93318db56a021fb3d810d",
+                        "start_byte": 53904
+                      },
+                      "text": "(!input.projectId)",
+                      "truth_proven": false
+                    },
+                    {
+                      "branch": "then",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 54516,
+                        "end_column": 33,
+                        "end_line": 1570,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1570,
+                        "original_file_end_byte": 54516,
+                        "original_file_start_byte": 54489,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "e001bc6f98be2c87048702dc0cff9a5cf2416b48a2c9e851b599e72af0abdc2d",
+                        "source_excerpt": "(!normalizedInput.metadata)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (!normalizedInput.metadata) normalizedInput.metadata = {};",
+                        "span_hash": "5bc28138591fcef324aa782e2d69ca28428023eff6fe5c021698b4748bb14a39",
+                        "start_byte": 54489
+                      },
+                      "text": "(!normalizedInput.metadata)",
+                      "truth_proven": false
+                    },
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 54897,
+                        "end_column": 94,
+                        "end_line": 1574,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1574,
+                        "original_file_end_byte": 54897,
+                        "original_file_start_byte": 54809,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "e001bc6f98be2c87048702dc0cff9a5cf2416b48a2c9e851b599e72af0abdc2d",
+                        "source_excerpt": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason) {",
+                        "span_hash": "8f8973230b2a693f49d9b86b5582e662702544e9ce58a73fd40e2b3e6523c13b",
+                        "start_byte": 54809
+                      },
+                      "text": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_get_value_origin_unknown"
+                  ],
+                  "source_relations_version": null,
+                  "source_relations_proof_domain": null,
+                  "source_relation_kind_counts": {},
+                  "direct_write_scan": null,
+                  "source_relation_coverage": null,
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": []
+                },
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 53922,
+                        "end_column": 24,
+                        "end_line": 1551,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1551,
+                        "original_file_end_byte": 53922,
+                        "original_file_start_byte": 53904,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "e001bc6f98be2c87048702dc0cff9a5cf2416b48a2c9e851b599e72af0abdc2d",
+                        "source_excerpt": "(!input.projectId)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (!input.projectId) throw new Error(\"projectId is required\");",
+                        "span_hash": "61c91c00d343c28bcfef258779a2f40b488159b635d93318db56a021fb3d810d",
+                        "start_byte": 53904
+                      },
+                      "text": "(!input.projectId)",
+                      "truth_proven": false
+                    },
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 54516,
+                        "end_column": 33,
+                        "end_line": 1570,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1570,
+                        "original_file_end_byte": 54516,
+                        "original_file_start_byte": 54489,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "e001bc6f98be2c87048702dc0cff9a5cf2416b48a2c9e851b599e72af0abdc2d",
+                        "source_excerpt": "(!normalizedInput.metadata)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (!normalizedInput.metadata) normalizedInput.metadata = {};",
+                        "span_hash": "5bc28138591fcef324aa782e2d69ca28428023eff6fe5c021698b4748bb14a39",
+                        "start_byte": 54489
+                      },
+                      "text": "(!normalizedInput.metadata)",
+                      "truth_proven": false
+                    },
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 54897,
+                        "end_column": 94,
+                        "end_line": 1574,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1574,
+                        "original_file_end_byte": 54897,
+                        "original_file_start_byte": 54809,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "e001bc6f98be2c87048702dc0cff9a5cf2416b48a2c9e851b599e72af0abdc2d",
+                        "source_excerpt": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason) {",
+                        "span_hash": "8f8973230b2a693f49d9b86b5582e662702544e9ce58a73fd40e2b3e6523c13b",
+                        "start_byte": 54809
+                      },
+                      "text": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_get_value_origin_unknown"
+                  ],
+                  "source_relations_version": null,
+                  "source_relations_proof_domain": null,
+                  "source_relation_kind_counts": {},
+                  "direct_write_scan": null,
+                  "source_relation_coverage": null,
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": []
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1554,
+                    "column": 19
+                  },
+                  "target_graph_node_id": "ts:core/job/meta#buildMeta",
+                  "selected_field_presence": "absent",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-agent-metadata-return",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-3-ir",
+                "field_summary_version": "finite-field-summaries-4-ir",
+                "full_functionality_proven": false,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 941
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "source_relation_counts": {},
+              "local_copy_retention_supported_site_count": 0,
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 487,
+                    "column": 66
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "then",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 16940,
+                        "end_column": 65,
+                        "end_line": 487,
+                        "file": "server/services/agent/agent-config.ts",
+                        "grammar": "typescript",
+                        "line": 487,
+                        "original_file_end_byte": 16940,
+                        "original_file_start_byte": 16881,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "44eafffcadf365300e8d899cc9f80ef96615fc5d0b23794f6e91c5db4d990148",
+                        "source_excerpt": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+                        "span_hash": "40224c29c77eb26ad21b8b2619d69df7374448f1fef872c37c83375ba54b7e3b",
+                        "start_byte": 16881
+                      },
+                      "text": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "ir_captured_binding_write_possible"
+                  ],
+                  "source_relations_version": null,
+                  "source_relations_proof_domain": null,
+                  "source_relation_kind_counts": {},
+                  "direct_write_scan": null,
+                  "source_relation_coverage": null,
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": []
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 489,
+                    "column": 3
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 16940,
+                        "end_column": 65,
+                        "end_line": 487,
+                        "file": "server/services/agent/agent-config.ts",
+                        "grammar": "typescript",
+                        "line": 487,
+                        "original_file_end_byte": 16940,
+                        "original_file_start_byte": 16881,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "44eafffcadf365300e8d899cc9f80ef96615fc5d0b23794f6e91c5db4d990148",
+                        "source_excerpt": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+                        "span_hash": "40224c29c77eb26ad21b8b2619d69df7374448f1fef872c37c83375ba54b7e3b",
+                        "start_byte": 16881
+                      },
+                      "text": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "ir_copy_surface_or_exclusions_not_certified"
+                  ],
+                  "source_relations_version": null,
+                  "source_relations_proof_domain": null,
+                  "source_relation_kind_counts": {},
+                  "direct_write_scan": null,
+                  "source_relation_coverage": null,
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": []
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 455,
+                    "column": 24
+                  },
+                  "target_graph_node_id": "ts:server/services/agent/agent-config#normalizeAgentSpec",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 481,
+                    "column": 18
+                  },
+                  "target_graph_node_id": "ts:server/services/agent/agent-config#mergeAgentConfig",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "version": "v11",
+          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336",
+          "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+          "policy_hash": "920edf6ba07f0a43821cd940b211848556ace921d2d8c3e76f05face4dc73ef0",
+          "policy_bytes_sha256": "134671b5cb1cc7f6acb3514e63eac6a1e7bd3d53d48b750d38d8d35b9b63faa0",
+          "component_versions": {
+            "atomicity_contracts": {
+              "analyzer": "static-atomicity-contracts-2-shared",
+              "policy_schema": "static-atomicity-policy-v1"
+            },
+            "budget_contracts": {
+              "analyzer": "static-local-budget-contracts-1",
+              "policy_schema": "static-local-budget-policy-v1"
+            },
+            "completion_summaries": "captured-completion-summaries-1",
+            "field_contracts": {
+              "analyzer": "static-field-contracts-4-ir",
+              "policy_schema": "static-field-policy-v2"
+            },
+            "field_relations": "captured-field-source-relations-1",
+            "field_summaries": "finite-field-summaries-5-ir",
+            "lexical_bindings": "captured-lexical-bindings-3",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_ir": "finite-immutable-semantic-ir-3",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "38933589ba90c08a8769fafa720e9c7258d29f17303c37dfadbdf491c579de7c"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            },
+            "value_contracts": {
+              "analyzer": "static-value-contracts-1",
+              "policy_schema": "static-value-policy-v1"
+            }
+          },
+          "field_assessments": [
+            {
+              "rule_id": "cpb-astra-field-queue-agent-input",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-4-ir",
+                "field_summary_version": "finite-field-summaries-5-ir",
+                "full_functionality_proven": false,
+                "local_copy_retention_supported_site_count": 0,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "source_relation_counts": {
+                  "actual_argument_formal_binding": 2,
+                  "conditional_member_set_attempt": 2,
+                  "explicit_member_set_attempt": 8,
+                  "lexical_value_initializer": 2,
+                  "normal_prefix_program_order": 14,
+                  "ordered_object_construction": 2,
+                  "selected_key_direct_write_scan": 2
+                },
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 246
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "source_relation_counts": {
+                "actual_argument_formal_binding": 2,
+                "conditional_member_set_attempt": 2,
+                "explicit_member_set_attempt": 8,
+                "lexical_value_initializer": 2,
+                "normal_prefix_program_order": 14,
+                "ordered_object_construction": 2,
+                "selected_key_direct_write_scan": 2
+              },
+              "local_copy_retention_supported_site_count": 0,
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 53922,
+                        "end_column": 24,
+                        "end_line": 1551,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1551,
+                        "original_file_end_byte": 53922,
+                        "original_file_start_byte": 53904,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                        "source_excerpt": "(!input.projectId)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (!input.projectId) throw new Error(\"projectId is required\");",
+                        "span_hash": "61c91c00d343c28bcfef258779a2f40b488159b635d93318db56a021fb3d810d",
+                        "start_byte": 53904
+                      },
+                      "text": "(!input.projectId)",
+                      "truth_proven": false
+                    },
+                    {
+                      "branch": "then",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 54516,
+                        "end_column": 33,
+                        "end_line": 1570,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1570,
+                        "original_file_end_byte": 54516,
+                        "original_file_start_byte": 54489,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                        "source_excerpt": "(!normalizedInput.metadata)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (!normalizedInput.metadata) normalizedInput.metadata = {};",
+                        "span_hash": "5bc28138591fcef324aa782e2d69ca28428023eff6fe5c021698b4748bb14a39",
+                        "start_byte": 54489
+                      },
+                      "text": "(!normalizedInput.metadata)",
+                      "truth_proven": false
+                    },
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 54897,
+                        "end_column": 94,
+                        "end_line": 1574,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1574,
+                        "original_file_end_byte": 54897,
+                        "original_file_start_byte": 54809,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                        "source_excerpt": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason) {",
+                        "span_hash": "8f8973230b2a693f49d9b86b5582e662702544e9ce58a73fd40e2b3e6523c13b",
+                        "start_byte": 54809
+                      },
+                      "text": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_get_value_origin_unknown"
+                  ],
+                  "source_relations_version": "captured-field-source-relations-1",
+                  "source_relations_proof_domain": "captured_ast_and_lexical_binding",
+                  "source_relation_kind_counts": {
+                    "actual_argument_formal_binding": 1,
+                    "conditional_member_set_attempt": 1,
+                    "explicit_member_set_attempt": 4,
+                    "lexical_value_initializer": 1,
+                    "normal_prefix_program_order": 7,
+                    "ordered_object_construction": 1,
+                    "selected_key_direct_write_scan": 1
+                  },
+                  "direct_write_scan": {
+                    "branch_membership": [],
+                    "id": "7d4f975d591b1fbb49624b1f",
+                    "kind": "selected_key_direct_write_scan",
+                    "location": {
+                      "column": 30,
+                      "column_base": 1,
+                      "column_unit": "utf8_bytes",
+                      "coordinate_space": "captured_text_utf8",
+                      "end_byte": 55219,
+                      "end_column": 106,
+                      "end_line": 1580,
+                      "file": "server/services/hub/hub-queue.ts",
+                      "grammar": "typescript",
+                      "line": 1580,
+                      "original_file_end_byte": 55219,
+                      "original_file_start_byte": 55143,
+                      "parse_identity": {
+                        "coordinate_space": "captured_text_utf8",
+                        "derived_text_utf8_sha256": null,
+                        "literal_authority": "original_saved_source_text_only",
+                        "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "position_map": "identity_utf8_bytes_and_line_columns",
+                        "projection_mode": "original",
+                        "projection_version": "ts-syntax-projection-1",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "semantic_source_version": "semantic-snapshot-sources-1",
+                        "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                      },
+                      "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                      "raw_prefix_bytes": 0,
+                      "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                      "source_excerpt": "resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata)",
+                      "source_excerpt_truncated": false,
+                      "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                      "source_line": "  const resolvedMeta = await resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata);",
+                      "span_hash": "7d8f363cacd622c89492a5b226528553b8a38a97df90b170552a91a7f060ce84",
+                      "start_byte": 55143
+                    },
+                    "owner_graph_node_id": "ts:server/services/hub/hub-queue#enqueue",
+                    "payload": {
+                      "all_relevant_member_attempt_ids": [
+                        "22eb82d1c90d2a4f4b624724",
+                        "0f5a22ef08ff37220a755ff4",
+                        "fe256a93194aeb956e3aa0ec",
+                        "e1894da04a0669aabef829a4"
+                      ],
+                      "dynamic_possible_target_ids": [],
+                      "end_before_byte": 55143,
+                      "explicit_static_target_match_ids": [],
+                      "nested_callable_class_bodies_excluded": [],
+                      "no_indirect_mutation_proven": false,
+                      "own_selected_key_presence_or_preservation_proven": false,
+                      "root_declaration_id": "997313aa7fea4ee53cfeb6c1227a99152d7398eb56134e7c10b96459913989a5",
+                      "scope": "selected_outer_function_direct_source_prefix_before_complete_selected_site",
+                      "scope_location": {
+                        "column": 77,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 56639,
+                        "end_column": 2,
+                        "end_line": 1622,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1550,
+                        "original_file_end_byte": 56639,
+                        "original_file_start_byte": 53897,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                        "source_excerpt": "{\n  if (!input.projectId) throw new Error(\"projectId is required\");\n  const projectId = input.projectId;\n\n  const rawMeta = buildMeta(input);\n  const meta = {\n    sourcePath: stringOrNull(rawMeta.sourcePath),\n    sessionId: stringOrNull(rawMeta.sessionId),\n    workerId: stringOrNull(rawMeta.workerId),\n    cwd: stringOrNull(rawMeta.cwd),\n  };\n  const normalizedInput: QueueEntryInput = {\n    ...input,\n    projectId,\n    sourcePath: meta.sourcePath,\n    sessionId: meta.sessionId,\n    workerId: meta.workerId,\n    cwd: meta.cwd,\n    executionBoundary: REQUIRED_EXECUTION_BOUNDARY,\n  };\n  if (!normalizedInput.metadata) normalizedInput.metadata = {};\n  normalizedInput.metadata.acpProfile = normalizedInput.metadata.acpProfile || \"headless\";\n  normalizedInput.metadata.uiLane = Boolean(normalizedInput.metadata.uiLane);\n  normalizedInput.metadata.uiLaneReason = normalizedInput.metadata.uiLaneReason || \"\";\n  if (normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason) {\n    throw new Error(\"ui profile requires a non-empty uiLaneReason in queue metadata\");\n  }\n\n  // Resolve agent config from hub + project + metadata overrides\n  const cpbRoot = normalizedInput.cwd || process.cwd();\n  const resolvedMeta = await resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata);\n  normalizedInput.metadata = resolvedMeta as QueueMetadata;\n\n  // Resolve sourcePath from hub registry when not provided\n  if (!meta.sourcePath) {\n    try {\n      const project = await getProject(hubRoot, projectId);\n      if (project?.sourcePath) {\n        meta.sourcePath = project.sourcePath;\n        normalizedInput.sourcePath = project.sourcePath;\n        if (!normalizedInput.cwd) normalizedInput.cwd = project.sourcePath;\n      }\n    } catch { /* project not found in registry — keep null */ }\n  }\n\n  return withQueueMutation(hubRoot, async (queue, authorityNowMs) => {\n    const key = entryKey(normalizedInput);\n    const existing = queue.entries.find((e) => entryKey(e) === key && e.status === \"pending\");\n    if (existing) return existing;\n\n    const entry: QueueEntry = {\n      id: generateId(),\n      projectId,\n      sourcePath: meta.sourcePath,\n      sessionId: meta.sessionId,\n      workerId: meta.workerId,\n      cwd: meta.cwd,\n      executionBoundary: REQUIRED_EXECUTION_BOUNDARY,\n      type: normalizedInput.type || \"candidate\",\n      status: \"pending\",\n      priority: normalizedInput.priority || \"P2\",\n      description: normalizedInput.description || \"\",\n      metadata: normalizedInput.metadata || {},\n      claimedBy: null,\n      claimedAt: null,\n      createdAt: nowIso(authorityNowMs),\n      updatedAt: nowIso(authorityNowMs),\n    };\n\n    queue.entries.push(entry);\n    return entry;\n  });\n}",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "export async function enqueue(hubRoot: string, input: QueueEntryInput = {}) {",
+                        "span_hash": "74cd50c79d0c33c9117d9275d293520bf659d19166598d037cc668013ce257b1",
+                        "start_byte": 53897
+                      },
+                      "scoped_enumeration_complete": true,
+                      "selected_member_path": [
+                        "metadata",
+                        "maxRetries"
+                      ],
+                      "unmodeled_control_or_write_regions": [],
+                      "unresolved_target_locations": [],
+                      "verdict": "no_explicit_static_target_match"
+                    },
+                    "phase": "call_argument_before_callee_activation",
+                    "proof_domain": "captured_ast_and_lexical_binding",
+                    "runtime_value_verified": false,
+                    "selected_heap_projection_upgraded": false,
+                    "selected_site_branch_conditions": [
+                      {
+                        "branch": "else",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 53922,
+                          "end_column": 24,
+                          "end_line": 1551,
+                          "file": "server/services/hub/hub-queue.ts",
+                          "grammar": "typescript",
+                          "line": 1551,
+                          "original_file_end_byte": 53922,
+                          "original_file_start_byte": 53904,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                          "source_excerpt": "(!input.projectId)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "source_line": "  if (!input.projectId) throw new Error(\"projectId is required\");",
+                          "span_hash": "61c91c00d343c28bcfef258779a2f40b488159b635d93318db56a021fb3d810d",
+                          "start_byte": 53904
+                        },
+                        "text": "(!input.projectId)",
+                        "truth_proven": false
+                      },
+                      {
+                        "branch": "then",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 54516,
+                          "end_column": 33,
+                          "end_line": 1570,
+                          "file": "server/services/hub/hub-queue.ts",
+                          "grammar": "typescript",
+                          "line": 1570,
+                          "original_file_end_byte": 54516,
+                          "original_file_start_byte": 54489,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                          "source_excerpt": "(!normalizedInput.metadata)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "source_line": "  if (!normalizedInput.metadata) normalizedInput.metadata = {};",
+                          "span_hash": "5bc28138591fcef324aa782e2d69ca28428023eff6fe5c021698b4748bb14a39",
+                          "start_byte": 54489
+                        },
+                        "text": "(!normalizedInput.metadata)",
+                        "truth_proven": false
+                      },
+                      {
+                        "branch": "else",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 54897,
+                          "end_column": 94,
+                          "end_line": 1574,
+                          "file": "server/services/hub/hub-queue.ts",
+                          "grammar": "typescript",
+                          "line": 1574,
+                          "original_file_end_byte": 54897,
+                          "original_file_start_byte": 54809,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                          "source_excerpt": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "source_line": "  if (normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason) {",
+                          "span_hash": "8f8973230b2a693f49d9b86b5582e662702544e9ce58a73fd40e2b3e6523c13b",
+                          "start_byte": 54809
+                        },
+                        "text": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                        "truth_proven": false
+                      }
+                    ],
+                    "source_context": "8e68a3ae490c6660ef3e6914",
+                    "status": "proven_source_structure"
+                  },
+                  "source_relation_coverage": {
+                    "all_function_paths_or_callee_effects_accounted": false,
+                    "direct_prefix_enumeration_complete": true,
+                    "direct_prefix_write_coverage_complete": true,
+                    "incomplete": false,
+                    "nested_callable_class_bodies_excluded": [],
+                    "operation_limit": 4096,
+                    "operations": 240,
+                    "relation_limit": 256,
+                    "unsupported_control_regions": []
+                  },
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": []
+                },
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1580,
+                    "column": 30
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 53922,
+                        "end_column": 24,
+                        "end_line": 1551,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1551,
+                        "original_file_end_byte": 53922,
+                        "original_file_start_byte": 53904,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                        "source_excerpt": "(!input.projectId)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (!input.projectId) throw new Error(\"projectId is required\");",
+                        "span_hash": "61c91c00d343c28bcfef258779a2f40b488159b635d93318db56a021fb3d810d",
+                        "start_byte": 53904
+                      },
+                      "text": "(!input.projectId)",
+                      "truth_proven": false
+                    },
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 54516,
+                        "end_column": 33,
+                        "end_line": 1570,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1570,
+                        "original_file_end_byte": 54516,
+                        "original_file_start_byte": 54489,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                        "source_excerpt": "(!normalizedInput.metadata)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (!normalizedInput.metadata) normalizedInput.metadata = {};",
+                        "span_hash": "5bc28138591fcef324aa782e2d69ca28428023eff6fe5c021698b4748bb14a39",
+                        "start_byte": 54489
+                      },
+                      "text": "(!normalizedInput.metadata)",
+                      "truth_proven": false
+                    },
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 54897,
+                        "end_column": 94,
+                        "end_line": 1574,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1574,
+                        "original_file_end_byte": 54897,
+                        "original_file_start_byte": 54809,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                        "source_excerpt": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "  if (normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason) {",
+                        "span_hash": "8f8973230b2a693f49d9b86b5582e662702544e9ce58a73fd40e2b3e6523c13b",
+                        "start_byte": 54809
+                      },
+                      "text": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "field_get_value_origin_unknown"
+                  ],
+                  "source_relations_version": "captured-field-source-relations-1",
+                  "source_relations_proof_domain": "captured_ast_and_lexical_binding",
+                  "source_relation_kind_counts": {
+                    "actual_argument_formal_binding": 1,
+                    "conditional_member_set_attempt": 1,
+                    "explicit_member_set_attempt": 4,
+                    "lexical_value_initializer": 1,
+                    "normal_prefix_program_order": 7,
+                    "ordered_object_construction": 1,
+                    "selected_key_direct_write_scan": 1
+                  },
+                  "direct_write_scan": {
+                    "branch_membership": [],
+                    "id": "0f76f5457169dd980e5bb664",
+                    "kind": "selected_key_direct_write_scan",
+                    "location": {
+                      "column": 30,
+                      "column_base": 1,
+                      "column_unit": "utf8_bytes",
+                      "coordinate_space": "captured_text_utf8",
+                      "end_byte": 55219,
+                      "end_column": 106,
+                      "end_line": 1580,
+                      "file": "server/services/hub/hub-queue.ts",
+                      "grammar": "typescript",
+                      "line": 1580,
+                      "original_file_end_byte": 55219,
+                      "original_file_start_byte": 55143,
+                      "parse_identity": {
+                        "coordinate_space": "captured_text_utf8",
+                        "derived_text_utf8_sha256": null,
+                        "literal_authority": "original_saved_source_text_only",
+                        "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "position_map": "identity_utf8_bytes_and_line_columns",
+                        "projection_mode": "original",
+                        "projection_version": "ts-syntax-projection-1",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "semantic_source_version": "semantic-snapshot-sources-1",
+                        "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                      },
+                      "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                      "raw_prefix_bytes": 0,
+                      "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                      "source_excerpt": "resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata)",
+                      "source_excerpt_truncated": false,
+                      "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                      "source_line": "  const resolvedMeta = await resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata);",
+                      "span_hash": "7d8f363cacd622c89492a5b226528553b8a38a97df90b170552a91a7f060ce84",
+                      "start_byte": 55143
+                    },
+                    "owner_graph_node_id": "ts:server/services/hub/hub-queue#enqueue",
+                    "payload": {
+                      "all_relevant_member_attempt_ids": [
+                        "13c920cb1142ec6bd1b26028",
+                        "a35c7fe2e407ff66017569c4",
+                        "0370cfe5a059d6b65a239b34",
+                        "1512ba0480a29f9c694f3f40"
+                      ],
+                      "dynamic_possible_target_ids": [],
+                      "end_before_byte": 55143,
+                      "explicit_static_target_match_ids": [],
+                      "nested_callable_class_bodies_excluded": [],
+                      "no_indirect_mutation_proven": false,
+                      "own_selected_key_presence_or_preservation_proven": false,
+                      "root_declaration_id": "997313aa7fea4ee53cfeb6c1227a99152d7398eb56134e7c10b96459913989a5",
+                      "scope": "selected_outer_function_direct_source_prefix_before_complete_selected_site",
+                      "scope_location": {
+                        "column": 77,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 56639,
+                        "end_column": 2,
+                        "end_line": 1622,
+                        "file": "server/services/hub/hub-queue.ts",
+                        "grammar": "typescript",
+                        "line": 1550,
+                        "original_file_end_byte": 56639,
+                        "original_file_start_byte": 53897,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                        "source_excerpt": "{\n  if (!input.projectId) throw new Error(\"projectId is required\");\n  const projectId = input.projectId;\n\n  const rawMeta = buildMeta(input);\n  const meta = {\n    sourcePath: stringOrNull(rawMeta.sourcePath),\n    sessionId: stringOrNull(rawMeta.sessionId),\n    workerId: stringOrNull(rawMeta.workerId),\n    cwd: stringOrNull(rawMeta.cwd),\n  };\n  const normalizedInput: QueueEntryInput = {\n    ...input,\n    projectId,\n    sourcePath: meta.sourcePath,\n    sessionId: meta.sessionId,\n    workerId: meta.workerId,\n    cwd: meta.cwd,\n    executionBoundary: REQUIRED_EXECUTION_BOUNDARY,\n  };\n  if (!normalizedInput.metadata) normalizedInput.metadata = {};\n  normalizedInput.metadata.acpProfile = normalizedInput.metadata.acpProfile || \"headless\";\n  normalizedInput.metadata.uiLane = Boolean(normalizedInput.metadata.uiLane);\n  normalizedInput.metadata.uiLaneReason = normalizedInput.metadata.uiLaneReason || \"\";\n  if (normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason) {\n    throw new Error(\"ui profile requires a non-empty uiLaneReason in queue metadata\");\n  }\n\n  // Resolve agent config from hub + project + metadata overrides\n  const cpbRoot = normalizedInput.cwd || process.cwd();\n  const resolvedMeta = await resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata);\n  normalizedInput.metadata = resolvedMeta as QueueMetadata;\n\n  // Resolve sourcePath from hub registry when not provided\n  if (!meta.sourcePath) {\n    try {\n      const project = await getProject(hubRoot, projectId);\n      if (project?.sourcePath) {\n        meta.sourcePath = project.sourcePath;\n        normalizedInput.sourcePath = project.sourcePath;\n        if (!normalizedInput.cwd) normalizedInput.cwd = project.sourcePath;\n      }\n    } catch { /* project not found in registry — keep null */ }\n  }\n\n  return withQueueMutation(hubRoot, async (queue, authorityNowMs) => {\n    const key = entryKey(normalizedInput);\n    const existing = queue.entries.find((e) => entryKey(e) === key && e.status === \"pending\");\n    if (existing) return existing;\n\n    const entry: QueueEntry = {\n      id: generateId(),\n      projectId,\n      sourcePath: meta.sourcePath,\n      sessionId: meta.sessionId,\n      workerId: meta.workerId,\n      cwd: meta.cwd,\n      executionBoundary: REQUIRED_EXECUTION_BOUNDARY,\n      type: normalizedInput.type || \"candidate\",\n      status: \"pending\",\n      priority: normalizedInput.priority || \"P2\",\n      description: normalizedInput.description || \"\",\n      metadata: normalizedInput.metadata || {},\n      claimedBy: null,\n      claimedAt: null,\n      createdAt: nowIso(authorityNowMs),\n      updatedAt: nowIso(authorityNowMs),\n    };\n\n    queue.entries.push(entry);\n    return entry;\n  });\n}",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                        "source_line": "export async function enqueue(hubRoot: string, input: QueueEntryInput = {}) {",
+                        "span_hash": "74cd50c79d0c33c9117d9275d293520bf659d19166598d037cc668013ce257b1",
+                        "start_byte": 53897
+                      },
+                      "scoped_enumeration_complete": true,
+                      "selected_member_path": [
+                        "metadata",
+                        "maxRetries"
+                      ],
+                      "unmodeled_control_or_write_regions": [],
+                      "unresolved_target_locations": [],
+                      "verdict": "no_explicit_static_target_match"
+                    },
+                    "phase": "call_argument_before_callee_activation",
+                    "proof_domain": "captured_ast_and_lexical_binding",
+                    "runtime_value_verified": false,
+                    "selected_heap_projection_upgraded": false,
+                    "selected_site_branch_conditions": [
+                      {
+                        "branch": "else",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 53922,
+                          "end_column": 24,
+                          "end_line": 1551,
+                          "file": "server/services/hub/hub-queue.ts",
+                          "grammar": "typescript",
+                          "line": 1551,
+                          "original_file_end_byte": 53922,
+                          "original_file_start_byte": 53904,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                          "source_excerpt": "(!input.projectId)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "source_line": "  if (!input.projectId) throw new Error(\"projectId is required\");",
+                          "span_hash": "61c91c00d343c28bcfef258779a2f40b488159b635d93318db56a021fb3d810d",
+                          "start_byte": 53904
+                        },
+                        "text": "(!input.projectId)",
+                        "truth_proven": false
+                      },
+                      {
+                        "branch": "else",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 54516,
+                          "end_column": 33,
+                          "end_line": 1570,
+                          "file": "server/services/hub/hub-queue.ts",
+                          "grammar": "typescript",
+                          "line": 1570,
+                          "original_file_end_byte": 54516,
+                          "original_file_start_byte": 54489,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                          "source_excerpt": "(!normalizedInput.metadata)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "source_line": "  if (!normalizedInput.metadata) normalizedInput.metadata = {};",
+                          "span_hash": "5bc28138591fcef324aa782e2d69ca28428023eff6fe5c021698b4748bb14a39",
+                          "start_byte": 54489
+                        },
+                        "text": "(!normalizedInput.metadata)",
+                        "truth_proven": false
+                      },
+                      {
+                        "branch": "else",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 54897,
+                          "end_column": 94,
+                          "end_line": 1574,
+                          "file": "server/services/hub/hub-queue.ts",
+                          "grammar": "typescript",
+                          "line": 1574,
+                          "original_file_end_byte": 54897,
+                          "original_file_start_byte": 54809,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6",
+                          "source_excerpt": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+                          "source_line": "  if (normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason) {",
+                          "span_hash": "8f8973230b2a693f49d9b86b5582e662702544e9ce58a73fd40e2b3e6523c13b",
+                          "start_byte": 54809
+                        },
+                        "text": "(normalizedInput.metadata.acpProfile === \"ui\" && !normalizedInput.metadata.uiLaneReason)",
+                        "truth_proven": false
+                      }
+                    ],
+                    "source_context": "5fc60e29c7a1824f5842f5ea",
+                    "status": "proven_source_structure"
+                  },
+                  "source_relation_coverage": {
+                    "all_function_paths_or_callee_effects_accounted": false,
+                    "direct_prefix_enumeration_complete": true,
+                    "direct_prefix_write_coverage_complete": true,
+                    "incomplete": false,
+                    "nested_callable_class_bodies_excluded": [],
+                    "operation_limit": 4096,
+                    "operations": 240,
+                    "relation_limit": 256,
+                    "unsupported_control_regions": []
+                  },
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": []
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/hub/hub-queue.ts",
+                    "line": 1554,
+                    "column": 19
+                  },
+                  "target_graph_node_id": "ts:core/job/meta#buildMeta",
+                  "selected_field_presence": "absent",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-engine-options",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 1,
+                "assessment_counts": {
+                  "source_form_preserved_when_present": 1
+                },
+                "field_analyzer_version": "static-field-contracts-4-ir",
+                "field_summary_version": "finite-field-summaries-5-ir",
+                "full_functionality_proven": false,
+                "local_copy_retention_supported_site_count": 0,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": true,
+                "source_form_complete": true,
+                "source_relation_counts": {
+                  "actual_argument_formal_binding": 1,
+                  "selected_key_direct_write_scan": 1
+                },
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 299
+              },
+              "assessment_counts": {
+                "source_form_preserved_when_present": 1
+              },
+              "source_relation_counts": {
+                "actual_argument_formal_binding": 1,
+                "selected_key_direct_write_scan": 1
+              },
+              "local_copy_retention_supported_site_count": 0,
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 157,
+                    "column": 10
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 6300,
+                        "end_column": 27,
+                        "end_line": 146,
+                        "file": "server/services/engine-runner.ts",
+                        "grammar": "typescript",
+                        "line": 146,
+                        "original_file_end_byte": 6300,
+                        "original_file_start_byte": 6279,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "874f81fd67cfaeecf1f9bc7c98fd4a1e59b987c37b9ad8c9fec59b5c3e252a50",
+                        "source_excerpt": "(!projectRuntimeRoot)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "source_line": "  if (!projectRuntimeRoot) {",
+                        "span_hash": "e2730cd366836bc57692e03cb70e6883efe0c424a466de598887bf0e0317a6ae",
+                        "start_byte": 6279
+                      },
+                      "text": "(!projectRuntimeRoot)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "source_form_preserved_when_present",
+                  "pre_completion_source_form_relation": "source_form_preserved_when_present",
+                  "gaps": [],
+                  "source_relations_version": "captured-field-source-relations-1",
+                  "source_relations_proof_domain": "captured_ast_and_lexical_binding",
+                  "source_relation_kind_counts": {
+                    "actual_argument_formal_binding": 1,
+                    "selected_key_direct_write_scan": 1
+                  },
+                  "direct_write_scan": {
+                    "branch_membership": [],
+                    "id": "53421d57e5454c5d8af16bf8",
+                    "kind": "selected_key_direct_write_scan",
+                    "location": {
+                      "column": 10,
+                      "column_base": 1,
+                      "column_unit": "utf8_bytes",
+                      "coordinate_space": "captured_text_utf8",
+                      "end_byte": 7796,
+                      "end_column": 5,
+                      "end_line": 180,
+                      "file": "server/services/engine-runner.ts",
+                      "grammar": "typescript",
+                      "line": 157,
+                      "original_file_end_byte": 7796,
+                      "original_file_start_byte": 6856,
+                      "parse_identity": {
+                        "coordinate_space": "captured_text_utf8",
+                        "derived_text_utf8_sha256": null,
+                        "literal_authority": "original_saved_source_text_only",
+                        "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "position_map": "identity_utf8_bytes_and_line_columns",
+                        "projection_mode": "original",
+                        "projection_version": "ts-syntax-projection-1",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "semantic_source_version": "semantic-snapshot-sources-1",
+                        "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                      },
+                      "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                      "raw_prefix_bytes": 0,
+                      "semantic_parse_id": "874f81fd67cfaeecf1f9bc7c98fd4a1e59b987c37b9ad8c9fec59b5c3e252a50",
+                      "source_excerpt": "runJob({\n    ...jobOptions,\n    cpbRoot,\n    project,\n    hubRoot,\n    dataRoot: projectRuntimeRoot,\n    env,\n    sourcePath,\n    routing: opts.routing || null,\n    agentAvailability: opts.agentAvailability || null,\n    agentHealth: opts.agentHealth || null,\n    teamPolicy: opts.teamPolicy || null,\n    // Inject the existing process registry so verify hard-gate child PIDs are\n    // persisted to {dataRoot}/processes/ (same store worker-supervisor uses).\n    // opts.signal (AbortSignal) flows through ...opts above into ctx, reaching\n    // runVerify → runHardGates → runCommandTree without extra plumbing.\n    processHooks: jobId ? {\n      registerChild: (pid: number) => addChildPid(cpbRoot, jobId, pid, { dataRoot: projectRuntimeRoot }),\n    } : undefined,\n    ...services,\n    providerServices: callerProvidedProviderServices\n      ? normalizeProviderServices(jobOptions.providerServices)\n      : services.providerServices,\n  })",
+                      "source_excerpt_truncated": false,
+                      "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                      "source_line": "  return runJob({",
+                      "span_hash": "f06893a20ea6da41e15b41e664808374962884b419dba324110f149c72e04782",
+                      "start_byte": 6856
+                    },
+                    "owner_graph_node_id": "ts:server/services/engine-runner#runJobWithServices",
+                    "payload": {
+                      "all_relevant_member_attempt_ids": [],
+                      "dynamic_possible_target_ids": [],
+                      "end_before_byte": 6856,
+                      "explicit_static_target_match_ids": [],
+                      "nested_callable_class_bodies_excluded": [],
+                      "no_indirect_mutation_proven": false,
+                      "own_selected_key_presence_or_preservation_proven": false,
+                      "root_declaration_id": "d19ab26ded6f24ca33c8f36ef011daf0953ab79e3cff4d16c7db4ab1fcffa27a",
+                      "scope": "selected_outer_function_direct_source_prefix_before_complete_selected_site",
+                      "scope_location": {
+                        "column": 61,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 7799,
+                        "end_column": 2,
+                        "end_line": 181,
+                        "file": "server/services/engine-runner.ts",
+                        "grammar": "typescript",
+                        "line": 130,
+                        "original_file_end_byte": 7799,
+                        "original_file_start_byte": 5621,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "874f81fd67cfaeecf1f9bc7c98fd4a1e59b987c37b9ad8c9fec59b5c3e252a50",
+                        "source_excerpt": "{\n  const {\n    cpbRoot,\n    project,\n    sourcePath: explicitSourcePath,\n    hubRoot: explicitHubRoot,\n    workerBrokerClient,\n    ...jobOptions\n  } = opts;\n  const broker = workerBrokerClient instanceof WorkerBrokerClient ? workerBrokerClient : null;\n  await mkdir(cpbRoot, { recursive: true });\n  const { sourcePath: resolvedSourcePath, hubRoot: resolvedHubRoot, projectRuntimeRoot } = broker\n    ? await resolveSourcePathFromBroker(broker, project, explicitHubRoot)\n    : await resolveSourcePath(cpbRoot, project, explicitHubRoot);\n  const hubRoot = explicitHubRoot || resolvedHubRoot;\n  const sourcePath = explicitSourcePath || resolvedSourcePath;\n  if (!projectRuntimeRoot) {\n    throw new Error(`project runtime root required for project '${project}'`);\n  }\n  const jobId = typeof opts.jobId === \"string\" ? opts.jobId : null;\n  const env = {\n    ...envRecord(jobOptions.env || process.env),\n    CPB_PROJECT_RUNTIME_ROOT: projectRuntimeRoot,\n    ...(sourcePath ? { CPB_PROJECT_PATH_OVERRIDE: sourcePath } : {}),\n  };\n  const services = buildServices(cpbRoot, { hubRoot, env, dataRoot: projectRuntimeRoot, workerBrokerClient: broker });\n  const callerProvidedProviderServices = jobOptions.providerServices !== undefined;\n  return runJob({\n    ...jobOptions,\n    cpbRoot,\n    project,\n    hubRoot,\n    dataRoot: projectRuntimeRoot,\n    env,\n    sourcePath,\n    routing: opts.routing || null,\n    agentAvailability: opts.agentAvailability || null,\n    agentHealth: opts.agentHealth || null,\n    teamPolicy: opts.teamPolicy || null,\n    // Inject the existing process registry so verify hard-gate child PIDs are\n    // persisted to {dataRoot}/processes/ (same store worker-supervisor uses).\n    // opts.signal (AbortSignal) flows through ...opts above into ctx, reaching\n    // runVerify → runHardGates → runCommandTree without extra plumbing.\n    processHooks: jobId ? {\n      registerChild: (pid: number) => addChildPid(cpbRoot, jobId, pid, { dataRoot: projectRuntimeRoot }),\n    } : undefined,\n    ...services,\n    providerServices: callerProvidedProviderServices\n      ? normalizeProviderServices(jobOptions.providerServices)\n      : services.providerServices,\n  });\n}",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "source_line": "export async function runJobWithServices(opts: LooseRecord) {",
+                        "span_hash": "ac32b9a26ef47954235a0f1689ce6ff73a0460fef3f5e341629b6161d0d300f8",
+                        "start_byte": 5621
+                      },
+                      "scoped_enumeration_complete": true,
+                      "selected_member_path": [
+                        "maxRetries"
+                      ],
+                      "unmodeled_control_or_write_regions": [],
+                      "unresolved_target_locations": [],
+                      "verdict": "no_explicit_static_target_match"
+                    },
+                    "phase": "call_argument_before_callee_activation",
+                    "proof_domain": "captured_ast_and_lexical_binding",
+                    "runtime_value_verified": false,
+                    "selected_heap_projection_upgraded": false,
+                    "selected_site_branch_conditions": [
+                      {
+                        "branch": "else",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 6300,
+                          "end_column": 27,
+                          "end_line": 146,
+                          "file": "server/services/engine-runner.ts",
+                          "grammar": "typescript",
+                          "line": 146,
+                          "original_file_end_byte": 6300,
+                          "original_file_start_byte": 6279,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "874f81fd67cfaeecf1f9bc7c98fd4a1e59b987c37b9ad8c9fec59b5c3e252a50",
+                          "source_excerpt": "(!projectRuntimeRoot)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                          "source_line": "  if (!projectRuntimeRoot) {",
+                          "span_hash": "e2730cd366836bc57692e03cb70e6883efe0c424a466de598887bf0e0317a6ae",
+                          "start_byte": 6279
+                        },
+                        "text": "(!projectRuntimeRoot)",
+                        "truth_proven": false
+                      }
+                    ],
+                    "source_context": "df22ef9c3b48c959056b2360",
+                    "status": "proven_source_structure"
+                  },
+                  "source_relation_coverage": {
+                    "all_function_paths_or_callee_effects_accounted": false,
+                    "direct_prefix_enumeration_complete": true,
+                    "direct_prefix_write_coverage_complete": true,
+                    "incomplete": false,
+                    "nested_callable_class_bodies_excluded": [],
+                    "operation_limit": 4096,
+                    "operations": 208,
+                    "relation_limit": 256,
+                    "unsupported_control_regions": []
+                  },
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": [
+                    {
+                      "spread_location": {
+                        "column": 5,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 6882,
+                        "end_column": 18,
+                        "end_line": 158,
+                        "file": "server/services/engine-runner.ts",
+                        "grammar": "typescript",
+                        "line": 158,
+                        "original_file_end_byte": 6882,
+                        "original_file_start_byte": 6869,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "874f81fd67cfaeecf1f9bc7c98fd4a1e59b987c37b9ad8c9fec59b5c3e252a50",
+                        "source_excerpt": "...jobOptions",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "source_line": "    ...jobOptions,",
+                        "span_hash": "7f7cf717a1d23b8619c3f1b1e9635e0f269bd51ef709993270c991d298b29d5f",
+                        "start_byte": 6869
+                      },
+                      "literal_location": {
+                        "column": 17,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 7795,
+                        "end_column": 4,
+                        "end_line": 180,
+                        "file": "server/services/engine-runner.ts",
+                        "grammar": "typescript",
+                        "line": 157,
+                        "original_file_end_byte": 7795,
+                        "original_file_start_byte": 6863,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "874f81fd67cfaeecf1f9bc7c98fd4a1e59b987c37b9ad8c9fec59b5c3e252a50",
+                        "source_excerpt": "{\n    ...jobOptions,\n    cpbRoot,\n    project,\n    hubRoot,\n    dataRoot: projectRuntimeRoot,\n    env,\n    sourcePath,\n    routing: opts.routing || null,\n    agentAvailability: opts.agentAvailability || null,\n    agentHealth: opts.agentHealth || null,\n    teamPolicy: opts.teamPolicy || null,\n    // Inject the existing process registry so verify hard-gate child PIDs are\n    // persisted to {dataRoot}/processes/ (same store worker-supervisor uses).\n    // opts.signal (AbortSignal) flows through ...opts above into ctx, reaching\n    // runVerify → runHardGates → runCommandTree without extra plumbing.\n    processHooks: jobId ? {\n      registerChild: (pid: number) => addChildPid(cpbRoot, jobId, pid, { dataRoot: projectRuntimeRoot }),\n    } : undefined,\n    ...services,\n    providerServices: callerProvidedProviderServices\n      ? normalizeProviderServices(jobOptions.providerServices)\n      : services.providerServices,\n  }",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "source_line": "  return runJob({",
+                        "span_hash": "a5f84bdfda7d54e195f3185bc51b705a998ef7858f395313d05e37a324271588",
+                        "start_byte": 6863
+                      },
+                      "conclusion": "unknown",
+                      "antecedents": [
+                        "this actual registered whole-surface copy completes normally",
+                        "selected current own-enumerable data slot exists at this copy"
+                      ],
+                      "observation_id": "16487921975be72b0aea70a50ff9914de0bf213ca698f768f08b94c8d6f5465d",
+                      "witness_id": "5ac504e67368605ac70826a71b0111948a182e3542dce0839954cd5cdf7db7c7",
+                      "supported": false,
+                      "gaps": [
+                        "ir_copy_retention_suffix_unknown"
+                      ],
+                      "later_definition_keys": [
+                        "cpbRoot",
+                        "project",
+                        "hubRoot",
+                        "dataRoot",
+                        "env",
+                        "sourcePath",
+                        "routing",
+                        "agentAvailability",
+                        "agentHealth",
+                        "teamPolicy",
+                        "processHooks",
+                        "providerServices"
+                      ]
+                    },
+                    {
+                      "spread_location": {
+                        "column": 5,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 7639,
+                        "end_column": 16,
+                        "end_line": 176,
+                        "file": "server/services/engine-runner.ts",
+                        "grammar": "typescript",
+                        "line": 176,
+                        "original_file_end_byte": 7639,
+                        "original_file_start_byte": 7628,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "874f81fd67cfaeecf1f9bc7c98fd4a1e59b987c37b9ad8c9fec59b5c3e252a50",
+                        "source_excerpt": "...services",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "source_line": "    ...services,",
+                        "span_hash": "9d95689f1b7f9aaaf8ecdbe24052e05bee208af7b4fe2cee3a12c1966cf4eafd",
+                        "start_byte": 7628
+                      },
+                      "literal_location": {
+                        "column": 17,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 7795,
+                        "end_column": 4,
+                        "end_line": 180,
+                        "file": "server/services/engine-runner.ts",
+                        "grammar": "typescript",
+                        "line": 157,
+                        "original_file_end_byte": 7795,
+                        "original_file_start_byte": 6863,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "874f81fd67cfaeecf1f9bc7c98fd4a1e59b987c37b9ad8c9fec59b5c3e252a50",
+                        "source_excerpt": "{\n    ...jobOptions,\n    cpbRoot,\n    project,\n    hubRoot,\n    dataRoot: projectRuntimeRoot,\n    env,\n    sourcePath,\n    routing: opts.routing || null,\n    agentAvailability: opts.agentAvailability || null,\n    agentHealth: opts.agentHealth || null,\n    teamPolicy: opts.teamPolicy || null,\n    // Inject the existing process registry so verify hard-gate child PIDs are\n    // persisted to {dataRoot}/processes/ (same store worker-supervisor uses).\n    // opts.signal (AbortSignal) flows through ...opts above into ctx, reaching\n    // runVerify → runHardGates → runCommandTree without extra plumbing.\n    processHooks: jobId ? {\n      registerChild: (pid: number) => addChildPid(cpbRoot, jobId, pid, { dataRoot: projectRuntimeRoot }),\n    } : undefined,\n    ...services,\n    providerServices: callerProvidedProviderServices\n      ? normalizeProviderServices(jobOptions.providerServices)\n      : services.providerServices,\n  }",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "source_line": "  return runJob({",
+                        "span_hash": "a5f84bdfda7d54e195f3185bc51b705a998ef7858f395313d05e37a324271588",
+                        "start_byte": 6863
+                      },
+                      "conclusion": "unknown",
+                      "antecedents": [
+                        "this actual registered whole-surface copy completes normally",
+                        "selected current own-enumerable data slot exists at this copy"
+                      ],
+                      "observation_id": "708675f8b4f38c7aa02f47613bc5c1563299ea99b440fc646a4917daa775ac4d",
+                      "witness_id": "7badf238d758d72da7674f03fe459967825845c8ef762ac1e159c9c9a156065c",
+                      "supported": false,
+                      "gaps": [
+                        "ir_copy_boundary_selected_slot_known_absent"
+                      ],
+                      "later_definition_keys": [
+                        "providerServices"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 151,
+                    "column": 8
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#envRecord",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 79,
+                    "column": 22
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#envRecord",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/engine-runner.ts",
+                    "line": 155,
+                    "column": 20
+                  },
+                  "target_graph_node_id": "ts:server/services/engine-runner#buildServices",
+                  "selected_field_presence": "absent",
+                  "selected_field_shape_closed": true,
+                  "whole_object_shape_closed": true
+                }
+              ]
+            },
+            {
+              "rule_id": "cpb-astra-field-agent-metadata-return",
+              "status": "uncertain",
+              "metadata": {
+                "applicability": {
+                  "conditions": [
+                    "所选参数已提供；本摘要实际建模的每次 rest/spread 浅复制，其源对象的整个相关可枚举自有属性表面均为普通数据属性，且不是 Proxy，不通过其它属性 getter 改值或产生复制期效果。这个前提不递归认证 child 对象，不认证运行时宿主或外部代码行为。",
+                    "只评审显式条件内正常到达的所选源式段；字段存在性、复制时值/引用来源、共享 referent 当前内容及 Promise 履约关系分别记录。没有执行目标代码，异常、未建模 effects、alias 与跨函数/消息传输缺口必须保留。",
+                    "另行注册实际 Get 模型：仅对已有且有来源 guard 的根/新 data 对象，在真实 AST 读取的 key 存在时，该 key 为普通自有数据属性（可非枚举）；缺失时读取不会触发原型 getter、accessor 或 Proxy 效果并返回 undefined。每次应用独立记录，此条件不确认字段存在，也不递归认证 symbolic child。"
+                  ],
+                  "counterexamples": [
+                    "缺字段、不适用 copy 表面模型、共享 child 修改、闭包/对象逃逸、未知实参 effects 或 async thenable 同化均不能由浅复制局部关系排除。"
+                  ],
+                  "kind": "conditional"
+                },
+                "assessment_count": 2,
+                "assessment_counts": {
+                  "unknown": 2
+                },
+                "field_analyzer_version": "static-field-contracts-4-ir",
+                "field_summary_version": "finite-field-summaries-5-ir",
+                "full_functionality_proven": false,
+                "local_copy_retention_supported_site_count": 1,
+                "provenance": {
+                  "author_approved": false,
+                  "authority": "independent_review",
+                  "note": "Selected field endpoints only; intermediate aliases, spreads, returns and effects must be extracted from authenticated saved AST.",
+                  "reviewer": "Astra",
+                  "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+                },
+                "reaching_value_origin_proven": false,
+                "selected_field_shape_complete": false,
+                "source_form_complete": false,
+                "source_relation_counts": {
+                  "body_return_ordered_copy_structure": 1,
+                  "body_return_reaching_binding_reference": 1,
+                  "lexical_alias_initializer": 2,
+                  "ordered_object_construction": 1,
+                  "selected_key_direct_write_scan": 2
+                },
+                "transport_proven": false
+              },
+              "summary_budget": {
+                "incomplete": false,
+                "limit": 4096,
+                "operations": 941
+              },
+              "assessment_counts": {
+                "unknown": 2
+              },
+              "source_relation_counts": {
+                "body_return_ordered_copy_structure": 1,
+                "body_return_reaching_binding_reference": 1,
+                "lexical_alias_initializer": 2,
+                "ordered_object_construction": 1,
+                "selected_key_direct_write_scan": 2
+              },
+              "local_copy_retention_supported_site_count": 1,
+              "sites": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 487,
+                    "column": 66
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "then",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 16940,
+                        "end_column": 65,
+                        "end_line": 487,
+                        "file": "server/services/agent/agent-config.ts",
+                        "grammar": "typescript",
+                        "line": 487,
+                        "original_file_end_byte": 16940,
+                        "original_file_start_byte": 16881,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                        "source_excerpt": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+                        "span_hash": "40224c29c77eb26ad21b8b2619d69df7374448f1fef872c37c83375ba54b7e3b",
+                        "start_byte": 16881
+                      },
+                      "text": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "ir_captured_binding_write_possible"
+                  ],
+                  "source_relations_version": "captured-field-source-relations-1",
+                  "source_relations_proof_domain": "captured_ast_and_lexical_binding",
+                  "source_relation_kind_counts": {
+                    "body_return_reaching_binding_reference": 1,
+                    "lexical_alias_initializer": 1,
+                    "selected_key_direct_write_scan": 1
+                  },
+                  "direct_write_scan": {
+                    "branch_membership": [
+                      {
+                        "branch": "then",
+                        "condition_location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 16940,
+                          "end_column": 65,
+                          "end_line": 487,
+                          "file": "server/services/agent/agent-config.ts",
+                          "grammar": "typescript",
+                          "line": 487,
+                          "original_file_end_byte": 16940,
+                          "original_file_start_byte": 16881,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                          "source_excerpt": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+                          "span_hash": "40224c29c77eb26ad21b8b2619d69df7374448f1fef872c37c83375ba54b7e3b",
+                          "start_byte": 16881
+                        },
+                        "runtime_condition_truth_proven": false,
+                        "selected_path_relation": "on_selected_branch"
+                      }
+                    ],
+                    "id": "1354a33fa9de0162d6836003",
+                    "kind": "selected_key_direct_write_scan",
+                    "location": {
+                      "column": 66,
+                      "column_base": 1,
+                      "column_unit": "utf8_bytes",
+                      "coordinate_space": "captured_text_utf8",
+                      "end_byte": 16957,
+                      "end_column": 82,
+                      "end_line": 487,
+                      "file": "server/services/agent/agent-config.ts",
+                      "grammar": "typescript",
+                      "line": 487,
+                      "original_file_end_byte": 16957,
+                      "original_file_start_byte": 16941,
+                      "parse_identity": {
+                        "coordinate_space": "captured_text_utf8",
+                        "derived_text_utf8_sha256": null,
+                        "literal_authority": "original_saved_source_text_only",
+                        "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "position_map": "identity_utf8_bytes_and_line_columns",
+                        "projection_mode": "original",
+                        "projection_version": "ts-syntax-projection-1",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "semantic_source_version": "semantic-snapshot-sources-1",
+                        "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                      },
+                      "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                      "raw_prefix_bytes": 0,
+                      "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                      "source_excerpt": "return metadata;",
+                      "source_excerpt_truncated": false,
+                      "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                      "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+                      "span_hash": "198e02d85b4ee06039d5e9832b3fbc4ccd42c534a6c7aca1d391154c40b68602",
+                      "start_byte": 16941
+                    },
+                    "owner_graph_node_id": "ts:server/services/agent/agent-config#resolveAgentsForEntry",
+                    "payload": {
+                      "all_relevant_member_attempt_ids": [],
+                      "dynamic_possible_target_ids": [],
+                      "end_before_byte": 16941,
+                      "explicit_static_target_match_ids": [],
+                      "nested_callable_class_bodies_excluded": [],
+                      "no_indirect_mutation_proven": false,
+                      "own_selected_key_presence_or_preservation_proven": false,
+                      "root_declaration_id": "23fb0937929a1d3c5a4fc76870537f3cf6e1c96580bb564d7016516ed3043345",
+                      "scope": "selected_outer_function_direct_source_prefix_before_complete_selected_site",
+                      "scope_location": {
+                        "column": 130,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 17104,
+                        "end_column": 2,
+                        "end_line": 494,
+                        "file": "server/services/agent/agent-config.ts",
+                        "grammar": "typescript",
+                        "line": 471,
+                        "original_file_end_byte": 17104,
+                        "original_file_start_byte": 16392,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                        "source_excerpt": "{\n  const metadataRecord: AgentConfigRecord = metadata;\n  const hubConfig = await readHubConfig(hubRoot);\n  const { getProject } = await import(\"../hub/hub-registry.js\");\n  const projectRecord = await getProject(hubRoot, project);\n  const projectAgents = await readProjectConfigFromRoots(\n    [projectRecord?.projectRuntimeRoot, hubRoot, cpbRoot],\n    project,\n  );\n\n  const merged = mergeAgentConfig(\n    hubConfig.agents,\n    projectAgents,\n    metadataRecord.agents || null,\n  );\n\n  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;\n\n  return {\n    ...metadata,\n    agents: Object.keys(merged).length > 0 ? merged : undefined,\n    agent: metadataRecord.agent || undefined,\n  };\n}",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "source_line": "export async function resolveAgentsForEntry(hubRoot: string, cpbRoot: string, project: string, metadata: AgentConfigRecord = {}) {",
+                        "span_hash": "ef16eb62442a00bacf7d209bc2ae2d14854238c8607a21fda7cd0e9f21eb50c4",
+                        "start_byte": 16392
+                      },
+                      "scoped_enumeration_complete": true,
+                      "selected_member_path": [
+                        "maxRetries"
+                      ],
+                      "unmodeled_control_or_write_regions": [],
+                      "unresolved_target_locations": [],
+                      "verdict": "no_explicit_static_target_match"
+                    },
+                    "phase": "body_return_expression_before_promise_assimilation",
+                    "proof_domain": "captured_ast_and_lexical_binding",
+                    "runtime_value_verified": false,
+                    "selected_heap_projection_upgraded": false,
+                    "selected_site_branch_conditions": [
+                      {
+                        "branch": "then",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 16940,
+                          "end_column": 65,
+                          "end_line": 487,
+                          "file": "server/services/agent/agent-config.ts",
+                          "grammar": "typescript",
+                          "line": 487,
+                          "original_file_end_byte": 16940,
+                          "original_file_start_byte": 16881,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                          "source_excerpt": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+                          "span_hash": "40224c29c77eb26ad21b8b2619d69df7374448f1fef872c37c83375ba54b7e3b",
+                          "start_byte": 16881
+                        },
+                        "text": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                        "truth_proven": false
+                      }
+                    ],
+                    "source_context": "547c8e81ea5674d679de9a2f",
+                    "status": "proven_source_structure"
+                  },
+                  "source_relation_coverage": {
+                    "all_function_paths_or_callee_effects_accounted": false,
+                    "direct_prefix_enumeration_complete": true,
+                    "direct_prefix_write_coverage_complete": true,
+                    "incomplete": false,
+                    "nested_callable_class_bodies_excluded": [],
+                    "operation_limit": 4096,
+                    "operations": 83,
+                    "relation_limit": 256,
+                    "unsupported_control_regions": []
+                  },
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": false,
+                  "local_copy_boundaries": []
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 489,
+                    "column": 3
+                  },
+                  "branch_conditions": [
+                    {
+                      "branch": "else",
+                      "location": {
+                        "column": 6,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 16940,
+                        "end_column": 65,
+                        "end_line": 487,
+                        "file": "server/services/agent/agent-config.ts",
+                        "grammar": "typescript",
+                        "line": 487,
+                        "original_file_end_byte": 16940,
+                        "original_file_start_byte": 16881,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                        "source_excerpt": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+                        "span_hash": "40224c29c77eb26ad21b8b2619d69df7374448f1fef872c37c83375ba54b7e3b",
+                        "start_byte": 16881
+                      },
+                      "text": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                      "truth_proven": false
+                    }
+                  ],
+                  "field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false,
+                  "source_form_relation": "unknown",
+                  "pre_completion_source_form_relation": "unknown",
+                  "gaps": [
+                    "ir_copy_surface_or_exclusions_not_certified"
+                  ],
+                  "source_relations_version": "captured-field-source-relations-1",
+                  "source_relations_proof_domain": "captured_ast_and_lexical_binding",
+                  "source_relation_kind_counts": {
+                    "body_return_ordered_copy_structure": 1,
+                    "lexical_alias_initializer": 1,
+                    "ordered_object_construction": 1,
+                    "selected_key_direct_write_scan": 1
+                  },
+                  "direct_write_scan": {
+                    "branch_membership": [],
+                    "id": "93b2c6ab19f871dac8aec350",
+                    "kind": "selected_key_direct_write_scan",
+                    "location": {
+                      "column": 3,
+                      "column_base": 1,
+                      "column_unit": "utf8_bytes",
+                      "coordinate_space": "captured_text_utf8",
+                      "end_byte": 17102,
+                      "end_column": 5,
+                      "end_line": 493,
+                      "file": "server/services/agent/agent-config.ts",
+                      "grammar": "typescript",
+                      "line": 489,
+                      "original_file_end_byte": 17102,
+                      "original_file_start_byte": 16961,
+                      "parse_identity": {
+                        "coordinate_space": "captured_text_utf8",
+                        "derived_text_utf8_sha256": null,
+                        "literal_authority": "original_saved_source_text_only",
+                        "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "position_map": "identity_utf8_bytes_and_line_columns",
+                        "projection_mode": "original",
+                        "projection_version": "ts-syntax-projection-1",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "semantic_source_version": "semantic-snapshot-sources-1",
+                        "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                      },
+                      "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                      "raw_prefix_bytes": 0,
+                      "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                      "source_excerpt": "return {\n    ...metadata,\n    agents: Object.keys(merged).length > 0 ? merged : undefined,\n    agent: metadataRecord.agent || undefined,\n  };",
+                      "source_excerpt_truncated": false,
+                      "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                      "source_line": "  return {",
+                      "span_hash": "166ad901eb5999053bd56329298c6c3a4eb8cf94a9d0f6c9657e8a0fec799aa3",
+                      "start_byte": 16961
+                    },
+                    "owner_graph_node_id": "ts:server/services/agent/agent-config#resolveAgentsForEntry",
+                    "payload": {
+                      "all_relevant_member_attempt_ids": [],
+                      "dynamic_possible_target_ids": [],
+                      "end_before_byte": 16961,
+                      "explicit_static_target_match_ids": [],
+                      "nested_callable_class_bodies_excluded": [],
+                      "no_indirect_mutation_proven": false,
+                      "own_selected_key_presence_or_preservation_proven": false,
+                      "root_declaration_id": "23fb0937929a1d3c5a4fc76870537f3cf6e1c96580bb564d7016516ed3043345",
+                      "scope": "selected_outer_function_direct_source_prefix_before_complete_selected_site",
+                      "scope_location": {
+                        "column": 130,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 17104,
+                        "end_column": 2,
+                        "end_line": 494,
+                        "file": "server/services/agent/agent-config.ts",
+                        "grammar": "typescript",
+                        "line": 471,
+                        "original_file_end_byte": 17104,
+                        "original_file_start_byte": 16392,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                        "source_excerpt": "{\n  const metadataRecord: AgentConfigRecord = metadata;\n  const hubConfig = await readHubConfig(hubRoot);\n  const { getProject } = await import(\"../hub/hub-registry.js\");\n  const projectRecord = await getProject(hubRoot, project);\n  const projectAgents = await readProjectConfigFromRoots(\n    [projectRecord?.projectRuntimeRoot, hubRoot, cpbRoot],\n    project,\n  );\n\n  const merged = mergeAgentConfig(\n    hubConfig.agents,\n    projectAgents,\n    metadataRecord.agents || null,\n  );\n\n  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;\n\n  return {\n    ...metadata,\n    agents: Object.keys(merged).length > 0 ? merged : undefined,\n    agent: metadataRecord.agent || undefined,\n  };\n}",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "source_line": "export async function resolveAgentsForEntry(hubRoot: string, cpbRoot: string, project: string, metadata: AgentConfigRecord = {}) {",
+                        "span_hash": "ef16eb62442a00bacf7d209bc2ae2d14854238c8607a21fda7cd0e9f21eb50c4",
+                        "start_byte": 16392
+                      },
+                      "scoped_enumeration_complete": true,
+                      "selected_member_path": [
+                        "maxRetries"
+                      ],
+                      "unmodeled_control_or_write_regions": [],
+                      "unresolved_target_locations": [],
+                      "verdict": "no_explicit_static_target_match"
+                    },
+                    "phase": "body_return_expression_before_promise_assimilation",
+                    "proof_domain": "captured_ast_and_lexical_binding",
+                    "runtime_value_verified": false,
+                    "selected_heap_projection_upgraded": false,
+                    "selected_site_branch_conditions": [
+                      {
+                        "branch": "else",
+                        "location": {
+                          "column": 6,
+                          "column_base": 1,
+                          "column_unit": "utf8_bytes",
+                          "coordinate_space": "captured_text_utf8",
+                          "end_byte": 16940,
+                          "end_column": 65,
+                          "end_line": 487,
+                          "file": "server/services/agent/agent-config.ts",
+                          "grammar": "typescript",
+                          "line": 487,
+                          "original_file_end_byte": 16940,
+                          "original_file_start_byte": 16881,
+                          "parse_identity": {
+                            "coordinate_space": "captured_text_utf8",
+                            "derived_text_utf8_sha256": null,
+                            "literal_authority": "original_saved_source_text_only",
+                            "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                            "position_map": "identity_utf8_bytes_and_line_columns",
+                            "projection_mode": "original",
+                            "projection_version": "ts-syntax-projection-1",
+                            "raw_prefix_bytes": 0,
+                            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                            "semantic_source_version": "semantic-snapshot-sources-1",
+                            "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                          },
+                          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                          "source_excerpt": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                          "source_excerpt_truncated": false,
+                          "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+                          "span_hash": "40224c29c77eb26ad21b8b2619d69df7374448f1fef872c37c83375ba54b7e3b",
+                          "start_byte": 16881
+                        },
+                        "text": "(Object.keys(merged).length === 0 && !metadataRecord.agent)",
+                        "truth_proven": false
+                      }
+                    ],
+                    "source_context": "fccabbcdc0ff2d91897aae68",
+                    "status": "proven_source_structure"
+                  },
+                  "source_relation_coverage": {
+                    "all_function_paths_or_callee_effects_accounted": false,
+                    "direct_prefix_enumeration_complete": true,
+                    "direct_prefix_write_coverage_complete": true,
+                    "incomplete": false,
+                    "nested_callable_class_bodies_excluded": [],
+                    "operation_limit": 4096,
+                    "operations": 126,
+                    "relation_limit": 256,
+                    "unsupported_control_regions": []
+                  },
+                  "source_relation_gaps": [],
+                  "local_copy_retention_supported": true,
+                  "local_copy_boundaries": [
+                    {
+                      "spread_location": {
+                        "column": 5,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 16985,
+                        "end_column": 16,
+                        "end_line": 490,
+                        "file": "server/services/agent/agent-config.ts",
+                        "grammar": "typescript",
+                        "line": 490,
+                        "original_file_end_byte": 16985,
+                        "original_file_start_byte": 16974,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                        "source_excerpt": "...metadata",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "source_line": "    ...metadata,",
+                        "span_hash": "762988e6a41d863a2f6edee94ec4dd84f284026515997f48af468774ace9e4bd",
+                        "start_byte": 16974
+                      },
+                      "literal_location": {
+                        "column": 10,
+                        "column_base": 1,
+                        "column_unit": "utf8_bytes",
+                        "coordinate_space": "captured_text_utf8",
+                        "end_byte": 17101,
+                        "end_column": 4,
+                        "end_line": 493,
+                        "file": "server/services/agent/agent-config.ts",
+                        "grammar": "typescript",
+                        "line": 489,
+                        "original_file_end_byte": 17101,
+                        "original_file_start_byte": 16968,
+                        "parse_identity": {
+                          "coordinate_space": "captured_text_utf8",
+                          "derived_text_utf8_sha256": null,
+                          "literal_authority": "original_saved_source_text_only",
+                          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                          "position_map": "identity_utf8_bytes_and_line_columns",
+                          "projection_mode": "original",
+                          "projection_version": "ts-syntax-projection-1",
+                          "raw_prefix_bytes": 0,
+                          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                          "semantic_source_version": "semantic-snapshot-sources-1",
+                          "snapshot_id": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+                        },
+                        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                        "raw_prefix_bytes": 0,
+                        "semantic_parse_id": "cd3cbfd44ca6dd259e33e0cb9309c27f8fc99ad217d82395d28e6a8d74f0acfc",
+                        "source_excerpt": "{\n    ...metadata,\n    agents: Object.keys(merged).length > 0 ? merged : undefined,\n    agent: metadataRecord.agent || undefined,\n  }",
+                        "source_excerpt_truncated": false,
+                        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+                        "source_line": "  return {",
+                        "span_hash": "4548c9dcb7c327520d9d7e20df3e1960a6e004878250704c1abbc8a7abc6a2a9",
+                        "start_byte": 16968
+                      },
+                      "conclusion": "that copy-time value/reference is retained at this literal endpoint",
+                      "antecedents": [
+                        "this actual registered whole-surface copy completes normally",
+                        "selected current own-enumerable data slot exists at this copy"
+                      ],
+                      "observation_id": "a021e0b5d3a3f5c934eac705d1a0443619b1d9abed9b16f4be38f5d76129cf38",
+                      "witness_id": "17a41c5ccc74ca88886d4a95277667b7671b6f79c026f7aad0c783d8f69ebe26",
+                      "supported": true,
+                      "gaps": [],
+                      "later_definition_keys": [
+                        "agents",
+                        "agent"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "helper_returns": [
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 455,
+                    "column": 24
+                  },
+                  "target_graph_node_id": "ts:server/services/agent/agent-config#normalizeAgentSpec",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                },
+                {
+                  "location": {
+                    "file": "server/services/agent/agent-config.ts",
+                    "line": 481,
+                    "column": 18
+                  },
+                  "target_graph_node_id": "ts:server/services/agent/agent-config#mergeAgentConfig",
+                  "selected_field_presence": "unknown",
+                  "selected_field_shape_closed": false,
+                  "whole_object_shape_closed": false
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "target_source_identical_v10_v11": true,
+      "v10_v11_policy_bytes_identical": true,
+      "v10_v11_policy_hash_identical": true,
+      "policy_bytes_identical_to_frozen_v9": true,
+      "original_endpoint_axis_changes": [],
+      "original_endpoint_axis_changed": false,
+      "new_axes_do_not_upgrade_entry_or_endpoint_acceptance": true
+    },
+    {
+      "repository": "winwincode",
+      "versions": [
+        {
+          "version": "v10",
+          "snapshot_id": "9c791af9bf562d6f0f36e09ddeb1f21b4a3445b649064d21ec4d34d33c6abece",
+          "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+          "policy_hash": "fbd78ddcacdd0c5615e5bea85b13987f5ad6d78fd60ac40fcbdda23d2e597f4c",
+          "policy_bytes_sha256": "7331e395f929c6fe031265a9e8c8190cdad5fb158b35b54b7d614c30c899a11b",
+          "component_versions": {
+            "completion_summaries": "captured-completion-summaries-1",
+            "lexical_bindings": "captured-lexical-bindings-2",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "navigation_contracts": {
+              "analyzer": "static-navigation-contracts-2-shared",
+              "policy_schema": "static-navigation-policy-v1"
+            },
+            "port_wiring": "finite-port-wiring-2-shared",
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "rust": {
+              "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+              "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "7957dad01f30a20b36823058eb245d120074c9f6f11802bd41a55641d8d26e7e"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            }
+          },
+          "field_assessments": []
+        },
+        {
+          "version": "v11",
+          "snapshot_id": "2b298f494c99d0f0040f7a8b856421813066caa21d7d6d26d36bb573d41626be",
+          "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+          "policy_hash": "fbd78ddcacdd0c5615e5bea85b13987f5ad6d78fd60ac40fcbdda23d2e597f4c",
+          "policy_bytes_sha256": "7331e395f929c6fe031265a9e8c8190cdad5fb158b35b54b7d614c30c899a11b",
+          "component_versions": {
+            "completion_summaries": "captured-completion-summaries-1",
+            "lexical_bindings": "captured-lexical-bindings-3",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "navigation_contracts": {
+              "analyzer": "static-navigation-contracts-2-shared",
+              "policy_schema": "static-navigation-policy-v1"
+            },
+            "port_wiring": "finite-port-wiring-2-shared",
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "rust": {
+              "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+              "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "38933589ba90c08a8769fafa720e9c7258d29f17303c37dfadbdf491c579de7c"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            }
+          },
+          "field_assessments": []
+        }
+      ],
+      "target_source_identical_v10_v11": true,
+      "v10_v11_policy_bytes_identical": true,
+      "v10_v11_policy_hash_identical": true,
+      "policy_bytes_identical_to_frozen_v9": true,
+      "original_endpoint_axis_changes": [],
+      "original_endpoint_axis_changed": false,
+      "new_axes_do_not_upgrade_entry_or_endpoint_acceptance": true
+    }
+  ],
+  "package_version": "0.11.0",
+  "package_patch_note": "v11 separates captured source relations and conditional copy-time retention from entry provenance, runtime presence, async fulfillment and transport; existing endpoint acceptance remains unchanged.",
+  "precision_metric_computed": false,
+  "full_goal_acceptance_computed": false
+}

@@ -1,0 +1,67 @@
+{
+  "kind": "product-documentation-v14-update",
+  "created_at": "2026-10-14T08:51:49.687124+00:00",
+  "package_version": "0.14.0",
+  "analyzer_version": "static-multilang-14",
+  "detector_version": "call-rules-13-architecture-explanations",
+  "snapshot_schema": "2",
+  "frozen_tool_source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+  "formal_result_status": "awaiting_normal_v14_analysis_and_saved_artifacts; no pass counts or reproduction outcome inferred",
+  "files_changed": [
+    {
+      "file": "docs/ARCHITECTURE_V1_1.md",
+      "sha256": "1c1de73abc5ba7b7701868717084c8f9142b0cd60553941f9033d1475825c083",
+      "bytes": 50367,
+      "changes": "同步v0.14身份和正式结果待生成状态；补条件沿袭/发布、操作职责解释及文档部署边界；v13/v12数字明确历史。"
+    },
+    {
+      "file": "docs/IMPLEMENTATION_CONTRACT.md",
+      "sha256": "2cceb7389e870f5e9a2b66c57c097a72bdadd50775db0d8930204b13c156ea75",
+      "bytes": 37010,
+      "changes": "修正v0.11旧current身份与词法/Rust版本；补goal/report规则、文档locators、真实操作解释和报告v3协议；区分旧账本与当前正式状态。"
+    },
+    {
+      "file": "docs/CAPABILITY_ROADMAP.md",
+      "sha256": "96e9c9246bb7ad8b57379b782ec7ff53b8624ef52f4c6f896f91617d23fa032b",
+      "bytes": 27097,
+      "changes": "按功能正确性、可扩展性、性能排序；列本轮已实现能力与待正式生成结果，历史差距不再冒充当前未实现。"
+    },
+    {
+      "file": "docs/UPSTREAM_REUSE.md",
+      "sha256": "f8bf041d905e46a53a2354919fd493e2aa9272124381168103524c2e306c831c",
+      "bytes": 8464,
+      "changes": "同步v0.14，保留Axon/CocoIndex固定来源与许可；区分当前full重算和历史CocoIndex memo复用；不增加上游能力宣称。"
+    },
+    {
+      "file": "docs/EXTENDING.md",
+      "sha256": "5d616cb6cca55239a8771275448aad2a8186a3af3fd4e6350be1070fa1f68990",
+      "bytes": 46193,
+      "changes": "更新source-chains3/policy-v2-documents/report3/presentation2；补三个固定类型、文档和引用协议及未知默认；无动态插件或复审门。"
+    },
+    {
+      "file": "docs/STATIC_SCOPE.md",
+      "sha256": "d31155fcf66a3207f3402df0c847e66c8b05b79fcdb6aa40267aebdca8932fc3",
+      "bytes": 46859,
+      "changes": "单列v0.14实现和正式结果待生成；明确字段/条件、职责与文档三方面的实际证据和未证明边界；旧v13结果标历史。"
+    }
+  ],
+  "checks": {
+    "local_markdown_links_checked": 236,
+    "missing_local_links": [],
+    "file_whitespace_conflict_and_fence_issues": [],
+    "git_diff_pathspec_check_available": false,
+    "file_level_format_checks_used": true
+  },
+  "core_modified": false,
+  "policies_modified": false,
+  "historical_formal_artifacts_modified": false,
+  "root_readme_api_automated_reports_modified": false,
+  "analysis_database_opened": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "new_review_gate_added": false,
+  "functional_coverage_percentage_computed": false,
+  "previous_documentation_check_record": "PRODUCT_DOC_UPDATES.json",
+  "final_documentation_handoff": true
+}

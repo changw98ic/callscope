@@ -1,0 +1,498 @@
+{
+  "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+  "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+  "policy_hash": "c085aff2d4adffa22410a5ce818a1f3ec431665a595de0c4f2d575326c982aaa",
+  "saved_documentation": {
+    "docs/architecture.md": {
+      "status": "captured",
+      "hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+      "text_hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+      "selected_lines": [
+        {
+          "line": 135,
+          "text": "  InProgress -->|需要人工决定| WaitingHuman[Waiting Human]"
+        },
+        {
+          "line": 136,
+          "text": "  Validating -->|需要人工决定| WaitingHuman"
+        },
+        {
+          "line": 137,
+          "text": "  WaitingHuman --> Ready"
+        },
+        {
+          "line": 138,
+          "text": "  InProgress --> Failed[Failed]"
+        },
+        {
+          "line": 139,
+          "text": "  Backlog --> Cancelled[Cancelled]"
+        },
+        {
+          "line": 140,
+          "text": "```"
+        },
+        {
+          "line": 141,
+          "text": ""
+        },
+        {
+          "line": 142,
+          "text": "最终结论由当前候选、冻结提交、运行结果和独立角色计算。`submitVerdict()` 不接受调用方直接制作的 Evidence 或 Verdict；Server 重新验证候选、事件身份、角色完整性和每项条件后才写入结论。Agent 的文本回复不是交付证据。最终结果使用 `winwincode.independent-verification-result.v1` 结构。"
+        },
+        {
+          "line": 143,
+          "text": ""
+        },
+        {
+          "line": 144,
+          "text": "### 执行图状态"
+        },
+        {
+          "line": 145,
+          "text": ""
+        },
+        {
+          "line": 146,
+          "text": "架构图和流程图贯穿三个公开状态："
+        },
+        {
+          "line": 147,
+          "text": ""
+        },
+        {
+          "line": 148,
+          "text": "| 状态 | 展示 | 内容边界 |"
+        },
+        {
+          "line": 149,
+          "text": "| --- | --- | --- |"
+        },
+        {
+          "line": 150,
+          "text": "| `before-execution` | 节点为绿色 | 只展示已审核的节点和关系 |"
+        },
+        {
+          "line": 151,
+          "text": "| `executing` | 变化节点为浅蓝色 | 展示影响范围，不返回候选文件和原始日志 |"
+        },
+        {
+          "line": 152,
+          "text": "| `execution-finished` | 变化节点为黄色 | 展示当前候选、Diff、运行活动和 Evidence 引用 |"
+        },
+        {
+          "line": 153,
+          "text": ""
+        },
+        {
+          "line": 154,
+          "text": "结束状态从明确的 base commit、candidate commit 和摘要重新计算，不使用执行中缓存的文件内容。"
+        },
+        {
+          "line": 155,
+          "text": ""
+        },
+        {
+          "line": 156,
+          "text": "## Provider、Credential 与外部副作用"
+        },
+        {
+          "line": 157,
+          "text": ""
+        },
+        {
+          "line": 158,
+          "text": "Provider Gateway 是 Control Plane 内部的唯一模型路由和长期 Credential 使用者。Worker 只通过 `execution-port-model-stream` 请求模型并接收流；请求中只带短期引用、路由和预算事实。Credential 服务保存受保护引用，公开合同和持久 Delivery 不保存原始密钥。"
+        },
+        {
+          "line": 159,
+          "text": ""
+        },
+        {
+          "line": 160,
+          "text": "Publication 先在 Control Plane 写入审批绑定、操作键和本地 receipt，再执行外部写入；重试通过同一操作键查询已存在的结果。Audit Ledger 保存主体、范围、操作、结果和摘要链，不复制命令正文、模型正文或凭据。"
+        },
+        {
+          "line": 161,
+          "text": ""
+        },
+        {
+          "line": 162,
+          "text": "## 本地与企业部署"
+        },
+        {
+          "line": 163,
+          "text": ""
+        },
+        {
+          "line": 164,
+          "text": "### 本地部署"
+        },
+        {
+          "line": 165,
+          "text": ""
+        },
+        {
+          "line": 166,
+          "text": "```text"
+        },
+        {
+          "line": 167,
+          "text": "winwincode-local"
+        },
+        {
+          "line": 168,
+          "text": "├─ winwincode-control-plane"
+        },
+        {
+          "line": 169,
+          "text": "└─ winwincode-worker"
+        },
+        {
+          "line": 170,
+          "text": "   ├─ winwincode-codex"
+        },
+        {
+          "line": 171,
+          "text": "   ├─ winwincode-kernel"
+        },
+        {
+          "line": 172,
+          "text": "   └─ winwincode-kernel-helper"
+        },
+        {
+          "line": 173,
+          "text": "```"
+        },
+        {
+          "line": 174,
+          "text": ""
+        },
+        {
+          "line": 175,
+          "text": "[`winwincode-local`](../crates/winwincode-local/src/lib.rs) 只负责生命周期和组合。它通过注入的 Control Plane 端点和 `LocalWorkerAdapter` 传递 typed frame，并为每个进程生成独立数据根；SQLite、租约、收据和 outbox 的语义与企业部署相同。"
+        },
+        {
+          "line": 176,
+          "text": ""
+        },
+        {
+          "line": 177,
+          "text": "### 企业部署"
+        },
+        {
+          "line": 178,
+          "text": ""
+        },
+        {
+          "line": 179,
+          "text": "```text"
+        },
+        {
+          "line": 180,
+          "text": "winwincode-server"
+        }
+      ]
+    }
+  },
+  "source_roles": {
+    "crates/winwincode-worker/src/lib.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "WorkerMain.with_device_providers",
+          "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.with_device_providers",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 409,
+            "column": 5,
+            "end_line": 420,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 16382,
+            "end_byte": 16898,
+            "original_file_start_byte": 16382,
+            "original_file_end_byte": 16898,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "88a8845a03c0c347c04d63e215a703f88ff1d96432d125f7fb54e1946a23d502",
+            "source_line": "    pub fn with_device_providers(",
+            "source_excerpt": "pub fn with_device_providers(\n        mut self,\n        directory: &std::path::Path,\n    ) -> Result<Self, winwincode_provider::DeviceProviderError> {\n        let mut models = device_model::DeviceModels::open(directory)?;\n        models.note_worker_instance_id(&self.config.worker_instance_id.0);\n        if let Some(path) = std::env::var_os(\"WWC_MODEL_INTAKE_LOG\") {\n            models.set_intake_log(Some(std::path::PathBuf::from(path)));\n        }\n        self.device_models = Some(models);\n        Ok(self)\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "00da1f2d5c6040485acc1742ce0b927f381aa1895fdeef61fb11ef1076833a40",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn with_device_providers(\n        mut self,\n        directory: &std::path::Path,\n    ) -> Result<Self, winwincode_provider::DeviceProviderError> {\n        let mut models = device_model::DeviceModels::open(directory)?;\n        models.note_worker_instance_id(&self.config.worker_instance_id.0);\n        if let Some(path) = std::env::var_os(\"WWC_MODEL_INTAKE_LOG\") {\n            models.set_intake_log(Some(std::path::PathBuf::from(path)));\n        }\n        self.device_models = Some(models);\n        Ok(self)\n    }"
+        },
+        {
+          "symbol": "WorkerMain.with_model_intake_log",
+          "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.with_model_intake_log",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 424,
+            "column": 5,
+            "end_line": 431,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 17003,
+            "end_byte": 17341,
+            "original_file_start_byte": 17003,
+            "original_file_end_byte": 17341,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "2dfbad56f2c012fb99b68cb885fc82f7475b66091a7f794e54962d52cbf6c277",
+            "source_line": "    pub fn with_model_intake_log(mut self, path: &std::path::Path) -> Self {",
+            "source_excerpt": "pub fn with_model_intake_log(mut self, path: &std::path::Path) -> Self {\n        self.intake_log_path = Some(path.to_path_buf());\n        winwincode_codex::set_model_intake_log_path(path);\n        if let Some(models) = self.device_models.as_mut() {\n            models.set_intake_log(Some(path.to_path_buf()));\n        }\n        self\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "00da1f2d5c6040485acc1742ce0b927f381aa1895fdeef61fb11ef1076833a40",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn with_model_intake_log(mut self, path: &std::path::Path) -> Self {\n        self.intake_log_path = Some(path.to_path_buf());\n        winwincode_codex::set_model_intake_log_path(path);\n        if let Some(models) = self.device_models.as_mut() {\n            models.set_intake_log(Some(path.to_path_buf()));\n        }\n        self\n    }"
+        },
+        {
+          "symbol": "WorkerMain.log_model_intake",
+          "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.log_model_intake",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 433,
+            "column": 5,
+            "end_line": 477,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 17347,
+            "end_byte": 18840,
+            "original_file_start_byte": 17347,
+            "original_file_end_byte": 18840,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "08187afaf147c6482acda24f20c18cf548cb46c60927bac96fb31c6db34c4d24",
+            "source_line": "    fn log_model_intake(",
+            "source_excerpt": "fn log_model_intake(\n        &self,\n        stage: &str,\n        code: &str,\n        chunk: &ModelChunkMessage,\n        detail: &str,\n    ) {\n        let exchange = chunk.model_exchange_id.0.as_str();\n        let sequence = chunk.sequence.0;\n        let worker_session_id = chunk.worker_session_id.0.as_str();\n        let thread_id = chunk.session_identity.codex_thread_id.0.as_str();\n        if let Some(models) = self.device_models.as_ref() {\n            models.log_intake(\n                stage,\n                code,\n                exchange,\n                sequence,\n                worker_session_id,\n                thread_id,\n                detail,\n            );\n        }\n        let Some(path) = self.intake_log_path.as_deref() else {\n            return;\n        };\n        if let Some(parent) = path.parent() {\n            let _ = std::fs::create_dir_all(parent);\n        }\n        let Ok(mut file) = std::fs::OpenOptions::new()\n            .create(true)\n            .append(true)\n            .open(path)\n        else {\n            return;\n        };\n        use std::io::Write as _;\n        let ts = std::time::SystemTime::now()\n            .duration_since(std::time::UNIX_EPOCH)\n            .map(|duration| duration.as_secs())\n            .unwrap_or_default();\n        let _ = writeln!(\n            file,\n            \"ts={ts} component=worker stage={stage} code={code} exchange={exchange} seq={sequence} wsn={worker_session_id} thr={thread_id} detail={detail}\"\n        );\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "00da1f2d5c6040485acc1742ce0b927f381aa1895fdeef61fb11ef1076833a40",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn log_model_intake(\n        &self,\n        stage: &str,\n        code: &str,\n        chunk: &ModelChunkMessage,\n        detail: &str,\n    ) {\n        let exchange = chunk.model_exchange_id.0.as_str();\n        let sequence = chunk.sequence.0;\n        let worker_session_id = chunk.worker_session_id.0.as_str();\n        let thread_id = chunk.session_identity.codex_thread_id.0.as_str();\n        if let Some(models) = self.device_models.as_ref() {\n            models.log_intake(\n                stage,\n                code,\n                exchange,\n                sequence,\n                worker_session_id,\n                thread_id,\n                detail,\n            );\n        }\n        let Some(path) = self.intake_log_path.as_deref() else {\n            return;\n        };\n        if let Some(parent) = path.parent() {\n            let _ = std::fs::create_dir_all(parent);\n        }\n        let Ok(mut file) = std::fs::OpenOptions::new()\n            .create(true)\n            .append(true)\n            .open(path)\n        else {\n            return;\n        };\n        use std::io::Write as _;\n        let ts = std::time::SystemTime::now()\n            .duration_since(std::time::UNIX_EPOCH)\n            .map(|duration| duration.as_secs())\n            .unwrap_or_default();\n        let _ = writeln!(\n            file,\n            \"ts={ts} component=worker stage={stage} code={code} exchange={exchange} seq={sequence} wsn={worker_session_id} thr={thread_id} detail={detail}\"\n        );\n    }"
+        },
+        {
+          "symbol": "WorkerMain.new",
+          "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.new",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 481,
+            "column": 5,
+            "end_line": 523,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 18934,
+            "end_byte": 20589,
+            "original_file_start_byte": 18934,
+            "original_file_end_byte": 20589,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "816f70ba555dda11ef0ee5d8c0b3c793d604022d708218ba288936c5ca435539",
+            "source_line": "    pub fn new(",
+            "source_excerpt": "pub fn new(\n        config: WorkerConfig,\n        port: Port,\n        mut codex: Codex,\n        workspaces: JobWorkspaceRuntime,\n    ) -> Self {\n        let message_sequence = recover_message_sequence(&mut codex);\n        let heartbeat_sequence =\n            recover_heartbeat_sequence(&mut codex, &config.worker_id, &config.worker_instance_id);\n        Self {\n            device_models: None,\n            intake_log_path: None,\n            config,\n            port,\n            codex,\n            workspaces,\n            lifecycle: WorkerLifecycleState::Booting,\n            registration_request_id: None,\n            registration_request_namespace: None,\n            heartbeat_interval_ms: None,\n            heartbeat_sequence,\n            request_sequence: 0,\n            message_sequence,\n            active: HashMap::new(),\n            dispatches: HashMap::new(),\n            pending_candidates: HashMap::new(),\n            defer_core_interactions: false,\n            sent_delivery_ids: HashSet::new(),\n            recovery_sent_delivery_ids: HashSet::new(),\n            recovered_delegated_routes: HashSet::new(),\n            deferred_core_interaction_jobs: HashSet::new(),\n            core_interaction_jobs: HashSet::new(),\n            delegated_poll_outcomes: VecDeque::new(),\n            delegated_progress_ledgers: HashMap::new(),\n            observer_mode: ObserverMode::Off,\n            observation_model: None,\n            sent_observation_opens: HashSet::new(),\n            #[cfg(feature = \"test-support\")]\n            submission_fault: None,\n            #[cfg(feature = \"test-support\")]\n            final_freeze_fault: None,\n        }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "00da1f2d5c6040485acc1742ce0b927f381aa1895fdeef61fb11ef1076833a40",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn new(\n        config: WorkerConfig,\n        port: Port,\n        mut codex: Codex,\n        workspaces: JobWorkspaceRuntime,\n    ) -> Self {\n        let message_sequence = recover_message_sequence(&mut codex);\n        let heartbeat_sequence =\n            recover_heartbeat_sequence(&mut codex, &config.worker_id, &config.worker_instance_id);\n        Self {\n            device_models: None,\n            intake_log_path: None,\n            config,\n            port,\n            codex,\n            workspaces,\n            lifecycle: WorkerLifecycleState::Booting,\n            registration_request_id: None,\n            registration_request_namespace: None,\n            heartbeat_interval_ms: None,\n            heartbeat_sequence,\n            request_sequence: 0,\n            message_sequence,\n            active: HashMap::new(),\n            dispatches: HashMap::new(),\n            pending_candidates: HashMap::new(),\n            defer_core_interactions: false,\n            sent_delivery_ids: HashSet::new(),\n            recovery_sent_delivery_ids: HashSet::new(),\n            recovered_delegated_routes: HashSet::new(),\n            deferred_core_interaction_jobs: HashSet::new(),\n            core_interaction_jobs: HashSet::new(),\n            delegated_poll_outcomes: VecDeque::new(),\n            delegated_progress_ledgers: HashMap::new(),\n            observer_mode: ObserverMode::Off,\n            observation_model: None,\n            sent_observation_opens: HashSet::new(),\n            #[cfg(feature = \"test-support\")]\n            submission_fault: None,\n            #[cfg(feature = \"test-support\")]\n            final_freeze_fault: None,\n        }\n    }"
+        },
+        {
+          "symbol": "WorkerMain.poll_codex",
+          "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.poll_codex",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 924,
+            "column": 5,
+            "end_line": 1194,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 37982,
+            "end_byte": 50352,
+            "original_file_start_byte": 37982,
+            "original_file_end_byte": 50352,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "882c22e976fb5a67c5efb82a057063b487d95bfbc572ace39aef8fed8b6922fe",
+            "source_line": "    pub async fn poll_codex(&mut self, now: Instant) -> Result<(), WorkerError> {",
+            "source_excerpt": "pub async fn poll_codex(&mut self, now: Instant) -> Result<(), WorkerError> {\n        if self.lifecycle != WorkerLifecycleState::Active {\n            return Err(worker_error(\n                WorkerErrorCode::InvalidLifecycle,\n                \"Codex polling requires an active Worker\",\n            ));\n        }\n        // Drain Core-queued ModelOpen/ModelAck before Device frame intake.\n        // An automatic second model call after tool_result can enqueue its\n        // Provider open while the Device chunk queue is still empty; if that\n        // open waits for a later job poll the Provider never runs and the\n        // durable model-call ledger stays at zero frames.\n        if self.flush_durable_execution_deliveries().await.is_err()\n            && std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some()\n        {\n            eprintln!(\"poll_codex durable outbox pre-flush failed\");\n        }\n        if self.flush_codex_execution_messages().await.is_err()\n            && std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some()\n        {\n            eprintln!(\"poll_codex pre-flush of Core execution messages failed\");\n        }\n        loop {\n            let chunk = match &mut self.device_models {\n                Some(models) => models.next_chunk().map_err(|_| codex_model_error())?,\n                None => None,\n            };\n            let Some(chunk) = chunk else {\n                break;\n            };\n            let result = async {\n                if chunk.session_identity.work_run_id.is_none() {\n                    let public = winwincode_provider::public_model_chunk(&chunk)\n                        .map_err(|_| codex_model_error())?;\n                    self.retain_and_send(ExecutionPortMessage::ModelChunkMessage(public))\n                        .await?;\n                }\n                Box::pin(self.accept_control(\n                    &ExecutionPortMessage::ModelChunkMessage(chunk.clone()),\n                    now.clone(),\n                ))\n                .await\n            }\n            .await;\n            if let Err(error) = result {\n                let exchange = chunk.model_exchange_id.0.clone();\n                let sequence = chunk.sequence.0;\n                let owned = self\n                    .device_models\n                    .as_ref()\n                    .is_some_and(|models| models.owns_exchange(&exchange));\n                if !owned {\n                    // Shared Device providers.sqlite3 holds every session's\n                    // exchanges. A foreign frame that fails authority must not\n                    // be retry-pinned at the queue front or this Worker's own\n                    // verification exchange never becomes durable.\n                    self.log_model_intake(\n                        \"poll_codex\",\n                        \"FOREIGN_OR_UNOWNED_EXCHANGE\",\n                        &chunk,\n                        \"dropped non-owned Device frame without retry\",\n                    );\n                    if let Some(models) = &mut self.device_models {\n                        models.drop_chunk(&chunk);\n                    }\n                    if std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some() {\n                        eprintln!(\n                            \"poll_codex dropped unowned exchange={exchange} seq={sequence}: {:?}\",\n                            error.code\n                        );\n                    }\n                    continue;\n                }\n                if let Some(models) = &mut self.device_models {\n                    models.retry_chunk(chunk);\n                }\n                if std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some() {\n                    eprintln!(\"poll_codex chunk failed exchange={exchange} seq={sequence}: {:?}\", error.code);\n                }\n                return Err(error);\n            }\n        }\n        // A response can be delivered after the poll that sent its request,\n        // and the response batch may also contain an acknowledgement for a\n        // different frame.  Give each new poll a fresh retry window so a\n        // lost response is retried, w",
+            "source_excerpt_truncated": true,
+            "semantic_parse_id": "00da1f2d5c6040485acc1742ce0b927f381aa1895fdeef61fb11ef1076833a40",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub async fn poll_codex(&mut self, now: Instant) -> Result<(), WorkerError> {\n        if self.lifecycle != WorkerLifecycleState::Active {\n            return Err(worker_error(\n                WorkerErrorCode::InvalidLifecycle,\n                \"Codex polling requires an active Worker\",\n            ));\n        }\n        // Drain Core-queued ModelOpen/ModelAck before Device frame intake.\n        // An automatic second model call after tool_result can enqueue its\n        // Provider open while the Device chunk queue is still empty; if that\n        // open waits for a later job poll the Provider never runs and the\n        // durable model-call ledger stays at zero frames.\n        if self.flush_durable_execution_deliveries().await.is_err()\n            && std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some()\n        {\n            eprintln!(\"poll_codex durable outbox pre-flush failed\");\n        }\n        if self.flush_codex_execution_messages().await.is_err()\n            && std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some()\n        {\n            eprintln!(\"poll_codex pre-flush of Core execution messages failed\");\n        }\n        loop {\n            let chunk = match &mut self.device_models {\n                Some(models) => models.next_chunk().map_err(|_| codex_model_error())?,\n                None => None,\n            };\n            let Some(chunk) = chunk else {\n                break;\n            };\n            let result = async {\n                if chunk.session_identity.work_run_id.is_none() {\n                    let public = winwincode_provider::public_model_chunk(&chunk)\n                        .map_err(|_| codex_model_error())?;\n                    self.retain_and_send(ExecutionPortMessage::ModelChunkMessage(public))\n                        .await?;\n                }\n                Box::pin(self.accept_control(\n                    &ExecutionPortMessage::ModelChunkMessage(chunk.clone()),\n                    now.clone(),\n                ))\n                .await\n            }\n            .await;\n            if let Err(error) = result {\n                let exchange = chunk.model_exchange_id.0.clone();\n                let sequence = chunk.sequence.0;\n                let owned = self\n                    .device_models\n                    .as_ref()\n                    .is_some_and(|models| models.owns_exchange(&exchange));\n                if !owned {\n                    // Shared Device providers.sqlite3 holds every session's\n                    // exchanges. A foreign frame that fails authority must not\n                    // be retry-pinned at the queue front or this Worker's own\n                    // verification exchange never becomes durable.\n                    self.log_model_intake(\n                        \"poll_codex\",\n                        \"FOREIGN_OR_UNOWNED_EXCHANGE\",\n                        &chunk,\n                        \"dropped non-owned Device frame without retry\",\n                    );\n                    if let Some(models) = &mut self.device_models {\n                        models.drop_chunk(&chunk);\n                    }\n                    if std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some() {\n                        eprintln!(\n                            \"poll_codex dropped unowned exchange={exchange} seq={sequence}: {:?}\",\n                            error.code\n                        );\n                    }\n                    continue;\n                }\n                if let Some(models) = &mut self.device_models {\n                    models.retry_chunk(chunk);\n                }\n                if std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some() {\n                    eprintln!(\"poll_codex chunk failed exchange={exchange} seq={sequence}: {:?}\", error.code);\n                }\n                return Err(error);\n            }\n        }\n        // A response can be delivered after the poll that sent its request,\n        // and the response batch may also contain an acknowledgement for a\n        // different frame.  Give each new poll a fresh retry window so a\n        // lost response is retried, while the current window does not resend\n        // the same frame between those acknowledgements.\n        //\n        // Durable flush here is best-effort: a Server restart / connection\n        // refused window must not prevent Core polls from retaining further\n        // verification evidence. Heartbeat and the process drive loop retry\n        // the flush on the same exchange protocol when the Server returns.\n        self.sent_delivery_ids.clear();\n        if self.deferred_core_interaction_jobs.is_empty() {\n            if self.flush_durable_execution_deliveries().await.is_err()\n                && std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some()\n            {\n                eprintln!(\"poll_codex durable flush failed; Core polls continue\");\n            }\n        } else if self.flush_recovered_durable_execution_deliveries().await.is_err()\n            && std::env::var_os(\"WWC_WORKER_POLL_DEBUG\").is_some()\n        {\n            eprintln!(\"poll_codex recovered durable flush failed; Core polls continue\");\n        }\n        // A lost binding response must not strand a prepared Core turn.\n        let pending = self\n            .active\n            .values()\n            .filter(|active| {\n                self.dispatches\n                    .get(&active.job.job_id.0)\n                    .is_some_and(|record| !record.submission_started)\n            })\n            .cloned()\n            .collect::<Vec<_>>();\n        for active in pending {\n            self.start_bound_job(&active.job, &active.codex_thread_id, now.clone())\n                .await?;\n        }\n        let mut job_ids = self.active.keys().cloned().collect::<Vec<_>>();\n        job_ids.sort();\n        for job_id in &job_ids {\n            let Some(thread_id) = self\n                .active\n                .get(job_id)\n                .map(|job| job.codex_thread_id.clone())\n            else {\n                continue;\n            };\n            if let Some(stop) = self\n                .codex\n                .delegated_loop_stop(&thread_id)\n                .map_err(|_| codex_model_error())?\n            {\n                self.finish_delegated_loop_stop_fact(job_id, stop, now.clone())\n                    .await?;\n                continue;\n            }\n            if let Some(freeze) = self\n                .codex\n                .final_candidate_freeze(&thread_id)\n                .map_err(|_| codex_model_error())?\n            {\n                let active = self.active.get(job_id).ok_or_else(|| {\n                    candidate_artifact_error(\"frozen candidate lost active authority\")\n                })?;\n                self.pending_candidates.insert(\n                    job_id.clone(),\n                    PendingCandidateCompletion {\n                        terminal_fact: CandidateTerminalFact::DelegatedFinalAccepted {\n                            seed: Box::new(DelegatedFinalFreezeSeed {\n                                context_pack_digest: freeze.context_pack_digest.clone(),\n                                counters: freeze.counters.clone(),\n                                delta_digest: freeze.delta_digest.clone(),\n                                final_observation: freeze.final_observation.clone(),\n                                final_receipt: freeze.final_receipt.clone(),\n                                frozen_at: freeze.frozen_at.clone(),\n                                identity: freeze.identity.clone(),\n                                result_revision: freeze.result_revision.clone(),\n                            }),\n                        },\n                        authority: candidate_artifact_authority(\n                            active,\n                            self.dispatches\n                                .get(job_id)\n                                .and_then(|record| record.replacement_authority.clone()),\n                        )?,\n                        artifact: Some(freeze.candidate_artifact_ref.clone()),\n                        diagnostic_artifacts: Vec::new(),\n                    },\n                );\n                self.finish_job(\n                    job_id,\n                    ExecutionOutcomeStatus::Succeeded,\n                    \"final delegated ChangeBatch accepted and frozen\",\n                    vec![freeze.candidate_artifact_ref],\n                    None,\n                    None,\n                    now.clone(),\n                )\n                .await?;\n            }\n        }\n        self.flush_pending_observation_opens().await?;\n        for job_id in job_ids {\n            if !self.pending_candidates.contains_key(&job_id) {\n                let recovered_final = self.active.get(&job_id).cloned().and_then(|active| {\n                    self.workspaces\n                        .delegated_batch_history(&active)\n                        .ok()\n                        .and_then(|history| {\n                            history.last().and_then(|terminal| {\n                                (terminal.terminal_state == ChangeBatchProgressState::Accepted\n                                    && terminal.proposal.proposal.disposition\n                                        == ChangeBatchProposalDisposition::Final)\n                                    .then(|| {\n                                        (\n                                            terminal.proposal.identity.batch_id.clone(),\n                                            terminal.receipt.result_revision.clone(),\n                                        )\n                                    })\n                            })\n                        })\n                });\n                if let Some((batch_id, Some(result_revision))) = recovered_final {\n                    self.complete_accepted_delegated_candidate(\n                        &job_id,\n                        batch_id,\n                        result_revision,\n                        now.clone(),\n                    )\n                    .await?;\n                }\n            }\n            if self.pending_candidates.contains_key(&job_id) || !self.active.contains_key(&job_id) {\n                continue;\n            }\n            if !self.recovered_delegated_routes.contains(&job_id) {\n                let recovered_terminal = self.active.get(&job_id).cloned().and_then(|active| {\n                    self.workspaces\n                        .delegated_batch_history(&active)\n                        .ok()\n                        .and_then(|history| history.last().cloned())\n                        .filter(|terminal| {\n                            terminal.proposal.proposal.disposition\n                                != ChangeBatchProposalDisposition::Final\n                        })\n                });\n                if let Some(terminal) = recovered_terminal {\n                    self.route_delegated_terminal(\n                        &job_id,\n                        terminal.receipt,\n                        terminal.terminal_state,\n                        now.clone(),\n                    )\n                    .await?;\n                    self.recovered_delegated_routes.insert(job_id.clone());\n                }\n            }\n            if !self.active.contains_key(&job_id) {\n                continue;\n            }\n            let Some(thread_id) = self\n                .active\n                .get(&job_id)\n                .map(|job| job.codex_thread_id.clone())\n            else {\n                continue;\n            };\n            if let Some(stop) = self\n                .codex\n                .delegated_loop_stop(&thread_id)\n                .map_err(|_| codex_model_error())?\n            {\n                self.finish_delegated_loop_stop_fact(&job_id, stop, now.clone())\n                    .await?;\n                continue;\n            }\n            let Ok(polled) = self.codex.poll(&thread_id, &now).await else {\n                self.finish_unavailable_codex_job(&job_id, now.clone())\n                    .await?;\n                continue;\n            };\n            self.flush_codex_execution_messages().await?;\n            if self.core_interaction_jobs.remove(&job_id) {\n                self.deferred_core_interaction_jobs.remove(&job_id);\n            }\n            self.handle_codex_poll(&job_id, polled, now.clone()).await?;\n        }\n        Ok(())\n    }"
+        },
+        {
+          "symbol": "WorkerMain.send_execution_message",
+          "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.send_execution_message",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 3953,
+            "column": 5,
+            "end_line": 3966,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 160451,
+            "end_byte": 160867,
+            "original_file_start_byte": 160451,
+            "original_file_end_byte": 160867,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "8f0fcdb1acb1dd6c5431b8a5fed89bd2d1df71c6e7d79f379c5e4b5591e53f4a",
+            "source_line": "    async fn send_execution_message(",
+            "source_excerpt": "async fn send_execution_message(\n        &mut self,\n        message: ExecutionPortMessage,\n    ) -> Result<(), WorkerError> {\n        if let Some(models) = &mut self.device_models\n            && models.send(&message).map_err(|_| codex_model_error())?\n        {\n            return Ok(());\n        }\n        self.port\n            .send(message)\n            .await\n            .map_err(|_| execution_port_error())\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "00da1f2d5c6040485acc1742ce0b927f381aa1895fdeef61fb11ef1076833a40",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "async fn send_execution_message(\n        &mut self,\n        message: ExecutionPortMessage,\n    ) -> Result<(), WorkerError> {\n        if let Some(models) = &mut self.device_models\n            && models.send(&message).map_err(|_| codex_model_error())?\n        {\n            return Ok(());\n        }\n        self.port\n            .send(message)\n            .await\n            .map_err(|_| execution_port_error())\n    }"
+        }
+      ]
+    },
+    "crates/winwincode-provider/src/provider_https_sse.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "<HttpsSseProviderAdapter as ProviderAdapterPort>.open",
+          "graph_node_id": "rust:crates/winwincode-provider/src/provider_https_sse#<HttpsSseProviderAdapter as ProviderAdapterPort>.open",
+          "location": {
+            "file": "crates/winwincode-provider/src/provider_https_sse.rs",
+            "line": 796,
+            "column": 5,
+            "end_line": 805,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 28444,
+            "end_byte": 28752,
+            "original_file_start_byte": 28444,
+            "original_file_end_byte": 28752,
+            "source_hash": "32fff7894bccf086b8fb0278d7d4bf17103f714791605316f85d89d3f721e85a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "4dc7b7f76836855cdf8b3157e8229a812593bd128433dbe07dba6c5453c6b506",
+            "source_line": "    fn open(",
+            "source_excerpt": "fn open(\n        &self,\n        invocation: &ProviderAdapterInvocation<'_>,\n        credential: &ResolvedSecret,\n    ) -> Result<ProviderAdapterOpenReceipt, ProviderAdapterError> {\n        self.open_https(\n            HttpInvocation::from_adapter(invocation),\n            credential.expose(),\n        )\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "158faba3d7a52035304aae3ebc76cc37aac8383da94ff5c25703a5d760ae6b80",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "32fff7894bccf086b8fb0278d7d4bf17103f714791605316f85d89d3f721e85a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn open(\n        &self,\n        invocation: &ProviderAdapterInvocation<'_>,\n        credential: &ResolvedSecret,\n    ) -> Result<ProviderAdapterOpenReceipt, ProviderAdapterError> {\n        self.open_https(\n            HttpInvocation::from_adapter(invocation),\n            credential.expose(),\n        )\n    }"
+        }
+      ]
+    }
+  },
+  "target_executed": false
+}

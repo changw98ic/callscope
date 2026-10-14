@@ -1,0 +1,23 @@
+{
+  "id": "wwc-document-device-provider-deployment-scope",
+  "type": "document_deployment_consistency",
+  "severity": "info",
+  "documents": [{"role": "architecture", "file": "docs/architecture.md"}],
+  "sources": [
+    {"role":"server_boundary","file":"crates/winwincode-server/src/main.rs","symbol":"<DeviceModelBoundary as winwincode_control_plane::DurableExecutionPortDelegate>.accept"},
+    {"role":"worker_bootstrap","file":"crates/winwincode-worker/src/main.rs","symbol":"run_worker"},
+    {"role":"worker_installation","file":"crates/winwincode-worker/src/lib.rs","symbol":"WorkerMain.with_device_providers"},
+    {"role":"worker_route","file":"crates/winwincode-worker/src/lib.rs","symbol":"WorkerMain.send_execution_message"},
+    {"role":"device_send","file":"crates/winwincode-worker/src/device_model.rs","symbol":"DeviceModels.send"},
+    {"role":"store_open","file":"crates/winwincode-provider/src/device_store.rs","symbol":"DeviceProviderStore.open"},
+    {"role":"model_execute","file":"crates/winwincode-provider/src/device_model.rs","symbol":"DeviceProviderStore.execute_model"},
+    {"role":"model_invoke","file":"crates/winwincode-provider/src/device_model.rs","symbol":"DeviceProviderStore.invoke_model"},
+    {"role":"secret_resolver","file":"crates/winwincode-provider/src/device_store.rs","symbol":"DeviceProviderStore.resolve"},
+    {"role":"secret_constructor","file":"crates/winwincode-provider/src/types.rs","symbol":"ResolvedSecret.from_bytes"},
+    {"role":"provider_factory","file":"crates/winwincode-provider/src/device_store.rs","symbol":"adapter"},
+    {"role":"provider_open","file":"crates/winwincode-provider/src/provider_https_sse.rs","symbol":"<HttpsSseProviderAdapter as ProviderAdapterPort>.open"}
+  ],
+  "models": ["captured-normal-statement-control-v1", "captured-document-deployment-qualified-source-v1"],
+  "provenance": {"authority":"captured-document-and-source-comparison","reviewer":"finite-qualified-source-relations","author_approved":false,"source_doc":"docs/architecture.md","note":"Document and source selectors are locators only. No expected clauses, paths, predicates or comparison result is configured."},
+  "applicability": {"kind":"conditional","conditions":["Selected document bytes, CST declarations and source bindings are authenticated in the same saved snapshot.","Selected Device composition, fallible prefixes and deferred callbacks reach the recorded source operations normally; this is a source-model comparison."],"counterexamples":["Control Plane-internal uniqueness is not automatically a whole-project claim; Device and Server deployment scopes remain distinct.","Long-term credential lifetime, external provider success and actual secret contents remain unknown. Typed model-stream messages may still be used by a Device-local path."]}
+}

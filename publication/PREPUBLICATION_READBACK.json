@@ -1,0 +1,16 @@
+{
+  "kind": "public-source-export-byte-readback",
+  "source_package_version": "0.14.0",
+  "copied_original_files_verified": 1084,
+  "mismatches": [],
+  "single_files_over_95_mib": [],
+  "original_workspace_untouched": true,
+  "frozen_core_files_verified_during_export": 65,
+  "project_code_license": "MIT",
+  "upstream_and_target_notices_preserved": true,
+  "restoration_script_ast_parsed": true,
+  "target_execution": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "tool_test_suite_run": false
+}

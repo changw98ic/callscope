@@ -1,0 +1,801 @@
+{
+  "kind": "rebuildable_memo_stream_archive_manifest",
+  "created_at_utc": "2026-10-14T07:35:20.987043+00:00",
+  "reviewed_plan_sha256": "f5c22d53efa0e4ea4f4e67d50e6ad9fde7e5327c77637b128856dc6e6f2466fe",
+  "archive": "/workspace/callscope/reports/astra-iteration12/rebuildable-memo-archive.tar.gz",
+  "archive_sha256": "cd8f6dddff926706d6d7033cdfcfeeb372fb5f5be4ab97a8f8a08157f9252435",
+  "archive_bytes": 362319209,
+  "compression": "gzip level 1; no uncompressed tar",
+  "restore_base_directory": "/workspace/callscope/reports",
+  "members": [
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration5/winwincode-v8.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration5/winwincode-v8.sqlite3.cocoindex",
+      "archive_member": "astra-iteration5/winwincode-v8.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 458412032,
+      "allocated_bytes": 458416128,
+      "sha256": "28d16e736aa7c6a8ee49f6d18815017d47116fc18fc8e034bb3e92138adcd31b",
+      "source_identity": {
+        "device": 27,
+        "inode": 786524,
+        "logical_bytes": 458412032,
+        "allocated_bytes": 458416128,
+        "link_count": 1,
+        "mtime_ns": 1791797946106695819,
+        "ctime_ns": 1791797946106695819
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration5/winwincode-v8.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration5/winwincode-v8.sqlite3.cocoindex",
+      "archive_member": "astra-iteration5/winwincode-v8.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "61d49e6dba5aed8353d3b5482050fc7796461a60942c1a8bac5a65b78b74bf71",
+      "source_identity": {
+        "device": 27,
+        "inode": 786523,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791797941726741512,
+        "ctime_ns": 1791797941726741512
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration3/winwincode-v6.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration3/winwincode-v6.sqlite3.cocoindex",
+      "archive_member": "astra-iteration3/winwincode-v6.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 229003264,
+      "allocated_bytes": 229007360,
+      "sha256": "edac53691ce83c57e7f66f20d6b72240944b6d3a2a05309c6e8923291c68def7",
+      "source_identity": {
+        "device": 27,
+        "inode": 655385,
+        "logical_bytes": 229003264,
+        "allocated_bytes": 229007360,
+        "link_count": 1,
+        "mtime_ns": 1791777202902613942,
+        "ctime_ns": 1791777202902613942
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration3/winwincode-v6.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration3/winwincode-v6.sqlite3.cocoindex",
+      "archive_member": "astra-iteration3/winwincode-v6.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "9cb81685ffd96d15a48013e89e3be687af82319a4a2af37a8f834a08c492604b",
+      "source_identity": {
+        "device": 27,
+        "inode": 655384,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791777198570658641,
+        "ctime_ns": 1791777198570658641
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration4/winwincode-v7.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration4/winwincode-v7.sqlite3.cocoindex",
+      "archive_member": "astra-iteration4/winwincode-v7.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 229003264,
+      "allocated_bytes": 229007360,
+      "sha256": "b4c82f8485e9a864e77b19f1ae5e59062c729e721b3d5726e48aedcdf47af259",
+      "source_identity": {
+        "device": 27,
+        "inode": 786469,
+        "logical_bytes": 229003264,
+        "allocated_bytes": 229007360,
+        "link_count": 1,
+        "mtime_ns": 1791787739059484717,
+        "ctime_ns": 1791787739059484717
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration4/winwincode-v7.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration4/winwincode-v7.sqlite3.cocoindex",
+      "archive_member": "astra-iteration4/winwincode-v7.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "96824e1f4b2889eaec37396148ed0ae704281f588d8fc559d5da66b2c2b4f5b2",
+      "source_identity": {
+        "device": 27,
+        "inode": 786468,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791787735167532935,
+        "ctime_ns": 1791787735167532935
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration8/winwincode-v10.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration8/winwincode-v10.sqlite3.cocoindex",
+      "archive_member": "astra-iteration8/winwincode-v10.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 229003264,
+      "allocated_bytes": 229007360,
+      "sha256": "4f3a4ca9f0b690420fab823d3e59ffe3022a0d8cd6ec7233a9611fdf1ae8835b",
+      "source_identity": {
+        "device": 27,
+        "inode": 655537,
+        "logical_bytes": 229003264,
+        "allocated_bytes": 229007360,
+        "link_count": 1,
+        "mtime_ns": 1791815052721972142,
+        "ctime_ns": 1791815052721972142
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration8/winwincode-v10.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration8/winwincode-v10.sqlite3.cocoindex",
+      "archive_member": "astra-iteration8/winwincode-v10.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "e108e498f2ebc8c88e7787123ee811c822ba92cef366ea3737b7944d1cf0a4fa",
+      "source_identity": {
+        "device": 27,
+        "inode": 655536,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791815049126009434,
+        "ctime_ns": 1791815049126009434
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration9/winwincode-v11.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration9/winwincode-v11.sqlite3.cocoindex",
+      "archive_member": "astra-iteration9/winwincode-v11.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 229003264,
+      "allocated_bytes": 229007360,
+      "sha256": "1f766220a71e60d315e4431dde3920cfc7bbf83b95ea96a8d0cdd45a0f1c4112",
+      "source_identity": {
+        "device": 27,
+        "inode": 655595,
+        "logical_bytes": 229003264,
+        "allocated_bytes": 229007360,
+        "link_count": 1,
+        "mtime_ns": 1791848607434695850,
+        "ctime_ns": 1791848607434695850
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration9/winwincode-v11.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration9/winwincode-v11.sqlite3.cocoindex",
+      "archive_member": "astra-iteration9/winwincode-v11.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "38e2ec05ba8050621fa144e04a3d4be2097a0da4938f2185041d4cf58f68b862",
+      "source_identity": {
+        "device": 27,
+        "inode": 655594,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791848601838749119,
+        "ctime_ns": 1791848601838749119
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration7/winwincode-v10.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration7/winwincode-v10.sqlite3.cocoindex",
+      "archive_member": "astra-iteration7/winwincode-v10.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 229003264,
+      "allocated_bytes": 229007360,
+      "sha256": "5ae7d07b54361b3b1ac6c00e451778b02dc4c3451edbd11f6fb5d89442bef159",
+      "source_identity": {
+        "device": 27,
+        "inode": 655441,
+        "logical_bytes": 229003264,
+        "allocated_bytes": 229007360,
+        "link_count": 1,
+        "mtime_ns": 1791813978765779275,
+        "ctime_ns": 1791813978765779275
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration7/winwincode-v10.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration7/winwincode-v10.sqlite3.cocoindex",
+      "archive_member": "astra-iteration7/winwincode-v10.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "4f2f1181b8e2a7993ad372f888b56c6211bf5ce484dade8ed9adf1c88b521a11",
+      "source_identity": {
+        "device": 27,
+        "inode": 655440,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791813974769821713,
+        "ctime_ns": 1791813974769821713
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration6/winwincode-v9.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration6/winwincode-v9.sqlite3.cocoindex",
+      "archive_member": "astra-iteration6/winwincode-v9.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 229003264,
+      "allocated_bytes": 229007360,
+      "sha256": "ea314a5fe62abd4946250e791b8599021c2b963df9aa532a3c18a313340d8a11",
+      "source_identity": {
+        "device": 27,
+        "inode": 786577,
+        "logical_bytes": 229003264,
+        "allocated_bytes": 229007360,
+        "link_count": 1,
+        "mtime_ns": 1791806678233962937,
+        "ctime_ns": 1791806678233962937
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration6/winwincode-v9.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration6/winwincode-v9.sqlite3.cocoindex",
+      "archive_member": "astra-iteration6/winwincode-v9.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "5a4b21bf44eec61bf19c147cce119d0b00b412f7ce0fbe1b0d3950fe9f9d14db",
+      "source_identity": {
+        "device": 27,
+        "inode": 786576,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791806671910030083,
+        "ctime_ns": 1791806671910030083
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3.cocoindex",
+      "archive_member": "astra-iteration10/winwincode-v12.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 229003264,
+      "allocated_bytes": 229007360,
+      "sha256": "4f6f2b56cac7dfa40b01357a36b4f297eb3a28ca43fa11969f31dfc6196df67b",
+      "source_identity": {
+        "device": 27,
+        "inode": 655804,
+        "logical_bytes": 229003264,
+        "allocated_bytes": 229007360,
+        "link_count": 1,
+        "mtime_ns": 1791863796937208928,
+        "ctime_ns": 1791863796937208928
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3.cocoindex",
+      "archive_member": "astra-iteration10/winwincode-v12.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "e17fc0605547ba3d3e35da038986f3c0ec81dbfc3fc03bef0ec9cde8e6055125",
+      "source_identity": {
+        "device": 27,
+        "inode": 655803,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791863793157251227,
+        "ctime_ns": 1791863793157251227
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration2/winwincode-v5.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration2/winwincode-v5.sqlite3.cocoindex",
+      "archive_member": "astra-iteration2/winwincode-v5.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 201502720,
+      "allocated_bytes": 201506816,
+      "sha256": "74fbdce9894dd1a25245cb727a925d17c3e32c1fd1300341a648f26fc7f66114",
+      "source_identity": {
+        "device": 27,
+        "inode": 528622,
+        "logical_bytes": 201502720,
+        "allocated_bytes": 201506816,
+        "link_count": 1,
+        "mtime_ns": 1791773400330816688,
+        "ctime_ns": 1791773400330816688
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration2/winwincode-v5.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration2/winwincode-v5.sqlite3.cocoindex",
+      "archive_member": "astra-iteration2/winwincode-v5.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "0d8370fca9cf2568c6f74404005825f8478837bff7abaf596a011fbe429a869e",
+      "source_identity": {
+        "device": 27,
+        "inode": 528621,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791773397042853583,
+        "ctime_ns": 1791773397042853583
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration1/winwincode-v4.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration1/winwincode-v4.sqlite3.cocoindex",
+      "archive_member": "astra-iteration1/winwincode-v4.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 189120512,
+      "allocated_bytes": 189124608,
+      "sha256": "b114301688cfd407b89ea7b2f498f11684ca8a32cd618ebad07b02f8a47f3dfc",
+      "source_identity": {
+        "device": 27,
+        "inode": 528597,
+        "logical_bytes": 189120512,
+        "allocated_bytes": 189124608,
+        "link_count": 1,
+        "mtime_ns": 1791771854891401185,
+        "ctime_ns": 1791771854891401185
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration1/winwincode-v4.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration1/winwincode-v4.sqlite3.cocoindex",
+      "archive_member": "astra-iteration1/winwincode-v4.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "8d64833090d0842bd1c483303dcac651e48e4010dd81ebca428a52086b5c6c89",
+      "source_identity": {
+        "device": 27,
+        "inode": 528596,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791771851607434932,
+        "ctime_ns": 1791771851607434932
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/upstream-reuse/winwincode-v3.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/upstream-reuse/winwincode-v3.sqlite3.cocoindex",
+      "archive_member": "upstream-reuse/winwincode-v3.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 180088832,
+      "allocated_bytes": 180088832,
+      "sha256": "f07cf576b72caabd59ad0e660080a830115969a4a20518805d2f730ccbfd4755",
+      "source_identity": {
+        "device": 27,
+        "inode": 528554,
+        "logical_bytes": 180088832,
+        "allocated_bytes": 180088832,
+        "link_count": 1,
+        "mtime_ns": 1791729292411835819,
+        "ctime_ns": 1791729292411835819
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/upstream-reuse/winwincode-v3.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/upstream-reuse/winwincode-v3.sqlite3.cocoindex",
+      "archive_member": "upstream-reuse/winwincode-v3.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "f52e4473b556c8670c9cee9567768560f04dea7d59795dfbd8de6699a915e838",
+      "source_identity": {
+        "device": 27,
+        "inode": 528553,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791729289135870200,
+        "ctime_ns": 1791729289135870200
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration5/codepatchbay-v8.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration5/codepatchbay-v8.sqlite3.cocoindex",
+      "archive_member": "astra-iteration5/codepatchbay-v8.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 98562048,
+      "allocated_bytes": 98566144,
+      "sha256": "d1a13b9cb46685af133ffd788bce7945b3ffb928da0885374af5d63484cb2c4a",
+      "source_identity": {
+        "device": 27,
+        "inode": 786520,
+        "logical_bytes": 98562048,
+        "allocated_bytes": 98566144,
+        "link_count": 1,
+        "mtime_ns": 1791797854579650383,
+        "ctime_ns": 1791797854579650383
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration5/codepatchbay-v8.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration5/codepatchbay-v8.sqlite3.cocoindex",
+      "archive_member": "astra-iteration5/codepatchbay-v8.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "eefc9cfa659e1fb634fab0ecce9b8b5379f2d4433e6c6fcbddb0f7f9f533251b",
+      "source_identity": {
+        "device": 27,
+        "inode": 786519,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791797853335663338,
+        "ctime_ns": 1791797853335663338
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration3/codepatchbay-v6.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration3/codepatchbay-v6.sqlite3.cocoindex",
+      "archive_member": "astra-iteration3/codepatchbay-v6.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "26da23cf2dad38eda426a81af937a20a164c8fed2a4302597909f31ba0f049c6",
+      "source_identity": {
+        "device": 27,
+        "inode": 655381,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791777147935180460,
+        "ctime_ns": 1791777147935180460
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration3/codepatchbay-v6.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration3/codepatchbay-v6.sqlite3.cocoindex",
+      "archive_member": "astra-iteration3/codepatchbay-v6.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "fd88e2666b551e94bb5587cea279e69ae43cc12b91b51fea41a34a16c7790ce5",
+      "source_identity": {
+        "device": 27,
+        "inode": 655380,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791777147023189879,
+        "ctime_ns": 1791777147023189879
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration2/codepatchbay-v5.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration2/codepatchbay-v5.sqlite3.cocoindex",
+      "archive_member": "astra-iteration2/codepatchbay-v5.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "c9a56e2dc782f53c4551b842bcc347cfdc9c201b0c1417b3b528e1e31a4ef356",
+      "source_identity": {
+        "device": 27,
+        "inode": 528618,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791773350383480037,
+        "ctime_ns": 1791773350383480037
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration2/codepatchbay-v5.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration2/codepatchbay-v5.sqlite3.cocoindex",
+      "archive_member": "astra-iteration2/codepatchbay-v5.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "814dd65ebd8380717732d63efe1da13fd95ae30d430ec8f55c028d3eaddbc540",
+      "source_identity": {
+        "device": 27,
+        "inode": 528617,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791773349455489682,
+        "ctime_ns": 1791773349455489682
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration1/codepatchbay-v4.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration1/codepatchbay-v4.sqlite3.cocoindex",
+      "archive_member": "astra-iteration1/codepatchbay-v4.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "d4213b9832eb8ee2c490aa2dd4253630047eeb10d08f843b56638faee1b1c828",
+      "source_identity": {
+        "device": 27,
+        "inode": 528593,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791771805687905969,
+        "ctime_ns": 1791771805687905969
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration1/codepatchbay-v4.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration1/codepatchbay-v4.sqlite3.cocoindex",
+      "archive_member": "astra-iteration1/codepatchbay-v4.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "7848b77aa53c47d1cd176aaa23b122ffc6852d63c6e79d3babcddbc3ec826e4a",
+      "source_identity": {
+        "device": 27,
+        "inode": 528592,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791771804175921508,
+        "ctime_ns": 1791771804175921508
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration4/codepatchbay-v7.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration4/codepatchbay-v7.sqlite3.cocoindex",
+      "archive_member": "astra-iteration4/codepatchbay-v7.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "e2a0cf5eab897b95ea91b25870f047d77638cdd0757654e9256595c07d69af8e",
+      "source_identity": {
+        "device": 27,
+        "inode": 786465,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791787657244652739,
+        "ctime_ns": 1791787657244652739
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration4/codepatchbay-v7.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration4/codepatchbay-v7.sqlite3.cocoindex",
+      "archive_member": "astra-iteration4/codepatchbay-v7.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "bf77c3ea0d1d0b773cbba6c6ea42aa15410cd68ec06fe7d8f56241159c0d1c85",
+      "source_identity": {
+        "device": 27,
+        "inode": 786464,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791787655868667212,
+        "ctime_ns": 1791787655868667212
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration8/codepatchbay-v10.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration8/codepatchbay-v10.sqlite3.cocoindex",
+      "archive_member": "astra-iteration8/codepatchbay-v10.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "612df689e07ca232f828ee85b1420fd2386577094cee7cfb2e8e20445d67a7d8",
+      "source_identity": {
+        "device": 27,
+        "inode": 655533,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791815107733399223,
+        "ctime_ns": 1791815107733399223
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration8/codepatchbay-v10.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration8/codepatchbay-v10.sqlite3.cocoindex",
+      "archive_member": "astra-iteration8/codepatchbay-v10.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "79c2931e30313b5c31db88db7e58dd5be37359e36b6572c590280e3dee43c359",
+      "source_identity": {
+        "device": 27,
+        "inode": 655532,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791815106517412010,
+        "ctime_ns": 1791815106517412010
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-v11.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration9/codepatchbay-v11.sqlite3.cocoindex",
+      "archive_member": "astra-iteration9/codepatchbay-v11.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "a868e06e250d158fdd6c65d33a94368ef1ceb4576a8c6a3047d15f6b5b931265",
+      "source_identity": {
+        "device": 27,
+        "inode": 655591,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791848636250418846,
+        "ctime_ns": 1791848636250418846
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-v11.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration9/codepatchbay-v11.sqlite3.cocoindex",
+      "archive_member": "astra-iteration9/codepatchbay-v11.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "5141497cf20387338cad2a6490d257ab80c61f07d328a4adfb9acd063c65883f",
+      "source_identity": {
+        "device": 27,
+        "inode": 655590,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791848635346427480,
+        "ctime_ns": 1791848635346427480
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration7/codepatchbay-v10.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration7/codepatchbay-v10.sqlite3.cocoindex",
+      "archive_member": "astra-iteration7/codepatchbay-v10.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "e191980031d5b0b7346c47193769bedf2d3674566e4cf6f920a884782b05a8e0",
+      "source_identity": {
+        "device": 27,
+        "inode": 655434,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791814009285457984,
+        "ctime_ns": 1791814009285457984
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration7/codepatchbay-v10.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration7/codepatchbay-v10.sqlite3.cocoindex",
+      "archive_member": "astra-iteration7/codepatchbay-v10.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "9949207434f09761dda6c30d8093dba5ff7370ab09a7fecae2c02fb306b7d2ef",
+      "source_identity": {
+        "device": 27,
+        "inode": 655433,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791814008085469946,
+        "ctime_ns": 1791814008085469946
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration6/codepatchbay-v9.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration6/codepatchbay-v9.sqlite3.cocoindex",
+      "archive_member": "astra-iteration6/codepatchbay-v9.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "2d24726139d3cad16c6ae39c96385063a385724b37676ae98ed251dc7a6670cc",
+      "source_identity": {
+        "device": 27,
+        "inode": 786573,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791806643090331116,
+        "ctime_ns": 1791806643090331116
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration6/codepatchbay-v9.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration6/codepatchbay-v9.sqlite3.cocoindex",
+      "archive_member": "astra-iteration6/codepatchbay-v9.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "a6c21cd55c0b950280ac7865e0fd0599dedad236296dbdd2bfad9d5855daa434",
+      "source_identity": {
+        "device": 27,
+        "inode": 786572,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791806641062353090,
+        "ctime_ns": 1791806641062353090
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3.cocoindex",
+      "archive_member": "astra-iteration10/codepatchbay-v12.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 49254400,
+      "allocated_bytes": 49254400,
+      "sha256": "d07bdd07384c060a1acd05d423220658a103fc958fb5c8278c0c7d7988f5fae5",
+      "source_identity": {
+        "device": 27,
+        "inode": 655791,
+        "logical_bytes": 49254400,
+        "allocated_bytes": 49254400,
+        "link_count": 1,
+        "mtime_ns": 1791862665617863048,
+        "ctime_ns": 1791862665617863048
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3.cocoindex",
+      "archive_member": "astra-iteration10/codepatchbay-v12.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "55faecc36fe67a5f973891ade892994dc1901e2933b729048cec93b6b41c8389",
+      "source_identity": {
+        "device": 27,
+        "inode": 655790,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791862664273878509,
+        "ctime_ns": 1791862664273878509
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/upstream-reuse/codepatchbay-v3.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/upstream-reuse/codepatchbay-v3.sqlite3.cocoindex",
+      "archive_member": "upstream-reuse/codepatchbay-v3.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 48857088,
+      "allocated_bytes": 48857088,
+      "sha256": "5d22fd3540fd4da72cbcd5257aba8640fbbfe1caf15133db0208f1bbb428d6a6",
+      "source_identity": {
+        "device": 27,
+        "inode": 528550,
+        "logical_bytes": 48857088,
+        "allocated_bytes": 48857088,
+        "link_count": 1,
+        "mtime_ns": 1791729203516726383,
+        "ctime_ns": 1791729203516726383
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/upstream-reuse/codepatchbay-v3.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/upstream-reuse/codepatchbay-v3.sqlite3.cocoindex",
+      "archive_member": "upstream-reuse/codepatchbay-v3.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "e37d7f3db163f49c371342f9e70b7a1d2e8ffe522b7f4179988d36911aa58114",
+      "source_identity": {
+        "device": 27,
+        "inode": 528549,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791729202324738209,
+        "ctime_ns": 1791729202324738209
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/upstream-reuse/demo.sqlite3.cocoindex/mdb/data.mdb",
+      "cache_directory": "/workspace/callscope/reports/upstream-reuse/demo.sqlite3.cocoindex",
+      "archive_member": "upstream-reuse/demo.sqlite3.cocoindex/mdb/data.mdb",
+      "logical_bytes": 77824,
+      "allocated_bytes": 81920,
+      "sha256": "998647d58ad59d7c8097dd5067a7250c86cb8e26f3c365232a9fb6a654296b32",
+      "source_identity": {
+        "device": 27,
+        "inode": 528535,
+        "logical_bytes": 77824,
+        "allocated_bytes": 81920,
+        "link_count": 1,
+        "mtime_ns": 1791729010938611757,
+        "ctime_ns": 1791729010938611757
+      }
+    },
+    {
+      "original_path": "/workspace/callscope/reports/upstream-reuse/demo.sqlite3.cocoindex/mdb/lock.mdb",
+      "cache_directory": "/workspace/callscope/reports/upstream-reuse/demo.sqlite3.cocoindex",
+      "archive_member": "upstream-reuse/demo.sqlite3.cocoindex/mdb/lock.mdb",
+      "logical_bytes": 8192,
+      "allocated_bytes": 4096,
+      "sha256": "f9ca6ed82c18bac2b8236aa30b72521167fcd2500be552754f98640518f9a581",
+      "source_identity": {
+        "device": 27,
+        "inode": 528534,
+        "logical_bytes": 8192,
+        "allocated_bytes": 4096,
+        "link_count": 1,
+        "mtime_ns": 1791729010934611797,
+        "ctime_ns": 1791729010934611797
+      }
+    }
+  ],
+  "readback_verification": {
+    "member_count": 46,
+    "all_member_hashes_match": true,
+    "gzip_stream_consumed_and_crc_checked": true,
+    "archive_sha256": "cd8f6dddff926706d6d7033cdfcfeeb372fb5f5be4ab97a8f8a08157f9252435"
+  },
+  "formal_database_or_report_files_archived_or_removed": false
+}

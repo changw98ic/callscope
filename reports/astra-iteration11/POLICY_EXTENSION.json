@@ -1,0 +1,43 @@
+[
+  {
+    "repository": "codepatchbay",
+    "previous_policy_sha256": "4b28c0237ffd7d4491b127b42a69e85a33e15511c1831c1746b70c0eb045c766",
+    "policy_sha256": "10b62fde7dc4980cfd3ed1a84282497b02b088bc160f39c5d14e5d7c946fcfd9",
+    "preserved_report_claims": 6,
+    "added_rule_ids": [
+      "cpb-report-readiness-abrupt-guard",
+      "cpb-report-completion-gate-conditions",
+      "cpb-report-access-audit-response",
+      "cpb-event-index-projection",
+      "cpb-trusted-command-lineage",
+      "cpb-unsupported-record-retention",
+      "cpb-captured-record-resource-writers"
+    ],
+    "normalized_report_claims": 13,
+    "changed_sections": [
+      "report_claims"
+    ],
+    "target_source_edited": false,
+    "comparison": "Same configured source capture; additional conditional relation models and full publication engine."
+  },
+  {
+    "repository": "winwincode",
+    "previous_policy_sha256": "831df3cfaba119a575c53dc34970471d0203951653cf4632061d701849bd6c87",
+    "policy_sha256": "37012e03e3b276e30d511a5f479e05d6f42a5faddf051486c36b126642c9ea38",
+    "preserved_report_claims": 12,
+    "added_rule_ids": [
+      "wwc-report-workrun-finite-selection",
+      "wwc-report-chat-retained-request-identities",
+      "wwc-report-worker-adapter-record-identities",
+      "wwc-report-outbox-ack-correlation-fields",
+      "wwc-browser-continuation-lifecycle",
+      "wwc-captured-record-resource-writers"
+    ],
+    "normalized_report_claims": 18,
+    "changed_sections": [
+      "report_claims"
+    ],
+    "target_source_edited": false,
+    "comparison": "Same configured source capture; additional conditional relation models and full publication engine."
+  }
+]

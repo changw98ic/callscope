@@ -1,0 +1,68 @@
+[
+  {
+    "id": "wwc-captured-record-resource-writers",
+    "type": "resource_writer_ownership",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "browserShell",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient"
+      },
+      {
+        "role": "browserRender",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.performRender"
+      },
+      {
+        "role": "workRunStart",
+        "file": "crates/winwincode-delivery/src/application/workrun.rs",
+        "symbol": "WorkRunAggregate.start_item"
+      },
+      {
+        "role": "workerDispatch",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.accept_dispatch"
+      },
+      {
+        "role": "adapterSubmit",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn"
+      },
+      {
+        "role": "adapterPersist",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "ProductionCodexAdapter.persist_run"
+      },
+      {
+        "role": "kernelSession",
+        "file": "crates/kernel/src/lib.rs",
+        "symbol": "Kernel.create_session"
+      },
+      {
+        "role": "kernelTurn",
+        "file": "crates/kernel/src/lib.rs",
+        "symbol": "Kernel.submit_turn"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "captured-resource-writer-source-v1"
+    ],
+    "provenance": {
+      "authority": "original-full-report-source-scope",
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "author_approved": false,
+      "note": "Selectors locate saved declarations only; no expected guard, writer, resource or result is supplied."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected captured definitions are activated, recorded branches are reached normally, and explicit finite source models apply."
+      ],
+      "counterexamples": [
+        "Nested callbacks, opaque effects and deployment branches are not promoted to active runtime guarantees."
+      ]
+    }
+  }
+]

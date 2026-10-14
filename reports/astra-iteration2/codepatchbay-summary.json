@@ -1,0 +1,925 @@
+{
+  "id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+  "project_id": "ac6694a563ea5a6ef75f",
+  "project_name": "CodePatchBay — static source review",
+  "root": "/workspace/codepatchbay",
+  "status": "partial",
+  "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+  "policy_hash": "6bd046a233f897d4878ef6efbedd6fb3b7d1a615ed5ac7ffa80c026e16100a38",
+  "analyzer_version": "static-multilang-5",
+  "detector_version": "call-rules-4-static-contracts",
+  "schema_version": "2",
+  "finding_count": 40553,
+  "stats": {
+    "ambiguous_calls": 429,
+    "ambiguous_symbols": 1,
+    "by_language": {
+      "python": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 41,
+        "edges": 74,
+        "external_callback_boundaries": 16,
+        "external_calls": 24,
+        "files_failed": 0,
+        "files_parsed": 2,
+        "files_total": 2,
+        "nodes": 28,
+        "resolved_calls": 9,
+        "unresolved_calls": 0
+      },
+      "typescript": {
+        "ambiguous_calls": 429,
+        "dynamic_calls": 18285,
+        "edges": 60497,
+        "external_callback_boundaries": 11880,
+        "external_calls": 18405,
+        "files_failed": 0,
+        "files_parsed": 328,
+        "files_total": 328,
+        "nodes": 11057,
+        "resolved_calls": 23371,
+        "unresolved_calls": 7
+      }
+    },
+    "call_resolution_incomplete": true,
+    "component_versions": {
+      "maintenance": {
+        "backend": "cocoindex",
+        "global_detection": "full",
+        "granularity": "language",
+        "protocol": 1,
+        "version": "1.0.25"
+      },
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "static_contracts": {
+        "analyzer": "static-contracts-1",
+        "policy_schema": "static-contract-policy-v1"
+      },
+      "support_input_capture": "support-input-capture-1",
+      "tool": {
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "graph_backend": "axon-graph-core-1",
+        "source_hash": "300f396835db0463d087ce5c830f55816233bb0e91b9220fe1ec01a2155273e0"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      }
+    },
+    "coverage_incomplete": true,
+    "dynamic_calls": 18326,
+    "edges": 60571,
+    "entrypoints_count": 5,
+    "excluded_paths": [
+      ".agents",
+      ".beads",
+      ".git",
+      ".test-tmp",
+      "tests"
+    ],
+    "external_callback_boundaries": 11896,
+    "external_calls": 18429,
+    "files_failed": 3,
+    "files_parsed": 330,
+    "files_total": 333,
+    "frontend_stats": {
+      "python": {
+        "ambiguous_calls": 0,
+        "ambiguous_symbols": 0,
+        "attribute_invalidations": [
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_base_url"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_project"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_reconnect_interval"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_stopped"
+          ],
+          [
+            "skills.openclaw.adapter.CPBClient",
+            "base_url"
+          ]
+        ],
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": false,
+        "dynamic_calls": 41,
+        "edges": 74,
+        "excluded_paths": [],
+        "external_callback_boundaries": 16,
+        "external_calls": 24,
+        "files_failed": 0,
+        "files_parsed": 2,
+        "files_total": 2,
+        "incomplete": true,
+        "limitations": [
+          "不证明分支可执行、调用顺序、返回值或业务结果",
+          "不执行代码/测试/构建，不验证外部依赖可用性",
+          "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+          "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+          "构造器内部调用保持未知，不推断初始化路径"
+        ],
+        "nodes": 28,
+        "parser_version": "cpython-3.12.14",
+        "resolution_model": "static lexical binding; no runtime execution",
+        "resolved_calls": 9,
+        "scan_errors": [],
+        "source_roots": [
+          "."
+        ],
+        "stubs_not_analyzed": [],
+        "symlinks_skipped": [],
+        "unknown_attribute_writes": [],
+        "unresolved_calls": 0
+      },
+      "typescript": {
+        "ambiguous_calls": 429,
+        "ambiguous_symbols": 1,
+        "analyzer_version": "typescript-tree-sitter-call-2-projection-1",
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": true,
+        "dynamic_calls": 18285,
+        "edges": 60497,
+        "external_callback_boundaries": 11880,
+        "external_calls": 18405,
+        "files_failed": 0,
+        "files_parsed": 328,
+        "files_total": 328,
+        "incomplete": true,
+        "language": "typescript",
+        "limitations": [
+          "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+          "类型/接口不证明对象运行时目标",
+          "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+          "不证明分支、顺序、返回值、加载成功或业务结果"
+        ],
+        "nodes": 11057,
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;ts-syntax-projection-1",
+        "raw_parse_error_files": 3,
+        "resolved_calls": 23371,
+        "syntax_projected_files": 3,
+        "syntax_projection_edits_by_rule": {
+          "qualified_import_type": 10,
+          "type_only_abstract_property": 1
+        },
+        "syntax_projection_partial_files": 0,
+        "syntax_projection_version": "ts-syntax-projection-1",
+        "unresolved_calls": 7
+      }
+    },
+    "incomplete": true,
+    "languages_requested": [
+      "python",
+      "typescript"
+    ],
+    "limitations": [
+      "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+      "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+      "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+      "快照是读取到的源码集合，不是工作区原子捕获"
+    ],
+    "nodes": 11085,
+    "resolution_model": "explicit static lexical bindings; no target execution",
+    "resolved_calls": 23380,
+    "rules_count": 10,
+    "scan_errors": [],
+    "source_roots": [
+      "."
+    ],
+    "static_contracts_count": 1,
+    "support_input_capture_version": "support-input-capture-1",
+    "support_inputs_count": 0,
+    "support_inputs_incomplete": false,
+    "supported_languages": [
+      "python",
+      "typescript",
+      "rust"
+    ],
+    "symlinks_skipped": [],
+    "unresolved_calls": 7,
+    "unsupported_files": [
+      {
+        "language": "shell",
+        "path": "scripts/cutover-orchestrator.sh"
+      },
+      {
+        "language": "shell",
+        "path": "scripts/install.sh"
+      },
+      {
+        "language": "shell",
+        "path": "skills/claude-code/install.sh"
+      }
+    ]
+  },
+  "finding_counts": [
+    {
+      "type": "call_cycle",
+      "status": "open",
+      "count": 2
+    },
+    {
+      "type": "external_callback_boundary",
+      "status": "uncertain",
+      "count": 11896
+    },
+    {
+      "type": "forbidden_call",
+      "status": "uncertain",
+      "count": 1
+    },
+    {
+      "type": "recursive_call",
+      "status": "open",
+      "count": 51
+    },
+    {
+      "type": "required_path",
+      "status": "uncertain",
+      "count": 1
+    },
+    {
+      "type": "static_contract_literal_set_consistency",
+      "status": "open",
+      "count": 1
+    },
+    {
+      "type": "suspected_unreachable",
+      "status": "uncertain",
+      "count": 9839
+    },
+    {
+      "type": "unresolved_call",
+      "status": "uncertain",
+      "count": 18762
+    }
+  ],
+  "rule_findings": [
+    {
+      "description": "比较的是配置指定的两个声明初始化成员集合；不证明运行时集合恒定或业务终态等价。",
+      "edge_ids": [],
+      "evidence": [
+        {
+          "details": {
+            "analysis_scope": {
+              "cross_language_branch_reachability": "not_inferred",
+              "literal_sets": "declaration_initializer_closed_string_members",
+              "objects": "all_syntax_direct_returns_excluding_nested_functions",
+              "runtime_proof": false,
+              "source_doc_is_label_only": true
+            },
+            "analyzer_version": "static-contracts-1",
+            "captured_source_inputs": [
+              {
+                "error": null,
+                "file": "server/services/event/event-materializer.ts",
+                "language": "typescript",
+                "source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+                "status": "parsed"
+              },
+              {
+                "error": null,
+                "file": "server/services/job/job-store.ts",
+                "language": "typescript",
+                "source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+                "status": "parsed"
+              }
+            ],
+            "contract_assumptions": {
+              "conditions": [
+                "合同仅比较这两个已配置声明初始化中的封闭字符串成员集合，忽略元素顺序与重复成员。",
+                "未证明运行时 Set 永不修改、全局内建构造器永不替换或所有终态写入合法。"
+              ],
+              "counterexamples": [
+                "terminal 与 recoverable 是不同职责；本初始化集合规则不能据成员差推断所有恢复分支都错误。",
+                "出现别名、展开、非字面元素或未知构造器绑定时保留未知，不把可见部分当成完整集合。"
+              ],
+              "kind": "unconditional"
+            },
+            "contract_hash": "3cbceb399081fb2060a9b636c454eb592983770f06b7e66336624910b5a4b941",
+            "guard_and_counterexample_sources": [],
+            "policy_hash": "6bd046a233f897d4878ef6efbedd6fb3b7d1a615ed5ac7ffa80c026e16100a38",
+            "provenance": {
+              "author_approved": false,
+              "authority": "independent_review",
+              "note": "Astra 的终态集合一致性观察；此规则只把明确配置的两个声明初始化字符串成员集合设为相等合同，不按同名自动推断业务等价。",
+              "reviewer": "Astra",
+              "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+            },
+            "snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+            "snapshot_parser_version": "{\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"300f396835db0463d087ce5c830f55816233bb0e91b9220fe1ec01a2155273e0\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+            "source_fact": {
+              "additional_members": [],
+              "expected": [
+                "blocked",
+                "cancelled",
+                "completed",
+                "failed",
+                "superseded"
+              ],
+              "interpretation": "初始化语法成员相等合同，不是运行时集合或业务状态机证明。",
+              "mismatch": true,
+              "missing_members": [
+                "superseded"
+              ],
+              "observed": [
+                "blocked",
+                "cancelled",
+                "completed",
+                "failed"
+              ],
+              "reference": {
+                "closed": true,
+                "container": "set_constructor_syntax",
+                "file": "server/services/event/event-materializer.ts",
+                "interpretation": "仅表示声明初始化语法中的字符串成员，不证明运行时 Set/数组不被修改或全局构造器不被替换。",
+                "literal_element_count": 5,
+                "location": {
+                  "column": 14,
+                  "column_unit": "utf8_bytes",
+                  "end_column": 132,
+                  "end_line": 792,
+                  "file": "server/services/event/event-materializer.ts",
+                  "grammar": "typescript",
+                  "line": 792,
+                  "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                  "source_excerpt": "TERMINAL_STATUSES: ReadonlySet<string | null> = new Set([\"completed\", \"failed\", \"blocked\", \"cancelled\", \"superseded\"])",
+                  "source_excerpt_truncated": false,
+                  "source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+                  "source_line": "export const TERMINAL_STATUSES: ReadonlySet<string | null> = new Set([\"completed\", \"failed\", \"blocked\", \"cancelled\", \"superseded\"]);",
+                  "span_hash": "fb1b8dd8a00f790daf5877ee68283ac052e1e0025aea3dce12814faedb0e76cf"
+                },
+                "members": [
+                  "blocked",
+                  "cancelled",
+                  "completed",
+                  "failed",
+                  "superseded"
+                ],
+                "symbol": "TERMINAL_STATUSES"
+              },
+              "subject": {
+                "closed": true,
+                "container": "set_constructor_syntax",
+                "file": "server/services/job/job-store.ts",
+                "interpretation": "仅表示声明初始化语法中的字符串成员，不证明运行时 Set/数组不被修改或全局构造器不被替换。",
+                "literal_element_count": 4,
+                "location": {
+                  "column": 7,
+                  "column_unit": "utf8_bytes",
+                  "end_column": 83,
+                  "end_line": 430,
+                  "file": "server/services/job/job-store.ts",
+                  "grammar": "typescript",
+                  "line": 430,
+                  "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                  "source_excerpt": "TERMINAL_STATUSES = new Set([\"completed\", \"failed\", \"blocked\", \"cancelled\"])",
+                  "source_excerpt_truncated": false,
+                  "source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+                  "source_line": "const TERMINAL_STATUSES = new Set([\"completed\", \"failed\", \"blocked\", \"cancelled\"]);",
+                  "span_hash": "603f65854dc524d532fddebfaf9862d132064c8c191263ea06792b1ea35fe59e"
+                },
+                "members": [
+                  "blocked",
+                  "cancelled",
+                  "completed",
+                  "failed"
+                ],
+                "symbol": "TERMINAL_STATUSES"
+              }
+            },
+            "source_file_hashes": {
+              "server/services/event/event-materializer.ts": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+              "server/services/job/job-store.ts": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7"
+            },
+            "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+            "unknown": []
+          },
+          "edge_ids": [],
+          "id": "b2a18c993d1af5615cd8b70c",
+          "kind": "static_contract_analysis",
+          "locations": [
+            {
+              "column": 14,
+              "column_unit": "utf8_bytes",
+              "end_column": 132,
+              "end_line": 792,
+              "file": "server/services/event/event-materializer.ts",
+              "grammar": "typescript",
+              "line": 792,
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "source_excerpt": "TERMINAL_STATUSES: ReadonlySet<string | null> = new Set([\"completed\", \"failed\", \"blocked\", \"cancelled\", \"superseded\"])",
+              "source_excerpt_truncated": false,
+              "source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+              "source_line": "export const TERMINAL_STATUSES: ReadonlySet<string | null> = new Set([\"completed\", \"failed\", \"blocked\", \"cancelled\", \"superseded\"]);",
+              "span_hash": "fb1b8dd8a00f790daf5877ee68283ac052e1e0025aea3dce12814faedb0e76cf"
+            },
+            {
+              "column": 7,
+              "column_unit": "utf8_bytes",
+              "end_column": 83,
+              "end_line": 430,
+              "file": "server/services/job/job-store.ts",
+              "grammar": "typescript",
+              "line": 430,
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "source_excerpt": "TERMINAL_STATUSES = new Set([\"completed\", \"failed\", \"blocked\", \"cancelled\"])",
+              "source_excerpt_truncated": false,
+              "source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+              "source_line": "const TERMINAL_STATUSES = new Set([\"completed\", \"failed\", \"blocked\", \"cancelled\"]);",
+              "span_hash": "603f65854dc524d532fddebfaf9862d132064c8c191263ea06792b1ea35fe59e"
+            }
+          ],
+          "message": "比较的是配置指定的两个声明初始化成员集合；不证明运行时集合恒定或业务终态等价。",
+          "node_ids": []
+        }
+      ],
+      "fingerprint": "ec7a063eb873b5aaab0e53a280607428aae4e86a3cbed3dff733541a0fbc4f13",
+      "id": "55dd550622cb4430b071851c",
+      "metadata": {
+        "applicability": {
+          "conditions": [
+            "合同仅比较这两个已配置声明初始化中的封闭字符串成员集合，忽略元素顺序与重复成员。",
+            "未证明运行时 Set 永不修改、全局内建构造器永不替换或所有终态写入合法。"
+          ],
+          "counterexamples": [
+            "terminal 与 recoverable 是不同职责；本初始化集合规则不能据成员差推断所有恢复分支都错误。",
+            "出现别名、展开、非字面元素或未知构造器绑定时保留未知，不把可见部分当成完整集合。"
+          ],
+          "kind": "unconditional"
+        },
+        "contract_analyzer_version": "static-contracts-1",
+        "contract_hash": "3cbceb399081fb2060a9b636c454eb592983770f06b7e66336624910b5a4b941",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent_review",
+          "note": "Astra 的终态集合一致性观察；此规则只把明确配置的两个声明初始化字符串成员集合设为相等合同，不按同名自动推断业务等价。",
+          "reviewer": "Astra",
+          "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+        },
+        "runtime_proof": false,
+        "source_fact_confirmed": true
+      },
+      "node_ids": [],
+      "rule_id": "cpb-astra-terminal-initializer-members",
+      "severity": "medium",
+      "snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+      "status": "open",
+      "title": "声明初始化字符串成员集合合同不一致",
+      "type": "static_contract_literal_set_consistency"
+    },
+    {
+      "description": "未找到满足规则的确定连接，相关分析缺口可能隐藏连接，不能确认遗漏。",
+      "edge_ids": [],
+      "evidence": [
+        {
+          "details": {
+            "analyzer_version": "static-multilang-5",
+            "call_path_interpretation": "静态结构可达，不代表必然执行或行为正确。",
+            "completeness_scope": "explicit_static_call_model",
+            "detector_version": "call-rules-4-static-contracts",
+            "executed": false,
+            "full_gap_evidence": "snapshot_edges_diagnostics_and_source_statuses",
+            "gap_count": 63,
+            "gap_sample_limit": 8,
+            "gap_scope": {
+              "kind": "source_closure",
+              "source_ids": [
+                "ts:cli/cpb#main"
+              ]
+            },
+            "gap_snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+            "gaps": [
+              {
+                "file": "scripts/cutover-orchestrator.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "file": "scripts/install.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "file": "skills/claude-code/install.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "kind": "snapshot_coverage",
+                "reason": "分析器标记 coverage_incomplete，源码扫描范围不完整。"
+              },
+              {
+                "candidates": [],
+                "column": 4,
+                "edge_id": "9863c2a969752214ad2a7310",
+                "expression": "missing.push",
+                "file": "cli/cpb.ts",
+                "kind": "call_resolution",
+                "line": 77,
+                "reason": "对象/this/类方法分派不推断为确定调用",
+                "resolution": "dynamic",
+                "source": "ts:cli/cpb#checkDeps",
+                "target": null
+              },
+              {
+                "callable_arguments": [],
+                "callback_candidates": [],
+                "candidates": [],
+                "column": 4,
+                "edge_id": "14f5f64d8d6b5cbea530f2e1",
+                "expression": "process.exit",
+                "file": "cli/cpb.ts",
+                "kind": "external_callback_boundary",
+                "line": 82,
+                "reason": "外部调用可能通过回调或隐式分派重入本地代码；相关路径不能从外部实现静态确认。",
+                "resolution": "external",
+                "source": "ts:cli/cpb#checkDeps",
+                "target": null
+              },
+              {
+                "callable_arguments": [],
+                "callback_candidates": [],
+                "candidates": [],
+                "column": 17,
+                "edge_id": "20774d2152c6e4ad47c43e99",
+                "expression": "path.join",
+                "file": "cli/cpb.ts",
+                "kind": "external_callback_boundary",
+                "line": 75,
+                "reason": "外部调用可能通过回调或隐式分派重入本地代码；相关路径不能从外部实现静态确认。",
+                "resolution": "external",
+                "source": "ts:cli/cpb#checkDeps",
+                "target": null
+              },
+              {
+                "callable_arguments": [],
+                "callback_candidates": [],
+                "candidates": [],
+                "column": 29,
+                "edge_id": "6f8a25375d65ad231325d2bb",
+                "expression": "console.log",
+                "file": "cli/cpb.ts",
+                "kind": "external_callback_boundary",
+                "line": 81,
+                "reason": "外部调用可能通过回调或隐式分派重入本地代码；相关路径不能从外部实现静态确认。",
+                "resolution": "external",
+                "source": "ts:cli/cpb#checkDeps",
+                "target": null
+              }
+            ],
+            "gaps_truncated": true,
+            "matched_source_ids": [
+              "ts:cli/cpb#main"
+            ],
+            "matched_target_ids": [
+              "ts:cli/commands/task#run"
+            ],
+            "minimum_call_edges": 1,
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"300f396835db0463d087ce5c830f55816233bb0e91b9220fe1ec01a2155273e0\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+            "policy_hash": "6bd046a233f897d4878ef6efbedd6fb3b7d1a615ed5ac7ffa80c026e16100a38",
+            "proven_violation": false,
+            "quantifier": "each_source_to_at_least_one_target",
+            "rule": {
+              "description": "能力边界核对项：CLI 根据 COMMANDS 和计算路径动态 import 后调用 mod.run。期望工具报告 uncertain；自设规则不是仓库缺陷或漏接命令的证据。",
+              "evaluation_only": true,
+              "expected_model_result": "uncertain",
+              "from": "ts:cli/cpb#main",
+              "id": "cpb-capability-dynamic-command-boundary",
+              "intent_basis": "dynamic_dispatch_capability_probe_from_source",
+              "kind": "required_path",
+              "severity": "info",
+              "source_locations": [
+                "cli/cpb.ts:154",
+                "cli/cpb.ts:186"
+              ],
+              "to": "ts:cli/commands/task#run"
+            },
+            "schema_version": "2",
+            "search_complete": false,
+            "snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+            "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+            "source_id": "ts:cli/cpb#main",
+            "witness_edge_ids": [],
+            "witness_node_ids": [],
+            "world_assumption": "explicit_static_calls_only"
+          },
+          "edge_ids": [],
+          "id": "evidence:53620846fd57da2f1ced4898b25f6231",
+          "kind": "static_call_graph",
+          "locations": [
+            {
+              "column": 0,
+              "file": "cli/cpb.ts",
+              "line": 127
+            },
+            {
+              "column": 0,
+              "file": "cli/commands/task.ts",
+              "line": 259
+            },
+            {
+              "column": 0,
+              "file": "scripts/cutover-orchestrator.sh",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "scripts/install.sh",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "skills/claude-code/install.sh",
+              "line": 1
+            },
+            {
+              "column": 4,
+              "file": "cli/cpb.ts",
+              "line": 77
+            },
+            {
+              "column": 4,
+              "file": "cli/cpb.ts",
+              "line": 82
+            },
+            {
+              "column": 17,
+              "file": "cli/cpb.ts",
+              "line": 75
+            },
+            {
+              "column": 29,
+              "file": "cli/cpb.ts",
+              "line": 81
+            }
+          ],
+          "message": "未找到满足规则的确定连接，相关分析缺口可能隐藏连接，不能确认遗漏。",
+          "node_ids": [
+            "ts:cli/cpb#main",
+            "ts:cli/commands/task#run"
+          ]
+        }
+      ],
+      "fingerprint": "3d7dee11d16b6e92f1dcd435a45419ca9d20ad2cb865de3c50cc61d70f8b3ddd",
+      "id": "finding:2839b4048081ecb73622164f3ec20bb8",
+      "metadata": {
+        "detector_version": "call-rules-4-static-contracts",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "node_ids": [
+        "ts:cli/cpb#main",
+        "ts:cli/commands/task#run"
+      ],
+      "rule_id": "cpb-capability-dynamic-command-boundary",
+      "severity": "info",
+      "snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+      "status": "uncertain",
+      "title": "ts:cli/cpb#main 的必需路径未确认",
+      "type": "required_path"
+    },
+    {
+      "description": "未找到禁止的确定连接，但相关解析缺口使检查不完整。",
+      "edge_ids": [],
+      "evidence": [
+        {
+          "details": {
+            "analyzer_version": "static-multilang-5",
+            "call_path_interpretation": "静态结构可达，不代表必然执行或行为正确。",
+            "completeness_scope": "explicit_static_call_model",
+            "detector_version": "call-rules-4-static-contracts",
+            "executed": false,
+            "full_gap_evidence": "snapshot_edges_diagnostics_and_source_statuses",
+            "gap_count": 4,
+            "gap_sample_limit": 8,
+            "gap_scope": {
+              "kind": "direct_source",
+              "source_ids": [
+                "ts:cli/commands/task#humanResultLine"
+              ]
+            },
+            "gap_snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+            "gaps": [
+              {
+                "file": "scripts/cutover-orchestrator.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "file": "scripts/install.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "file": "skills/claude-code/install.sh",
+                "kind": "source_coverage",
+                "reason": "此源码语言不在当前分析能力或配置范围中",
+                "status": "unsupported"
+              },
+              {
+                "kind": "snapshot_coverage",
+                "reason": "分析器标记 coverage_incomplete，源码扫描范围不完整。"
+              }
+            ],
+            "gaps_truncated": false,
+            "matched_source_ids": [
+              "ts:cli/commands/task#humanResultLine"
+            ],
+            "matched_target_ids": [
+              "ts:core/engine/run-job#runJob"
+            ],
+            "minimum_call_edges": 1,
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"300f396835db0463d087ce5c830f55816233bb0e91b9220fe1ec01a2155273e0\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+            "policy_hash": "6bd046a233f897d4878ef6efbedd6fb3b7d1a615ed5ac7ffa80c026e16100a38",
+            "proven_violation": false,
+            "quantifier": "each_source_to_at_least_one_target",
+            "rule": {
+              "description": "负向工具核对基准：已读源码的纯结果文案 helper 没有直接调用 runJob。仅核对这两个已存在端点的直接边，不推广为整个 task 命令或传递依赖无副作用。",
+              "evaluation_only": true,
+              "expected_model_result": "forbidden_connection_absent",
+              "from": "ts:cli/commands/task#humanResultLine",
+              "id": "cpb-observed-pure-result-helper-no-engine-call",
+              "intent_basis": "source_observed_absence",
+              "kind": "forbidden_call",
+              "severity": "info",
+              "source_locations": [
+                "cli/commands/task.ts:141",
+                "cli/commands/task.ts:142",
+                "cli/commands/task.ts:65"
+              ],
+              "to": "ts:core/engine/run-job#runJob"
+            },
+            "schema_version": "2",
+            "search_complete": false,
+            "snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+            "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+            "source_id": "ts:cli/commands/task#humanResultLine",
+            "witness_edge_ids": [],
+            "witness_node_ids": [],
+            "world_assumption": "explicit_static_calls_only"
+          },
+          "edge_ids": [],
+          "id": "evidence:35a91abb42b294dcc7af57efe4e2a40e",
+          "kind": "static_call_graph",
+          "locations": [
+            {
+              "column": 0,
+              "file": "cli/commands/task.ts",
+              "line": 141
+            },
+            {
+              "column": 0,
+              "file": "core/engine/run-job.ts",
+              "line": 65
+            },
+            {
+              "column": 0,
+              "file": "scripts/cutover-orchestrator.sh",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "scripts/install.sh",
+              "line": 1
+            },
+            {
+              "column": 0,
+              "file": "skills/claude-code/install.sh",
+              "line": 1
+            }
+          ],
+          "message": "未找到禁止的确定连接，但相关解析缺口使检查不完整。",
+          "node_ids": [
+            "ts:cli/commands/task#humanResultLine",
+            "ts:core/engine/run-job#runJob"
+          ]
+        }
+      ],
+      "fingerprint": "20060b7811a75f2af90bd69a5db5a1aca1011a2022a35281a292f5bce28ab409",
+      "id": "finding:a8230fb29947ce484e4ec14e7a757599",
+      "metadata": {
+        "detector_version": "call-rules-4-static-contracts",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "node_ids": [
+        "ts:cli/commands/task#humanResultLine",
+        "ts:core/engine/run-job#runJob"
+      ],
+      "rule_id": "cpb-observed-pure-result-helper-no-engine-call",
+      "severity": "info",
+      "snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+      "status": "uncertain",
+      "title": "ts:cli/commands/task#humanResultLine 的禁止关系无法完整排除",
+      "type": "forbidden_call"
+    }
+  ],
+  "problem_files": [
+    {
+      "path": "scripts/cutover-orchestrator.sh",
+      "hash": "b778bdd63930cf5c6949c59f1edbd7e479fd174e67061415c9060dc057cdf173",
+      "status": "unsupported",
+      "language": "shell",
+      "error": "此源码语言不在当前分析能力或配置范围中",
+      "module": ""
+    },
+    {
+      "path": "scripts/install.sh",
+      "hash": "66ff4f1fe9117c5eaea89fddfa9833fa39f6a623ca0d19226592fc51363515cb",
+      "status": "unsupported",
+      "language": "shell",
+      "error": "此源码语言不在当前分析能力或配置范围中",
+      "module": ""
+    },
+    {
+      "path": "skills/claude-code/install.sh",
+      "hash": "9b39d3047e51fcca47b307aab8306e59b6a1302a445c05ca8aa762aa4544af38",
+      "status": "unsupported",
+      "language": "shell",
+      "error": "此源码语言不在当前分析能力或配置范围中",
+      "module": ""
+    }
+  ],
+  "project_diagnostics": [
+    {
+      "level": "warning",
+      "code": "unsupported_sources",
+      "message": "扫描范围包含未分析语言文件：{'shell': 3}",
+      "file": "",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 qualified_import_type。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "core/indexing/local-code-index/gc.ts",
+      "line": 225
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 type_only_abstract_property。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "core/indexing/local-code-index/rules/types.ts",
+      "line": 30
+    },
+    {
+      "level": "warning",
+      "code": "ts_module_identity_collision",
+      "message": "不同扩展名/重复输入共享模块身份，相关节点与调用保持歧义。",
+      "file": "scripts/workflows/local-code-index-v2.js",
+      "line": 1
+    },
+    {
+      "level": "warning",
+      "code": "ts_duplicate_definition",
+      "message": "同一词法符号 module:ts:scripts/workflows/local-code-index-v2 有多个定义，保留歧义。",
+      "file": "scripts/workflows/local-code-index-v2.ts",
+      "line": 1
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 qualified_import_type。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "shared/primitives/process-tree.ts",
+      "line": 114
+    }
+  ],
+  "rule_observation_counts": {
+    "total": 10,
+    "required_connection_reproduced": 8,
+    "rules_with_uncertainty": 2,
+    "forbidden_connection_observed": 0
+  },
+  "calls_by_resolution": {
+    "resolved": 23380,
+    "external": 18429,
+    "dynamic": 18326,
+    "ambiguous": 429,
+    "unresolved": 7
+  }
+}

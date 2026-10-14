@@ -1,0 +1,116 @@
+{
+  "kind": "product-documentation-pending-formal-sentences",
+  "formal_results_not_read_or_inferred": true,
+  "current_freeze_source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+  "entries": [
+    {
+      "file": "docs/ARCHITECTURE_V1_1.md",
+      "line": 3,
+      "current_text": "文档版本：v1.1。实现名称：CallScope v0.14.0。状态：本轮[核心与策略已冻结](../reports/astra-iteration12/CORE_FREEZE.json)，两库正常纯静态冷/热分析及正式报告待完成。本页区分已实现的分析能力与正式结果；v0.13 及更早结果保留历史身份，开发查询不充当 v0.14 正式成果。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/ARCHITECTURE_V1_1.md",
+      "line": 19,
+      "current_text": "文档部署对照读取快照显式捕获的文档和所选 Rust 来源。有限条款模型保留标题、段落、否定、引述和部署限定，把 Control Plane 内部唯一、Device 本地 provider/凭据字节材料、Worker 模型流分支分别呈现。材料不是凭据引用，字节容器不能证明凭据长期性，本地消费分支不能证明绕过 ExecutionPort 协议。正式比较及职责解释的结果以本轮保存报告为准；目前尚未发布本轮通过数量或全文完成结论。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/ARCHITECTURE_V1_1.md",
+      "line": 217,
+      "current_text": "报告组件身份与快照分析身份单独记录。Markdown 正文优先展示已有实际 statement、条件、有限表与反证，完整 pattern 仍供下钻。解释器使用固定模板和已认证操作，不调用 LLM，不读取原报告文字作为答案，也不增加人工或模型审批门。v0.14 正式结果尚待本轮正常分析及产物写出，能力目录、配置数量与表格行数均不作为功能覆盖率。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/IMPLEMENTATION_CONTRACT.md",
+      "line": 3,
+      "current_text": "当前实现身份为 `static-multilang-14` / `call-rules-13-architecture-explanations`，本轮[核心与策略已冻结](../reports/astra-iteration12/CORE_FREEZE.json)。两库正常纯静态冷/热分析和正式产物尚待完成；本协议说明已实现接口，不预填本轮判断结果。最近完成的 v0.13 正式产物及更早观察保持原身份。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/IMPLEMENTATION_CONTRACT.md",
+      "line": 117,
+      "current_text": "完整目标沿用原 [GOAL_ACCEPTANCE](../reports/astra-iteration4/GOAL_ACCEPTANCE.md)，五 claim/30 必要义务定义保持，source-derived/trusted-model/policy-declared/unresolved 分开。[v0.11 账本](../reports/astra-iteration9/goal-ledger.json)曾保存完整 0/5、4 限定支持/20 partial/6 unknown，属于该版历史；后续固定注册适配器的 [v0.13 正式账本](../reports/astra-iteration11/goal-ledger.json)已独立保存五项条件判断及 30 必要关系支持。原 26 项观察的 10 reproduced/3 unknown/13 evidence_only 是另一证据域，既不被改写，也不锁死新适配器。v0.14 的正式账本、原观察比较及发布身份待本轮结果生成，不由旧账本或开发查询预填；未实现分析不作环境假设。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/CAPABILITY_ROADMAP.md",
+      "line": 5,
+      "current_text": "本路线以支持范围内功能闭环和正确判断优先，可扩展性其次，性能最后。当前实现为 v0.14.0，[核心与策略已冻结](../reports/astra-iteration12/CORE_FREEZE.json)，两库正常纯静态冷/热分析及本轮正式报告待完成。最近完成的 v0.13 正式结果保留在下方历史记录。目标是自动接近原两份全文分析报告，不设置重复 Astra 审批，也不把五项/30 义务追踪当成全文分母。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/CAPABILITY_ROADMAP.md",
+      "line": 13,
+      "current_text": "| 字段、状态与条件 | 真实 guard、事件字面字段、event/queue 的同源 job 字段、模式/布尔 opt-in 分区、选项到 callee return guard 的绑定 | 正式结果待生成。局部状态、嵌套 catch、未知 spread/成员及提前返回分开；不证明必然入队、授权结果或远端成功 |",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/CAPABILITY_ROADMAP.md",
+      "line": 14,
+      "current_text": "| 职责解释 | 实际记录/字段/绑定操作、已认证调用实参交接、拒绝 guard、return 与正常源码顺序，生成声明级说明、交接和通信边界 | 正式结果待生成。目录/业务标签只导航，partial ownership、opaque effect、回调激活与全部写者范围继续保留 |",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/CAPABILITY_ROADMAP.md",
+      "line": 15,
+      "current_text": "| 文档部署对照 | 捕获文档的限定条款与所选生产装配、Device provider、凭据字节材料、Worker 本地消费和 transport 分支对照 | 正式结果待生成。保留 Control Plane 内部范围，区分材料/引用/长期性，不把本地分支写成协议绕过或安全缺陷 |",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/CAPABILITY_ROADMAP.md",
+      "line": 16,
+      "current_text": "| 正常报告 v3 | Markdown/JSON 展示实际解释、条件表、反证和 source-only 边界，ID/Pointer 回指完整证据；报告组件与快照分析身份分开 | 正式结果待生成。展示数量和条目导航不产生新判断，不改旧快照或原报告 |",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/CAPABILITY_ROADMAP.md",
+      "line": 20,
+      "current_text": "本轮正式保存报告、五判断/30 义务账本、原 26 观察比较、来源身份和 CLI 读回需来自 [v0.14 产物目录](../reports/astra-iteration12/)。这些产物尚待生成；开发查询的局部结果不替代正式数据，不把 v0.13 数值搬作 v0.14 结果。后续先完成这些既定内容的正常分析与证据呈现，再按原全文范围处理实际未闭关系；不追加唯一权威、全授权、全协议、任意 heap/并发或原明确未审领域作为新验收门。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/UPSTREAM_REUSE.md",
+      "line": 5,
+      "current_text": "当前[核心与策略已冻结](../reports/astra-iteration12/CORE_FREEZE.json)，两库正常纯静态冷/热分析及正式报告待完成。本轮冻结选择 `full` 引擎，两轮均重算，不把历史 CocoIndex 缓存记录当成本轮缓存收益或功能验收。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/UPSTREAM_REUSE.md",
+      "line": 72,
+      "current_text": "v0.3 接入时完成的首次计算与再次缓存复用见历史 [接入扫描记录](../reports/upstream-reuse/UPSTREAM_REUSE_SCAN.md) 和 [当时独立审查](../reports/upstream-reuse/INDEPENDENT_REVIEW.md)。各 10 项历史源码观察的结构、源码引文和未知状态保持一致，只覆盖所选观察，不是目标功能验收，也不构成当前重复审查门。v0.14 正式结果待本轮产物生成，与这份历史记录分开。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/EXTENDING.md",
+      "line": 5,
+      "current_text": "当前接口是可读的 Python 模块边界，不是动态插件加载系统。v0.14 默认 Python AST，选配 TypeScript/TSX/JS-family 与 Rust 前端；Axon 提供确定图索引，CocoIndex 可选缓存语言前端。新增适配器随工具明确注册；配置只能是数据，不定义脚本或可执行回调。本轮核心/策略已冻结，两库正常纯静态冷/热分析与正式报告待完成；下文历史查询和结果不升级为 v0.14 成果。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/EXTENDING.md",
+      "line": 270,
+      "current_text": "v0.14 当前核心/策略已冻结，正式两库结果尚待正常静态分析及产物生成。这里的扩展协议不预填通过状态，不提供全文覆盖率，也不增加 Astra 审批、目标执行或测试步骤。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/STATIC_SCOPE.md",
+      "line": 9,
+      "current_text": "## v0.14 当前实现与待生成的正式结果",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    },
+    {
+      "file": "docs/STATIC_SCOPE.md",
+      "line": 11,
+      "current_text": "当前实现为 `static-multilang-14` / `call-rules-13-architecture-explanations`，快照 schema 2，[核心与策略已冻结](../reports/astra-iteration12/CORE_FREEZE.json)。两库正常纯静态冷/热分析、报告及本轮比较/读回产物尚待完成；下文 v0.13 数字是已保存历史，不用于预填本轮结论。",
+      "replace_after": "Actual v14 formal scans/report/comparison/readback are complete; use saved outcomes and identities, retain unknown/scope and historical v13 values."
+    }
+  ],
+  "not_to_replace": [
+    "Runtime/callback/credential-lifetime/remote-success unknown statements",
+    "whole_report_reproduction_claimed=false and no functional coverage percentage",
+    "Historical v13/v12 numbers and artifact identities"
+  ],
+  "target_executed": false,
+  "analysis_database_opened": false
+}

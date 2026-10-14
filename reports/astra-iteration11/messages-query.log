@@ -1,0 +1,7 @@
+source_query_started wwc-report-chat-retained-request-identities
+{"rule": "wwc-report-chat-retained-request-identities", "supported": true, "components": {"chat_request_identity": true}, "facts": 90, "gaps": [], "budget": {"operations": 901, "limit": 65536, "incomplete": false}}
+source_query_started wwc-report-worker-adapter-record-identities
+{"rule": "wwc-report-worker-adapter-record-identities", "supported": true, "components": {"worker_adapter_identity": true}, "facts": 353, "gaps": [], "budget": {"operations": 3619, "limit": 65536, "incomplete": false}}
+source_query_started wwc-report-outbox-ack-correlation-fields
+{"rule": "wwc-report-outbox-ack-correlation-fields", "supported": true, "components": {"outbox_ack_correlation": true}, "facts": 120, "gaps": [], "budget": {"operations": 2145, "limit": 65536, "incomplete": false}}
+source_query_saved 3

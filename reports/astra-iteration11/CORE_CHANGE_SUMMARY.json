@@ -1,0 +1,56 @@
+{
+  "comparison": "frozen v12 to frozen v13 package source identities",
+  "previous_package_version": "0.12.0",
+  "current_package_version": "0.13.0",
+  "previous_source_count": 54,
+  "current_source_count": 60,
+  "added": [
+    "conditional_gate_relations.py",
+    "lifecycle_ownership_relations.py",
+    "message_identity_relations.py",
+    "record_projection_relations.py",
+    "rust_source_context.py",
+    "rust_state_relations.py"
+  ],
+  "removed": [],
+  "changed": [
+    {
+      "file": "__init__.py",
+      "previous_sha256": "c8c0bac738a138be4f3edc11b9bb66eb0c9748e52952b789b59119935b9f50a3",
+      "current_sha256": "c979f0720e151870bc16e9a6eb0bdf37082dbfdf069af19cbc4b738977e69b56"
+    },
+    {
+      "file": "analysis.py",
+      "previous_sha256": "8dc8fa620dc89c4220ab629d2e3e82a02b3715c71bfe216c30b31d6164511f0d",
+      "current_sha256": "00ebb4a864d55eaad04ee2a67df661df069c80530b4f731bb9ef80a1b2916e83"
+    },
+    {
+      "file": "models.py",
+      "previous_sha256": "df19dfb2d7490dd03739f0649021679b9da51fc65c3d9f7508b710c1233f4efa",
+      "current_sha256": "9e377e2e868235262d49ee3971e8ea75855a19aca9c3678e148f0aee4e434a06"
+    },
+    {
+      "file": "project_report.py",
+      "previous_sha256": "c822e5409302a6cbe25934626fe88616825caa05a65558d41acb3629f6c3d17a",
+      "current_sha256": "ac0ba0469c11447a5ce43924b733601acb5f7d8f5f0c8bbfb38e3d20701d3200"
+    },
+    {
+      "file": "report_chain_analysis.py",
+      "previous_sha256": "d56730392174f1ca0bd3c4d1e096c719770e51ff37d1898e0a7bfe1553a240cd",
+      "current_sha256": "57db6e33afef1ea83912881f9cab75177d776e4d4e80631e53252d10e881027b"
+    },
+    {
+      "file": "rust_analyzer.py",
+      "previous_sha256": "331cd7994a1eecdf0f794f6035f13226b5fd5333249baee5def5e79b33b23411",
+      "current_sha256": "cbe6f73c6e97c1514ab8f31e604c92ec5bec905668206d213565bc22780e9bdd"
+    },
+    {
+      "file": "service.py",
+      "previous_sha256": "d0198aa10da38e8eadf47b613838af4c55b84f3ecb112ff52f5872a1cefd1f70",
+      "current_sha256": "a1cabdb4c500c86a2c9dd5f0c138d151d3d00a204c23d5a3660da702d8697460"
+    }
+  ],
+  "meaning": "Source identity comparison only; no functional coverage or performance claim",
+  "target_executed": false,
+  "tests_run": false
+}

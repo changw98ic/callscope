@@ -1,0 +1,19 @@
+{
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+      "working_tree_clean": true,
+      "operation": "read-only Git metadata with fsmonitor/hooks disabled"
+    },
+    {
+      "repository": "winwincode",
+      "commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+      "working_tree_clean": true,
+      "operation": "read-only Git metadata with fsmonitor/hooks disabled"
+    }
+  ],
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

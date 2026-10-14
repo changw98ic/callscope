@@ -1,0 +1,1032 @@
+{
+  "type": "function_item",
+  "text": "fn start_next_work_run(\n    items: &[WorkItem],\n    input: &WorkRunAdvanceInput,\n) -> Result<WorkRunStart, WorkRunSchedulingError> {\n    let item = items\n        .iter()\n        .find(|item| {\n            item.work_contract_revision == input.expected",
+  "fields": {
+    "name": "identifier",
+    "parameters": "parameters",
+    "return_type": "generic_type",
+    "body": "block"
+  },
+  "children": [
+    {
+      "type": "identifier",
+      "text": "start_next_work_run",
+      "fields": {},
+      "children": []
+    },
+    {
+      "type": "parameters",
+      "text": "(\n    items: &[WorkItem],\n    input: &WorkRunAdvanceInput,\n)",
+      "fields": {},
+      "children": [
+        {
+          "type": "parameter",
+          "text": "items: &[WorkItem]",
+          "fields": {
+            "pattern": "identifier",
+            "type": "reference_type"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "items",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "reference_type",
+              "text": "&[WorkItem]",
+              "fields": {
+                "type": "array_type"
+              },
+              "children": [
+                {
+                  "type": "array_type",
+                  "text": "[WorkItem]",
+                  "fields": {
+                    "element": "type_identifier"
+                  },
+                  "children": [
+                    {
+                      "type": "type_identifier",
+                      "text": "WorkItem",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "parameter",
+          "text": "input: &WorkRunAdvanceInput",
+          "fields": {
+            "pattern": "identifier",
+            "type": "reference_type"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "input",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "reference_type",
+              "text": "&WorkRunAdvanceInput",
+              "fields": {
+                "type": "type_identifier"
+              },
+              "children": [
+                {
+                  "type": "type_identifier",
+                  "text": "WorkRunAdvanceInput",
+                  "fields": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "generic_type",
+      "text": "Result<WorkRunStart, WorkRunSchedulingError>",
+      "fields": {
+        "type": "type_identifier",
+        "type_arguments": "type_arguments"
+      },
+      "children": [
+        {
+          "type": "type_identifier",
+          "text": "Result",
+          "fields": {},
+          "children": []
+        },
+        {
+          "type": "type_arguments",
+          "text": "<WorkRunStart, WorkRunSchedulingError>",
+          "fields": {},
+          "children": [
+            {
+              "type": "type_identifier",
+              "text": "WorkRunStart",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "type_identifier",
+              "text": "WorkRunSchedulingError",
+              "fields": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "block",
+      "text": "{\n    let item = items\n        .iter()\n        .find(|item| {\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&i",
+      "fields": {},
+      "children": [
+        {
+          "type": "let_declaration",
+          "text": "let item = items\n        .iter()\n        .find(|item| {\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id",
+          "fields": {
+            "pattern": "identifier",
+            "value": "try_expression"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "item",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "try_expression",
+              "text": "items\n        .iter()\n        .find(|item| {\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id)\n        }",
+              "fields": {},
+              "children": [
+                {
+                  "type": "call_expression",
+                  "text": "items\n        .iter()\n        .find(|item| {\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id)\n        }",
+                  "fields": {
+                    "function": "field_expression",
+                    "arguments": "arguments"
+                  },
+                  "children": [
+                    {
+                      "type": "field_expression",
+                      "text": "items\n        .iter()\n        .find(|item| {\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id)\n        }",
+                      "fields": {
+                        "value": "call_expression",
+                        "field": "field_identifier"
+                      },
+                      "children": [
+                        {
+                          "type": "call_expression",
+                          "text": "items\n        .iter()\n        .find(|item| {\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id)\n        }",
+                          "fields": {
+                            "function": "field_expression",
+                            "arguments": "arguments"
+                          },
+                          "children": [
+                            {
+                              "type": "field_expression",
+                              "text": "items\n        .iter()\n        .find",
+                              "fields": {
+                                "value": "call_expression",
+                                "field": "field_identifier"
+                              },
+                              "children": [
+                                {
+                                  "type": "call_expression",
+                                  "text": "items\n        .iter()",
+                                  "fields": {
+                                    "function": "field_expression",
+                                    "arguments": "arguments"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "field_expression",
+                                      "text": "items\n        .iter",
+                                      "fields": {
+                                        "value": "identifier",
+                                        "field": "field_identifier"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "identifier",
+                                          "text": "items",
+                                          "fields": {},
+                                          "children": []
+                                        },
+                                        {
+                                          "type": "field_identifier",
+                                          "text": "iter",
+                                          "fields": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "arguments",
+                                      "text": "()",
+                                      "fields": {},
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "field_identifier",
+                                  "text": "find",
+                                  "fields": {},
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "arguments",
+                              "text": "(|item| {\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id)\n        })",
+                              "fields": {},
+                              "children": [
+                                {
+                                  "type": "closure_expression",
+                                  "text": "|item| {\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id)\n        }",
+                                  "fields": {
+                                    "parameters": "closure_parameters",
+                                    "body": "block"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "closure_parameters",
+                                      "text": "|item|",
+                                      "fields": {},
+                                      "children": [
+                                        {
+                                          "type": "identifier",
+                                          "text": "item",
+                                          "fields": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "block",
+                                      "text": "{\n            item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id)\n        }",
+                                      "fields": {},
+                                      "children": [
+                                        {
+                                          "type": "binary_expression",
+                                          "text": "item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)\n                && !input.active_work_item_ids.contains(&item.id)",
+                                          "fields": {
+                                            "left": "binary_expression",
+                                            "operator": "&&",
+                                            "right": "unary_expression"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "binary_expression",
+                                              "text": "item.work_contract_revision == input.expected_contract_revision\n                && work_item_is_runnable(item, items)",
+                                              "fields": {
+                                                "left": "binary_expression",
+                                                "operator": "&&",
+                                                "right": "call_expression"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "binary_expression",
+                                                  "text": "item.work_contract_revision == input.expected_contract_revision",
+                                                  "fields": {
+                                                    "left": "field_expression",
+                                                    "operator": "==",
+                                                    "right": "field_expression"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "field_expression",
+                                                      "text": "item.work_contract_revision",
+                                                      "fields": {
+                                                        "value": "identifier",
+                                                        "field": "field_identifier"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "item",
+                                                          "fields": {},
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "field_identifier",
+                                                          "text": "work_contract_revision",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "field_expression",
+                                                      "text": "input.expected_contract_revision",
+                                                      "fields": {
+                                                        "value": "identifier",
+                                                        "field": "field_identifier"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "input",
+                                                          "fields": {},
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "field_identifier",
+                                                          "text": "expected_contract_revision",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "call_expression",
+                                                  "text": "work_item_is_runnable(item, items)",
+                                                  "fields": {
+                                                    "function": "identifier",
+                                                    "arguments": "arguments"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "identifier",
+                                                      "text": "work_item_is_runnable",
+                                                      "fields": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "arguments",
+                                                      "text": "(item, items)",
+                                                      "fields": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "item",
+                                                          "fields": {},
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "items",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "unary_expression",
+                                              "text": "!input.active_work_item_ids.contains(&item.id)",
+                                              "fields": {},
+                                              "children": [
+                                                {
+                                                  "type": "call_expression",
+                                                  "text": "input.active_work_item_ids.contains(&item.id)",
+                                                  "fields": {
+                                                    "function": "field_expression",
+                                                    "arguments": "arguments"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "field_expression",
+                                                      "text": "input.active_work_item_ids.contains",
+                                                      "fields": {
+                                                        "value": "field_expression",
+                                                        "field": "field_identifier"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "field_expression",
+                                                          "text": "input.active_work_item_ids",
+                                                          "fields": {
+                                                            "value": "identifier",
+                                                            "field": "field_identifier"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "identifier",
+                                                              "text": "input",
+                                                              "fields": {},
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "type": "field_identifier",
+                                                              "text": "active_work_item_ids",
+                                                              "fields": {},
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "field_identifier",
+                                                          "text": "contains",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "arguments",
+                                                      "text": "(&item.id)",
+                                                      "fields": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "reference_expression",
+                                                          "text": "&item.id",
+                                                          "fields": {
+                                                            "value": "field_expression"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "field_expression",
+                                                              "text": "item.id",
+                                                              "fields": {
+                                                                "value": "identifier",
+                                                                "field": "field_identifier"
+                                                              },
+                                                              "children": [
+                                                                {
+                                                                  "type": "identifier",
+                                                                  "text": "item",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "field_identifier",
+                                                                  "text": "id",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "field_identifier",
+                          "text": "ok_or",
+                          "fields": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "arguments",
+                      "text": "(WorkRunSchedulingError::NoRunnableWorkItem)",
+                      "fields": {},
+                      "children": [
+                        {
+                          "type": "scoped_identifier",
+                          "text": "WorkRunSchedulingError::NoRunnableWorkItem",
+                          "fields": {
+                            "path": "identifier",
+                            "name": "identifier"
+                          },
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "text": "WorkRunSchedulingError",
+                              "fields": {},
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "text": "NoRunnableWorkItem",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "let_declaration",
+          "text": "let mut started = item.clone();",
+          "fields": {
+            "pattern": "identifier",
+            "value": "call_expression"
+          },
+          "children": [
+            {
+              "type": "mutable_specifier",
+              "text": "mut",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "identifier",
+              "text": "started",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "call_expression",
+              "text": "item.clone()",
+              "fields": {
+                "function": "field_expression",
+                "arguments": "arguments"
+              },
+              "children": [
+                {
+                  "type": "field_expression",
+                  "text": "item.clone",
+                  "fields": {
+                    "value": "identifier",
+                    "field": "field_identifier"
+                  },
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "text": "item",
+                      "fields": {},
+                      "children": []
+                    },
+                    {
+                      "type": "field_identifier",
+                      "text": "clone",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "arguments",
+                  "text": "()",
+                  "fields": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "expression_statement",
+          "text": "started.state = WorkItemState::InProgress;",
+          "fields": {},
+          "children": [
+            {
+              "type": "assignment_expression",
+              "text": "started.state = WorkItemState::InProgress",
+              "fields": {
+                "left": "field_expression",
+                "right": "scoped_identifier"
+              },
+              "children": [
+                {
+                  "type": "field_expression",
+                  "text": "started.state",
+                  "fields": {
+                    "value": "identifier",
+                    "field": "field_identifier"
+                  },
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "text": "started",
+                      "fields": {},
+                      "children": []
+                    },
+                    {
+                      "type": "field_identifier",
+                      "text": "state",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "scoped_identifier",
+                  "text": "WorkItemState::InProgress",
+                  "fields": {
+                    "path": "identifier",
+                    "name": "identifier"
+                  },
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "text": "WorkItemState",
+                      "fields": {},
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "text": "InProgress",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "let_declaration",
+          "text": "let attempt = items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)\n        .map(|_| 0_i64)\n        .max()\n        .unwrap_or(0)\n        + 1;",
+          "fields": {
+            "pattern": "identifier",
+            "value": "binary_expression"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "attempt",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "binary_expression",
+              "text": "items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)\n        .map(|_| 0_i64)\n        .max()\n        .unwrap_or(0)\n        + 1",
+              "fields": {
+                "left": "call_expression",
+                "operator": "+",
+                "right": "integer_literal"
+              },
+              "children": [
+                {
+                  "type": "call_expression",
+                  "text": "items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)\n        .map(|_| 0_i64)\n        .max()\n        .unwrap_or(0)",
+                  "fields": {
+                    "function": "field_expression",
+                    "arguments": "arguments"
+                  },
+                  "children": [
+                    {
+                      "type": "field_expression",
+                      "text": "items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)\n        .map(|_| 0_i64)\n        .max()\n        .unwrap_or",
+                      "fields": {
+                        "value": "call_expression",
+                        "field": "field_identifier"
+                      },
+                      "children": [
+                        {
+                          "type": "call_expression",
+                          "text": "items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)\n        .map(|_| 0_i64)\n        .max()",
+                          "fields": {
+                            "function": "field_expression",
+                            "arguments": "arguments"
+                          },
+                          "children": [
+                            {
+                              "type": "field_expression",
+                              "text": "items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)\n        .map(|_| 0_i64)\n        .max",
+                              "fields": {
+                                "value": "call_expression",
+                                "field": "field_identifier"
+                              },
+                              "children": [
+                                {
+                                  "type": "call_expression",
+                                  "text": "items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)\n        .map(|_| 0_i64)",
+                                  "fields": {
+                                    "function": "field_expression",
+                                    "arguments": "arguments"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "field_expression",
+                                      "text": "items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)\n        .map",
+                                      "fields": {
+                                        "value": "call_expression",
+                                        "field": "field_identifier"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "call_expression",
+                                          "text": "items\n        .iter()\n        .filter(|candidate| candidate.id == item.id)",
+                                          "fields": {
+                                            "function": "field_expression",
+                                            "arguments": "arguments"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "field_expression",
+                                              "text": "items\n        .iter()\n        .filter",
+                                              "fields": {
+                                                "value": "call_expression",
+                                                "field": "field_identifier"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "call_expression",
+                                                  "text": "items\n        .iter()",
+                                                  "fields": {
+                                                    "function": "field_expression",
+                                                    "arguments": "arguments"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "field_expression",
+                                                      "text": "items\n        .iter",
+                                                      "fields": {
+                                                        "value": "identifier",
+                                                        "field": "field_identifier"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "items",
+                                                          "fields": {},
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "field_identifier",
+                                                          "text": "iter",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "arguments",
+                                                      "text": "()",
+                                                      "fields": {},
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "field_identifier",
+                                                  "text": "filter",
+                                                  "fields": {},
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "arguments",
+                                              "text": "(|candidate| candidate.id == item.id)",
+                                              "fields": {},
+                                              "children": [
+                                                {
+                                                  "type": "closure_expression",
+                                                  "text": "|candidate| candidate.id == item.id",
+                                                  "fields": {
+                                                    "parameters": "closure_parameters",
+                                                    "body": "binary_expression"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "closure_parameters",
+                                                      "text": "|candidate|",
+                                                      "fields": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "candidate",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "binary_expression",
+                                                      "text": "candidate.id == item.id",
+                                                      "fields": {
+                                                        "left": "field_expression",
+                                                        "operator": "==",
+                                                        "right": "field_expression"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "field_expression",
+                                                          "text": "candidate.id",
+                                                          "fields": {
+                                                            "value": "identifier",
+                                                            "field": "field_identifier"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "identifier",
+                                                              "text": "candidate",
+                                                              "fields": {},
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "type": "field_identifier",
+                                                              "text": "id",
+                                                              "fields": {},
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "field_expression",
+                                                          "text": "item.id",
+                                                          "fields": {
+                                                            "value": "identifier",
+                                                            "field": "field_identifier"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "identifier",
+                                                              "text": "item",
+                                                              "fields": {},
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "type": "field_identifier",
+                                                              "text": "id",
+                                                              "fields": {},
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "field_identifier",
+                                          "text": "map",
+                                          "fields": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "arguments",
+                                      "text": "(|_| 0_i64)",
+                                      "fields": {},
+                                      "children": [
+                                        {
+                                          "type": "closure_expression",
+                                          "text": "|_| 0_i64",
+                                          "fields": {
+                                            "parameters": "closure_parameters",
+                                            "body": "integer_literal"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "closure_parameters",
+                                              "text": "|_|",
+                                              "fields": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "integer_literal",
+                                              "text": "0_i64",
+                                              "fields": {},
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "field_identifier",
+                                  "text": "max",
+                                  "fields": {},
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "arguments",
+                              "text": "()",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "field_identifier",
+                          "text": "unwrap_or",
+                          "fields": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "arguments",
+                      "text": "(0)",
+                      "fields": {},
+                      "children": [
+                        {
+                          "type": "integer_literal",
+                          "text": "0",
+                          "fields": {},
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "integer_literal",
+                  "text": "1",
+                  "fields": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "call_expression",
+          "text": "Ok(WorkRunStart {\n        work_item: started,\n        attempt,\n    })",
+          "fields": {
+            "function": "identifier",
+            "arguments": "arguments"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "Ok",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "arguments",
+              "text": "(WorkRunStart {\n        work_item: started,\n        attempt,\n    })",
+              "fields": {},
+              "children": [
+                {
+                  "type": "struct_expression",
+                  "text": "WorkRunStart {\n        work_item: started,\n        attempt,\n    }",
+                  "fields": {
+                    "name": "type_identifier",
+                    "body": "field_initializer_list"
+                  },
+                  "children": [
+                    {
+                      "type": "type_identifier",
+                      "text": "WorkRunStart",
+                      "fields": {},
+                      "children": []
+                    },
+                    {
+                      "type": "field_initializer_list",
+                      "text": "{\n        work_item: started,\n        attempt,\n    }",
+                      "fields": {},
+                      "children": [
+                        {
+                          "type": "field_initializer",
+                          "text": "work_item: started",
+                          "fields": {
+                            "field": "field_identifier",
+                            "value": "identifier"
+                          },
+                          "children": [
+                            {
+                              "type": "field_identifier",
+                              "text": "work_item",
+                              "fields": {},
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "text": "started",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "shorthand_field_initializer",
+                          "text": "attempt",
+                          "fields": {},
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "text": "attempt",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

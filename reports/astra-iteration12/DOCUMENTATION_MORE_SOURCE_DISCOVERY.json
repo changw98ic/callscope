@@ -1,0 +1,1049 @@
+{
+  "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+  "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+  "policy_hash": "c085aff2d4adffa22410a5ce818a1f3ec431665a595de0c4f2d575326c982aaa",
+  "saved_documentation": {
+    "docs/architecture.md": {
+      "status": "captured",
+      "hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+      "text_hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+      "selected_lines": [
+        {
+          "line": 135,
+          "text": "  InProgress -->|需要人工决定| WaitingHuman[Waiting Human]"
+        },
+        {
+          "line": 136,
+          "text": "  Validating -->|需要人工决定| WaitingHuman"
+        },
+        {
+          "line": 137,
+          "text": "  WaitingHuman --> Ready"
+        },
+        {
+          "line": 138,
+          "text": "  InProgress --> Failed[Failed]"
+        },
+        {
+          "line": 139,
+          "text": "  Backlog --> Cancelled[Cancelled]"
+        },
+        {
+          "line": 140,
+          "text": "```"
+        },
+        {
+          "line": 141,
+          "text": ""
+        },
+        {
+          "line": 142,
+          "text": "最终结论由当前候选、冻结提交、运行结果和独立角色计算。`submitVerdict()` 不接受调用方直接制作的 Evidence 或 Verdict；Server 重新验证候选、事件身份、角色完整性和每项条件后才写入结论。Agent 的文本回复不是交付证据。最终结果使用 `winwincode.independent-verification-result.v1` 结构。"
+        },
+        {
+          "line": 143,
+          "text": ""
+        },
+        {
+          "line": 144,
+          "text": "### 执行图状态"
+        },
+        {
+          "line": 145,
+          "text": ""
+        },
+        {
+          "line": 146,
+          "text": "架构图和流程图贯穿三个公开状态："
+        },
+        {
+          "line": 147,
+          "text": ""
+        },
+        {
+          "line": 148,
+          "text": "| 状态 | 展示 | 内容边界 |"
+        },
+        {
+          "line": 149,
+          "text": "| --- | --- | --- |"
+        },
+        {
+          "line": 150,
+          "text": "| `before-execution` | 节点为绿色 | 只展示已审核的节点和关系 |"
+        },
+        {
+          "line": 151,
+          "text": "| `executing` | 变化节点为浅蓝色 | 展示影响范围，不返回候选文件和原始日志 |"
+        },
+        {
+          "line": 152,
+          "text": "| `execution-finished` | 变化节点为黄色 | 展示当前候选、Diff、运行活动和 Evidence 引用 |"
+        },
+        {
+          "line": 153,
+          "text": ""
+        },
+        {
+          "line": 154,
+          "text": "结束状态从明确的 base commit、candidate commit 和摘要重新计算，不使用执行中缓存的文件内容。"
+        },
+        {
+          "line": 155,
+          "text": ""
+        },
+        {
+          "line": 156,
+          "text": "## Provider、Credential 与外部副作用"
+        },
+        {
+          "line": 157,
+          "text": ""
+        },
+        {
+          "line": 158,
+          "text": "Provider Gateway 是 Control Plane 内部的唯一模型路由和长期 Credential 使用者。Worker 只通过 `execution-port-model-stream` 请求模型并接收流；请求中只带短期引用、路由和预算事实。Credential 服务保存受保护引用，公开合同和持久 Delivery 不保存原始密钥。"
+        },
+        {
+          "line": 159,
+          "text": ""
+        },
+        {
+          "line": 160,
+          "text": "Publication 先在 Control Plane 写入审批绑定、操作键和本地 receipt，再执行外部写入；重试通过同一操作键查询已存在的结果。Audit Ledger 保存主体、范围、操作、结果和摘要链，不复制命令正文、模型正文或凭据。"
+        },
+        {
+          "line": 161,
+          "text": ""
+        },
+        {
+          "line": 162,
+          "text": "## 本地与企业部署"
+        },
+        {
+          "line": 163,
+          "text": ""
+        },
+        {
+          "line": 164,
+          "text": "### 本地部署"
+        },
+        {
+          "line": 165,
+          "text": ""
+        },
+        {
+          "line": 166,
+          "text": "```text"
+        },
+        {
+          "line": 167,
+          "text": "winwincode-local"
+        },
+        {
+          "line": 168,
+          "text": "├─ winwincode-control-plane"
+        },
+        {
+          "line": 169,
+          "text": "└─ winwincode-worker"
+        },
+        {
+          "line": 170,
+          "text": "   ├─ winwincode-codex"
+        },
+        {
+          "line": 171,
+          "text": "   ├─ winwincode-kernel"
+        },
+        {
+          "line": 172,
+          "text": "   └─ winwincode-kernel-helper"
+        },
+        {
+          "line": 173,
+          "text": "```"
+        },
+        {
+          "line": 174,
+          "text": ""
+        },
+        {
+          "line": 175,
+          "text": "[`winwincode-local`](../crates/winwincode-local/src/lib.rs) 只负责生命周期和组合。它通过注入的 Control Plane 端点和 `LocalWorkerAdapter` 传递 typed frame，并为每个进程生成独立数据根；SQLite、租约、收据和 outbox 的语义与企业部署相同。"
+        },
+        {
+          "line": 176,
+          "text": ""
+        },
+        {
+          "line": 177,
+          "text": "### 企业部署"
+        },
+        {
+          "line": 178,
+          "text": ""
+        },
+        {
+          "line": 179,
+          "text": "```text"
+        },
+        {
+          "line": 180,
+          "text": "winwincode-server"
+        }
+      ]
+    }
+  },
+  "source_roles": {
+    "crates/winwincode-provider/src/device_model.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "DeviceProviderStore.execute_model",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_model#DeviceProviderStore.execute_model",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_model.rs",
+            "line": 26,
+            "column": 5,
+            "end_line": 67,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 1057,
+            "end_byte": 2728,
+            "original_file_start_byte": 1057,
+            "original_file_end_byte": 2728,
+            "source_hash": "f2b70034c549a2b5c5842b9aee18c408d6b8d3a44fbe5a5ea3a65e8ea77d1937",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "9c11c31f8c152223d4329676dddec32cb051d243b0a050995fc58c5624fc7724",
+            "source_line": "    pub fn execute_model(",
+            "source_excerpt": "pub fn execute_model(\n        &self,\n        open: &ModelOpenMessage,\n    ) -> Result<Vec<ModelChunkMessage>, DeviceProviderError> {\n        if self.model_cancelled(&open.model_exchange_id.0)? {\n            return Ok(Vec::new());\n        }\n        let digest = format!(\"{:x}\", Sha256::digest(serde_json::to_vec(open)?));\n        let inserted = self.connection.execute(\n            \"INSERT OR IGNORE INTO exchanges (exchange_id, digest) VALUES (?1, ?2)\",\n            params![open.model_exchange_id.0, digest],\n        )?;\n        let (original, previous): (String, Option<String>) = self.connection.query_row(\n            \"SELECT digest, chunks FROM exchanges WHERE exchange_id=?1\",\n            [&open.model_exchange_id.0],\n            |row| Ok((row.get(0)?, row.get(1)?)),\n        )?;\n        if original != digest {\n            return Err(DeviceProviderError);\n        }\n        if let Some(chunks) = previous {\n            return Ok(serde_json::from_str(&chunks)?);\n        }\n        let chunks = if inserted == 0 {\n            vec![model_failure(\n                open,\n                \"DEVICE_MODEL_INTERRUPTED: previous request outcome is unknown\",\n            )]\n        } else {\n            self.invoke_model(open).unwrap_or_else(|_| {\n                vec![model_failure(\n                    open,\n                    \"DEVICE_PROVIDER_UNAVAILABLE: check this device's Provider settings\",\n                )]\n            })\n        };\n        self.connection.execute(\n            \"UPDATE exchanges SET chunks=?1 WHERE exchange_id=?2 AND cancelled=0\",\n            params![serde_json::to_string(&chunks)?, open.model_exchange_id.0],\n        )?;\n        Ok(chunks)\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "d582d7aa8b9eb29d38ffdb3a9539b330a1e5562d336e91ae5a35091caca041e4",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "f2b70034c549a2b5c5842b9aee18c408d6b8d3a44fbe5a5ea3a65e8ea77d1937",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn execute_model(\n        &self,\n        open: &ModelOpenMessage,\n    ) -> Result<Vec<ModelChunkMessage>, DeviceProviderError> {\n        if self.model_cancelled(&open.model_exchange_id.0)? {\n            return Ok(Vec::new());\n        }\n        let digest = format!(\"{:x}\", Sha256::digest(serde_json::to_vec(open)?));\n        let inserted = self.connection.execute(\n            \"INSERT OR IGNORE INTO exchanges (exchange_id, digest) VALUES (?1, ?2)\",\n            params![open.model_exchange_id.0, digest],\n        )?;\n        let (original, previous): (String, Option<String>) = self.connection.query_row(\n            \"SELECT digest, chunks FROM exchanges WHERE exchange_id=?1\",\n            [&open.model_exchange_id.0],\n            |row| Ok((row.get(0)?, row.get(1)?)),\n        )?;\n        if original != digest {\n            return Err(DeviceProviderError);\n        }\n        if let Some(chunks) = previous {\n            return Ok(serde_json::from_str(&chunks)?);\n        }\n        let chunks = if inserted == 0 {\n            vec![model_failure(\n                open,\n                \"DEVICE_MODEL_INTERRUPTED: previous request outcome is unknown\",\n            )]\n        } else {\n            self.invoke_model(open).unwrap_or_else(|_| {\n                vec![model_failure(\n                    open,\n                    \"DEVICE_PROVIDER_UNAVAILABLE: check this device's Provider settings\",\n                )]\n            })\n        };\n        self.connection.execute(\n            \"UPDATE exchanges SET chunks=?1 WHERE exchange_id=?2 AND cancelled=0\",\n            params![serde_json::to_string(&chunks)?, open.model_exchange_id.0],\n        )?;\n        Ok(chunks)\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.invoke_model",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_model#DeviceProviderStore.invoke_model",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_model.rs",
+            "line": 69,
+            "column": 5,
+            "end_line": 168,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 2734,
+            "end_byte": 6803,
+            "original_file_start_byte": 2734,
+            "original_file_end_byte": 6803,
+            "source_hash": "f2b70034c549a2b5c5842b9aee18c408d6b8d3a44fbe5a5ea3a65e8ea77d1937",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "cb7327f3c657c8afa66a4fd8c468a67d147edcb322e8fa3897849428d73dab48",
+            "source_line": "    fn invoke_model(",
+            "source_excerpt": "fn invoke_model(\n        &self,\n        open: &ModelOpenMessage,\n    ) -> Result<Vec<ModelChunkMessage>, DeviceProviderError> {\n        if open.request.data_base64.len() > 24 * 1024 * 1024\n            || open.request.content_type != \"application/json\"\n        {\n            return Err(DeviceProviderError);\n        }\n        let payload = STANDARD\n            .decode(&open.request.data_base64)\n            .map_err(|_| DeviceProviderError)?;\n        if format!(\"sha256:{:x}\", Sha256::digest(&payload)) != open.request.payload_digest.0 {\n            return Err(DeviceProviderError);\n        }\n        let request: serde_json::Value = serde_json::from_slice(&payload)?;\n        let provider_id = request\n            .get(\"provider\")\n            .and_then(serde_json::Value::as_str)\n            .ok_or(DeviceProviderError)?;\n        let model_id = request\n            .pointer(\"/request/model\")\n            .and_then(serde_json::Value::as_str)\n            .ok_or(DeviceProviderError)?;\n        let (config, secret) = self.resolve(provider_id)?;\n        if !config.enabled || !config.model_ids.iter().any(|model| model == model_id) {\n            return Err(DeviceProviderError);\n        }\n        let adapter = crate::device_store::adapter(&config)?;\n        let adapter_request_id = format!(\"device-{}\", open.model_exchange_id.0);\n        let mut leak_gate = CredentialLeakGate::new();\n        leak_gate.track_secret(&secret);\n        if let Err(error) = adapter.open(\n            &ProviderAdapterInvocation {\n                model_exchange_id: &open.model_exchange_id,\n                request_id: &open.request_id,\n                adapter_request_id: &adapter_request_id,\n                model_id,\n                content_type: &open.request.content_type,\n                payload: &payload,\n            },\n            &secret,\n        ) {\n            return Ok(vec![model_failure(\n                open,\n                match error.kind() {\n                    crate::ProviderAdapterErrorKind::Rejected => \"DEVICE_PROVIDER_REQUEST_REJECTED\",\n                    crate::ProviderAdapterErrorKind::RateLimited => \"DEVICE_PROVIDER_RATE_LIMITED\",\n                    crate::ProviderAdapterErrorKind::Unavailable => {\n                        \"DEVICE_PROVIDER_CONNECTION_FAILED\"\n                    }\n                    crate::ProviderAdapterErrorKind::Protocol => \"DEVICE_PROVIDER_PROTOCOL_FAILED\",\n                },\n            )]);\n        }\n        drop(secret);\n        let receipt = ProviderGatewayOpenReceipt {\n            model_exchange_id: open.model_exchange_id.clone(),\n            request_id: open.request_id.clone(),\n            route: ModelRoute {\n                provider_id: provider_id.to_owned(),\n                model_id: model_id.to_owned(),\n                credential_reference_id: CredentialReferenceId(format!(\n                    \"crd_0{}\",\n                    &format!(\"{:X}\", Sha256::digest(provider_id.as_bytes()))[..25]\n                )),\n            },\n            adapter_request_id,\n            idempotent_replay: false,\n            stream_leak_gate: leak_gate,\n        };\n        let completion = adapter.drain_canonical(&receipt);\n        let _ = adapter.control(\n            &open.model_exchange_id,\n            &receipt.adapter_request_id,\n            ProviderStreamControlAction::Release,\n        );\n        let completion = match completion {\n            Ok(completion) => completion,\n            Err(error) => {\n                return Ok(vec![model_failure(\n                    open,\n                    provider_error_message(error.kind()),\n                )]);\n            }\n        };\n        completion\n            .frames\n            .iter()\n            .map(|frame| {\n                let mut chunk = model_chunk(\n                    open,\n                    i64::try_from(frame.sequence()).map_err(|_| DeviceProviderError)?,\n                );\n                chunk.payload = Some(frame.encoded_payload());\n                chunk.is_final = frame.is_terminal();\n                Ok(chunk)\n            })\n            .collect()\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "d582d7aa8b9eb29d38ffdb3a9539b330a1e5562d336e91ae5a35091caca041e4",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "f2b70034c549a2b5c5842b9aee18c408d6b8d3a44fbe5a5ea3a65e8ea77d1937",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn invoke_model(\n        &self,\n        open: &ModelOpenMessage,\n    ) -> Result<Vec<ModelChunkMessage>, DeviceProviderError> {\n        if open.request.data_base64.len() > 24 * 1024 * 1024\n            || open.request.content_type != \"application/json\"\n        {\n            return Err(DeviceProviderError);\n        }\n        let payload = STANDARD\n            .decode(&open.request.data_base64)\n            .map_err(|_| DeviceProviderError)?;\n        if format!(\"sha256:{:x}\", Sha256::digest(&payload)) != open.request.payload_digest.0 {\n            return Err(DeviceProviderError);\n        }\n        let request: serde_json::Value = serde_json::from_slice(&payload)?;\n        let provider_id = request\n            .get(\"provider\")\n            .and_then(serde_json::Value::as_str)\n            .ok_or(DeviceProviderError)?;\n        let model_id = request\n            .pointer(\"/request/model\")\n            .and_then(serde_json::Value::as_str)\n            .ok_or(DeviceProviderError)?;\n        let (config, secret) = self.resolve(provider_id)?;\n        if !config.enabled || !config.model_ids.iter().any(|model| model == model_id) {\n            return Err(DeviceProviderError);\n        }\n        let adapter = crate::device_store::adapter(&config)?;\n        let adapter_request_id = format!(\"device-{}\", open.model_exchange_id.0);\n        let mut leak_gate = CredentialLeakGate::new();\n        leak_gate.track_secret(&secret);\n        if let Err(error) = adapter.open(\n            &ProviderAdapterInvocation {\n                model_exchange_id: &open.model_exchange_id,\n                request_id: &open.request_id,\n                adapter_request_id: &adapter_request_id,\n                model_id,\n                content_type: &open.request.content_type,\n                payload: &payload,\n            },\n            &secret,\n        ) {\n            return Ok(vec![model_failure(\n                open,\n                match error.kind() {\n                    crate::ProviderAdapterErrorKind::Rejected => \"DEVICE_PROVIDER_REQUEST_REJECTED\",\n                    crate::ProviderAdapterErrorKind::RateLimited => \"DEVICE_PROVIDER_RATE_LIMITED\",\n                    crate::ProviderAdapterErrorKind::Unavailable => {\n                        \"DEVICE_PROVIDER_CONNECTION_FAILED\"\n                    }\n                    crate::ProviderAdapterErrorKind::Protocol => \"DEVICE_PROVIDER_PROTOCOL_FAILED\",\n                },\n            )]);\n        }\n        drop(secret);\n        let receipt = ProviderGatewayOpenReceipt {\n            model_exchange_id: open.model_exchange_id.clone(),\n            request_id: open.request_id.clone(),\n            route: ModelRoute {\n                provider_id: provider_id.to_owned(),\n                model_id: model_id.to_owned(),\n                credential_reference_id: CredentialReferenceId(format!(\n                    \"crd_0{}\",\n                    &format!(\"{:X}\", Sha256::digest(provider_id.as_bytes()))[..25]\n                )),\n            },\n            adapter_request_id,\n            idempotent_replay: false,\n            stream_leak_gate: leak_gate,\n        };\n        let completion = adapter.drain_canonical(&receipt);\n        let _ = adapter.control(\n            &open.model_exchange_id,\n            &receipt.adapter_request_id,\n            ProviderStreamControlAction::Release,\n        );\n        let completion = match completion {\n            Ok(completion) => completion,\n            Err(error) => {\n                return Ok(vec![model_failure(\n                    open,\n                    provider_error_message(error.kind()),\n                )]);\n            }\n        };\n        completion\n            .frames\n            .iter()\n            .map(|frame| {\n                let mut chunk = model_chunk(\n                    open,\n                    i64::try_from(frame.sequence()).map_err(|_| DeviceProviderError)?,\n                );\n                chunk.payload = Some(frame.encoded_payload());\n                chunk.is_final = frame.is_terminal();\n                Ok(chunk)\n            })\n            .collect()\n    }"
+        },
+        {
+          "symbol": "provider_error_message",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_model#provider_error_message",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_model.rs",
+            "line": 265,
+            "column": 1,
+            "end_line": 279,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 10275,
+            "end_byte": 11074,
+            "original_file_start_byte": 10275,
+            "original_file_end_byte": 11074,
+            "source_hash": "f2b70034c549a2b5c5842b9aee18c408d6b8d3a44fbe5a5ea3a65e8ea77d1937",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "062a300123b0faae2005a83f7bf6c6271bb4356cd92a6f0335aaefe80119d171",
+            "source_line": "fn provider_error_message(kind: crate::HttpsSseProviderErrorKind) -> &'static str {",
+            "source_excerpt": "fn provider_error_message(kind: crate::HttpsSseProviderErrorKind) -> &'static str {\n    use crate::HttpsSseProviderErrorKind as Kind;\n    match kind {\n        Kind::InvalidConfiguration => \"DEVICE_PROVIDER_INVALID_CONFIGURATION\",\n        Kind::IdentityConflict => \"DEVICE_MODEL_IDENTITY_CONFLICT\",\n        Kind::RateLimited => \"DEVICE_PROVIDER_RATE_LIMITED\",\n        Kind::Rejected => \"DEVICE_PROVIDER_REQUEST_REJECTED\",\n        Kind::Unavailable => \"DEVICE_PROVIDER_UNAVAILABLE\",\n        Kind::Transport => \"DEVICE_PROVIDER_TRANSPORT_FAILED\",\n        Kind::Protocol => \"DEVICE_PROVIDER_PROTOCOL_FAILED\",\n        Kind::SizeLimit => \"DEVICE_PROVIDER_RESPONSE_TOO_LARGE\",\n        Kind::Paused => \"DEVICE_MODEL_PAUSED\",\n        Kind::CredentialLeak => \"DEVICE_PROVIDER_CREDENTIAL_LEAK_BLOCKED\",\n    }\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "d582d7aa8b9eb29d38ffdb3a9539b330a1e5562d336e91ae5a35091caca041e4",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "f2b70034c549a2b5c5842b9aee18c408d6b8d3a44fbe5a5ea3a65e8ea77d1937",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn provider_error_message(kind: crate::HttpsSseProviderErrorKind) -> &'static str {\n    use crate::HttpsSseProviderErrorKind as Kind;\n    match kind {\n        Kind::InvalidConfiguration => \"DEVICE_PROVIDER_INVALID_CONFIGURATION\",\n        Kind::IdentityConflict => \"DEVICE_MODEL_IDENTITY_CONFLICT\",\n        Kind::RateLimited => \"DEVICE_PROVIDER_RATE_LIMITED\",\n        Kind::Rejected => \"DEVICE_PROVIDER_REQUEST_REJECTED\",\n        Kind::Unavailable => \"DEVICE_PROVIDER_UNAVAILABLE\",\n        Kind::Transport => \"DEVICE_PROVIDER_TRANSPORT_FAILED\",\n        Kind::Protocol => \"DEVICE_PROVIDER_PROTOCOL_FAILED\",\n        Kind::SizeLimit => \"DEVICE_PROVIDER_RESPONSE_TOO_LARGE\",\n        Kind::Paused => \"DEVICE_MODEL_PAUSED\",\n        Kind::CredentialLeak => \"DEVICE_PROVIDER_CREDENTIAL_LEAK_BLOCKED\",\n    }\n}"
+        }
+      ]
+    },
+    "crates/winwincode-provider/src/device_store.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "DeviceProviderStore.open",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 79,
+            "column": 5,
+            "end_line": 145,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 2554,
+            "end_byte": 5876,
+            "original_file_start_byte": 2554,
+            "original_file_end_byte": 5876,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "46621f0438ba1f3d718584948520fa2e8352a621e48419d9387093fd1766a907",
+            "source_line": "    pub fn open(directory: &Path) -> Result<Self, DeviceProviderError> {",
+            "source_excerpt": "pub fn open(directory: &Path) -> Result<Self, DeviceProviderError> {\n        fs::DirBuilder::new()\n            .recursive(true)\n            .mode(0o700)\n            .create(directory)?;\n        let meta = fs::symlink_metadata(directory)?;\n        if !meta.is_dir() || meta.permissions().mode() & 0o077 != 0 {\n            return Err(DeviceProviderError);\n        }\n        let path = directory.join(\"providers.sqlite3\");\n        match fs::OpenOptions::new()\n            .write(true)\n            .create_new(true)\n            .mode(0o600)\n            .open(&path)\n        {\n            Ok(file) => file.sync_all()?,\n            Err(error) if error.kind() == std::io::ErrorKind::AlreadyExists => {}\n            Err(error) => return Err(error.into()),\n        }\n        let meta = fs::symlink_metadata(&path)?;\n        if !meta.is_file() || meta.permissions().mode() & 0o077 != 0 {\n            return Err(DeviceProviderError);\n        }\n        let mut connection = Connection::open(path)?;\n        connection.busy_timeout(Duration::from_secs(5))?;\n        connection.execute_batch(\n            \"PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA secure_delete=ON;\",\n        )?;\n        let transaction =\n            connection.transaction_with_behavior(rusqlite::TransactionBehavior::Immediate)?;\n        let version: i64 = transaction.query_row(\"PRAGMA user_version\", [], |row| row.get(0))?;\n        if version == 0 {\n            transaction.execute_batch(\n                \"CREATE TABLE identity (singleton INTEGER PRIMARY KEY CHECK(singleton=1), private_key BLOB NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));\n                 CREATE TABLE providers (provider_id TEXT PRIMARY KEY, config TEXT NOT NULL, secret BLOB NOT NULL);\n                 CREATE TABLE receipts (request_id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);\n                 CREATE TABLE exchanges (exchange_id TEXT PRIMARY KEY, digest TEXT NOT NULL, chunks TEXT, cancelled INTEGER NOT NULL DEFAULT 0);\n                 PRAGMA user_version=1;\"\n            )?;\n            let key = new_secret_key()?;\n            transaction.execute(\n                \"INSERT INTO identity VALUES (1, ?1, 0)\",\n                [key.to_bytes().as_slice()],\n            )?;\n        } else if ![1, 2].contains(&version) {\n            return Err(DeviceProviderError);\n        }\n        if version < 2 {\n            transaction.execute_batch(\n                \"CREATE TABLE extension_state (singleton INTEGER PRIMARY KEY CHECK(singleton=1), revision INTEGER NOT NULL CHECK(revision>=0));\n                 INSERT INTO extension_state VALUES (1, 0);\n                 CREATE TABLE extensions (kind TEXT NOT NULL, id TEXT NOT NULL, data TEXT NOT NULL, projection TEXT NOT NULL, PRIMARY KEY(kind,id));\n                 CREATE TABLE extension_receipts (request_id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);\n                 PRAGMA user_version=2;\",\n            )?;\n        }\n        let mut bytes: Vec<u8> = transaction.query_row(\n            \"SELECT private_key FROM identity WHERE singleton=1\",\n            [],\n            |row| row.get(0),\n        )?;\n        let key = SecretKey::from_slice(&bytes).map_err(|_| DeviceProviderError)?;\n        bytes.fill(0);\n        transaction.commit()?;\n        Ok(Self { connection, key })\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn open(directory: &Path) -> Result<Self, DeviceProviderError> {\n        fs::DirBuilder::new()\n            .recursive(true)\n            .mode(0o700)\n            .create(directory)?;\n        let meta = fs::symlink_metadata(directory)?;\n        if !meta.is_dir() || meta.permissions().mode() & 0o077 != 0 {\n            return Err(DeviceProviderError);\n        }\n        let path = directory.join(\"providers.sqlite3\");\n        match fs::OpenOptions::new()\n            .write(true)\n            .create_new(true)\n            .mode(0o600)\n            .open(&path)\n        {\n            Ok(file) => file.sync_all()?,\n            Err(error) if error.kind() == std::io::ErrorKind::AlreadyExists => {}\n            Err(error) => return Err(error.into()),\n        }\n        let meta = fs::symlink_metadata(&path)?;\n        if !meta.is_file() || meta.permissions().mode() & 0o077 != 0 {\n            return Err(DeviceProviderError);\n        }\n        let mut connection = Connection::open(path)?;\n        connection.busy_timeout(Duration::from_secs(5))?;\n        connection.execute_batch(\n            \"PRAGMA journal_mode=WAL; PRAGMA synchronous=FULL; PRAGMA secure_delete=ON;\",\n        )?;\n        let transaction =\n            connection.transaction_with_behavior(rusqlite::TransactionBehavior::Immediate)?;\n        let version: i64 = transaction.query_row(\"PRAGMA user_version\", [], |row| row.get(0))?;\n        if version == 0 {\n            transaction.execute_batch(\n                \"CREATE TABLE identity (singleton INTEGER PRIMARY KEY CHECK(singleton=1), private_key BLOB NOT NULL, revision INTEGER NOT NULL CHECK(revision>=0));\n                 CREATE TABLE providers (provider_id TEXT PRIMARY KEY, config TEXT NOT NULL, secret BLOB NOT NULL);\n                 CREATE TABLE receipts (request_id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);\n                 CREATE TABLE exchanges (exchange_id TEXT PRIMARY KEY, digest TEXT NOT NULL, chunks TEXT, cancelled INTEGER NOT NULL DEFAULT 0);\n                 PRAGMA user_version=1;\"\n            )?;\n            let key = new_secret_key()?;\n            transaction.execute(\n                \"INSERT INTO identity VALUES (1, ?1, 0)\",\n                [key.to_bytes().as_slice()],\n            )?;\n        } else if ![1, 2].contains(&version) {\n            return Err(DeviceProviderError);\n        }\n        if version < 2 {\n            transaction.execute_batch(\n                \"CREATE TABLE extension_state (singleton INTEGER PRIMARY KEY CHECK(singleton=1), revision INTEGER NOT NULL CHECK(revision>=0));\n                 INSERT INTO extension_state VALUES (1, 0);\n                 CREATE TABLE extensions (kind TEXT NOT NULL, id TEXT NOT NULL, data TEXT NOT NULL, projection TEXT NOT NULL, PRIMARY KEY(kind,id));\n                 CREATE TABLE extension_receipts (request_id TEXT PRIMARY KEY, digest TEXT NOT NULL, receipt TEXT NOT NULL);\n                 PRAGMA user_version=2;\",\n            )?;\n        }\n        let mut bytes: Vec<u8> = transaction.query_row(\n            \"SELECT private_key FROM identity WHERE singleton=1\",\n            [],\n            |row| row.get(0),\n        )?;\n        let key = SecretKey::from_slice(&bytes).map_err(|_| DeviceProviderError)?;\n        bytes.fill(0);\n        transaction.commit()?;\n        Ok(Self { connection, key })\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.snapshot",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.snapshot",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 151,
+            "column": 5,
+            "end_line": 181,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 6056,
+            "end_byte": 7216,
+            "original_file_start_byte": 6056,
+            "original_file_end_byte": 7216,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "fa71d9bc812962dcf223d942976efe7184aacdf072c80ab4b5b8767b18f1fdc2",
+            "source_line": "    pub fn snapshot(",
+            "source_excerpt": "pub fn snapshot(\n        &self,\n        client_node_id: &str,\n    ) -> Result<DeviceProviderSnapshot, DeviceProviderError> {\n        let revision = self.revision()?;\n        let mut query = self\n            .connection\n            .prepare(\"SELECT config, length(secret)>0 FROM providers ORDER BY provider_id\")?;\n        let rows = query.query_map([], |row| {\n            Ok((row.get::<_, String>(0)?, row.get::<_, bool>(1)?))\n        })?;\n        let mut providers = Vec::new();\n        for row in rows {\n            let (config, credential_configured) = row?;\n            let config = serde_json::from_str(&config)?;\n            if !valid_device_provider_config(&config) {\n                return Err(DeviceProviderError);\n            }\n            providers.push(DeviceProviderProjection {\n                config,\n                credential_configured,\n            });\n        }\n        Ok(DeviceProviderSnapshot {\n            client_node_id: client_node_id.to_owned(),\n            revision,\n            encryption_public_key: STANDARD\n                .encode(self.key.public_key().to_encoded_point(false).as_bytes()),\n            providers,\n        })\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn snapshot(\n        &self,\n        client_node_id: &str,\n    ) -> Result<DeviceProviderSnapshot, DeviceProviderError> {\n        let revision = self.revision()?;\n        let mut query = self\n            .connection\n            .prepare(\"SELECT config, length(secret)>0 FROM providers ORDER BY provider_id\")?;\n        let rows = query.query_map([], |row| {\n            Ok((row.get::<_, String>(0)?, row.get::<_, bool>(1)?))\n        })?;\n        let mut providers = Vec::new();\n        for row in rows {\n            let (config, credential_configured) = row?;\n            let config = serde_json::from_str(&config)?;\n            if !valid_device_provider_config(&config) {\n                return Err(DeviceProviderError);\n            }\n            providers.push(DeviceProviderProjection {\n                config,\n                credential_configured,\n            });\n        }\n        Ok(DeviceProviderSnapshot {\n            client_node_id: client_node_id.to_owned(),\n            revision,\n            encryption_public_key: STANDARD\n                .encode(self.key.public_key().to_encoded_point(false).as_bytes()),\n            providers,\n        })\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.decrypt_configuration",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.decrypt_configuration",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 290,
+            "column": 5,
+            "end_line": 338,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 11305,
+            "end_byte": 13191,
+            "original_file_start_byte": 11305,
+            "original_file_end_byte": 13191,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "b4b95d5c736d868521bcb5012695e33aae148e97727d2add55f62aa67f00bd6e",
+            "source_line": "    pub fn decrypt_configuration<T: serde::de::DeserializeOwned>(",
+            "source_excerpt": "pub fn decrypt_configuration<T: serde::de::DeserializeOwned>(\n        &self,\n        envelope: &DeviceConfigurationEnvelope,\n        context: &str,\n    ) -> Result<T, DeviceProviderError> {\n        if envelope.ciphertext.len() > 65_536\n            || envelope.public_key.len() > 128\n            || envelope.nonce.len() > 24\n        {\n            return Err(DeviceProviderError);\n        }\n        let public = PublicKey::from_sec1_bytes(\n            &STANDARD\n                .decode(&envelope.public_key)\n                .map_err(|_| DeviceProviderError)?,\n        )\n        .map_err(|_| DeviceProviderError)?;\n        let shared = diffie_hellman(self.key.to_nonzero_scalar(), public.as_affine());\n        let aad = format!(\n            \"{context}\\n{}\\n{}\\n{}\",\n            envelope.client_node_id, envelope.request_id, envelope.expected_revision\n        );\n        let mut key = [0u8; 32];\n        Hkdf::<Sha256>::new(Some(context.as_bytes()), shared.raw_secret_bytes())\n            .expand(aad.as_bytes(), &mut key)\n            .map_err(|_| DeviceProviderError)?;\n        let cipher = Aes256Gcm::new_from_slice(&key).map_err(|_| DeviceProviderError)?;\n        key.fill(0);\n        let nonce = STANDARD\n            .decode(&envelope.nonce)\n            .map_err(|_| DeviceProviderError)?;\n        if nonce.len() != 12 {\n            return Err(DeviceProviderError);\n        }\n        let mut plaintext = cipher\n            .decrypt(\n                Nonce::from_slice(&nonce),\n                Payload {\n                    msg: &STANDARD\n                        .decode(&envelope.ciphertext)\n                        .map_err(|_| DeviceProviderError)?,\n                    aad: aad.as_bytes(),\n                },\n            )\n            .map_err(|_| DeviceProviderError)?;\n        let mutation = serde_json::from_slice(&plaintext);\n        plaintext.fill(0);\n        Ok(mutation?)\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn decrypt_configuration<T: serde::de::DeserializeOwned>(\n        &self,\n        envelope: &DeviceConfigurationEnvelope,\n        context: &str,\n    ) -> Result<T, DeviceProviderError> {\n        if envelope.ciphertext.len() > 65_536\n            || envelope.public_key.len() > 128\n            || envelope.nonce.len() > 24\n        {\n            return Err(DeviceProviderError);\n        }\n        let public = PublicKey::from_sec1_bytes(\n            &STANDARD\n                .decode(&envelope.public_key)\n                .map_err(|_| DeviceProviderError)?,\n        )\n        .map_err(|_| DeviceProviderError)?;\n        let shared = diffie_hellman(self.key.to_nonzero_scalar(), public.as_affine());\n        let aad = format!(\n            \"{context}\\n{}\\n{}\\n{}\",\n            envelope.client_node_id, envelope.request_id, envelope.expected_revision\n        );\n        let mut key = [0u8; 32];\n        Hkdf::<Sha256>::new(Some(context.as_bytes()), shared.raw_secret_bytes())\n            .expand(aad.as_bytes(), &mut key)\n            .map_err(|_| DeviceProviderError)?;\n        let cipher = Aes256Gcm::new_from_slice(&key).map_err(|_| DeviceProviderError)?;\n        key.fill(0);\n        let nonce = STANDARD\n            .decode(&envelope.nonce)\n            .map_err(|_| DeviceProviderError)?;\n        if nonce.len() != 12 {\n            return Err(DeviceProviderError);\n        }\n        let mut plaintext = cipher\n            .decrypt(\n                Nonce::from_slice(&nonce),\n                Payload {\n                    msg: &STANDARD\n                        .decode(&envelope.ciphertext)\n                        .map_err(|_| DeviceProviderError)?,\n                    aad: aad.as_bytes(),\n                },\n            )\n            .map_err(|_| DeviceProviderError)?;\n        let mutation = serde_json::from_slice(&plaintext);\n        plaintext.fill(0);\n        Ok(mutation?)\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.mutate",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.mutate",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 340,
+            "column": 5,
+            "end_line": 391,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 13197,
+            "end_byte": 15726,
+            "original_file_start_byte": 13197,
+            "original_file_end_byte": 15726,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "e53feb5ac0fbd455b381c0205cf78c1fded6fc59c165b54ff77a1f515193ee1b",
+            "source_line": "    fn mutate(&self, mut mutation: Mutation) -> Result<DeviceProviderOutcome, DeviceProviderError> {",
+            "source_excerpt": "fn mutate(&self, mut mutation: Mutation) -> Result<DeviceProviderOutcome, DeviceProviderError> {\n        if !valid_device_provider_config(&mutation.config) {\n            return Ok(DeviceProviderOutcome::InvalidRequest);\n        }\n        match mutation.operation.as_str() {\n            \"save\" => {\n                let secret = match mutation.api_key.take() {\n                    Some(value)\n                        if !value.is_empty()\n                            && value.len() <= 8192\n                            && !value.chars().any(char::is_control) =>\n                    {\n                        ResolvedSecret::from_bytes(value.into_bytes())\n                            .map_err(|_| DeviceProviderError)?\n                    }\n                    None => match self.resolve(&mutation.config.provider_id) {\n                        Ok((_, secret)) => secret,\n                        Err(_) => return Ok(DeviceProviderOutcome::InvalidRequest),\n                    },\n                    _ => return Ok(DeviceProviderOutcome::InvalidRequest),\n                };\n                let count: i64 = self.connection.query_row(\n                    \"SELECT count(*) FROM providers WHERE provider_id != ?1\",\n                    [&mutation.config.provider_id],\n                    |row| row.get(0),\n                )?;\n                if count >= 100 {\n                    return Ok(DeviceProviderOutcome::InvalidRequest);\n                }\n                self.connection.execute(\"INSERT INTO providers VALUES (?1, ?2, ?3) ON CONFLICT(provider_id) DO UPDATE SET config=excluded.config, secret=excluded.secret\",\n                    params![mutation.config.provider_id, serde_json::to_string(&mutation.config)?, secret.expose()])?;\n                self.connection.execute(\n                    \"UPDATE identity SET revision=revision+1 WHERE singleton=1\",\n                    [],\n                )?;\n                Ok(DeviceProviderOutcome::Saved)\n            }\n            \"test\" => Ok(DeviceProviderOutcome::Interrupted),\n            \"delete\" => {\n                self.connection.execute(\n                    \"DELETE FROM providers WHERE provider_id=?1\",\n                    [&mutation.config.provider_id],\n                )?;\n                self.connection.execute(\n                    \"UPDATE identity SET revision=revision+1 WHERE singleton=1\",\n                    [],\n                )?;\n                Ok(DeviceProviderOutcome::Deleted)\n            }\n            _ => Ok(DeviceProviderOutcome::InvalidRequest),\n        }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn mutate(&self, mut mutation: Mutation) -> Result<DeviceProviderOutcome, DeviceProviderError> {\n        if !valid_device_provider_config(&mutation.config) {\n            return Ok(DeviceProviderOutcome::InvalidRequest);\n        }\n        match mutation.operation.as_str() {\n            \"save\" => {\n                let secret = match mutation.api_key.take() {\n                    Some(value)\n                        if !value.is_empty()\n                            && value.len() <= 8192\n                            && !value.chars().any(char::is_control) =>\n                    {\n                        ResolvedSecret::from_bytes(value.into_bytes())\n                            .map_err(|_| DeviceProviderError)?\n                    }\n                    None => match self.resolve(&mutation.config.provider_id) {\n                        Ok((_, secret)) => secret,\n                        Err(_) => return Ok(DeviceProviderOutcome::InvalidRequest),\n                    },\n                    _ => return Ok(DeviceProviderOutcome::InvalidRequest),\n                };\n                let count: i64 = self.connection.query_row(\n                    \"SELECT count(*) FROM providers WHERE provider_id != ?1\",\n                    [&mutation.config.provider_id],\n                    |row| row.get(0),\n                )?;\n                if count >= 100 {\n                    return Ok(DeviceProviderOutcome::InvalidRequest);\n                }\n                self.connection.execute(\"INSERT INTO providers VALUES (?1, ?2, ?3) ON CONFLICT(provider_id) DO UPDATE SET config=excluded.config, secret=excluded.secret\",\n                    params![mutation.config.provider_id, serde_json::to_string(&mutation.config)?, secret.expose()])?;\n                self.connection.execute(\n                    \"UPDATE identity SET revision=revision+1 WHERE singleton=1\",\n                    [],\n                )?;\n                Ok(DeviceProviderOutcome::Saved)\n            }\n            \"test\" => Ok(DeviceProviderOutcome::Interrupted),\n            \"delete\" => {\n                self.connection.execute(\n                    \"DELETE FROM providers WHERE provider_id=?1\",\n                    [&mutation.config.provider_id],\n                )?;\n                self.connection.execute(\n                    \"UPDATE identity SET revision=revision+1 WHERE singleton=1\",\n                    [],\n                )?;\n                Ok(DeviceProviderOutcome::Deleted)\n            }\n            _ => Ok(DeviceProviderOutcome::InvalidRequest),\n        }\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.test_provider",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.test_provider",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 393,
+            "column": 5,
+            "end_line": 465,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 15732,
+            "end_byte": 19038,
+            "original_file_start_byte": 15732,
+            "original_file_end_byte": 19038,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "fead27adaee46edd2c97d7608833715822c30b51e5178a096271be93b806c24d",
+            "source_line": "    fn test_provider(",
+            "source_excerpt": "fn test_provider(\n        &self,\n        mut mutation: Mutation,\n        request_id: &str,\n    ) -> Result<(), DeviceProviderError> {\n        use crate::{\n            CredentialLeakGate, ProviderAdapterInvocation, ProviderAdapterPort,\n            ProviderGatewayOpenReceipt, ProviderStreamControlAction,\n        };\n        use winwincode_api::generated::ModelRoute;\n        use winwincode_domain::{CredentialReferenceId, ModelExchangeId, RequestId};\n        let secret = match mutation.api_key.take() {\n            Some(key)\n                if !key.is_empty() && key.len() <= 8192 && !key.chars().any(char::is_control) =>\n            {\n                ResolvedSecret::from_bytes(key.into_bytes()).map_err(|_| DeviceProviderError)?\n            }\n            None => self.resolve(&mutation.config.provider_id)?.1,\n            _ => return Err(DeviceProviderError),\n        };\n        let model = mutation\n            .config\n            .model_ids\n            .first()\n            .ok_or(DeviceProviderError)?\n            .clone();\n        let id = format!(\n            \"0{}\",\n            &format!(\"{:X}\", Sha256::digest(request_id.as_bytes()))[..25]\n        );\n        let exchange = ModelExchangeId(format!(\"mdl_{id}\"));\n        let request = RequestId(format!(\"req_{id}\"));\n        let adapter_id = format!(\"device-probe-{id}\");\n        let payload = serde_json::to_vec(\n            &serde_json::json!({\"requestId\":request.0,\"provider\":mutation.config.provider_id,\"sessionId\":\"provider-connection-test\",\"threadId\":\"provider-connection-test\", \"request\":{\"model\":model,\"instructions\":\"Reply concisely.\",\"input\":[{\"type\":\"message\",\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"Reply OK.\"}]}],\"stream\":true,\"store\":false,\"tool_choice\":\"none\",\"parallel_tool_calls\":false}}),\n        )?;\n        let adapter = adapter(&mutation.config)?;\n        let mut leak_gate = CredentialLeakGate::new();\n        leak_gate.track_secret(&secret);\n        adapter\n            .open(\n                &ProviderAdapterInvocation {\n                    model_exchange_id: &exchange,\n                    request_id: &request,\n                    adapter_request_id: &adapter_id,\n                    model_id: &model,\n                    content_type: \"application/json\",\n                    payload: &payload,\n                },\n                &secret,\n            )\n            .map_err(|_| DeviceProviderError)?;\n        drop(secret);\n        let receipt = ProviderGatewayOpenReceipt {\n            model_exchange_id: exchange.clone(),\n            request_id: request,\n            route: ModelRoute {\n                provider_id: mutation.config.provider_id,\n                model_id: model,\n                credential_reference_id: CredentialReferenceId(format!(\"crd_{id}\")),\n            },\n            adapter_request_id: adapter_id.clone(),\n            idempotent_replay: false,\n            stream_leak_gate: leak_gate,\n        };\n        let result = adapter.drain_canonical(&receipt);\n        let _ = adapter.control(&exchange, &adapter_id, ProviderStreamControlAction::Release);\n        let completion = result.map_err(|_| DeviceProviderError)?;\n        if completion.terminal.outcome() != crate::ProviderGatewayTerminalOutcome::Succeeded {\n            return Err(DeviceProviderError);\n        }\n        Ok(())\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn test_provider(\n        &self,\n        mut mutation: Mutation,\n        request_id: &str,\n    ) -> Result<(), DeviceProviderError> {\n        use crate::{\n            CredentialLeakGate, ProviderAdapterInvocation, ProviderAdapterPort,\n            ProviderGatewayOpenReceipt, ProviderStreamControlAction,\n        };\n        use winwincode_api::generated::ModelRoute;\n        use winwincode_domain::{CredentialReferenceId, ModelExchangeId, RequestId};\n        let secret = match mutation.api_key.take() {\n            Some(key)\n                if !key.is_empty() && key.len() <= 8192 && !key.chars().any(char::is_control) =>\n            {\n                ResolvedSecret::from_bytes(key.into_bytes()).map_err(|_| DeviceProviderError)?\n            }\n            None => self.resolve(&mutation.config.provider_id)?.1,\n            _ => return Err(DeviceProviderError),\n        };\n        let model = mutation\n            .config\n            .model_ids\n            .first()\n            .ok_or(DeviceProviderError)?\n            .clone();\n        let id = format!(\n            \"0{}\",\n            &format!(\"{:X}\", Sha256::digest(request_id.as_bytes()))[..25]\n        );\n        let exchange = ModelExchangeId(format!(\"mdl_{id}\"));\n        let request = RequestId(format!(\"req_{id}\"));\n        let adapter_id = format!(\"device-probe-{id}\");\n        let payload = serde_json::to_vec(\n            &serde_json::json!({\"requestId\":request.0,\"provider\":mutation.config.provider_id,\"sessionId\":\"provider-connection-test\",\"threadId\":\"provider-connection-test\", \"request\":{\"model\":model,\"instructions\":\"Reply concisely.\",\"input\":[{\"type\":\"message\",\"role\":\"user\",\"content\":[{\"type\":\"input_text\",\"text\":\"Reply OK.\"}]}],\"stream\":true,\"store\":false,\"tool_choice\":\"none\",\"parallel_tool_calls\":false}}),\n        )?;\n        let adapter = adapter(&mutation.config)?;\n        let mut leak_gate = CredentialLeakGate::new();\n        leak_gate.track_secret(&secret);\n        adapter\n            .open(\n                &ProviderAdapterInvocation {\n                    model_exchange_id: &exchange,\n                    request_id: &request,\n                    adapter_request_id: &adapter_id,\n                    model_id: &model,\n                    content_type: \"application/json\",\n                    payload: &payload,\n                },\n                &secret,\n            )\n            .map_err(|_| DeviceProviderError)?;\n        drop(secret);\n        let receipt = ProviderGatewayOpenReceipt {\n            model_exchange_id: exchange.clone(),\n            request_id: request,\n            route: ModelRoute {\n                provider_id: mutation.config.provider_id,\n                model_id: model,\n                credential_reference_id: CredentialReferenceId(format!(\"crd_{id}\")),\n            },\n            adapter_request_id: adapter_id.clone(),\n            idempotent_replay: false,\n            stream_leak_gate: leak_gate,\n        };\n        let result = adapter.drain_canonical(&receipt);\n        let _ = adapter.control(&exchange, &adapter_id, ProviderStreamControlAction::Release);\n        let completion = result.map_err(|_| DeviceProviderError)?;\n        if completion.terminal.outcome() != crate::ProviderGatewayTerminalOutcome::Succeeded {\n            return Err(DeviceProviderError);\n        }\n        Ok(())\n    }"
+        },
+        {
+          "symbol": "DeviceProviderStore.resolve",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.resolve",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 471,
+            "column": 5,
+            "end_line": 486,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 19226,
+            "end_byte": 19887,
+            "original_file_start_byte": 19226,
+            "original_file_end_byte": 19887,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "9dc06a25f0ab2f8a2970d644009e84cd3794d1f937d92c430022669301c01185",
+            "source_line": "    pub fn resolve(",
+            "source_excerpt": "pub fn resolve(\n        &self,\n        provider_id: &str,\n    ) -> Result<(DeviceProviderConfig, ResolvedSecret), DeviceProviderError> {\n        let (config, secret): (String, Vec<u8>) = self.connection.query_row(\n            \"SELECT config, secret FROM providers WHERE provider_id=?1\",\n            [provider_id],\n            |row| Ok((row.get(0)?, row.get(1)?)),\n        )?;\n        let secret = ResolvedSecret::from_bytes(secret).map_err(|_| DeviceProviderError)?;\n        let config = serde_json::from_str(&config)?;\n        if !valid_device_provider_config(&config) {\n            return Err(DeviceProviderError);\n        }\n        Ok((config, secret))\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn resolve(\n        &self,\n        provider_id: &str,\n    ) -> Result<(DeviceProviderConfig, ResolvedSecret), DeviceProviderError> {\n        let (config, secret): (String, Vec<u8>) = self.connection.query_row(\n            \"SELECT config, secret FROM providers WHERE provider_id=?1\",\n            [provider_id],\n            |row| Ok((row.get(0)?, row.get(1)?)),\n        )?;\n        let secret = ResolvedSecret::from_bytes(secret).map_err(|_| DeviceProviderError)?;\n        let config = serde_json::from_str(&config)?;\n        if !valid_device_provider_config(&config) {\n            return Err(DeviceProviderError);\n        }\n        Ok((config, secret))\n    }"
+        },
+        {
+          "symbol": "new_secret_key",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#new_secret_key",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 489,
+            "column": 1,
+            "end_line": 499,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 19891,
+            "end_byte": 20220,
+            "original_file_start_byte": 19891,
+            "original_file_end_byte": 20220,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "dee584c6982eed64dbe6d84a2f8cdf1fa43270df8808e5006afbfdb222647d76",
+            "source_line": "fn new_secret_key() -> Result<SecretKey, DeviceProviderError> {",
+            "source_excerpt": "fn new_secret_key() -> Result<SecretKey, DeviceProviderError> {\n    loop {\n        let mut bytes = [0u8; 32];\n        getrandom::fill(&mut bytes).map_err(|_| DeviceProviderError)?;\n        let key = SecretKey::from_slice(&bytes);\n        bytes.fill(0);\n        if let Ok(key) = key {\n            return Ok(key);\n        }\n    }\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn new_secret_key() -> Result<SecretKey, DeviceProviderError> {\n    loop {\n        let mut bytes = [0u8; 32];\n        getrandom::fill(&mut bytes).map_err(|_| DeviceProviderError)?;\n        let key = SecretKey::from_slice(&bytes);\n        bytes.fill(0);\n        if let Ok(key) = key {\n            return Ok(key);\n        }\n    }\n}"
+        },
+        {
+          "symbol": "adapter",
+          "graph_node_id": "rust:crates/winwincode-provider/src/device_store#adapter",
+          "location": {
+            "file": "crates/winwincode-provider/src/device_store.rs",
+            "line": 526,
+            "column": 1,
+            "end_line": 555,
+            "end_column": 2,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 21102,
+            "end_byte": 22265,
+            "original_file_start_byte": 21102,
+            "original_file_end_byte": 22265,
+            "source_hash": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "a09c455b3453c33045b1e089501e37f50e2824f2b58415936ec7f10d86694b9a",
+            "source_line": "pub(crate) fn adapter(",
+            "source_excerpt": "pub(crate) fn adapter(\n    config: &DeviceProviderConfig,\n) -> Result<HttpsSseProviderAdapter, DeviceProviderError> {\n    let mut transport = HttpsSseProviderConfig::try_new(\n        config.provider_id.clone(),\n        config.endpoint.clone(),\n        HttpsSseProviderTimeouts {\n            connect: Duration::from_secs(15),\n            idle: Duration::from_mins(1),\n            total: Duration::from_mins(5),\n        },\n        HttpsSseProviderLimits {\n            response_bytes: 16 * 1024 * 1024,\n            event_bytes: 1024 * 1024,\n            events: 65536,\n        },\n    )\n    .map_err(|_| DeviceProviderError)?;\n    if let Some(path) = std::env::var_os(DEVICE_PROVIDER_TLS_ROOT_DER_ENVIRONMENT) {\n        transport = transport\n            .with_specific_tls_roots(vec![fs::read(path)?])\n            .map_err(|_| DeviceProviderError)?;\n    }\n    if config.protocol == DeviceProviderProtocol::AnthropicMessages {\n        transport = transport\n            .with_anthropic_messages(8192, ProviderTokenPricing::default())\n            .map_err(|_| DeviceProviderError)?;\n    }\n    HttpsSseProviderAdapter::try_new(transport).map_err(|_| DeviceProviderError)\n}",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "eeaad9ed2a559eb9c3d880b3e6968a47773ec4af18ddc3fb55aba6db3ffdeff5",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub(crate) fn adapter(\n    config: &DeviceProviderConfig,\n) -> Result<HttpsSseProviderAdapter, DeviceProviderError> {\n    let mut transport = HttpsSseProviderConfig::try_new(\n        config.provider_id.clone(),\n        config.endpoint.clone(),\n        HttpsSseProviderTimeouts {\n            connect: Duration::from_secs(15),\n            idle: Duration::from_mins(1),\n            total: Duration::from_mins(5),\n        },\n        HttpsSseProviderLimits {\n            response_bytes: 16 * 1024 * 1024,\n            event_bytes: 1024 * 1024,\n            events: 65536,\n        },\n    )\n    .map_err(|_| DeviceProviderError)?;\n    if let Some(path) = std::env::var_os(DEVICE_PROVIDER_TLS_ROOT_DER_ENVIRONMENT) {\n        transport = transport\n            .with_specific_tls_roots(vec![fs::read(path)?])\n            .map_err(|_| DeviceProviderError)?;\n    }\n    if config.protocol == DeviceProviderProtocol::AnthropicMessages {\n        transport = transport\n            .with_anthropic_messages(8192, ProviderTokenPricing::default())\n            .map_err(|_| DeviceProviderError)?;\n    }\n    HttpsSseProviderAdapter::try_new(transport).map_err(|_| DeviceProviderError)\n}"
+        }
+      ]
+    },
+    "crates/winwincode-provider/src/types.rs": {
+      "issues": [],
+      "definitions": [
+        {
+          "symbol": "ProviderGatewayOpenReceipt.stream_leak_gate",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#ProviderGatewayOpenReceipt.stream_leak_gate",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 267,
+            "column": 5,
+            "end_line": 269,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 7808,
+            "end_byte": 7921,
+            "original_file_start_byte": 7808,
+            "original_file_end_byte": 7921,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "462b9110a021916a2bb9929c6e36bb10e7ae2760f5b049226a4fdae48e813211",
+            "source_line": "    pub fn stream_leak_gate(&self) -> CredentialLeakGate {",
+            "source_excerpt": "pub fn stream_leak_gate(&self) -> CredentialLeakGate {\n        self.stream_leak_gate.fingerprint_snapshot()\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn stream_leak_gate(&self) -> CredentialLeakGate {\n        self.stream_leak_gate.fingerprint_snapshot()\n    }"
+        },
+        {
+          "symbol": "ModelAttemptFailureFact.from_gateway",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#ModelAttemptFailureFact.from_gateway",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 401,
+            "column": 5,
+            "end_line": 435,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 12140,
+            "end_byte": 14024,
+            "original_file_start_byte": 12140,
+            "original_file_end_byte": 14024,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "8ee5eb35fa80f86f5b1262ee4875dba48e5e76cfe9019ee45d14039a4ed83684",
+            "source_line": "    pub const fn from_gateway(",
+            "source_excerpt": "pub const fn from_gateway(\n        kind: ProviderGatewayErrorKind,\n        certainty: ModelExecutionCertainty,\n    ) -> Self {\n        let kind = match kind {\n            ProviderGatewayErrorKind::AdapterRateLimited => ModelAttemptFailureKind::RateLimit,\n            ProviderGatewayErrorKind::AdapterUnavailable\n            | ProviderGatewayErrorKind::IdentityUnavailable\n            | ProviderGatewayErrorKind::RouteUnavailable\n            | ProviderGatewayErrorKind::AdmissionUnavailable\n            | ProviderGatewayErrorKind::SettlementUnavailable\n            | ProviderGatewayErrorKind::Storage => ModelAttemptFailureKind::ProviderUnavailable,\n            ProviderGatewayErrorKind::AdapterProtocol => ModelAttemptFailureKind::Protocol,\n            ProviderGatewayErrorKind::AdapterRejected\n            | ProviderGatewayErrorKind::InvalidRequest\n            | ProviderGatewayErrorKind::IdentityDenied\n            | ProviderGatewayErrorKind::RouteMismatch\n            | ProviderGatewayErrorKind::ProviderNotFound\n            | ProviderGatewayErrorKind::ProviderDisabled\n            | ProviderGatewayErrorKind::ModelNotFound\n            | ProviderGatewayErrorKind::ModelDisabled\n            | ProviderGatewayErrorKind::StructuredOutputUnsupported\n            | ProviderGatewayErrorKind::AdapterNotRegistered\n            | ProviderGatewayErrorKind::ExchangeConflict\n            | ProviderGatewayErrorKind::ExchangeNotFound\n            | ProviderGatewayErrorKind::TerminalConflict\n            | ProviderGatewayErrorKind::AdmissionDenied\n            | ProviderGatewayErrorKind::CredentialLeak => ModelAttemptFailureKind::InvalidRequest,\n            ProviderGatewayErrorKind::CredentialUnavailable\n            | ProviderGatewayErrorKind::CredentialScopeMismatch => {\n                ModelAttemptFailureKind::Authentication\n            }\n        };\n        Self { kind, certainty }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub const fn from_gateway(\n        kind: ProviderGatewayErrorKind,\n        certainty: ModelExecutionCertainty,\n    ) -> Self {\n        let kind = match kind {\n            ProviderGatewayErrorKind::AdapterRateLimited => ModelAttemptFailureKind::RateLimit,\n            ProviderGatewayErrorKind::AdapterUnavailable\n            | ProviderGatewayErrorKind::IdentityUnavailable\n            | ProviderGatewayErrorKind::RouteUnavailable\n            | ProviderGatewayErrorKind::AdmissionUnavailable\n            | ProviderGatewayErrorKind::SettlementUnavailable\n            | ProviderGatewayErrorKind::Storage => ModelAttemptFailureKind::ProviderUnavailable,\n            ProviderGatewayErrorKind::AdapterProtocol => ModelAttemptFailureKind::Protocol,\n            ProviderGatewayErrorKind::AdapterRejected\n            | ProviderGatewayErrorKind::InvalidRequest\n            | ProviderGatewayErrorKind::IdentityDenied\n            | ProviderGatewayErrorKind::RouteMismatch\n            | ProviderGatewayErrorKind::ProviderNotFound\n            | ProviderGatewayErrorKind::ProviderDisabled\n            | ProviderGatewayErrorKind::ModelNotFound\n            | ProviderGatewayErrorKind::ModelDisabled\n            | ProviderGatewayErrorKind::StructuredOutputUnsupported\n            | ProviderGatewayErrorKind::AdapterNotRegistered\n            | ProviderGatewayErrorKind::ExchangeConflict\n            | ProviderGatewayErrorKind::ExchangeNotFound\n            | ProviderGatewayErrorKind::TerminalConflict\n            | ProviderGatewayErrorKind::AdmissionDenied\n            | ProviderGatewayErrorKind::CredentialLeak => ModelAttemptFailureKind::InvalidRequest,\n            ProviderGatewayErrorKind::CredentialUnavailable\n            | ProviderGatewayErrorKind::CredentialScopeMismatch => {\n                ModelAttemptFailureKind::Authentication\n            }\n        };\n        Self { kind, certainty }\n    }"
+        },
+        {
+          "symbol": "ResolvedSecret.from_bytes",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#ResolvedSecret.from_bytes",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 499,
+            "column": 5,
+            "end_line": 504,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 16561,
+            "end_byte": 16756,
+            "original_file_start_byte": 16561,
+            "original_file_end_byte": 16756,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "86818943ae4d4b9d7b907916eddf9d1e3fa0d9d6a6ce15927ba378e9c1ee6ffc",
+            "source_line": "    pub fn from_bytes(bytes: Vec<u8>) -> Result<Self, SecretStoreError> {",
+            "source_excerpt": "pub fn from_bytes(bytes: Vec<u8>) -> Result<Self, SecretStoreError> {\n        if bytes.is_empty() {\n            return Err(SecretStoreError::corrupt());\n        }\n        Ok(Self { bytes })\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub fn from_bytes(bytes: Vec<u8>) -> Result<Self, SecretStoreError> {\n        if bytes.is_empty() {\n            return Err(SecretStoreError::corrupt());\n        }\n        Ok(Self { bytes })\n    }"
+        },
+        {
+          "symbol": "<ResolvedSecret as fmt::Debug>.fmt",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#<ResolvedSecret as fmt::Debug>.fmt",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 514,
+            "column": 5,
+            "end_line": 516,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 16938,
+            "end_byte": 17068,
+            "original_file_start_byte": 16938,
+            "original_file_end_byte": 17068,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "a7e849d29463d19101f7bc5bf1c36fb3acea0a91bb93b0862e1988b65953067f",
+            "source_line": "    fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {",
+            "source_excerpt": "fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {\n        formatter.write_str(\"ResolvedSecret([REDACTED])\")\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "fn fmt(&self, formatter: &mut fmt::Formatter<'_>) -> fmt::Result {\n        formatter.write_str(\"ResolvedSecret([REDACTED])\")\n    }"
+        },
+        {
+          "symbol": "SecretStoreError.missing",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#SecretStoreError.missing",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 544,
+            "column": 5,
+            "end_line": 549,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 17684,
+            "end_byte": 17849,
+            "original_file_start_byte": 17684,
+            "original_file_end_byte": 17849,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "c3378cf731cf8c6bd6b6d66c3262c8dd446a8690d7866b6d896fd40581073493",
+            "source_line": "    pub const fn missing() -> Self {",
+            "source_excerpt": "pub const fn missing() -> Self {\n        Self {\n            kind: SecretStoreErrorKind::Missing,\n            message: \"Credential secret is missing\",\n        }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub const fn missing() -> Self {\n        Self {\n            kind: SecretStoreErrorKind::Missing,\n            message: \"Credential secret is missing\",\n        }\n    }"
+        },
+        {
+          "symbol": "SecretStoreError.version_conflict",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#SecretStoreError.version_conflict",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 552,
+            "column": 5,
+            "end_line": 557,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 17871,
+            "end_byte": 18065,
+            "original_file_start_byte": 17871,
+            "original_file_end_byte": 18065,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "4fad03d627aa21c9bf571e4f1769aa7a3dbccaab9afbaa652564d2063bad4658",
+            "source_line": "    pub const fn version_conflict() -> Self {",
+            "source_excerpt": "pub const fn version_conflict() -> Self {\n        Self {\n            kind: SecretStoreErrorKind::VersionConflict,\n            message: \"Credential secret version does not match\",\n        }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub const fn version_conflict() -> Self {\n        Self {\n            kind: SecretStoreErrorKind::VersionConflict,\n            message: \"Credential secret version does not match\",\n        }\n    }"
+        },
+        {
+          "symbol": "SecretStoreError.unavailable",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#SecretStoreError.unavailable",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 560,
+            "column": 5,
+            "end_line": 565,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 18087,
+            "end_byte": 18270,
+            "original_file_start_byte": 18087,
+            "original_file_end_byte": 18270,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "a009d4e8e33f62845cd97bf7e02c216d24e619538c0d60bea082ae7ad81f38d0",
+            "source_line": "    pub const fn unavailable() -> Self {",
+            "source_excerpt": "pub const fn unavailable() -> Self {\n        Self {\n            kind: SecretStoreErrorKind::Unavailable,\n            message: \"Credential secret store is unavailable\",\n        }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub const fn unavailable() -> Self {\n        Self {\n            kind: SecretStoreErrorKind::Unavailable,\n            message: \"Credential secret store is unavailable\",\n        }\n    }"
+        },
+        {
+          "symbol": "SecretStoreError.corrupt",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#SecretStoreError.corrupt",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 568,
+            "column": 5,
+            "end_line": 573,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 18292,
+            "end_byte": 18464,
+            "original_file_start_byte": 18292,
+            "original_file_end_byte": 18464,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "757d9daeaba5d97005ad87bd0526b3b24d15b933e3554b5eb3eb64198664f64a",
+            "source_line": "    pub const fn corrupt() -> Self {",
+            "source_excerpt": "pub const fn corrupt() -> Self {\n        Self {\n            kind: SecretStoreErrorKind::Corrupt,\n            message: \"Credential secret record is invalid\",\n        }\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub const fn corrupt() -> Self {\n        Self {\n            kind: SecretStoreErrorKind::Corrupt,\n            message: \"Credential secret record is invalid\",\n        }\n    }"
+        },
+        {
+          "symbol": "SecretStoreError.kind",
+          "graph_node_id": "rust:crates/winwincode-provider/src/types#SecretStoreError.kind",
+          "location": {
+            "file": "crates/winwincode-provider/src/types.rs",
+            "line": 576,
+            "column": 5,
+            "end_line": 578,
+            "end_column": 6,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 18486,
+            "end_byte": 18560,
+            "original_file_start_byte": 18486,
+            "original_file_end_byte": 18560,
+            "source_hash": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "e62b714547409ec957cb97f51b452c8eef17e990f42e9e04779408a46072e477",
+            "source_line": "    pub const fn kind(&self) -> SecretStoreErrorKind {",
+            "source_excerpt": "pub const fn kind(&self) -> SecretStoreErrorKind {\n        self.kind\n    }",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "ad93b1ff0b0ea150e68bc29ac876c193bde68cbf3f779489c371f38faa4b2179",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+              "original_text_utf8_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "source": "pub const fn kind(&self) -> SecretStoreErrorKind {\n        self.kind\n    }"
+        }
+      ]
+    }
+  },
+  "target_executed": false,
+  "provider_source_files": [
+    "crates/winwincode-provider/src/credential_leak_gate.rs",
+    "crates/winwincode-provider/src/device_extensions.rs",
+    "crates/winwincode-provider/src/device_model.rs",
+    "crates/winwincode-provider/src/device_store.rs",
+    "crates/winwincode-provider/src/jev.rs",
+    "crates/winwincode-provider/src/lib.rs",
+    "crates/winwincode-provider/src/mcp_connection.rs",
+    "crates/winwincode-provider/src/provider_anthropic.rs",
+    "crates/winwincode-provider/src/provider_https_sse.rs",
+    "crates/winwincode-provider/src/provider_stream.rs",
+    "crates/winwincode-provider/src/types.rs"
+  ]
+}

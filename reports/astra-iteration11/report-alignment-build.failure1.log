@@ -1,0 +1,11 @@
+usage: build_report_alignment.py [-h] [--formal-artifacts-closed]
+                                 [--catalog CATALOG]
+                                 [--goal-ledger GOAL_LEDGER]
+                                 [--codepatchbay-report CODEPATCHBAY_REPORT]
+                                 [--codepatchbay-findings CODEPATCHBAY_FINDINGS]
+                                 [--codepatchbay-policy CODEPATCHBAY_POLICY]
+                                 [--winwincode-report WINWINCODE_REPORT]
+                                 [--winwincode-findings WINWINCODE_FINDINGS]
+                                 [--winwincode-policy WINWINCODE_POLICY]
+                                 [--output OUTPUT]
+build_report_alignment.py: error: Object projection does not match: codepatchbay-configured-findings.json

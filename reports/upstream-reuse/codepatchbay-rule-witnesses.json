@@ -1,0 +1,851 @@
+{
+  "snapshot_id": "4376321a4081901f9a62e74b6a9a1cbedfacf1a2f2d68278ac2bbdf6ce3d8db2",
+  "source_hash": "d7e98cbcd1d5c8051ba92546903ebdfad7d0c2286c0b1d391e086a94a3d0fc17",
+  "policy_hash": "a9607312f965e4b149d225436b8809b5862c0cca60cdafad2621ee43246239d7",
+  "detector_version": "call-rules-3-axon",
+  "component_versions": {
+    "maintenance": {
+      "backend": "cocoindex",
+      "global_detection": "full",
+      "granularity": "language",
+      "protocol": 1,
+      "version": "1.0.25"
+    },
+    "python": {
+      "analyzer": "python-ast-3-captured",
+      "parser": "cpython-3.12.14"
+    },
+    "tool": {
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+      "graph_backend": "axon-graph-core-1",
+      "source_hash": "f51101393a08d7e1177d53b4423276439cd4b65ccc6ac2198a463598961bcc73"
+    },
+    "typescript": {
+      "analyzer": "typescript-tree-sitter-call-1",
+      "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+      "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+    }
+  },
+  "target_executed": false,
+  "target_tests_run": false,
+  "observations": [
+    {
+      "rule_id": "cpb-observed-cli-project-argument",
+      "kind": "required_call",
+      "from": "ts:cli/cpb#main",
+      "to": "ts:cli/cpb#projectArgForCommand",
+      "matched_source_ids": [
+        "ts:cli/cpb#main"
+      ],
+      "matched_target_ids": [
+        "ts:cli/cpb#projectArgForCommand"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:cli/cpb#main",
+          "node_ids": [
+            "ts:cli/cpb#main",
+            "ts:cli/cpb#projectArgForCommand"
+          ],
+          "edge_ids": [
+            "83d1e4de49e6c03482ef5a94"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "83d1e4de49e6c03482ef5a94",
+              "file": "cli/cpb.ts",
+              "line": 167,
+              "column": 25,
+              "expression": "projectArgForCommand",
+              "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+              "source_line": "      const projectArg = projectArgForCommand(cmd, cmdArgs);"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 8,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "2a4ecc9b1149013c04093f99",
+          "file": "cli/cpb.ts",
+          "line": 169,
+          "column": 53,
+          "expression": "import",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "        const { resolveHubRoot, getProject } = await import(path.join(CPB_EXECUTOR_ROOT, \"server\", \"services\", \"hub\", \"hub-registry.js\"));",
+          "resolution": "dynamic",
+          "reason": "动态 import 的加载与返回命名空间未展开"
+        },
+        {
+          "edge_id": "3f49ff1db56e593720a5f494",
+          "file": "cli/cpb.ts",
+          "line": 148,
+          "column": 18,
+          "expression": "args.slice",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "  const cmdArgs = args.slice(1);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "49cdd7c7477c3364f927cf87",
+          "file": "cli/cpb.ts",
+          "line": 170,
+          "column": 24,
+          "expression": "resolveHubRoot",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "        const hubRoot = resolveHubRoot(CPB_ROOT);",
+          "resolution": "dynamic",
+          "reason": "名称有重复声明、重赋值或条件初始化"
+        },
+        {
+          "edge_id": "7c566b49c5aa249195ea4628",
+          "file": "cli/cpb.ts",
+          "line": 171,
+          "column": 30,
+          "expression": "getProject",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "        const project = await getProject(hubRoot, projectArg);",
+          "resolution": "dynamic",
+          "reason": "名称有重复声明、重赋值或条件初始化"
+        },
+        {
+          "edge_id": "80eae50cb1e0a4537c489901",
+          "file": "cli/cpb.ts",
+          "line": 154,
+          "column": 38,
+          "expression": "import",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "  const mod = cmd in COMMANDS ? await import(path.join(CPB_EXECUTOR_ROOT, \"cli\", \"commands\", COMMANDS[cmd])) : null;",
+          "resolution": "dynamic",
+          "reason": "动态 import 的加载与返回命名空间未展开"
+        },
+        {
+          "edge_id": "cc1bfa9cd298ce75bf7fa983",
+          "file": "cli/cpb.ts",
+          "line": 136,
+          "column": 6,
+          "expression": "args.push",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "      args.push(arg);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "d931c96f87c720652cb5d5b2",
+          "file": "cli/cpb.ts",
+          "line": 186,
+          "column": 25,
+          "expression": "mod.run",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "    const result = await mod.run(cmdArgs, { cpbRoot: CPB_ROOT, executorRoot: CPB_EXECUTOR_ROOT, command: cmd });",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "e85282a55bd80fe015e2c573",
+          "file": "cli/cpb.ts",
+          "line": 165,
+          "column": 8,
+          "expression": "PROJECT_COMMANDS.has",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "    if (PROJECT_COMMANDS.has(cmd)) {",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-observed-task-result-rendering",
+      "kind": "required_call",
+      "from": "ts:cli/commands/task#renderTaskView",
+      "to": "ts:cli/commands/task#humanResultLine",
+      "matched_source_ids": [
+        "ts:cli/commands/task#renderTaskView"
+      ],
+      "matched_target_ids": [
+        "ts:cli/commands/task#humanResultLine"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:cli/commands/task#renderTaskView",
+          "node_ids": [
+            "ts:cli/commands/task#renderTaskView",
+            "ts:cli/commands/task#humanResultLine"
+          ],
+          "edge_ids": [
+            "3f05e38de9bb5c3a48fddaf9"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "3f05e38de9bb5c3a48fddaf9",
+              "file": "cli/commands/task.ts",
+              "line": 172,
+              "column": 21,
+              "expression": "humanResultLine",
+              "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+              "source_line": "  const resultLine = humanResultLine(view);"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 9,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "01f78c0f4732f9dacf09b661",
+          "file": "cli/commands/task.ts",
+          "line": 178,
+          "column": 18,
+          "expression": "lines.push",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "  if (resultLine) lines.push(`Result:   ${resultLine}`);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "0ae90147df756ece49bb2f5f",
+          "file": "cli/commands/task.ts",
+          "line": 169,
+          "column": 8,
+          "expression": "view.progress.label.trim",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "      ? view.progress.label.trim()",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "2d2b0473c9479c5b91f2ff58",
+          "file": "cli/commands/task.ts",
+          "line": 176,
+          "column": 2,
+          "expression": "lines.push",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "  lines.push(\"\");",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "3db807e63bc2badf23c8b892",
+          "file": "cli/commands/task.ts",
+          "line": 180,
+          "column": 2,
+          "expression": "lines.push",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "  lines.push(`Next:     ${nextStep}`);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "445ae326d0afd612b15107a1",
+          "file": "cli/commands/task.ts",
+          "line": 179,
+          "column": 21,
+          "expression": "lines.push",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "  if (progressLabel) lines.push(`Progress: ${progressLabel}`);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "5144d1ced26497b677eebf02",
+          "file": "cli/commands/task.ts",
+          "line": 164,
+          "column": 56,
+          "expression": "view.summary.trim",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "  const rawSummary = typeof view.summary === \"string\" ? view.summary.trim() : \"\";",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "90c8dcd7401f70ab2ff9fc2d",
+          "file": "cli/commands/task.ts",
+          "line": 181,
+          "column": 14,
+          "expression": "lines.join",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "  console.log(lines.join(\"\\n\"));",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "a81f86d2be19b615517d83fd",
+          "file": "cli/commands/task.ts",
+          "line": 175,
+          "column": 2,
+          "expression": "lines.push",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "  lines.push(summary);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "af5569af47941d85c3b32e7c",
+          "file": "cli/commands/task.ts",
+          "line": 177,
+          "column": 2,
+          "expression": "lines.push",
+          "source_hash": "71096941810e0a573a6ab1c666c446c3772d855bdd359ca8f53c3e4fe4e7884f",
+          "source_line": "  lines.push(`State:    ${stateLine}`);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-observed-fix-shared-result-renderer",
+      "kind": "required_call",
+      "from": "ts:cli/commands/fix#followTask",
+      "to": "ts:cli/commands/task#humanResultLine",
+      "matched_source_ids": [
+        "ts:cli/commands/fix#followTask"
+      ],
+      "matched_target_ids": [
+        "ts:cli/commands/task#humanResultLine"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:cli/commands/fix#followTask",
+          "node_ids": [
+            "ts:cli/commands/fix#followTask",
+            "ts:cli/commands/task#humanResultLine"
+          ],
+          "edge_ids": [
+            "5cdd4d800d16e1b90a9a0d64"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "5cdd4d800d16e1b90a9a0d64",
+              "file": "cli/commands/fix.ts",
+              "line": 352,
+              "column": 29,
+              "expression": "humanResultLine",
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "source_line": "          const resultLine = humanResultLine(view);"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 6,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "5fa51ef3203873d880096760",
+          "file": "cli/commands/fix.ts",
+          "line": 359,
+          "column": 12,
+          "expression": "sleep",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_line": "      await sleep(pollIntervalMs);",
+          "resolution": "dynamic",
+          "reason": "binary_expression 动态调用目标未推断"
+        },
+        {
+          "edge_id": "6208cdd5359720c88bfd5a4b",
+          "file": "cli/commands/fix.ts",
+          "line": 318,
+          "column": 19,
+          "expression": "now",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_line": "  const deadline = now() + timeoutMs;",
+          "resolution": "dynamic",
+          "reason": "binary_expression 动态调用目标未推断"
+        },
+        {
+          "edge_id": "9e694a0ef552d61835673a91",
+          "file": "cli/commands/fix.ts",
+          "line": 337,
+          "column": 21,
+          "expression": "deps.projectTaskView",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_line": "        view = await deps.projectTaskView(cpbRoot, project, taskId);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "9e90620fed04499b2beefae8",
+          "file": "cli/commands/fix.ts",
+          "line": 343,
+          "column": 6,
+          "expression": "opts.onState",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_line": "      opts.onState?.(view);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "9f2f32cba45cf42c16cf3c61",
+          "file": "cli/commands/fix.ts",
+          "line": 358,
+          "column": 10,
+          "expression": "now",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_line": "      if (now() >= deadline) return ExitCode.FollowTimeout;",
+          "resolution": "dynamic",
+          "reason": "binary_expression 动态调用目标未推断"
+        },
+        {
+          "edge_id": "bce6d13ac9bfa6afa32dd70b",
+          "file": "cli/commands/fix.ts",
+          "line": 353,
+          "column": 26,
+          "expression": "out.log",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_line": "          if (resultLine) out.log(resultLine);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-observed-server-engine-delegation",
+      "kind": "required_call",
+      "from": "ts:server/services/engine-runner#runJobWithServices",
+      "to": "ts:core/engine/run-job#runJob",
+      "matched_source_ids": [
+        "ts:server/services/engine-runner#runJobWithServices"
+      ],
+      "matched_target_ids": [
+        "ts:core/engine/run-job#runJob"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:server/services/engine-runner#runJobWithServices",
+          "node_ids": [
+            "ts:server/services/engine-runner#runJobWithServices",
+            "ts:core/engine/run-job#runJob"
+          ],
+          "edge_ids": [
+            "4df4ad4b942785c1dd1e80df"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "4df4ad4b942785c1dd1e80df",
+              "file": "server/services/engine-runner.ts",
+              "line": 157,
+              "column": 9,
+              "expression": "runJob",
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "source_line": "  return runJob({"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-observed-runjob-crash-wrapper",
+      "kind": "required_call",
+      "from": "ts:core/engine/run-job#runJob",
+      "to": "ts:core/engine/run-job#runJobInner",
+      "matched_source_ids": [
+        "ts:core/engine/run-job#runJob"
+      ],
+      "matched_target_ids": [
+        "ts:core/engine/run-job#runJobInner"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:core/engine/run-job#runJob",
+          "node_ids": [
+            "ts:core/engine/run-job#runJob",
+            "ts:core/engine/run-job#runJobInner"
+          ],
+          "edge_ids": [
+            "8a62b9a8fbd15a264d220870"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "8a62b9a8fbd15a264d220870",
+              "file": "core/engine/run-job.ts",
+              "line": 75,
+              "column": 25,
+              "expression": "runJobInner",
+              "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+              "source_line": "    const result = await runJobInner(ctx);"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-observed-checklist-materialization",
+      "kind": "required_call",
+      "from": "ts:core/engine/run-job#runJobInner",
+      "to": "ts:core/engine/run-job-checklist-dag#freezeChecklistAndMaterializeDag",
+      "matched_source_ids": [
+        "ts:core/engine/run-job#runJobInner"
+      ],
+      "matched_target_ids": [
+        "ts:core/engine/run-job-checklist-dag#freezeChecklistAndMaterializeDag"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:core/engine/run-job#runJobInner",
+          "node_ids": [
+            "ts:core/engine/run-job#runJobInner",
+            "ts:core/engine/run-job-checklist-dag#freezeChecklistAndMaterializeDag"
+          ],
+          "edge_ids": [
+            "a8b37a8e02050a05938fed5a"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "a8b37a8e02050a05938fed5a",
+              "file": "core/engine/run-job.ts",
+              "line": 159,
+              "column": 29,
+              "expression": "freezeChecklistAndMaterializeDag",
+              "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+              "source_line": "  const materialized = await freezeChecklistAndMaterializeDag(ctx, {"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 4,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "01f6a651d8f27b69acbcca4b",
+          "file": "core/engine/run-job.ts",
+          "line": 170,
+          "column": 44,
+          "expression": "import",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_line": "      const { cleanupSessionCache } = await import(\"../agents/session-cache.js\");",
+          "resolution": "dynamic",
+          "reason": "动态 import 的加载与返回命名空间未展开"
+        },
+        {
+          "edge_id": "1bff28fa14f1df4104ac74fb",
+          "file": "core/engine/run-job.ts",
+          "line": 171,
+          "column": 12,
+          "expression": "cleanupSessionCache",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_line": "      await cleanupSessionCache(cpbRoot, { dataRoot, maxAgeMs: -1 });",
+          "resolution": "dynamic",
+          "reason": "名称有重复声明、重赋值或条件初始化"
+        },
+        {
+          "edge_id": "828963dde1dd18570785f146",
+          "file": "core/engine/run-job.ts",
+          "line": 140,
+          "column": 10,
+          "expression": "new Date().toISOString",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_line": "      ts: new Date().toISOString(),",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "b47a7d7ac89da931e0a0ef6b",
+          "file": "core/engine/run-job.ts",
+          "line": 127,
+          "column": 10,
+          "expression": "ctx.appendEvent",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_line": "    await ctx.appendEvent(cpbRoot, ctx.project, jobId, {",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-observed-runjob-to-dag-path",
+      "kind": "required_path",
+      "from": "ts:core/engine/run-job#runJob",
+      "to": "ts:core/engine/run-job-execute-dag#executeWorkflowDag",
+      "matched_source_ids": [
+        "ts:core/engine/run-job#runJob"
+      ],
+      "matched_target_ids": [
+        "ts:core/engine/run-job-execute-dag#executeWorkflowDag"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:core/engine/run-job#runJob",
+          "node_ids": [
+            "ts:core/engine/run-job#runJob",
+            "ts:core/engine/run-job#runJobInner",
+            "ts:core/engine/run-job-execute-dag#executeWorkflowDag"
+          ],
+          "edge_ids": [
+            "8a62b9a8fbd15a264d220870",
+            "7aee7dad0a2229111bb0a128"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "8a62b9a8fbd15a264d220870",
+              "file": "core/engine/run-job.ts",
+              "line": 75,
+              "column": 25,
+              "expression": "runJobInner",
+              "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+              "source_line": "    const result = await runJobInner(ctx);"
+            },
+            {
+              "edge_id": "7aee7dad0a2229111bb0a128",
+              "file": "core/engine/run-job.ts",
+              "line": 177,
+              "column": 9,
+              "expression": "executeWorkflowDag",
+              "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+              "source_line": "  return executeWorkflowDag(ctx, {"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-observed-task-view-sanitization",
+      "kind": "required_call",
+      "from": "ts:server/services/task/task-view#projectTaskView",
+      "to": "ts:core/contracts/task-view-fields#sanitizeTaskView",
+      "matched_source_ids": [
+        "ts:server/services/task/task-view#projectTaskView"
+      ],
+      "matched_target_ids": [
+        "ts:core/contracts/task-view-fields#sanitizeTaskView"
+      ],
+      "confirmed_paths": [
+        {
+          "source_id": "ts:server/services/task/task-view#projectTaskView",
+          "node_ids": [
+            "ts:server/services/task/task-view#projectTaskView",
+            "ts:core/contracts/task-view-fields#sanitizeTaskView"
+          ],
+          "edge_ids": [
+            "341c5bccfbdf59626f83cf08"
+          ],
+          "source_witnesses": [
+            {
+              "edge_id": "341c5bccfbdf59626f83cf08",
+              "file": "server/services/task/task-view.ts",
+              "line": 708,
+              "column": 20,
+              "expression": "sanitizeTaskView",
+              "source_hash": "367a352aa14d41db1624fc768eb6b7f9b6b1d91439f0e3fc0964a93863d80013",
+              "source_line": "  const sanitized = sanitizeTaskView(raw);"
+            }
+          ]
+        }
+      ],
+      "confirmed_connection_present": true,
+      "rule_finding_ids": [],
+      "rule_finding_statuses": [],
+      "unknown_outgoing_count": 2,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "bc13471bd54accf6d445a5c1",
+          "file": "server/services/task/task-view.ts",
+          "line": 628,
+          "column": 6,
+          "expression": "entries.filter",
+          "source_hash": "367a352aa14d41db1624fc768eb6b7f9b6b1d91439f0e3fc0964a93863d80013",
+          "source_line": "    ? entries.filter((e) => isRecord(e))",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "cca3b5970e6c3f893c0adc0e",
+          "file": "server/services/task/task-view.ts",
+          "line": 636,
+          "column": 4,
+          "expression": "entryList.find",
+          "source_hash": "367a352aa14d41db1624fc768eb6b7f9b6b1d91439f0e3fc0964a93863d80013",
+          "source_line": "    entryList.find((e) => stringValue(e.id) === taskId && stringValue(e.projectId) === project)",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-capability-dynamic-command-boundary",
+      "kind": "required_path",
+      "from": "ts:cli/cpb#main",
+      "to": "ts:cli/commands/task#run",
+      "matched_source_ids": [
+        "ts:cli/cpb#main"
+      ],
+      "matched_target_ids": [
+        "ts:cli/commands/task#run"
+      ],
+      "confirmed_paths": [],
+      "confirmed_connection_present": false,
+      "rule_finding_ids": [
+        "finding:08cfaa50bbe81dac80145609279b2add"
+      ],
+      "rule_finding_statuses": [
+        "uncertain"
+      ],
+      "unknown_outgoing_count": 8,
+      "unknown_outgoing_samples": [
+        {
+          "edge_id": "2a4ecc9b1149013c04093f99",
+          "file": "cli/cpb.ts",
+          "line": 169,
+          "column": 53,
+          "expression": "import",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "        const { resolveHubRoot, getProject } = await import(path.join(CPB_EXECUTOR_ROOT, \"server\", \"services\", \"hub\", \"hub-registry.js\"));",
+          "resolution": "dynamic",
+          "reason": "动态 import 的加载与返回命名空间未展开"
+        },
+        {
+          "edge_id": "3f49ff1db56e593720a5f494",
+          "file": "cli/cpb.ts",
+          "line": 148,
+          "column": 18,
+          "expression": "args.slice",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "  const cmdArgs = args.slice(1);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "49cdd7c7477c3364f927cf87",
+          "file": "cli/cpb.ts",
+          "line": 170,
+          "column": 24,
+          "expression": "resolveHubRoot",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "        const hubRoot = resolveHubRoot(CPB_ROOT);",
+          "resolution": "dynamic",
+          "reason": "名称有重复声明、重赋值或条件初始化"
+        },
+        {
+          "edge_id": "7c566b49c5aa249195ea4628",
+          "file": "cli/cpb.ts",
+          "line": 171,
+          "column": 30,
+          "expression": "getProject",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "        const project = await getProject(hubRoot, projectArg);",
+          "resolution": "dynamic",
+          "reason": "名称有重复声明、重赋值或条件初始化"
+        },
+        {
+          "edge_id": "80eae50cb1e0a4537c489901",
+          "file": "cli/cpb.ts",
+          "line": 154,
+          "column": 38,
+          "expression": "import",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "  const mod = cmd in COMMANDS ? await import(path.join(CPB_EXECUTOR_ROOT, \"cli\", \"commands\", COMMANDS[cmd])) : null;",
+          "resolution": "dynamic",
+          "reason": "动态 import 的加载与返回命名空间未展开"
+        },
+        {
+          "edge_id": "cc1bfa9cd298ce75bf7fa983",
+          "file": "cli/cpb.ts",
+          "line": 136,
+          "column": 6,
+          "expression": "args.push",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "      args.push(arg);",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "d931c96f87c720652cb5d5b2",
+          "file": "cli/cpb.ts",
+          "line": 186,
+          "column": 25,
+          "expression": "mod.run",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "    const result = await mod.run(cmdArgs, { cpbRoot: CPB_ROOT, executorRoot: CPB_EXECUTOR_ROOT, command: cmd });",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        },
+        {
+          "edge_id": "e85282a55bd80fe015e2c573",
+          "file": "cli/cpb.ts",
+          "line": 165,
+          "column": 8,
+          "expression": "PROJECT_COMMANDS.has",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_line": "    if (PROJECT_COMMANDS.has(cmd)) {",
+          "resolution": "dynamic",
+          "reason": "对象/this/类方法分派不推断为确定调用"
+        }
+      ],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    },
+    {
+      "rule_id": "cpb-observed-pure-result-helper-no-engine-call",
+      "kind": "forbidden_call",
+      "from": "ts:cli/commands/task#humanResultLine",
+      "to": "ts:core/engine/run-job#runJob",
+      "matched_source_ids": [
+        "ts:cli/commands/task#humanResultLine"
+      ],
+      "matched_target_ids": [
+        "ts:core/engine/run-job#runJob"
+      ],
+      "confirmed_paths": [],
+      "confirmed_connection_present": false,
+      "rule_finding_ids": [
+        "finding:9908f03b75af0798641003d1a0adeb4f"
+      ],
+      "rule_finding_statuses": [
+        "uncertain"
+      ],
+      "unknown_outgoing_count": 0,
+      "unknown_outgoing_samples": [],
+      "unknown_samples_truncated": false,
+      "repository_approved_requirement": false,
+      "interpretation": "source relationship baseline; not a target functional pass/fail"
+    }
+  ]
+}

@@ -1,0 +1,169 @@
+[
+  {
+    "id": "wwc-report-chat-retained-request-identities",
+    "type": "message_identity_relations",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "chat_create",
+        "file": "apps/client/src/chat-delivery-creator.ts",
+        "symbol": "createChatDeliveryCreator.create"
+      },
+      {
+        "role": "chat_items_builder",
+        "file": "apps/client/src/community-control-plane-client.ts",
+        "symbol": "workItemsCreateCommand"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-captured-record-message-identities-v1"
+    ],
+    "provenance": {
+      "authority": "original-static-report-benchmark",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Declaration locators only. Field records and consumers derive from authenticated saved source; no paths or expected outcomes are provided."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected captured declarations are authenticated.",
+        "Ordinary generated data retains normal borrowed/copied field semantics; source reaching is conditional, not observed execution."
+      ],
+      "counterexamples": [
+        "Generic dispatch, wire equality, physical storage success and complete crash recovery are not inferred."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-worker-adapter-record-identities",
+    "type": "message_identity_relations",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "worker_control",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.accept_control"
+      },
+      {
+        "role": "worker_dispatch",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.accept_dispatch"
+      },
+      {
+        "role": "run_key_from_dispatch",
+        "file": "crates/winwincode-codex/src/contract.rs",
+        "symbol": "CodexRunKey.from_dispatch"
+      },
+      {
+        "role": "worker_start",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.start_dispatch"
+      },
+      {
+        "role": "adapter_ensure_thread",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "<ProductionCodexAdapter as CodexCoreAdapter>.ensure_thread"
+      },
+      {
+        "role": "adapter_submit",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn"
+      },
+      {
+        "role": "adapter_persist",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "ProductionCodexAdapter.persist_run"
+      },
+      {
+        "role": "adapter_session_for_thread",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "ProductionCodexAdapter.session_for_thread"
+      },
+      {
+        "role": "session_identity",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "session_identity"
+      },
+      {
+        "role": "adapter_profile",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "production_agent_session_config"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-captured-record-message-identities-v1"
+    ],
+    "provenance": {
+      "authority": "original-static-report-benchmark",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Declaration locators only. Field records and consumers derive from authenticated saved source; no paths or expected outcomes are provided."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected captured declarations are authenticated.",
+        "Ordinary generated data retains normal borrowed/copied field semantics; source reaching is conditional, not observed execution."
+      ],
+      "counterexamples": [
+        "Generic dispatch, wire equality, physical storage success and complete crash recovery are not inferred."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-outbox-ack-correlation-fields",
+    "type": "message_identity_relations",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "outbox_metadata",
+        "file": "crates/winwincode-codex/src/outbox.rs",
+        "symbol": "metadata"
+      },
+      {
+        "role": "outbox_response_target",
+        "file": "crates/winwincode-codex/src/outbox.rs",
+        "symbol": "response_target"
+      },
+      {
+        "role": "outbox_retain",
+        "file": "crates/winwincode-codex/src/outbox.rs",
+        "symbol": "ExecutionOutbox.retain_in_transaction"
+      },
+      {
+        "role": "outbox_ack",
+        "file": "crates/winwincode-codex/src/outbox.rs",
+        "symbol": "ExecutionOutbox.acknowledge_response"
+      },
+      {
+        "role": "outbox_correlate",
+        "file": "crates/winwincode-codex/src/outbox.rs",
+        "symbol": "correlation"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-captured-record-message-identities-v1",
+      "captured-literal-sql-positional-bindings-v1"
+    ],
+    "provenance": {
+      "authority": "original-static-report-benchmark",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Declaration locators only. Field records and consumers derive from authenticated saved source; no paths or expected outcomes are provided."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected captured declarations are authenticated.",
+        "Ordinary generated data retains normal borrowed/copied field semantics; source reaching is conditional, not observed execution."
+      ],
+      "counterexamples": [
+        "Generic dispatch, wire equality, physical storage success and complete crash recovery are not inferred."
+      ]
+    }
+  }
+]

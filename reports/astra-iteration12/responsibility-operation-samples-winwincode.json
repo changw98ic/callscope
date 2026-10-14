@@ -1,0 +1,4231 @@
+{
+  "development_query": true,
+  "not_formal_v14_result": true,
+  "saved_snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+  "saved_source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+  "saved_policy_hash": "c085aff2d4adffa22410a5ce818a1f3ec431665a595de0c4f2d575326c982aaa",
+  "saved_report_sha256": "01b324f5d68c082a673d034dc6117e53e7fb05c7c252f06107a794e388249135",
+  "report_projection_only_omits_unused_fields": true,
+  "supplemental_development_policy_sha256": "2045c242f432ee27bd83727a866725709cbc1d99d1d3e329bc412076bd56177b",
+  "supplemental_development_selector_count": 9,
+  "current_module_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+  "query_module_bytes_stable": true,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "samples": {
+    "binding_initializer": [
+      {
+        "id": "06e7a919b7ddc343853bbad7",
+        "operation_kind": "binding_initializer",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 193,
+            "column": 9,
+            "start_byte": 6845,
+            "end_byte": 6879,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/e242e66a3eb5ac2866b9da49",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "browser = options.window ?? window",
+          "node_kind": "variable_declarator",
+          "target": {
+            "node_kind": "identifier",
+            "source_text": "browser",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 193,
+              "column": 9,
+              "start_byte": 6845,
+              "end_byte": 6852,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/e5458f4ccf374dfa31b61b75",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653",
+              "root_name": "browser",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 193,
+                  "column": 9,
+                  "start_byte": 6845,
+                  "end_byte": 6879,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/e242e66a3eb5ac2866b9da49",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 193,
+                "column": 9,
+                "start_byte": 6845,
+                "end_byte": 6879,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/e242e66a3eb5ac2866b9da49",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "binary_expression",
+            "source_text": "options.window ?? window",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 193,
+              "column": 19,
+              "start_byte": 6855,
+              "end_byte": 6879,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/0174f7d85e765bd5b460c6b8",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "=",
+          "runtime_initialization_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653",
+            "root_name": "browser",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 193,
+                "column": 9,
+                "start_byte": 6845,
+                "end_byte": 6879,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/e242e66a3eb5ac2866b9da49",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "write_target_kind": "local_binding"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 193,
+            "column": 3,
+            "start_byte": 6839,
+            "end_byte": 6879,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/1f37028e912d0cb93908ad7c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "35cb9316c63d6fe77aa892affc0162801d60f82e84c937b48c739af2c2f25a4e"
+      },
+      {
+        "id": "66404b42f4a6cf80fad98a6f",
+        "operation_kind": "binding_initializer",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 194,
+            "column": 9,
+            "start_byte": 6888,
+            "end_byte": 6925,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/5b32641eab1ca6e05cbac157",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "document = options.root.ownerDocument",
+          "node_kind": "variable_declarator",
+          "target": {
+            "node_kind": "identifier",
+            "source_text": "document",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 194,
+              "column": 9,
+              "start_byte": 6888,
+              "end_byte": 6896,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/d62f7689fa533e473da85356",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "152e4042ad24438e61857ffdd66165398cf74e30c96afc15a8c4e593b527ba11",
+              "root_name": "document",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "152e4042ad24438e61857ffdd66165398cf74e30c96afc15a8c4e593b527ba11",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 194,
+                  "column": 9,
+                  "start_byte": 6888,
+                  "end_byte": 6925,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/5b32641eab1ca6e05cbac157",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "152e4042ad24438e61857ffdd66165398cf74e30c96afc15a8c4e593b527ba11",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 194,
+                "column": 9,
+                "start_byte": 6888,
+                "end_byte": 6925,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/5b32641eab1ca6e05cbac157",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "member_expression",
+            "source_text": "options.root.ownerDocument",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 194,
+              "column": 20,
+              "start_byte": 6899,
+              "end_byte": 6925,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/c6b7fe77cad23d1186e616b5",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+              "root_name": "options",
+              "member_path": [
+                "root",
+                "ownerDocument"
+              ],
+              "binding": {
+                "declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+                "kind": "parameter",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 190,
+                  "column": 38,
+                  "start_byte": 6755,
+                  "end_byte": 6805,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/af84f7818d6d987ca1dde371",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+              "kind": "parameter",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 190,
+                "column": 38,
+                "start_byte": 6755,
+                "end_byte": 6805,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/af84f7818d6d987ca1dde371",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [
+              "root",
+              "ownerDocument"
+            ],
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "=",
+          "runtime_initialization_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "152e4042ad24438e61857ffdd66165398cf74e30c96afc15a8c4e593b527ba11",
+            "root_name": "document",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "152e4042ad24438e61857ffdd66165398cf74e30c96afc15a8c4e593b527ba11",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 194,
+                "column": 9,
+                "start_byte": 6888,
+                "end_byte": 6925,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/5b32641eab1ca6e05cbac157",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "write_target_kind": "local_binding"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 194,
+            "column": 3,
+            "start_byte": 6882,
+            "end_byte": 6925,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/5a6190a8280c99ffa2502dec",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "aafa9fc503437d313bd774f6",
+            "to_operation_id": "66404b42f4a6cf80fad98a6f",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "64b10e8cc4b3d4726d2f21077b1de50656d80c78ba7ce7d5ed0d7995ec04c33f"
+      }
+    ],
+    "normal_source_order": [
+      {
+        "id": "aafa9fc503437d313bd774f6",
+        "operation_kind": "normal_source_order",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 194,
+            "column": 9,
+            "start_byte": 6888,
+            "end_byte": 6925,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/5b32641eab1ca6e05cbac157",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "before_operation_id": "06e7a919b7ddc343853bbad7",
+          "after_operation_id": "66404b42f4a6cf80fad98a6f",
+          "before_statement_index": 0,
+          "after_statement_index": 1,
+          "normal_reaching_required": true,
+          "causal_dependency_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 194,
+            "column": 3,
+            "start_byte": 6882,
+            "end_byte": 6925,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/5a6190a8280c99ffa2502dec",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "06e7a919b7ddc343853bbad7",
+            "to_operation_id": "aafa9fc503437d313bd774f6",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "7b666b214def8880db2cb5c1a81f9c49a4280dcdeedb59e30ecb8248ea10e3f3"
+      },
+      {
+        "id": "82ab9d3b729313919927fe54",
+        "operation_kind": "normal_source_order",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 195,
+            "column": 9,
+            "start_byte": 6934,
+            "end_byte": 6988,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/1a1e808591078d86b44aeb32",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "before_operation_id": "66404b42f4a6cf80fad98a6f",
+          "after_operation_id": "4f5860adf03450c1f9560b29",
+          "before_statement_index": 1,
+          "after_statement_index": 2,
+          "normal_reaching_required": true,
+          "causal_dependency_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 195,
+            "column": 3,
+            "start_byte": 6928,
+            "end_byte": 6988,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/a015bd367f05e8d66e1a2fc6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "66404b42f4a6cf80fad98a6f",
+            "to_operation_id": "82ab9d3b729313919927fe54",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "52e0d30d90e46714a125b844b1a9d64a0dc20b5a12296cae33708f9191a4170c"
+      }
+    ],
+    "call_argument_transfer": [
+      {
+        "id": "126867745ee51af1005b60b8",
+        "operation_kind": "call_argument_transfer",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 195,
+            "column": 28,
+            "start_byte": 6953,
+            "end_byte": 6988,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/e73da8ae8fe969db0d81f2f5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/e3b182bd22c2a0151cf39350",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/566a1aad8f23e7173ee3a8ee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 6,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "mountPreferences(browser, document)",
+          "node_kind": "call_expression",
+          "callee": {
+            "source_text": "mountPreferences",
+            "target_symbol": "ts:apps/client/src/preferences#mountPreferences",
+            "target_graph_node_id": "ts:apps/client/src/preferences#mountPreferences",
+            "binding_state": "authenticated_internal_call",
+            "authenticated_call_edge_id": "e3f0645515e3b509073e48cf",
+            "captured_call_edge_id": "e3f0645515e3b509073e48cf",
+            "captured_resolution": "resolved",
+            "binding_gaps": [],
+            "unknown_port_effects_remain_unknown": false
+          },
+          "receiver": null,
+          "argument_index": 0,
+          "argument_count": 2,
+          "argument": {
+            "node_kind": "identifier",
+            "source_text": "browser",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 195,
+              "column": 45,
+              "start_byte": 6970,
+              "end_byte": 6977,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/d7661ab21ec143179f6a6f3c",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653",
+              "root_name": "browser",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 193,
+                  "column": 9,
+                  "start_byte": 6845,
+                  "end_byte": 6879,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/e242e66a3eb5ac2866b9da49",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 193,
+                "column": 9,
+                "start_byte": 6845,
+                "end_byte": 6879,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/e242e66a3eb5ac2866b9da49",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "target_parameter": {
+            "file": "apps/client/src/preferences.ts",
+            "symbol": "mountPreferences",
+            "formal_parameter_index": 0,
+            "source_text": "browser: Window",
+            "location": {
+              "file": "apps/client/src/preferences.ts",
+              "line": 34,
+              "column": 34,
+              "start_byte": 1428,
+              "end_byte": 1443,
+              "source_hash": "336622ca0c22772e70969a2e006c924e939ed33edb6ffde01a01ae3c5a59b659",
+              "location_ref": "/source_location_index/8be48883aaa6ee6cec08cd42",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "8b278460c3222d46bbc1498cc53bf914a2f007ffe76f1e7a0fc1f3eea326dfc1",
+              "root_name": "browser",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "8b278460c3222d46bbc1498cc53bf914a2f007ffe76f1e7a0fc1f3eea326dfc1",
+                "kind": "parameter",
+                "location": {
+                  "file": "apps/client/src/preferences.ts",
+                  "line": 34,
+                  "column": 33,
+                  "start_byte": 1427,
+                  "end_byte": 1464,
+                  "source_hash": "336622ca0c22772e70969a2e006c924e939ed33edb6ffde01a01ae3c5a59b659",
+                  "location_ref": "/source_location_index/bb69aa591ba2e0928a741fc5",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "callee_activation_or_parameter_runtime_value_proven": false
+          },
+          "record_fields": [],
+          "interface_kind": "ordinary_captured_call_site",
+          "wire_or_storage_effect_inferred": false
+        },
+        "subject": {
+          "callee_source": "mountPreferences",
+          "argument_index": 0
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 195,
+            "column": 3,
+            "start_byte": 6928,
+            "end_byte": 6988,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/a015bd367f05e8d66e1a2fc6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "49449923a918008ea140ba2669c821a94a6ef8d00077439061b0a4b1a5dfa552"
+      },
+      {
+        "id": "e2805be889b30a9324c913a4",
+        "operation_kind": "call_argument_transfer",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 195,
+            "column": 28,
+            "start_byte": 6953,
+            "end_byte": 6988,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/e73da8ae8fe969db0d81f2f5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/e3b182bd22c2a0151cf39350",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/566a1aad8f23e7173ee3a8ee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 6,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "mountPreferences(browser, document)",
+          "node_kind": "call_expression",
+          "callee": {
+            "source_text": "mountPreferences",
+            "target_symbol": "ts:apps/client/src/preferences#mountPreferences",
+            "target_graph_node_id": "ts:apps/client/src/preferences#mountPreferences",
+            "binding_state": "authenticated_internal_call",
+            "authenticated_call_edge_id": "e3f0645515e3b509073e48cf",
+            "captured_call_edge_id": "e3f0645515e3b509073e48cf",
+            "captured_resolution": "resolved",
+            "binding_gaps": [],
+            "unknown_port_effects_remain_unknown": false
+          },
+          "receiver": null,
+          "argument_index": 1,
+          "argument_count": 2,
+          "argument": {
+            "node_kind": "identifier",
+            "source_text": "document",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 195,
+              "column": 54,
+              "start_byte": 6979,
+              "end_byte": 6987,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/77c5df6cc276a1618b08bb12",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "152e4042ad24438e61857ffdd66165398cf74e30c96afc15a8c4e593b527ba11",
+              "root_name": "document",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "152e4042ad24438e61857ffdd66165398cf74e30c96afc15a8c4e593b527ba11",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 194,
+                  "column": 9,
+                  "start_byte": 6888,
+                  "end_byte": 6925,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/5b32641eab1ca6e05cbac157",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "152e4042ad24438e61857ffdd66165398cf74e30c96afc15a8c4e593b527ba11",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 194,
+                "column": 9,
+                "start_byte": 6888,
+                "end_byte": 6925,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/5b32641eab1ca6e05cbac157",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "target_parameter": {
+            "file": "apps/client/src/preferences.ts",
+            "symbol": "mountPreferences",
+            "formal_parameter_index": 1,
+            "source_text": "document: Document",
+            "location": {
+              "file": "apps/client/src/preferences.ts",
+              "line": 34,
+              "column": 51,
+              "start_byte": 1445,
+              "end_byte": 1463,
+              "source_hash": "336622ca0c22772e70969a2e006c924e939ed33edb6ffde01a01ae3c5a59b659",
+              "location_ref": "/source_location_index/8b60ce03ab11051e1177af60",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "1364a20db90f24a9a81c7239b36c33303d65e0b49e2ed77014342fa0672b71a5",
+              "root_name": "document",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "1364a20db90f24a9a81c7239b36c33303d65e0b49e2ed77014342fa0672b71a5",
+                "kind": "parameter",
+                "location": {
+                  "file": "apps/client/src/preferences.ts",
+                  "line": 34,
+                  "column": 33,
+                  "start_byte": 1427,
+                  "end_byte": 1464,
+                  "source_hash": "336622ca0c22772e70969a2e006c924e939ed33edb6ffde01a01ae3c5a59b659",
+                  "location_ref": "/source_location_index/bb69aa591ba2e0928a741fc5",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "callee_activation_or_parameter_runtime_value_proven": false
+          },
+          "record_fields": [],
+          "interface_kind": "ordinary_captured_call_site",
+          "wire_or_storage_effect_inferred": false
+        },
+        "subject": {
+          "callee_source": "mountPreferences",
+          "argument_index": 1
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 195,
+            "column": 3,
+            "start_byte": 6928,
+            "end_byte": 6988,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/a015bd367f05e8d66e1a2fc6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "5ea629711638d7a2548164ae18da881a46d7ba9cef895f1017e243bbcd18a452"
+      }
+    ],
+    "record_construction": [
+      {
+        "id": "5c1094a2d016d51589fcb7c8",
+        "operation_kind": "record_construction",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 197,
+            "column": 46,
+            "start_byte": 7096,
+            "end_byte": 7103,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/fceb7aa7c1b26ed08adf91ca",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "{ now }",
+          "node_kind": "object",
+          "record_type_source": null,
+          "record_fields": [
+            {
+              "name": "now",
+              "source_text": "now",
+              "source_path": {
+                "root_declaration_id": "e8b80bf5454c72a341c0dd51bf8802af2ac645c02522024a633b8975458d8654",
+                "root_name": "now",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "e8b80bf5454c72a341c0dd51bf8802af2ac645c02522024a633b8975458d8654",
+                  "kind": "const",
+                  "location": {
+                    "file": "apps/client/src/application.ts",
+                    "line": 196,
+                    "column": 9,
+                    "start_byte": 6997,
+                    "end_byte": 7050,
+                    "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                    "location_ref": "/source_location_index/9ea401edf623373716090b24",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "binding": {
+                "declaration_id": "e8b80bf5454c72a341c0dd51bf8802af2ac645c02522024a633b8975458d8654",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 196,
+                  "column": 9,
+                  "start_byte": 6997,
+                  "end_byte": 7050,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/9ea401edf623373716090b24",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 197,
+                "column": 48,
+                "start_byte": 7098,
+                "end_byte": 7101,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/aef22fb5dd4b8f54b385ea56",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "closed": true,
+              "runtime_field_presence_or_value_proven": false
+            }
+          ],
+          "closed_captured_shape": true,
+          "result_binding": null,
+          "ordinary_data_semantics_not_automatically_assumed": true
+        },
+        "subject": {
+          "field_names": [
+            "now"
+          ],
+          "record_type_source": null
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 197,
+            "column": 3,
+            "start_byte": 7053,
+            "end_byte": 7104,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/822c2c5911134e9859342a9d",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 4,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "field_projection_from_record",
+            "from_operation_id": "eb96b215c2269dcc2b3087cb",
+            "to_operation_id": "5c1094a2d016d51589fcb7c8",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "field_name": "now",
+            "relation_meaning": "the captured field initializer references this lexical path; no current heap value equality"
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "a865818ca95d5e22364000d25f68c35bba3c82028f0418d66a88e1378ce96d6c"
+      },
+      {
+        "id": "6f0f0d314399fd9600c9471a",
+        "operation_kind": "record_construction",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 205,
+            "column": 76,
+            "start_byte": 7538,
+            "end_byte": 7704,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/fb363f4a26c056cf2d715900",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "{\n    serverUrl: options.serverUrl,\n    transport: browserTransport,\n    onAccessFailure(error) {\n      accessFailureSession?.authenticationRequired(error)\n    },\n  }",
+          "node_kind": "object",
+          "record_type_source": null,
+          "record_fields": [
+            {
+              "name": "serverUrl",
+              "source_text": "options.serverUrl",
+              "source_path": {
+                "root_declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+                "root_name": "options",
+                "member_path": [
+                  "serverUrl"
+                ],
+                "binding": {
+                  "declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "apps/client/src/application.ts",
+                    "line": 190,
+                    "column": 38,
+                    "start_byte": 6755,
+                    "end_byte": 6805,
+                    "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                    "location_ref": "/source_location_index/af84f7818d6d987ca1dde371",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "binding": {
+                "declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+                "kind": "parameter",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 190,
+                  "column": 38,
+                  "start_byte": 6755,
+                  "end_byte": 6805,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/af84f7818d6d987ca1dde371",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 206,
+                "column": 5,
+                "start_byte": 7544,
+                "end_byte": 7572,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/5d369c1f152afed14fb2ed70",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "closed": false,
+              "runtime_field_presence_or_value_proven": false
+            },
+            {
+              "name": "transport",
+              "source_text": "browserTransport",
+              "source_path": {
+                "root_declaration_id": "0a54e9646656627905b19a6f296b2e6856688f95b3eccc5273ba60e2ae42ffa7",
+                "root_name": "browserTransport",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "0a54e9646656627905b19a6f296b2e6856688f95b3eccc5273ba60e2ae42ffa7",
+                  "kind": "const",
+                  "location": {
+                    "file": "apps/client/src/application.ts",
+                    "line": 204,
+                    "column": 9,
+                    "start_byte": 7406,
+                    "end_byte": 7462,
+                    "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                    "location_ref": "/source_location_index/460afa09ed5044ae158c8a05",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "binding": {
+                "declaration_id": "0a54e9646656627905b19a6f296b2e6856688f95b3eccc5273ba60e2ae42ffa7",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 204,
+                  "column": 9,
+                  "start_byte": 7406,
+                  "end_byte": 7462,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/460afa09ed5044ae158c8a05",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 207,
+                "column": 5,
+                "start_byte": 7578,
+                "end_byte": 7605,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/f49628728a87655626a968b6",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "closed": false,
+              "runtime_field_presence_or_value_proven": false
+            }
+          ],
+          "closed_captured_shape": false,
+          "result_binding": null,
+          "ordinary_data_semantics_not_automatically_assumed": true
+        },
+        "subject": {
+          "field_names": [
+            "serverUrl",
+            "transport"
+          ],
+          "record_type_source": null
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 205,
+            "column": 3,
+            "start_byte": 7465,
+            "end_byte": 7705,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/7137d6b87a7c536708643912",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 9,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "field_projection_from_record",
+            "from_operation_id": "28aa4c683a571d06a2c0a1c8",
+            "to_operation_id": "6f0f0d314399fd9600c9471a",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "field_name": "serverUrl",
+            "relation_meaning": "the captured field initializer references this lexical path; no current heap value equality"
+          },
+          {
+            "kind": "field_projection_from_record",
+            "from_operation_id": "b9541b462d70e82547f1793d",
+            "to_operation_id": "6f0f0d314399fd9600c9471a",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "field_name": "transport",
+            "relation_meaning": "the captured field initializer references this lexical path; no current heap value equality"
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "bf8290ce97f6819cdce5f9aa3752e79d2baa0ccd06233dea75fe88e9c195bcdb"
+      }
+    ],
+    "record_field_projection": [
+      {
+        "id": "eb96b215c2269dcc2b3087cb",
+        "operation_kind": "record_field_projection",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 197,
+            "column": 48,
+            "start_byte": 7098,
+            "end_byte": 7101,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/aef22fb5dd4b8f54b385ea56",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "shorthand_property_identifier",
+          "source_text": "now",
+          "source_text_truncated": false,
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 197,
+            "column": 48,
+            "start_byte": 7098,
+            "end_byte": 7101,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/aef22fb5dd4b8f54b385ea56",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "e8b80bf5454c72a341c0dd51bf8802af2ac645c02522024a633b8975458d8654",
+            "root_name": "now",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "e8b80bf5454c72a341c0dd51bf8802af2ac645c02522024a633b8975458d8654",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 196,
+                "column": 9,
+                "start_byte": 6997,
+                "end_byte": 7050,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/9ea401edf623373716090b24",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "e8b80bf5454c72a341c0dd51bf8802af2ac645c02522024a633b8975458d8654",
+            "kind": "const",
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 196,
+              "column": 9,
+              "start_byte": 6997,
+              "end_byte": 7050,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/9ea401edf623373716090b24",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [],
+          "runtime_value_proven": false,
+          "field_name": "now",
+          "output_record_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 197,
+            "column": 46,
+            "start_byte": 7096,
+            "end_byte": 7103,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/fceb7aa7c1b26ed08adf91ca",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        },
+        "subject": {
+          "field_name": "now",
+          "source_path": {
+            "root_declaration_id": "e8b80bf5454c72a341c0dd51bf8802af2ac645c02522024a633b8975458d8654",
+            "root_name": "now",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "e8b80bf5454c72a341c0dd51bf8802af2ac645c02522024a633b8975458d8654",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 196,
+                "column": 9,
+                "start_byte": 6997,
+                "end_byte": 7050,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/9ea401edf623373716090b24",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          }
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 197,
+            "column": 3,
+            "start_byte": 7053,
+            "end_byte": 7104,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/822c2c5911134e9859342a9d",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 4,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "3e1e2d464fb142ff25085b398ba9f2dde7a3d9318fef8b011b7b13c8de58ec74"
+      },
+      {
+        "id": "28aa4c683a571d06a2c0a1c8",
+        "operation_kind": "record_field_projection",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 206,
+            "column": 16,
+            "start_byte": 7555,
+            "end_byte": 7572,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/bc38cfa7894da5a1c21e12ae",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "member_expression",
+          "source_text": "options.serverUrl",
+          "source_text_truncated": false,
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 206,
+            "column": 16,
+            "start_byte": 7555,
+            "end_byte": 7572,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/bc38cfa7894da5a1c21e12ae",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+            "root_name": "options",
+            "member_path": [
+              "serverUrl"
+            ],
+            "binding": {
+              "declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+              "kind": "parameter",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 190,
+                "column": 38,
+                "start_byte": 6755,
+                "end_byte": 6805,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/af84f7818d6d987ca1dde371",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+            "kind": "parameter",
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 190,
+              "column": 38,
+              "start_byte": 6755,
+              "end_byte": 6805,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/af84f7818d6d987ca1dde371",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [
+            "serverUrl"
+          ],
+          "runtime_value_proven": false,
+          "field_name": "serverUrl",
+          "output_record_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 205,
+            "column": 76,
+            "start_byte": 7538,
+            "end_byte": 7704,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/fb363f4a26c056cf2d715900",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        },
+        "subject": {
+          "field_name": "serverUrl",
+          "source_path": {
+            "root_declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+            "root_name": "options",
+            "member_path": [
+              "serverUrl"
+            ],
+            "binding": {
+              "declaration_id": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520",
+              "kind": "parameter",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 190,
+                "column": 38,
+                "start_byte": 6755,
+                "end_byte": 6805,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/af84f7818d6d987ca1dde371",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          }
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 205,
+            "column": 3,
+            "start_byte": 7465,
+            "end_byte": 7705,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/7137d6b87a7c536708643912",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 9,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "7f24e4b0a76c4cd10480c1d25c896edddf5e3836f06ce5da0714dc9d5029c393"
+      }
+    ],
+    "return_transfer": [
+      {
+        "id": "ff6bccfe192ee5ac1bb28782",
+        "operation_kind": "return_transfer",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.browserIsOnline",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.browserIsOnline",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 198,
+            "column": 27,
+            "start_byte": 7131,
+            "end_byte": 7272,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/6bfb1c8808d32df38a03d33f",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 200,
+            "column": 5,
+            "start_byte": 7229,
+            "end_byte": 7268,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/60f6d86e1ee1562c1455d691",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "return navigatorValue?.onLine !== false",
+          "node_kind": "return_statement",
+          "exit_kind": "return",
+          "value": {
+            "node_kind": "binary_expression",
+            "source_text": "navigatorValue?.onLine !== false",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 200,
+              "column": 12,
+              "start_byte": 7236,
+              "end_byte": 7268,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/a064119cbb51ac3819b99bc9",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "async_fulfillment_or_return_effect_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 200,
+            "column": 5,
+            "start_byte": 7229,
+            "end_byte": 7268,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/60f6d86e1ee1562c1455d691",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 198,
+            "column": 33,
+            "start_byte": 7137,
+            "end_byte": 7272,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/d1937faa9c60780713b83c14",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "5e2d6a45bc9a2e68283ef902",
+            "to_operation_id": "ff6bccfe192ee5ac1bb28782",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "a8009b917accbbb83e9d5ae2271dff67d21b01a82003a8d64c14ea3dd2de4201"
+      },
+      {
+        "id": "9dfb4a9e1a5b85732ec2d142",
+        "operation_kind": "return_transfer",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.recordHomeVisit",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.recordHomeVisit",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 269,
+            "column": 3,
+            "start_byte": 10403,
+            "end_byte": 10806,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/47812ca39a73c5636d9b600b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 271,
+            "column": 37,
+            "start_byte": 10574,
+            "end_byte": 10580,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/7bc68fed95643371c32a7f43",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "return",
+          "node_kind": "return_statement",
+          "exit_kind": "return",
+          "value": {
+            "node_kind": "missing",
+            "source_text": "",
+            "binding": null,
+            "member_path": null
+          },
+          "async_fulfillment_or_return_effect_proven": false
+        },
+        "subject": {},
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(path !== '#/home/task-run')",
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 271,
+              "column": 5,
+              "start_byte": 10542,
+              "end_byte": 10580,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/6a79b6b0fc48c1210c8c267f",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 271,
+            "column": 5,
+            "start_byte": 10542,
+            "end_byte": 10580,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/6a79b6b0fc48c1210c8c267f",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 269,
+            "column": 48,
+            "start_byte": 10448,
+            "end_byte": 10806,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/f26f30fea467e9558c8fa16b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "explicit_return_value",
+            "from_operation_id": "4deb25169bf5ce2f480c4dda",
+            "to_operation_id": "9dfb4a9e1a5b85732ec2d142",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false
+          },
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "b241ebdc6cdb7501dc849672",
+            "to_operation_id": "9dfb4a9e1a5b85732ec2d142",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "5fd9670ccc68632673946d1095cc92a2da546276d4851fcc681afbfffc198ba5"
+      }
+    ],
+    "binding_update": [
+      {
+        "id": "e6efc6d96236809596ffb5be",
+        "operation_kind": "binding_update",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 190,
+            "column": 8,
+            "start_byte": 6725,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/2cdfa4433ffb9ccd57311646",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 225,
+            "column": 3,
+            "start_byte": 8234,
+            "end_byte": 8268,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/070221ec71141b8cf1d99501",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/f8353008ce620a272c73ee3a",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 5,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "accessFailureSession = authSession",
+          "node_kind": "assignment_expression",
+          "target": {
+            "node_kind": "identifier",
+            "source_text": "accessFailureSession",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 225,
+              "column": 3,
+              "start_byte": 8234,
+              "end_byte": 8254,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/772361ee88f86d15e36a29e3",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "3e59db3559b1c530d52fcca935871f5a2b7ee5fd5cc3bba4fa22802f8994493a",
+              "root_name": "accessFailureSession",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "3e59db3559b1c530d52fcca935871f5a2b7ee5fd5cc3bba4fa22802f8994493a",
+                "kind": "let",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 202,
+                  "column": 7,
+                  "start_byte": 7279,
+                  "end_byte": 7335,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/fe5883806d43c24c57fc3551",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "3e59db3559b1c530d52fcca935871f5a2b7ee5fd5cc3bba4fa22802f8994493a",
+              "kind": "let",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 202,
+                "column": 7,
+                "start_byte": 7279,
+                "end_byte": 7335,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/fe5883806d43c24c57fc3551",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "identifier",
+            "source_text": "authSession",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 225,
+              "column": 26,
+              "start_byte": 8257,
+              "end_byte": 8268,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/73103f42d0bb85bd930a2023",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "f167ff7e6f623ea9623464b5f612c50edb00bf38c0bffc1821acf5060206d354",
+              "root_name": "authSession",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "f167ff7e6f623ea9623464b5f612c50edb00bf38c0bffc1821acf5060206d354",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 220,
+                  "column": 9,
+                  "start_byte": 8047,
+                  "end_byte": 8101,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/d733b3c36395c5bee1fc1b8d",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "f167ff7e6f623ea9623464b5f612c50edb00bf38c0bffc1821acf5060206d354",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 220,
+                "column": 9,
+                "start_byte": 8047,
+                "end_byte": 8101,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/d733b3c36395c5bee1fc1b8d",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "",
+          "actual_update_count_or_numeric_result_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "3e59db3559b1c530d52fcca935871f5a2b7ee5fd5cc3bba4fa22802f8994493a",
+            "root_name": "accessFailureSession",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "3e59db3559b1c530d52fcca935871f5a2b7ee5fd5cc3bba4fa22802f8994493a",
+              "kind": "let",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 202,
+                "column": 7,
+                "start_byte": 7279,
+                "end_byte": 7335,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/fe5883806d43c24c57fc3551",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "write_target_kind": "local_binding"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 225,
+            "column": 3,
+            "start_byte": 8234,
+            "end_byte": 8268,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/070221ec71141b8cf1d99501",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 15,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 192,
+            "column": 32,
+            "start_byte": 6835,
+            "end_byte": 88055,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3a86244a98a7ca35be165ce7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "4bf5f1de79ea010854a31d1f",
+            "to_operation_id": "e6efc6d96236809596ffb5be",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "0720f2cb207ed0c579388009384263f1d2382982572dce3e92f09077df5c0695"
+      },
+      {
+        "id": "50821695a5fc4492b4e74f1f",
+        "operation_kind": "binding_update",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.diagnosticScope",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.diagnosticScope",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 356,
+            "column": 3,
+            "start_byte": 14722,
+            "end_byte": 15129,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/4d691e9119f7c8adf7c6b059",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 365,
+            "column": 5,
+            "start_byte": 15076,
+            "end_byte": 15108,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/f16e8af9698c87f3d092a508",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "lastKnownDiagnosticScope = scope",
+          "node_kind": "assignment_expression",
+          "target": {
+            "node_kind": "identifier",
+            "source_text": "lastKnownDiagnosticScope",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 365,
+              "column": 5,
+              "start_byte": 15076,
+              "end_byte": 15100,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/09c46ff0565054a6c5fc0c12",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "3b07aaeb6b5f3b9470df910f582893707efd5e4914b7ff01c93226c7ca2e1d7c",
+              "root_name": "lastKnownDiagnosticScope",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "3b07aaeb6b5f3b9470df910f582893707efd5e4914b7ff01c93226c7ca2e1d7c",
+                "kind": "let",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 314,
+                  "column": 7,
+                  "start_byte": 12474,
+                  "end_byte": 12514,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/a277395e36290955e195cebd",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "3b07aaeb6b5f3b9470df910f582893707efd5e4914b7ff01c93226c7ca2e1d7c",
+              "kind": "let",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 314,
+                "column": 7,
+                "start_byte": 12474,
+                "end_byte": 12514,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/a277395e36290955e195cebd",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "identifier",
+            "source_text": "scope",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 365,
+              "column": 32,
+              "start_byte": 15103,
+              "end_byte": 15108,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/7d6c3ccf88cef20e013f7367",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "f63950714c75f6452d754e514b89ba2eedd69fe1d5017fc0a85a5341719dd464",
+              "root_name": "scope",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "f63950714c75f6452d754e514b89ba2eedd69fe1d5017fc0a85a5341719dd464",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 364,
+                  "column": 11,
+                  "start_byte": 15005,
+                  "end_byte": 15071,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/62c069f364d1d19da1bec287",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "f63950714c75f6452d754e514b89ba2eedd69fe1d5017fc0a85a5341719dd464",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 364,
+                "column": 11,
+                "start_byte": 15005,
+                "end_byte": 15071,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/62c069f364d1d19da1bec287",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "",
+          "actual_update_count_or_numeric_result_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "3b07aaeb6b5f3b9470df910f582893707efd5e4914b7ff01c93226c7ca2e1d7c",
+            "root_name": "lastKnownDiagnosticScope",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "3b07aaeb6b5f3b9470df910f582893707efd5e4914b7ff01c93226c7ca2e1d7c",
+              "kind": "let",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 314,
+                "column": 7,
+                "start_byte": 12474,
+                "end_byte": 12514,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/a277395e36290955e195cebd",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "write_target_kind": "local_binding"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 365,
+            "column": 5,
+            "start_byte": 15076,
+            "end_byte": 15108,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/f16e8af9698c87f3d092a508",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 4,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 356,
+            "column": 39,
+            "start_byte": 14758,
+            "end_byte": 15129,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/64cfacf50c46135bcb8ec847",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "e28da03e413d7b6e67c6b3b8",
+            "to_operation_id": "50821695a5fc4492b4e74f1f",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "3ffac8bca1f8176ef65c6c5b8b22083aeec1acfca00396b68ed51e7d28682a7f"
+      }
+    ],
+    "guard_rejection": [
+      {
+        "id": "4deb25169bf5ce2f480c4dda",
+        "operation_kind": "guard_rejection",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.recordHomeVisit",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.recordHomeVisit",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 269,
+            "column": 3,
+            "start_byte": 10403,
+            "end_byte": 10806,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/47812ca39a73c5636d9b600b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 271,
+            "column": 37,
+            "start_byte": 10574,
+            "end_byte": 10580,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/7bc68fed95643371c32a7f43",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "return",
+          "node_kind": "return_statement",
+          "condition_source": "(path !== '#/home/task-run')",
+          "condition_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 271,
+            "column": 8,
+            "start_byte": 10545,
+            "end_byte": 10573,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/3b41dfb9fac3d054c89a75da",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "exit_kind": "return",
+          "exit_source": "",
+          "guard_truth_or_rejection_observed": false,
+          "return_is_error_or_business_rejection_proven": false
+        },
+        "subject": {},
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(path !== '#/home/task-run')",
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 271,
+              "column": 5,
+              "start_byte": 10542,
+              "end_byte": 10580,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/6a79b6b0fc48c1210c8c267f",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 271,
+            "column": 5,
+            "start_byte": 10542,
+            "end_byte": 10580,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/6a79b6b0fc48c1210c8c267f",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 269,
+            "column": 48,
+            "start_byte": 10448,
+            "end_byte": 10806,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/f26f30fea467e9558c8fa16b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "6c97ca267c2f37cb138900f9398a83562fa23ef6d957a0b0f4ebb10c1b753fd6"
+      },
+      {
+        "id": "acbf1a03f42d38d19a37e0c7",
+        "operation_kind": "guard_rejection",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.recordHomeVisit",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.recordHomeVisit",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 269,
+            "column": 3,
+            "start_byte": 10403,
+            "end_byte": 10806,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/47812ca39a73c5636d9b600b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 273,
+            "column": 30,
+            "start_byte": 10720,
+            "end_byte": 10726,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/20803e66bddfc80ccdcbb309",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "return",
+          "node_kind": "return_statement",
+          "condition_source": "(deliveryId === null)",
+          "condition_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 273,
+            "column": 8,
+            "start_byte": 10698,
+            "end_byte": 10719,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/51d2fd37efb8229b445e48bd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "exit_kind": "return",
+          "exit_source": "",
+          "guard_truth_or_rejection_observed": false,
+          "return_is_error_or_business_rejection_proven": false
+        },
+        "subject": {},
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(deliveryId === null)",
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 273,
+              "column": 5,
+              "start_byte": 10695,
+              "end_byte": 10726,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/941b27ef1ce622741bf25431",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 273,
+            "column": 5,
+            "start_byte": 10695,
+            "end_byte": 10726,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/941b27ef1ce622741bf25431",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 3,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 269,
+            "column": 48,
+            "start_byte": 10448,
+            "end_byte": 10806,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/f26f30fea467e9558c8fa16b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "df07c438fea4184cf6b82db1c1f539262f9e3310e900cd57bb255b2c5f64cb43"
+      }
+    ],
+    "field_write": [
+      {
+        "id": "06575ed985ed4e285b32d588",
+        "operation_kind": "field_write",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.showRouteFailure",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.showRouteFailure",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 479,
+            "column": 3,
+            "start_byte": 18433,
+            "end_byte": 18823,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/62b03dd87d02bdc5a2da0ec6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 489,
+            "column": 5,
+            "start_byte": 18756,
+            "end_byte": 18774,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/de8a7b231fe1ebb2cf700b09",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/606df2a08c635f74194cd6c9",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 5,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "slot.hidden = true",
+          "node_kind": "assignment_expression",
+          "target": {
+            "node_kind": "member_expression",
+            "source_text": "slot.hidden",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 489,
+              "column": 5,
+              "start_byte": 18756,
+              "end_byte": 18767,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/c86629e5f8044369bb3add89",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+              "root_name": "slot",
+              "member_path": [
+                "hidden"
+              ],
+              "binding": {
+                "declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 333,
+                  "column": 9,
+                  "start_byte": 13722,
+                  "end_byte": 13777,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/9212a5abe103cc9337536972",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 333,
+                "column": 9,
+                "start_byte": 13722,
+                "end_byte": 13777,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/9212a5abe103cc9337536972",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [
+              "hidden"
+            ],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "true",
+            "source_text": "true",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 489,
+              "column": 19,
+              "start_byte": 18770,
+              "end_byte": 18774,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/350600b39c8b63e0eee1f6ab",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "",
+          "assignment_success_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+            "root_name": "slot",
+            "member_path": [
+              "hidden"
+            ],
+            "binding": {
+              "declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 333,
+                "column": 9,
+                "start_byte": 13722,
+                "end_byte": 13777,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/9212a5abe103cc9337536972",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          }
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 489,
+            "column": 5,
+            "start_byte": 18756,
+            "end_byte": 18774,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/de8a7b231fe1ebb2cf700b09",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 5,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 479,
+            "column": 73,
+            "start_byte": 18503,
+            "end_byte": 18823,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/6abf22e01c7706ac82b4ca1f",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "61ba5406101e849b4fc44077",
+            "to_operation_id": "06575ed985ed4e285b32d588",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "c3b08ea7f58ee5632dcbda444e29ab1cbc9be2bdbe4527524b53d15a42670455"
+      },
+      {
+        "id": "841eb3cf4aeaf23b7ecf5ba8",
+        "operation_kind": "field_write",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.clearRouteFailure",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.clearRouteFailure",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 493,
+            "column": 3,
+            "start_byte": 18827,
+            "end_byte": 18962,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/0e58f58f8bc25ebdff3f0986",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 495,
+            "column": 5,
+            "start_byte": 18894,
+            "end_byte": 18913,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/a369193e3a1f158ff2da2484",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "slot.hidden = false",
+          "node_kind": "assignment_expression",
+          "target": {
+            "node_kind": "member_expression",
+            "source_text": "slot.hidden",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 495,
+              "column": 5,
+              "start_byte": 18894,
+              "end_byte": 18905,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/8fb14874f84794d221f386f7",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+              "root_name": "slot",
+              "member_path": [
+                "hidden"
+              ],
+              "binding": {
+                "declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+                "kind": "const",
+                "location": {
+                  "file": "apps/client/src/application.ts",
+                  "line": 333,
+                  "column": 9,
+                  "start_byte": 13722,
+                  "end_byte": 13777,
+                  "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                  "location_ref": "/source_location_index/9212a5abe103cc9337536972",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 333,
+                "column": 9,
+                "start_byte": 13722,
+                "end_byte": 13777,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/9212a5abe103cc9337536972",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [
+              "hidden"
+            ],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "false",
+            "source_text": "false",
+            "source_text_truncated": false,
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 495,
+              "column": 19,
+              "start_byte": 18908,
+              "end_byte": 18913,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/4ae5c4c68eb752d2c7abd223",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "",
+          "assignment_success_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+            "root_name": "slot",
+            "member_path": [
+              "hidden"
+            ],
+            "binding": {
+              "declaration_id": "9d2ed776d1036936bac96f409e72a10a83a86929786bbc17d6ac2f8f213eab7a",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 333,
+                "column": 9,
+                "start_byte": 13722,
+                "end_byte": 13777,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/9212a5abe103cc9337536972",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          }
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 495,
+            "column": 5,
+            "start_byte": 18894,
+            "end_byte": 18913,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/a369193e3a1f158ff2da2484",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 493,
+            "column": 38,
+            "start_byte": 18862,
+            "end_byte": 18962,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/81d73ea4ff77c60cd2c73070",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "c338250c718b133189ae2dbb",
+            "to_operation_id": "841eb3cf4aeaf23b7ecf5ba8",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "612c3d6515b39a412a6931d995ee976ad6b0f941e5d67041c318b9956e5ff4d9"
+      }
+    ],
+    "protocol_literal_field": [
+      {
+        "id": "652b16350a42a4b0afd1219a",
+        "operation_kind": "protocol_literal_field",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.renderRecentChats.<object@571:26>.update",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.renderRecentChats.<object@571:26>.update",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 583,
+            "column": 7,
+            "start_byte": 23506,
+            "end_byte": 24030,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/516a9cfad4d1721b4fe6d802",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 587,
+            "column": 26,
+            "start_byte": 23723,
+            "end_byte": 23738,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/74786a258c056211401a44b7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "string",
+          "source_text": "'winwincode/v1'",
+          "source_text_truncated": false,
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 587,
+            "column": 26,
+            "start_byte": 23723,
+            "end_byte": 23738,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/74786a258c056211401a44b7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": null,
+          "binding": null,
+          "member_path": null,
+          "runtime_value_proven": false,
+          "field_name": "schemaVersion",
+          "literal_value": "winwincode/v1",
+          "enum_member_source": null,
+          "record_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 586,
+            "column": 36,
+            "start_byte": 23696,
+            "end_byte": 23982,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/fefe10421e7b622ee837e1de",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "protocol_transport_semantics_proven": false
+        },
+        "subject": {
+          "field_name": "schemaVersion"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 586,
+            "column": 9,
+            "start_byte": 23669,
+            "end_byte": 23983,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/6cc440b513c8cc670d4db130",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 583,
+            "column": 46,
+            "start_byte": 23545,
+            "end_byte": 24030,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/839c2db947887cc089fa2a47",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "189c3faebf647b1af9a24c6d3d1b62a2daaf497e918f43cc6de45b75758b7ec7"
+      },
+      {
+        "id": "05f49cc782788fc64a50060b",
+        "operation_kind": "protocol_literal_field",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.renderRecentChats.<object@571:26>.update",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.renderRecentChats.<object@571:26>.update",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 583,
+            "column": 7,
+            "start_byte": 23506,
+            "end_byte": 24030,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/516a9cfad4d1721b4fe6d802",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 589,
+            "column": 20,
+            "start_byte": 23840,
+            "end_byte": 23865,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/90d4229f9b81dda4f27e8997",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "member_expression",
+          "source_text": "CommandName.SessionUpdate",
+          "source_text_truncated": false,
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 589,
+            "column": 20,
+            "start_byte": 23840,
+            "end_byte": 23865,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/90d4229f9b81dda4f27e8997",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "befcab2c575d87382c8f0142aa5d9b589eca2c80fb87fde53cdbd7a55009b90a",
+            "root_name": "CommandName",
+            "member_path": [
+              "SessionUpdate"
+            ],
+            "binding": {
+              "declaration_id": "befcab2c575d87382c8f0142aa5d9b589eca2c80fb87fde53cdbd7a55009b90a",
+              "kind": "import",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 51,
+                "column": 10,
+                "start_byte": 1885,
+                "end_byte": 1896,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/3575c86dc506627beeae5b44",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "befcab2c575d87382c8f0142aa5d9b589eca2c80fb87fde53cdbd7a55009b90a",
+            "kind": "import",
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 51,
+              "column": 10,
+              "start_byte": 1885,
+              "end_byte": 1896,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/3575c86dc506627beeae5b44",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [
+            "SessionUpdate"
+          ],
+          "runtime_value_proven": false,
+          "field_name": "command",
+          "literal_value": null,
+          "enum_member_source": "CommandName.SessionUpdate",
+          "record_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 586,
+            "column": 36,
+            "start_byte": 23696,
+            "end_byte": 23982,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/fefe10421e7b622ee837e1de",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "protocol_transport_semantics_proven": false
+        },
+        "subject": {
+          "field_name": "command"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 586,
+            "column": 9,
+            "start_byte": 23669,
+            "end_byte": 23983,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/6cc440b513c8cc670d4db130",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 583,
+            "column": 46,
+            "start_byte": 23545,
+            "end_byte": 24030,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/839c2db947887cc089fa2a47",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "ff5b94e7525fb8458297f0d0930c6fc3d567396e68ae9439bf2f6e2628dba651"
+      }
+    ],
+    "record_copy_projection": [
+      {
+        "id": "9502c4cfc5c0617f2561ea35",
+        "operation_kind": "record_copy_projection",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.renderRecentChats.<object@571:26>.update",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.renderRecentChats.<object@571:26>.update",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 583,
+            "column": 7,
+            "start_byte": 23506,
+            "end_byte": 24030,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/516a9cfad4d1721b4fe6d802",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 587,
+            "column": 43,
+            "start_byte": 23740,
+            "end_byte": 23750,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/d1a35979a1fe735bbfc6ba52",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "identifier",
+          "source_text": "context",
+          "source_text_truncated": false,
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 587,
+            "column": 46,
+            "start_byte": 23743,
+            "end_byte": 23750,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/e37898753e0c5f7aa5903e63",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "6386575a0a7fcd325a563ce3ece53e62abe83080b2fbd06367215c731685d785",
+            "root_name": "context",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "6386575a0a7fcd325a563ce3ece53e62abe83080b2fbd06367215c731685d785",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 584,
+                "column": 15,
+                "start_byte": 23561,
+                "end_byte": 23598,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/90bf687ca1c648babe92b0a8",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "6386575a0a7fcd325a563ce3ece53e62abe83080b2fbd06367215c731685d785",
+            "kind": "const",
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 584,
+              "column": 15,
+              "start_byte": 23561,
+              "end_byte": 23598,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/90bf687ca1c648babe92b0a8",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [],
+          "runtime_value_proven": false,
+          "copy_form": "spread_element",
+          "destination_record_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 586,
+            "column": 36,
+            "start_byte": 23696,
+            "end_byte": 23982,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/fefe10421e7b622ee837e1de",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "current_copy_surface_or_retention_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 586,
+            "column": 9,
+            "start_byte": 23669,
+            "end_byte": 23983,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/6cc440b513c8cc670d4db130",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 583,
+            "column": 46,
+            "start_byte": 23545,
+            "end_byte": 24030,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/839c2db947887cc089fa2a47",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "3a7f01598838b5d6c22cf36bcecad7e7dc616d215dd1181abdc9102b03b4e0b9"
+      },
+      {
+        "id": "d4e600251f66b7a7e2e0f053",
+        "operation_kind": "record_copy_projection",
+        "actual_owner": {
+          "file": "apps/client/src/application.ts",
+          "symbol": "mountWinWinCodeClient.<arrow@813:32>",
+          "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient.<arrow@813:32>",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 813,
+            "column": 33,
+            "start_byte": 32959,
+            "end_byte": 33934,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/d0dfadfe2bd1919532bb7043",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "apps/client/src/application.ts",
+            "line": 838,
+            "column": 7,
+            "start_byte": 33847,
+            "end_byte": 33857,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/d953e645d003c2cff8cb2e3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "wwc-browser-continuation-lifecycle",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/819042a8eb4a3d8d429ccae3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-captured-record-resource-writers",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/159b3b79b67a2c1fce3532d5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-navigation-complete-judgment",
+            "goal_id": "WWC-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/634fec0c10c26dd78ebdecee",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "wwc-report-device-spec-command-flow",
+            "goal_id": "WWC-02",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/197cc2dcbc13f287b8691ccd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 4,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "identifier",
+          "source_text": "current",
+          "source_text_truncated": false,
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 838,
+            "column": 10,
+            "start_byte": 33850,
+            "end_byte": 33857,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/dc3531b393d03523c8779d4c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "92c1209ea6a43375753643f06af84c67c0b8d3d86ecb2a334f3955701874b8cd",
+            "root_name": "current",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "92c1209ea6a43375753643f06af84c67c0b8d3d86ecb2a334f3955701874b8cd",
+              "kind": "const",
+              "location": {
+                "file": "apps/client/src/application.ts",
+                "line": 832,
+                "column": 11,
+                "start_byte": 33689,
+                "end_byte": 33822,
+                "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+                "location_ref": "/source_location_index/ca0e848e3ac379b27fef0316",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "92c1209ea6a43375753643f06af84c67c0b8d3d86ecb2a334f3955701874b8cd",
+            "kind": "const",
+            "location": {
+              "file": "apps/client/src/application.ts",
+              "line": 832,
+              "column": 11,
+              "start_byte": 33689,
+              "end_byte": 33822,
+              "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "location_ref": "/source_location_index/ca0e848e3ac379b27fef0316",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [],
+          "runtime_value_proven": false,
+          "copy_form": "spread_element",
+          "destination_record_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 837,
+            "column": 17,
+            "start_byte": 33839,
+            "end_byte": 33929,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/a09caa37a026087ccd43eb3a",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "current_copy_surface_or_retention_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 837,
+            "column": 5,
+            "start_byte": 33827,
+            "end_byte": 33930,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/4943c5787148b02199a50007",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 17,
+          "block_location": {
+            "file": "apps/client/src/application.ts",
+            "line": 813,
+            "column": 39,
+            "start_byte": 32965,
+            "end_byte": 33934,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "location_ref": "/source_location_index/de280767f90782a733ec5680",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "aa4b80e5825e2a57f632b45647c1cf4ece9d9736271b3f766579b807e170991c"
+      }
+    ]
+  }
+}

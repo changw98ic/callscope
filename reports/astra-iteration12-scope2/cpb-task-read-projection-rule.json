@@ -1,0 +1,34 @@
+{
+  "id": "cpb-task-read-projection",
+  "type": "guarded_call_sequence",
+  "severity": "info",
+  "sources": [
+    {"role": "task_entry", "file": "cli/commands/task.ts", "symbol": "run"},
+    {"role": "project_selection", "file": "cli/commands/task.ts", "symbol": "autoResolveProject"},
+    {"role": "task_render", "file": "cli/commands/task.ts", "symbol": "renderTaskView"},
+    {"role": "task_projection", "file": "server/services/task/task-view.ts", "symbol": "projectTaskView"},
+    {"role": "queue_interface", "file": "server/services/hub/hub-queue.ts", "symbol": "loadQueue"},
+    {"role": "queue_read", "file": "server/services/hub/hub-queue.ts", "symbol": "loadLocalQueue"},
+    {"role": "linked_record_lookup", "file": "server/services/job/job-store.ts", "symbol": "getJobByQueueEntryId"},
+    {"role": "record_filter", "file": "core/contracts/task-view-fields.ts", "symbol": "sanitizeTaskView"}
+  ],
+  "models": ["captured-normal-statement-control-v1"],
+  "provenance": {
+    "authority": "original-static-report-benchmark",
+    "reviewer": "finite-source-task-operation-extraction",
+    "author_approved": false,
+    "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md:18,34",
+    "note": "Data-only declaration locators; source controls, fields, actual calls and unknown ports are computed independently. Benchmark prose and source comments are not expected answers."
+  },
+  "applicability": {
+    "kind": "conditional",
+    "conditions": [
+      "The selected captured declarations are active and the recorded source expressions are reached normally.",
+      "Recorded statement order is conditional on preceding asynchronous calls returning normally; opaque dependency effects and current object values remain unknown."
+    ],
+    "counterexamples": [
+      "Missing input, missing projected records, read failures and callback activation remain distinct source branches.",
+      "The selected facade and projection source do not certify transitive purity, absence of effects in all dependencies, authorization, external I/O success or complete business semantics."
+    ]
+  }
+}

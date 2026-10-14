@@ -1,0 +1,258 @@
+[
+  {
+    "id": "cpb-event-index-projection",
+    "type": "event_index_projection",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "mutation",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "createJob"
+      },
+      {
+        "role": "update",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "updateJobsIndexEntry"
+      },
+      {
+        "role": "index_writer",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "writeJobsIndex"
+      },
+      {
+        "role": "refresh",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "getJobAndUpdateIndex"
+      },
+      {
+        "role": "retry",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "retryUpdate"
+      },
+      {
+        "role": "rebuild",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "rebuildJobsIndexLocked"
+      },
+      {
+        "role": "rebuild_entry",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "rebuildJobsIndex"
+      },
+      {
+        "role": "list",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "listJobsFromIndex"
+      },
+      {
+        "role": "get_job",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "getJob"
+      },
+      {
+        "role": "append",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "appendEvent"
+      },
+      {
+        "role": "durable_append",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "appendSerializedEventDurably"
+      },
+      {
+        "role": "projection",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "readJobProjection"
+      },
+      {
+        "role": "locked_projection",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "withLockedJobProjection"
+      },
+      {
+        "role": "serializer",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "serializeEvent"
+      },
+      {
+        "role": "event_reader",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "readEvents"
+      },
+      {
+        "role": "materializer",
+        "file": "server/services/event/event-materializer.ts",
+        "symbol": "materializeJob"
+      },
+      {
+        "role": "divergence",
+        "file": "server/services/runtime.ts",
+        "symbol": "countJobsIndexDivergenceForRoot"
+      },
+      {
+        "role": "classification",
+        "file": "server/services/runtime.ts",
+        "symbol": "classifyJobsIndexDivergence"
+      },
+      {
+        "role": "health",
+        "file": "server/services/runtime.ts",
+        "symbol": "collectRuntimeHealth"
+      },
+      {
+        "role": "doctor",
+        "file": "cli/commands/doctor.ts",
+        "symbol": "checkRuntimeHealth"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-record-codec-projection-source-v1"
+    ],
+    "provenance": {
+      "authority": "saved source locators",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "the selected captured source paths are reached normally; ordinary source record/JSON semantics"
+      ],
+      "counterexamples": [
+        "opaque execution, physical IO success and all inputs remain unproved"
+      ]
+    }
+  },
+  {
+    "id": "cpb-trusted-command-lineage",
+    "type": "trusted_command_lineage",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "loader",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "loadTrustedProbePolicy"
+      },
+      {
+        "role": "resolver",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "resolveDeclaredCommand"
+      },
+      {
+        "role": "executor",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "runDeclaredCommandOnce"
+      },
+      {
+        "role": "command_runner",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "runDeclaredCommand"
+      },
+      {
+        "role": "runner",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "runChecklistProbes"
+      },
+      {
+        "role": "render",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "renderProbeCommand"
+      },
+      {
+        "role": "oracle_paths",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "oracleProtectedPaths"
+      },
+      {
+        "role": "oracle_changes",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "changedOracleFiles"
+      },
+      {
+        "role": "policy_parser",
+        "file": "core/workflow/trusted-probe-policy.ts",
+        "symbol": "parseTrustedProbePolicy"
+      },
+      {
+        "role": "spec_parser",
+        "file": "core/workflow/trusted-probe-policy.ts",
+        "symbol": "trustedProbeSpec"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-record-codec-projection-source-v1",
+      "node-structured-execfile-source-contract-v1"
+    ],
+    "provenance": {
+      "authority": "saved source locators",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "the selected captured source paths are reached normally; ordinary source record/JSON semantics"
+      ],
+      "counterexamples": [
+        "opaque execution, physical IO success and all inputs remain unproved"
+      ]
+    }
+  },
+  {
+    "id": "cpb-unsupported-record-retention",
+    "type": "unsupported_record_retention",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "runner",
+        "file": "core/workflow/probe-runner.ts",
+        "symbol": "runChecklistProbes"
+      },
+      {
+        "role": "plan",
+        "file": "core/workflow/evidence-probes.ts",
+        "symbol": "buildEvidenceProbePlan"
+      },
+      {
+        "role": "validation",
+        "file": "core/workflow/evidence-probes.ts",
+        "symbol": "validateEvidenceObservation"
+      },
+      {
+        "role": "ledger",
+        "file": "core/phases/verify.ts",
+        "symbol": "buildEvidenceLedger"
+      },
+      {
+        "role": "verification",
+        "file": "core/phases/verify.ts",
+        "symbol": "runVerify"
+      },
+      {
+        "role": "artifact_writer",
+        "file": "core/artifacts/artifact-store.ts",
+        "symbol": "writeArtifact"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-record-codec-projection-source-v1"
+    ],
+    "provenance": {
+      "authority": "saved source locators",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "the selected captured source paths are reached normally; ordinary source record/JSON semantics"
+      ],
+      "counterexamples": [
+        "opaque execution, physical IO success and all inputs remain unproved"
+      ]
+    }
+  }
+]

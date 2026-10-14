@@ -1,0 +1,98 @@
+{
+  "repository": "winwincode",
+  "artifact_checks": [
+    {
+      "artifact": "reports/astra-iteration12/responsibility-operations-winwincode-development.json",
+      "artifact_sha256": "dda6ee5d9825e1308b71219825597b2edc3e09a38a1d28666d46231c0abf5804",
+      "artifact_bytes": 65601844,
+      "development_only": true,
+      "not_formal_v14_result": true,
+      "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+      "current_module_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+      "explanation_module_sha256": null,
+      "operations": 9341,
+      "source_files": 76,
+      "source_anchors": 17245,
+      "evidence_references": 2802,
+      "pointer_counts": {
+        "location_ref": 70706,
+        "evidence_ref": 25100
+      },
+      "relationship_reference_occurrences": {
+        "normal_source_before": 4002,
+        "record_literal_as_argument": 208,
+        "field_projection_from_record": 644,
+        "explicit_return_value": 315,
+        "authenticated_argument_parameter_projection": 511,
+        "lexical_value_to_argument": 25
+      },
+      "identity_checks": {
+        "no_duplicate_operation_ids": true,
+        "all_operation_content_hashes_match": true,
+        "no_unresolved_pool_or_operation_references": true,
+        "all_source_anchors_match_current_readonly_source": true,
+        "extractor_module_bytes_stable_during_query": true,
+        "extractor_matches_current_module": true,
+        "target_not_executed": true,
+        "target_not_imported": true,
+        "target_tests_not_run": true,
+        "target_build_not_run": true
+      },
+      "unresolved_references": [],
+      "source_anchor_failures": [],
+      "invalid_operation_content_hashes": [],
+      "all_checks_passed": true
+    },
+    {
+      "artifact": "reports/astra-iteration12/responsibility-explanations-winwincode-development.json",
+      "artifact_sha256": "cb279ba50b299668d90892b3d94aeb1daf9a011e6e5a61218de1b7a86f4279f9",
+      "artifact_bytes": 100446198,
+      "development_only": true,
+      "not_formal_v14_result": true,
+      "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+      "current_module_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+      "explanation_module_sha256": "98bae1b6310422a7d749aaf77032592d625128e9fea4d0e117647744f047dd2f",
+      "operations": 9341,
+      "source_files": 76,
+      "source_anchors": 17245,
+      "evidence_references": 2802,
+      "pointer_counts": {
+        "location_ref": 120942,
+        "evidence_ref": 25100,
+        "operation_pointer": 38007
+      },
+      "relationship_reference_occurrences": {
+        "normal_source_before": 8004,
+        "record_literal_as_argument": 416,
+        "field_projection_from_record": 1288,
+        "explicit_return_value": 630,
+        "authenticated_argument_parameter_projection": 1022,
+        "lexical_value_to_argument": 50
+      },
+      "identity_checks": {
+        "no_duplicate_operation_ids": true,
+        "all_operation_content_hashes_match": true,
+        "no_unresolved_pool_or_operation_references": true,
+        "all_source_anchors_match_current_readonly_source": true,
+        "extractor_module_bytes_stable_during_query": true,
+        "extractor_matches_current_module": true,
+        "target_not_executed": true,
+        "target_not_imported": true,
+        "target_tests_not_run": true,
+        "target_build_not_run": true,
+        "explanation_module_bytes_stable_during_query": true,
+        "explanation_matches_current_module": true
+      },
+      "unresolved_references": [],
+      "source_anchor_failures": [],
+      "invalid_operation_content_hashes": [],
+      "all_checks_passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "database_opened": false,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

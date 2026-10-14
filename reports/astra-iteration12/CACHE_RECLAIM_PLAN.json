@@ -1,0 +1,2188 @@
+{
+  "kind": "cache_reclaim_inventory_plan",
+  "created_at_utc": "2026-10-14T07:23:37.038253+00:00",
+  "inventory_only": true,
+  "deletion_performed": false,
+  "root_technical_review_pending": true,
+  "scope_root": "/workspace/callscope/reports",
+  "credential_or_environment_read": false,
+  "snapshot_or_database_opened": false,
+  "common_query_lock_acquired": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "measurement": {
+    "actual_bytes": "sum st_blocks*512 for regular files plus directories; symlinks are not followed",
+    "logical_bytes": "sum st_size of regular files",
+    "free_bytes_before": 2997485568,
+    "filesystem_total_bytes": 33770192896,
+    "cross_directory_shared_inodes_not_expected_but_file_link_counts_recorded": true
+  },
+  "candidate_count": 27,
+  "cocoindex_cache_count": 23,
+  "bytecode_cache_count": 4,
+  "candidate_actual_allocated_bytes": 3223326720,
+  "cocoindex_actual_allocated_bytes": 3223265280,
+  "items": [
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/winwincode-v8.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 458420224,
+      "allocated_file_bytes": 458420224,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 458428416,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 458412032,
+          "allocated_bytes": 458416128,
+          "inode": 786524,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 786523,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration5/winwincode-v8.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration5/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "16368989981cf420ff8e24bcfe946c38ba1da46678890373bad1cc4a3c1b968d",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration3/winwincode-v6.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 229011456,
+      "allocated_file_bytes": 229011456,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 229019648,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 229003264,
+          "allocated_bytes": 229007360,
+          "inode": 655385,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655384,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration3/winwincode-v6.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration3/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "d244853729732d483b9f83032d4e438238709d0321a2b66812055bc01f987b94",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration4/winwincode-v7.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 229011456,
+      "allocated_file_bytes": 229011456,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 229019648,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 229003264,
+          "allocated_bytes": 229007360,
+          "inode": 786469,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 786468,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration4/winwincode-v7.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration4/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "53c9e70a54db8702b0401a5af0230e9d9c1293aec79b99de304dee740d486305",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/winwincode-v10.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 229011456,
+      "allocated_file_bytes": 229011456,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 229019648,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 229003264,
+          "allocated_bytes": 229007360,
+          "inode": 655537,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655536,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration8/winwincode-v10.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration8/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "71257f8905a1875e14c75d8f9cba6cb20126b1a3665158c51e5e00fba63a7774",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/winwincode-v11.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 229011456,
+      "allocated_file_bytes": 229011456,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 229019648,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 229003264,
+          "allocated_bytes": 229007360,
+          "inode": 655595,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655594,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration9/winwincode-v11.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration9/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "f938770290169b31de7f67f9f8bfdd2d8b233400db9d00ff987a486f12d0b14f",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/winwincode-v10.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 229011456,
+      "allocated_file_bytes": 229011456,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 229019648,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 229003264,
+          "allocated_bytes": 229007360,
+          "inode": 655441,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655440,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration7/winwincode-v10.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration7/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "156a36defef0155ee1269b2b30aacb0990a0c6178fdd3330355a2996fe47a5ba",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/winwincode-v9.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 229011456,
+      "allocated_file_bytes": 229011456,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 229019648,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 229003264,
+          "allocated_bytes": 229007360,
+          "inode": 786577,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 786576,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration6/winwincode-v9.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration6/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "637542fb40d959a98dabcf7fe2506e21f03d19099af1641c8b9c4ab25238cacf",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 229011456,
+      "allocated_file_bytes": 229011456,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 229019648,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 229003264,
+          "allocated_bytes": 229007360,
+          "inode": 655804,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655803,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration10/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "aa490b55676d6a3b184e32a99bf431ce3cc1b55e9ed53b07448e2ad3df9421ce",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration2/winwincode-v5.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 201510912,
+      "allocated_file_bytes": 201510912,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 201519104,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 201502720,
+          "allocated_bytes": 201506816,
+          "inode": 528622,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 528621,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration2/winwincode-v5.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration2/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "f4eddb27a4f9a0daa1eadd89ab2f2dd075ee3abd360029f3f91c3cb27672bb0f",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration1/winwincode-v4.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 189128704,
+      "allocated_file_bytes": 189128704,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 189136896,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 189120512,
+          "allocated_bytes": 189124608,
+          "inode": 528597,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 528596,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration1/winwincode-v4.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration1/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "d71776849987de88634d923ab875379bcaef0a6513cdaf8310a93d906d60c81f",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/winwincode-v3.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 180097024,
+      "allocated_file_bytes": 180092928,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 180101120,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 180088832,
+          "allocated_bytes": 180088832,
+          "inode": 528554,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 528553,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/upstream-reuse/winwincode-v3.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/upstream-reuse/winwincode-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "508e3bfeb35c058a492c2815bbc3416b24774c5af0f65e29976595707189773a",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/codepatchbay-v8.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 98570240,
+      "allocated_file_bytes": 98570240,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 98578432,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 98562048,
+          "allocated_bytes": 98566144,
+          "inode": 786520,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 786519,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration5/codepatchbay-v8.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration5/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "d43dbc05d5611d9b0788e6d1a9d8c4faf4f4f0a1fe88488fdce1e2b4c6b387d6",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration3/codepatchbay-v6.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 655381,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655380,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration3/codepatchbay-v6.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration3/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "01fbe74e68fc687764ec2f21d440819c68d52188a400bfcb8bff1705b5487d4b",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration2/codepatchbay-v5.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 528618,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 528617,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration2/codepatchbay-v5.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration2/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "79ce38690112786aac72b7b10611573906afa0b9923b459e298370cf81a2867f",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration1/codepatchbay-v4.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 528593,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 528592,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration1/codepatchbay-v4.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration1/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "37ec5776ec73bd2ab134a36381f8e296c0d4341ef826572db21f15cd6cc212c0",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration4/codepatchbay-v7.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 786465,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 786464,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration4/codepatchbay-v7.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration4/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "98f2f107b93b7558b1b81fa50b49231a2f44e3c6c978d5d1ae9cbdec3d262427",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/codepatchbay-v10.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 655533,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655532,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration8/codepatchbay-v10.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration8/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "add96e0433cd4d8c76051862bae8745df9d53baa9e38cea8281474f071208815",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-v11.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 655591,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655590,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration9/codepatchbay-v11.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "86d137aae685056e467b8991479dc9beee1eee4e54761ce6322fe9835e39caf8",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/codepatchbay-v10.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 655434,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655433,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration7/codepatchbay-v10.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration7/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "aeb48be70ffb75843e42876d50a23185813df4f61cc4e61ca6fc5cec08fdbfa5",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/codepatchbay-v9.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 786573,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 786572,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration6/codepatchbay-v9.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration6/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "db135b9320f46298f0fd29c47eff1c3c5588560b793f58f6ab4f0553675d1bd5",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 49262592,
+      "allocated_file_bytes": 49258496,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 49266688,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 49254400,
+          "allocated_bytes": 49254400,
+          "inode": 655791,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 655790,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "5f349e2731d32346ea5dd3a248671ceaec5f2a04708caf190bb56050ce032217",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/codepatchbay-v3.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 48865280,
+      "allocated_file_bytes": 48861184,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 48869376,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 48857088,
+          "allocated_bytes": 48857088,
+          "inode": 528550,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 528549,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/upstream-reuse/codepatchbay-v3.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [
+        {
+          "path": "/workspace/callscope/reports/upstream-reuse/codepatchbay-integration.json",
+          "reference_kind": "historical_engine_and_reuse_observation",
+          "exact_directory_reference": false,
+          "sha256": "750b0f6994bab372131fec75d6d1d3dd062452a83a261e5e26455f3b889cbf5c",
+          "meaning": "Engine/reuse observations are preserved as historical data; reading the saved result does not consume memo files."
+        }
+      ],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/demo.sqlite3.cocoindex",
+      "kind": "cocoindex_frontend_memo",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 86016,
+      "allocated_file_bytes": 86016,
+      "allocated_directory_bytes": 8192,
+      "actual_allocated_bytes": 94208,
+      "file_count": 2,
+      "directory_count": 2,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "mdb/data.mdb",
+          "logical_bytes": 77824,
+          "allocated_bytes": 81920,
+          "inode": 528535,
+          "device": 27,
+          "link_count": 1
+        },
+        {
+          "relative_path": "mdb/lock.mdb",
+          "logical_bytes": 8192,
+          "allocated_bytes": 4096,
+          "inode": 528534,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": "/workspace/callscope/reports/upstream-reuse/demo.sqlite3",
+      "formal_database_sibling_exists": true,
+      "purpose": "Persistent per-language static frontend memo for CocoIndex; not the published GraphSnapshot/Finding Store.",
+      "rebuild_basis": [
+        "callscope/service.py:41 constructs CocoIndexRunner(db_path + .cocoindex), while service.py:43 opens Store(db_path).",
+        "callscope/cocoindex_worker.py:66 registers memo=True analyze_language; lines 69-71 compute from captured source, policy, tool/parser identity.",
+        "callscope/cocoindex_worker.py:93 passes only this cache path to CocoIndex Environment; returned results are serialized into the separate Store.",
+        "callscope/store.py:278-289 publishes a complete snapshot JSON plus independent findings, not cache offsets."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future CocoIndex scans would recompute a cold frontend memo; historical recorded warm reuse and all published analysis files remain unchanged.",
+      "observed_cache_layout": {
+        "backend_layout": "LMDB",
+        "data_file": "mdb/data.mdb",
+        "lock_file": "mdb/lock.mdb",
+        "not_a_published_analysis_sqlite": true,
+        "layout_confirmed_from_file_names_only": true
+      }
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/__pycache__",
+      "kind": "artifact_helper_python_bytecode",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 32366,
+      "allocated_file_bytes": 32768,
+      "allocated_directory_bytes": 4096,
+      "actual_allocated_bytes": 36864,
+      "file_count": 1,
+      "directory_count": 1,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "render_report_summaries.cpython-312.pyc",
+          "logical_bytes": 32366,
+          "allocated_bytes": 32768,
+          "inode": 655826,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": null,
+      "formal_database_sibling_exists": null,
+      "purpose": "Compiled Python bytecode for report helper scripts; not source or saved analysis.",
+      "rebuild_basis": [
+        "Python bytecode can be recompiled from preserved adjacent .py helper source; no target code execution is needed to preserve reports."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future ordinary Python helper imports may recreate bytecode."
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/__pycache__",
+      "kind": "artifact_helper_python_bytecode",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 2436,
+      "allocated_file_bytes": 4096,
+      "allocated_directory_bytes": 4096,
+      "actual_allocated_bytes": 8192,
+      "file_count": 1,
+      "directory_count": 1,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "publication_identity.cpython-312.pyc",
+          "logical_bytes": 2436,
+          "allocated_bytes": 4096,
+          "inode": 655523,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": null,
+      "formal_database_sibling_exists": null,
+      "purpose": "Compiled Python bytecode for report helper scripts; not source or saved analysis.",
+      "rebuild_basis": [
+        "Python bytecode can be recompiled from preserved adjacent .py helper source; no target code execution is needed to preserve reports."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future ordinary Python helper imports may recreate bytecode."
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/__pycache__",
+      "kind": "artifact_helper_python_bytecode",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 3794,
+      "allocated_file_bytes": 4096,
+      "allocated_directory_bytes": 4096,
+      "actual_allocated_bytes": 8192,
+      "file_count": 1,
+      "directory_count": 1,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "publication_identity.cpython-312.pyc",
+          "logical_bytes": 3794,
+          "allocated_bytes": 4096,
+          "inode": 655647,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": null,
+      "formal_database_sibling_exists": null,
+      "purpose": "Compiled Python bytecode for report helper scripts; not source or saved analysis.",
+      "rebuild_basis": [
+        "Python bytecode can be recompiled from preserved adjacent .py helper source; no target code execution is needed to preserve reports."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future ordinary Python helper imports may recreate bytecode."
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/__pycache__",
+      "kind": "artifact_helper_python_bytecode",
+      "action": "inventory_only_no_deletion",
+      "logical_bytes": 2436,
+      "allocated_file_bytes": 4096,
+      "allocated_directory_bytes": 4096,
+      "actual_allocated_bytes": 8192,
+      "file_count": 1,
+      "directory_count": 1,
+      "symlinks": [],
+      "errors": [],
+      "files": [
+        {
+          "relative_path": "publication_identity.cpython-312.pyc",
+          "logical_bytes": 2436,
+          "allocated_bytes": 4096,
+          "inode": 655427,
+          "device": 27,
+          "link_count": 1
+        }
+      ],
+      "formal_database_sibling": null,
+      "formal_database_sibling_exists": null,
+      "purpose": "Compiled Python bytecode for report helper scripts; not source or saved analysis.",
+      "rebuild_basis": [
+        "Python bytecode can be recompiled from preserved adjacent .py helper source; no target code execution is needed to preserve reports."
+      ],
+      "active_process_references": [],
+      "kernel_file_locks": [],
+      "metadata_references": [],
+      "hardlinks_to_preserved_analysis_database": [],
+      "reclaim_candidate_after_root_technical_review": true,
+      "pre_delete_recheck_required": true,
+      "deletion_would_change_historical_files": false,
+      "expected_future_effect": "Future ordinary Python helper imports may recreate bytecode."
+    }
+  ],
+  "preserve_analysis_database_files": [
+    {
+      "path": "/workspace/callscope/reports/astra-iteration3/winwincode-v6.sqlite3",
+      "logical_bytes": 925061120,
+      "allocated_bytes": 925065216,
+      "inode": 655375,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration3/codepatchbay-v6.sqlite3",
+      "logical_bytes": 244703232,
+      "allocated_bytes": 244707328,
+      "inode": 655372,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/winwincode-v8.sqlite3",
+      "logical_bytes": 2027282432,
+      "allocated_bytes": 2027282432,
+      "inode": 786511,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/codepatchbay-v8.sqlite3",
+      "logical_bytes": 528556032,
+      "allocated_bytes": 528560128,
+      "inode": 786513,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration2/winwincode-v5.sqlite3",
+      "logical_bytes": 901038080,
+      "allocated_bytes": 901042176,
+      "inode": 528603,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration2/codepatchbay-v5.sqlite3",
+      "logical_bytes": 239378432,
+      "allocated_bytes": 239378432,
+      "inode": 528609,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration1/codepatchbay-v4.sqlite3",
+      "logical_bytes": 238940160,
+      "allocated_bytes": 238940160,
+      "inode": 528581,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration1/winwincode-v4.sqlite3",
+      "logical_bytes": 876113920,
+      "allocated_bytes": 876118016,
+      "inode": 528568,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration4/winwincode-v7.sqlite3",
+      "logical_bytes": 993513472,
+      "allocated_bytes": 993517568,
+      "inode": 786456,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration4/codepatchbay-v7.sqlite3",
+      "logical_bytes": 259674112,
+      "allocated_bytes": 259674112,
+      "inode": 786457,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration11/codepatchbay-v13.sqlite3-wal",
+      "logical_bytes": 0,
+      "allocated_bytes": 0,
+      "inode": 272384,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration11/codepatchbay-v13.sqlite3-shm",
+      "logical_bytes": 32768,
+      "allocated_bytes": 32768,
+      "inode": 272385,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration11/winwincode-v13.sqlite3",
+      "logical_bytes": 1132589056,
+      "allocated_bytes": 1132589056,
+      "inode": 272357,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration11/codepatchbay-v13.sqlite3",
+      "logical_bytes": 675598336,
+      "allocated_bytes": 675602432,
+      "inode": 272355,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/demo.sqlite3",
+      "logical_bytes": 151552,
+      "allocated_bytes": 151552,
+      "inode": 528529,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/winwincode-v3.sqlite3",
+      "logical_bytes": 863367168,
+      "allocated_bytes": 863371264,
+      "inode": 528531,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/codepatchbay-v3.sqlite3",
+      "logical_bytes": 231018496,
+      "allocated_bytes": 231018496,
+      "inode": 528544,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/codepatchbay-v10.sqlite3",
+      "logical_bytes": 297496576,
+      "allocated_bytes": 297496576,
+      "inode": 655524,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/winwincode-v10.sqlite3",
+      "logical_bytes": 1013768192,
+      "allocated_bytes": 1013772288,
+      "inode": 655527,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-v11.sqlite3",
+      "logical_bytes": 309927936,
+      "allocated_bytes": 309932032,
+      "inode": 655584,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/winwincode-v11.sqlite3",
+      "logical_bytes": 1014059008,
+      "allocated_bytes": 1014063104,
+      "inode": 655582,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/codepatchbay-v10.sqlite3",
+      "logical_bytes": 297422848,
+      "allocated_bytes": 297426944,
+      "inode": 655428,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/winwincode-v10.sqlite3",
+      "logical_bytes": 1013809152,
+      "allocated_bytes": 1013813248,
+      "inode": 655435,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/winwincode-v9.sqlite3",
+      "logical_bytes": 1013837824,
+      "allocated_bytes": 1013841920,
+      "inode": 786566,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/codepatchbay-v9.sqlite3",
+      "logical_bytes": 295723008,
+      "allocated_bytes": 295723008,
+      "inode": 786564,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3",
+      "logical_bytes": 1033048064,
+      "allocated_bytes": 1033052160,
+      "inode": 655798,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3-wal",
+      "logical_bytes": 0,
+      "allocated_bytes": 0,
+      "inode": 655819,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3",
+      "logical_bytes": 450543616,
+      "allocated_bytes": 450547712,
+      "inode": 655785,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3-wal",
+      "logical_bytes": 0,
+      "allocated_bytes": 0,
+      "inode": 655814,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3-shm",
+      "logical_bytes": 32768,
+      "allocated_bytes": 32768,
+      "inode": 655815,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3-shm",
+      "logical_bytes": 32768,
+      "allocated_bytes": 32768,
+      "inode": 655820,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/codepatchbay.sqlite3",
+      "logical_bytes": 4096,
+      "allocated_bytes": 4096,
+      "inode": 272105,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/winwincode.sqlite3-wal",
+      "logical_bytes": 948271592,
+      "allocated_bytes": 948277248,
+      "inode": 272118,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/codepatchbay.sqlite3-shm",
+      "logical_bytes": 32768,
+      "allocated_bytes": 32768,
+      "inode": 272114,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/winwincode-v2.sqlite3",
+      "logical_bytes": 841134080,
+      "allocated_bytes": 841138176,
+      "inode": 272122,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/codepatchbay-v2.sqlite3-wal",
+      "logical_bytes": 8272,
+      "allocated_bytes": 12288,
+      "inode": 262288,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/winwincode.sqlite3-shm",
+      "logical_bytes": 1867776,
+      "allocated_bytes": 1867776,
+      "inode": 272119,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/codepatchbay.sqlite3-wal",
+      "logical_bytes": 57712,
+      "allocated_bytes": 61440,
+      "inode": 272113,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/evaluation.sqlite3",
+      "logical_bytes": 98304,
+      "allocated_bytes": 98304,
+      "inode": 262282,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/codepatchbay-v2.sqlite3",
+      "logical_bytes": 225853440,
+      "allocated_bytes": 225853440,
+      "inode": 262289,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/codepatchbay-v2.sqlite3-shm",
+      "logical_bytes": 32768,
+      "allocated_bytes": 32768,
+      "inode": 262281,
+      "device": 27,
+      "action": "preserve"
+    },
+    {
+      "path": "/workspace/callscope/reports/real-repositories/winwincode.sqlite3",
+      "logical_bytes": 942702592,
+      "allocated_bytes": 942706688,
+      "inode": 272117,
+      "device": 27,
+      "action": "preserve"
+    }
+  ],
+  "saved_metadata_reference_inventory": [
+    {
+      "path": "/workspace/callscope/reports/astra-iteration3/codepatchbay-integration.json",
+      "sha256": "01fbe74e68fc687764ec2f21d440819c68d52188a400bfcb8bff1705b5487d4b",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration3/winwincode-integration.json",
+      "sha256": "d244853729732d483b9f83032d4e438238709d0321a2b66812055bc01f987b94",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/winwincode-integration-superseded-field-v1.json",
+      "sha256": "f3bb4a3683f3b3c08c2da5ab9207f6338eb6270568532b647959f81601e77081",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/CORE_FREEZE_SUPERSEDED_FIELD_V1.json",
+      "sha256": "683289cd0812e0cf6b4a641c2dbf563d9dbd8e0f5c955ee0672f3e4f9f158807",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/codepatchbay-integration.json",
+      "sha256": "d43dbc05d5611d9b0788e6d1a9d8c4faf4f4f0a1fe88488fdce1e2b4c6b387d6",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/codepatchbay-integration-superseded-field-v1.json",
+      "sha256": "bce88dac9a0977cff35d39f4b83c26b6f593d254974594404962123e0bb0444e",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/CORE_FREEZE.json",
+      "sha256": "f3cea1f516fa47c4994feb790fe85e72fe506f5a5b7951350774729329823fc1",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/winwincode-integration.json",
+      "sha256": "16368989981cf420ff8e24bcfe946c38ba1da46678890373bad1cc4a3c1b968d",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration2/codepatchbay-integration.json",
+      "sha256": "79ce38690112786aac72b7b10611573906afa0b9923b459e298370cf81a2867f",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration2/winwincode-integration.json",
+      "sha256": "f4eddb27a4f9a0daa1eadd89ab2f2dd075ee3abd360029f3f91c3cb27672bb0f",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration1/codepatchbay-integration.json",
+      "sha256": "37ec5776ec73bd2ab134a36381f8e296c0d4341ef826572db21f15cd6cc212c0",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration1/winwincode-integration.json",
+      "sha256": "d71776849987de88634d923ab875379bcaef0a6513cdaf8310a93d906d60c81f",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration4/codepatchbay-integration.json",
+      "sha256": "98f2f107b93b7558b1b81fa50b49231a2f44e3c6c978d5d1ae9cbdec3d262427",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration4/winwincode-integration.json",
+      "sha256": "53c9e70a54db8702b0401a5af0230e9d9c1293aec79b99de304dee740d486305",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration11/PUBLICATION_IDENTITY.json",
+      "sha256": "4885ff6bd4fc175dc659c340982efab638024acf0cbddc377601c027c1f27344",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration11/CORE_FREEZE.json",
+      "sha256": "56ff9ced7d93122f21b82260f71ecd69d906300bf26250647e2153203252a9c1",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/codepatchbay-integration.json",
+      "sha256": "750b0f6994bab372131fec75d6d1d3dd062452a83a261e5e26455f3b889cbf5c",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/winwincode-integration.json",
+      "sha256": "508e3bfeb35c058a492c2815bbc3416b24774c5af0f65e29976595707189773a",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/FIELD_VERSION_COMPARISON.json",
+      "sha256": "41a3d6d2086e92a8683a27e57b028d9cc0cc406efd19e05ac1b1449b24e61bba",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/codepatchbay-integration.json",
+      "sha256": "add96e0433cd4d8c76051862bae8745df9d53baa9e38cea8281474f071208815",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/CORE_FREEZE.json",
+      "sha256": "437b147e52628222b0e2cf61c597bcf02d8d6928d70f4595c7d0e8163095408f",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/winwincode-integration.json",
+      "sha256": "71257f8905a1875e14c75d8f9cba6cb20126b1a3665158c51e5e00fba63a7774",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/FIELD_VERSION_COMPARISON.json",
+      "sha256": "3a30d28acb56d32e6248d475b1ca77460356ffd67a1569318869b331fa1fd5f5",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-integration.json",
+      "sha256": "86d137aae685056e467b8991479dc9beee1eee4e54761ce6322fe9835e39caf8",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/CORE_FREEZE.json",
+      "sha256": "583de15210d4ab9dfc60447c14dcdaa94a2a771303e537bf4caf80fe684b56ff",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/winwincode-integration.json",
+      "sha256": "f938770290169b31de7f67f9f8bfdd2d8b233400db9d00ff987a486f12d0b14f",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/FIELD_VERSION_COMPARISON.json",
+      "sha256": "bc3127188b0f3659f5c8a7ffb2d78a4f95fe12859ef9d58d50930c584f951a7d",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/codepatchbay-integration.json",
+      "sha256": "aeb48be70ffb75843e42876d50a23185813df4f61cc4e61ca6fc5cec08fdbfa5",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/CORE_FREEZE.json",
+      "sha256": "e5da83b31367d4407d4f6e6319eb267ad7ecc68242ba804280017fc5b5fbc668",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/winwincode-integration.json",
+      "sha256": "156a36defef0155ee1269b2b30aacb0990a0c6178fdd3330355a2996fe47a5ba",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/codepatchbay-integration.json",
+      "sha256": "db135b9320f46298f0fd29c47eff1c3c5588560b793f58f6ab4f0553675d1bd5",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/CORE_FREEZE.json",
+      "sha256": "aac9a27805814912a3472244f6f424db6792e17bbe04ba4d079490e3f3760a11",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/winwincode-integration.json",
+      "sha256": "637542fb40d959a98dabcf7fe2506e21f03d19099af1641c8b9c4ab25238cacf",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-integration.json",
+      "sha256": "5f349e2731d32346ea5dd3a248671ceaec5f2a04708caf190bb56050ce032217",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/PUBLICATION_IDENTITY.json",
+      "sha256": "9554376331b9a42ccab0f136d9a6033db6a9f72c7d5d812d896153176a522df8",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/CORE_FREEZE.json",
+      "sha256": "73e70d5f186022bb7ef2afcc0118bdf95656264380705d50aff882b085bfc242",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/winwincode-integration.json",
+      "sha256": "aa490b55676d6a3b184e32a99bf431ce3cc1b55e9ed53b07448e2ad3df9421ce",
+      "exact_directory_reference": false,
+      "historical_engine_mentioned": true
+    }
+  ],
+  "metadata_reference_search_scope": "Small <=2MiB integration/identity/freeze/comparison/policy/maintenance JSON under reports only; large saved reports and all SQLite contents were not opened. Code-level separation and preserved Store data establish independence, not a claim that every historical text contains no cache path.",
+  "protection_rules": [
+    "Preserve every published analysis *.sqlite3 and WAL/SHM, frozen source, JSON report/evidence/ledger/policy, original benchmark, Markdown report and source script.",
+    "Only explicit memo/bytecode directories listed here are candidates; no directory is deleted by this inventory.",
+    "Recheck active FDs/maps/cwd and kernel locks immediately before any root-authorized deletion; a point-in-time zero is not a future guarantee.",
+    "v13 and planned v14 full-engine publication do not require old CocoIndex memo; do not revise old engine/reuse metadata after clearing memo.",
+    "No target code, test, build, runtime probe, credential or environment is accessed for this inventory."
+  ],
+  "cache_database_distinction": "The .sqlite3.cocoindex suffix names a directory whose observed files are LMDB memo data/lock files; the sibling .sqlite3 is the preserved published analysis Store. No database was opened."
+}

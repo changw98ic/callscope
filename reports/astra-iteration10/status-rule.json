@@ -1,0 +1,36 @@
+{
+  "id": "cpb-complete-terminal-classification",
+  "type": "status_classification_flow",
+  "severity": "info",
+  "producer": {"file": "server/services/event/event-materializer.ts", "symbol": "materializeJob"},
+  "predicate": {"file": "server/services/job/job-store.ts", "symbol": "isTerminal"},
+  "consumer": {"file": "server/services/job/job-store.ts", "symbol": "recoverAsNewJob"},
+  "authority": {"file": "server/services/event/event-store.ts", "symbol": "appendEvent"},
+  "recoverability": {"file": "server/services/job/job-store.ts", "symbol": "isRecoverable"},
+  "invariant": {
+    "kind": "terminal_classification_consistency",
+    "status": "superseded",
+    "status_field": "status",
+    "identity_field": "jobId"
+  },
+  "models": ["ordinary-record-status-predicate-normal-projection-v1"],
+  "provenance": {
+    "authority": "independent_review",
+    "reviewer": "Astra",
+    "author_approved": false,
+    "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+    "note": "Original status-classification report benchmark; source roles locate actual saved AST only."
+  },
+  "applicability": {
+    "kind": "conditional",
+    "conditions": [
+      "The selected current ordinary job projection has a nonempty job identity and status superseded; the selected source guard is reached on a normal prefix.",
+      "The explicitly registered ordinary-record, standard stable Set-membership and normal data-return model applies; no target runtime behavior is verified."
+    ],
+    "counterexamples": [
+      "Missing job identity gives the terminal predicate an early true result while recovery rejects the missing job before that predicate guard.",
+      "The authoritative event-store seal rejects nonallowlisted later business mutations; allowed events can still change the current projected status.",
+      "Consistent terminal classification does not require recovery permission, and recoverability is a separate product policy."
+    ]
+  }
+}

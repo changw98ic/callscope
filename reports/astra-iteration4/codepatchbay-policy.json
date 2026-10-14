@@ -1,0 +1,477 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "CodePatchBay — static source review"
+  },
+  "analysis": {
+    "languages": [
+      "python",
+      "typescript"
+    ],
+    "source_roots": [
+      "."
+    ],
+    "exclude": [
+      ".git",
+      ".beads",
+      ".callscope",
+      ".test-tmp",
+      "node_modules",
+      "third_party",
+      "vendor",
+      "generated",
+      "dist",
+      "dist-tests",
+      "build",
+      "coverage",
+      "tests",
+      "__tests__",
+      "fixtures",
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      "**/*.test.tsx",
+      "**/*.spec.tsx"
+    ],
+    "max_file_bytes": 1048576,
+    "module_aliases": {},
+    "rust_crates": {},
+    "support_inputs": [],
+    "rust_helper_profiles": [],
+    "rust_interface_models": []
+  },
+  "layers": {},
+  "entrypoints": [
+    "ts:cli/cpb#main",
+    "ts:cli/commands/fix#run",
+    "ts:cli/commands/task#run",
+    "ts:server/index#startHubServer",
+    "ts:server/services/engine-runner#runJobWithServices"
+  ],
+  "rules": [
+    {
+      "id": "cpb-observed-cli-project-argument",
+      "kind": "required_call",
+      "from": "ts:cli/cpb#main",
+      "to": "ts:cli/cpb#projectArgForCommand",
+      "severity": "info",
+      "description": "工具核对基准：main 的项目级命令分支中存在对 projectArgForCommand 的显式调用，不要求每次运行进入该分支。",
+      "evaluation_only": true,
+      "intent_basis": "source_observation",
+      "source_locations": [
+        "cli/cpb.ts:167"
+      ],
+      "expected_model_result": "connection_present"
+    },
+    {
+      "id": "cpb-observed-task-result-rendering",
+      "kind": "required_call",
+      "from": "ts:cli/commands/task#renderTaskView",
+      "to": "ts:cli/commands/task#humanResultLine",
+      "severity": "info",
+      "description": "工具核对基准：task 的展示函数复用 humanResultLine。仅核对源码显式连接，不核对输出语义。",
+      "evaluation_only": true,
+      "intent_basis": "source_observation_with_declared_shared_renderer",
+      "source_locations": [
+        "cli/commands/task.ts:172"
+      ],
+      "expected_model_result": "connection_present"
+    },
+    {
+      "id": "cpb-observed-fix-shared-result-renderer",
+      "kind": "required_call",
+      "from": "ts:cli/commands/fix#followTask",
+      "to": "ts:cli/commands/task#humanResultLine",
+      "severity": "info",
+      "description": "工具核对基准：fix 的 follow 分支使用从 task.js 静态导入的 humanResultLine，核对 NodeNext .js 导入到 .ts 源码的绑定。",
+      "evaluation_only": true,
+      "intent_basis": "source_observation_with_declared_shared_renderer",
+      "source_locations": [
+        "cli/commands/fix.ts:61",
+        "cli/commands/fix.ts:352"
+      ],
+      "expected_model_result": "connection_present"
+    },
+    {
+      "id": "cpb-observed-server-engine-delegation",
+      "kind": "required_call",
+      "from": "ts:server/services/engine-runner#runJobWithServices",
+      "to": "ts:core/engine/run-job#runJob",
+      "severity": "info",
+      "description": "工具核对基准：服务适配器构造依赖后直接调用 core 的 runJob；不验证注入端口具体实现或执行行为。",
+      "evaluation_only": true,
+      "intent_basis": "source_observation",
+      "source_locations": [
+        "server/services/engine-runner.ts:2",
+        "server/services/engine-runner.ts:157"
+      ],
+      "expected_model_result": "connection_present"
+    },
+    {
+      "id": "cpb-observed-runjob-crash-wrapper",
+      "kind": "required_call",
+      "from": "ts:core/engine/run-job#runJob",
+      "to": "ts:core/engine/run-job#runJobInner",
+      "severity": "info",
+      "description": "工具核对基准：runJob 的异常屏障包装直接调用同文件 runJobInner，不能据此保证异常恢复一定成功。",
+      "evaluation_only": true,
+      "intent_basis": "source_observation",
+      "source_locations": [
+        "core/engine/run-job.ts:75"
+      ],
+      "expected_model_result": "connection_present"
+    },
+    {
+      "id": "cpb-observed-checklist-materialization",
+      "kind": "required_call",
+      "from": "ts:core/engine/run-job#runJobInner",
+      "to": "ts:core/engine/run-job-checklist-dag#freezeChecklistAndMaterializeDag",
+      "severity": "info",
+      "description": "工具核对基准：runJobInner 包含冻结 checklist 并物化 DAG 的显式连接；不判断前置分支、顺序或 fail-closed 行为正确性。",
+      "evaluation_only": true,
+      "intent_basis": "source_observation_with_declared_execution_order",
+      "source_locations": [
+        "core/engine/run-job.ts:159"
+      ],
+      "expected_model_result": "connection_present"
+    },
+    {
+      "id": "cpb-observed-runjob-to-dag-path",
+      "kind": "required_path",
+      "from": "ts:core/engine/run-job#runJob",
+      "to": "ts:core/engine/run-job-execute-dag#executeWorkflowDag",
+      "severity": "info",
+      "description": "工具核对基准：runJob → runJobInner → executeWorkflowDag 的两跳显式路径；该路径只表示静态结构可达。",
+      "evaluation_only": true,
+      "intent_basis": "source_observation",
+      "source_locations": [
+        "core/engine/run-job.ts:75",
+        "core/engine/run-job.ts:177"
+      ],
+      "expected_model_result": "connection_present"
+    },
+    {
+      "id": "cpb-observed-task-view-sanitization",
+      "kind": "required_call",
+      "from": "ts:server/services/task/task-view#projectTaskView",
+      "to": "ts:core/contracts/task-view-fields#sanitizeTaskView",
+      "severity": "info",
+      "description": "工具核对基准：公开 TaskView 投影包含 sanitizeTaskView 调用。仓库声明此字段边界，但调用存在不证明所有输出或嵌套数据安全。",
+      "evaluation_only": true,
+      "intent_basis": "source_observation_with_declared_output_boundary",
+      "source_locations": [
+        "server/services/task/task-view.ts:53",
+        "server/services/task/task-view.ts:708"
+      ],
+      "expected_model_result": "connection_present"
+    },
+    {
+      "id": "cpb-capability-dynamic-command-boundary",
+      "kind": "required_path",
+      "from": "ts:cli/cpb#main",
+      "to": "ts:cli/commands/task#run",
+      "severity": "info",
+      "description": "能力边界核对项：CLI 根据 COMMANDS 和计算路径动态 import 后调用 mod.run。期望工具报告 uncertain；自设规则不是仓库缺陷或漏接命令的证据。",
+      "evaluation_only": true,
+      "intent_basis": "dynamic_dispatch_capability_probe_from_source",
+      "source_locations": [
+        "cli/cpb.ts:154",
+        "cli/cpb.ts:186"
+      ],
+      "expected_model_result": "uncertain"
+    },
+    {
+      "id": "cpb-observed-pure-result-helper-no-engine-call",
+      "kind": "forbidden_call",
+      "from": "ts:cli/commands/task#humanResultLine",
+      "to": "ts:core/engine/run-job#runJob",
+      "severity": "info",
+      "description": "负向工具核对基准：已读源码的纯结果文案 helper 没有直接调用 runJob。仅核对这两个已存在端点的直接边，不推广为整个 task 命令或传递依赖无副作用。",
+      "evaluation_only": true,
+      "intent_basis": "source_observed_absence",
+      "source_locations": [
+        "cli/commands/task.ts:141",
+        "cli/commands/task.ts:142",
+        "cli/commands/task.ts:65"
+      ],
+      "expected_model_result": "forbidden_connection_absent"
+    }
+  ],
+  "static_contracts": [
+    {
+      "id": "cpb-astra-terminal-initializer-members",
+      "type": "literal_set_consistency",
+      "severity": "medium",
+      "reference": {
+        "file": "server/services/event/event-materializer.ts",
+        "symbol": "TERMINAL_STATUSES",
+        "site": "initializer"
+      },
+      "subject": {
+        "file": "server/services/job/job-store.ts",
+        "symbol": "TERMINAL_STATUSES",
+        "site": "initializer"
+      },
+      "relation": "equal",
+      "provenance": {
+        "authority": "independent_review",
+        "reviewer": "Astra",
+        "author_approved": false,
+        "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "note": "Astra 的终态集合一致性观察；此规则只把明确配置的两个声明初始化字符串成员集合设为相等合同，不按同名自动推断业务等价。"
+      },
+      "applicability": {
+        "kind": "unconditional",
+        "conditions": [
+          "合同仅比较这两个已配置声明初始化中的封闭字符串成员集合，忽略元素顺序与重复成员。",
+          "未证明运行时 Set 永不修改、全局内建构造器永不替换或所有终态写入合法。"
+        ],
+        "counterexamples": [
+          "terminal 与 recoverable 是不同职责；本初始化集合规则不能据成员差推断所有恢复分支都错误。",
+          "出现别名、展开、非字面元素或未知构造器绑定时保留未知，不把可见部分当成完整集合。"
+        ]
+      }
+    }
+  ],
+  "evaluation": {
+    "purpose": "Check CallScope against manually read source witnesses, not judge repository defects",
+    "target_root": "/workspace/codepatchbay",
+    "scope": "TypeScript and Python source captured from the full project root with explicit exclusions; scripts retained as source data; Shell remains unsupported",
+    "target_execution_allowed": false,
+    "repository_commands_allowed": false,
+    "rules_are_repository_approved_contracts": false,
+    "entrypoints_are_review_selection_not_complete_runtime_catalog": true,
+    "no_finding_does_not_prove_business_or_runtime_correctness": true
+  },
+  "value_contracts": [
+    {
+      "id": "cpb-astra-pipeline-retry-source-form",
+      "type": "call_argument_value",
+      "severity": "medium",
+      "subject": {
+        "file": "runtime/worker/managed-worker.ts",
+        "symbol": "main.processInbox",
+        "callee": "runJobWithServices",
+        "argument_index": 0,
+        "object_path": [
+          "maxRetries"
+        ]
+      },
+      "evaluation": "all_direct_calls",
+      "expected": {
+        "kind": "member",
+        "object": {
+          "kind": "reference",
+          "name": "metadata"
+        },
+        "property": "maxRetries"
+      },
+      "producer": {
+        "subject": {
+          "file": "cli/commands/pipeline.ts",
+          "symbol": "run",
+          "callee": "enqueue",
+          "argument_index": 1,
+          "object_path": [
+            "metadata",
+            "maxRetries"
+          ]
+        },
+        "expected": {
+          "kind": "member",
+          "object": {
+            "kind": "reference",
+            "name": "parsed"
+          },
+          "property": "retries"
+        }
+      },
+      "transport": {
+        "kind": "external_contract",
+        "conditions": [
+          "比较限定 pipeline 提交经默认队列、assignment、inbox 到受管理 worker 的正常执行分支；finalizer-only 分支不运行所选调用。",
+          "enqueue 未复用旧 pending 项，metadata 经 resolveAgentsForEntry、assignment 构造及持久消息仍对应本次请求；这些中间传递尚未由本检查器自动证明。",
+          "消费者调用的动态桥接目标与默认生产接入相符；调用选择器只匹配源码调用表达式，不证明动态导入或函数执行成功。"
+        ]
+      },
+      "provenance": {
+        "authority": "independent_review",
+        "reviewer": "Astra",
+        "author_approved": false,
+        "source_doc": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "note": "CPB-01 的有限源码来源形式复核；中间传输与生产适用性作为显式前提，保留未知。"
+      },
+      "applicability": {
+        "kind": "conditional",
+        "conditions": [
+          "比较限定 pipeline 提交经默认队列、assignment、inbox 到受管理 worker 的正常执行分支；finalizer-only 分支不运行所选调用。",
+          "enqueue 未复用旧 pending 项，metadata 经 resolveAgentsForEntry、assignment 构造及持久消息仍对应本次请求；这些中间传递尚未由本检查器自动证明。",
+          "消费者调用的动态桥接目标与默认生产接入相符；调用选择器只匹配源码调用表达式，不证明动态导入或函数执行成功。",
+          "本合同要求消费者以 metadata.maxRetries 的来源形式构造该字段；源码表达式差异不证明某次运行数值不同，也不证明完整重试语义失效。"
+        ],
+        "counterexamples": [
+          "用户输入恰好为 3 时，两个来源形式仍不同，但本次运行值可能相同。",
+          "另有 queue failure budget、phase retry 和 DAG node retry；本合同不把它们当成同一预算或证明其失效。",
+          "源表达式经等价别名、默认或转换仍可能正确，未证明语义等价不能把不同 AST 直接判成值错误。"
+        ]
+      },
+      "source_evidence": [
+        {
+          "file": "cli/commands/pipeline.ts",
+          "symbol": "parseCommonFlags",
+          "node_type": "assignment_expression",
+          "text": "retries = parseInt(args[++i], 10) || 3",
+          "role": "context"
+        },
+        {
+          "file": "runtime/worker/managed-worker.ts",
+          "symbol": "main.processInbox",
+          "node_type": "variable_declarator",
+          "text": "metadata = assignment.metadata || {}",
+          "role": "context"
+        }
+      ]
+    }
+  ],
+  "navigation_contracts": [],
+  "atomicity_contracts": [
+    {
+      "id": "cpb-astra-active-key-authority",
+      "type": "protected_deduplication",
+      "severity": "medium",
+      "facade": {
+        "owner": {
+          "file": "cli/commands/fix.ts",
+          "symbol": "run"
+        },
+        "read": {
+          "callee": "deps.loadQueue",
+          "resource_argument_index": 0,
+          "implementation": {
+            "file": "server/services/hub/hub-queue.ts",
+            "symbol": "loadQueue"
+          }
+        },
+        "select": {
+          "callee": "selectIdempotentEntry",
+          "implementation": {
+            "file": "core/contracts/idempotency.ts",
+            "symbol": "selectIdempotentEntry"
+          }
+        },
+        "write": {
+          "callee": "deps.enqueue",
+          "resource_argument_index": 0
+        }
+      },
+      "authority": {
+        "file": "server/services/hub/hub-queue.ts",
+        "symbol": "enqueue"
+      },
+      "dependency_assembly": {
+        "file": "cli/commands/fix.ts",
+        "symbol": "resolveDeps"
+      },
+      "predicate_sources": {
+        "terminal_predicate": {
+          "file": "core/contracts/idempotency.ts",
+          "symbol": "isTerminalQueueStatus"
+        },
+        "terminal_values": {
+          "file": "core/contracts/idempotency.ts",
+          "symbol": "TERMINAL_QUEUE_STATUSES"
+        },
+        "key": {
+          "file": "server/services/hub/hub-queue.ts",
+          "symbol": "entryKey"
+        }
+      },
+      "protection": {
+        "id": "cpb-directory-owner-queue-v1",
+        "version": "1",
+        "kind": "directory_owner_lock",
+        "wrappers": [
+          {
+            "owner": {
+              "file": "server/services/hub/hub-queue.ts",
+              "symbol": "withQueueMutation"
+            },
+            "callee": "withQueueLock",
+            "callback_parameter_index": 1,
+            "callback_argument_index": 1,
+            "resource_parameter_index": 0,
+            "resource_argument_index": 0
+          }
+        ],
+        "lifecycle": {
+          "owner": {
+            "file": "server/services/hub/hub-queue.ts",
+            "symbol": "withQueueLock"
+          },
+          "callback_parameter_index": 1,
+          "resource_parameter_index": 0,
+          "acquire": {
+            "callee": "mkdir",
+            "resource_argument_index": 0,
+            "resource_binding": "lockDir"
+          },
+          "fresh_read": {
+            "callee": "loadLocalQueue",
+            "resource_argument_index": 0
+          },
+          "persist": {
+            "callee": "saveLocalQueue",
+            "resource_argument_index": 0
+          },
+          "release": {
+            "callee": "releaseQueueLockExact",
+            "resource_argument_index": 0
+          },
+          "acquired_binding": "acquired",
+          "process_fence": {
+            "callee": "withQueueProcessFence",
+            "implementation": {
+              "file": "server/services/hub/hub-queue.ts",
+              "symbol": "withQueueProcessFence"
+            },
+            "callback_argument_index": 1
+          }
+        }
+      },
+      "transition": {
+        "owner": {
+          "file": "server/orchestrator/hub-orchestrator.ts",
+          "symbol": "HubOrchestrator.tick"
+        },
+        "callee": "updateEntry",
+        "patch_argument_index": 2,
+        "guard_argument_index": 3
+      },
+      "resource": {
+        "id": "hub-queue",
+        "authority": "source_declared",
+        "conditions": [
+          "在默认依赖装配下比较同一逻辑hubRoot队列；物理路径别名与跨进程部署身份未证明。",
+          "目录owner锁协议从成功取得到释放期间具有互斥语义；完整锁和文件系统正确性未经静态认证。"
+        ]
+      },
+      "provenance": {
+        "authority": "independent_review",
+        "reviewer": "Astra",
+        "author_approved": false,
+        "source_doc": "/workspace/callscope/reports/astra-iteration3/ATOMICITY_EVIDENCE.md",
+        "note": "配置仅选择来源与受信保护模型；实际保护范围、查重谓词和状态转换必须从保存AST抽取。"
+      },
+      "applicability": {
+        "kind": "conditional",
+        "conditions": [
+          "评审默认deps的所选成功预查与写入路径；没有建立额外外层串行或唯一性保证。",
+          "本规则不提供预计算交错；未实现交错求解时只能支持保护范围和谓词关系等局部义务。"
+        ],
+        "counterexamples": [
+          "顺序预查已见活动记录会复用；权威写入已见同复合key的pending记录也会复用。",
+          "读、写、锁、调度guard或状态更新失败可能阻止提交，不能推导任意双提交必然重复。"
+        ]
+      }
+    }
+  ]
+}

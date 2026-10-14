@@ -1,0 +1,6179 @@
+{
+  "kind": "development_saved_snapshot_source_query",
+  "module_version": "captured-lifecycle-ownership-relations-1",
+  "module_sha256": "ed03b4682d88e24016a55ae866f889f5b86b01709280468326a76f2e2d895612",
+  "base_snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+  "base_source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+  "base_policy_hash": "c11c67291de2eb257c6b6195cae16f92333abe2f9ca323881403c954cd737714",
+  "old_snapshot_republished": false,
+  "formal_frozen_scan": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "definitions": {
+    "server/services/event/event-store.ts": {
+      "issues": [],
+      "symbols": [
+        {
+          "symbol": "EVENT_LOCK_TTL_MS",
+          "line": 37,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "RESERVED_EXTERNAL_JOURNAL_PREFIXES",
+          "line": 38,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventLockTestHookStorage",
+          "line": 59,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withEventLockTestHooksForTests",
+          "line": 61,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#withEventLockTestHooksForTests"
+        },
+        {
+          "symbol": "withEventLockTestHooksForTests.parent",
+          "line": 62,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventLockTestHooks",
+          "line": 66,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventLockTestHooks"
+        },
+        {
+          "symbol": "text",
+          "line": 70,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#text"
+        },
+        {
+          "symbol": "isEventRecord",
+          "line": 74,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#isEventRecord"
+        },
+        {
+          "symbol": "missingEventStreamIdentity",
+          "line": 78,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#missingEventStreamIdentity"
+        },
+        {
+          "symbol": "eventStreamIdentityMismatch",
+          "line": 82,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventStreamIdentityMismatch"
+        },
+        {
+          "symbol": "bindEventStreamIdentity",
+          "line": 102,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#bindEventStreamIdentity"
+        },
+        {
+          "symbol": "bindEventStreamIdentity.bound",
+          "line": 105,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "assertPersistedEventStreamIdentity",
+          "line": 119,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#assertPersistedEventStreamIdentity"
+        },
+        {
+          "symbol": "reservedExternalJournal",
+          "line": 133,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#reservedExternalJournal"
+        },
+        {
+          "symbol": "reservedExternalJournal.<arrow@134:49>",
+          "line": 134,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#reservedExternalJournal.<arrow@134:49>"
+        },
+        {
+          "symbol": "assertConditionalExternalJournalWriter",
+          "line": 137,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#assertConditionalExternalJournalWriter"
+        },
+        {
+          "symbol": "rejectGenericReservedJournalWriter",
+          "line": 146,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#rejectGenericReservedJournalWriter"
+        },
+        {
+          "symbol": "persistableEvent",
+          "line": 155,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#persistableEvent"
+        },
+        {
+          "symbol": "persistableEvent.artifact",
+          "line": 156,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "persistableEvent.blocked",
+          "line": 157,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#persistableEvent.blocked"
+        },
+        {
+          "symbol": "persistableEvent.blocked.value",
+          "line": 158,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "persistableEvent.<block@167:36>.payload",
+          "line": 168,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "persistableEvent.<block@167:36>.<arrow@169:14>",
+          "line": 169,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#persistableEvent.<block@167:36>.<arrow@169:14>"
+        },
+        {
+          "symbol": "persistableEvent.<block@167:36>.<arrow@170:21>",
+          "line": 170,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#persistableEvent.<block@167:36>.<arrow@170:21>"
+        },
+        {
+          "symbol": "redactPersistableEvent",
+          "line": 177,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#redactPersistableEvent"
+        },
+        {
+          "symbol": "redactPersistableEvent.ownership",
+          "line": 178,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "redactPersistableEvent.redacted",
+          "line": 181,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "redactPersistableEvent.<block@182:17>.redactedOwnership",
+          "line": 183,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withEventLock",
+          "line": 193,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#withEventLock"
+        },
+        {
+          "symbol": "withEventLock.lockDir",
+          "line": 194,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withEventLock.testHooks",
+          "line": 195,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withEventLock.<block@196:6>.<object@197:61>.<object@201:13>.afterRecoveryObserved",
+          "line": 202,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#withEventLock.<block@196:6>.<object@197:61>.<object@201:13>.afterRecoveryObserved"
+        },
+        {
+          "symbol": "withEventLock.<block@196:6>.<object@197:61>.<object@201:13>.afterQuarantineRename",
+          "line": 206,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#withEventLock.<block@196:6>.<object@197:61>.<object@201:13>.afterQuarantineRename"
+        },
+        {
+          "symbol": "withEventLock.<block@196:6>.<object@197:61>.<arrow@215:10>",
+          "line": 215,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#withEventLock.<block@196:6>.<object@197:61>.<arrow@215:10>"
+        },
+        {
+          "symbol": "withEventLock.<catch@218:4>.primary",
+          "line": 219,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withEventLock.<catch@218:4>.primaryRecord",
+          "line": 222,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withEventLock.<catch@218:4>.primaryCode",
+          "line": 223,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "JOBS_EVENTS_FORMAT_VERSION",
+          "line": 243,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventWriteListeners",
+          "line": 244,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "onEventWritten",
+          "line": 246,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#onEventWritten"
+        },
+        {
+          "symbol": "onEventWritten.<arrow@248:9>",
+          "line": 248,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#onEventWritten.<arrow@248:9>"
+        },
+        {
+          "symbol": "notifyEventWritten",
+          "line": 251,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#notifyEventWritten"
+        },
+        {
+          "symbol": "_base",
+          "line": 259,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#_base"
+        },
+        {
+          "symbol": "validatePathComponent",
+          "line": 264,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#validatePathComponent"
+        },
+        {
+          "symbol": "serializeEvent",
+          "line": 273,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#serializeEvent"
+        },
+        {
+          "symbol": "serializeEvent.serialized",
+          "line": 278,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "canonicalSerializedEvent",
+          "line": 292,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#canonicalSerializedEvent"
+        },
+        {
+          "symbol": "canonicalSerializedEvent.canonical",
+          "line": 293,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#canonicalSerializedEvent.canonical"
+        },
+        {
+          "symbol": "canonicalSerializedEvent.canonical.normalized",
+          "line": 296,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "CHECKPOINT_CURSOR_VERSION",
+          "line": 316,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "SHA256_PATTERN",
+          "line": 317,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "sha256",
+          "line": 319,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#sha256"
+        },
+        {
+          "symbol": "eventCursor",
+          "line": 323,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventCursor"
+        },
+        {
+          "symbol": "eventCursor.hash",
+          "line": 324,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventStreamCursorForRecords",
+          "line": 335,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventStreamCursorForRecords"
+        },
+        {
+          "symbol": "assertEventStreamCursor",
+          "line": 339,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#assertEventStreamCursor"
+        },
+        {
+          "symbol": "sameEventStreamCursor",
+          "line": 358,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#sameEventStreamCursor"
+        },
+        {
+          "symbol": "checkpointStateDigest",
+          "line": 362,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#checkpointStateDigest"
+        },
+        {
+          "symbol": "sameCheckpointState",
+          "line": 366,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#sameCheckpointState"
+        },
+        {
+          "symbol": "malformedEventError",
+          "line": 370,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#malformedEventError"
+        },
+        {
+          "symbol": "errnoCode",
+          "line": 386,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#errnoCode"
+        },
+        {
+          "symbol": "eventStoreError",
+          "line": 392,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventStoreError"
+        },
+        {
+          "symbol": "fileGeneration",
+          "line": 405,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#fileGeneration"
+        },
+        {
+          "symbol": "directoryIdentity",
+          "line": 420,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#directoryIdentity"
+        },
+        {
+          "symbol": "sameFileGeneration",
+          "line": 431,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#sameFileGeneration"
+        },
+        {
+          "symbol": "sameDirectoryIdentity",
+          "line": 444,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#sameDirectoryIdentity"
+        },
+        {
+          "symbol": "noFollowFlag",
+          "line": 453,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#noFollowFlag"
+        },
+        {
+          "symbol": "directoryOpenFlags",
+          "line": 464,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#directoryOpenFlags"
+        },
+        {
+          "symbol": "eventPathGeneration",
+          "line": 478,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventPathGeneration"
+        },
+        {
+          "symbol": "eventPathGeneration.<block@479:6>.info",
+          "line": 480,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "openEventDirectoryAuthority",
+          "line": 495,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#openEventDirectoryAuthority"
+        },
+        {
+          "symbol": "openEventDirectoryAuthority.directory",
+          "line": 496,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "openEventDirectoryAuthority.before",
+          "line": 497,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "openEventDirectoryAuthority.expected",
+          "line": 518,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "openEventDirectoryAuthority.handle",
+          "line": 519,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "openEventDirectoryAuthority.<block@520:6>.opened",
+          "line": 522,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "openEventDirectoryAuthority.<block@520:6>.current",
+          "line": 523,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "validateEventDirectoryAuthority",
+          "line": 562,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#validateEventDirectoryAuthority"
+        },
+        {
+          "symbol": "validateEventDirectoryAuthority.current",
+          "line": 563,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "validateEventDirectoryAuthority.opened",
+          "line": 575,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "throwAfterClosing",
+          "line": 593,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#throwAfterClosing"
+        },
+        {
+          "symbol": "throwAfterClosing.closeErrors",
+          "line": 602,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventFileChanged",
+          "line": 632,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventFileChanged"
+        },
+        {
+          "symbol": "readEventFileStable",
+          "line": 640,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#readEventFileStable"
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.attempt",
+          "line": 644,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.expected",
+          "line": 645,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.parentAuthority",
+          "line": 647,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.handle",
+          "line": 648,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.value",
+          "line": 649,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.verifiedFile",
+          "line": 650,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.verifiedParent",
+          "line": 651,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.primaryError",
+          "line": 652,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.<block@653:8>.opened",
+          "line": 656,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.<block@653:8>.raw",
+          "line": 661,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.<block@653:8>.afterDescriptor",
+          "line": 662,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventFileStable.<loop@644:2>.<block@644:52>.<block@653:8>.afterPath",
+          "line": 663,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventFileFor",
+          "line": 708,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventFileFor"
+        },
+        {
+          "symbol": "eventFileFor.eventsRoot",
+          "line": 712,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventFileFor.file",
+          "line": 713,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventFileFor.relative",
+          "line": 714,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_scanEventsDir",
+          "line": 723,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#_scanEventsDir"
+        },
+        {
+          "symbol": "_scanEventsDir.projectEntries",
+          "line": 724,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_scanEventsDir.files",
+          "line": 732,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_scanEventsDir.<loop@733:2>.<block@733:45>.project",
+          "line": 735,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_scanEventsDir.<loop@733:2>.<block@733:45>.jobEntries",
+          "line": 738,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_scanEventsDir.<loop@733:2>.<block@733:45>.<loop@746:4>.<block@746:39>.jobId",
+          "line": 748,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listEventFiles",
+          "line": 756,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#listEventFiles"
+        },
+        {
+          "symbol": "listEventFiles.<arrow@761:10>",
+          "line": 761,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#listEventFiles.<arrow@761:10>"
+        },
+        {
+          "symbol": "eventFileSuccessor",
+          "line": 766,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventFileSuccessor"
+        },
+        {
+          "symbol": "assertClosedEventPostcondition",
+          "line": 796,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#assertClosedEventPostcondition"
+        },
+        {
+          "symbol": "assertClosedEventPostcondition.currentFile",
+          "line": 803,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "assertClosedEventPostcondition.currentParent",
+          "line": 804,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventMutationFailure",
+          "line": 822,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventMutationFailure"
+        },
+        {
+          "symbol": "recoverEventFileLocked",
+          "line": 886,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#recoverEventFileLocked"
+        },
+        {
+          "symbol": "recoverEventFileLocked.expected",
+          "line": 887,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.parentAuthority",
+          "line": 890,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.handle",
+          "line": 891,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.primaryError",
+          "line": 892,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.result",
+          "line": 893,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.bytesWritten",
+          "line": 894,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.fileSynced",
+          "line": 895,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.verifiedFile",
+          "line": 896,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.verifiedParent",
+          "line": 897,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.opened",
+          "line": 901,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.openedGeneration",
+          "line": 902,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.canonical",
+          "line": 903,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.rawBuffer",
+          "line": 913,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.raw",
+          "line": 914,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.retainedDescriptor",
+          "line": 924,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.retainedPath",
+          "line": 925,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.lines",
+          "line": 940,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.<arrow@940:43>",
+          "line": 940,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#recoverEventFileLocked.<block@898:6>.<block@939:11>.<arrow@940:43>"
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.replacement",
+          "line": 941,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.removedBytes",
+          "line": 942,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.addedNewline",
+          "line": 943,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.<block@947:13>.lastLine",
+          "line": 948,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.<block@947:13>.<catch@953:10>.lastNewline",
+          "line": 954,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.<block@947:13>.<catch@953:10>.validPrefix",
+          "line": 955,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.<block@961:57>.offset",
+          "line": 962,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.<block@961:57>.<block@963:48>.write",
+          "line": 964,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.committed",
+          "line": 989,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFileLocked.<block@898:6>.<block@939:11>.committedPath",
+          "line": 990,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFile",
+          "line": 1029,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#recoverEventFile"
+        },
+        {
+          "symbol": "recoverEventFile.file",
+          "line": 1030,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverEventFile.<arrow@1031:29>",
+          "line": 1031,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#recoverEventFile.<arrow@1031:29>"
+        },
+        {
+          "symbol": "appendSerializedEventDurably",
+          "line": 1034,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#appendSerializedEventDurably"
+        },
+        {
+          "symbol": "appendSerializedEventDurably.payload",
+          "line": 1035,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.expected",
+          "line": 1036,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.parentAuthority",
+          "line": 1037,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.handle",
+          "line": 1038,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.primaryError",
+          "line": 1039,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.created",
+          "line": 1040,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.bytesWritten",
+          "line": 1041,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.fileSynced",
+          "line": 1042,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.parentSynced",
+          "line": 1043,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.verifiedFile",
+          "line": 1044,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.verifiedParent",
+          "line": 1045,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.flags",
+          "line": 1048,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.opened",
+          "line": 1069,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.openedGeneration",
+          "line": 1070,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.canonical",
+          "line": 1071,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.retainedDescriptor",
+          "line": 1084,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.retainedPath",
+          "line": 1085,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.<block@1095:46>.maxWriteBytes",
+          "line": 1096,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.<block@1095:46>.remainingBytes",
+          "line": 1097,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.<block@1095:46>.requestedBytes",
+          "line": 1098,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.<block@1095:46>.write",
+          "line": 1101,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.committed",
+          "line": 1126,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendSerializedEventDurably.<block@1046:6>.committedPath",
+          "line": 1127,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent",
+          "line": 1179,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#appendEvent"
+        },
+        {
+          "symbol": "appendEvent.boundEvent",
+          "line": 1180,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.tracedEvent",
+          "line": 1181,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.file",
+          "line": 1186,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.written",
+          "line": 1188,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>",
+          "line": 1188,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#appendEvent.<arrow@1188:44>"
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.existing",
+          "line": 1190,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.<block@1191:29>.state",
+          "line": 1192,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.<block@1191:29>.eventType",
+          "line": 1193,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.writeBlocked",
+          "line": 1200,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#appendEvent.<arrow@1188:44>.writeBlocked"
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.writeBlocked.blocked",
+          "line": 1201,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.writeBlocked.tracedBlocked",
+          "line": 1204,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.writeBlocked.serialized",
+          "line": 1205,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.artifact",
+          "line": 1211,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.<block@1221:38>.artifactPayload",
+          "line": 1222,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.<block@1221:38>.<arrow@1228:15>",
+          "line": 1228,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#appendEvent.<arrow@1188:44>.<block@1221:38>.<arrow@1228:15>"
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.<block@1221:38>.<arrow@1229:31>",
+          "line": 1229,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#appendEvent.<arrow@1188:44>.<block@1221:38>.<arrow@1229:31>"
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.redacted",
+          "line": 1235,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEvent.<arrow@1188:44>.serialized",
+          "line": 1236,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseEventJsonl",
+          "line": 1246,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#parseEventJsonl"
+        },
+        {
+          "symbol": "parseEventJsonl.lines",
+          "line": 1262,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseEventJsonl.<arrow@1264:9>",
+          "line": 1264,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#parseEventJsonl.<arrow@1264:9>"
+        },
+        {
+          "symbol": "parseEventJsonl.<arrow@1265:12>",
+          "line": 1265,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#parseEventJsonl.<arrow@1265:12>"
+        },
+        {
+          "symbol": "parseEventJsonl.events",
+          "line": 1267,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseEventJsonl.<loop@1268:2>.<block@1268:44>.event",
+          "line": 1269,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_parseEventFileReadOnly",
+          "line": 1286,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#_parseEventFileReadOnly"
+        },
+        {
+          "symbol": "_parseEventFileReadOnly.<block@1291:6>.raw",
+          "line": 1292,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "eventDurabilityFailure",
+          "line": 1301,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#eventDurabilityFailure"
+        },
+        {
+          "symbol": "eventDurabilityFailure.<block@1302:42>.record",
+          "line": 1303,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable",
+          "line": 1321,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#ensureFilesystemEventStreamDurable"
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.expected",
+          "line": 1326,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.parentAuthority",
+          "line": 1337,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.handle",
+          "line": 1338,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.primaryError",
+          "line": 1339,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.verifiedFile",
+          "line": 1340,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.verifiedParent",
+          "line": 1341,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.events",
+          "line": 1342,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.opened",
+          "line": 1346,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.canonical",
+          "line": 1347,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.rawBuffer",
+          "line": 1359,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.raw",
+          "line": 1360,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.retainedDescriptor",
+          "line": 1370,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.retainedPath",
+          "line": 1371,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.syncedDescriptor",
+          "line": 1383,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.syncedPath",
+          "line": 1384,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.committedDescriptor",
+          "line": 1399,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureFilesystemEventStreamDurable.<block@1343:6>.committedPath",
+          "line": 1400,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureEventStreamDurable",
+          "line": 1456,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#ensureEventStreamDurable"
+        },
+        {
+          "symbol": "ensureEventStreamDurable.authority",
+          "line": 1462,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureEventStreamDurable.<block@1463:6>.file",
+          "line": 1466,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ensureEventStreamDurable.<block@1463:6>.<arrow@1468:37>",
+          "line": 1468,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#ensureEventStreamDurable.<block@1463:6>.<arrow@1468:37>"
+        },
+        {
+          "symbol": "readEventStreamCursor",
+          "line": 1474,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#readEventStreamCursor"
+        },
+        {
+          "symbol": "readEventStreamCursor.file",
+          "line": 1480,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor",
+          "line": 1493,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#appendEventIfCursor"
+        },
+        {
+          "symbol": "appendEventIfCursor.expected",
+          "line": 1501,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.boundEvent",
+          "line": 1502,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.tracedEvent",
+          "line": 1504,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.tracedSerialized",
+          "line": 1505,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.candidatePersistable",
+          "line": 1506,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.candidateSerialized",
+          "line": 1507,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.persistable",
+          "line": 1519,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.serialized",
+          "line": 1520,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.file",
+          "line": 1522,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.candidateCursor",
+          "line": 1523,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.writtenEvent",
+          "line": 1524,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.result",
+          "line": 1525,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.<block@1526:6>.<arrow@1527:39>",
+          "line": 1527,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#appendEventIfCursor.<block@1526:6>.<arrow@1527:39>"
+        },
+        {
+          "symbol": "appendEventIfCursor.<block@1526:6>.<arrow@1527:39>.existing",
+          "line": 1528,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.<block@1526:6>.<arrow@1527:39>.current",
+          "line": 1529,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "appendEventIfCursor.<block@1526:6>.<arrow@1527:39>.nextCursor",
+          "line": 1533,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEvents",
+          "line": 1561,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#readEvents"
+        },
+        {
+          "symbol": "readEvents.file",
+          "line": 1562,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEvents.result",
+          "line": 1563,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventsReadOnly",
+          "line": 1567,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#readEventsReadOnly"
+        },
+        {
+          "symbol": "readEventsReadOnly.file",
+          "line": 1568,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readEventsReadOnly.result",
+          "line": 1569,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "checkpointFileFor",
+          "line": 1573,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#checkpointFileFor"
+        },
+        {
+          "symbol": "checkpointFileFor.checkpointsRoot",
+          "line": 1576,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeCheckpoint",
+          "line": 1580,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#writeCheckpoint"
+        },
+        {
+          "symbol": "writeCheckpoint.file",
+          "line": 1588,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeCheckpoint.checkpoint",
+          "line": 1589,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeCheckpoint.<arrow@1600:28>",
+          "line": 1600,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#writeCheckpoint.<arrow@1600:28>"
+        },
+        {
+          "symbol": "readCheckpointFile",
+          "line": 1604,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#readCheckpointFile"
+        },
+        {
+          "symbol": "readCheckpointFile.raw",
+          "line": 1605,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readCheckpointFile.parsed",
+          "line": 1607,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readCheckpointFile.meta",
+          "line": 1647,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readCheckpointFile.cursor",
+          "line": 1666,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readCheckpointRecord",
+          "line": 1691,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#readCheckpointRecord"
+        },
+        {
+          "symbol": "readCheckpointRecord.file",
+          "line": 1697,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readCheckpointRecord.checkpoint",
+          "line": 1698,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readCheckpoint",
+          "line": 1702,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#readCheckpoint"
+        },
+        {
+          "symbol": "checkpointReplayError",
+          "line": 1706,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#checkpointReplayError"
+        },
+        {
+          "symbol": "checkpointPrefixEventCount",
+          "line": 1714,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#checkpointPrefixEventCount"
+        },
+        {
+          "symbol": "checkpointPrefixEventCount.prefix",
+          "line": 1726,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "checkpointPrefixEventCount.actualCursor",
+          "line": 1727,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobProjection",
+          "line": 1747,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#readJobProjection"
+        },
+        {
+          "symbol": "readJobProjection.checkpoint",
+          "line": 1753,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobProjection.events",
+          "line": 1754,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobProjection.cursor",
+          "line": 1755,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobProjection.checkpointEventCount",
+          "line": 1764,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobProjection.replayed",
+          "line": 1765,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobProjection.fullyMaterialized",
+          "line": 1769,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withLockedJobProjection",
+          "line": 1785,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#withLockedJobProjection"
+        },
+        {
+          "symbol": "withLockedJobProjection.file",
+          "line": 1792,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withLockedJobProjection.<arrow@1793:29>",
+          "line": 1793,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#withLockedJobProjection.<arrow@1793:29>"
+        },
+        {
+          "symbol": "deleteCheckpoint",
+          "line": 1798,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#deleteCheckpoint"
+        },
+        {
+          "symbol": "deleteCheckpoint.file",
+          "line": 1799,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "deleteCheckpoint.<arrow@1800:29>",
+          "line": 1800,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#deleteCheckpoint.<arrow@1800:29>"
+        },
+        {
+          "symbol": "deleteCheckpoint.<arrow@1800:29>.<object@1800:55>.beforeFinalRename",
+          "line": 1801,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#deleteCheckpoint.<arrow@1800:29>.<object@1800:55>.beforeFinalRename"
+        },
+        {
+          "symbol": "checkpointJob",
+          "line": 1805,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#checkpointJob"
+        },
+        {
+          "symbol": "checkpointJob.checkpointSnapshot",
+          "line": 1806,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-store#checkpointJob.checkpointSnapshot"
+        },
+        {
+          "symbol": "checkpointJob.checkpointSnapshot.events",
+          "line": 1807,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "checkpointJob.checkpointSnapshot.state",
+          "line": 1809,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "checkpointJob.checkpointSnapshot.cursor",
+          "line": 1811,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "checkpointJob.file",
+          "line": 1820,
+          "callable": false,
+          "graph_node_id": ""
+        }
+      ]
+    },
+    "server/services/event/event-materializer.ts": {
+      "issues": [],
+      "symbols": [
+        {
+          "symbol": "isDateInput",
+          "line": 164,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#isDateInput"
+        },
+        {
+          "symbol": "stringValue",
+          "line": 168,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#stringValue"
+        },
+        {
+          "symbol": "stringishValue",
+          "line": 172,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#stringishValue"
+        },
+        {
+          "symbol": "sourceContextValue",
+          "line": 176,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#sourceContextValue"
+        },
+        {
+          "symbol": "recordList",
+          "line": 180,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#recordList"
+        },
+        {
+          "symbol": "POST_TERMINAL_ALLOWED",
+          "line": 184,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "NODE_STATE_DEFAULTS",
+          "line": 210,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_updateNodeState",
+          "line": 227,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_updateNodeState"
+        },
+        {
+          "symbol": "_updateNodeState.prev",
+          "line": 229,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_updateNodeState.definedUpdates",
+          "line": 230,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_updateNodeState.<arrow@231:35>",
+          "line": 231,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_updateNodeState.<arrow@231:35>"
+        },
+        {
+          "symbol": "_updateNodeState.next",
+          "line": 233,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_updateNodeState.terminalTs",
+          "line": 234,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_updateNodeState.<block@235:62>.ms",
+          "line": 236,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_workflowNodes",
+          "line": 242,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_workflowNodes"
+        },
+        {
+          "symbol": "_workflowNodeIds",
+          "line": 246,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_workflowNodeIds"
+        },
+        {
+          "symbol": "_workflowNodeIds.<arrow@249:11>",
+          "line": 249,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_workflowNodeIds.<arrow@249:11>"
+        },
+        {
+          "symbol": "_workflowNodeIds.<arrow@250:14>",
+          "line": 250,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_workflowNodeIds.<arrow@250:14>"
+        },
+        {
+          "symbol": "_workflowHasNodeId",
+          "line": 254,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_workflowHasNodeId"
+        },
+        {
+          "symbol": "_syncDagResume",
+          "line": 258,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_syncDagResume"
+        },
+        {
+          "symbol": "_syncDagResume.phaseStates",
+          "line": 259,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "materializeJob",
+          "line": 270,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#materializeJob"
+        },
+        {
+          "symbol": "materializeJob.state",
+          "line": 271,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "materializeJob.ctx",
+          "line": 359,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "materializeJob.<loop@361:2>.<block@361:30>.isPostTerminal",
+          "line": 362,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "advanceMaterializedJob",
+          "line": 381,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#advanceMaterializedJob"
+        },
+        {
+          "symbol": "advanceMaterializedJob.state",
+          "line": 382,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "advanceMaterializedJob.ctx",
+          "line": 383,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "advanceMaterializedJob.isPostTerminal",
+          "line": 384,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_handlePlanCache",
+          "line": 403,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_handlePlanCache"
+        },
+        {
+          "symbol": "_handleReviewBundle",
+          "line": 407,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#_handleReviewBundle"
+        },
+        {
+          "symbol": "_handleReviewBundle.round",
+          "line": 408,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS",
+          "line": 420,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_created",
+          "line": 421,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_created"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.plan_decision",
+          "line": 436,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.plan_decision"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.riskmap_generated",
+          "line": 449,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.riskmap_generated"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.workflow_dag_materialized",
+          "line": 463,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.workflow_dag_materialized"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.workflow_dag_materialized.<block@467:4>.nodeIds",
+          "line": 468,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.workflow_dag_materialized.<block@467:4>.<arrow@469:57>",
+          "line": 469,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.workflow_dag_materialized.<block@467:4>.<arrow@469:57>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.workflow_dag_materialized.<block@467:4>.<arrow@470:53>",
+          "line": 470,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.workflow_dag_materialized.<block@467:4>.<arrow@470:53>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.workflow_dag_materialized.<block@467:4>.<arrow@471:53>",
+          "line": 471,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.workflow_dag_materialized.<block@467:4>.<arrow@471:53>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.workflow_dag_materialized.<loop@473:4>.<block@473:46>.nodeId",
+          "line": 474,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dynamic_agent_plan_generated",
+          "line": 478,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dynamic_agent_plan_generated"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.adversarial_verdict",
+          "line": 483,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.adversarial_verdict"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.adversarial_verdict.verdict",
+          "line": 484,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.executor_routing_feedback",
+          "line": 487,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.executor_routing_feedback"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.agent_routing_decision",
+          "line": 490,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.agent_routing_decision"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.agent_routing_decision.selection",
+          "line": 491,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.agent_routing_result",
+          "line": 496,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.agent_routing_result"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.agent_routing_result.<loop@497:4>.index",
+          "line": 497,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.agent_routing_result.<loop@497:4>.<block@497:84>.selection",
+          "line": 498,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.worktree_created",
+          "line": 513,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.worktree_created"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.phase_started",
+          "line": 522,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.phase_started"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.phase_completed",
+          "line": 529,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.phase_completed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.phase_completed.<block@533:35>.<arrow@534:53>",
+          "line": 534,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.phase_completed.<block@533:35>.<arrow@534:53>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.phase_completed.<block@533:35>.<block@538:57>.<arrow@539:55>",
+          "line": 539,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.phase_completed.<block@533:35>.<block@538:57>.<arrow@539:55>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_started",
+          "line": 546,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_started"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_started.<arrow@548:51>",
+          "line": 548,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_started.<arrow@548:51>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_completed",
+          "line": 551,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_completed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_completed.<arrow@552:51>",
+          "line": 552,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_completed.<arrow@552:51>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_failed",
+          "line": 558,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_failed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_failed.<arrow@559:51>",
+          "line": 559,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_failed.<arrow@559:51>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_blocked",
+          "line": 564,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_blocked"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_blocked.<arrow@565:51>",
+          "line": 565,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_blocked.<arrow@565:51>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_retrying",
+          "line": 569,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_retrying"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_retrying.<block@570:22>.<arrow@570:71>",
+          "line": 570,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_retrying.<block@570:22>.<arrow@570:71>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_retrying.<block@570:22>.<arrow@570:154>",
+          "line": 570,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_retrying.<block@570:22>.<arrow@570:154>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_retrying.<block@570:22>.<arrow@570:241>",
+          "line": 570,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_retrying.<block@570:22>.<arrow@570:241>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_retrying.<arrow@571:88>",
+          "line": 571,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_retrying.<arrow@571:88>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_skipped",
+          "line": 574,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_skipped"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_skipped.<arrow@575:69>",
+          "line": 575,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_skipped.<arrow@575:69>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_cancelled",
+          "line": 580,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_cancelled"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.dag_node_cancelled.<arrow@581:69>",
+          "line": 581,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.dag_node_cancelled.<arrow@581:69>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.phase_failed",
+          "line": 584,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.phase_failed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.phase_failed.<arrow@595:82>",
+          "line": 595,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.phase_failed.<arrow@595:82>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.budget_exceeded",
+          "line": 598,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.budget_exceeded"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_blocked",
+          "line": 604,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_blocked"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_failed",
+          "line": 612,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_failed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.pool_exhausted",
+          "line": 624,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.pool_exhausted"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_superseded",
+          "line": 633,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_superseded"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.approval_required",
+          "line": 638,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.approval_required"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.approval_required.<block@643:21>.<arrow@643:70>",
+          "line": 643,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.approval_required.<block@643:21>.<arrow@643:70>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_approved",
+          "line": 645,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_approved"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_approved.<arrow@649:68>",
+          "line": 649,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_approved.<arrow@649:68>"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.approval_timed_out",
+          "line": 651,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.approval_timed_out"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_completed",
+          "line": 660,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_completed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.pr_opened",
+          "line": 672,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.pr_opened"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_cancel_requested",
+          "line": 676,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_cancel_requested"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_cancelled",
+          "line": 680,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_cancelled"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_retried",
+          "line": 687,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_retried"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.recovery_created",
+          "line": 701,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.recovery_created"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.permission_denied",
+          "line": 708,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.permission_denied"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.external_repair_started",
+          "line": 712,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.external_repair_started"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.external_repair_completed",
+          "line": 713,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.external_repair_completed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.external_repair_failed",
+          "line": 714,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.external_repair_failed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_redirect_requested",
+          "line": 715,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_redirect_requested"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.job_redirect_consumed",
+          "line": 718,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.job_redirect_consumed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.workflow_selected",
+          "line": 722,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.workflow_selected"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.phase_activity",
+          "line": 723,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.phase_activity"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.external_remediation_started",
+          "line": 724,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.external_remediation_started"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.external_remediation_completed",
+          "line": 725,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.external_remediation_completed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.external_remediation_failed",
+          "line": 726,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.external_remediation_failed"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.finalizer_result",
+          "line": 727,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.finalizer_result"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.finalizer_result.result",
+          "line": 728,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.merge_index_status",
+          "line": 731,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.merge_index_status"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.completion_gate_evaluated",
+          "line": 732,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.completion_gate_evaluated"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.completion_gate_evaluated.completionReport",
+          "line": 732,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.artifact_created",
+          "line": 733,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.artifact_created"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.artifact_created.kind",
+          "line": 734,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.artifact_created.entry",
+          "line": 736,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "EVENT_HANDLERS.audit_finalized",
+          "line": 755,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.audit_finalized"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.runtime_context_snapshot",
+          "line": 763,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.runtime_context_snapshot"
+        },
+        {
+          "symbol": "EVENT_HANDLERS.runtime_failure_recorded",
+          "line": 780,
+          "callable": true,
+          "graph_node_id": "ts:server/services/event/event-materializer#EVENT_HANDLERS.runtime_failure_recorded"
+        },
+        {
+          "symbol": "TERMINAL_STATUSES",
+          "line": 792,
+          "callable": false,
+          "graph_node_id": ""
+        }
+      ]
+    },
+    "server/services/job/job-store.ts": {
+      "issues": [],
+      "symbols": [
+        {
+          "symbol": "INDEX_VERSION",
+          "line": 40,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "LOCK_TTL_MS",
+          "line": 41,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "LOCK_RETRY_COUNT",
+          "line": 42,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "LOCK_RETRY_DELAY_MS",
+          "line": 43,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "JOBS_INDEX_MAX_BYTES",
+          "line": 44,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "JOBS_INDEX_READ_RETRIES",
+          "line": 45,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "jobsIndexLockTestHookStorage",
+          "line": 60,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withJobsIndexLockTestHooksForTests",
+          "line": 62,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#withJobsIndexLockTestHooksForTests"
+        },
+        {
+          "symbol": "withJobsIndexLockTestHooksForTests.parent",
+          "line": 63,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "jobsIndexLockTestHooks",
+          "line": 67,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#jobsIndexLockTestHooks"
+        },
+        {
+          "symbol": "lockErrno",
+          "line": 71,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#lockErrno"
+        },
+        {
+          "symbol": "withIndexLock",
+          "line": 203,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#withIndexLock"
+        },
+        {
+          "symbol": "withIndexLock.testHooks",
+          "line": 204,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withIndexLock.<object@205:53>.<object@209:11>.afterRecoveryObserved",
+          "line": 210,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#withIndexLock.<object@205:53>.<object@209:11>.afterRecoveryObserved"
+        },
+        {
+          "symbol": "withIndexLock.<object@205:53>.<object@209:11>.afterQuarantineRename",
+          "line": 214,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#withIndexLock.<object@205:53>.<object@209:11>.afterQuarantineRename"
+        },
+        {
+          "symbol": "withIndexLock.<object@205:53>.<arrow@223:8>",
+          "line": 223,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#withIndexLock.<object@205:53>.<arrow@223:8>"
+        },
+        {
+          "symbol": "_writeQueues",
+          "line": 228,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueueWrite",
+          "line": 230,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#enqueueWrite"
+        },
+        {
+          "symbol": "enqueueWrite.key",
+          "line": 231,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueueWrite.lockDir",
+          "line": 232,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueueWrite.prev",
+          "line": 233,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueueWrite.next",
+          "line": 234,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueueWrite.<arrow@234:25>",
+          "line": 234,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#enqueueWrite.<arrow@234:25>"
+        },
+        {
+          "symbol": "enqueueWrite.tail",
+          "line": 235,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueueWrite.<arrow@235:26>",
+          "line": 235,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#enqueueWrite.<arrow@235:26>"
+        },
+        {
+          "symbol": "enqueueWrite.<arrow@237:17>",
+          "line": 237,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#enqueueWrite.<arrow@237:17>"
+        },
+        {
+          "symbol": "_base",
+          "line": 243,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#_base"
+        },
+        {
+          "symbol": "indexFilePath",
+          "line": 248,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#indexFilePath"
+        },
+        {
+          "symbol": "compositeKey",
+          "line": 252,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#compositeKey"
+        },
+        {
+          "symbol": "readJobsIndex",
+          "line": 256,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#readJobsIndex"
+        },
+        {
+          "symbol": "readJobsIndex.indexFile",
+          "line": 257,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobsIndex.raw",
+          "line": 258,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobsIndex.<loop@259:2>.attempt",
+          "line": 259,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobsIndex.<loop@259:2>.<block@259:73>.<catch@263:6>.code",
+          "line": 264,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobsIndex.parsed",
+          "line": 279,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readJobsIndex.<arrow@298:39>",
+          "line": 298,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#readJobsIndex.<arrow@298:39>"
+        },
+        {
+          "symbol": "writeJobsIndex",
+          "line": 310,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#writeJobsIndex"
+        },
+        {
+          "symbol": "writeJobsIndex.target",
+          "line": 311,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "updateJobsIndexEntry",
+          "line": 315,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#updateJobsIndexEntry"
+        },
+        {
+          "symbol": "updateJobsIndexEntry.<arrow@316:37>",
+          "line": 316,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#updateJobsIndexEntry.<arrow@316:37>"
+        },
+        {
+          "symbol": "updateJobsIndexEntry.<arrow@316:37>.afterProjectionRead",
+          "line": 317,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "updateJobsIndexEntry.<arrow@316:37>.<block@318:29>.observed",
+          "line": 319,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "updateJobsIndexEntry.<arrow@316:37>.<arrow@331:66>",
+          "line": 331,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#updateJobsIndexEntry.<arrow@316:37>.<arrow@331:66>"
+        },
+        {
+          "symbol": "updateJobsIndexEntry.<arrow@316:37>.<arrow@331:66>.authoritativeState",
+          "line": 332,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "updateJobsIndexEntry.<arrow@316:37>.<arrow@331:66>.index",
+          "line": 333,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "rebuildJobsIndexLocked",
+          "line": 348,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#rebuildJobsIndexLocked"
+        },
+        {
+          "symbol": "rebuildJobsIndexLocked.files",
+          "line": 349,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "rebuildJobsIndexLocked.jobs",
+          "line": 350,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "rebuildJobsIndexLocked.<loop@352:2>.<block@352:42>.events",
+          "line": 353,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "rebuildJobsIndexLocked.<loop@352:2>.<block@352:42>.state",
+          "line": 355,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "rebuildJobsIndexLocked.index",
+          "line": 361,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "rebuildJobsIndex",
+          "line": 374,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#rebuildJobsIndex"
+        },
+        {
+          "symbol": "rebuildJobsIndex.<arrow@375:37>",
+          "line": 375,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#rebuildJobsIndex.<arrow@375:37>"
+        },
+        {
+          "symbol": "mergeMissingEventStreams",
+          "line": 378,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#mergeMissingEventStreams"
+        },
+        {
+          "symbol": "mergeMissingEventStreams.files",
+          "line": 379,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "mergeMissingEventStreams.validKeys",
+          "line": 380,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "mergeMissingEventStreams.<arrow@380:38>",
+          "line": 380,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#mergeMissingEventStreams.<arrow@380:38>"
+        },
+        {
+          "symbol": "mergeMissingEventStreams.changed",
+          "line": 381,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "mergeMissingEventStreams.<loop@390:2>.<block@390:42>.key",
+          "line": 391,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "mergeMissingEventStreams.<loop@390:2>.<block@390:42>.events",
+          "line": 393,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "mergeMissingEventStreams.<loop@390:2>.<block@390:42>.state",
+          "line": 395,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobsFromIndex",
+          "line": 411,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobsFromIndex"
+        },
+        {
+          "symbol": "listJobsFromIndex.<arrow@412:37>",
+          "line": 412,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobsFromIndex.<arrow@412:37>"
+        },
+        {
+          "symbol": "listJobsFromIndex.<arrow@412:37>.index",
+          "line": 413,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobsFromIndex.<arrow@412:37>.<arrow@421:14>",
+          "line": 421,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobsFromIndex.<arrow@412:37>.<arrow@421:14>"
+        },
+        {
+          "symbol": "listJobsFromIndex.<arrow@412:37>.<arrow@422:12>",
+          "line": 422,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobsFromIndex.<arrow@412:37>.<arrow@422:12>"
+        },
+        {
+          "symbol": "TERMINAL_STATUSES",
+          "line": 430,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryUpdate",
+          "line": 432,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#retryUpdate"
+        },
+        {
+          "symbol": "retryUpdate.<loop@433:2>.i",
+          "line": 433,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryUpdate.<loop@433:2>.<block@433:39>.<catch@436:6>.<block@437:32>.ts",
+          "line": 438,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryUpdate.<loop@433:2>.<block@433:39>.<catch@436:6>.<block@441:13>.<arrow@442:26>",
+          "line": 442,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#retryUpdate.<loop@433:2>.<block@433:39>.<catch@436:6>.<block@441:13>.<arrow@442:26>"
+        },
+        {
+          "symbol": "nowIso",
+          "line": 449,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#nowIso"
+        },
+        {
+          "symbol": "executorRef",
+          "line": 453,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#executorRef"
+        },
+        {
+          "symbol": "executorRef.record",
+          "line": 454,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "requireNotTerminal",
+          "line": 461,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#requireNotTerminal"
+        },
+        {
+          "symbol": "requireNotTerminal.job",
+          "line": 462,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "getJobAndUpdateIndex",
+          "line": 473,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#getJobAndUpdateIndex"
+        },
+        {
+          "symbol": "getJobAndUpdateIndex.<arrow@474:21>",
+          "line": 474,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#getJobAndUpdateIndex.<arrow@474:21>"
+        },
+        {
+          "symbol": "getJobAndUpdateIndex.<arrow@474:21>.state",
+          "line": 475,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "extractJobExperienceBestEffort",
+          "line": 480,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#extractJobExperienceBestEffort"
+        },
+        {
+          "symbol": "FAILURE_CODES",
+          "line": 489,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "makeJobId",
+          "line": 498,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#makeJobId"
+        },
+        {
+          "symbol": "makeJobId.date",
+          "line": 499,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "makeJobId.compact",
+          "line": 504,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob",
+          "line": 508,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#createJob"
+        },
+        {
+          "symbol": "createJob.jobId",
+          "line": 554,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.selectedWorkflow",
+          "line": 555,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.selectedExecutor",
+          "line": 556,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.executorSelection",
+          "line": 557,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.<block@559:57>.routingSelection",
+          "line": 561,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.<block@559:57>.preferredAgent",
+          "line": 562,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.<block@559:57>.allowFallback",
+          "line": 563,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.<block@582:21>.existing",
+          "line": 583,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.<block@592:20>.existingForQueue",
+          "line": 593,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createJob.event",
+          "line": 599,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "startPhase",
+          "line": 646,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#startPhase"
+        },
+        {
+          "symbol": "startPhase.event",
+          "line": 660,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase",
+          "line": 677,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#resolveAgentForPhase"
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@688:6>.dag",
+          "line": 690,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@688:6>.<block@691:26>.node",
+          "line": 692,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@688:6>.<block@691:26>.<arrow@692:36>",
+          "line": 692,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#resolveAgentForPhase.<block@688:6>.<block@691:26>.<arrow@692:36>"
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@688:6>.<block@691:26>.<block@693:83>.workflowNode",
+          "line": 694,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@688:6>.<block@691:26>.<block@693:83>.poolStatus",
+          "line": 695,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@688:6>.<block@691:26>.<block@693:83>.<block@696:12>.pool",
+          "line": 698,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@688:6>.<block@691:26>.<block@693:83>.<block@696:12>.<arrow@699:54>",
+          "line": 699,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#resolveAgentForPhase.<block@688:6>.<block@691:26>.<block@693:83>.<block@696:12>.<arrow@699:54>"
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@688:6>.<block@691:26>.<block@693:83>.resolved",
+          "line": 701,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@707:6>.wf",
+          "line": 709,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@707:6>.role",
+          "line": 710,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@707:6>.agentRegistry",
+          "line": 711,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@707:6>.<arrow@712:88>",
+          "line": 712,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#resolveAgentForPhase.<block@707:6>.<arrow@712:88>"
+        },
+        {
+          "symbol": "resolveAgentForPhase.<block@707:6>.agent",
+          "line": 713,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completePhase",
+          "line": 720,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#completePhase"
+        },
+        {
+          "symbol": "completePhase.job",
+          "line": 740,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completePhase.agent",
+          "line": 741,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completePhase.role",
+          "line": 742,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completePhase.<arrow@750:11>",
+          "line": 750,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#completePhase.<arrow@750:11>"
+        },
+        {
+          "symbol": "blockJob",
+          "line": 755,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#blockJob"
+        },
+        {
+          "symbol": "blockJob.<arrow@778:67>",
+          "line": 778,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#blockJob.<arrow@778:67>"
+        },
+        {
+          "symbol": "failJob",
+          "line": 782,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#failJob"
+        },
+        {
+          "symbol": "failJob.<arrow@818:67>",
+          "line": 818,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#failJob.<arrow@818:67>"
+        },
+        {
+          "symbol": "inferRetryPhase",
+          "line": 825,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#inferRetryPhase"
+        },
+        {
+          "symbol": "inferRetryPhase.workflow",
+          "line": 826,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "terminalJobLineage",
+          "line": 836,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#terminalJobLineage"
+        },
+        {
+          "symbol": "truncateRecoveryText",
+          "line": 846,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#truncateRecoveryText"
+        },
+        {
+          "symbol": "truncateRecoveryText.text",
+          "line": 847,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoveryPreviousOutput",
+          "line": 851,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#recoveryPreviousOutput"
+        },
+        {
+          "symbol": "recoveryPreviousOutput.cause",
+          "line": 852,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoveryPreviousOutput.chunks",
+          "line": 853,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoveryDagResume",
+          "line": 870,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#recoveryDagResume"
+        },
+        {
+          "symbol": "recoveryDagResume.resume",
+          "line": 871,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoveryDagResume.rawResumeTarget",
+          "line": 873,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoveryDagResume.resumeTarget",
+          "line": 874,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "buildRecoverySourceContext",
+          "line": 882,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#buildRecoverySourceContext"
+        },
+        {
+          "symbol": "buildRecoverySourceContext.base",
+          "line": 883,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "buildRecoverySourceContext.dagResume",
+          "line": 886,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "buildRecoverySourceContext.failureKind",
+          "line": 887,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "buildRecoverySourceContext.failureReason",
+          "line": 888,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "buildRecoverySourceContext.retry",
+          "line": 889,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createRecoveryJob",
+          "line": 927,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#createRecoveryJob"
+        },
+        {
+          "symbol": "createRecoveryJob.lineage",
+          "line": 943,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createRecoveryJob.now",
+          "line": 944,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createRecoveryJob.selectedExecutor",
+          "line": 945,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createRecoveryJob.recoverySourceContext",
+          "line": 946,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createRecoveryJob.newJob",
+          "line": 955,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "createRecoveryJob.event",
+          "line": 965,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob",
+          "line": 985,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#retryJob"
+        },
+        {
+          "symbol": "retryJob.job",
+          "line": 1010,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.code",
+          "line": 1021,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.effectiveMaxRetries",
+          "line": 1029,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.retryCount",
+          "line": 1030,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.workflow",
+          "line": 1035,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.retryPhase",
+          "line": 1036,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.parentExecutor",
+          "line": 1041,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.selectedExecutor",
+          "line": 1042,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.parentExecutorRef",
+          "line": 1043,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.selectedExecutorRef",
+          "line": 1044,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryJob.executorSelection",
+          "line": 1045,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "budgetExceeded",
+          "line": 1068,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#budgetExceeded"
+        },
+        {
+          "symbol": "poolExhaustedJob",
+          "line": 1088,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#poolExhaustedJob"
+        },
+        {
+          "symbol": "poolExhaustedJob.event",
+          "line": 1110,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "poolExhaustedJob.<arrow@1122:67>",
+          "line": 1122,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#poolExhaustedJob.<arrow@1122:67>"
+        },
+        {
+          "symbol": "completeJob",
+          "line": 1129,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#completeJob"
+        },
+        {
+          "symbol": "completeJob.job",
+          "line": 1143,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeJob.verdictValue",
+          "line": 1144,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeJob.verdict",
+          "line": 1145,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeJob.<block@1146:15>.agent",
+          "line": 1147,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeJob.<block@1146:15>.<arrow@1153:13>",
+          "line": 1153,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#completeJob.<block@1146:15>.<arrow@1153:13>"
+        },
+        {
+          "symbol": "completeJob.<arrow@1156:67>",
+          "line": 1156,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#completeJob.<arrow@1156:67>"
+        },
+        {
+          "symbol": "recordWorktreeCreated",
+          "line": 1163,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#recordWorktreeCreated"
+        },
+        {
+          "symbol": "recordActivity",
+          "line": 1199,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#recordActivity"
+        },
+        {
+          "symbol": "recordFinalizerResult",
+          "line": 1215,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#recordFinalizerResult"
+        },
+        {
+          "symbol": "recordFinalizerResult.<arrow@1228:67>",
+          "line": 1228,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#recordFinalizerResult.<arrow@1228:67>"
+        },
+        {
+          "symbol": "requestCancelJob",
+          "line": 1232,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#requestCancelJob"
+        },
+        {
+          "symbol": "requestCancelJob.job",
+          "line": 1239,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "requestCancelJob.assignmentCancel",
+          "line": 1240,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "signalActiveAssignmentCancel",
+          "line": 1254,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#signalActiveAssignmentCancel"
+        },
+        {
+          "symbol": "signalActiveAssignmentCancel.sourceContext",
+          "line": 1255,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "signalActiveAssignmentCancel.queueEntryId",
+          "line": 1256,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "signalActiveAssignmentCancel.assignments",
+          "line": 1261,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "signalActiveAssignmentCancel.assignmentId",
+          "line": 1262,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "signalActiveAssignmentCancel.<loop@1263:2>.retry",
+          "line": 1263,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "signalActiveAssignmentCancel.<loop@1263:2>.<block@1263:45>.<block@1272:8>.written",
+          "line": 1273,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "cancelJob",
+          "line": 1289,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#cancelJob"
+        },
+        {
+          "symbol": "cancelJob.existing",
+          "line": 1295,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "cancelJob.<arrow@1312:67>",
+          "line": 1312,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#cancelJob.<arrow@1312:67>"
+        },
+        {
+          "symbol": "requestRedirectJob",
+          "line": 1319,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#requestRedirectJob"
+        },
+        {
+          "symbol": "requestRedirectJob.redirectEventId",
+          "line": 1330,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "consumeRedirect",
+          "line": 1343,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#consumeRedirect"
+        },
+        {
+          "symbol": "getJob",
+          "line": 1359,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#getJob"
+        },
+        {
+          "symbol": "getJob.opts",
+          "line": 1360,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobs",
+          "line": 1364,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobs"
+        },
+        {
+          "symbol": "listJobs.<block@1366:17>.jobs",
+          "line": 1367,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobs.<block@1366:17>.<arrow@1368:38>",
+          "line": 1368,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobs.<block@1366:17>.<arrow@1368:38>"
+        },
+        {
+          "symbol": "listJobs.jobs",
+          "line": 1370,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobs.<arrow@1371:36>",
+          "line": 1371,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobs.<arrow@1371:36>"
+        },
+        {
+          "symbol": "getJobByQueueEntryId",
+          "line": 1374,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#getJobByQueueEntryId"
+        },
+        {
+          "symbol": "getJobByQueueEntryId.jobs",
+          "line": 1376,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "getJobByQueueEntryId.<arrow@1377:19>",
+          "line": 1377,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#getJobByQueueEntryId.<arrow@1377:19>"
+        },
+        {
+          "symbol": "listJobsAcrossRuntimeRoots",
+          "line": 1380,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobsAcrossRuntimeRoots"
+        },
+        {
+          "symbol": "listJobsAcrossRuntimeRoots.roots",
+          "line": 1382,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobsAcrossRuntimeRoots.seen",
+          "line": 1383,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobsAcrossRuntimeRoots.jobs",
+          "line": 1384,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobsAcrossRuntimeRoots.<loop@1385:2>.<block@1385:28>.runtimeOptions",
+          "line": 1386,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobsAcrossRuntimeRoots.<loop@1385:2>.<block@1385:28>.batch",
+          "line": 1387,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobsAcrossRuntimeRoots.<loop@1385:2>.<block@1385:28>.<loop@1388:4>.<block@1388:29>.key",
+          "line": 1389,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listJobsAcrossRuntimeRoots.<arrow@1395:19>",
+          "line": 1395,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#listJobsAcrossRuntimeRoots.<arrow@1395:19>"
+        },
+        {
+          "symbol": "isTerminal",
+          "line": 1407,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#isTerminal"
+        },
+        {
+          "symbol": "isRecoverable",
+          "line": 1411,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#isRecoverable"
+        },
+        {
+          "symbol": "resolveRecoveryRuntimeOptions",
+          "line": 1417,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#resolveRecoveryRuntimeOptions"
+        },
+        {
+          "symbol": "resolveRecoveryRuntimeOptions.dataRoot",
+          "line": 1418,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob",
+          "line": 1425,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#recoverAsNewJob"
+        },
+        {
+          "symbol": "recoverAsNewJob.runtimeOpts",
+          "line": 1434,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob.dataRoot",
+          "line": 1435,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob.original",
+          "line": 1436,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob.recoveryReason",
+          "line": 1449,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob.parentExecutor",
+          "line": 1450,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob.selectedExecutor",
+          "line": 1451,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob.parentExecutorRef",
+          "line": 1452,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob.selectedExecutorRef",
+          "line": 1453,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverAsNewJob.executorSelection",
+          "line": 1454,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob",
+          "line": 1473,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#retryAsNewJob"
+        },
+        {
+          "symbol": "retryAsNewJob.runtimeOpts",
+          "line": 1484,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob.dataRoot",
+          "line": 1485,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob.original",
+          "line": 1486,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob.retryReason",
+          "line": 1495,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob.parentExecutor",
+          "line": 1496,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob.selectedExecutor",
+          "line": 1497,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob.parentExecutorRef",
+          "line": 1498,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob.selectedExecutorRef",
+          "line": 1499,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "retryAsNewJob.executorSelection",
+          "line": 1500,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "verifyTerminalImmutability",
+          "line": 1520,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#verifyTerminalImmutability"
+        },
+        {
+          "symbol": "verifyTerminalImmutability.runtimeOpts",
+          "line": 1521,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "verifyTerminalImmutability.before",
+          "line": 1522,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "verifyTerminalImmutability.after",
+          "line": 1529,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "verifyTerminalImmutability.fields",
+          "line": 1530,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "getLineage",
+          "line": 1540,
+          "callable": true,
+          "graph_node_id": "ts:server/services/job/job-store#getLineage"
+        }
+      ]
+    },
+    "server/services/hub/hub-queue.ts": {
+      "issues": [],
+      "symbols": [
+        {
+          "symbol": "isRecord",
+          "line": 348,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#isRecord"
+        },
+        {
+          "symbol": "isQueueEntry",
+          "line": 352,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#isQueueEntry"
+        },
+        {
+          "symbol": "toQueueEntries",
+          "line": 356,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#toQueueEntries"
+        },
+        {
+          "symbol": "errnoCode",
+          "line": 360,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#errnoCode"
+        },
+        {
+          "symbol": "errorDetails",
+          "line": 364,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#errorDetails"
+        },
+        {
+          "symbol": "errorDetails.record",
+          "line": 365,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "errorDetails.details",
+          "line": 366,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "errorDetails.reason",
+          "line": 367,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "stringOrNull",
+          "line": 371,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#stringOrNull"
+        },
+        {
+          "symbol": "priorityScore",
+          "line": 382,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#priorityScore"
+        },
+        {
+          "symbol": "isMutatingEntry",
+          "line": 389,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#isMutatingEntry"
+        },
+        {
+          "symbol": "isActiveEntry",
+          "line": 393,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#isActiveEntry"
+        },
+        {
+          "symbol": "clearClaim",
+          "line": 397,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#clearClaim"
+        },
+        {
+          "symbol": "nowIso",
+          "line": 403,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#nowIso"
+        },
+        {
+          "symbol": "isLocalCodeIndexUnavailableStatus",
+          "line": 407,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#isLocalCodeIndexUnavailableStatus"
+        },
+        {
+          "symbol": "recoverStaleInProgress",
+          "line": 424,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#recoverStaleInProgress"
+        },
+        {
+          "symbol": "recoverStaleInProgress.now",
+          "line": 429,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgress.recovered",
+          "line": 430,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgress.refreshed",
+          "line": 431,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgress.<loop@433:2>.<block@433:27>.claimedAt",
+          "line": 435,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgress.<loop@433:2>.<block@433:27>.assignmentId",
+          "line": 438,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgress.<loop@433:2>.<block@433:27>.assignment",
+          "line": 439,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgressAsync",
+          "line": 462,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#recoverStaleInProgressAsync"
+        },
+        {
+          "symbol": "recoverStaleInProgressAsync.now",
+          "line": 467,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgressAsync.recovered",
+          "line": 468,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgressAsync.refreshed",
+          "line": 469,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgressAsync.<loop@471:2>.<block@471:27>.claimedAt",
+          "line": 473,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverStaleInProgressAsync.<loop@471:2>.<block@471:27>.assignment",
+          "line": 476,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverLocalCodeIndexUnavailable",
+          "line": 497,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#recoverLocalCodeIndexUnavailable"
+        },
+        {
+          "symbol": "recoverLocalCodeIndexUnavailable.now",
+          "line": 499,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverLocalCodeIndexUnavailable.recovered",
+          "line": 500,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "recoverLocalCodeIndexUnavailable.<loop@501:2>.<block@501:27>.updatedAt",
+          "line": 503,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "QUEUE_VERSION",
+          "line": 550,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "SAFE_ID",
+          "line": 551,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queuePath",
+          "line": 553,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queuePath"
+        },
+        {
+          "symbol": "defaultQueue",
+          "line": 557,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#defaultQueue"
+        },
+        {
+          "symbol": "normalizeQueue",
+          "line": 561,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#normalizeQueue"
+        },
+        {
+          "symbol": "normalizeQueue.obj",
+          "line": 563,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "QUEUE_LOCK_TTL_MS",
+          "line": 570,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "QUEUE_MAX_BYTES",
+          "line": 571,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "QUEUE_CAS_MAX_ATTEMPTS",
+          "line": 572,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "QUEUE_LOCK_OWNER_FORMAT",
+          "line": 573,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "QUEUE_LOCK_OWNER_MAX_BYTES",
+          "line": 574,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockTestHookStorage",
+          "line": 612,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "emptyQueueLockTestHooks",
+          "line": 613,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLockTestHooks",
+          "line": 615,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withQueueLockTestHooks"
+        },
+        {
+          "symbol": "queueLockTestHooks",
+          "line": 619,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueLockTestHooks"
+        },
+        {
+          "symbol": "queueLockError",
+          "line": 623,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueLockError"
+        },
+        {
+          "symbol": "noFollowFlag",
+          "line": 627,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#noFollowFlag"
+        },
+        {
+          "symbol": "directoryOpenFlags",
+          "line": 634,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#directoryOpenFlags"
+        },
+        {
+          "symbol": "exclusiveNoFollowWriteFlags",
+          "line": 641,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#exclusiveNoFollowWriteFlags"
+        },
+        {
+          "symbol": "pathGeneration",
+          "line": 645,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#pathGeneration"
+        },
+        {
+          "symbol": "generationFor",
+          "line": 657,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#generationFor"
+        },
+        {
+          "symbol": "sameGeneration",
+          "line": 661,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#sameGeneration"
+        },
+        {
+          "symbol": "sameGenerationAcrossRename",
+          "line": 671,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#sameGenerationAcrossRename"
+        },
+        {
+          "symbol": "sameDirectoryIdentity",
+          "line": 680,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#sameDirectoryIdentity"
+        },
+        {
+          "symbol": "cleanupRecoveryPath",
+          "line": 687,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#cleanupRecoveryPath"
+        },
+        {
+          "symbol": "cleanupRecoveryPath.candidates",
+          "line": 688,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "cleanupRecoveryPath.<loop@689:2>.<block@689:37>.recoveryPaths",
+          "line": 691,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockOwnerSnapshotStillMatches",
+          "line": 706,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueLockOwnerSnapshotStillMatches"
+        },
+        {
+          "symbol": "queueLockOwnerSnapshotStillMatches.ownerFile",
+          "line": 711,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockOwnerSnapshotStillMatches.<block@712:6>.currentOwnerSnapshot",
+          "line": 713,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockDirectoryGenerationStillMatches",
+          "line": 728,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueLockDirectoryGenerationStillMatches"
+        },
+        {
+          "symbol": "queueLockDirectoryGenerationStillMatches.<block@734:6>.pathInfo",
+          "line": 735,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockDirectoryGenerationStillMatches.<block@734:6>.descriptorInfo",
+          "line": 736,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockDirectoryGenerationAfterChildRemoval",
+          "line": 760,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueLockDirectoryGenerationAfterChildRemoval"
+        },
+        {
+          "symbol": "queueLockDirectoryGenerationAfterChildRemoval.<block@766:6>.pathInfo",
+          "line": 767,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockDirectoryGenerationAfterChildRemoval.<block@766:6>.descriptorInfo",
+          "line": 768,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockDirectoryGenerationAfterChildRemoval.<block@766:6>.pathGenerationAfterRemoval",
+          "line": 769,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockDirectoryGenerationAfterChildRemoval.<block@766:6>.descriptorGenerationAfterRemoval",
+          "line": 770,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration",
+          "line": 794,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#removeIfSameGeneration"
+        },
+        {
+          "symbol": "removeIfSameGeneration.isolatedPath",
+          "line": 801,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration.handle",
+          "line": 802,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration.isolated",
+          "line": 803,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration.<block@804:6>.pathInfo",
+          "line": 805,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration.<block@804:6>.descriptorGeneration",
+          "line": 811,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration.<block@804:6>.isolatedGeneration",
+          "line": 824,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration.<block@804:6>.isolatedDescriptorGeneration",
+          "line": 831,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration.<block@804:6>.<block@851:11>.currentIsolatedGeneration",
+          "line": 852,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIfSameGeneration.<block@804:6>.<block@851:11>.currentDescriptorGeneration",
+          "line": 853,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIsolatedQueueLockDirectory",
+          "line": 889,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#removeIsolatedQueueLockDirectory"
+        },
+        {
+          "symbol": "removeIsolatedQueueLockDirectory.ownerFile",
+          "line": 896,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIsolatedQueueLockDirectory.currentDirectoryGeneration",
+          "line": 897,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIsolatedQueueLockDirectory.<block@908:6>.ownerInfo",
+          "line": 909,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIsolatedQueueLockDirectory.<block@908:6>.handle",
+          "line": 917,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIsolatedQueueLockDirectory.<block@908:6>.<block@918:8>.descriptorGeneration",
+          "line": 919,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIsolatedQueueLockDirectory.<block@908:6>.generationAfterRemoval",
+          "line": 943,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "removeIsolatedQueueLockDirectory.remaining",
+          "line": 960,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "delay",
+          "line": 976,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#delay"
+        },
+        {
+          "symbol": "delay.<arrow@977:20>",
+          "line": 977,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#delay.<arrow@977:20>"
+        },
+        {
+          "symbol": "withQueueProcessFence",
+          "line": 980,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withQueueProcessFence"
+        },
+        {
+          "symbol": "processIdentity",
+          "line": 984,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#processIdentity"
+        },
+        {
+          "symbol": "processIdentity.candidate",
+          "line": 986,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "processIdentity.processGroupId",
+          "line": 987,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "exactProcessIdentity",
+          "line": 1010,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#exactProcessIdentity"
+        },
+        {
+          "symbol": "captureCurrentExactProcessIdentity",
+          "line": 1015,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#captureCurrentExactProcessIdentity"
+        },
+        {
+          "symbol": "sameQueueLockOwner",
+          "line": 1019,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#sameQueueLockOwner"
+        },
+        {
+          "symbol": "queueOwnerLockPathMatchesDirectory",
+          "line": 1028,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueOwnerLockPathMatchesDirectory"
+        },
+        {
+          "symbol": "queueOwnerLockPathMatchesDirectory.expected",
+          "line": 1030,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueOwnerLockPathMatchesDirectory.actual",
+          "line": 1031,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueOwnerLockPathMatchesDirectory.<block@1033:6>.expectedParent",
+          "line": 1034,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueOwnerLockPathMatchesDirectory.<block@1033:6>.actualParent",
+          "line": 1035,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "syncDirectory",
+          "line": 1042,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#syncDirectory"
+        },
+        {
+          "symbol": "syncDirectory.handle",
+          "line": 1044,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readQueueLockOwner",
+          "line": 1055,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#readQueueLockOwner"
+        },
+        {
+          "symbol": "readQueueLockOwnerSnapshot",
+          "line": 1059,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#readQueueLockOwnerSnapshot"
+        },
+        {
+          "symbol": "readQueueLockOwnerSnapshot.<block@1060:6>.raw",
+          "line": 1061,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readQueueLockOwnerSnapshot.<block@1060:6>.parsed",
+          "line": 1064,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeQueueLockOwner",
+          "line": 1093,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#writeQueueLockOwner"
+        },
+        {
+          "symbol": "writeQueueLockOwner.parent",
+          "line": 1094,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeQueueLockOwner.tmp",
+          "line": 1095,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeQueueLockOwner.handle",
+          "line": 1096,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeQueueLockOwner.tmpGeneration",
+          "line": 1097,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeQueueLockOwner.renamed",
+          "line": 1098,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeQueueLockOwner.<catch@1118:4>.cleanupErrors",
+          "line": 1130,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock",
+          "line": 1152,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#quarantineQueueLock"
+        },
+        {
+          "symbol": "quarantineQueueLock.quarantineDir",
+          "line": 1153,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock.currentInfo",
+          "line": 1154,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock.hookContext",
+          "line": 1173,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock.movedInfo",
+          "line": 1192,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock.movedOwnerFile",
+          "line": 1193,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock.movedOwnerSnapshot",
+          "line": 1194,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock.movedOwner",
+          "line": 1195,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock.cleanupErrors",
+          "line": 1210,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "quarantineQueueLock.<block@1212:32>.preservedQuarantineDir",
+          "line": 1213,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "restoreQueueLockQuarantine",
+          "line": 1231,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#restoreQueueLockQuarantine"
+        },
+        {
+          "symbol": "restoreQueueLockQuarantine.errors",
+          "line": 1232,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "restoreQueueLockQuarantine.successorPreserved",
+          "line": 1233,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockRecoveryCandidate",
+          "line": 1266,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueLockRecoveryCandidate"
+        },
+        {
+          "symbol": "queueLockRecoveryCandidate.info",
+          "line": 1267,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockRecoveryCandidate.ownerSnapshot",
+          "line": 1277,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockRecoveryCandidate.owner",
+          "line": 1278,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockRecoveryCandidate.acquiredAt",
+          "line": 1279,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueLockRecoveryCandidate.lockGeneration",
+          "line": 1281,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "releaseQueueLockExact",
+          "line": 1294,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#releaseQueueLockExact"
+        },
+        {
+          "symbol": "releaseQueueLockExact.currentSnapshot",
+          "line": 1295,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "releaseQueueLockExact.current",
+          "line": 1296,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "releaseQueueLockExact.info",
+          "line": 1300,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock",
+          "line": 1309,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withQueueLock"
+        },
+        {
+          "symbol": "withQueueLock.file",
+          "line": 1311,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.lockDir",
+          "line": 1312,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.ownerFile",
+          "line": 1313,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.processIdentity",
+          "line": 1314,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.owner",
+          "line": 1318,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.acquired",
+          "line": 1329,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<loop@1330:2>.attempt",
+          "line": 1330,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<loop@1330:2>.<block@1330:53>.fenced",
+          "line": 1331,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<loop@1330:2>.<block@1330:53>.<arrow@1331:56>",
+          "line": 1331,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withQueueLock.<loop@1330:2>.<block@1330:53>.<arrow@1331:56>"
+        },
+        {
+          "symbol": "withQueueLock.<loop@1330:2>.<block@1330:53>.<arrow@1331:56>.<block@1332:10>.createdInfo",
+          "line": 1334,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<loop@1330:2>.<block@1330:53>.<arrow@1331:56>.<block@1332:10>.<catch@1339:10>.partialOwnerSnapshot",
+          "line": 1341,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<loop@1330:2>.<block@1330:53>.<arrow@1331:56>.<block@1332:10>.<catch@1339:10>.cleanupErrors",
+          "line": 1342,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<loop@1330:2>.<block@1330:53>.<arrow@1331:56>.<catch@1369:8>.candidate",
+          "line": 1371,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.value",
+          "line": 1389,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.primaryError",
+          "line": 1390,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<block@1391:6>.queue",
+          "line": 1392,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<block@1391:6>.before",
+          "line": 1393,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<block@1391:6>.after",
+          "line": 1395,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.releaseError",
+          "line": 1401,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<block@1402:6>.released",
+          "line": 1403,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLock.<block@1402:6>.<arrow@1403:58>",
+          "line": 1403,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withQueueLock.<block@1402:6>.<arrow@1403:58>"
+        },
+        {
+          "symbol": "loadLocalQueue",
+          "line": 1424,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#loadLocalQueue"
+        },
+        {
+          "symbol": "loadLocalQueue.<block@1425:6>.raw",
+          "line": 1426,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "serializeQueue",
+          "line": 1439,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#serializeQueue"
+        },
+        {
+          "symbol": "serializeQueue.serialized",
+          "line": 1440,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "saveLocalQueue",
+          "line": 1447,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#saveLocalQueue"
+        },
+        {
+          "symbol": "saveLocalQueue.normalized",
+          "line": 1449,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueMutation",
+          "line": 1454,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withQueueMutation"
+        },
+        {
+          "symbol": "withQueueMutation.<arrow@1462:38>",
+          "line": 1462,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withQueueMutation.<arrow@1462:38>"
+        },
+        {
+          "symbol": "loadQueue",
+          "line": 1465,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#loadQueue"
+        },
+        {
+          "symbol": "writeAtomic",
+          "line": 1469,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#writeAtomic"
+        },
+        {
+          "symbol": "writeAtomic.tmp",
+          "line": 1471,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeAtomic.handle",
+          "line": 1472,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeAtomic.tmpGeneration",
+          "line": 1473,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeAtomic.existingGeneration",
+          "line": 1474,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeAtomic.renamed",
+          "line": 1475,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeAtomic.<block@1476:6>.<block@1488:8>.currentGeneration",
+          "line": 1489,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeAtomic.<catch@1506:4>.<arrow@1507:32>",
+          "line": 1507,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#writeAtomic.<catch@1506:4>.<arrow@1507:32>"
+        },
+        {
+          "symbol": "writeAtomic.<catch@1506:4>.cleanupErrors",
+          "line": 1516,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "generateId",
+          "line": 1529,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#generateId"
+        },
+        {
+          "symbol": "hasIssueLink",
+          "line": 1533,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#hasIssueLink"
+        },
+        {
+          "symbol": "validateIssueLink",
+          "line": 1538,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#validateIssueLink"
+        },
+        {
+          "symbol": "entryKey",
+          "line": 1545,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#entryKey"
+        },
+        {
+          "symbol": "entryKey.lineage",
+          "line": 1546,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue",
+          "line": 1550,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#enqueue"
+        },
+        {
+          "symbol": "enqueue.projectId",
+          "line": 1552,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.rawMeta",
+          "line": 1554,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.meta",
+          "line": 1555,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.normalizedInput",
+          "line": 1561,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.cpbRoot",
+          "line": 1579,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.resolvedMeta",
+          "line": 1580,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.<block@1584:24>.<block@1585:8>.project",
+          "line": 1586,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.<arrow@1595:36>",
+          "line": 1595,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#enqueue.<arrow@1595:36>"
+        },
+        {
+          "symbol": "enqueue.<arrow@1595:36>.key",
+          "line": 1596,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.<arrow@1595:36>.existing",
+          "line": 1597,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "enqueue.<arrow@1595:36>.<arrow@1597:40>",
+          "line": 1597,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#enqueue.<arrow@1595:36>.<arrow@1597:40>"
+        },
+        {
+          "symbol": "enqueue.<arrow@1595:36>.entry",
+          "line": 1600,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "peekQueue",
+          "line": 1624,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#peekQueue"
+        },
+        {
+          "symbol": "peekQueue.queue",
+          "line": 1625,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "peekQueue.pending",
+          "line": 1626,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "peekQueue.<arrow@1626:39>",
+          "line": 1626,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#peekQueue.<arrow@1626:39>"
+        },
+        {
+          "symbol": "peekQueue.<arrow@1629:15>",
+          "line": 1629,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#peekQueue.<arrow@1629:15>"
+        },
+        {
+          "symbol": "updateEntry",
+          "line": 1633,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#updateEntry"
+        },
+        {
+          "symbol": "updateEntry.<arrow@1640:36>",
+          "line": 1640,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#updateEntry.<arrow@1640:36>"
+        },
+        {
+          "symbol": "updateEntry.<arrow@1640:36>.entry",
+          "line": 1641,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "updateEntry.<arrow@1640:36>.<arrow@1641:37>",
+          "line": 1641,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#updateEntry.<arrow@1640:36>.<arrow@1641:37>"
+        },
+        {
+          "symbol": "updateEntry.<arrow@1640:36>.expectedStatuses",
+          "line": 1644,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listQueue",
+          "line": 1673,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#listQueue"
+        },
+        {
+          "symbol": "listQueue.queue",
+          "line": 1674,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listQueue.<arrow@1675:30>",
+          "line": 1675,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#listQueue.<arrow@1675:30>"
+        },
+        {
+          "symbol": "syncBacklogResult",
+          "line": 1682,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#syncBacklogResult"
+        },
+        {
+          "symbol": "syncBacklogResult.backlogResult",
+          "line": 1684,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "syncBacklogResult.<arrow@1686:36>",
+          "line": 1686,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#syncBacklogResult.<arrow@1686:36>"
+        },
+        {
+          "symbol": "syncBacklogResult.<arrow@1686:36>.targetStatus",
+          "line": 1687,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "syncBacklogResult.<arrow@1686:36>.key",
+          "line": 1688,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "syncBacklogResult.<arrow@1686:36>.matches",
+          "line": 1690,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "syncBacklogResult.<arrow@1686:36>.<arrow@1691:6>",
+          "line": 1691,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#syncBacklogResult.<arrow@1686:36>.<arrow@1691:6>"
+        },
+        {
+          "symbol": "syncBacklogResult.<arrow@1686:36>.metadata",
+          "line": 1696,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueStatus",
+          "line": 1713,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueStatus"
+        },
+        {
+          "symbol": "queueStatus.queue",
+          "line": 1714,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueStatus.failedTargetStatus",
+          "line": 1715,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueStatus.counts",
+          "line": 1716,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueStatus.hubLimits",
+          "line": 1747,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueStatus.projectLimits",
+          "line": 1748,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueStatus.<arrow@1750:22>",
+          "line": 1750,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueStatus.<arrow@1750:22>"
+        },
+        {
+          "symbol": "queueStatus.<arrow@1754:4>",
+          "line": 1754,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueStatus.<arrow@1754:4>"
+        },
+        {
+          "symbol": "queueStatus.projects",
+          "line": 1760,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "queueStatus.<arrow@1762:12>",
+          "line": 1762,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueStatus.<arrow@1762:12>"
+        },
+        {
+          "symbol": "queueStatus.<arrow@1763:9>",
+          "line": 1763,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#queueStatus.<arrow@1763:9>"
+        },
+        {
+          "symbol": "ACTIVE_RETRY_STATUSES",
+          "line": 1773,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "failedTargetKey",
+          "line": 1775,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#failedTargetKey"
+        },
+        {
+          "symbol": "failedTargetKey.targetJobId",
+          "line": 1776,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "activeRetryTargetKey",
+          "line": 1783,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#activeRetryTargetKey"
+        },
+        {
+          "symbol": "activeRetryTargetKey.targetJobId",
+          "line": 1785,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completedRetryTargetKey",
+          "line": 1790,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#completedRetryTargetKey"
+        },
+        {
+          "symbol": "completedRetryTargetKey.targetJobId",
+          "line": 1792,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets",
+          "line": 1797,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#summarizeFailedTargets"
+        },
+        {
+          "symbol": "summarizeFailedTargets.failedTargets",
+          "line": 1798,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets.activeRetryTargets",
+          "line": 1799,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets.completedRetryTargets",
+          "line": 1800,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets.<loop@1801:2>.<block@1801:31>.activeRetry",
+          "line": 1802,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets.<loop@1801:2>.<block@1801:31>.completedRetry",
+          "line": 1804,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets.<loop@1801:2>.<block@1801:31>.<block@1806:35>.failedTarget",
+          "line": 1807,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets.retryingFailedTargets",
+          "line": 1812,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets.retriedFailedTargets",
+          "line": 1813,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "summarizeFailedTargets.<object@1821:9>.<arrow@1822:34>",
+          "line": 1822,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#summarizeFailedTargets.<object@1821:9>.<arrow@1822:34>"
+        },
+        {
+          "symbol": "limitForProject",
+          "line": 1830,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#limitForProject"
+        },
+        {
+          "symbol": "buildProjectQueueStatus",
+          "line": 1837,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#buildProjectQueueStatus"
+        },
+        {
+          "symbol": "buildProjectQueueStatus.byProject",
+          "line": 1841,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "buildProjectQueueStatus.<loop@1842:2>.<block@1842:27>.<block@1843:33>.limit",
+          "line": 1844,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "buildProjectQueueStatus.<loop@1842:2>.<block@1842:27>.ps",
+          "line": 1854,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "buildProjectQueueStatus.<loop@1875:2>.<block@1875:59>.<arrow@1878:44>",
+          "line": 1878,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#buildProjectQueueStatus.<loop@1875:2>.<block@1875:59>.<arrow@1878:44>"
+        },
+        {
+          "symbol": "buildProjectQueueStatus.<loop@1882:2>.<block@1882:27>.ps",
+          "line": 1884,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible",
+          "line": 1901,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>",
+          "line": 1919,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.hubLimits",
+          "line": 1934,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.activeMutatingByProject",
+          "line": 1938,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.pending",
+          "line": 1945,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<arrow@1945:39>",
+          "line": 1945,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<arrow@1945:39>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<block@1946:26>.<arrow@1947:31>",
+          "line": 1947,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<block@1946:26>.<arrow@1947:31>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<arrow@1949:44>",
+          "line": 1949,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<arrow@1949:44>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<arrow@1951:17>",
+          "line": 1951,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<arrow@1951:17>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<arrow@1951:17>.aIsPlatformFix",
+          "line": 1953,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<arrow@1951:17>.bIsPlatformFix",
+          "line": 1954,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.projectLimits",
+          "line": 1959,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<arrow@1961:24>",
+          "line": 1961,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<arrow@1961:24>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.chosen",
+          "line": 1965,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.reason",
+          "line": 1966,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.skippedBusy",
+          "line": 1967,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<loop@1969:4>.<block@1969:37>.<block@1970:38>.projectLimit",
+          "line": 1971,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<loop@1969:4>.<block@1969:37>.<block@1980:24>.project",
+          "line": 1981,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<loop@1969:4>.<block@1969:37>.<block@1980:24>.<block@1997:63>.capabilityGate",
+          "line": 1998,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<loop@1969:4>.<block@1969:37>.<block@1980:24>.<block@1997:63>.localCodeIndexStatusResult",
+          "line": 2016,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<loop@1969:4>.<block@1969:37>.<block@1980:24>.<block@1997:63>.fresh",
+          "line": 2064,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<block@2107:17>.projectStatus",
+          "line": 2108,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<block@2107:17>.activeProjects",
+          "line": 2112,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<block@2107:17>.<arrow@2113:16>",
+          "line": 2113,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<block@2107:17>.<arrow@2113:16>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<block@2107:17>.<arrow@2114:13>",
+          "line": 2114,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<block@2107:17>.<arrow@2114:13>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.now",
+          "line": 2125,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.projectStatus",
+          "line": 2132,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.activeProjects",
+          "line": 2136,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<arrow@2137:14>",
+          "line": 2137,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<arrow@2137:14>"
+        },
+        {
+          "symbol": "claimEligible.<arrow@1919:36>.<arrow@2138:11>",
+          "line": 2138,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#claimEligible.<arrow@1919:36>.<arrow@2138:11>"
+        },
+        {
+          "symbol": "matchAutomationRule",
+          "line": 2151,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#matchAutomationRule"
+        },
+        {
+          "symbol": "matchAutomationRule.<loop@2153:2>.<block@2153:28>.m",
+          "line": 2154,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "matchAutomationRule.<loop@2153:2>.<block@2153:28>.<block@2155:45>.issueLabels",
+          "line": 2156,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "matchAutomationRule.<loop@2153:2>.<block@2153:28>.<block@2155:45>.hasAll",
+          "line": 2157,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "matchAutomationRule.<loop@2153:2>.<block@2153:28>.<block@2155:45>.<arrow@2157:36>",
+          "line": 2157,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#matchAutomationRule.<loop@2153:2>.<block@2153:28>.<block@2155:45>.<arrow@2157:36>"
+        },
+        {
+          "symbol": "isExcluded",
+          "line": 2172,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#isExcluded"
+        },
+        {
+          "symbol": "isExcluded.<block@2174:55>.issueLabels",
+          "line": 2175,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "isExcluded.<block@2174:55>.<arrow@2176:28>",
+          "line": 2176,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#isExcluded.<block@2174:55>.<arrow@2176:28>"
+        },
+        {
+          "symbol": "issueToNormalizedEvent",
+          "line": 2181,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#issueToNormalizedEvent"
+        },
+        {
+          "symbol": "issueMatchesProject",
+          "line": 2204,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#issueMatchesProject"
+        },
+        {
+          "symbol": "issueMatchesProject.repo",
+          "line": 2207,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "issueQueueKey",
+          "line": 2211,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#issueQueueKey"
+        },
+        {
+          "symbol": "normalizeExactIssueNumber",
+          "line": 2215,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#normalizeExactIssueNumber"
+        },
+        {
+          "symbol": "normalizeExactIssueNumber.text",
+          "line": 2217,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "normalizeExactIssueNumber.number",
+          "line": 2221,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues",
+          "line": 2228,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#autoEnqueueSyncedIssues"
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.exactIssueNumber",
+          "line": 2239,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.remoteCapability",
+          "line": 2240,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.project",
+          "line": 2249,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.automation",
+          "line": 2252,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.issues",
+          "line": 2258,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.allProjectIssues",
+          "line": 2259,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<arrow@2259:41>",
+          "line": 2259,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#autoEnqueueSyncedIssues.<arrow@2259:41>"
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.projectIssues",
+          "line": 2260,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<arrow@2262:30>",
+          "line": 2262,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#autoEnqueueSyncedIssues.<arrow@2262:30>"
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.queue",
+          "line": 2280,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.queuedIssueKeys",
+          "line": 2281,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<arrow@2283:14>",
+          "line": 2283,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#autoEnqueueSyncedIssues.<arrow@2283:14>"
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<arrow@2284:11>",
+          "line": 2284,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#autoEnqueueSyncedIssues.<arrow@2284:11>"
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.enqueued",
+          "line": 2287,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.skipped",
+          "line": 2288,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.duplicates",
+          "line": 2289,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.matched",
+          "line": 2290,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<loop@2292:2>.<block@2292:37>.key",
+          "line": 2294,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<loop@2292:2>.<block@2292:37>.rule",
+          "line": 2298,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<loop@2292:2>.<block@2292:37>.<block@2305:8>.event",
+          "line": 2306,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<loop@2292:2>.<block@2292:37>.<block@2305:8>.match",
+          "line": 2307,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "autoEnqueueSyncedIssues.<loop@2292:2>.<block@2292:37>.<catch@2315:6>.message",
+          "line": 2317,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "SCHEMA",
+          "line": 2336,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "VALID_STATUSES",
+          "line": 2337,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "VALID_TRANSITIONS",
+          "line": 2338,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "inboxDir",
+          "line": 2343,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#inboxDir"
+        },
+        {
+          "symbol": "safeId",
+          "line": 2348,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#safeId"
+        },
+        {
+          "symbol": "safeMessagePath",
+          "line": 2355,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#safeMessagePath"
+        },
+        {
+          "symbol": "safeMessagePath.dir",
+          "line": 2356,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "safeMessagePath.resolved",
+          "line": 2357,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_seq",
+          "line": 2364,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "_pidHex",
+          "line": 2365,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "generateMessageId",
+          "line": 2366,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#generateMessageId"
+        },
+        {
+          "symbol": "generateMessageId.date",
+          "line": 2367,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "generateMessageId.y",
+          "line": 2368,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "generateMessageId.m",
+          "line": 2369,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "generateMessageId.d",
+          "line": 2370,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "generateMessageId.seq",
+          "line": 2371,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "serializeFrontmatter",
+          "line": 2375,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#serializeFrontmatter"
+        },
+        {
+          "symbol": "serializeFrontmatter.lines",
+          "line": 2376,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseFrontmatter",
+          "line": 2390,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#parseFrontmatter"
+        },
+        {
+          "symbol": "parseFrontmatter.end",
+          "line": 2392,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseFrontmatter.fmText",
+          "line": 2395,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseFrontmatter.content",
+          "line": 2396,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseFrontmatter.meta",
+          "line": 2397,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseFrontmatter.<loop@2399:2>.<block@2399:41>.trimmed",
+          "line": 2400,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseFrontmatter.<loop@2399:2>.<block@2399:41>.colonIdx",
+          "line": 2402,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseFrontmatter.<loop@2399:2>.<block@2399:41>.key",
+          "line": 2404,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "parseFrontmatter.<loop@2399:2>.<block@2399:41>.value",
+          "line": 2405,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withInboxLock",
+          "line": 2417,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withInboxLock"
+        },
+        {
+          "symbol": "withInboxLock.dir",
+          "line": 2418,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withInboxLock.lockDir",
+          "line": 2419,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "messageToOutput",
+          "line": 2444,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#messageToOutput"
+        },
+        {
+          "symbol": "writeInboxMessage",
+          "line": 2448,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#writeInboxMessage"
+        },
+        {
+          "symbol": "writeInboxMessage.id",
+          "line": 2449,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeInboxMessage.ts",
+          "line": 2450,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeInboxMessage.meta",
+          "line": 2452,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeInboxMessage.content",
+          "line": 2468,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeInboxMessage.fileContent",
+          "line": 2469,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeInboxMessage.filePath",
+          "line": 2470,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "writeInboxMessage.<arrow@2472:49>",
+          "line": 2472,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#writeInboxMessage.<arrow@2472:49>"
+        },
+        {
+          "symbol": "listInboxMessages",
+          "line": 2479,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#listInboxMessages"
+        },
+        {
+          "symbol": "listInboxMessages.dir",
+          "line": 2480,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listInboxMessages.files",
+          "line": 2481,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listInboxMessages.<block@2482:6>.<arrow@2484:14>",
+          "line": 2484,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#listInboxMessages.<block@2482:6>.<arrow@2484:14>"
+        },
+        {
+          "symbol": "listInboxMessages.messages",
+          "line": 2490,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listInboxMessages.<loop@2491:2>.<block@2491:25>.<block@2492:8>.raw",
+          "line": 2493,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listInboxMessages.<loop@2491:2>.<block@2491:25>.<block@2492:8>.parsed",
+          "line": 2494,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listInboxMessages.<loop@2491:2>.<block@2491:25>.<block@2492:8>.msg",
+          "line": 2497,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "listInboxMessages.<arrow@2512:16>",
+          "line": 2512,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#listInboxMessages.<arrow@2512:16>"
+        },
+        {
+          "symbol": "readInboxMessage",
+          "line": 2516,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#readInboxMessage"
+        },
+        {
+          "symbol": "readInboxMessage.filePath",
+          "line": 2518,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readInboxMessage.<block@2519:6>.raw",
+          "line": 2520,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "readInboxMessage.<block@2519:6>.parsed",
+          "line": 2521,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ackInboxMessage",
+          "line": 2529,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#ackInboxMessage"
+        },
+        {
+          "symbol": "ackInboxMessage.options",
+          "line": 2531,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ackInboxMessage.<arrow@2532:50>",
+          "line": 2532,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#ackInboxMessage.<arrow@2532:50>"
+        },
+        {
+          "symbol": "ackInboxMessage.<arrow@2532:50>.filePath",
+          "line": 2533,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ackInboxMessage.<arrow@2532:50>.raw",
+          "line": 2534,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ackInboxMessage.<arrow@2532:50>.parsed",
+          "line": 2541,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ackInboxMessage.<arrow@2532:50>.currentStatus",
+          "line": 2544,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ackInboxMessage.<arrow@2532:50>.expected",
+          "line": 2545,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "ackInboxMessage.<arrow@2532:50>.fileContent",
+          "line": 2554,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeInboxMessage",
+          "line": 2561,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#completeInboxMessage"
+        },
+        {
+          "symbol": "completeInboxMessage.<arrow@2563:50>",
+          "line": 2563,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#completeInboxMessage.<arrow@2563:50>"
+        },
+        {
+          "symbol": "completeInboxMessage.<arrow@2563:50>.filePath",
+          "line": 2564,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeInboxMessage.<arrow@2563:50>.raw",
+          "line": 2565,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeInboxMessage.<arrow@2563:50>.parsed",
+          "line": 2572,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeInboxMessage.<arrow@2563:50>.currentStatus",
+          "line": 2575,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeInboxMessage.<arrow@2563:50>.expected",
+          "line": 2576,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "completeInboxMessage.<arrow@2563:50>.fileContent",
+          "line": 2584,
+          "callable": false,
+          "graph_node_id": ""
+        },
+        {
+          "symbol": "withQueueLockForMigration",
+          "line": 2603,
+          "callable": true,
+          "graph_node_id": "ts:server/services/hub/hub-queue#withQueueLockForMigration"
+        }
+      ]
+    }
+  }
+}

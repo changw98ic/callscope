@@ -1,0 +1,194 @@
+{
+  "repository": "codepatchbay",
+  "scans": [
+    {
+      "snapshot_id": "4376321a4081901f9a62e74b6a9a1cbedfacf1a2f2d68278ac2bbdf6ce3d8db2",
+      "created": true,
+      "status": "partial",
+      "finding_count": 40388,
+      "maintenance": {
+        "engine": "cocoindex",
+        "version": "1.0.25",
+        "recomputed_languages": [
+          "python",
+          "typescript"
+        ],
+        "reused_languages": [],
+        "uncached_languages": [],
+        "global_detection": "full"
+      },
+      "phase": "initial",
+      "stats": {
+        "files_total": 333,
+        "files_parsed": 327,
+        "files_failed": 6,
+        "nodes": 10999,
+        "edges": 60146,
+        "by_language": {
+          "python": {
+            "files_total": 2,
+            "files_parsed": 2,
+            "files_failed": 0,
+            "nodes": 28,
+            "edges": 74,
+            "resolved_calls": 9,
+            "external_calls": 24,
+            "dynamic_calls": 41,
+            "ambiguous_calls": 0,
+            "unresolved_calls": 0,
+            "external_callback_boundaries": 16
+          },
+          "typescript": {
+            "files_total": 328,
+            "files_parsed": 325,
+            "files_failed": 3,
+            "nodes": 10971,
+            "edges": 60072,
+            "resolved_calls": 23090,
+            "external_calls": 18261,
+            "dynamic_calls": 18138,
+            "ambiguous_calls": 428,
+            "unresolved_calls": 155,
+            "external_callback_boundaries": 11792
+          }
+        },
+        "component_versions": {
+          "tool": {
+            "source_hash": "f51101393a08d7e1177d53b4423276439cd4b65ccc6ac2198a463598961bcc73",
+            "graph_backend": "axon-graph-core-1",
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+          },
+          "maintenance": {
+            "backend": "cocoindex",
+            "version": "1.0.25",
+            "protocol": 1,
+            "granularity": "language",
+            "global_detection": "full"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        }
+      }
+    },
+    {
+      "snapshot_id": "4376321a4081901f9a62e74b6a9a1cbedfacf1a2f2d68278ac2bbdf6ce3d8db2",
+      "created": false,
+      "status": "partial",
+      "finding_count": 40388,
+      "maintenance": {
+        "engine": "cocoindex",
+        "version": "1.0.25",
+        "recomputed_languages": [],
+        "reused_languages": [
+          "python",
+          "typescript"
+        ],
+        "uncached_languages": [],
+        "global_detection": "full"
+      },
+      "phase": "repeat",
+      "stats": {
+        "files_total": 333,
+        "files_parsed": 327,
+        "files_failed": 6,
+        "nodes": 10999,
+        "edges": 60146,
+        "by_language": {
+          "python": {
+            "files_total": 2,
+            "files_parsed": 2,
+            "files_failed": 0,
+            "nodes": 28,
+            "edges": 74,
+            "resolved_calls": 9,
+            "external_calls": 24,
+            "dynamic_calls": 41,
+            "ambiguous_calls": 0,
+            "unresolved_calls": 0,
+            "external_callback_boundaries": 16
+          },
+          "typescript": {
+            "files_total": 328,
+            "files_parsed": 325,
+            "files_failed": 3,
+            "nodes": 10971,
+            "edges": 60072,
+            "resolved_calls": 23090,
+            "external_calls": 18261,
+            "dynamic_calls": 18138,
+            "ambiguous_calls": 428,
+            "unresolved_calls": 155,
+            "external_callback_boundaries": 11792
+          }
+        },
+        "component_versions": {
+          "tool": {
+            "source_hash": "f51101393a08d7e1177d53b4423276439cd4b65ccc6ac2198a463598961bcc73",
+            "graph_backend": "axon-graph-core-1",
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+          },
+          "maintenance": {
+            "backend": "cocoindex",
+            "version": "1.0.25",
+            "protocol": 1,
+            "granularity": "language",
+            "global_detection": "full"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        }
+      }
+    }
+  ],
+  "source_hash": "d7e98cbcd1d5c8051ba92546903ebdfad7d0c2286c0b1d391e086a94a3d0fc17",
+  "policy_hash": "a9607312f965e4b149d225436b8809b5862c0cca60cdafad2621ee43246239d7",
+  "analyzer_version": "static-multilang-3",
+  "detector_version": "call-rules-3-axon",
+  "parser_version": "{\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"f51101393a08d7e1177d53b4423276439cd4b65ccc6ac2198a463598961bcc73\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+  "failed_files": [
+    {
+      "path": "core/indexing/local-code-index/gc.ts",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：225, 378, 390, 441, 453, 495"
+    },
+    {
+      "path": "core/indexing/local-code-index/rules/types.ts",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：30"
+    },
+    {
+      "path": "scripts/cutover-orchestrator.sh",
+      "status": "unsupported",
+      "error": "此源码语言不在当前分析能力或配置范围中"
+    },
+    {
+      "path": "scripts/install.sh",
+      "status": "unsupported",
+      "error": "此源码语言不在当前分析能力或配置范围中"
+    },
+    {
+      "path": "shared/primitives/process-tree.ts",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：952"
+    },
+    {
+      "path": "skills/claude-code/install.sh",
+      "status": "unsupported",
+      "error": "此源码语言不在当前分析能力或配置范围中"
+    }
+  ]
+}

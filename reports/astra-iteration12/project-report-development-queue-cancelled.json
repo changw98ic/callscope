@@ -1,0 +1,31 @@
+{
+  "kind": "coordinator_requested_development_queue_cancellation",
+  "pid": 12444,
+  "verified_command": [
+    ".analysis-tools/runtime/bin/python",
+    "reports/astra-iteration12/query_project_report_development.py",
+    "--run"
+  ],
+  "cancelled_at_utc": "2026-10-14T08:02:46.983932+00:00",
+  "reason": "Reuse the scoped shared-reference validator at normal v14 formal report generation, avoiding redundant old-v13 reads.",
+  "readable_fd_targets_before_termination": {},
+  "fd_target_permission_denied": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "database_fd_absence_proven": false,
+  "helper_output_seen_before_cancellation": false,
+  "first_cancel_precheck_exception": "PermissionError while reading proc FD symlinks; no signal or artifact had been issued.",
+  "helper_source_sha256": "89501a5b7e6ae02fb8d0eee6fe385dfa7a2f69c9eef3f16edcac66ba785a894c",
+  "signal": "SIGTERM",
+  "other_query_processes_stopped": false,
+  "new_snapshot_or_scan_started": false,
+  "signal_sent_to_verified_pid": true,
+  "progress_before_cancellation": "unknown; no saved_data_loaded or result output was produced",
+  "old_v13_database_opened_before_cancellation": null,
+  "configured_database_open_mode": "readonly immutable; no scan or snapshot creation",
+  "session_exit_code_observed": 143
+}

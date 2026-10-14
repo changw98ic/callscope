@@ -1,0 +1,32 @@
+[
+  {
+    "repository": "codepatchbay",
+    "raw_policy_sha256": "134671b5cb1cc7f6acb3514e63eac6a1e7bd3d53d48b750d38d8d35b9b63faa0",
+    "validated_policy_sha256": "920edf6ba07f0a43821cd940b211848556ace921d2d8c3e76f05face4dc73ef0",
+    "counts": {
+      "rules": 10,
+      "static_contracts": 1,
+      "value_contracts": 1,
+      "navigation_contracts": 0,
+      "atomicity_contracts": 1,
+      "field_contracts": 3,
+      "budget_contracts": 2
+    },
+    "mode": "normal validation of actual inert locator policy; no scan or target execution"
+  },
+  {
+    "repository": "winwincode",
+    "raw_policy_sha256": "7331e395f929c6fe031265a9e8c8190cdad5fb158b35b54b7d614c30c899a11b",
+    "validated_policy_sha256": "fbd78ddcacdd0c5615e5bea85b13987f5ad6d78fd60ac40fcbdda23d2e597f4c",
+    "counts": {
+      "rules": 10,
+      "static_contracts": 1,
+      "value_contracts": 0,
+      "navigation_contracts": 1,
+      "atomicity_contracts": 0,
+      "field_contracts": 0,
+      "budget_contracts": 0
+    },
+    "mode": "normal validation of actual inert locator policy; no scan or target execution"
+  }
+]

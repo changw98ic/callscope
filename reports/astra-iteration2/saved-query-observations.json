@@ -1,0 +1,42 @@
+{
+  "mode": "normal queries of saved snapshots",
+  "target_executed": false,
+  "target_tests_run": false,
+  "queries": [
+    {
+      "repository": "codepatchbay",
+      "snapshot_id": "e55cd3d2d84ee473026bafa9169a7a3ccdab19d3e4815a5575f726aaa805af00",
+      "query_kind": "static_contract_literal_set_consistency",
+      "findings": [
+        {
+          "id": "55dd550622cb4430b071851c",
+          "rule_id": "cpb-astra-terminal-initializer-members",
+          "status": "open",
+          "source_fact_confirmed": true
+        }
+      ]
+    },
+    {
+      "repository": "winwincode",
+      "snapshot_id": "e372ed1670979aaf53f52df905844647892e02d9a418f0eba5311f2a6c3e6ab1",
+      "query_kind": "static_contract_required_object_fields",
+      "findings": [
+        {
+          "id": "7414a8a037043a2794e749fe",
+          "rule_id": "wwc-astra-device-spec-field-construction",
+          "status": "uncertain",
+          "source_fact_confirmed": true
+        }
+      ],
+      "saved_protocol_source": {
+        "snapshot_id": "e372ed1670979aaf53f52df905844647892e02d9a418f0eba5311f2a6c3e6ab1",
+        "file": "apps/client/src/generated/control-plane-client.ts",
+        "hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "text_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "status": "captured",
+        "kind": "support_input",
+        "returned_text_sha256": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24"
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "verification_mode": "normal static scans and saved queries, independent source/artifact review, syntax/link checks; no test suite",
+  "package_version": "0.9.0",
+  "pyproject_version": "0.9.0",
+  "tool_identity": {
+    "source_hash": "35aedb73739399068219e6b9b46840c27441f5b1f74430031234ffb285c8b7fc",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+  },
+  "formal_scan_tool_identities_match": true,
+  "frozen_baseline_sha256": "16b4b05c8818fa1eecf396132ebe2ea29a8f0068801165f0649da379d9041dd7",
+  "tool_python_source_syntax_review_files": 42,
+  "javascript_source_syntax_check": "node --check web/app.js",
+  "markdown_documents_checked": 16,
+  "local_links_checked": 295,
+  "missing_local_links": [],
+  "target_state_artifact": "target-state-observations.json",
+  "saved_query_artifact": "saved-query-observations.json",
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "tool_test_suite_run": false,
+  "browser_verification_run": false,
+  "package_installation_verification_run": false
+}

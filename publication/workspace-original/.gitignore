@@ -1,0 +1,11 @@
+__pycache__/
+.analysis-tools/
+*.pyc
+.callscope/
+*.sqlite3
+*.sqlite3-wal
+*.sqlite3-shm
+.venv/
+dist/
+build/
+*.egg-info/

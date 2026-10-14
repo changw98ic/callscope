@@ -1,0 +1,182 @@
+{
+  "kind": "product_documentation_formal_publication",
+  "created_at": "2026-10-14T10:00:42.349063+00:00",
+  "package_version": "0.14.0",
+  "publication_series": "v14",
+  "current_formal_directory": "reports/astra-iteration12-scope2",
+  "frozen_tool_source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+  "frozen_python_source_file_count": 65,
+  "files_changed": [
+    {
+      "file": "docs/ARCHITECTURE_V1_1.md",
+      "sha256": "d48f2e88dca08a7df99915685ac4704bee059ed4481c618786770f290bc4a0f5",
+      "bytes": 52277,
+      "current_formal_directory": "reports/astra-iteration12-scope2",
+      "changes": "回填scope2正式分析、报告、有限原内容完成和CLI读回；当前链接转scope2，历史v13/v12及运行/全程序边界保留。",
+      "initial_preparation_changes": "同步v0.14身份和正式结果待生成状态；补条件沿袭/发布、操作职责解释及文档部署边界；v13/v12数字明确历史。"
+    },
+    {
+      "file": "docs/IMPLEMENTATION_CONTRACT.md",
+      "sha256": "d3eb73e471961281bd1bfd36835a76a4b6dde2c985790ef64154d2422574cb50",
+      "bytes": 38138,
+      "current_formal_directory": "reports/astra-iteration12-scope2",
+      "changes": "以原两报告有限内容合同定义完整范围；旧GOAL_ACCEPTANCE五/30仅子追踪，回填正式账本、观察比较、身份及有限内容complete。",
+      "initial_preparation_changes": "修正v0.11旧current身份与词法/Rust版本；补goal/report规则、文档locators、真实操作解释和报告v3协议；区分旧账本与当前正式状态。"
+    },
+    {
+      "file": "docs/CAPABILITY_ROADMAP.md",
+      "sha256": "fc7bb6976abd03fcb77d7f97eccbf339c6320764132a661a131b3796b35557ea",
+      "bytes": 27979,
+      "current_formal_directory": "reports/astra-iteration12-scope2",
+      "changes": "回填scope2真实字段/条件、职责操作、文档部署及报告结果；原已读有限内容目标完成，计数不作覆盖率。",
+      "initial_preparation_changes": "按功能正确性、可扩展性、性能排序；列本轮已实现能力与待正式生成结果，历史差距不再冒充当前未实现。"
+    },
+    {
+      "file": "docs/UPSTREAM_REUSE.md",
+      "sha256": "8ba66b4ef395f7021f6edb780351a58fd17d35813428f78cd35ba99ded18cd36",
+      "bytes": 8581,
+      "current_formal_directory": "reports/astra-iteration12-scope2",
+      "changes": "回填scope2正常full冷/热同ID与报告保存状态，保留上游固定来源及历史memo记录，不宣称本轮缓存收益。",
+      "initial_preparation_changes": "同步v0.14，保留Axon/CocoIndex固定来源与许可；区分当前full重算和历史CocoIndex memo复用；不增加上游能力宣称。"
+    },
+    {
+      "file": "docs/EXTENDING.md",
+      "sha256": "a5fe22fac0b271d8d012e9714c80d4a1c1354194061d6925aad81fa123068510",
+      "bytes": 46444,
+      "current_formal_directory": "reports/astra-iteration12-scope2",
+      "changes": "保留v14实际扩展协议并回填scope2正常分析/报告及有限内容完成；不增加复审门或动态插件。",
+      "initial_preparation_changes": "更新source-chains3/policy-v2-documents/report3/presentation2；补三个固定类型、文档和引用协议及未知默认；无动态插件或复审门。"
+    },
+    {
+      "file": "docs/STATIC_SCOPE.md",
+      "sha256": "85afa79ecc77de38fbdb80b4c0b0bc948bc0c4cb2cc4ed5610db4a7a24f9fa38",
+      "bytes": 47764,
+      "current_formal_directory": "reports/astra-iteration12-scope2",
+      "changes": "回填scope2正式保存范围与原有限内容完成状态；partial图、source-only、原未审与运行边界继续保留。",
+      "initial_preparation_changes": "单列v0.14实现和正式结果待生成；明确字段/条件、职责与文档三方面的实际证据和未证明边界；旧v13结果标历史。"
+    }
+  ],
+  "formal_artifact_inputs": {
+    "CORE_FREEZE.json": {
+      "sha256": "17ec8c6a86863e1fc3b9ec8961188dd8d3ba5d2081da0721dfb027844b9c4059",
+      "bytes": 13799
+    },
+    "codepatchbay-integration.json": {
+      "sha256": "14ec2da687fc96870a5b511d86bebc7ab5d262334e9f52fb3b2f3d65108f815c",
+      "bytes": 36949
+    },
+    "winwincode-integration.json": {
+      "sha256": "df8ea8684b5de5b142fa129bef9587153c126082cb13d83c62150af8fa89a6f8",
+      "bytes": 51245
+    },
+    "ORIGINAL_REPORT_COMPLETION.json": {
+      "sha256": "a6524127b107948075e9af21127f9c9f5e5a0f35cb2e85b71c3e3d5504a9b2f6",
+      "bytes": 2434877
+    },
+    "ORIGINAL_REPORT_COMPLETION.md": {
+      "sha256": "87222021d5ec43fb65ec4ceb9cd4feae917bc6326fe76d2fb6663660cb5ec28d",
+      "bytes": 11873
+    },
+    "REPORT_SCOPE_GAPS.md": {
+      "sha256": "7fd0974129c2cf54863114002085259c06581f73175d62a29cd6aea53adaff39",
+      "bytes": 8670
+    },
+    "ORIGINAL_BASELINE_COMPARISON.json": {
+      "sha256": "816f26036957bb294f2bde5c107e39af0358a015a52d00f7ca5eda8b358ff655",
+      "bytes": 1551
+    },
+    "PUBLICATION_IDENTITY.json": {
+      "sha256": "0530da407aabd402428cd1d92c7522a7eaad2207a5107ed57c53e75b96f74bdd",
+      "bytes": 88569
+    },
+    "CLI_REPORT_READBACK.json": {
+      "sha256": "f45584398e43b0c80b5838619208ec1eefda12b95eae2213a721c3b9cd877d51",
+      "bytes": 9640
+    },
+    "goal-ledger.json": {
+      "sha256": "d87cdca3d26dd9a091124542dc9ad1226ba1a72c32f97957338488988a27543a",
+      "bytes": 169112868
+    },
+    "GOAL_JUDGMENT_EVIDENCE.json": {
+      "sha256": "32497773dc6b184f6f1a27e06960f033d80abdc6dc72629754399e9c0a1cf1e3",
+      "bytes": 152193981
+    },
+    "REPORT.md": {
+      "sha256": "c967974adad26203dcec358b85937cb508ac7e095c4d82723e9f5d5216dcf1f3",
+      "bytes": 152504
+    },
+    "RELEASE_REPORT_INPUTS.json": {
+      "sha256": "e930a37433b499743bcde6af2139e84fc18aee46d918586174c1fee4c095f383",
+      "bytes": 5558391
+    }
+  },
+  "original_finite_content_completion": {
+    "mode": "formal",
+    "completion_assessment": {
+      "complete": true,
+      "status": "original_already_read_finite_source_report_content_addressed",
+      "reason": "The actual saved automatic bodies, finite source-model statements, three document/source comparisons and source references address each original already-read finite clause. Both formal identities and unchanged frozen observations are read back. Original unreviewed domains and source-only effect limits are preserved.",
+      "whole_program_functional_completeness_proven": false,
+      "runtime_or_business_success_verified": false,
+      "complete_original_report_verbatim_reproduction_claimed": false,
+      "exceeds_all_original_report_content_claimed": false,
+      "completion_from_version_label_or_item_count": false
+    },
+    "remaining_known_original_source_content_gaps": [],
+    "responsibility_rows": 14,
+    "main_chain_domains": 10,
+    "documentation_aspects": 3
+  },
+  "publication_identity_verified": true,
+  "cli_readback": {
+    "repository": "winwincode",
+    "successful_readback": true,
+    "markdown_bytes_equal": true,
+    "logical_database_rows_schema_and_identity_unchanged": true,
+    "database_physical_bytes_unchanged": false,
+    "analysis_rescanned": false
+  },
+  "current_result_summary": {
+    "codepatchbay": {
+      "conditional_judgments": 3,
+      "necessary_relations": 18,
+      "scoped_source_chains": 16,
+      "responsibility_operations": 15223,
+      "shared_reference_failures": 0
+    },
+    "winwincode": {
+      "conditional_judgments": 2,
+      "necessary_relations": 12,
+      "scoped_source_chains": 20,
+      "responsibility_operations": 10023,
+      "shared_reference_failures": 0
+    }
+  },
+  "original_five_judgments_and_thirty_relations_are_subtracking_only": true,
+  "full_scope_basis": "Original two reports already-read finite source content; central contract definition/history is not the incomplete first candidate result.",
+  "central_definition_reference": "reports/astra-iteration12/REPORT_COMPLETION_CONTRACT.md",
+  "initial_pending_sentences_replaced": 17,
+  "remaining_formal_pending_sentences": [],
+  "preserved_development_records": [
+    "reports/astra-iteration12/PRODUCT_DOC_UPDATES.json",
+    "reports/astra-iteration12/PRODUCT_DOC_UPDATES_FINAL.json",
+    "reports/astra-iteration12/PRODUCT_DOC_PENDING_SENTENCES.json"
+  ],
+  "document_validation": {
+    "files": 6,
+    "local_markdown_links_checked": 263,
+    "missing_local_link_targets": [],
+    "whitespace_conflict_or_fence_issues": []
+  },
+  "core_modified": false,
+  "policies_modified": false,
+  "historical_formal_artifacts_modified": false,
+  "root_readme_api_automated_reports_modified": false,
+  "analysis_database_opened": false,
+  "analyzer_run": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "new_review_gate_added": false,
+  "functional_coverage_percentage_computed": false
+}

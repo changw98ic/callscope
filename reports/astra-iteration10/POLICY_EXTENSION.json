@@ -1,0 +1,33 @@
+[
+  {
+    "repository": "codepatchbay",
+    "preserved_base_policy_sha256": "134671b5cb1cc7f6acb3514e63eac6a1e7bd3d53d48b750d38d8d35b9b63faa0",
+    "new_policy_sha256": "4b28c0237ffd7d4491b127b42a69e85a33e15511c1831c1746b70c0eb045c766",
+    "changed_sections": [
+      "analysis",
+      "goal_contracts",
+      "report_claims"
+    ],
+    "goal_ids": [
+      "CPB-01",
+      "CPB-02",
+      "CPB-03"
+    ],
+    "comparison": "New explicitly declared conditional models and analyzers; not a same-policy precision experiment."
+  },
+  {
+    "repository": "winwincode",
+    "preserved_base_policy_sha256": "7331e395f929c6fe031265a9e8c8190cdad5fb158b35b54b7d614c30c899a11b",
+    "new_policy_sha256": "831df3cfaba119a575c53dc34970471d0203951653cf4632061d701849bd6c87",
+    "changed_sections": [
+      "analysis",
+      "goal_contracts",
+      "report_claims"
+    ],
+    "goal_ids": [
+      "WWC-01",
+      "WWC-02"
+    ],
+    "comparison": "New explicitly declared conditional models and analyzers; not a same-policy precision experiment."
+  }
+]

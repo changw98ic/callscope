@@ -1,0 +1,949 @@
+{
+  "kind": "actual_saved_protocol_seam_source_pointer_readback",
+  "development_only": true,
+  "formal_acceptance": false,
+  "computed_seam_module_sha256": "97532dea6e3a12ed89eba4dc89b49517349e03307e8a63f7e8c069bcf557c35c",
+  "source_report_sha256": "01b324f5d68c082a673d034dc6117e53e7fb05c7c252f06107a794e388249135",
+  "actual_source_pointer_readback": [
+    {
+      "pointer": "/architecture/responsibility_explanations/computed_source_contract_seams/0",
+      "actual_seam": {
+        "kind": "finite_generated_json_serde_message_source_relation",
+        "text": "所选命令「delivery.update_spec」的生成 TypeScript 记录按「DeliveryUpdateSpecCommand → payload:DeliveryUpdateSpecPayload → spec:DeliverySpecInput」组织字段「verificationCommand」（optional=true）。已认证 Serde 模型将它映射到 Rust 字段「verification_command:Option<String>」，缺失值为「None」，源属性为「#[serde(default, skip_serializing_if = \"Option::is_none\")].#[serde(rename = \"verificationCommand\")]」。在原普通 JSON/已认证 Serde 及成功消息模型条件下，实际「POST /api/v1/commands」序列化记录与 Server 的同一路径解码/dispatcher 记录相接，typed variant 为「DeliveryUpdateSpecCommand」。这是所选协议字段与消息关系，不把 HTTP 已发生、所有 query/WS codec 或跨语言普通调用当成已证明。",
+        "goal_id": "WWC-02",
+        "finding_id": "7e7dc738afda264f3b24a0d8",
+        "evidence_id": "9144dc2875788bfdba88323b",
+        "adapter_finding_id": "6bf2661528fa4bfe69878542",
+        "adapter_evidence_id": "8779a9bb2e1ca26e3d8b0366",
+        "obligation_id": "D3",
+        "obligation_status": "supported",
+        "source_analysis_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details",
+        "source_obligation_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/obligations/2",
+        "source_relation_refs": [
+          {
+            "relation_id": "99aafc4f6070fba7baef67c47b897568f57746ed693ff03e93b8d9b58f4e34b6",
+            "kind": "generated_typescript_wire_record_path",
+            "source_class": "support-input-derived",
+            "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/46"
+          },
+          {
+            "relation_id": "45013b406087a9ff840ea9bb677f6343ff76a76058f1780a3e68a23cbeba46cc",
+            "kind": "wire_record_field_mapping_and_default",
+            "source_class": "support-input-derived",
+            "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/48"
+          },
+          {
+            "relation_id": "4c9ef7134a179f58914a5290ed5a120446391e569db80171fe9a6bce6cdc13ab",
+            "kind": "command_json_http_record_transport",
+            "source_class": "support-input-derived",
+            "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/51"
+          },
+          {
+            "relation_id": "7c6f9014472319686dea62dfb8306b80e233318a889091d687881d89eb6a612c",
+            "kind": "server_json_body_to_dispatcher",
+            "source_class": "source-derived",
+            "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/53"
+          },
+          {
+            "relation_id": "9de41baa7ee3e51b2dbeedb3b74064a8e4b1bfdfc3b6c0c84573cca712b4e3ed",
+            "kind": "typed_application_family_dispatch",
+            "source_class": "source-derived",
+            "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/55"
+          },
+          {
+            "relation_id": "5686b3a64747909a310747ed41c7466780d6bd934e8a4c9abb4e2a4befe842d1",
+            "kind": "typed_command_update_dispatch",
+            "source_class": "source-derived",
+            "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/56"
+          }
+        ],
+        "models": [
+          {
+            "id": "captured-device-json-serde-dispatch-v1",
+            "version": "static-device-spec-protocol-flow-1",
+            "model_record_id": "e5d6e4d3d9bd1ae4ef2331737fb1a7e58a9c218bcd65abf80f1c05441d4b7b51",
+            "applicability_accepted": true,
+            "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/models/0"
+          }
+        ],
+        "conditions": {
+          "items": [
+            "Normal production clarification route; options.controlPlane override is absent, literal module imports complete normally, and form prerequisites permit save.",
+            "Protocol values are ordinary JSON data and the versioned native JSON/Serde provider model applies; successful delivery of that request is a condition, not an observed network execution.",
+            "Actor/scope authorization, catalog/revision/source-session/baseline guards permit reaching authority, and the update is not an earlier exact receipt replay.",
+            "The source product session resolves to an authorized active Device repository target. Non-Device and independent Chat paths remain counterexamples."
+          ],
+          "kind": "true_environment_and_model_conditions",
+          "provenance": {
+            "author_approved": false,
+            "authority": "Astra original WWC-02 source report, conditional code judgment",
+            "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md#wwc-02"
+          },
+          "source_class": "policy-declared"
+        },
+        "transport_model": "ordinary successful JSON message along authenticated command endpoint; no network execution",
+        "scope_boundaries": [
+          "No target code, tests, build, generated module or macro is executed.",
+          "Protocol/message/dependency records do not create or upgrade snapshot CALLS edges.",
+          "A successful ordinary-model message and an active Device branch are conditional, not observed running facts.",
+          "Role configuration does not establish actual injection or dependency identity."
+        ],
+        "supported_source_relation": true,
+        "source_locations": [
+          {
+            "file": "apps/client/src/generated/contracts.ts",
+            "line": 3541,
+            "column": 3,
+            "start_byte": 137271,
+            "end_byte": 137310,
+            "source_hash": "900bfd942abc7f889540469721e5540c1a329f18124457a67f64b5ea1e793515",
+            "span_hash": "a211ab726f441d8728e044f78f3f81b18c235bf16d13d6341ff6598efc23fa2c"
+          },
+          {
+            "file": "crates/winwincode-api/src/generated.rs",
+            "line": 5840,
+            "column": 5,
+            "start_byte": 237568,
+            "end_byte": 237608,
+            "source_hash": "8c453928bc68c7980a5c00a262087244f5b3987e2fee6bc0043d13cfafb40037",
+            "span_hash": "668309ca357005892eacbad1b63473d9109c20959b5371ae333cea6aa8104219"
+          },
+          {
+            "file": "apps/client/src/generated/control-plane-client.ts",
+            "line": 449,
+            "column": 20,
+            "start_byte": 199564,
+            "end_byte": 199587,
+            "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "span_hash": "eef2f9bef5344c08c448403db3c2fcda1976e31c634e4965018dcba1b05412dd"
+          },
+          {
+            "file": "apps/client/src/generated/control-plane-client.ts",
+            "line": 445,
+            "column": 5,
+            "start_byte": 199444,
+            "end_byte": 199451,
+            "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "span_hash": "1f58b9145b24d108d7ac38887338b3ea3229833b9c1e418250343f907bfd1047"
+          },
+          {
+            "file": "apps/client/src/generated/control-plane-client.ts",
+            "line": 443,
+            "column": 22,
+            "start_byte": 199420,
+            "end_byte": 199487,
+            "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "span_hash": "f5b96c8e9f2e16dc8ab6dd8596d622253af435ea73f6392822be624cc66aa99a"
+          },
+          {
+            "file": "apps/client/src/generated/control-plane-client.ts",
+            "line": 443,
+            "column": 3,
+            "start_byte": 199401,
+            "end_byte": 200996,
+            "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "span_hash": "f00f2b105d4d9eb03f38f42d55142a42324aa6eea932ee0a6b388b1cb532a03e"
+          },
+          {
+            "file": "crates/winwincode-server/src/server.rs",
+            "line": 2397,
+            "column": 24,
+            "start_byte": 85875,
+            "end_byte": 85905,
+            "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+            "span_hash": "ef35af056f55d72fa9c3111a2caa6073e1ec3de6ea2f15caf647123a80a38ba0"
+          },
+          {
+            "file": "crates/winwincode-server/src/server.rs",
+            "line": 2354,
+            "column": 9,
+            "start_byte": 84473,
+            "end_byte": 84508,
+            "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+            "span_hash": "b52e80591ce97449b504125f1cbf7aeac587fe88321dd75aef2b7d7a938dcdf3"
+          },
+          {
+            "file": "crates/winwincode-server/src/server.rs",
+            "line": 2344,
+            "column": 22,
+            "start_byte": 84062,
+            "end_byte": 84102,
+            "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+            "span_hash": "8b1a80632f23693593557a48ff165a537433d11b17874bd5d240c0881dc13689"
+          },
+          {
+            "file": "crates/winwincode-server/src/server.rs",
+            "line": 2337,
+            "column": 1,
+            "start_byte": 83723,
+            "end_byte": 84562,
+            "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+            "span_hash": "51b9eaee02496f82b86fdc3463d7f1c84b2b9cd462fe7f2cbb3439290878ace9"
+          },
+          {
+            "file": "crates/winwincode-server/src/application.rs",
+            "line": 1247,
+            "column": 13,
+            "start_byte": 55432,
+            "end_byte": 55490,
+            "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+            "span_hash": "10fc7052f2b4b75ff5d075cf6978ef7e46ef33c6fc62348798a895f2e3ba599a"
+          },
+          {
+            "file": "crates/winwincode-server/src/application.rs",
+            "line": 1232,
+            "column": 5,
+            "start_byte": 54844,
+            "end_byte": 55887,
+            "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+            "span_hash": "e8ee0b564027c512ae23ad6d40b41ee73f526231df1cba4608f198af9a271c9e"
+          },
+          {
+            "file": "crates/winwincode-server/src/application.rs",
+            "line": 650,
+            "column": 17,
+            "start_byte": 28229,
+            "end_byte": 28464,
+            "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+            "span_hash": "ee70f6218bfa5d4867107a0131052c984b7c1956a48a0ff58cf3420bc432aadf"
+          },
+          {
+            "file": "crates/winwincode-server/src/application.rs",
+            "line": 620,
+            "column": 5,
+            "start_byte": 26843,
+            "end_byte": 31345,
+            "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+            "span_hash": "63d309d6985751f7bd606e02b5a2dc5c8103361809ebc98281ba9f37285e005d"
+          }
+        ],
+        "captured_owner_graph_node_ids": [],
+        "presentation_truncated": false,
+        "full_source_records_preserved_at_pointer": true,
+        "source_gaps": [],
+        "creates_calls_edge": false,
+        "generated_support_upgraded_to_implementation": false,
+        "runtime_transport_or_physical_effect_proven": false,
+        "network_success_verified": false,
+        "all_http_query_or_websocket_contracts_proven": false
+      },
+      "actual_source_pointer_target": {
+        "conditions": {
+          "items": [
+            "Normal production clarification route; options.controlPlane override is absent, literal module imports complete normally, and form prerequisites permit save.",
+            "Protocol values are ordinary JSON data and the versioned native JSON/Serde provider model applies; successful delivery of that request is a condition, not an observed network execution.",
+            "Actor/scope authorization, catalog/revision/source-session/baseline guards permit reaching authority, and the update is not an earlier exact receipt replay.",
+            "The source product session resolves to an authorized active Device repository target. Non-Device and independent Chat paths remain counterexamples."
+          ],
+          "kind": "true_environment_and_model_conditions",
+          "provenance": {
+            "author_approved": false,
+            "authority": "Astra original WWC-02 source report, conditional code judgment",
+            "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md#wwc-02"
+          },
+          "source_class": "policy-declared"
+        },
+        "models": [
+          {
+            "applicability": {
+              "accepted": true,
+              "native_json_binding": "checked at selected serializer below",
+              "ordinary_plain_json_records": true,
+              "source_check": {
+                "column": 1,
+                "column_base": 1,
+                "column_unit": "utf8_bytes",
+                "coordinate_space": "captured_text_utf8",
+                "end_byte": 237611,
+                "end_column": 2,
+                "end_line": 5841,
+                "file": "crates/winwincode-api/src/generated.rs",
+                "grammar": "rust",
+                "line": 5814,
+                "original_file_end_byte": 237611,
+                "original_file_start_byte": 236407,
+                "parse_identity": {
+                  "coordinate_space": "captured_text_utf8",
+                  "derived_text_utf8_sha256": null,
+                  "literal_authority": "original_saved_source_text_only",
+                  "original_text_utf8_sha256": "8c453928bc68c7980a5c00a262087244f5b3987e2fee6bc0043d13cfafb40037",
+                  "position_map": "identity_utf8_bytes_and_line_columns",
+                  "projection_mode": "original",
+                  "projection_version": null,
+                  "raw_prefix_bytes": 0,
+                  "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+                  "semantic_source_version": "semantic-snapshot-sources-1",
+                  "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2"
+                },
+                "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+                "raw_prefix_bytes": 0,
+                "semantic_parse_id": "978593e33864abe3d6dd81cc5ff11a9fc30a735afe3ed2ea2cbae205e852bb81",
+                "source_excerpt": "pub struct DeliverySpecInput {\n    #[serde(rename = \"acceptanceCriteria\")]\n    pub acceptance_criteria: Vec<AcceptanceCriterionInput>,\n    #[serde(rename = \"baseRevision\")]\n    pub base_revision: String,\n    #[serde(rename = \"constraints\")]\n    pub constraints: Vec<String>,\n    #[serde(rename = \"goal\")]\n    pub goal: String,\n    #[serde(rename = \"outOfScope\")]\n    pub out_of_scope: Vec<String>,\n    #[serde(deserialize_with = \"deserialize_required_nullable\")]\n    #[serde(rename = \"publicationTarget\")]\n    pub publication_target: Option<PublicationTarget>,\n    #[serde(rename = \"repositoryId\")]\n    pub repository_id: winwincode_domain::RepositoryId,\n    #[serde(rename = \"scope\")]\n    pub scope: Vec<String>,\n    #[serde(deserialize_with = \"deserialize_required_nullable\")]\n    #[serde(rename = \"sourceProductSessionId\")]\n    pub source_product_session_id: Option<winwincode_domain::ProductSessionId>,\n    #[serde(rename = \"title\")]\n    pub title: String,\n    /// User-confirmed verification command, required for a Device repository delivery.\n    #[serde(default, skip_serializing_if = \"Option::is_none\")]\n    #[serde(rename = \"verificationCommand\")]\n    pub verification_command: Option<String>,\n}",
+                "source_excerpt_truncated": false,
+                "source_hash": "8c453928bc68c7980a5c00a262087244f5b3987e2fee6bc0043d13cfafb40037",
+                "source_line": "pub struct DeliverySpecInput {",
+                "span_hash": "af7b1e6ad442ee455f5208eb7732cd74e269d87905d9e9451b9036f679b6eab6",
+                "start_byte": 236407
+              }
+            },
+            "model_id": "captured-device-json-serde-dispatch-v1",
+            "model_record_id": "e5d6e4d3d9bd1ae4ef2331737fb1a7e58a9c218bcd65abf80f1c05441d4b7b51",
+            "version": "static-device-spec-protocol-flow-1"
+          }
+        ],
+        "necessary_gaps": [],
+        "obligations": [
+          {
+            "complete": true,
+            "evidence_relation_ids": [
+              "9e75f001c72e4ae79a63ef5261ba8738af2f9d0717f43c00e9fe36dbf935e778",
+              "8c3c2b2c5b64fdf68f7d835ac4b7b8b8b735fb58310c6125690aed557cbdd429"
+            ],
+            "id": "D1",
+            "necessary_gaps": [],
+            "status": "supported"
+          },
+          {
+            "complete": true,
+            "evidence_relation_ids": [
+              "d7e4d3ddd61229b47a8b70be9afece0ef68f8d3086e2bf30dfb211b3d9dfed81",
+              "15418e305709c7900a32db65c5f60479dbb73193ec3ee07ffa10ed839fe3385c",
+              "cb1efa5f19744e3a09101450ae4c1e5f103c79f712101997a167f240861bf2fd",
+              "8e045a81b1fa8b1d816091f925805e6ccd066766043e3d8a08a84ee2de111224",
+              "df8271f39e50d78ef9d7f97b55c8378c52ef19036203245073eded2d8bccd1f0",
+              "48bb98a14e0e1a61c799e63f6a4cf2a44f95b5a49d2664684e2802b3ecb061d7",
+              "88fbcf4dcc16e2ec3ee88f8aafc1b0e6c11b8e72e01081aa5b89490f9c49a1cc",
+              "5d51bc39e7d46fca54446df267e1e0630efb5f5bc550a9274283f70d95508bf3",
+              "a02871180a1f1462ad4465c6cfc605fc2d8c8eeeba13cd2c5250f1684c1da54f",
+              "31abb34179f327a9b8306fa6c515dc0d21cbe8b93c3854ece616a4c03cd2339c",
+              "7d1cb4211f04bcd26da4a63a5c3342b704ede3d4c878c5554247a66903f18aed",
+              "35f09ce17c07d75e6e1aabb88a70ddb5dbd0a539e24ae11e2429f64f0f1fa246",
+              "2315416fc7b608ab1772da825f49bd1dbdf79b99b9e82af05b89c66515f052cd",
+              "7f516b89e379c1ddc8385e037c372d604859de76ae7508e3be12618c7ba8a836",
+              "be60b62be686ea46562514baf812dd6d3ea87881a6c8375303d76f16cf3c5919",
+              "be959d40a94b368e32b9dd8ec4ce2b3568b6bb09ad18aec454927a106a35f3d4",
+              "3441922da35304ba1a86a36108c135e03fd9e558cf6f93873c2ff44b948f8646",
+              "dc2a0dc207278562d430170b07d59084d892ac6af49f8defd728f6ce0dd54d88",
+              "0eb86ff6937d4a688f0cadfa3aed2de0cbe8ab1a9c77a962db522499e97142c4",
+              "991c7368634d4609cd476ee9b3d51331d3199e41d3bfe0b589d0ce8a2da6b924",
+              "3ee0a95e2f502f7b270f67d25511f5c61bccc4ceb24a581408a6a799aad6d692",
+              "d2f5596f85ef5bdf6e11d1f8fe69d54490e9ede2c5f02de59f0120f6c605c5d9",
+              "266eaf577ab875e10711d1f3bb7cbe2a777bd8713556a164a323e66b14a06095",
+              "d92c8144d9bd77f711864a66852b1a3ab4793d8b6eec8eb9b52ae8f4acf47bc6",
+              "9c0e687dfa023c393e0c05190cb8c97835004f43de89c0bfcebd962794c0f25f",
+              "cce647e939fb523d6077df54d970e3d66b9aba6d121a566fb7cc5c3dacfa660e",
+              "87691c57788c6a42a9ae1d44249c1f2237797c730ae93caa0ac38b777b2b8239",
+              "f8572f59b9e9f6251f25d2f66fe463f2913aaa3afa5cca6acca393dd7aa6da95",
+              "4877ac5421d4820eb9265694e3b150998af4019651b016512c26490cd1652b6a",
+              "1c5462fe1469dd4ac2a7c80781ab11641c8bd89711c48bd3752612ee8a97c52d",
+              "ddeffac86dec4e3a24ff410af45b7e2c4efe46eed3fe6658145ec379d92f3cb5",
+              "8dc6165d0f888b5be8e2a073737f609298adf8cfeb707ddb17e30ed15a99f455",
+              "8f74cd7b0fd3b714c650375e26816ae762f9b13068037924bfc0d33d1c95790b",
+              "a9362a04835bdc145deeeb3bbbdf0e0470dc4b079932985963a14d48f7be4a12",
+              "07ea7dd8ae62b9d4d46a7c82e818e0e323de7881f8e2e00b3242e83da3b36a3e",
+              "8d277ed62524bcddfffda113b80941e8dc37bf4d0480e5c70787f1284be8d414",
+              "2bde24c890f28424273ea87587020c640b971d1e19128bceab6fd9e0a991ff10"
+            ],
+            "id": "D2",
+            "necessary_gaps": [],
+            "status": "supported"
+          },
+          {
+            "complete": true,
+            "evidence_relation_ids": [
+              "b82d560b21ecd52075c4ec45b03430b4eda2eeacffc5c8b02569c46b79069c64",
+              "a9f3dfaff1447fd74312a698262f53bf3c58b1e5c613109c52dcf5f3db021b2a",
+              "4699c3c96436c927fed353a85916911f369d5ddce55ca8e3caf8a8c3c0fd8fe6",
+              "43091357d821f1ef6a0e93cd18e926217eceb2f65edec59756b0e3c6d2b358c5",
+              "a2e630d2c433abad1c5cfa57cb8ef13482e736b4112102d86e72c51a148159c6",
+              "76898afd98a45ce547d9f2188bfb553e903c8e85a68921f627d7d4f359a93e13",
+              "8896a694876ba3ced5567bb548384d22dccb3030212ccb8c1983ddfaef6be903",
+              "99aafc4f6070fba7baef67c47b897568f57746ed693ff03e93b8d9b58f4e34b6",
+              "6477ae750e330a76ea2a4ab600fafa8e32f0acfef69d07000df2dab4bd5909c5",
+              "45013b406087a9ff840ea9bb677f6343ff76a76058f1780a3e68a23cbeba46cc",
+              "2a2daaaaf5773ffab5091f477fa09a247043710610ff392a8403fe4b8a283dff",
+              "137c9d24ca02f93cf71b65c9bba306ea64e0e213501db72ccc68587466d34e7f",
+              "4c9ef7134a179f58914a5290ed5a120446391e569db80171fe9a6bce6cdc13ab",
+              "57d352263bd161b1a0530e3a4ea957e2e741a877863d41d662f8aae452f8dcb2",
+              "7c6f9014472319686dea62dfb8306b80e233318a889091d687881d89eb6a612c",
+              "48c4efa2ff0183446ef4e212a4ec7d8f927e3310d92552da5e3167de3a760506",
+              "9de41baa7ee3e51b2dbeedb3b74064a8e4b1bfdfc3b6c0c84573cca712b4e3ed",
+              "5686b3a64747909a310747ed41c7466780d6bd934e8a4c9abb4e2a4befe842d1"
+            ],
+            "id": "D3",
+            "necessary_gaps": [],
+            "status": "supported",
+            "transport_model": "ordinary successful JSON message along authenticated command endpoint; no network execution"
+          },
+          {
+            "complete": true,
+            "evidence_relation_ids": [
+              "3723ac4d65cada652c755bf5db61317a3c9ecb38f15ca5e7e0148d115b16f1a7",
+              "ca658d2f98cbbc8bc0588756b2b0d8f2499e8c5401195000d0c442ea67734ebc",
+              "5e7f04da6b46835bd785a9b09184c54df1ee781899dc611bf06307c424e4eda1",
+              "145766203edee25fba429dce9a66ed1f50f958eacc3e4e54794ccbe41cf3c6d3",
+              "18dd1de32a1857a0c38135860b89b018af2bc6a61652bd19f8120733d8b09d88",
+              "873becac4c2402ed66087d8f3d3e7acd5c9f386800923c3c2ec7e11665f8f542",
+              "068108760486c3f735f7eff207f3635d1002ed48518a8323877b93d13db58085",
+              "79db26f17c6ed8b1486dc995dfdfa6ed8439ce510e8a0b13c3ca6d55ef87b7aa",
+              "52f6ef1a7205039b7567cc154dc92d19847da74379e59cbc88b2eeb6e546c013",
+              "24ba18baca0a2936ea44337ef1b1300f8b677d52fe33657e52d45ca6ce3ccd01",
+              "95228f30ef96a5367273d3e2e30abe552ac610c9241b6821206a46f2584db053",
+              "0606c697ce6fff4d4acb74ccca08b6275b83d2e75d6d386315835f9598fd2e30",
+              "ca1882b4d32c6438f84e0178b1b702ad2cdc85e8638533d3a01e3677baa1703d"
+            ],
+            "id": "D4",
+            "necessary_gaps": [],
+            "status": "supported"
+          },
+          {
+            "complete": true,
+            "evidence_relation_ids": [
+              "cc2400327d562ad469c87211d93029f950e28e2c434bee1a8357420b4104abc4",
+              "768b0d6dafff7e26b923e9def25936c2c79f0cd829c0205344cc3b9a0153b733",
+              "f983078d1d90f50b1797209703540d7ff65c25b4cfea5e0f1a6e84e6426b72e6",
+              "9c0621593cdc5bb78f2afa08a9f820b3bbe5acf880d798422c2b7551cd331301",
+              "c2e1f014184230a5bb6cf7f49e4eb28236e2741effb6c7fbfb65e1568feb05fa",
+              "8a2c54aa495dd5dac580c2db9db50e9b52f517025a515a0e732a934c6e373b98",
+              "1e1dc4c8a0b92bc00a60411f62a42bb2f88da4a8d6efe6b73e06e1c410e72d14",
+              "59954b888276c505e3078b6870beed65a3ddc0489cebd6e5561d45a47c24ae92",
+              "66dd35f6836529520d0d10ae6e914211d2d7cf5606643cd1b00887df7fa76a31",
+              "4326ae1aad5595be3eb817071cf8dd0a8b83b99558cf46add27914cdf4417efc",
+              "f78bd4ccac6a98942a5c1884442a3a684001c5aa4b0f29eacd1aad2eb268be8d"
+            ],
+            "id": "D5",
+            "necessary_gaps": [],
+            "status": "supported"
+          }
+        ],
+        "policy_hash": "c085aff2d4adffa22410a5ce818a1f3ec431665a595de0c4f2d575326c982aaa",
+        "relations": [
+          {
+            "kind": "role_locator",
+            "obligation_id": "D1",
+            "relation_id": "9e75f001c72e4ae79a63ef5261ba8738af2f9d0717f43c00e9fe36dbf935e778",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "closed_command_payload_construction",
+            "obligation_id": "D1",
+            "relation_id": "8c3c2b2c5b64fdf68f7d835ac4b7b8b8b735fb58310c6125690aed557cbdd429",
+            "source_class": "source-derived",
+            "wire_field": "verificationCommand"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "d7e4d3ddd61229b47a8b70be9afece0ef68f8d3086e2bf30dfb211b3d9dfed81",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "15418e305709c7900a32db65c5f60479dbb73193ec3ee07ffa10ed839fe3385c",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "cb1efa5f19744e3a09101450ae4c1e5f103c79f712101997a167f240861bf2fd",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "8e045a81b1fa8b1d816091f925805e6ccd066766043e3d8a08a84ee2de111224",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "df8271f39e50d78ef9d7f97b55c8378c52ef19036203245073eded2d8bccd1f0",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "48bb98a14e0e1a61c799e63f6a4cf2a44f95b5a49d2664684e2802b3ecb061d7",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "88fbcf4dcc16e2ec3ee88f8aafc1b0e6c11b8e72e01081aa5b89490f9c49a1cc",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "5d51bc39e7d46fca54446df267e1e0630efb5f5bc550a9274283f70d95508bf3",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "a02871180a1f1462ad4465c6cfc605fc2d8c8eeeba13cd2c5250f1684c1da54f",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D2",
+            "relation_id": "31abb34179f327a9b8306fa6c515dc0d21cbe8b93c3854ece616a4c03cd2339c",
+            "source_class": "support-input-derived"
+          },
+          {
+            "kind": "captured_call_binding",
+            "obligation_id": "D2",
+            "relation_id": "7d1cb4211f04bcd26da4a63a5c3342b704ede3d4c878c5554247a66903f18aed",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "captured_call_binding",
+            "obligation_id": "D2",
+            "relation_id": "35f09ce17c07d75e6e1aabb88a70ddb5dbd0a539e24ae11e2429f64f0f1fa246",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "literal_module_member_binding",
+            "obligation_id": "D2",
+            "relation_id": "2315416fc7b608ab1772da825f49bd1dbdf79b99b9e82af05b89c66515f052cd",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "literal_dynamic_module_member_binding",
+            "obligation_id": "D2",
+            "relation_id": "7f516b89e379c1ddc8385e037c372d604859de76ae7508e3be12618c7ba8a836",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "literal_dynamic_module_member_binding",
+            "obligation_id": "D2",
+            "relation_id": "be60b62be686ea46562514baf812dd6d3ea87881a6c8375303d76f16cf3c5919",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "viewmodel_injected_port_invocation",
+            "obligation_id": "D2",
+            "relation_id": "be959d40a94b368e32b9dd8ec4ce2b3568b6bb09ad18aec454927a106a35f3d4",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "captured_call_binding",
+            "obligation_id": "D2",
+            "relation_id": "3441922da35304ba1a86a36108c135e03fd9e558cf6f93873c2ff44b948f8646",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "immutable_initializer_binding",
+            "obligation_id": "D2",
+            "relation_id": "dc2a0dc207278562d430170b07d59084d892ac6af49f8defd728f6ce0dd54d88",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "producer_result_to_injected_client",
+            "obligation_id": "D2",
+            "relation_id": "0eb86ff6937d4a688f0cadfa3aed2de0cbe8ab1a9c77a962db522499e97142c4",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "injected_client_command_forwarding",
+            "obligation_id": "D2",
+            "relation_id": "991c7368634d4609cd476ee9b3d51331d3199e41d3bfe0b589d0ce8a2da6b924",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "immutable_initializer_binding",
+            "obligation_id": "D2",
+            "relation_id": "3ee0a95e2f502f7b270f67d25511f5c61bccc4ceb24a581408a6a799aad6d692",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "injected_client_command_forwarding",
+            "obligation_id": "D2",
+            "relation_id": "d2f5596f85ef5bdf6e11d1f8fe69d54490e9ede2c5f02de59f0120f6c605c5d9",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "captured_call_binding",
+            "obligation_id": "D2",
+            "relation_id": "266eaf577ab875e10711d1f3bb7cbe2a777bd8713556a164a323e66b14a06095",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "generated_transport_actual_injection",
+            "obligation_id": "D2",
+            "relation_id": "d92c8144d9bd77f711864a66852b1a3ab4793d8b6eec8eb9b52ae8f4acf47bc6",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "neutral_client_generated_submit",
+            "obligation_id": "D2",
+            "relation_id": "9c0e687dfa023c393e0c05190cb8c97835004f43de89c0bfcebd962794c0f25f",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "factory_actual_return_members",
+            "obligation_id": "D2",
+            "relation_id": "cce647e939fb523d6077df54d970e3d66b9aba6d121a566fb7cc5c3dacfa660e",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "immutable_initializer_binding",
+            "obligation_id": "D2",
+            "relation_id": "87691c57788c6a42a9ae1d44249c1f2237797c730ae93caa0ac38b777b2b8239",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "factory_actual_return_members",
+            "obligation_id": "D2",
+            "relation_id": "f8572f59b9e9f6251f25d2f66fe463f2913aaa3afa5cca6acca393dd7aa6da95",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "immutable_initializer_binding",
+            "obligation_id": "D2",
+            "relation_id": "4877ac5421d4820eb9265694e3b150998af4019651b016512c26490cd1652b6a",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "immutable_initializer_binding",
+            "obligation_id": "D2",
+            "relation_id": "1c5462fe1469dd4ac2a7c80781ab11641c8bd89711c48bd3752612ee8a97c52d",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "native_proxy_own_override_member_selection",
+            "obligation_id": "D2",
+            "relation_id": "ddeffac86dec4e3a24ff410af45b7e2c4efe46eed3fe6658145ec379d92f3cb5",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "factory_actual_return_members",
+            "obligation_id": "D2",
+            "relation_id": "8dc6165d0f888b5be8e2a073737f609298adf8cfeb707ddb17e30ed15a99f455",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "factory_actual_return_members",
+            "obligation_id": "D2",
+            "relation_id": "8f74cd7b0fd3b714c650375e26816ae762f9b13068037924bfc0d33d1c95790b",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "literal_module_member_binding",
+            "obligation_id": "D2",
+            "relation_id": "a9362a04835bdc145deeeb3bbbdf0e0470dc4b079932985963a14d48f7be4a12",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "immutable_initializer_binding",
+            "obligation_id": "D2",
+            "relation_id": "07ea7dd8ae62b9d4d46a7c82e818e0e323de7881f8e2e00b3242e83da3b36a3e",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "actual_generated_transport_http_client_forwarding",
+            "obligation_id": "D2",
+            "relation_id": "8d277ed62524bcddfffda113b80941e8dc37bf4d0480e5c70787f1284be8d414",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "neutral_actual_generated_factory_member",
+            "obligation_id": "D2",
+            "relation_id": "2bde24c890f28424273ea87587020c640b971d1e19128bceab6fd9e0a991ff10",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D3",
+            "relation_id": "b82d560b21ecd52075c4ec45b03430b4eda2eeacffc5c8b02569c46b79069c64",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D3",
+            "relation_id": "a9f3dfaff1447fd74312a698262f53bf3c58b1e5c613109c52dcf5f3db021b2a",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D3",
+            "relation_id": "4699c3c96436c927fed353a85916911f369d5ddce55ca8e3caf8a8c3c0fd8fe6",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D3",
+            "relation_id": "43091357d821f1ef6a0e93cd18e926217eceb2f65edec59756b0e3c6d2b358c5",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D3",
+            "relation_id": "a2e630d2c433abad1c5cfa57cb8ef13482e736b4112102d86e72c51a148159c6",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D3",
+            "relation_id": "76898afd98a45ce547d9f2188bfb553e903c8e85a68921f627d7d4f359a93e13",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D3",
+            "relation_id": "8896a694876ba3ced5567bb548384d22dccb3030212ccb8c1983ddfaef6be903",
+            "source_class": "source-derived"
+          },
+          {
+            "command_type": "DeliveryUpdateSpecCommand",
+            "field_optional": true,
+            "kind": "generated_typescript_wire_record_path",
+            "obligation_id": "D3",
+            "payload_type": "DeliveryUpdateSpecPayload",
+            "relation_id": "99aafc4f6070fba7baef67c47b897568f57746ed693ff03e93b8d9b58f4e34b6",
+            "source_class": "support-input-derived",
+            "spec_type": "DeliverySpecInput",
+            "wire_field": "verificationCommand"
+          },
+          {
+            "kind": "wire_schema_version_enum_identity",
+            "obligation_id": "D3",
+            "relation_id": "6477ae750e330a76ea2a4ab600fafa8e32f0acfef69d07000df2dab4bd5909c5",
+            "source_class": "support-input-derived"
+          },
+          {
+            "absent_wire_value": "None",
+            "kind": "wire_record_field_mapping_and_default",
+            "model_record_id": "e5d6e4d3d9bd1ae4ef2331737fb1a7e58a9c218bcd65abf80f1c05441d4b7b51",
+            "obligation_id": "D3",
+            "relation_id": "45013b406087a9ff840ea9bb677f6343ff76a76058f1780a3e68a23cbeba46cc",
+            "rust_field": "verification_command",
+            "rust_type": "Option<String>",
+            "source_attributes": [
+              "#[serde(default, skip_serializing_if = \"Option::is_none\")]",
+              "#[serde(rename = \"verificationCommand\")]"
+            ],
+            "source_class": "support-input-derived",
+            "wire_field": "verificationCommand"
+          },
+          {
+            "kind": "generated_wire_schema_optional_field",
+            "model_record_id": "e5d6e4d3d9bd1ae4ef2331737fb1a7e58a9c218bcd65abf80f1c05441d4b7b51",
+            "obligation_id": "D3",
+            "relation_id": "2a2daaaaf5773ffab5091f477fa09a247043710610ff392a8403fe4b8a283dff",
+            "source_class": "support-input-derived",
+            "wire_field": "verificationCommand"
+          },
+          {
+            "kind": "immutable_initializer_binding",
+            "obligation_id": "D3",
+            "relation_id": "137c9d24ca02f93cf71b65c9bba306ea64e0e213501db72ccc68587466d34e7f",
+            "source_class": "support-input-derived"
+          },
+          {
+            "command_path": "/api/v1/commands",
+            "kind": "command_json_http_record_transport",
+            "method": "POST",
+            "model_record_id": "e5d6e4d3d9bd1ae4ef2331737fb1a7e58a9c218bcd65abf80f1c05441d4b7b51",
+            "obligation_id": "D3",
+            "relation_id": "4c9ef7134a179f58914a5290ed5a120446391e569db80171fe9a6bce6cdc13ab",
+            "source_class": "support-input-derived"
+          },
+          {
+            "kind": "http_wire_version_rejection_guard",
+            "obligation_id": "D3",
+            "relation_id": "57d352263bd161b1a0530e3a4ea957e2e741a877863d41d662f8aae452f8dcb2",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "server_json_body_to_dispatcher",
+            "message_path": "/api/v1/commands",
+            "obligation_id": "D3",
+            "relation_id": "7c6f9014472319686dea62dfb8306b80e233318a889091d687881d89eb6a612c",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "command_family_mapping",
+            "obligation_id": "D3",
+            "relation_id": "48c4efa2ff0183446ef4e212a4ec7d8f927e3310d92552da5e3167de3a760506",
+            "source_class": "source-derived",
+            "typed_request_variant": "DeliveryUpdateSpecCommand"
+          },
+          {
+            "kind": "typed_application_family_dispatch",
+            "obligation_id": "D3",
+            "relation_id": "9de41baa7ee3e51b2dbeedb3b74064a8e4b1bfdfc3b6c0c84573cca712b4e3ed",
+            "source_class": "source-derived",
+            "typed_request_variant": "DeliveryUpdateSpecCommand"
+          },
+          {
+            "kind": "typed_command_update_dispatch",
+            "obligation_id": "D3",
+            "relation_id": "5686b3a64747909a310747ed41c7466780d6bd934e8a4c9abb4e2a4befe842d1",
+            "source_class": "source-derived",
+            "typed_request_variant": "DeliveryUpdateSpecCommand"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D4",
+            "relation_id": "3723ac4d65cada652c755bf5db61317a3c9ecb38f15ca5e7e0148d115b16f1a7",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D4",
+            "relation_id": "ca658d2f98cbbc8bc0588756b2b0d8f2499e8c5401195000d0c442ea67734ebc",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D4",
+            "relation_id": "5e7f04da6b46835bd785a9b09184c54df1ee781899dc611bf06307c424e4eda1",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D4",
+            "relation_id": "145766203edee25fba429dce9a66ed1f50f958eacc3e4e54794ccbe41cf3c6d3",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D4",
+            "relation_id": "18dd1de32a1857a0c38135860b89b018af2bc6a61652bd19f8120733d8b09d88",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D4",
+            "relation_id": "873becac4c2402ed66087d8f3d3e7acd5c9f386800923c3c2ec7e11665f8f542",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D4",
+            "relation_id": "068108760486c3f735f7eff207f3635d1002ed48518a8323877b93d13db58085",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D4",
+            "relation_id": "79db26f17c6ed8b1486dc995dfdfa6ed8439ce510e8a0b13c3ca6d55ef87b7aa",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "typed_authority_version_guard",
+            "obligation_id": "D4",
+            "relation_id": "52f6ef1a7205039b7567cc154dc92d19847da74379e59cbc88b2eeb6e546c013",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "concrete_authority_port_installation",
+            "obligation_id": "D4",
+            "relation_id": "24ba18baca0a2936ea44337ef1b1300f8b677d52fe33657e52d45ca6ce3ccd01",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "typed_update_payload_to_authority_spec",
+            "obligation_id": "D4",
+            "payload_type": "DeliveryUpdateSpecPayload",
+            "relation_id": "95228f30ef96a5367273d3e2e30abe552ac610c9241b6821206a46f2584db053",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "device_nonempty_option_rejection_guard",
+            "obligation_id": "D4",
+            "relation_id": "0606c697ce6fff4d4acb74ccca08b6275b83d2e75d6d386315835f9598fd2e30",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "update_mapped_command_to_authority",
+            "obligation_id": "D4",
+            "relation_id": "ca1882b4d32c6438f84e0178b1b702ad2cdc85e8638533d3a01e3677baa1703d",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D5",
+            "relation_id": "cc2400327d562ad469c87211d93029f950e28e2c434bee1a8357420b4104abc4",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "role_locator",
+            "obligation_id": "D5",
+            "relation_id": "768b0d6dafff7e26b923e9def25936c2c79f0cd829c0205344cc3b9a0153b733",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "nondevice_repository_command_fallback",
+            "obligation_id": "D5",
+            "relation_id": "f983078d1d90f50b1797209703540d7ff65c25b4cfea5e0f1a6e84e6426b72e6",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "device_target_environment_and_authorization",
+            "obligation_id": "D5",
+            "relation_id": "9c0621593cdc5bb78f2afa08a9f820b3bbe5acf880d798422c2b7551cd331301",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "chat_explicit_verification_command",
+            "obligation_id": "D5",
+            "relation_id": "c2e1f014184230a5bb6cf7f49e4eb28236e2741effb6c7fbfb65e1568feb05fa",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "chat_explicit_verification_command",
+            "obligation_id": "D5",
+            "relation_id": "8a2c54aa495dd5dac580c2db9db50e9b52f517025a515a0e732a934c6e373b98",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "criterion_text_not_top_level_command",
+            "obligation_id": "D5",
+            "relation_id": "1e1dc4c8a0b92bc00a60411f62a42bb2f88da4a8d6efe6b73e06e1c410e72d14",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "existing_criterion_verification_display",
+            "obligation_id": "D5",
+            "relation_id": "59954b888276c505e3078b6870beed65a3ddc0489cebd6e5561d45a47c24ae92",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "authorized_scope_required",
+            "obligation_id": "D5",
+            "relation_id": "66dd35f6836529520d0d10ae6e914211d2d7cf5606643cd1b00887df7fa76a31",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "existing_exact_receipt_replays_before_authority",
+            "obligation_id": "D5",
+            "relation_id": "4326ae1aad5595be3eb817071cf8dd0a8b83b99558cf46add27914cdf4417efc",
+            "source_class": "source-derived"
+          },
+          {
+            "kind": "completed_command_confirmation_required",
+            "obligation_id": "D5",
+            "relation_id": "f78bd4ccac6a98942a5c1884442a3a684001c5aa4b0f29eacd1aad2eb268be8d",
+            "source_class": "source-derived"
+          }
+        ],
+        "scope_boundaries": [
+          "No target code, tests, build, generated module or macro is executed.",
+          "Protocol/message/dependency records do not create or upgrade snapshot CALLS edges.",
+          "A successful ordinary-model message and an active Device branch are conditional, not observed running facts.",
+          "Role configuration does not establish actual injection or dependency identity."
+        ],
+        "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+        "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2"
+      },
+      "source_reference_issues": [],
+      "pointer_verification_is_not_runtime_or_full_architecture_proof": true
+    }
+  ],
+  "target_executed": false,
+  "database_read": false,
+  "analyzer_run": false
+}

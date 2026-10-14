@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/cocoindex-io/cocoindex",
+  "release": "v1.0.25",
+  "commit": "17c84f1a0f9bc5b0b4e1d8ebabb28bde79c4afa3",
+  "pypi": "cocoindex==1.0.25",
+  "license": "Apache-2.0",
+  "wheel": {
+    "filename": "cocoindex-1.0.25-cp311-abi3-manylinux_2_28_x86_64.whl",
+    "pypi_sha256": "151e5db4a4b5150c3d84649629d9a43731c3d003a17da5f22f47b08fe4f496d6"
+  },
+  "integration": "Official persistent memo engine, @coco.fn(memo=True) in App/Environment. No vendored reimplementation, no target module loading.",
+  "scope": "Language bundle invalidation and result memoization; full global detection and atomic CallScope snapshot publication.",
+  "installed_source_sha256": {
+    "_version.py": "711383bcb8e740df009311290d060eda4ba842344ea4de3246c6a9fff2d23d06",
+    "_internal/app.py": "0fb56b521f2dca97ae7d6e8fb923582f3480b822b0096d628af78dce53b35acf",
+    "_internal/function.py": "123463a5927fd286ca714bf6a89a0a663894d7de4187b6bc2e44acc6d3e6b3cd",
+    "_internal/environment.py": "dde2a6a30fd19e5b15568acb4049c87e5e44126868bb27c0140a1232503e70e7",
+    "_internal/setting.py": "f863fbc489a4709b513fb3ca66e3c3dc32b973839111912a4ca83180d3c4a70d"
+  }
+}

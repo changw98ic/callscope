@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "callscope"
+version = "0.14.0"
+description = "Versioned static call-structure analysis with source evidence"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+languages = ["tree-sitter==0.25.2", "tree-sitter-typescript==0.23.2", "tree-sitter-rust==0.24.0"]
+maintenance = ["cocoindex==1.0.25"]
+
+[project.scripts]
+callscope = "callscope.cli:main"
+
+[tool.setuptools]
+packages = ["callscope", "callscope._vendor", "callscope._vendor.axon"]
+include-package-data = true
+
+[tool.setuptools.package-data]
+"callscope._vendor.axon" = ["LICENSE.txt", "UPSTREAM.json", "pyproject.upstream.toml"]
+"callscope" = ["third_party/*.txt", "third_party/*.json", "third_party/*.md"]
+
+[tool.setuptools.data-files]
+"share/callscope/web" = ["web/index.html", "web/app.js", "web/styles.css"]
+

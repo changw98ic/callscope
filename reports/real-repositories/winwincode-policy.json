@@ -1,0 +1,153 @@
+{
+  "schema_version": 1,
+  "project": { "name": "WinWinCode / 项目源码静态调用核对" },
+  "analysis": {
+    "languages": ["python", "typescript", "rust"],
+    "source_roots": ["."],
+    "exclude": [
+      ".git", ".beads", ".agents", ".codex", ".callscope", ".analysis-tools",
+      ".venv", "venv", "__pycache__", "node_modules", "target", "dist", "build", "coverage",
+      "third_party", "upstream", "vendor", "generated", "tests", "test", "__tests__", "examples", "scripts",
+      "crates/winwincode-test-assets", "**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "**/*.spec.tsx",
+      "**/*.generated.ts", "**/generated.rs", "**/*_tests.rs", "**/test_support.rs", "**/build.rs"
+    ],
+    "max_file_bytes": 4194304,
+    "module_aliases": {
+      "@winwincode/browser-core/query-cache": "packages/browser-core/src/query-cache.ts",
+      "@winwincode/browser-core/scope-context": "packages/browser-core/src/scope-context.ts",
+      "@winwincode/browser-ui": "packages/browser-ui/src/index.ts",
+      "@winwincode/control-plane-client": "packages/control-plane-client/src/index.ts",
+      "@winwincode/contracts": "packages/contracts/src/index.ts",
+      "@winwincode/contracts/browser-control": "packages/contracts/src/browser-control.ts",
+      "@winwincode/strongflow": "packages/strongflow/src/index.ts",
+      "@winwincode/client": "apps/client/src/index.ts"
+    },
+    "rust_crates": {
+      "winwincode_kernel": "crates/kernel",
+      "winwincode_kernel_helper": "crates/helper",
+      "winwincode_api": "crates/winwincode-api",
+      "winwincode_audit": "crates/winwincode-audit",
+      "winwincode_cli": "crates/winwincode-cli",
+      "winwincode_client_port": "crates/winwincode-client-port",
+      "winwincode_delivery": "crates/winwincode-delivery",
+      "winwincode_device_client": "crates/winwincode-device-client",
+      "winwincode_control_plane": "crates/winwincode-control-plane",
+      "winwincode_codex": "crates/winwincode-codex",
+      "winwincode_data_export": "crates/winwincode-data-export",
+      "winwincode_domain": "crates/winwincode-domain",
+      "winwincode_execution_port": "crates/winwincode-execution-port",
+      "winwincode_evidence_export": "crates/winwincode-evidence-export",
+      "winwincode_fusion": "crates/winwincode-fusion",
+      "winwincode_connector_github": "crates/winwincode-connector-github",
+      "winwincode_connector_jira": "crates/winwincode-connector-jira",
+      "winwincode_connector_linear": "crates/winwincode-connector-linear",
+      "winwincode_connector_slack": "crates/winwincode-connector-slack",
+      "winwincode_connector_teams": "crates/winwincode-connector-teams",
+      "winwincode_connector_webhook": "crates/winwincode-connector-webhook",
+      "winwincode_integration_core": "crates/winwincode-integration-core",
+      "winwincode_integration_sqlite": "crates/winwincode-integration-sqlite",
+      "winwincode_local": "crates/winwincode-local",
+      "winwincode_observability_core": "crates/winwincode-observability-core",
+      "winwincode_observability_sqlite": "crates/winwincode-observability-sqlite",
+      "winwincode_s3_artifact_adapter": "crates/winwincode-s3-artifact-adapter",
+      "winwincode_provider": "crates/winwincode-provider",
+      "winwincode_publication": "crates/winwincode-publication",
+      "winwincode_repository_context": "crates/winwincode-repository-context",
+      "winwincode_server": "crates/winwincode-server",
+      "winwincode_session": "crates/winwincode-session",
+      "winwincode_storage": "crates/winwincode-storage",
+      "winwincode_test_assets": "crates/winwincode-test-assets",
+      "winwincode_worker": "crates/winwincode-worker"
+    }
+  },
+  "layers": {},
+  "entrypoints": [],
+  "rules": [
+    {
+      "id": "baseline-wwc-ts-scope-selection",
+      "kind": "required_call",
+      "from": "ts:packages/browser-core/src/scope-context#resolveScopeContext",
+      "to": "ts:packages/browser-core/src/scope-context#scopeSelectionFromHash",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：scope-context.ts:222 明确直接调用 scopeSelectionFromHash；未重现时先审查工具解析，不据此判定 WinWinCode 缺陷。"
+    },
+    {
+      "id": "baseline-wwc-ts-surface-hash",
+      "kind": "required_call",
+      "from": "ts:packages/browser-core/src/scope-context#surfaceHash",
+      "to": "ts:packages/browser-core/src/scope-context#scopeHash",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：scope-context.ts:272 直接调用 scopeHash，核对同文件符号绑定。"
+    },
+    {
+      "id": "baseline-wwc-ts-auth-format",
+      "kind": "required_call",
+      "from": "ts:apps/client/src/auth-page#statusText",
+      "to": "ts:apps/client/src/format-instant#formatInstant",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：auth-page.ts:3 相对导入 format-instant.js，35 行显式调用，核对 ESM .js 到已存在 .ts 源文件映射。"
+    },
+    {
+      "id": "baseline-wwc-ts-workspace-path",
+      "kind": "required_path",
+      "from": "ts:apps/client/src/application#mountWinWinCodeClient.diagnosticScope",
+      "to": "ts:packages/browser-core/src/scope-context#scopeSelectionFromHash",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：application.ts:359 经工作区别名调用 resolveScopeContext，后者在 scope-context.ts:222 调用 scopeSelectionFromHash；仅核对静态连接，不证明运行分支。"
+    },
+    {
+      "id": "baseline-wwc-ts-nested-import",
+      "kind": "required_call",
+      "from": "ts:packages/browser-ui/src/status-badge#mountStatusBadge.update",
+      "to": "ts:packages/browser-ui/src/mounted-view#assertMounted",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：status-badge.ts:47 的词法嵌套 update 函数调用第3行导入的 assertMounted。"
+    },
+    {
+      "id": "baseline-wwc-rust-canonical-id",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-domain/src/lib#is_canonical_delivery_id",
+      "to": "rust:crates/winwincode-domain/src/lib#is_canonical_prefixed_id",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：domain/src/lib.rs:26 直接调用同文件 is_canonical_prefixed_id。"
+    },
+    {
+      "id": "baseline-wwc-rust-local-function",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-device-client/src/connect_code#generate_connect_code",
+      "to": "rust:crates/winwincode-device-client/src/connect_code#random_digits",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：connect_code.rs:192 显式调用 random_digits；不验证随机数行为。"
+    },
+    {
+      "id": "baseline-wwc-rust-module-use",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-device-client/src/connect_code#publish_connect_code",
+      "to": "rust:crates/winwincode-device-client/src/identity#generate_prefixed_id",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：connect_code.rs:35 用 crate::identity 导入，292 行调用 generate_prefixed_id，核对跨模块 use 绑定。"
+    },
+    {
+      "id": "baseline-wwc-rust-crate-root",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-device-client/src/connect_code#rfc3339",
+      "to": "rust:crates/winwincode-device-client/src/lib#canonical_rfc3339",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：connect_code.rs:485 以 crate::canonical_rfc3339 调用 lib.rs:104 的 crate 根函数。"
+    },
+    {
+      "id": "baseline-wwc-rust-binary-library",
+      "kind": "required_call",
+      "from": "rust:crates/winwincode-cli/src/main#main",
+      "to": "rust:crates/winwincode-cli/src/launcher#default_state_root",
+      "severity": "info",
+      "description": "源码事实核对项，非项目规范：CLI main.rs:1/4 从 winwincode_cli 导入调用 default_state_root；lib.rs 重导出 launcher 模块函数，不启动此入口。"
+    }
+  ],
+  "assessment_context": {
+    "kind": "source_relationship_baseline",
+    "project_policy": false,
+    "source_root": "/workspace/winwincode",
+    "purpose": "核对 CallScope 能否重现当前源码中可人工定位的调用关系，不用于断言目标仓库业务或功能缺陷"
+  }
+}

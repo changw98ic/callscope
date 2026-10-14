@@ -1,0 +1,22 @@
+{
+  "development_query": true,
+  "not_a_formal_v14_finding": true,
+  "version": "captured-conditional-lineage-publication-1",
+  "module_sha256_before": "7924d41a905f94663ca0423c179d25cf96b824b64735205dcdd9522273e06631",
+  "module_sha256_after": "7924d41a905f94663ca0423c179d25cf96b824b64735205dcdd9522273e06631",
+  "module_bytes_stable": true,
+  "saved_v13_snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+  "saved_source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+  "saved_policy_hash": "0fff976c5bcee4485b553448ac80df4298b47a8c4656aaab6062324d4e9bbdfc",
+  "new_rules_not_in_old_saved_policy": true,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "original_bytes": 396877971,
+  "original_sha256": "f88f7633506a82dcb41bfa7cc5773706ec0e9548609f4e8bee6afa8a092a8923",
+  "compressed_file": "state-lineage-source-query.initial.json.gz",
+  "compressed_sha256": "b9f58a8fe943963a475839d988bb88e12029e19b1709c8fdbced381bae789b3a",
+  "compressed_bytes": 20446917,
+  "reason": "Initial development tree repeated complete guards and source facts; retained compressed before flat ID-reference output refinement.",
+  "actual_query_log": "state-lineage-query.log"
+}

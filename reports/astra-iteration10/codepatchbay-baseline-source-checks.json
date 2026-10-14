@@ -1,0 +1,739 @@
+{
+  "repository": "codepatchbay",
+  "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+  "source_checks": [
+    {
+      "path": "cli/commands/fix.ts",
+      "expected_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+      "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "cli/commands/pipeline.ts",
+      "expected_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+      "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "cli/cpb.ts",
+      "expected_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+      "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "core/contracts/idempotency.ts",
+      "expected_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+      "source_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "core/engine/run-job-checklist-dag.ts",
+      "expected_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+      "source_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "core/engine/run-job-execute-dag.ts",
+      "expected_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+      "source_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "core/engine/run-job.ts",
+      "expected_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+      "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "core/workflow/probe-runner.ts",
+      "expected_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+      "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "runtime/worker/assignment-finalizer.ts",
+      "expected_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+      "source_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "runtime/worker/managed-worker.ts",
+      "expected_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+      "source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/orchestrator/failure-router.ts",
+      "expected_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+      "source_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/orchestrator/hub-orchestrator.ts",
+      "expected_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+      "source_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/orchestrator/worker-supervisor.ts",
+      "expected_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+      "source_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/services/engine-runner.ts",
+      "expected_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+      "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/services/event/event-materializer.ts",
+      "expected_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+      "source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/services/event/event-store.ts",
+      "expected_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+      "source_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/services/hub/hub-queue.ts",
+      "expected_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+      "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/services/job/job-store.ts",
+      "expected_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+      "source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "server/services/review/review-dispatch.ts",
+      "expected_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+      "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    }
+  ],
+  "observations": [
+    {
+      "id": "cpb.engine.checklist-materialization-call",
+      "source_checks": [
+        {
+          "path": "core/engine/run-job-checklist-dag.ts",
+          "expected_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+          "source_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "core/engine/run-job.ts",
+          "expected_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.engine.service-to-run-call",
+      "source_checks": [
+        {
+          "path": "core/engine/run-job.ts",
+          "expected_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/engine-runner.ts",
+          "expected_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.engine.service-to-dag-path",
+      "source_checks": [
+        {
+          "path": "core/engine/run-job-execute-dag.ts",
+          "expected_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+          "source_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "core/engine/run-job.ts",
+          "expected_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/engine-runner.ts",
+          "expected_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.probe.trusted-policy-call",
+      "source_checks": [
+        {
+          "path": "core/workflow/probe-runner.ts",
+          "expected_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.cli.dynamic-command-boundary",
+      "source_checks": [
+        {
+          "path": "cli/cpb.ts",
+          "expected_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.engine.injected-append-boundary",
+      "source_checks": [
+        {
+          "path": "core/engine/run-job.ts",
+          "expected_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/engine-runner.ts",
+          "expected_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.engine.production-port-composition",
+      "source_checks": [
+        {
+          "path": "server/services/engine-runner.ts",
+          "expected_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.fix.readiness-before-enqueue",
+      "source_checks": [
+        {
+          "path": "cli/commands/fix.ts",
+          "expected_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.dispatch.queue-inbox-process-chain",
+      "source_checks": [
+        {
+          "path": "runtime/worker/managed-worker.ts",
+          "expected_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+          "source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/orchestrator/hub-orchestrator.ts",
+          "expected_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+          "source_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/orchestrator/worker-supervisor.ts",
+          "expected_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+          "source_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.finalization.completed-is-not-published",
+      "source_checks": [
+        {
+          "path": "runtime/worker/assignment-finalizer.ts",
+          "expected_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+          "source_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "runtime/worker/managed-worker.ts",
+          "expected_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+          "source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.gap.pipeline-retry-budget-disconnected",
+      "source_checks": [
+        {
+          "path": "cli/commands/pipeline.ts",
+          "expected_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+          "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "runtime/worker/managed-worker.ts",
+          "expected_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+          "source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/orchestrator/failure-router.ts",
+          "expected_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+          "source_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.gap.superseded-terminal-disagreement",
+      "source_checks": [
+        {
+          "path": "server/services/event/event-materializer.ts",
+          "expected_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+          "source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/event/event-store.ts",
+          "expected_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+          "source_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/job/job-store.ts",
+          "expected_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+          "source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/review/review-dispatch.ts",
+          "expected_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+          "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "cpb.gap.active-key-dedupe-window",
+      "source_checks": [
+        {
+          "path": "cli/commands/fix.ts",
+          "expected_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "core/contracts/idempotency.ts",
+          "expected_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+          "source_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/orchestrator/hub-orchestrator.ts",
+          "expected_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+          "source_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "server/services/hub/hub-queue.ts",
+          "expected_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+          "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    }
+  ],
+  "target_identity": {
+    "root": "/workspace/codepatchbay",
+    "frozen_commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+    "actual_commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+    "commit_matches": true,
+    "git_metadata_read_only": true,
+    "git_read_error": null,
+    "working_tree_clean_claimed": false,
+    "live_referenced_source_checks": [
+      {
+        "path": "cli/commands/fix.ts",
+        "expected_sha256": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+        "actual_sha256": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+        "status": "matched"
+      },
+      {
+        "path": "cli/commands/pipeline.ts",
+        "expected_sha256": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+        "actual_sha256": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+        "status": "matched"
+      },
+      {
+        "path": "cli/cpb.ts",
+        "expected_sha256": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+        "actual_sha256": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+        "status": "matched"
+      },
+      {
+        "path": "core/contracts/idempotency.ts",
+        "expected_sha256": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+        "actual_sha256": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+        "status": "matched"
+      },
+      {
+        "path": "core/engine/run-job-checklist-dag.ts",
+        "expected_sha256": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+        "actual_sha256": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+        "status": "matched"
+      },
+      {
+        "path": "core/engine/run-job-execute-dag.ts",
+        "expected_sha256": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+        "actual_sha256": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+        "status": "matched"
+      },
+      {
+        "path": "core/engine/run-job.ts",
+        "expected_sha256": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+        "actual_sha256": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+        "status": "matched"
+      },
+      {
+        "path": "core/workflow/probe-runner.ts",
+        "expected_sha256": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+        "actual_sha256": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+        "status": "matched"
+      },
+      {
+        "path": "runtime/worker/assignment-finalizer.ts",
+        "expected_sha256": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+        "actual_sha256": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+        "status": "matched"
+      },
+      {
+        "path": "runtime/worker/managed-worker.ts",
+        "expected_sha256": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+        "actual_sha256": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+        "status": "matched"
+      },
+      {
+        "path": "server/orchestrator/failure-router.ts",
+        "expected_sha256": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+        "actual_sha256": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+        "status": "matched"
+      },
+      {
+        "path": "server/orchestrator/hub-orchestrator.ts",
+        "expected_sha256": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+        "actual_sha256": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+        "status": "matched"
+      },
+      {
+        "path": "server/orchestrator/worker-supervisor.ts",
+        "expected_sha256": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+        "actual_sha256": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+        "status": "matched"
+      },
+      {
+        "path": "server/services/engine-runner.ts",
+        "expected_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "actual_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "status": "matched"
+      },
+      {
+        "path": "server/services/event/event-materializer.ts",
+        "expected_sha256": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+        "actual_sha256": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+        "status": "matched"
+      },
+      {
+        "path": "server/services/event/event-store.ts",
+        "expected_sha256": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+        "actual_sha256": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+        "status": "matched"
+      },
+      {
+        "path": "server/services/hub/hub-queue.ts",
+        "expected_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+        "actual_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+        "status": "matched"
+      },
+      {
+        "path": "server/services/job/job-store.ts",
+        "expected_sha256": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+        "actual_sha256": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+        "status": "matched"
+      },
+      {
+        "path": "server/services/review/review-dispatch.ts",
+        "expected_sha256": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+        "actual_sha256": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+        "status": "matched"
+      }
+    ],
+    "live_referenced_source_hashes_match": true,
+    "saved_referenced_source_checks": [
+      {
+        "path": "cli/commands/fix.ts",
+        "expected_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+        "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "cli/commands/pipeline.ts",
+        "expected_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+        "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "cli/cpb.ts",
+        "expected_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+        "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "core/contracts/idempotency.ts",
+        "expected_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+        "source_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "core/engine/run-job-checklist-dag.ts",
+        "expected_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+        "source_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "core/engine/run-job-execute-dag.ts",
+        "expected_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+        "source_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "core/engine/run-job.ts",
+        "expected_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+        "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "core/workflow/probe-runner.ts",
+        "expected_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+        "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "runtime/worker/assignment-finalizer.ts",
+        "expected_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+        "source_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "runtime/worker/managed-worker.ts",
+        "expected_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+        "source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/orchestrator/failure-router.ts",
+        "expected_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+        "source_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/orchestrator/hub-orchestrator.ts",
+        "expected_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+        "source_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/orchestrator/worker-supervisor.ts",
+        "expected_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+        "source_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/services/engine-runner.ts",
+        "expected_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/services/event/event-materializer.ts",
+        "expected_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+        "source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/services/event/event-store.ts",
+        "expected_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+        "source_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/services/hub/hub-queue.ts",
+        "expected_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/services/job/job-store.ts",
+        "expected_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+        "source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "server/services/review/review-dispatch.ts",
+        "expected_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+        "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      }
+    ],
+    "saved_referenced_source_hashes_match": true
+  },
+  "interpretation": "All 26 frozen source observations remain in the denominator. Evidence-only and intentional unknown items are preserved. This comparison is not precision, recall, functional coverage, runtime success, a business judgment, or approval."
+}

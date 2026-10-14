@@ -1,0 +1,219 @@
+{
+  "development_policy_scope_only": true,
+  "policy_schema": "static-report-claim-policy-v2-documents",
+  "repositories": {
+    "codepatchbay": {
+      "previous_report_rule_count": 13,
+      "current_report_rule_count": 15,
+      "new_rules": [
+        {
+          "id": "cpb-review-fixed-state-lineage",
+          "type": "conditional_state_lineage",
+          "sources": [
+            {
+              "role": "completion",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "completeRemediation"
+            },
+            {
+              "role": "callback_runner",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "withHeldWorkflowLockRelease"
+            },
+            {
+              "role": "status_parser",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "parseRemediationStatus"
+            },
+            {
+              "role": "superseder",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "markJobSuperseded"
+            },
+            {
+              "role": "event_writer",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "recordRemediationEvent"
+            },
+            {
+              "role": "lineage_builder",
+              "file": "server/services/review/review-dispatch.ts",
+              "symbol": "createRemediationLineageTask"
+            },
+            {
+              "role": "event_authority",
+              "file": "server/services/event/event-store.ts",
+              "symbol": "appendEvent"
+            },
+            {
+              "role": "queue_authority",
+              "file": "server/services/hub/hub-queue.ts",
+              "symbol": "enqueue"
+            }
+          ],
+          "models": [
+            "captured-normal-statement-control-v1",
+            "finite-conditional-event-lineage-publication-source-v1"
+          ]
+        },
+        {
+          "id": "cpb-finalizer-conditional-publication",
+          "type": "conditional_publication_boundary",
+          "sources": [
+            {
+              "role": "finalizer",
+              "file": "server/services/auto-finalizer.ts",
+              "symbol": "finalizeSuccessfulQueueEntry"
+            },
+            {
+              "role": "pr_boundary",
+              "file": "server/services/github/github-issues.ts",
+              "symbol": "openDraftPullRequest"
+            },
+            {
+              "role": "push_boundary",
+              "file": "server/services/github/github-issues.ts",
+              "symbol": "pushGithubCommitWithControlledTransport"
+            },
+            {
+              "role": "git_executor",
+              "file": "server/services/github/github-issues.ts",
+              "symbol": "runGit"
+            },
+            {
+              "role": "local_git_executor",
+              "file": "server/services/auto-finalizer.ts",
+              "symbol": "runGit"
+            },
+            {
+              "role": "review_bundle",
+              "file": "server/services/auto-finalizer.ts",
+              "symbol": "finalizeAsReviewBundle"
+            }
+          ],
+          "models": [
+            "captured-normal-statement-control-v1",
+            "finite-conditional-event-lineage-publication-source-v1"
+          ]
+        }
+      ],
+      "extended_source_selection_rules": [
+        {
+          "rule_id": "cpb-report-trusted-probe-command-source",
+          "unchanged_prior_locators": 7,
+          "added_source_locators": [
+            {
+              "role": "scope_counter",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "scopeMatches"
+            },
+            {
+              "role": "scope_predicate",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "scopePathMatches"
+            },
+            {
+              "role": "scope_path_normalization",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "posixify"
+            },
+            {
+              "role": "scope_text_normalization",
+              "file": "core/workflow/probe-runner.ts",
+              "symbol": "text"
+            }
+          ]
+        }
+      ],
+      "other_policy_sections_identical_to_v13": true
+    },
+    "winwincode": {
+      "previous_report_rule_count": 18,
+      "current_report_rule_count": 19,
+      "new_rules": [
+        {
+          "id": "wwc-document-device-provider-deployment-scope",
+          "type": "document_deployment_consistency",
+          "sources": [
+            {
+              "role": "server_boundary",
+              "file": "crates/winwincode-server/src/main.rs",
+              "symbol": "<DeviceModelBoundary as winwincode_control_plane::DurableExecutionPortDelegate>.accept"
+            },
+            {
+              "role": "worker_bootstrap",
+              "file": "crates/winwincode-worker/src/main.rs",
+              "symbol": "run_worker"
+            },
+            {
+              "role": "worker_installation",
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "symbol": "WorkerMain.with_device_providers"
+            },
+            {
+              "role": "worker_route",
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "symbol": "WorkerMain.send_execution_message"
+            },
+            {
+              "role": "device_send",
+              "file": "crates/winwincode-worker/src/device_model.rs",
+              "symbol": "DeviceModels.send"
+            },
+            {
+              "role": "store_open",
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "symbol": "DeviceProviderStore.open"
+            },
+            {
+              "role": "model_execute",
+              "file": "crates/winwincode-provider/src/device_model.rs",
+              "symbol": "DeviceProviderStore.execute_model"
+            },
+            {
+              "role": "model_invoke",
+              "file": "crates/winwincode-provider/src/device_model.rs",
+              "symbol": "DeviceProviderStore.invoke_model"
+            },
+            {
+              "role": "secret_resolver",
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "symbol": "DeviceProviderStore.resolve"
+            },
+            {
+              "role": "secret_constructor",
+              "file": "crates/winwincode-provider/src/types.rs",
+              "symbol": "ResolvedSecret.from_bytes"
+            },
+            {
+              "role": "provider_factory",
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "symbol": "adapter"
+            },
+            {
+              "role": "provider_open",
+              "file": "crates/winwincode-provider/src/provider_https_sse.rs",
+              "symbol": "<HttpsSseProviderAdapter as ProviderAdapterPort>.open"
+            }
+          ],
+          "models": [
+            "captured-normal-statement-control-v1",
+            "captured-document-deployment-qualified-source-v1"
+          ],
+          "documents": [
+            {
+              "role": "architecture",
+              "file": "docs/architecture.md"
+            }
+          ]
+        }
+      ],
+      "extended_source_selection_rules": [],
+      "other_policy_sections_identical_to_v13": true
+    }
+  },
+  "outcomes_preconfigured": false,
+  "original_report_used_as_analyzer_input": false,
+  "scope_change_is_not_same_policy_precision_comparison": true,
+  "formal_results_available": false
+}

@@ -1,0 +1,1957 @@
+{
+  "id": "e372ed1670979aaf53f52df905844647892e02d9a418f0eba5311f2a6c3e6ab1",
+  "project_id": "1dec368a20d2f5075901",
+  "project_name": "WinWinCode / 项目源码静态调用核对",
+  "root": "/workspace/winwincode",
+  "status": "partial",
+  "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+  "policy_hash": "4ebeb7caba9f4414b106e9fae1a5da33996ea19a107621e0b90d87b4956d91c0",
+  "analyzer_version": "static-multilang-5",
+  "detector_version": "call-rules-4-static-contracts",
+  "schema_version": "2",
+  "finding_count": 140179,
+  "stats": {
+    "ambiguous_calls": 62,
+    "ambiguous_symbols": 24,
+    "by_language": {
+      "python": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "rust": {
+        "ambiguous_calls": 57,
+        "dynamic_calls": 125414,
+        "edges": 160941,
+        "external_callback_boundaries": 7260,
+        "external_calls": 22701,
+        "files_failed": 6,
+        "files_parsed": 345,
+        "files_total": 351,
+        "nodes": 29471,
+        "resolved_calls": 11373,
+        "unresolved_calls": 1396
+      },
+      "typescript": {
+        "ambiguous_calls": 5,
+        "dynamic_calls": 4680,
+        "edges": 11042,
+        "external_callback_boundaries": 1299,
+        "external_calls": 1896,
+        "files_failed": 0,
+        "files_parsed": 120,
+        "files_total": 120,
+        "nodes": 2936,
+        "resolved_calls": 4426,
+        "unresolved_calls": 35
+      }
+    },
+    "call_resolution_incomplete": true,
+    "component_versions": {
+      "maintenance": {
+        "backend": "cocoindex",
+        "global_detection": "full",
+        "granularity": "language",
+        "protocol": 1,
+        "version": "1.0.25"
+      },
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "rust": {
+        "analyzer": "rust-tree-sitter-1.6-helpers",
+        "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+      },
+      "static_contracts": {
+        "analyzer": "static-contracts-1",
+        "policy_schema": "static-contract-policy-v1"
+      },
+      "support_input_capture": "support-input-capture-1",
+      "tool": {
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "graph_backend": "axon-graph-core-1",
+        "source_hash": "300f396835db0463d087ce5c830f55816233bb0e91b9220fe1ec01a2155273e0"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      }
+    },
+    "coverage_incomplete": true,
+    "dynamic_calls": 130094,
+    "edges": 171983,
+    "entrypoints_count": 0,
+    "excluded_paths": [
+      ".agents",
+      ".beads",
+      ".codex",
+      ".git",
+      "apps/client/scripts",
+      "apps/client/src/generated",
+      "crates/helper/build.rs",
+      "crates/winwincode-api/src/generated.rs",
+      "crates/winwincode-api/tests",
+      "crates/winwincode-audit/tests",
+      "crates/winwincode-cli/tests",
+      "crates/winwincode-codex/build.rs",
+      "crates/winwincode-connector-github/tests",
+      "crates/winwincode-connector-jira/tests",
+      "crates/winwincode-connector-linear/tests",
+      "crates/winwincode-connector-slack/tests",
+      "crates/winwincode-connector-teams/tests",
+      "crates/winwincode-connector-webhook/tests",
+      "crates/winwincode-control-plane/src/product_session_execution_application_tests.rs",
+      "crates/winwincode-control-plane/tests",
+      "crates/winwincode-data-export/tests",
+      "crates/winwincode-delivery/tests",
+      "crates/winwincode-device-client/tests",
+      "crates/winwincode-domain/src/generated.rs",
+      "crates/winwincode-evidence-export/tests",
+      "crates/winwincode-execution-port/src/generated.rs",
+      "crates/winwincode-execution-port/tests",
+      "crates/winwincode-fusion/tests",
+      "crates/winwincode-integration-core/tests",
+      "crates/winwincode-integration-sqlite/tests",
+      "crates/winwincode-local/tests",
+      "crates/winwincode-observability-core/tests",
+      "crates/winwincode-observability-sqlite/tests",
+      "crates/winwincode-provider/src/provider_anthropic_namespace_safety_tests.rs",
+      "crates/winwincode-provider/src/provider_anthropic_namespace_tests.rs",
+      "crates/winwincode-provider/tests",
+      "crates/winwincode-publication/src/test_support.rs",
+      "crates/winwincode-publication/tests",
+      "crates/winwincode-repository-context/tests",
+      "crates/winwincode-s3-artifact-adapter/tests",
+      "crates/winwincode-server/examples",
+      "crates/winwincode-server/tests",
+      "crates/winwincode-session/tests",
+      "crates/winwincode-storage/tests",
+      "crates/winwincode-test-assets",
+      "crates/winwincode-worker/tests",
+      "packages/browser-ui/scripts",
+      "packages/contracts/src/device-provider.generated.ts",
+      "schema/winwincode/v1/examples",
+      "scripts",
+      "tests",
+      "third_party",
+      "upstream"
+    ],
+    "external_callback_boundaries": 8559,
+    "external_calls": 24597,
+    "files_failed": 6,
+    "files_parsed": 465,
+    "files_total": 471,
+    "frontend_stats": {
+      "python": {},
+      "rust": {
+        "ambiguous_calls": 57,
+        "ambiguous_symbols": 24,
+        "analyzer_version": "rust-tree-sitter-1.6-helpers",
+        "call_resolution_incomplete": true,
+        "conditional_nodes": 1776,
+        "coverage_incomplete": true,
+        "dynamic_calls": 125414,
+        "edges": 160941,
+        "external_callback_boundaries": 29600,
+        "external_calls": 22701,
+        "files_failed": 6,
+        "files_parsed": 345,
+        "files_total": 351,
+        "helper_model_version": "rust-derive-helper-model-1",
+        "helper_models_accepted": 1,
+        "incomplete": true,
+        "language": "rust",
+        "limitations": [
+          "未运行Cargo/rustc/测试，未验证类型、可见性或依赖可用性",
+          "仅绑定非泛型具体Self到唯一固有方法；字段/泛型/trait目标/显式包装self保留未知",
+          "不展开宏或选择cfg配置；属性宏、Deref和闭包/Future激活保留未知",
+          "显式helper/标准接口模型仅在捕获名称环境与注册假设内绑定；生成体和实际标准库/toolchain未验证",
+          "不推断隐式Drop/Deref/运算符分派、回调或跨语言调用",
+          "模块解析仅使用配置crate根与已捕获源码；不猜测Cargo自定义target"
+        ],
+        "macro_definitions_not_expanded": 3,
+        "module_gaps": [
+          {
+            "available": [],
+            "candidate_files": [
+              "crates/winwincode-api/src/generated.rs",
+              "crates/winwincode-api/src/generated/mod.rs"
+            ],
+            "file": "crates/winwincode-api/src/lib.rs",
+            "line": 8,
+            "module": "generated"
+          },
+          {
+            "available": [],
+            "candidate_files": [
+              "crates/winwincode-control-plane/src/product_session_execution_application_tests.rs"
+            ],
+            "file": "crates/winwincode-control-plane/src/product_session_execution_application.rs",
+            "line": 2311,
+            "module": "tests"
+          },
+          {
+            "available": [],
+            "candidate_files": [
+              "crates/winwincode-domain/src/generated.rs",
+              "crates/winwincode-domain/src/generated/mod.rs"
+            ],
+            "file": "crates/winwincode-domain/src/lib.rs",
+            "line": 9,
+            "module": "generated"
+          },
+          {
+            "available": [],
+            "candidate_files": [
+              "crates/winwincode-execution-port/src/generated.rs",
+              "crates/winwincode-execution-port/src/generated/mod.rs"
+            ],
+            "file": "crates/winwincode-execution-port/src/lib.rs",
+            "line": 22,
+            "module": "generated"
+          },
+          {
+            "available": [],
+            "candidate_files": [
+              "crates/winwincode-provider/src/provider_anthropic_namespace_tests.rs"
+            ],
+            "file": "crates/winwincode-provider/src/provider_anthropic.rs",
+            "line": 2216,
+            "module": "provider_anthropic_namespace_tests"
+          },
+          {
+            "available": [],
+            "candidate_files": [
+              "crates/winwincode-provider/src/provider_anthropic_namespace_safety_tests.rs"
+            ],
+            "file": "crates/winwincode-provider/src/provider_anthropic.rs",
+            "line": 2220,
+            "module": "provider_anthropic_namespace_safety_tests"
+          },
+          {
+            "available": [],
+            "candidate_files": [
+              "crates/winwincode-publication/src/test_support.rs",
+              "crates/winwincode-publication/src/test_support/mod.rs"
+            ],
+            "file": "crates/winwincode-publication/src/lib.rs",
+            "line": 45,
+            "module": "test_support"
+          }
+        ],
+        "nodes": 29471,
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+        "resolution_model": "Rust source-body lexical bindings; no compiler or target execution",
+        "resolved_calls": 11373,
+        "standard_interface_models_applied": 2,
+        "unmapped_crate_files": [],
+        "unresolved_calls": 1396
+      },
+      "typescript": {
+        "ambiguous_calls": 5,
+        "ambiguous_symbols": 0,
+        "analyzer_version": "typescript-tree-sitter-call-2-projection-1",
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": false,
+        "dynamic_calls": 4680,
+        "edges": 11042,
+        "external_callback_boundaries": 1299,
+        "external_calls": 1896,
+        "files_failed": 0,
+        "files_parsed": 120,
+        "files_total": 120,
+        "incomplete": true,
+        "language": "typescript",
+        "limitations": [
+          "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+          "类型/接口不证明对象运行时目标",
+          "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+          "不证明分支、顺序、返回值、加载成功或业务结果"
+        ],
+        "nodes": 2936,
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;ts-syntax-projection-1",
+        "raw_parse_error_files": 6,
+        "resolved_calls": 4426,
+        "syntax_projected_files": 6,
+        "syntax_projection_edits_by_rule": {
+          "literal_nul_cst_surrogate": 4,
+          "qualified_import_type": 27
+        },
+        "syntax_projection_partial_files": 0,
+        "syntax_projection_version": "ts-syntax-projection-1",
+        "unresolved_calls": 35
+      }
+    },
+    "incomplete": true,
+    "languages_requested": [
+      "python",
+      "typescript",
+      "rust"
+    ],
+    "limitations": [
+      "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+      "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+      "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+      "快照是读取到的源码集合，不是工作区原子捕获"
+    ],
+    "nodes": 32407,
+    "resolution_model": "explicit static lexical bindings; no target execution",
+    "resolved_calls": 15799,
+    "rules_count": 10,
+    "scan_errors": [],
+    "source_roots": [
+      "."
+    ],
+    "static_contracts_count": 1,
+    "support_input_capture_version": "support-input-capture-1",
+    "support_inputs_count": 4,
+    "support_inputs_incomplete": false,
+    "supported_languages": [
+      "python",
+      "typescript",
+      "rust"
+    ],
+    "symlinks_skipped": [
+      "CLAUDE.md"
+    ],
+    "unresolved_calls": 1431,
+    "unsupported_files": []
+  },
+  "finding_counts": [
+    {
+      "type": "call_cycle",
+      "status": "open",
+      "count": 4
+    },
+    {
+      "type": "external_callback_boundary",
+      "status": "uncertain",
+      "count": 8509
+    },
+    {
+      "type": "recursive_call",
+      "status": "open",
+      "count": 10
+    },
+    {
+      "type": "static_contract_required_object_fields",
+      "status": "uncertain",
+      "count": 1
+    },
+    {
+      "type": "unresolved_call",
+      "status": "uncertain",
+      "count": 131655
+    }
+  ],
+  "rule_findings": [
+    {
+      "description": "只确认保存源码的对象字段构造。 必填条件由显式合同与守卫出处提供；生产者是否进入外部消费者分支尚未推导。",
+      "edge_ids": [],
+      "evidence": [
+        {
+          "details": {
+            "analysis_scope": {
+              "cross_language_branch_reachability": "not_inferred",
+              "literal_sets": "declaration_initializer_closed_string_members",
+              "objects": "all_syntax_direct_returns_excluding_nested_functions",
+              "runtime_proof": false,
+              "source_doc_is_label_only": true
+            },
+            "analyzer_version": "static-contracts-1",
+            "captured_source_inputs": [
+              {
+                "error": null,
+                "file": "apps/client/src/decision-clarification-view-model.ts",
+                "language": "typescript",
+                "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+                "status": "parsed"
+              },
+              {
+                "error": null,
+                "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+                "language": "rust",
+                "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+                "status": "parsed"
+              }
+            ],
+            "contract_assumptions": {
+              "conditions": [
+                "请求用于 delivery.update_spec，且进入 LocalDeliveryAuthority.specification。",
+                "source_product_session_id 能解析到有效的 Device WorkerLaunchGrant，device_target 返回 Some。",
+                "Device HEAD 与 baseRevision 一致，授权等其余前置条件也满足。",
+                "生产者进入跨语言 Device 消费分支的可达性由本规则作为外部假设保留，未自动推导。",
+                "字段存在不等同于 verificationCommand 非空、类型正确或完整消费者校验通过。"
+              ],
+              "counterexamples": [
+                "device_target 返回 None 的本地非 Device 分支通过仓库上下文 select_verification_command 选择方法，不能泛化为所有规格编辑失败。",
+                "ChatDeliveryCreator 的创建请求明确构造 verificationCommand，创建链完整不能作为需求编辑链已保留该字段的证明。"
+              ],
+              "guard": {
+                "branch": "then",
+                "enclosing_condition": "let Some(device) = device",
+                "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+                "node_type": "field_expression",
+                "role": "guard",
+                "symbol": "LocalDeliveryAuthority.specification",
+                "text": "spec.verification_command"
+              },
+              "kind": "conditional"
+            },
+            "contract_hash": "8543f89585c9e89e5ad118ea3eda9e008c1d92dda16d75c2e48509844228cc67",
+            "guard_and_counterexample_sources": [
+              {
+                "enclosing_conditions": [
+                  {
+                    "branch": "then",
+                    "location": {
+                      "column": 45,
+                      "column_unit": "utf8_bytes",
+                      "end_column": 70,
+                      "end_line": 610,
+                      "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+                      "grammar": "rust",
+                      "line": 610,
+                      "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+                      "source_excerpt": "let Some(device) = device",
+                      "source_excerpt_truncated": false,
+                      "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+                      "source_line": "        let (repository, verification) = if let Some(device) = device {",
+                      "span_hash": "793c6ecd3c7e95225c61d01f569918c27dfcc60a46ca477f54b8ee6ffaef6322"
+                    },
+                    "text": "let Some(device) = device"
+                  }
+                ],
+                "interpretation": "此处仅确认保存源码中存在该语法与条件，不证明生产者会进入这个分支。",
+                "location": {
+                  "column": 27,
+                  "column_unit": "utf8_bytes",
+                  "end_column": 38,
+                  "end_line": 617,
+                  "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+                  "grammar": "rust",
+                  "line": 616,
+                  "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+                  "source_excerpt": "spec\n                .verification_command",
+                  "source_excerpt_truncated": false,
+                  "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+                  "source_line": "            let command = spec",
+                  "span_hash": "37fbde80bb89b9129d093bdda40e3fffef5cecbb227db3a3ee1d0b893b8ea97d"
+                },
+                "node_type": "field_expression",
+                "role": "guard",
+                "symbol": "LocalDeliveryAuthority.specification"
+              },
+              {
+                "enclosing_conditions": [
+                  {
+                    "branch": "else",
+                    "location": {
+                      "column": 45,
+                      "column_unit": "utf8_bytes",
+                      "end_column": 70,
+                      "end_line": 610,
+                      "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+                      "grammar": "rust",
+                      "line": 610,
+                      "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+                      "source_excerpt": "let Some(device) = device",
+                      "source_excerpt_truncated": false,
+                      "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+                      "source_line": "        let (repository, verification) = if let Some(device) = device {",
+                      "span_hash": "793c6ecd3c7e95225c61d01f569918c27dfcc60a46ca477f54b8ee6ffaef6322"
+                    },
+                    "text": "let Some(device) = device"
+                  }
+                ],
+                "interpretation": "此处仅确认保存源码中存在该语法与条件，不证明生产者会进入这个分支。",
+                "location": {
+                  "column": 17,
+                  "column_unit": "utf8_bytes",
+                  "end_column": 54,
+                  "end_line": 641,
+                  "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+                  "grammar": "rust",
+                  "line": 641,
+                  "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+                  "source_excerpt": "select_verification_command(&context)",
+                  "source_excerpt_truncated": false,
+                  "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+                  "source_line": "                select_verification_command(&context)?,",
+                  "span_hash": "766f2c028f1c99e6dc968e2d0812b2f66e4f85c5cbb51ea277be8be97f7bcb4e"
+                },
+                "node_type": "call_expression",
+                "role": "counterexample",
+                "symbol": "LocalDeliveryAuthority.specification"
+              }
+            ],
+            "policy_hash": "4ebeb7caba9f4414b106e9fae1a5da33996ea19a107621e0b90d87b4956d91c0",
+            "provenance": {
+              "author_approved": false,
+              "authority": "independent_review",
+              "note": "WWC-02 独立源码观察。只自动确认封闭返回字面对象未构造指定字段；Device 条件、生产接入与非空需求由显式合同和消费者源码出处提供。",
+              "reviewer": "Astra",
+              "source_doc": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+            },
+            "snapshot_id": "e372ed1670979aaf53f52df905844647892e02d9a418f0eba5311f2a6c3e6ab1",
+            "snapshot_parser_version": "{\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"rust\":{\"analyzer\":\"rust-tree-sitter-1.6-helpers\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14\"},\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"300f396835db0463d087ce5c830f55816233bb0e91b9220fe1ec01a2155273e0\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+            "source_fact": {
+              "direct_return_count": 1,
+              "expected": {
+                "object_path": [
+                  "payload",
+                  "spec"
+                ],
+                "required_fields": [
+                  "verificationCommand"
+                ]
+              },
+              "interpretation": "全体语法层直接返回对象的字段名构造；不等同于已执行路径或非空字段值。",
+              "missing": [
+                {
+                  "fields": [
+                    "verificationCommand"
+                  ],
+                  "location": {
+                    "column": 3,
+                    "column_unit": "utf8_bytes",
+                    "end_column": 4,
+                    "end_line": 221,
+                    "file": "apps/client/src/decision-clarification-view-model.ts",
+                    "grammar": "typescript",
+                    "line": 195,
+                    "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                    "source_excerpt": "return {\n    schemaVersion: 'winwincode/v1',\n    command: 'delivery.update_spec',\n    actor,\n    scope,\n    requestId: input.requestId,\n    expectedRevision: input.expectedRevision,\n    payload: {\n      deliveryId: input.source.deliveryId,\n      spec: {\n        title: input.values.title.trim(),\n        goal: input.values.goal.trim(),\n        repositoryId: scope.repositoryId,\n        baseRevision: input.source.baseRevision,\n        scope: lines(input.values.scope),\n        outOfScope: lines(input.values.outOfScope),\n        constraints: lines(input.values.constraints),\n        sourceProductSessionId: input.source.productSessionId,\n        acceptanceCriteria: criteriaFrom(input.values.acceptanceCriteria).map(criterion => ({\n          id: criterion.id,\n          title: criterion.title.trim(),\n          required: criterion.required,\n        })),\n        publicationTarget: input.source.publicationTarget,\n      },\n    },\n  }",
+                    "source_excerpt_truncated": false,
+                    "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+                    "source_line": "  return {",
+                    "span_hash": "9e99749e28542d2a0b5eeb29bb59fe7c4ffde4eee84f644505f89959da3372bd"
+                  }
+                }
+              ],
+              "observed": [
+                {
+                  "closed": true,
+                  "fields": [
+                    "acceptanceCriteria",
+                    "baseRevision",
+                    "constraints",
+                    "goal",
+                    "outOfScope",
+                    "publicationTarget",
+                    "repositoryId",
+                    "scope",
+                    "sourceProductSessionId",
+                    "title"
+                  ]
+                }
+              ],
+              "returns": [
+                {
+                  "closed": true,
+                  "enclosing_conditions": [],
+                  "fields": [
+                    "acceptanceCriteria",
+                    "baseRevision",
+                    "constraints",
+                    "goal",
+                    "outOfScope",
+                    "publicationTarget",
+                    "repositoryId",
+                    "scope",
+                    "sourceProductSessionId",
+                    "title"
+                  ],
+                  "file": "apps/client/src/decision-clarification-view-model.ts",
+                  "interpretation": "仅检查对象源码构造字段名；字段值非空、类型与完整消费者校验不在此规则的证明范围。",
+                  "location": {
+                    "column": 13,
+                    "column_unit": "utf8_bytes",
+                    "end_column": 8,
+                    "end_line": 219,
+                    "file": "apps/client/src/decision-clarification-view-model.ts",
+                    "grammar": "typescript",
+                    "line": 204,
+                    "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                    "source_excerpt": "{\n        title: input.values.title.trim(),\n        goal: input.values.goal.trim(),\n        repositoryId: scope.repositoryId,\n        baseRevision: input.source.baseRevision,\n        scope: lines(input.values.scope),\n        outOfScope: lines(input.values.outOfScope),\n        constraints: lines(input.values.constraints),\n        sourceProductSessionId: input.source.productSessionId,\n        acceptanceCriteria: criteriaFrom(input.values.acceptanceCriteria).map(criterion => ({\n          id: criterion.id,\n          title: criterion.title.trim(),\n          required: criterion.required,\n        })),\n        publicationTarget: input.source.publicationTarget,\n      }",
+                    "source_excerpt_truncated": false,
+                    "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+                    "source_line": "      spec: {",
+                    "span_hash": "0b05d568b3f2ea4a1b49b7b0a9dafee97fda100262719e386ed28306efdd30ca"
+                  },
+                  "missing_fields": [
+                    "verificationCommand"
+                  ],
+                  "object_path": [
+                    "payload",
+                    "spec"
+                  ],
+                  "return_location": {
+                    "column": 3,
+                    "column_unit": "utf8_bytes",
+                    "end_column": 4,
+                    "end_line": 221,
+                    "file": "apps/client/src/decision-clarification-view-model.ts",
+                    "grammar": "typescript",
+                    "line": 195,
+                    "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                    "source_excerpt": "return {\n    schemaVersion: 'winwincode/v1',\n    command: 'delivery.update_spec',\n    actor,\n    scope,\n    requestId: input.requestId,\n    expectedRevision: input.expectedRevision,\n    payload: {\n      deliveryId: input.source.deliveryId,\n      spec: {\n        title: input.values.title.trim(),\n        goal: input.values.goal.trim(),\n        repositoryId: scope.repositoryId,\n        baseRevision: input.source.baseRevision,\n        scope: lines(input.values.scope),\n        outOfScope: lines(input.values.outOfScope),\n        constraints: lines(input.values.constraints),\n        sourceProductSessionId: input.source.productSessionId,\n        acceptanceCriteria: criteriaFrom(input.values.acceptanceCriteria).map(criterion => ({\n          id: criterion.id,\n          title: criterion.title.trim(),\n          required: criterion.required,\n        })),\n        publicationTarget: input.source.publicationTarget,\n      },\n    },\n  }",
+                    "source_excerpt_truncated": false,
+                    "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+                    "source_line": "  return {",
+                    "span_hash": "9e99749e28542d2a0b5eeb29bb59fe7c4ffde4eee84f644505f89959da3372bd"
+                  },
+                  "symbol": "clarificationUpdateCommand"
+                }
+              ]
+            },
+            "source_file_hashes": {
+              "apps/client/src/decision-clarification-view-model.ts": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+              "crates/winwincode-control-plane/src/delivery_production_adapters.rs": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793"
+            },
+            "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+            "unknown": [
+              {
+                "code": "external_applicability_not_inferred",
+                "file": "apps/client/src/decision-clarification-view-model.ts",
+                "line": 0,
+                "message": "合同适用条件属于显式外部假设；守卫存在不证明生产者一定进入该跨语言分支。"
+              }
+            ]
+          },
+          "edge_ids": [],
+          "id": "76a2b7f1fea3d2c24e06d457",
+          "kind": "static_contract_analysis",
+          "locations": [
+            {
+              "column": 13,
+              "column_unit": "utf8_bytes",
+              "end_column": 8,
+              "end_line": 219,
+              "file": "apps/client/src/decision-clarification-view-model.ts",
+              "grammar": "typescript",
+              "line": 204,
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "source_excerpt": "{\n        title: input.values.title.trim(),\n        goal: input.values.goal.trim(),\n        repositoryId: scope.repositoryId,\n        baseRevision: input.source.baseRevision,\n        scope: lines(input.values.scope),\n        outOfScope: lines(input.values.outOfScope),\n        constraints: lines(input.values.constraints),\n        sourceProductSessionId: input.source.productSessionId,\n        acceptanceCriteria: criteriaFrom(input.values.acceptanceCriteria).map(criterion => ({\n          id: criterion.id,\n          title: criterion.title.trim(),\n          required: criterion.required,\n        })),\n        publicationTarget: input.source.publicationTarget,\n      }",
+              "source_excerpt_truncated": false,
+              "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+              "source_line": "      spec: {",
+              "span_hash": "0b05d568b3f2ea4a1b49b7b0a9dafee97fda100262719e386ed28306efdd30ca"
+            },
+            {
+              "column": 27,
+              "column_unit": "utf8_bytes",
+              "end_column": 38,
+              "end_line": 617,
+              "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+              "grammar": "rust",
+              "line": 616,
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "source_excerpt": "spec\n                .verification_command",
+              "source_excerpt_truncated": false,
+              "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+              "source_line": "            let command = spec",
+              "span_hash": "37fbde80bb89b9129d093bdda40e3fffef5cecbb227db3a3ee1d0b893b8ea97d"
+            },
+            {
+              "column": 17,
+              "column_unit": "utf8_bytes",
+              "end_column": 54,
+              "end_line": 641,
+              "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+              "grammar": "rust",
+              "line": 641,
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "source_excerpt": "select_verification_command(&context)",
+              "source_excerpt_truncated": false,
+              "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+              "source_line": "                select_verification_command(&context)?,",
+              "span_hash": "766f2c028f1c99e6dc968e2d0812b2f66e4f85c5cbb51ea277be8be97f7bcb4e"
+            }
+          ],
+          "message": "只确认保存源码的对象字段构造。 必填条件由显式合同与守卫出处提供；生产者是否进入外部消费者分支尚未推导。",
+          "node_ids": [
+            "ts:apps/client/src/decision-clarification-view-model#clarificationUpdateCommand"
+          ]
+        }
+      ],
+      "fingerprint": "84012354ce122ecd6d40114033884c1c028d3f60a032cfbea3d21f37d93f0166",
+      "id": "7414a8a037043a2794e749fe",
+      "metadata": {
+        "applicability": {
+          "conditions": [
+            "请求用于 delivery.update_spec，且进入 LocalDeliveryAuthority.specification。",
+            "source_product_session_id 能解析到有效的 Device WorkerLaunchGrant，device_target 返回 Some。",
+            "Device HEAD 与 baseRevision 一致，授权等其余前置条件也满足。",
+            "生产者进入跨语言 Device 消费分支的可达性由本规则作为外部假设保留，未自动推导。",
+            "字段存在不等同于 verificationCommand 非空、类型正确或完整消费者校验通过。"
+          ],
+          "counterexamples": [
+            "device_target 返回 None 的本地非 Device 分支通过仓库上下文 select_verification_command 选择方法，不能泛化为所有规格编辑失败。",
+            "ChatDeliveryCreator 的创建请求明确构造 verificationCommand，创建链完整不能作为需求编辑链已保留该字段的证明。"
+          ],
+          "guard": {
+            "branch": "then",
+            "enclosing_condition": "let Some(device) = device",
+            "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+            "node_type": "field_expression",
+            "role": "guard",
+            "symbol": "LocalDeliveryAuthority.specification",
+            "text": "spec.verification_command"
+          },
+          "kind": "conditional"
+        },
+        "contract_analyzer_version": "static-contracts-1",
+        "contract_hash": "8543f89585c9e89e5ad118ea3eda9e008c1d92dda16d75c2e48509844228cc67",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent_review",
+          "note": "WWC-02 独立源码观察。只自动确认封闭返回字面对象未构造指定字段；Device 条件、生产接入与非空需求由显式合同和消费者源码出处提供。",
+          "reviewer": "Astra",
+          "source_doc": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        },
+        "runtime_proof": false,
+        "source_fact_confirmed": true
+      },
+      "node_ids": [
+        "ts:apps/client/src/decision-clarification-view-model#clarificationUpdateCommand"
+      ],
+      "rule_id": "wwc-astra-device-spec-field-construction",
+      "severity": "high",
+      "snapshot_id": "e372ed1670979aaf53f52df905844647892e02d9a418f0eba5311f2a6c3e6ab1",
+      "status": "uncertain",
+      "title": "返回字面对象未构造配置字段",
+      "type": "static_contract_required_object_fields"
+    }
+  ],
+  "problem_files": [
+    {
+      "path": "crates/winwincode-execution-port/src/diagnostic_parser.rs",
+      "hash": "2b269d95ba428593c7fef9d44f2e3bcf61169948cc06ae1323fb2b402dbb2a94",
+      "status": "parse_error",
+      "language": "rust",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "module": "rust:crates/winwincode-execution-port/src/diagnostic_parser"
+    },
+    {
+      "path": "crates/winwincode-server/src/worker_session_credentials.rs",
+      "hash": "aabf3032041c1948b32fbedbdcf091660fe43462046ca1978b50fdf038b2c826",
+      "status": "parse_error",
+      "language": "rust",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "module": "rust:crates/winwincode-server/src/worker_session_credentials"
+    },
+    {
+      "path": "crates/winwincode-storage/src/provider_exchange.rs",
+      "hash": "acf121ba2ba8dd255eae567dc0b026d3e0b9192df1bb81a14d5704ba668c23db",
+      "status": "parse_error",
+      "language": "rust",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "module": "rust:crates/winwincode-storage/src/provider_exchange"
+    },
+    {
+      "path": "crates/winwincode-worker/src/managed_session.rs",
+      "hash": "f7ce61001e543a4bc9d1d2155fb8fea993c16968fe09aa2d3393c024674c8b99",
+      "status": "parse_error",
+      "language": "rust",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "module": "rust:crates/winwincode-worker/src/managed_session"
+    },
+    {
+      "path": "crates/winwincode-worker/src/probe_evidence.rs",
+      "hash": "d818583ac54fc8a0ede68380aa2fc8fb6cf00185101a0a0c47d712e265f72610",
+      "status": "parse_error",
+      "language": "rust",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "module": "rust:crates/winwincode-worker/src/probe_evidence"
+    },
+    {
+      "path": "crates/winwincode-worker/src/probe_scheduler.rs",
+      "hash": "7db625341cbf8a4e2262b33911a0a4dfdf6a120b3b72660f0357701c34d0511d",
+      "status": "parse_error",
+      "language": "rust",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "module": "rust:crates/winwincode-worker/src/probe_scheduler"
+    }
+  ],
+  "project_diagnostics": [
+    {
+      "level": "warning",
+      "code": "rust_crate_root_unavailable",
+      "message": "crate winwincode_test_assets 无可解析的 src/lib.rs 或 src/main.rs。",
+      "file": "",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "symlink_skipped",
+      "message": "不跟随符号链接，相关覆盖未知",
+      "file": "CLAUDE.md",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 qualified_import_type。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "apps/client/src/application.ts",
+      "line": 966
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 qualified_import_type。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "apps/client/src/candidate-run-preview-control-plane.ts",
+      "line": 325
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 qualified_import_type。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "apps/client/src/community-control-plane-client.ts",
+      "line": 374
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 literal_nul_cst_surrogate。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "apps/client/src/home-recent-visits.ts",
+      "line": 135
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 literal_nul_cst_surrogate。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "apps/client/src/readiness-view-model.ts",
+      "line": 473
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/kernel/src/lib#restrict_private_tree 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/kernel/src/lib.rs",
+      "line": 1895
+    },
+    {
+      "level": "warning",
+      "code": "rust_module_gap",
+      "message": "generated: 模块没有唯一可用的捕获源码；不把它判断成实现缺失。",
+      "file": "crates/winwincode-api/src/lib.rs",
+      "line": 8
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-cli/src/backup.rs",
+      "line": 1740
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/domain.rs",
+      "line": 1047
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/exchange/dedup.rs",
+      "line": 153
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/exchange/frame.rs",
+      "line": 238
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/exchange/inbound.rs",
+      "line": 362
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/exchange/mod.rs",
+      "line": 77
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/exchange/outbox.rs",
+      "line": 566
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/exchange/sequence.rs",
+      "line": 197
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/managed_app.rs",
+      "line": 284
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/messages.rs",
+      "line": 732
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-client-port/src/preview.rs",
+      "line": 96
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/action_bridge#protected_program_directories 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/action_bridge.rs",
+      "line": 1103
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/action_bridge#protected_program_directories 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/action_bridge.rs",
+      "line": 1108
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/action_bridge#protected_executable 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/action_bridge.rs",
+      "line": 1132
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/action_bridge#executable_identity 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/action_bridge.rs",
+      "line": 1153
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/adapter#repair_sealed_helper_permissions 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/adapter.rs",
+      "line": 6182
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/adapter#restrict_directory 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/adapter.rs",
+      "line": 6275
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/adapter#sync_directory 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/adapter.rs",
+      "line": 6285
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-codex/src/candidate_artifact_outbox.rs",
+      "line": 1141
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-codex/src/diagnostic_artifact_outbox.rs",
+      "line": 959
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-codex/src/parallel_model_runner.rs",
+      "line": 687
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-codex/src/performance_evidence.rs",
+      "line": 459
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-codex/src/stage_product.rs",
+      "line": 1318
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/store#restrict_directory 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/store.rs",
+      "line": 2433
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/store#create_private_file 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/store.rs",
+      "line": 2449
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-codex/src/store#restrict_file 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-codex/src/store.rs",
+      "line": 2460
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-codex/src/workrun_runtime_projection.rs",
+      "line": 871
+    },
+    {
+      "level": "info",
+      "code": "rust_macro_definition",
+      "message": "宏定义未展开；可能生成的声明和调用不在显式源码图中。",
+      "file": "crates/winwincode-connector-linear/src/lib.rs",
+      "line": 30
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/client_launch_grant.rs",
+      "line": 358
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/delivery_execution.rs",
+      "line": 829
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/device_execution_binding.rs",
+      "line": 306
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/device_session_gate.rs",
+      "line": 278
+    },
+    {
+      "level": "info",
+      "code": "rust_macro_definition",
+      "message": "宏定义未展开；可能生成的声明和调用不在显式源码图中。",
+      "file": "crates/winwincode-control-plane/src/durable_execution_port.rs",
+      "line": 846
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/fusion_adjudication_host.rs",
+      "line": 148
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/fusion_analysis.rs",
+      "line": 308
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/fusion_compose.rs",
+      "line": 537
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/local_candidate.rs",
+      "line": 262
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/page_annotation_delivery.rs",
+      "line": 259
+    },
+    {
+      "level": "warning",
+      "code": "rust_module_gap",
+      "message": "tests: 模块没有唯一可用的捕获源码；不把它判断成实现缺失。",
+      "file": "crates/winwincode-control-plane/src/product_session_execution_application.rs",
+      "line": 2311
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/product_session_execution_job.rs",
+      "line": 315
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/publication_production.rs",
+      "line": 920
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/quick_device_execution.rs",
+      "line": 506
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/session_binding_transaction.rs",
+      "line": 1688
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/strongflow_device_execution.rs",
+      "line": 603
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/strongflow_projection/application.rs",
+      "line": 1357
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/strongflow_projection/evidence_detail.rs",
+      "line": 1193
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/strongflow_projection/mapping.rs",
+      "line": 1386
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/strongflow_projection/production_sources.rs",
+      "line": 352
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/strongflow_projection/sources.rs",
+      "line": 1508
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-control-plane/src/temporary_root_lease.rs",
+      "line": 1161
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/application/failure_router.rs",
+      "line": 750
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/application/workrun.rs",
+      "line": 836
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/application/workrun.rs",
+      "line": 907
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/application/workrun_execution.rs",
+      "line": 1636
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/domain/candidate.rs",
+      "line": 1265
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/domain/candidate.rs",
+      "line": 1596
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "line": 1034
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "line": 1262
+    },
+    {
+      "level": "info",
+      "code": "rust_macro_definition",
+      "message": "宏定义未展开；可能生成的声明和调用不在显式源码图中。",
+      "file": "crates/winwincode-delivery/src/domain/mod.rs",
+      "line": 62
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/domain/rework.rs",
+      "line": 1509
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/domain/verification.rs",
+      "line": 1527
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/domain/verification.rs",
+      "line": 1994
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/projection/redaction.rs",
+      "line": 498
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/projection/runtime.rs",
+      "line": 1448
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-delivery/src/store.rs",
+      "line": 2513
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/apply_engine.rs",
+      "line": 1730
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/candidate_branch.rs",
+      "line": 877
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/candidate_registry.rs",
+      "line": 890
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/candidate_retention.rs",
+      "line": 1393
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/fencing.rs",
+      "line": 240
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/http.rs",
+      "line": 151
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/lib.rs",
+      "line": 229
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/managed_app#listening_socket_owned_by_process_group 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/managed_app.rs",
+      "line": 847
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/managed_app#listening_socket_owner_pids 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/managed_app.rs",
+      "line": 869
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/managed_app#listening_socket_owner_pids 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/managed_app.rs",
+      "line": 927
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/managed_app#signal_process_group 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/managed_app.rs",
+      "line": 999
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/managed_app#process_group_exists 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/managed_app.rs",
+      "line": 1027
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/managed_app#process_group_id 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/managed_app.rs",
+      "line": 1045
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/managed_app.rs",
+      "line": 1098
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/path_confinement.rs",
+      "line": 323
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/preview.rs",
+      "line": 819
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/repository.rs",
+      "line": 856
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/repository_exchange.rs",
+      "line": 269
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/repository_git.rs",
+      "line": 498
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/service#release_target 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/service.rs",
+      "line": 682
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/service#release_target 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/service.rs",
+      "line": 690
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/service#release_target 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/service.rs",
+      "line": 698
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/service.rs",
+      "line": 723
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/supervisor#write_private_file 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/supervisor.rs",
+      "line": 1407
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/supervisor#observe_process_group_id 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/supervisor.rs",
+      "line": 1738
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/supervisor#process_group_is_empty 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/supervisor.rs",
+      "line": 1766
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-device-client/src/supervisor#signal_process 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-device-client/src/supervisor.rs",
+      "line": 1783
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/supervisor.rs",
+      "line": 1855
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-device-client/src/worker_logs.rs",
+      "line": 1462
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-domain/src/chat_attachment.rs",
+      "line": 65
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-domain/src/git_candidate_artifact.rs",
+      "line": 126
+    },
+    {
+      "level": "warning",
+      "code": "rust_module_gap",
+      "message": "generated: 模块没有唯一可用的捕获源码；不把它判断成实现缺失。",
+      "file": "crates/winwincode-domain/src/lib.rs",
+      "line": 9
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-domain/src/lib.rs",
+      "line": 14
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-domain/src/user_account.rs",
+      "line": 240
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-domain/src/verification_command.rs",
+      "line": 112
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-execution-port/src/action_enforcement#restrict_directory 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-execution-port/src/action_enforcement.rs",
+      "line": 418
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-execution-port/src/action_enforcement#restrict_file 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-execution-port/src/action_enforcement.rs",
+      "line": 429
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-execution-port/src/agent_config.rs",
+      "line": 202
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-execution-port/src/debug_experiment.rs",
+      "line": 285
+    },
+    {
+      "level": "warning",
+      "code": "rust_parse_error",
+      "message": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "file": "crates/winwincode-execution-port/src/diagnostic_parser.rs",
+      "line": 971
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-execution-port/src/jev_decision.rs",
+      "line": 479
+    },
+    {
+      "level": "warning",
+      "code": "rust_module_gap",
+      "message": "generated: 模块没有唯一可用的捕获源码；不把它判断成实现缺失。",
+      "file": "crates/winwincode-execution-port/src/lib.rs",
+      "line": 22
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-local/src/lib.rs",
+      "line": 886
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-observability-sqlite/src/lib#protect_path 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-observability-sqlite/src/lib.rs",
+      "line": 837
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-provider/src/device_extensions.rs",
+      "line": 732
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-provider/src/jev.rs",
+      "line": 1502
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-provider/src/provider_anthropic.rs",
+      "line": 1630
+    },
+    {
+      "level": "warning",
+      "code": "rust_module_gap",
+      "message": "provider_anthropic_namespace_tests: 模块没有唯一可用的捕获源码；不把它判断成实现缺失。",
+      "file": "crates/winwincode-provider/src/provider_anthropic.rs",
+      "line": 2216
+    },
+    {
+      "level": "warning",
+      "code": "rust_module_gap",
+      "message": "provider_anthropic_namespace_safety_tests: 模块没有唯一可用的捕获源码；不把它判断成实现缺失。",
+      "file": "crates/winwincode-provider/src/provider_anthropic.rs",
+      "line": 2220
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-provider/src/provider_https_sse.rs",
+      "line": 1435
+    },
+    {
+      "level": "warning",
+      "code": "rust_module_gap",
+      "message": "test_support: 模块没有唯一可用的捕获源码；不把它判断成实现缺失。",
+      "file": "crates/winwincode-publication/src/lib.rs",
+      "line": 45
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-publication/src/storage.rs",
+      "line": 305
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-repository-context/src/command_index.rs",
+      "line": 144
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/auth_session.rs",
+      "line": 1125
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/client_candidates.rs",
+      "line": 1091
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/client_connections.rs",
+      "line": 975
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/client_exchange.rs",
+      "line": 1941
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/client_occupancy.rs",
+      "line": 1398
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/client_repositories.rs",
+      "line": 333
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/client_sessions.rs",
+      "line": 1323
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/config.rs",
+      "line": 214
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/login_rate_limiter.rs",
+      "line": 87
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/password_hash.rs",
+      "line": 42
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/preview.rs",
+      "line": 1023
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/remote_worker_transport.rs",
+      "line": 664
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/runtime.rs",
+      "line": 2020
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/user_accounts.rs",
+      "line": 380
+    },
+    {
+      "level": "warning",
+      "code": "rust_parse_error",
+      "message": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "file": "crates/winwincode-server/src/worker_session_credentials.rs",
+      "line": 497
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-server/src/worker_session_credentials.rs",
+      "line": 589
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-storage/src/client_downlink.rs",
+      "line": 571
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-storage/src/client_launch_grant.rs",
+      "line": 1863
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-storage/src/client_occupancy.rs",
+      "line": 1581
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-storage/src/execution_registry.rs",
+      "line": 3795
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-storage/src/lib.rs",
+      "line": 5002
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-storage/src/local_candidate.rs",
+      "line": 1652
+    },
+    {
+      "level": "warning",
+      "code": "rust_parse_error",
+      "message": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "file": "crates/winwincode-storage/src/provider_exchange.rs",
+      "line": 1577
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-storage/src/repository_binding.rs",
+      "line": 1738
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-storage/src/repository_scheduler_replacement.rs",
+      "line": 144
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-worker/src/change_batch_store.rs",
+      "line": 2237
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-worker/src/change_batch_store.rs",
+      "line": 3113
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-worker/src/debug_experiment.rs",
+      "line": 480
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-worker/src/device_model.rs",
+      "line": 320
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-worker/src/managed_session.rs",
+      "line": 506
+    },
+    {
+      "level": "warning",
+      "code": "rust_parse_error",
+      "message": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "file": "crates/winwincode-worker/src/managed_session.rs",
+      "line": 577
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-worker/src/probe_evidence.rs",
+      "line": 1619
+    },
+    {
+      "level": "warning",
+      "code": "rust_parse_error",
+      "message": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "file": "crates/winwincode-worker/src/probe_evidence.rs",
+      "line": 1818
+    },
+    {
+      "level": "warning",
+      "code": "rust_duplicate_definition",
+      "message": "rust:crates/winwincode-worker/src/probe_process#exit_signal 有多个源码声明；不能选择唯一实现。",
+      "file": "crates/winwincode-worker/src/probe_process.rs",
+      "line": 1074
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-worker/src/probe_process.rs",
+      "line": 1080
+    },
+    {
+      "level": "warning",
+      "code": "rust_glob_import",
+      "message": "星号导入的导出集合未推断；相关未绑定调用保留未知。",
+      "file": "crates/winwincode-worker/src/probe_reducer.rs",
+      "line": 572
+    },
+    {
+      "level": "warning",
+      "code": "rust_parse_error",
+      "message": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。",
+      "file": "crates/winwincode-worker/src/probe_scheduler.rs",
+      "line": 1080
+    },
+    {
+      "level": "info",
+      "code": "ts_syntax_projection",
+      "message": "原始语法库存在缺口；派生解析成功，规则 literal_nul_cst_surrogate。原始源码/哈希与UTF8坐标不变；适配证据见模块metadata。",
+      "file": "schema/winwincode-export/v1/validate.js",
+      "line": 288
+    }
+  ],
+  "rule_observation_counts": {
+    "total": 10,
+    "required_connection_reproduced": 10,
+    "rules_with_uncertainty": 0,
+    "forbidden_connection_observed": 0
+  },
+  "calls_by_resolution": {
+    "external": 24597,
+    "dynamic": 130094,
+    "resolved": 15799,
+    "ambiguous": 62,
+    "unresolved": 1431
+  }
+}

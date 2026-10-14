@@ -1,0 +1,3167 @@
+{
+  "development_only": true,
+  "normal_report_sha256": "8a64d3c1e31e6a43d9291b933698461041861f5435cba3ef56af919fac57fe29",
+  "actual_snapshot_identity": {
+    "id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+    "project_id": "ac6694a563ea5a6ef75f",
+    "project_name": "CodePatchBay — static source review",
+    "created_at": "2026-10-14T06:03:49.648709+00:00",
+    "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+    "policy_hash": "0fff976c5bcee4485b553448ac80df4298b47a8c4656aaab6062324d4e9bbdfc",
+    "status": "partial",
+    "component_versions": {
+      "atomicity_contracts": {
+        "analyzer": "static-atomicity-contracts-2-shared",
+        "policy_schema": "static-atomicity-policy-v1"
+      },
+      "budget_contracts": {
+        "analyzer": "static-local-budget-contracts-1",
+        "policy_schema": "static-local-budget-policy-v1"
+      },
+      "completion_summaries": "captured-completion-summaries-1",
+      "field_contracts": {
+        "analyzer": "static-field-contracts-4-ir",
+        "policy_schema": "static-field-policy-v2"
+      },
+      "field_relations": "captured-field-source-relations-1",
+      "field_summaries": "finite-field-summaries-5-ir",
+      "goal_contracts": {
+        "adapters": {
+          "atomicity": {
+            "analyzer": "source-derived-atomicity-completion-1",
+            "policy_schema": "adapter-validated-v1"
+          },
+          "pipeline": {
+            "analyzer": "finite-parameter-record-budget-flow-1",
+            "policy_schema": "parameter-record-budget-policy-1"
+          },
+          "status": {
+            "analyzer": "finite-status-classification-1",
+            "policy_schema": "static-status-policy-v1"
+          }
+        },
+        "policy_schema": "static-goal-policy-v1",
+        "registry": "static-whole-judgment-registry-1"
+      },
+      "lexical_bindings": "captured-lexical-bindings-3",
+      "maintenance": {
+        "backend": "full"
+      },
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "report_claims": {
+        "analyzer": "captured-report-source-chains-2-relations",
+        "policy_schema": "static-report-claim-policy-v1",
+        "relation_modules": {
+          "conditional_gate_relations": "captured-conditional-gate-relations-1",
+          "lifecycle_ownership_relations": "captured-lifecycle-ownership-relations-1",
+          "message_identity_relations": "captured-message-identity-relations-1",
+          "record_projection_relations": "captured-record-projection-relations-1",
+          "rust_state_relations": "captured-rust-finite-state-relations-1"
+        }
+      },
+      "semantic_environment": "captured-builtin-environment-1",
+      "semantic_ir": "finite-immutable-semantic-ir-3",
+      "semantic_sources": "semantic-snapshot-sources-1",
+      "static_contracts": {
+        "analyzer": "static-contracts-1",
+        "policy_schema": "static-contract-policy-v1"
+      },
+      "support_input_capture": "support-input-capture-1",
+      "tool": {
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "graph_backend": "axon-graph-core-1",
+        "source_hash": "c4c127375f044133c328c1fd17782df277426bf64e4bed0be8779602088fafee"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      },
+      "value_contracts": {
+        "analyzer": "static-value-contracts-1",
+        "policy_schema": "static-value-policy-v1"
+      }
+    }
+  },
+  "facts_checked": 219,
+  "source_files": 5,
+  "facts": [
+    {
+      "id": "771e16771402b967a55155a2",
+      "kind": "report_source_role",
+      "source_pointer": "/functional_chains/0/source_facts/0",
+      "file": "cli/commands/task.ts",
+      "line": 259,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "518482463748eb0d311e0a1d",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/1",
+      "file": "cli/commands/task.ts",
+      "line": 263,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "0cd9fc365f6fdb34161b4706",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/2",
+      "file": "cli/commands/task.ts",
+      "line": 263,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "88fd5a0d7760b6fcd4535e5a",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/3",
+      "file": "cli/commands/task.ts",
+      "line": 264,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "1577b452de901f242c1de7e6",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/4",
+      "file": "cli/commands/task.ts",
+      "line": 279,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "df5f387b3e308a4bb6eb4476",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/5",
+      "file": "cli/commands/task.ts",
+      "line": 280,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "7f5c47c141870aca662cc89b",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/6",
+      "file": "cli/commands/task.ts",
+      "line": 282,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6a38b5aad174c7ead3f70518",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/7",
+      "file": "cli/commands/task.ts",
+      "line": 288,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "dc88442727ea0de958dd7418",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/8",
+      "file": "cli/commands/task.ts",
+      "line": 292,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "081415e8034a4fa7ffaab0a5",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/9",
+      "file": "cli/commands/task.ts",
+      "line": 295,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "eeb8804bb7309a7dc41cdde5",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/10",
+      "file": "cli/commands/task.ts",
+      "line": 299,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "1cb5aa63dc7c711197678012",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/11",
+      "file": "cli/commands/task.ts",
+      "line": 300,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "815d4cc0ac12b0871886fb76",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/12",
+      "file": "cli/commands/task.ts",
+      "line": 305,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "da382a19d301facc02f86cf3",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/13",
+      "file": "cli/commands/task.ts",
+      "line": 309,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "2b28bf93b1baa95c997b71ec",
+      "kind": "report_source_role",
+      "source_pointer": "/functional_chains/0/source_facts/14",
+      "file": "cli/commands/task.ts",
+      "line": 210,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "49b206a6fbd01f6d423cc6bf",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/15",
+      "file": "cli/commands/task.ts",
+      "line": 213,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "eb45a93096e1a1d65b4975ca",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/16",
+      "file": "cli/commands/task.ts",
+      "line": 216,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "96d1b1e3a22ab8aa21ce0fc8",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/17",
+      "file": "cli/commands/task.ts",
+      "line": 217,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "7dd098dbe0002b0b2d35a0df",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/18",
+      "file": "cli/commands/task.ts",
+      "line": 218,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e606a4d6efe4a8968cdbc725",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/19",
+      "file": "cli/commands/task.ts",
+      "line": 218,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c8f3753b0af4c7fae9a574fe",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/20",
+      "file": "cli/commands/task.ts",
+      "line": 220,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "76f56babe5f6f140caae1e6b",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/21",
+      "file": "cli/commands/task.ts",
+      "line": 221,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e99aa801ed37fd3ff5b4c096",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/22",
+      "file": "cli/commands/task.ts",
+      "line": 221,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b930afda4975826f48a30410",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/23",
+      "file": "cli/commands/task.ts",
+      "line": 222,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "20bb3b0c7a26c6932fba2f31",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/24",
+      "file": "cli/commands/task.ts",
+      "line": 232,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e32e3177f3afec691f5a30b5",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/25",
+      "file": "cli/commands/task.ts",
+      "line": 232,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "170a58827eb76eef75e583f3",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/26",
+      "file": "cli/commands/task.ts",
+      "line": 232,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6d6cc54e47aaa407d5dd6f62",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/27",
+      "file": "cli/commands/task.ts",
+      "line": 233,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "cc7613ed489a1eb1982502df",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/28",
+      "file": "cli/commands/task.ts",
+      "line": 235,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "f08329609ca4ed6952b12afa",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/29",
+      "file": "cli/commands/task.ts",
+      "line": 235,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ffd50386e93ef5501690538d",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/30",
+      "file": "cli/commands/task.ts",
+      "line": 243,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c93cb5f664540697414f7dd1",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/31",
+      "file": "cli/commands/task.ts",
+      "line": 243,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e3131e1f5ef061a515abb632",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/32",
+      "file": "cli/commands/task.ts",
+      "line": 243,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "edb16214dc4e2a0976beb1c6",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/33",
+      "file": "cli/commands/task.ts",
+      "line": 244,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e63d151fa3830eac81537864",
+      "kind": "report_source_role",
+      "source_pointer": "/functional_chains/0/source_facts/34",
+      "file": "cli/commands/task.ts",
+      "line": 163,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ffae97cd0ab9c7aeb081abf9",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/35",
+      "file": "cli/commands/task.ts",
+      "line": 164,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c922dc208a093a46009b9d6b",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/36",
+      "file": "cli/commands/task.ts",
+      "line": 166,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b137a91c1956ac6753ddde76",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/37",
+      "file": "cli/commands/task.ts",
+      "line": 169,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8f0eb1ba96152b7cd0321c9d",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/38",
+      "file": "cli/commands/task.ts",
+      "line": 171,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "14fa49d487abf5e020236dad",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/39",
+      "file": "cli/commands/task.ts",
+      "line": 172,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "4566c7617ffed33392b7f5d8",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/40",
+      "file": "cli/commands/task.ts",
+      "line": 175,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "0b24a8e611fa3874e3b548e1",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/41",
+      "file": "cli/commands/task.ts",
+      "line": 176,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ac9201631d2071c5fb7c57f3",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/42",
+      "file": "cli/commands/task.ts",
+      "line": 177,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "d8f1ea87de7b43af6668dc09",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/43",
+      "file": "cli/commands/task.ts",
+      "line": 178,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "d76a5a16b67f7ae6358aba69",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/44",
+      "file": "cli/commands/task.ts",
+      "line": 179,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ebfdf973449a2c26a4669ffa",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/45",
+      "file": "cli/commands/task.ts",
+      "line": 180,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e462fd9e4d34d80c1590e668",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/46",
+      "file": "cli/commands/task.ts",
+      "line": 181,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "484c59c9065b4edbbb66d02d",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/47",
+      "file": "cli/commands/task.ts",
+      "line": 181,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6c1c274670021df6daf86346",
+      "kind": "report_source_role",
+      "source_pointer": "/functional_chains/0/source_facts/48",
+      "file": "server/services/task/task-view.ts",
+      "line": 615,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8d70051a4373a987721760dd",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/49",
+      "file": "server/services/task/task-view.ts",
+      "line": 624,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "a234f7c912c0045a3eb63873",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/50",
+      "file": "server/services/task/task-view.ts",
+      "line": 625,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b8de7075d0b6855c673a591c",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/51",
+      "file": "server/services/task/task-view.ts",
+      "line": 627,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "2041067af78be845656cfecb",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/52",
+      "file": "server/services/task/task-view.ts",
+      "line": 628,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "65a83aaab4586f482f64ce2b",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/53",
+      "file": "server/services/task/task-view.ts",
+      "line": 636,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "dbb675f1b279dcd360dda37f",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/54",
+      "file": "server/services/task/task-view.ts",
+      "line": 644,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c2dc95ee1950a69c738396a5",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/55",
+      "file": "server/services/task/task-view.ts",
+      "line": 647,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8b4725792db449a4555ecf7b",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/56",
+      "file": "server/services/task/task-view.ts",
+      "line": 659,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "7805801da4dfe5c51ac32e96",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/57",
+      "file": "server/services/task/task-view.ts",
+      "line": 660,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "f6ae86fc208b806a600262b0",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/58",
+      "file": "server/services/task/task-view.ts",
+      "line": 666,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b4aafc030e016f89b65957ea",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/59",
+      "file": "server/services/task/task-view.ts",
+      "line": 667,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "89ea708ddac247b11c51468b",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/60",
+      "file": "server/services/task/task-view.ts",
+      "line": 668,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e333ce3ba519564218d49dc4",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/61",
+      "file": "server/services/task/task-view.ts",
+      "line": 680,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "2eb764958e5693d616a490a7",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/62",
+      "file": "server/services/task/task-view.ts",
+      "line": 681,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "3f101f4be08d7751ac4c9920",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/63",
+      "file": "server/services/task/task-view.ts",
+      "line": 682,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "1de6979c0b027bcc6700400c",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/64",
+      "file": "server/services/task/task-view.ts",
+      "line": 683,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "be0022194bc86a7cce792533",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/65",
+      "file": "server/services/task/task-view.ts",
+      "line": 684,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "0dc7ef3069eb1cd8728815b6",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/66",
+      "file": "server/services/task/task-view.ts",
+      "line": 686,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "44a143a8d480e9439d628954",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/67",
+      "file": "server/services/task/task-view.ts",
+      "line": 687,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b2589d5ccff96267962a277d",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/68",
+      "file": "server/services/task/task-view.ts",
+      "line": 688,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "521bb53a8178d64bf61a6364",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/69",
+      "file": "server/services/task/task-view.ts",
+      "line": 689,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "051e707da4c22365e7e5dc51",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/70",
+      "file": "server/services/task/task-view.ts",
+      "line": 690,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "f263128206712716725ac3b6",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/71",
+      "file": "server/services/task/task-view.ts",
+      "line": 691,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "069a8df5ca0d0bc85b57c8cf",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/72",
+      "file": "server/services/task/task-view.ts",
+      "line": 708,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "565bbc2d0172a46cd11e7d72",
+      "kind": "report_source_role",
+      "source_pointer": "/functional_chains/0/source_facts/73",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1465,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "3ded6a0e427529e54bdc60e5",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/74",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1466,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "9f1955fb074f897a42bc1e2f",
+      "kind": "report_source_role",
+      "source_pointer": "/functional_chains/0/source_facts/75",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1424,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "742dcb0756bec607bf1433af",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/76",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1426,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "21b22e9a2ffccb3a4d21e966",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/77",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1426,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "512779ad7ff3cbc5d2f2e4ca",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/78",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1427,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "41016cd7f13e4b512314924d",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/79",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1427,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8a8f41a947556d11e49ae89e",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/80",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1429,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "bea298a6d568ba0f99d35254",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/81",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1429,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "811b1fabbb08258dcdb469ba",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/82",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1430,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e28745d91ed53c33652cecf3",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/83",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1430,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c25cabd1fd42c1ee996f7667",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/84",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1430,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "9f7f611df26658f368a3165c",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/85",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1431,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "12449d277e151ca300cde146",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/86",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1431,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "304f3636134a16817735f261",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/87",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1431,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "07841606aa204f9a3705fc3e",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/88",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1432,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "22b0cf3f30a680a950a60128",
+      "kind": "report_source_role",
+      "source_pointer": "/functional_chains/0/source_facts/89",
+      "file": "server/services/job/job-store.ts",
+      "line": 1374,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6c1646be57f1ab966c267c7b",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/90",
+      "file": "server/services/job/job-store.ts",
+      "line": 1376,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "5823469e58f663693160561b",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/91",
+      "file": "server/services/job/job-store.ts",
+      "line": 1377,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "fc650d148e99e4b291a8c186",
+      "kind": "report_source_role",
+      "source_pointer": "/functional_chains/0/source_facts/92",
+      "file": "core/contracts/task-view-fields.ts",
+      "line": 128,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6acd0f7a3b789c5cc86e5129",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/93",
+      "file": "core/contracts/task-view-fields.ts",
+      "line": 132,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "a173ba0a30a5fc9b04a7167f",
+      "kind": "captured_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/94",
+      "file": "core/contracts/task-view-fields.ts",
+      "line": 133,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e680e46c2d0d4b236e9fd246",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/95",
+      "file": "cli/commands/task.ts",
+      "line": 263,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "2ae18b31b62adf8caeba27e5",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/96",
+      "file": "cli/commands/task.ts",
+      "line": 273,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "f7d74fca299252379695d181",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/97",
+      "file": "cli/commands/task.ts",
+      "line": 287,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c9b79f06687bfa85ed02fead",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/98",
+      "file": "cli/commands/task.ts",
+      "line": 292,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8e2256cc2aeb80592cccff57",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/99",
+      "file": "cli/commands/task.ts",
+      "line": 294,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ef6f5543ec63ff1b5a05b629",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/100",
+      "file": "cli/commands/task.ts",
+      "line": 299,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "5434d2632b40c1bdd9e36917",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/101",
+      "file": "cli/commands/task.ts",
+      "line": 300,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c6f669e212db1a1cc9d4eeda",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/102",
+      "file": "cli/commands/task.ts",
+      "line": 302,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ab73f222b0dbbe9590955d0f",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/103",
+      "file": "cli/commands/task.ts",
+      "line": 309,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "9e9cf4b4638e9a30a62ec129",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/104",
+      "file": "cli/commands/task.ts",
+      "line": 263,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b240b4accdc40b19e7d14dcc",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/105",
+      "file": "cli/commands/task.ts",
+      "line": 275,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c55414ebd42e949ca639d661",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/106",
+      "file": "cli/commands/task.ts",
+      "line": 276,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "da21ab711fdd617af7004b0a",
+      "kind": "ordered_source_assignment_attempt",
+      "source_pointer": "/functional_chains/0/source_facts/107",
+      "file": "cli/commands/task.ts",
+      "line": 277,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "4bb13038845526dedb2a0848",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/108",
+      "file": "cli/commands/task.ts",
+      "line": 279,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "7bca6ddaad3adcc5aaa55d97",
+      "kind": "ordered_source_assignment_attempt",
+      "source_pointer": "/functional_chains/0/source_facts/109",
+      "file": "cli/commands/task.ts",
+      "line": 280,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "aa25200446a6f981ee3ef086",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/110",
+      "file": "cli/commands/task.ts",
+      "line": 287,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e829910c2709f383302768ae",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/111",
+      "file": "cli/commands/task.ts",
+      "line": 294,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "689e341d7b644e31ddb5b40f",
+      "kind": "ordered_source_assignment_attempt",
+      "source_pointer": "/functional_chains/0/source_facts/112",
+      "file": "cli/commands/task.ts",
+      "line": 295,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "2b4cf44770c70f8c55151734",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/113",
+      "file": "cli/commands/task.ts",
+      "line": 302,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "2f57c780303b0a99f782d968",
+      "kind": "call_result_binding_guard_source",
+      "source_pointer": "/functional_chains/0/source_facts/114",
+      "file": "cli/commands/task.ts",
+      "line": 302,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ad8e975c32d645d85c89f77c",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/115",
+      "file": "cli/commands/task.ts",
+      "line": 273,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "5cd79cf6ad695dcf7fa11cf6",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/116",
+      "file": "cli/commands/task.ts",
+      "line": 287,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "59d85d6b8dce696cb2f62c5d",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/117",
+      "file": "cli/commands/task.ts",
+      "line": 292,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8b65b48546627f6105f4d30f",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/118",
+      "file": "cli/commands/task.ts",
+      "line": 294,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "732506ff648d8eb674d20d6b",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/119",
+      "file": "cli/commands/task.ts",
+      "line": 299,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "5edb15bfdb11afa44406040a",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/120",
+      "file": "cli/commands/task.ts",
+      "line": 300,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b523c48b8a3bbe7fb25d10bd",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/121",
+      "file": "cli/commands/task.ts",
+      "line": 302,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "bacb75c06a5cce966ed0b86a",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/122",
+      "file": "cli/commands/task.ts",
+      "line": 309,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b65183093ec1fb92d2dc3a68",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/123",
+      "file": "cli/commands/task.ts",
+      "line": 212,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6ca24b3da6bcc1cc982629f6",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/124",
+      "file": "cli/commands/task.ts",
+      "line": 231,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "1bf6358897a4d7c4d71cc461",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/125",
+      "file": "cli/commands/task.ts",
+      "line": 243,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6ebe2387dec14d202bc7b1ef",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/126",
+      "file": "cli/commands/task.ts",
+      "line": 222,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "f1e96bd6bc2679dd0393166d",
+      "kind": "call_result_binding_guard_source",
+      "source_pointer": "/functional_chains/0/source_facts/127",
+      "file": "cli/commands/task.ts",
+      "line": 222,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b7f433cff17b06f6845eb713",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/128",
+      "file": "cli/commands/task.ts",
+      "line": 234,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "72c9a3047e468e403700a512",
+      "kind": "call_result_binding_guard_source",
+      "source_pointer": "/functional_chains/0/source_facts/129",
+      "file": "cli/commands/task.ts",
+      "line": 234,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "34798ce8adbfc6af61c7c746",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/130",
+      "file": "cli/commands/task.ts",
+      "line": 236,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6b8ba035a90ef6144ffdcda4",
+      "kind": "call_result_binding_guard_source",
+      "source_pointer": "/functional_chains/0/source_facts/131",
+      "file": "cli/commands/task.ts",
+      "line": 236,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "dbc43a27b6f3c0a4090f0060",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/132",
+      "file": "cli/commands/task.ts",
+      "line": 231,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "9aa22307460e9b149bbd3086",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/133",
+      "file": "cli/commands/task.ts",
+      "line": 243,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ad17b52a75ab691b08d41a99",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/134",
+      "file": "cli/commands/task.ts",
+      "line": 164,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "66a97516383cacd68b73e94e",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/135",
+      "file": "cli/commands/task.ts",
+      "line": 166,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "906708aa1f90c422a55e09f4",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/136",
+      "file": "cli/commands/task.ts",
+      "line": 167,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "060a07cbb059d65ba4ac4bf7",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/137",
+      "file": "cli/commands/task.ts",
+      "line": 171,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "a2634ede836d65720b7c1fb2",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/138",
+      "file": "cli/commands/task.ts",
+      "line": 172,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "732a1c8b577c8683c8816325",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/139",
+      "file": "cli/commands/task.ts",
+      "line": 175,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8479f55b5ff32962f7832633",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/140",
+      "file": "cli/commands/task.ts",
+      "line": 176,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6c77a345aab62a19f790e88d",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/141",
+      "file": "cli/commands/task.ts",
+      "line": 177,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "5086374cbed535aa9eb0a906",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/142",
+      "file": "cli/commands/task.ts",
+      "line": 178,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e18f7896024be6e7fc51e897",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/143",
+      "file": "cli/commands/task.ts",
+      "line": 179,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "98ac9a9c13d83cf7f8f505ef",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/144",
+      "file": "cli/commands/task.ts",
+      "line": 180,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b45a64ff61bd3a4f51367b54",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/145",
+      "file": "cli/commands/task.ts",
+      "line": 181,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "cd11859cc0c46503cd407e51",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/146",
+      "file": "cli/commands/task.ts",
+      "line": 178,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "0344586d2d160ade08799283",
+      "kind": "call_result_binding_guard_source",
+      "source_pointer": "/functional_chains/0/source_facts/147",
+      "file": "cli/commands/task.ts",
+      "line": 178,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "693bafebd9a9cc46e27ed1c7",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/148",
+      "file": "cli/commands/task.ts",
+      "line": 179,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "dcab47ed0c4cda45e79e33e4",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/149",
+      "file": "cli/commands/task.ts",
+      "line": 166,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e018df9590256118b67c01cf",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/150",
+      "file": "cli/commands/task.ts",
+      "line": 167,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "f6780316a45bb3158c22aa2a",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/151",
+      "file": "cli/commands/task.ts",
+      "line": 171,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "840e00acdb7aea93e41e6cfc",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/152",
+      "file": "cli/commands/task.ts",
+      "line": 172,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "7809666a66e8c77f4526584e",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/153",
+      "file": "cli/commands/task.ts",
+      "line": 175,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "1233ccc7811700667df8dab7",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/154",
+      "file": "cli/commands/task.ts",
+      "line": 176,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "87d76a8a734f3d4e7ad2860a",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/155",
+      "file": "cli/commands/task.ts",
+      "line": 177,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "468e04d2411a10b41e9c70b9",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/156",
+      "file": "cli/commands/task.ts",
+      "line": 178,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "79f3c3f131db3acb7a31a001",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/157",
+      "file": "cli/commands/task.ts",
+      "line": 179,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "d90c392561221453a8401ca7",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/158",
+      "file": "cli/commands/task.ts",
+      "line": 180,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "a7b4162ad124d2e5bab41163",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/159",
+      "file": "cli/commands/task.ts",
+      "line": 181,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "631f7510c14611dd2cb1f655",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/160",
+      "file": "server/services/task/task-view.ts",
+      "line": 624,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "847456f7859ece45ae1c3648",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/161",
+      "file": "server/services/task/task-view.ts",
+      "line": 625,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "9bcf12b6109da3feab820d49",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/162",
+      "file": "server/services/task/task-view.ts",
+      "line": 627,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ba7b88f0573a4446ea787d4d",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/163",
+      "file": "server/services/task/task-view.ts",
+      "line": 635,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c3f4e15232d6a79163cf2b98",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/164",
+      "file": "server/services/task/task-view.ts",
+      "line": 643,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c2c8e5c3c3934805dc76c18a",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/165",
+      "file": "server/services/task/task-view.ts",
+      "line": 658,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "9ecc7cff5743d285fa1124ac",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/166",
+      "file": "server/services/task/task-view.ts",
+      "line": 666,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e36c36ab1a27ab4c69e7836e",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/167",
+      "file": "server/services/task/task-view.ts",
+      "line": 667,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "862ff01facfa874ab5824fb1",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/168",
+      "file": "server/services/task/task-view.ts",
+      "line": 668,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "deb5cb284bea87805a1b47b7",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/169",
+      "file": "server/services/task/task-view.ts",
+      "line": 680,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "613ea484ac9e6db955e2cbf8",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/170",
+      "file": "server/services/task/task-view.ts",
+      "line": 681,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "49881d705170a81d1649f122",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/171",
+      "file": "server/services/task/task-view.ts",
+      "line": 682,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "16f7d18485306d6de3d2639b",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/172",
+      "file": "server/services/task/task-view.ts",
+      "line": 683,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ad6e0616e722684f6a896628",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/173",
+      "file": "server/services/task/task-view.ts",
+      "line": 684,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "dd06a9d81f618bd72a6be40b",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/174",
+      "file": "server/services/task/task-view.ts",
+      "line": 686,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "7b2e91dfafa607ad1b531820",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/175",
+      "file": "server/services/task/task-view.ts",
+      "line": 687,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "16464ef8b3c4caaf5400c7d2",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/176",
+      "file": "server/services/task/task-view.ts",
+      "line": 688,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "4fb5d5590708cca6a0ed1a82",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/177",
+      "file": "server/services/task/task-view.ts",
+      "line": 689,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "5f9d887c8a44cf27ff23a5fc",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/178",
+      "file": "server/services/task/task-view.ts",
+      "line": 690,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "69cb3e70e63bda201ae50e09",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/179",
+      "file": "server/services/task/task-view.ts",
+      "line": 691,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "fa9563f1cb63e4665bee1982",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/180",
+      "file": "server/services/task/task-view.ts",
+      "line": 708,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "fdf58d7cdc710a05881e78d7",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/181",
+      "file": "server/services/task/task-view.ts",
+      "line": 621,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "f1e4c5f27a72ef404da4060d",
+      "kind": "normal_reaching_excludes_abrupt_guard_branch",
+      "source_pointer": "/functional_chains/0/source_facts/182",
+      "file": "server/services/task/task-view.ts",
+      "line": 621,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "3fdde1198e09efd79bb24733",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/183",
+      "file": "server/services/task/task-view.ts",
+      "line": 638,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "04a305a19e97bf5a23e2fd0e",
+      "kind": "normal_reaching_excludes_abrupt_guard_branch",
+      "source_pointer": "/functional_chains/0/source_facts/184",
+      "file": "server/services/task/task-view.ts",
+      "line": 638,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b036e7b32c069b5f6c1e1227",
+      "kind": "ordered_source_assignment_attempt",
+      "source_pointer": "/functional_chains/0/source_facts/185",
+      "file": "server/services/task/task-view.ts",
+      "line": 647,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "b6f07b45d6bf0e02950ab3e9",
+      "kind": "ordered_source_assignment_attempt",
+      "source_pointer": "/functional_chains/0/source_facts/186",
+      "file": "server/services/task/task-view.ts",
+      "line": 652,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "594141144d73acb11fe86669",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/187",
+      "file": "server/services/task/task-view.ts",
+      "line": 625,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "a8a8d7432cfbe515e4dfcf0a",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/188",
+      "file": "server/services/task/task-view.ts",
+      "line": 627,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "1f51e655c5eb5a54904c24ca",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/189",
+      "file": "server/services/task/task-view.ts",
+      "line": 635,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "566e3b2082ba4a94824adec6",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/190",
+      "file": "server/services/task/task-view.ts",
+      "line": 643,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8a2c7a4103ca71f31f88fe71",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/191",
+      "file": "server/services/task/task-view.ts",
+      "line": 658,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "0a12bb95eaa3e8a261aa54d9",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/192",
+      "file": "server/services/task/task-view.ts",
+      "line": 666,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "bb48ae3d2494e6c4a6e76564",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/193",
+      "file": "server/services/task/task-view.ts",
+      "line": 667,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "88279359958aa4f53f2ff914",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/194",
+      "file": "server/services/task/task-view.ts",
+      "line": 668,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "304529b0b643ebd2301dccb8",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/195",
+      "file": "server/services/task/task-view.ts",
+      "line": 680,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "fd40452f73941763c6f67616",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/196",
+      "file": "server/services/task/task-view.ts",
+      "line": 681,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "22ae232e06ebf76e46e683bb",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/197",
+      "file": "server/services/task/task-view.ts",
+      "line": 682,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "fcf7d7e5591accc6d9112180",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/198",
+      "file": "server/services/task/task-view.ts",
+      "line": 683,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "f982a484812c58499b0fdc41",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/199",
+      "file": "server/services/task/task-view.ts",
+      "line": 684,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "64032a4d51b8001e5c726049",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/200",
+      "file": "server/services/task/task-view.ts",
+      "line": 686,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "c8844dd6995d3ce0278f13a2",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/201",
+      "file": "server/services/task/task-view.ts",
+      "line": 687,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "628b614ba0cf8a478550d169",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/202",
+      "file": "server/services/task/task-view.ts",
+      "line": 688,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "986f52ab1e80e1f5628aff47",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/203",
+      "file": "server/services/task/task-view.ts",
+      "line": 689,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "bf1e9e5f080a7c0fa4b8e24a",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/204",
+      "file": "server/services/task/task-view.ts",
+      "line": 690,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "cf2f76958f60db2d33d719e0",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/205",
+      "file": "server/services/task/task-view.ts",
+      "line": 691,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "d95c41df8b6b69282dc7a733",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/206",
+      "file": "server/services/task/task-view.ts",
+      "line": 708,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8522f44d1b50e06e25510be9",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/207",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1466,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "3c3c9bb40dfabdfffaf6457d",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/208",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1425,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "8b68ce6b2a52153835541392",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/209",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1429,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "dfe3075b244cc1e25468cc92",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/210",
+      "file": "server/services/hub/hub-queue.ts",
+      "line": 1430,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "6a6b57725ae055af532f0f93",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/211",
+      "file": "server/services/job/job-store.ts",
+      "line": 1376,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "4f52860a3b4c86c1845e158d",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/212",
+      "file": "server/services/job/job-store.ts",
+      "line": 1377,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "332d4da51ff3b477ccc033a3",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/213",
+      "file": "server/services/job/job-store.ts",
+      "line": 1375,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "eff56dc588f4344a61948e4c",
+      "kind": "normal_reaching_excludes_abrupt_guard_branch",
+      "source_pointer": "/functional_chains/0/source_facts/214",
+      "file": "server/services/job/job-store.ts",
+      "line": 1375,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "ddd327f2b12d90dbc2eb501e",
+      "kind": "conditional_direct_statement_order",
+      "source_pointer": "/functional_chains/0/source_facts/215",
+      "file": "server/services/job/job-store.ts",
+      "line": 1377,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "41c3b4a2c2a066089d1d4292",
+      "kind": "direct_statement_call_step",
+      "source_pointer": "/functional_chains/0/source_facts/216",
+      "file": "core/contracts/task-view-fields.ts",
+      "line": 132,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "24798048b7562959122c5f77",
+      "kind": "source_guard_and_abrupt_branch",
+      "source_pointer": "/functional_chains/0/source_facts/217",
+      "file": "core/contracts/task-view-fields.ts",
+      "line": 133,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    },
+    {
+      "id": "e9ac9f9a1a2525d3ab4f49c7",
+      "kind": "ordered_source_assignment_attempt",
+      "source_pointer": "/functional_chains/0/source_facts/218",
+      "file": "core/contracts/task-view-fields.ts",
+      "line": 134,
+      "checks": {
+        "source_hash": true,
+        "span_hash": true,
+        "valid_span": true,
+        "byte_map": true,
+        "coordinate_space": true
+      }
+    }
+  ],
+  "failures": [],
+  "all_fact_anchors_match": true,
+  "database_opened": false,
+  "analysis_recomputed": false,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

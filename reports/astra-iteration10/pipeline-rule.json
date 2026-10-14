@@ -1,0 +1,430 @@
+{
+  "id": "cpb-astra-pipeline-retry-integrated",
+  "type": "parameter_budget_flow",
+  "original_claim": "正常 pipeline 提交的 --retries 经 metadata.maxRetries 保存，但受管理 worker 使用独立 maxRetries:3；队列失败路由按 failure kind 的局部表和 assignment.attempts 决策。所读生产链没有把提交的参数连接到明确的受管理重试预算；这不是没有 retry 能力。",
+  "entry": {
+    "file": "cli/commands/pipeline.ts",
+    "symbol": "run"
+  },
+  "producer": {
+    "owner": {
+      "file": "cli/commands/pipeline.ts",
+      "symbol": "parseCommonFlags"
+    },
+    "parameter_index": 0,
+    "option": "--retries",
+    "output_path": [
+      "retries"
+    ]
+  },
+  "request": {
+    "owner": {
+      "file": "cli/commands/pipeline.ts",
+      "symbol": "run"
+    },
+    "callee": "enqueue",
+    "argument_index": 1,
+    "field_path": [
+      "metadata",
+      "maxRetries"
+    ]
+  },
+  "worker": {
+    "owner": {
+      "file": "runtime/worker/managed-worker.ts",
+      "symbol": "main.processInbox"
+    },
+    "callee": "runJobWithServices",
+    "argument_index": 0,
+    "field_path": [
+      "maxRetries"
+    ]
+  },
+  "budgets": [
+    {
+      "owner": {
+        "file": "server/orchestrator/failure-router.ts",
+        "symbol": "FailureRouter.route"
+      },
+      "kind": "queue-attempt",
+      "counter": "attemptCount",
+      "limit": "maxRetries"
+    },
+    {
+      "owner": {
+        "file": "core/engine/phase-retry.ts",
+        "symbol": "runPhaseRetryLoops"
+      },
+      "kind": "phase",
+      "counter": "phaseRetryCount",
+      "limit": "phaseRetryTotalMax"
+    },
+    {
+      "owner": {
+        "file": "core/engine/run-job-execute-dag.ts",
+        "symbol": "runVerificationInfrastructureRetryLoop"
+      },
+      "kind": "verification-infrastructure",
+      "counter": "iteration",
+      "limit": "maxRetries"
+    }
+  ],
+  "sources": [
+    {
+      "file": "cli/cpb.ts",
+      "symbol": "main"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "enqueue"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "loadLocalQueue"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "saveLocalQueue"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "listQueue"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "normalizeQueue"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "withQueueMutation"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "withQueueLock"
+    },
+    {
+      "file": "server/services/agent/agent-config.ts",
+      "symbol": "resolveAgentsForEntry"
+    },
+    {
+      "file": "server/orchestrator/hub-orchestrator.ts",
+      "symbol": "HubOrchestrator.constructor"
+    },
+    {
+      "file": "server/orchestrator/hub-orchestrator.ts",
+      "symbol": "HubOrchestrator.tick"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler.constructor"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._preparePendingPool"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler.nextCandidates"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "AssignmentStore.constructor"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "AssignmentStore.getOrCreateAssignmentForEntry"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "AssignmentStore.createAttempt"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "WorkerStore.constructor"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "WorkerStore.writeInboxWithReceipt"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "WorkerStore.writeInbox"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "WorkerStore.claimInboxEntries"
+    },
+    {
+      "file": "runtime/worker/managed-worker.ts",
+      "symbol": "main"
+    },
+    {
+      "file": "bridges/engine-bridge.ts",
+      "symbol": "runJobWithServices"
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "symbol": "runJobWithServices"
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "symbol": "buildServices"
+    },
+    {
+      "file": "core/engine/run-job.ts",
+      "symbol": "runJob"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "toQueueEntries"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "isQueueEntry"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "queuePath"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "loadQueue"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "serializeQueue"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "writeAtomic"
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "symbol": "updateEntry"
+    },
+    {
+      "file": "shared/types.ts",
+      "symbol": "isRecord"
+    },
+    {
+      "file": "shared/types.ts",
+      "symbol": "recordValue"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._filterDagReady"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._filterByRetryDecisionDue"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._filterByProjectCapacity"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._reserveProjectCapacity"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._applyProjectReadinessGate"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._markLocalCodeIndexUnavailable"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._applyProviderCapacityGate"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler._smartRank"
+    },
+    {
+      "file": "server/orchestrator/scheduler.ts",
+      "symbol": "Scheduler.#resolveProjectLimits"
+    },
+    {
+      "file": "server/orchestrator/worker-supervisor.ts",
+      "symbol": "WorkerSupervisor.constructor"
+    },
+    {
+      "file": "server/orchestrator/worker-supervisor.ts",
+      "symbol": "WorkerSupervisor.ensureWorkerFor"
+    },
+    {
+      "file": "server/orchestrator/worker-supervisor.ts",
+      "symbol": "WorkerSupervisor.startWorker"
+    },
+    {
+      "file": "server/orchestrator/hub-orchestrator.ts",
+      "symbol": "HubOrchestrator._providerCapacity"
+    },
+    {
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "Reconciler.constructor"
+    },
+    {
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "Reconciler._finalizeQueue"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "AssignmentStore.getAssignment"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "AssignmentStore._readStateFile"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "AssignmentStore._writeState"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "AssignmentStore._withAssignmentLock"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "normalizeJsonValue"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "normalizeJsonRecord"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "receiptClone"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "inboxReceipt"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "WorkerStore._readLocalInboxJson"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "readLocalWorkerJsonObject"
+    },
+    {
+      "file": "shared/orchestrator/worker-store.ts",
+      "symbol": "readLocalWorkerJsonAuthority"
+    },
+    {
+      "file": "shared/fs-utils.ts",
+      "symbol": "writeJsonAtomic"
+    },
+    {
+      "file": "shared/fs-utils.ts",
+      "symbol": "jsonContent"
+    },
+    {
+      "file": "shared/fs-utils.ts",
+      "symbol": "tempPathFor"
+    },
+    {
+      "file": "shared/hub-maintenance.ts",
+      "symbol": "writeJsonDurableAtomic"
+    },
+    {
+      "file": "shared/orchestrator/worker-broker-client.ts",
+      "symbol": "WorkerBrokerClient.constructor"
+    },
+    {
+      "file": "shared/orchestrator/worker-broker-client.ts",
+      "symbol": "WorkerBrokerClient.#call"
+    },
+    {
+      "file": "shared/orchestrator/worker-broker-client.ts",
+      "symbol": "WorkerBrokerClient.claimInboxEntries"
+    },
+    {
+      "file": "shared/orchestrator/worker-broker-client.ts",
+      "symbol": "brokerResult"
+    },
+    {
+      "file": "shared/orchestrator/worker-broker-client.ts",
+      "symbol": "recordResult"
+    },
+    {
+      "file": "shared/orchestrator/worker-broker-client.ts",
+      "symbol": "inboxClaimsResult"
+    },
+    {
+      "file": "server/services/hub/worker-state-broker.ts",
+      "symbol": "readWorkerBrokerBody"
+    },
+    {
+      "file": "server/services/hub/worker-state-broker.ts",
+      "symbol": "handleWorkerStateBroker"
+    },
+    {
+      "file": "server/index.ts",
+      "symbol": "startHubServer"
+    },
+    {
+      "file": "server/index.ts",
+      "symbol": "sendJson"
+    },
+    {
+      "file": "shared/orchestrator/assignment-store.ts",
+      "symbol": "AssignmentStore.listAssignments"
+    },
+    {
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "Reconciler.reconcileAssignments"
+    },
+    {
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "Reconciler._finalizeAssignment"
+    },
+    {
+      "file": "server/orchestrator/reconciler.ts",
+      "symbol": "Reconciler._compensateFinalization"
+    },
+    {
+      "file": "server/services/executor-root.ts",
+      "symbol": "resolveExecutorRoot"
+    },
+    {
+      "file": "server/services/executor-root.ts",
+      "symbol": "executorEnv"
+    }
+  ],
+  "models": [
+    "ordinary-record-tree-flow-v1",
+    "standard-json-record-codec-v1",
+    "normal-async-callback-transfer-v1",
+    "source-derived-module-assembly-v1",
+    "normal-durable-record-channel-v1",
+    "normal-authenticated-json-broker-channel-v1"
+  ],
+  "invariant": {
+    "authority": "policy-declared",
+    "requested_budget_kind": "pipeline",
+    "relation": "request_field_controls_retry_authority",
+    "author_approved": false
+  },
+  "conditions": [
+    "限定原分析报告所选普通 CLI 参数、默认生产源码装配和受管理执行路径；各实际分支、guard、record/message 身份及字段构造必须从捕获源码建立。",
+    "声明版本有限普通数据记录、标准JSON、正常async/callback、默认模块和正常受认证broker/持久record协议；实际字段、codec、receiver、消息key和operation接线均由捕获源码建立。成功正常通道不证明网络/文件系统每次成功，也不覆盖注入fetch、外部executorRoot或任意第三方篡改。",
+    "静态判断不保证所选操作某次必然运行或成功；错误、取消、未调度、finalizer-only、旧记录复用和 opaque supervisor 分别保留。"
+  ],
+  "refutations": [
+    "请求值可能恰好也是 3；来源独立不证明该次数字不同。",
+    "enqueue 可能复用旧 pending 项；assignment 也有重用/merge 分支，不能当作本次请求新记录。",
+    "finalizer-only 不进入所选 engine 调用；未发生调度、调用或失败路由不构成某次运行故障。",
+    "queue、phase、DAG/node、verification infrastructure 及 job-store retry 是不同预算。",
+    "失败路由有 guard 前 early return 和 opaque supervisor；不报告所有 retry action 受一个比较支配或全程序从未读取 metadata。"
+  ],
+  "provenance": {
+    "authority": "independent-analysis-report",
+    "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+    "source_claim_id": "CPB-01",
+    "author_approved": false
+  }
+}

@@ -1,0 +1,968 @@
+{
+  "type": "function_item",
+  "text": "pub fn start_item(&self, id: &WorkItemId) -> Result<WorkRunStart, WorkRunSchedulingError> {\n        self.validate()?;\n        let item = self\n            .items\n            .iter()\n            .find(|item| {\n                &item.id == id\n           ",
+  "fields": {
+    "name": "identifier",
+    "parameters": "parameters",
+    "return_type": "generic_type",
+    "body": "block"
+  },
+  "children": [
+    {
+      "type": "visibility_modifier",
+      "text": "pub",
+      "fields": {},
+      "children": []
+    },
+    {
+      "type": "identifier",
+      "text": "start_item",
+      "fields": {},
+      "children": []
+    },
+    {
+      "type": "parameters",
+      "text": "(&self, id: &WorkItemId)",
+      "fields": {},
+      "children": [
+        {
+          "type": "self_parameter",
+          "text": "&self",
+          "fields": {},
+          "children": [
+            {
+              "type": "self",
+              "text": "self",
+              "fields": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "parameter",
+          "text": "id: &WorkItemId",
+          "fields": {
+            "pattern": "identifier",
+            "type": "reference_type"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "id",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "reference_type",
+              "text": "&WorkItemId",
+              "fields": {
+                "type": "type_identifier"
+              },
+              "children": [
+                {
+                  "type": "type_identifier",
+                  "text": "WorkItemId",
+                  "fields": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "generic_type",
+      "text": "Result<WorkRunStart, WorkRunSchedulingError>",
+      "fields": {
+        "type": "type_identifier",
+        "type_arguments": "type_arguments"
+      },
+      "children": [
+        {
+          "type": "type_identifier",
+          "text": "Result",
+          "fields": {},
+          "children": []
+        },
+        {
+          "type": "type_arguments",
+          "text": "<WorkRunStart, WorkRunSchedulingError>",
+          "fields": {},
+          "children": [
+            {
+              "type": "type_identifier",
+              "text": "WorkRunStart",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "type_identifier",
+              "text": "WorkRunSchedulingError",
+              "fields": {},
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "block",
+      "text": "{\n        self.validate()?;\n        let item = self\n            .items\n            .iter()\n            .find(|item| {\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.ite",
+      "fields": {},
+      "children": [
+        {
+          "type": "expression_statement",
+          "text": "self.validate()?;",
+          "fields": {},
+          "children": [
+            {
+              "type": "try_expression",
+              "text": "self.validate()?",
+              "fields": {},
+              "children": [
+                {
+                  "type": "call_expression",
+                  "text": "self.validate()",
+                  "fields": {
+                    "function": "field_expression",
+                    "arguments": "arguments"
+                  },
+                  "children": [
+                    {
+                      "type": "field_expression",
+                      "text": "self.validate",
+                      "fields": {
+                        "value": "self",
+                        "field": "field_identifier"
+                      },
+                      "children": [
+                        {
+                          "type": "self",
+                          "text": "self",
+                          "fields": {},
+                          "children": []
+                        },
+                        {
+                          "type": "field_identifier",
+                          "text": "validate",
+                          "fields": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "arguments",
+                      "text": "()",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "let_declaration",
+          "text": "let item = self\n            .items\n            .iter()\n            .find(|item| {\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                    ",
+          "fields": {
+            "pattern": "identifier",
+            "value": "try_expression"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "item",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "try_expression",
+              "text": "self\n            .items\n            .iter()\n            .find(|item| {\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                        &run.wo",
+              "fields": {},
+              "children": [
+                {
+                  "type": "call_expression",
+                  "text": "self\n            .items\n            .iter()\n            .find(|item| {\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                        &run.wo",
+                  "fields": {
+                    "function": "field_expression",
+                    "arguments": "arguments"
+                  },
+                  "children": [
+                    {
+                      "type": "field_expression",
+                      "text": "self\n            .items\n            .iter()\n            .find(|item| {\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                        &run.wo",
+                      "fields": {
+                        "value": "call_expression",
+                        "field": "field_identifier"
+                      },
+                      "children": [
+                        {
+                          "type": "call_expression",
+                          "text": "self\n            .items\n            .iter()\n            .find(|item| {\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                        &run.wo",
+                          "fields": {
+                            "function": "field_expression",
+                            "arguments": "arguments"
+                          },
+                          "children": [
+                            {
+                              "type": "field_expression",
+                              "text": "self\n            .items\n            .iter()\n            .find",
+                              "fields": {
+                                "value": "call_expression",
+                                "field": "field_identifier"
+                              },
+                              "children": [
+                                {
+                                  "type": "call_expression",
+                                  "text": "self\n            .items\n            .iter()",
+                                  "fields": {
+                                    "function": "field_expression",
+                                    "arguments": "arguments"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "field_expression",
+                                      "text": "self\n            .items\n            .iter",
+                                      "fields": {
+                                        "value": "field_expression",
+                                        "field": "field_identifier"
+                                      },
+                                      "children": [
+                                        {
+                                          "type": "field_expression",
+                                          "text": "self\n            .items",
+                                          "fields": {
+                                            "value": "self",
+                                            "field": "field_identifier"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "self",
+                                              "text": "self",
+                                              "fields": {},
+                                              "children": []
+                                            },
+                                            {
+                                              "type": "field_identifier",
+                                              "text": "items",
+                                              "fields": {},
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "type": "field_identifier",
+                                          "text": "iter",
+                                          "fields": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "arguments",
+                                      "text": "()",
+                                      "fields": {},
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "type": "field_identifier",
+                                  "text": "find",
+                                  "fields": {},
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "type": "arguments",
+                              "text": "(|item| {\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                        &run.work_item_id == id\n                            && matches!(\n   ",
+                              "fields": {},
+                              "children": [
+                                {
+                                  "type": "closure_expression",
+                                  "text": "|item| {\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                        &run.work_item_id == id\n                            && matches!(\n    ",
+                                  "fields": {
+                                    "parameters": "closure_parameters",
+                                    "body": "block"
+                                  },
+                                  "children": [
+                                    {
+                                      "type": "closure_parameters",
+                                      "text": "|item|",
+                                      "fields": {},
+                                      "children": [
+                                        {
+                                          "type": "identifier",
+                                          "text": "item",
+                                          "fields": {},
+                                          "children": []
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "type": "block",
+                                      "text": "{\n                &item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                        &run.work_item_id == id\n                            && matches!(\n           ",
+                                      "fields": {},
+                                      "children": [
+                                        {
+                                          "type": "binary_expression",
+                                          "text": "&item.id == id\n                    && work_item_is_runnable(item, &self.items)\n                    && !self.runs.iter().any(|run| {\n                        &run.work_item_id == id\n                            && matches!(\n                             ",
+                                          "fields": {
+                                            "left": "binary_expression",
+                                            "operator": "&&",
+                                            "right": "unary_expression"
+                                          },
+                                          "children": [
+                                            {
+                                              "type": "binary_expression",
+                                              "text": "&item.id == id\n                    && work_item_is_runnable(item, &self.items)",
+                                              "fields": {
+                                                "left": "binary_expression",
+                                                "operator": "&&",
+                                                "right": "call_expression"
+                                              },
+                                              "children": [
+                                                {
+                                                  "type": "binary_expression",
+                                                  "text": "&item.id == id",
+                                                  "fields": {
+                                                    "left": "reference_expression",
+                                                    "operator": "==",
+                                                    "right": "identifier"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "reference_expression",
+                                                      "text": "&item.id",
+                                                      "fields": {
+                                                        "value": "field_expression"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "field_expression",
+                                                          "text": "item.id",
+                                                          "fields": {
+                                                            "value": "identifier",
+                                                            "field": "field_identifier"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "identifier",
+                                                              "text": "item",
+                                                              "fields": {},
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "type": "field_identifier",
+                                                              "text": "id",
+                                                              "fields": {},
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "identifier",
+                                                      "text": "id",
+                                                      "fields": {},
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "type": "call_expression",
+                                                  "text": "work_item_is_runnable(item, &self.items)",
+                                                  "fields": {
+                                                    "function": "identifier",
+                                                    "arguments": "arguments"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "identifier",
+                                                      "text": "work_item_is_runnable",
+                                                      "fields": {},
+                                                      "children": []
+                                                    },
+                                                    {
+                                                      "type": "arguments",
+                                                      "text": "(item, &self.items)",
+                                                      "fields": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "identifier",
+                                                          "text": "item",
+                                                          "fields": {},
+                                                          "children": []
+                                                        },
+                                                        {
+                                                          "type": "reference_expression",
+                                                          "text": "&self.items",
+                                                          "fields": {
+                                                            "value": "field_expression"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "field_expression",
+                                                              "text": "self.items",
+                                                              "fields": {
+                                                                "value": "self",
+                                                                "field": "field_identifier"
+                                                              },
+                                                              "children": [
+                                                                {
+                                                                  "type": "self",
+                                                                  "text": "self",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                },
+                                                                {
+                                                                  "type": "field_identifier",
+                                                                  "text": "items",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "type": "unary_expression",
+                                              "text": "!self.runs.iter().any(|run| {\n                        &run.work_item_id == id\n                            && matches!(\n                                run.state,\n                                WorkRunState::Leased\n                                   ",
+                                              "fields": {},
+                                              "children": [
+                                                {
+                                                  "type": "call_expression",
+                                                  "text": "self.runs.iter().any(|run| {\n                        &run.work_item_id == id\n                            && matches!(\n                                run.state,\n                                WorkRunState::Leased\n                                    ",
+                                                  "fields": {
+                                                    "function": "field_expression",
+                                                    "arguments": "arguments"
+                                                  },
+                                                  "children": [
+                                                    {
+                                                      "type": "field_expression",
+                                                      "text": "self.runs.iter().any",
+                                                      "fields": {
+                                                        "value": "call_expression",
+                                                        "field": "field_identifier"
+                                                      },
+                                                      "children": [
+                                                        {
+                                                          "type": "call_expression",
+                                                          "text": "self.runs.iter()",
+                                                          "fields": {
+                                                            "function": "field_expression",
+                                                            "arguments": "arguments"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "field_expression",
+                                                              "text": "self.runs.iter",
+                                                              "fields": {
+                                                                "value": "field_expression",
+                                                                "field": "field_identifier"
+                                                              },
+                                                              "children": [
+                                                                {
+                                                                  "type": "field_expression",
+                                                                  "text": "self.runs",
+                                                                  "fields": {
+                                                                    "value": "self",
+                                                                    "field": "field_identifier"
+                                                                  },
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "self",
+                                                                      "text": "self",
+                                                                      "fields": {},
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "type": "field_identifier",
+                                                                      "text": "runs",
+                                                                      "fields": {},
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                },
+                                                                {
+                                                                  "type": "field_identifier",
+                                                                  "text": "iter",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "arguments",
+                                                              "text": "()",
+                                                              "fields": {},
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "type": "field_identifier",
+                                                          "text": "any",
+                                                          "fields": {},
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "type": "arguments",
+                                                      "text": "(|run| {\n                        &run.work_item_id == id\n                            && matches!(\n                                run.state,\n                                WorkRunState::Leased\n                                    | WorkRunState::Runn",
+                                                      "fields": {},
+                                                      "children": [
+                                                        {
+                                                          "type": "closure_expression",
+                                                          "text": "|run| {\n                        &run.work_item_id == id\n                            && matches!(\n                                run.state,\n                                WorkRunState::Leased\n                                    | WorkRunState::Runni",
+                                                          "fields": {
+                                                            "parameters": "closure_parameters",
+                                                            "body": "block"
+                                                          },
+                                                          "children": [
+                                                            {
+                                                              "type": "closure_parameters",
+                                                              "text": "|run|",
+                                                              "fields": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "identifier",
+                                                                  "text": "run",
+                                                                  "fields": {},
+                                                                  "children": []
+                                                                }
+                                                              ]
+                                                            },
+                                                            {
+                                                              "type": "block",
+                                                              "text": "{\n                        &run.work_item_id == id\n                            && matches!(\n                                run.state,\n                                WorkRunState::Leased\n                                    | WorkRunState::Running\n   ",
+                                                              "fields": {},
+                                                              "children": [
+                                                                {
+                                                                  "type": "binary_expression",
+                                                                  "text": "&run.work_item_id == id\n                            && matches!(\n                                run.state,\n                                WorkRunState::Leased\n                                    | WorkRunState::Running\n                             ",
+                                                                  "fields": {
+                                                                    "left": "binary_expression",
+                                                                    "operator": "&&",
+                                                                    "right": "macro_invocation"
+                                                                  },
+                                                                  "children": [
+                                                                    {
+                                                                      "type": "binary_expression",
+                                                                      "text": "&run.work_item_id == id",
+                                                                      "fields": {
+                                                                        "left": "reference_expression",
+                                                                        "operator": "==",
+                                                                        "right": "identifier"
+                                                                      },
+                                                                      "children": [
+                                                                        {
+                                                                          "type": "reference_expression",
+                                                                          "text": "&run.work_item_id",
+                                                                          "fields": {
+                                                                            "value": "field_expression"
+                                                                          },
+                                                                          "children": [
+                                                                            {
+                                                                              "type": "field_expression",
+                                                                              "text": "run.work_item_id",
+                                                                              "fields": {
+                                                                                "value": "identifier",
+                                                                                "field": "field_identifier"
+                                                                              },
+                                                                              "children": [
+                                                                                {
+                                                                                  "type": "identifier",
+                                                                                  "text": "run",
+                                                                                  "fields": {},
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "type": "field_identifier",
+                                                                                  "text": "work_item_id",
+                                                                                  "fields": {},
+                                                                                  "children": []
+                                                                                }
+                                                                              ]
+                                                                            }
+                                                                          ]
+                                                                        },
+                                                                        {
+                                                                          "type": "identifier",
+                                                                          "text": "id",
+                                                                          "fields": {},
+                                                                          "children": []
+                                                                        }
+                                                                      ]
+                                                                    },
+                                                                    {
+                                                                      "type": "macro_invocation",
+                                                                      "text": "matches!(\n                                run.state,\n                                WorkRunState::Leased\n                                    | WorkRunState::Running\n                                    | WorkRunState::CandidateReady\n                 ",
+                                                                      "fields": {
+                                                                        "macro": "identifier"
+                                                                      },
+                                                                      "children": [
+                                                                        {
+                                                                          "type": "identifier",
+                                                                          "text": "matches",
+                                                                          "fields": {},
+                                                                          "children": []
+                                                                        },
+                                                                        {
+                                                                          "type": "token_tree",
+                                                                          "text": "(\n                                run.state,\n                                WorkRunState::Leased\n                                    | WorkRunState::Running\n                                    | WorkRunState::CandidateReady\n                         ",
+                                                                          "fields": {},
+                                                                          "children": [
+                                                                            {
+                                                                              "type": "identifier",
+                                                                              "text": "run",
+                                                                              "fields": {},
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "type": "identifier",
+                                                                              "text": "state",
+                                                                              "fields": {},
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "type": "identifier",
+                                                                              "text": "WorkRunState",
+                                                                              "fields": {},
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "type": "identifier",
+                                                                              "text": "Leased",
+                                                                              "fields": {},
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "type": "identifier",
+                                                                              "text": "WorkRunState",
+                                                                              "fields": {},
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "type": "identifier",
+                                                                              "text": "Running",
+                                                                              "fields": {},
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "type": "identifier",
+                                                                              "text": "WorkRunState",
+                                                                              "fields": {},
+                                                                              "children": []
+                                                                            },
+                                                                            {
+                                                                              "type": "identifier",
+                                                                              "text": "CandidateReady",
+                                                                              "fields": {},
+                                                                              "children": []
+                                                                            }
+                                                                          ]
+                                                                        }
+                                                                      ]
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "type": "field_identifier",
+                          "text": "ok_or",
+                          "fields": {},
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "type": "arguments",
+                      "text": "(WorkRunSchedulingError::NoRunnableWorkItem)",
+                      "fields": {},
+                      "children": [
+                        {
+                          "type": "scoped_identifier",
+                          "text": "WorkRunSchedulingError::NoRunnableWorkItem",
+                          "fields": {
+                            "path": "identifier",
+                            "name": "identifier"
+                          },
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "text": "WorkRunSchedulingError",
+                              "fields": {},
+                              "children": []
+                            },
+                            {
+                              "type": "identifier",
+                              "text": "NoRunnableWorkItem",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "line_comment",
+          "text": "// Selection creates a new execution job; scheduler retries retain that job.",
+          "fields": {},
+          "children": []
+        },
+        {
+          "type": "let_declaration",
+          "text": "let attempt = 1;",
+          "fields": {
+            "pattern": "identifier",
+            "value": "integer_literal"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "attempt",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "integer_literal",
+              "text": "1",
+              "fields": {},
+              "children": []
+            }
+          ]
+        },
+        {
+          "type": "let_declaration",
+          "text": "let mut work_item = item.clone();",
+          "fields": {
+            "pattern": "identifier",
+            "value": "call_expression"
+          },
+          "children": [
+            {
+              "type": "mutable_specifier",
+              "text": "mut",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "identifier",
+              "text": "work_item",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "call_expression",
+              "text": "item.clone()",
+              "fields": {
+                "function": "field_expression",
+                "arguments": "arguments"
+              },
+              "children": [
+                {
+                  "type": "field_expression",
+                  "text": "item.clone",
+                  "fields": {
+                    "value": "identifier",
+                    "field": "field_identifier"
+                  },
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "text": "item",
+                      "fields": {},
+                      "children": []
+                    },
+                    {
+                      "type": "field_identifier",
+                      "text": "clone",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "arguments",
+                  "text": "()",
+                  "fields": {},
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "expression_statement",
+          "text": "work_item.state = WorkItemState::InProgress;",
+          "fields": {},
+          "children": [
+            {
+              "type": "assignment_expression",
+              "text": "work_item.state = WorkItemState::InProgress",
+              "fields": {
+                "left": "field_expression",
+                "right": "scoped_identifier"
+              },
+              "children": [
+                {
+                  "type": "field_expression",
+                  "text": "work_item.state",
+                  "fields": {
+                    "value": "identifier",
+                    "field": "field_identifier"
+                  },
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "text": "work_item",
+                      "fields": {},
+                      "children": []
+                    },
+                    {
+                      "type": "field_identifier",
+                      "text": "state",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "scoped_identifier",
+                  "text": "WorkItemState::InProgress",
+                  "fields": {
+                    "path": "identifier",
+                    "name": "identifier"
+                  },
+                  "children": [
+                    {
+                      "type": "identifier",
+                      "text": "WorkItemState",
+                      "fields": {},
+                      "children": []
+                    },
+                    {
+                      "type": "identifier",
+                      "text": "InProgress",
+                      "fields": {},
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "call_expression",
+          "text": "Ok(WorkRunStart { work_item, attempt })",
+          "fields": {
+            "function": "identifier",
+            "arguments": "arguments"
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "text": "Ok",
+              "fields": {},
+              "children": []
+            },
+            {
+              "type": "arguments",
+              "text": "(WorkRunStart { work_item, attempt })",
+              "fields": {},
+              "children": [
+                {
+                  "type": "struct_expression",
+                  "text": "WorkRunStart { work_item, attempt }",
+                  "fields": {
+                    "name": "type_identifier",
+                    "body": "field_initializer_list"
+                  },
+                  "children": [
+                    {
+                      "type": "type_identifier",
+                      "text": "WorkRunStart",
+                      "fields": {},
+                      "children": []
+                    },
+                    {
+                      "type": "field_initializer_list",
+                      "text": "{ work_item, attempt }",
+                      "fields": {},
+                      "children": [
+                        {
+                          "type": "shorthand_field_initializer",
+                          "text": "work_item",
+                          "fields": {},
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "text": "work_item",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "type": "shorthand_field_initializer",
+                          "text": "attempt",
+                          "fields": {},
+                          "children": [
+                            {
+                              "type": "identifier",
+                              "text": "attempt",
+                              "fields": {},
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

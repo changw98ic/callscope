@@ -1,0 +1,2515 @@
+{
+  "kind": "independent_complete_saved_relation_comparison",
+  "method": "Recursive whole-finding comparison, retaining list order, every non-identity value and bijective identity references; only authenticated publication-version and explicitly registered lexical component-version fields differ; no fields are deleted or semantic values normalized. Navigation abstract-N IDs are scoped to their actual _Engine instance: the main producer/consumer engine and each separately constructed counterexample engine.",
+  "abstract_identity_scope_source": {
+    "file": "callscope/navigation_analysis.py",
+    "sha256": "5e4b23130ce301c23937f504b71a39a54ebcb064d84a0f5c4ed77928201e70be",
+    "basis": "analyze_navigation_contracts constructs one _Engine for producer/consumer, then a fresh _Engine inside each counterexample selector iteration; value() allocates abstract-N from self.counter."
+  },
+  "analyzer_or_target_executed": false,
+  "tests_run": false,
+  "comparisons": [
+    {
+      "repository": "codepatchbay",
+      "rule_id": "cpb-astra-active-key-authority",
+      "inputs": [
+        {
+          "path": "reports/astra-iteration8/codepatchbay-summary.json",
+          "sha256": "b3d73bc9b59cf193bed68219e44e95e75ce5892143b6b08b81a2a7c0049ede36"
+        },
+        {
+          "path": "reports/astra-iteration9/codepatchbay-summary.json",
+          "sha256": "8f86f49dc1525f496759b6dda1b2c57a2015c9587782f8fccd52a3e955119e1e"
+        }
+      ],
+      "input_bytes_stable": true,
+      "source_hash_unchanged": true,
+      "policy_hash_unchanged": true,
+      "all_non_identity_values_and_relations_preserved": true,
+      "identity_mapping": [
+        {
+          "scope": "published-finding",
+          "before": "028cd94ff871af6eae99d8fb22fd7098ebfc6fe83133794ebe709165d734db25",
+          "after": "70b06f2f17d86e80eb472081ea6ab230d640e543d981f9d410c3fc132a41b60d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0d439b1bd7d4c2775f751ea1068435e4761b227a284da76c5deeb3646ba13ba0",
+          "after": "0d439b1bd7d4c2775f751ea1068435e4761b227a284da76c5deeb3646ba13ba0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0f48785fb2b8e0a5f893ce2a0b7c899d3072f564a84f633413d7888c8e745bea",
+          "after": "401d27c423bb824733f91aa1def5b3096132285cdc74a07ddc648e5c27e00d38"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0fab66397b1f29377b6d75fb266bf8c49f3852bc3e91887320f5cd1d9b9869ce",
+          "after": "7e48ebb1b36cccaa61d7c3e969a48adbc7f01ef076c314599760c8a3bd7013b0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "132e3685c55bc7599d63515b",
+          "after": "132e3685c55bc7599d63515b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1a1352ec78b8d81549420737",
+          "after": "1a1352ec78b8d81549420737"
+        },
+        {
+          "scope": "published-finding",
+          "before": "275c79b3b2305830e9ca5819012c5aa0361c49de093f9c4364401399b01b9cb0",
+          "after": "d3a713e96c80b85c01a9742e1348e867a8b1e2adafcebba399c1ae1eaef90a10"
+        },
+        {
+          "scope": "published-finding",
+          "before": "29c3f1e0d8e66d7de787805f",
+          "after": "29c3f1e0d8e66d7de787805f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "2c99ab7045b0e1ce783bfe35",
+          "after": "2c99ab7045b0e1ce783bfe35"
+        },
+        {
+          "scope": "published-finding",
+          "before": "32ebea8ebf05691a52a1bbf76a4dc711fc3053d1691a3a2fcf25502e7e023f19",
+          "after": "f1b44e8ea754c69c3d13b27bf3b42b9e64665e7111e9606763e760260a6813ea"
+        },
+        {
+          "scope": "published-finding",
+          "before": "35643989b8ff9a0e1b8ed3f3",
+          "after": "35643989b8ff9a0e1b8ed3f3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "377fb9701cdc2ecfbda644d6be8279316c45057af839aa52f35a5bf98f1c0927",
+          "after": "52889225d1f721b424fce361262e4c929a303007ae902a0f478d60f3a5c68054"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977",
+          "after": "731ae3b53582e86de4c9c786c224fc99aa45154099b7738ce8652be0f5a3f336"
+        },
+        {
+          "scope": "published-finding",
+          "before": "57e9084b74af92dd40852ba07d53189d0f711c82cb2a45b342c5ef4c9c643d3c",
+          "after": "2e4749f5ad58c057a6826154bc6ae19488d6a70a8db05c173753189ad2bef6c9"
+        },
+        {
+          "scope": "published-finding",
+          "before": "623ae85327f6de59ec74b54b",
+          "after": "623ae85327f6de59ec74b54b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6db5cc047c0a4f5105e788cef7a50c09a2331bbcbab8c83359c09d2849039b4c",
+          "after": "03a6f702cf243f5f8242f9f181bed9df9662844b76c1c878fcd8a462170cd464"
+        },
+        {
+          "scope": "published-finding",
+          "before": "790440a30ba55590ef2b31f6",
+          "after": "790440a30ba55590ef2b31f6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7fcf38d23c5cad03b29a0269",
+          "after": "7fcf38d23c5cad03b29a0269"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8221a7e397571514cfc4a348",
+          "after": "8221a7e397571514cfc4a348"
+        },
+        {
+          "scope": "published-finding",
+          "before": "86a783c03d2cdf2327f819df333c5ee39ac77cad465f399ea5b652fab53b8b4e",
+          "after": "f5f11734c11672352a2cb135c611d13c060c0e3ecedd7df299aea7b8b8402c21"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8ab42d436d1c8316176c84811f257c2a5d69c1a2c160efb41d91321eddd106ca",
+          "after": "9f9c5e15d8f69018824661de65ae4dc15ae335a257275aec14c4910e3680e4a3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "915766f56223988c02b0e6f4",
+          "after": "915766f56223988c02b0e6f4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "958c78d457c8e9f90038438b570ee9477925c6ec22e5031ba126a9bc6e1dd1a2",
+          "after": "bd55a7392eff37c5202601fcb9d67a79cc8176d360ca17311489f847c43e6524"
+        },
+        {
+          "scope": "published-finding",
+          "before": "9f60dace7723f3fb59a1d4b9",
+          "after": "9f60dace7723f3fb59a1d4b9"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c185e9de38cdfe6db3a9ae4fa0a25a7d3f0406dfc6dfb16aca44c41770bf2f6f",
+          "after": "891cac099a1d61150f949f608ea6479a0f45d2c8373881e3e1cb4ecf98206708"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c22b295931c4407cf6ee42da",
+          "after": "c22b295931c4407cf6ee42da"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c51bb5415b291279ce2b12cd87ee7bb0ac81bdce9d8430f00b96c810c618cf45",
+          "after": "bbf320449ca63556551d13452f5e499fbe2141ac20bd580ea38d6c8405d97564"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d393d93528b4c8e53de0cd5a26452136d419c467dc18dc793c52e799792a23b8",
+          "after": "6c400ceb05fa4b3d62313130589ff7a820f5fa87eed39849530dd3965140af10"
+        },
+        {
+          "scope": "published-finding",
+          "before": "db87ffa0b18a3d60064bdef339acc4448b58dc9f3754459ea5bfdd1b4b47fdfe",
+          "after": "d9ec472819f55256733f1be219947a13a5e78421fee80f61afd2cc4385ba614b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ddaff3daf3ba5eefed05ada2",
+          "after": "ddaff3daf3ba5eefed05ada2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e001bc6f98be2c87048702dc0cff9a5cf2416b48a2c9e851b599e72af0abdc2d",
+          "after": "98e8bb22f86f509354289bbf5d5861adce472b5adcd3b1b88e7619ad2a7987a6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e8a25ed8b0f586487af1bb56",
+          "after": "5d5fd46b6cf40239d56439f1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "edc4c2e76ba6728a9c00437cea4cc4cc3ba78c22eaa33abfca70dc2a4afa0eea",
+          "after": "1083142aa073cf7f2bfa58c34b7e718a9f943584def2a4be4ed4d9aa26228432"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f544491145e5a215befd5788",
+          "after": "f544491145e5a215befd5788"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f5555fd23e39ef7f38348511",
+          "after": "f5555fd23e39ef7f38348511"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f56fc846da640061bd693bd5",
+          "after": "baee0264d48e6dd806ede818"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f60cd363c5faefa2913930411ed74ce3be0249efd9d6b781d0c917e8b0cbdcc7",
+          "after": "ba118701764a58b2615925ab1fefa9e9454d2426ebb3c727cdf5508f8b705e95"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f76a9dd13eec5a891cb9827e",
+          "after": "f76a9dd13eec5a891cb9827e"
+        }
+      ],
+      "identity_occurrence_counts": {
+        "snapshot_id": 180,
+        "semantic_parse_id": 189,
+        "edge_id": 13,
+        "graph_edge_id": 3,
+        "id": 8,
+        "binding_id": 17,
+        "declaration_id": 17
+      },
+      "authenticated_publication_version_changes": [
+        {
+          "path": "evidence/0/details/captured_source_inputs/0/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/0/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/0/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/1/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/1/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/1/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/2/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/2/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/2/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/3/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/3/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/3/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/4/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/4/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/4/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        }
+      ],
+      "authenticated_component_version_changes": [
+        {
+          "path": "evidence/0/details/source_facts/comparison/status_domain/trusted_model/constructor_binding/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/comparison/status_domain/trusted_model/constructor_guard/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/comparison/status_domain/trusted_model/constructor_guard/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/comparison/status_domain/trusted_model/receiver_binding_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/facade/resource/read_binding_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/facade/resource/write_binding_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/lifecycle/acquire_primitive/binding_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/lifecycle/acquisition_guard/callback_result_forwarding/0/callback_parameter_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/lifecycle/acquisition_guard/callback_result_forwarding/1/callback_parameter_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/lifecycle/acquisition_guard/callback_result_forwarding/2/callback_parameter_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/lifecycle/acquisition_guard/flag_binding_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/predicates/array_freezer_model/object_guard/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/predicates/array_freezer_model/object_guard/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/predicates/terminal_set_initialization_relation/constructor_binding/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/predicates/terminal_set_initialization_relation/constructor_guard/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/predicates/terminal_set_initialization_relation/constructor_guard/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/predicates/terminal_set_initialization_relation/receiver_binding_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/wrapper_forwarding/0/callback_binding_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_facts/wrapper_forwarding/0/resource_binding_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        }
+      ],
+      "differences": [],
+      "graph_node_ids_identical": true,
+      "graph_edge_ids_identical": true
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-astra-navigation-context",
+      "inputs": [
+        {
+          "path": "reports/astra-iteration8/winwincode-summary.json",
+          "sha256": "3186bead53bacac4ca2272047f456d8af614320978a54e45bf6febbaa09f1232"
+        },
+        {
+          "path": "reports/astra-iteration9/winwincode-summary.json",
+          "sha256": "60675b300c532c4fdcebbf1dbb1f550199cff9082d946d8b512fbc9eb42c94af"
+        }
+      ],
+      "input_bytes_stable": true,
+      "source_hash_unchanged": true,
+      "policy_hash_unchanged": true,
+      "all_non_identity_values_and_relations_preserved": true,
+      "identity_mapping": [
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-103",
+          "after": "abstract-118"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-12",
+          "after": "abstract-12"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-123",
+          "after": "abstract-123"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-125",
+          "after": "abstract-125"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-133",
+          "after": "abstract-148"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-152",
+          "after": "abstract-152"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-158",
+          "after": "abstract-158"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-21",
+          "after": "abstract-21"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-26",
+          "after": "abstract-26"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-27",
+          "after": "abstract-27"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-28",
+          "after": "abstract-28"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-29",
+          "after": "abstract-29"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-3",
+          "after": "abstract-3"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-30",
+          "after": "abstract-30"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-31",
+          "after": "abstract-31"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-33",
+          "after": "abstract-33"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-35",
+          "after": "abstract-35"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-4",
+          "after": "abstract-4"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-43",
+          "after": "abstract-58"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-5",
+          "after": "abstract-5"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-6",
+          "after": "abstract-6"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-63",
+          "after": "abstract-63"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-65",
+          "after": "abstract-65"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-7",
+          "after": "abstract-7"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-73",
+          "after": "abstract-88"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-93",
+          "after": "abstract-93"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-95",
+          "after": "abstract-95"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-1",
+          "after": "abstract-1"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-115",
+          "after": "abstract-115"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-117",
+          "after": "abstract-117"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-122",
+          "after": "abstract-131"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-125",
+          "after": "abstract-140"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-143",
+          "after": "abstract-143"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-151",
+          "after": "abstract-151"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-16",
+          "after": "abstract-16"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-178",
+          "after": "abstract-178"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-180",
+          "after": "abstract-180"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-181",
+          "after": "abstract-181"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-182",
+          "after": "abstract-182"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-183",
+          "after": "abstract-183"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-184",
+          "after": "abstract-184"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-188",
+          "after": "abstract-188"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-192",
+          "after": "abstract-192"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-199",
+          "after": "abstract-199"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-200",
+          "after": "abstract-200"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-201",
+          "after": "abstract-201"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-21",
+          "after": "abstract-21"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-211",
+          "after": "abstract-211"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-212",
+          "after": "abstract-212"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-214",
+          "after": "abstract-214"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-215",
+          "after": "abstract-215"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-22",
+          "after": "abstract-22"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-23",
+          "after": "abstract-23"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-24",
+          "after": "abstract-24"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-25",
+          "after": "abstract-25"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-26",
+          "after": "abstract-26"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-28",
+          "after": "abstract-28"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-3",
+          "after": "abstract-3"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-30",
+          "after": "abstract-30"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-38",
+          "after": "abstract-53"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-4",
+          "after": "abstract-4"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-5",
+          "after": "abstract-5"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-57",
+          "after": "abstract-57"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-59",
+          "after": "abstract-59"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-6",
+          "after": "abstract-6"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-67",
+          "after": "abstract-82"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-86",
+          "after": "abstract-86"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-88",
+          "after": "abstract-88"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-96",
+          "after": "abstract-111"
+        },
+        {
+          "scope": "published-finding",
+          "before": "00ffc055f285471434fc0ad6",
+          "after": "4bfbdb2a29f1a37c0a6ed459"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0151bf79d52466ad0002b8e6",
+          "after": "fa4bf08464f6944f8d9cbf8a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "02900966ba4e6905a7736dc4",
+          "after": "afa1e52588922cd4fbc2c768"
+        },
+        {
+          "scope": "published-finding",
+          "before": "046d9fa064374036bb58927a",
+          "after": "7a4966c2601d3abbb7ce5ffa"
+        },
+        {
+          "scope": "published-finding",
+          "before": "050c6227260447031fb6a0ca",
+          "after": "28b74d5a5ec213625ede4360"
+        },
+        {
+          "scope": "published-finding",
+          "before": "05e157b82bab235cbca99877",
+          "after": "3dc5289191013ede5594adbf"
+        },
+        {
+          "scope": "published-finding",
+          "before": "06edfbdbcd8d55cd56ff6591",
+          "after": "8de2b1665afc37b7603978c5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "078ce055f1a22421e0ed3d35",
+          "after": "928a57f1de612920c604ad7d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "08f9d12ba1324db5cdb63276",
+          "after": "309da2a19b2eb6a29db100d4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0b1133e2b62659029e32a874",
+          "after": "4967ec6a9a8c56cb4ce6d5b5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0fc4f9ec779d3a32b1c36b2a",
+          "after": "9f206345a6e910c0b8bb873e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "103c5c83a3e9c55010a38168",
+          "after": "bb621adcc365d1b3b217602a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1295eeb007d425a18356ea8961c05fea811c0d5399d9140668a5063e03967f2b",
+          "after": "1295eeb007d425a18356ea8961c05fea811c0d5399d9140668a5063e03967f2b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "13a64989566cb19c4268d936bc87a68e3ca8fb09a20f8f131980c0d5bcbcca03",
+          "after": "8e7521371f98e8122a3a359def00d0caf9254ae1be3c68e93a9413caca2e1179"
+        },
+        {
+          "scope": "published-finding",
+          "before": "14d39c1caca4838c54673e18",
+          "after": "5bd76c02c115252a61aec8de"
+        },
+        {
+          "scope": "published-finding",
+          "before": "15b9c6498ddfcabd54b78e14",
+          "after": "f18ea9e7a4f7e041c7a1b971"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1705f2258ff43d0c7be025d1",
+          "after": "d2f74672f14de3c5c9d8c00d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "17f61c6693c6cdfe6b323649",
+          "after": "dd10f05a7aa4619541a8ffbf"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1844b932fd9c78f229cffad4",
+          "after": "1844b932fd9c78f229cffad4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1a73d6e39cdcccc03ebc8dd7",
+          "after": "241c3e5fd64d67dd45983324"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1b30bba0872a75a085a5d6d7d8e95851245b97e87feda261d9d60278d4304d09",
+          "after": "1b30bba0872a75a085a5d6d7d8e95851245b97e87feda261d9d60278d4304d09"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1c145e54f45ec37ee2d46f08",
+          "after": "dfed4e7be2948a7072d0121d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1cc61b9a35d228b74f210b62",
+          "after": "01f77b254235088ebdcce2ed"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1ce4e3333fb70f206c60d160",
+          "after": "032728c550708df42e79749b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1d1682eff12cc932a41c0a6f",
+          "after": "ca5f25ff15dbd08327a034fd"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1de1e5828cd8370742786530",
+          "after": "cd5a267cd3d740959cc588d2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1f11eb78c4c84e581eefd6ac",
+          "after": "01a4da369ec6663f06cd1e82"
+        },
+        {
+          "scope": "published-finding",
+          "before": "22b37fb8e2c97a13800f3d5d",
+          "after": "dbd37bb8b3095c4d0b5ac0f0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "22ba443fd0e31570d0cbb15c",
+          "after": "3330713636c4bab06d7ad55f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "265b4b79f9ea56f6927d6cfa",
+          "after": "69fb7a482320d8763f578812"
+        },
+        {
+          "scope": "published-finding",
+          "before": "26c3fec06e59f39a6a307918c2a4d270035e7c91fd7faf8707a8091dfe917018",
+          "after": "44e4a76760dfeeb550eb682ba33b4787c4be7083d4fe242a670467ee2ebd1973"
+        },
+        {
+          "scope": "published-finding",
+          "before": "2a3da10c45396820dbba686e",
+          "after": "a977d596225ab2f6acd54dc7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "2aec6034d6c381b065bac572",
+          "after": "0c05778acce5c4c0c64a5bc3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "2c4cbabfb364936509a81174",
+          "after": "5adec6a6628d73cd0440e267"
+        },
+        {
+          "scope": "published-finding",
+          "before": "2dac4671da27334ffa3197cd",
+          "after": "6159e653815999336210852d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3122721701fa5a2fefc6ab68",
+          "after": "c2eaff192b7353511bcf94c6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "344fa8ced811145c423b24db",
+          "after": "a2b0f6bfc3bfc687b5af7554"
+        },
+        {
+          "scope": "published-finding",
+          "before": "34805552ab0f4239db285b64",
+          "after": "8db8f0fdb3b07eb93640aee0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "35d10bd511def4c65c0f2366",
+          "after": "ab23443dfc1cb70af90a1258"
+        },
+        {
+          "scope": "published-finding",
+          "before": "368312a0024b218852a73e35",
+          "after": "3800ee9919ed364b8ab14813"
+        },
+        {
+          "scope": "published-finding",
+          "before": "369bb4bc977647313c9aee94",
+          "after": "e268b51f0cc5bb410b8a4d83"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3a54ecdb6a7fa25d973b715c",
+          "after": "ec69158e850f8a4a1afd1da6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3a8c408ba2c74c5466e6eb38",
+          "after": "c90a1096c467e32100b5efe1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3ed954b2ede9f4e2e53758b2",
+          "after": "81ba297d2ae8842112a8193c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "42a84ccf70a26bf54f63af80",
+          "after": "5b9a3f9798c9e7151e17390a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "42bd8bca7edd0f8fdc19d521",
+          "after": "3ad78a40d10d54702a1b49e6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "430065143ce421eb099bc88c",
+          "after": "5f559b2b75c068d0a4604496"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4343f5042ef817eb23797e54",
+          "after": "a55146f52cc983ffd1a5a6fb"
+        },
+        {
+          "scope": "published-finding",
+          "before": "437c716d9e740ba30e8a384b",
+          "after": "ddd9cf139a2076dde81c1537"
+        },
+        {
+          "scope": "published-finding",
+          "before": "45261d1727d62c0136e2b10e11d44658128cd319b2e1e96882236487ad73e66f",
+          "after": "45261d1727d62c0136e2b10e11d44658128cd319b2e1e96882236487ad73e66f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "45e122c9de952f2807785667",
+          "after": "2cb4d793fc58d1d6d7590d60"
+        },
+        {
+          "scope": "published-finding",
+          "before": "474b91665bcf7d611cc0f0c7",
+          "after": "2cfaee482f2b7097d58aacf6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "49227d325a1c85bf37a284ce",
+          "after": "e1a2b0dbe08d0658faa10ec0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4adb980955bf5227dde28d2b",
+          "after": "8865432bfb86c8033cc9a4b0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4b5d0c0629448482090a89d5",
+          "after": "cbcbe26a602222fa8104d591"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4badd8907cdf442743a1bd2c",
+          "after": "b0e2591c1845e62bd0f0c0d1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4d46e6c806098e8c1b6dfb00",
+          "after": "50a9861ddc6ec8f2267528e3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4d6009db42a4a1168ecb0612",
+          "after": "9a48ad5dbe5ba04e8708e4a0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4f361fe3df20185ad2910df4",
+          "after": "40f1ddd137abc5be5e43cee6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4f96f7de599dd7fae809bf12",
+          "after": "58c086defdafc4d65dc6c58a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4fa1b585e20f558d89225e08",
+          "after": "90eee4605c917eba4cdb8f7e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "525a837da919b0a1098fce30",
+          "after": "525a837da919b0a1098fce30"
+        },
+        {
+          "scope": "published-finding",
+          "before": "54ac58234b51eba8280565d1",
+          "after": "5b29d82254990dcf18ec6753"
+        },
+        {
+          "scope": "published-finding",
+          "before": "56781938f2409dee8b5da9557980968840cb81e7d9e6f3dddc26a9bd8187df4d",
+          "after": "56781938f2409dee8b5da9557980968840cb81e7d9e6f3dddc26a9bd8187df4d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5af1283dc1e987e689379579",
+          "after": "0aaa796eae4aa055888b51b8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5b42d7e036217d7ace02a7adcfa683671a713e62b65b6f9fa26ea50ee3aab634",
+          "after": "a630274c69c7be85924cdb035d7ad3c07851a1779230f75602892a9483d4b653"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5d106352965a92b1f17c7962",
+          "after": "5d106352965a92b1f17c7962"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5d9a1e32d3933cfef0d31ae6",
+          "after": "71b707de8796e69e20b07249"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5fb8a43c8b84893a4c703f72",
+          "after": "421de027b900aa8b7253e599"
+        },
+        {
+          "scope": "published-finding",
+          "before": "60dc3cc26fe7c2be3428f7dc",
+          "after": "b800e281903b6820ce2c27ce"
+        },
+        {
+          "scope": "published-finding",
+          "before": "61004fa8e78649e076ab56e6f3b69f194e27b2cc3e77ca1717dca4d99ba2ac62",
+          "after": "636852b276397d0c87640f93c85b588b1d40736f98272532a24d2477e61983cd"
+        },
+        {
+          "scope": "published-finding",
+          "before": "615c8c972ee5457154b80050ef4ef5b0a05a31de730ad408e41bea8813582bf0",
+          "after": "de83f444a75b10687438265cc85faebe4328f201bedda39681dcf7326bf6894e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "61ace2ddf84e2d5f2183dbca8e1a00ace3ee9a39d7dcbbab7ae3efa16a1083a5",
+          "after": "6a74eafd950e7578e57c8d3f9fa08c759fbec9d4de57bf06ee4e3ccff79a78fe"
+        },
+        {
+          "scope": "published-finding",
+          "before": "63ebc03273e38f2768da5a28",
+          "after": "2af598509f17e215879fc205"
+        },
+        {
+          "scope": "published-finding",
+          "before": "64b6ff2096ac30e06413f5cb9bda11a887ad5495e068d9277316e143bf4b0732",
+          "after": "64b6ff2096ac30e06413f5cb9bda11a887ad5495e068d9277316e143bf4b0732"
+        },
+        {
+          "scope": "published-finding",
+          "before": "64e333ea3a531d9a94b51fbe",
+          "after": "e9a883ff2af47c0d762c3a82"
+        },
+        {
+          "scope": "published-finding",
+          "before": "660b609c5f6ec59b83527cd3",
+          "after": "2f20919799aeef4301657c8d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "662086d1d9edecdb85493435",
+          "after": "37df4b89031b32a64b04082d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "66322d7d49fad78a7cb47c88",
+          "after": "bc99044b8c36a38c29984a58"
+        },
+        {
+          "scope": "published-finding",
+          "before": "685f648c3f15c5126bc900a34502f4bb1488dacfea35cc29d57dfb5f7ee51622",
+          "after": "685f648c3f15c5126bc900a34502f4bb1488dacfea35cc29d57dfb5f7ee51622"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6babdab707e8a3e349adfe9f",
+          "after": "7b357f02555c29d25a5d47ff"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6c06b0239efcdc9ee5f952e7",
+          "after": "c0ae9c205abc160bf14f666c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6c852552fc255c646b136c3b84e2b99be265e30e92b78070ebebac090b4b4293",
+          "after": "3242aafa7f754417c34c76cf98afdfa8f32e86f99f7eb08180a82fb187106ec6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6ce87b4d8f4c6f5e4570b252",
+          "after": "ebd78eb521780a731c5afd01"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6d49aed27ad5e3f4d6df6629",
+          "after": "2d8dfdfb4495fa69e3bc86d4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6e860e944366394ae69ebc6f",
+          "after": "a46c6794ef895e43da961f8d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6ef766ae65ec13eb342906d9",
+          "after": "0402bb5c1edb8219480b2b81"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7538a14814436f7d257eb1ac",
+          "after": "cbb21a9069ea5ffb9d99df0c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "75bad3cce1d440e9bff9f349",
+          "after": "e0f4cef6aeac620c521f5ca5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "761cf6ddc50b122a06323335",
+          "after": "fcd65c64633f8fda509d4d98"
+        },
+        {
+          "scope": "published-finding",
+          "before": "776faf1fd38aedf357cb54c59adaa2a5bd379e2af011496781a90ec7d5b069dc",
+          "after": "776faf1fd38aedf357cb54c59adaa2a5bd379e2af011496781a90ec7d5b069dc"
+        },
+        {
+          "scope": "published-finding",
+          "before": "791ea3139606701275a1ca66",
+          "after": "0e6274913fb2fdb161295815"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7b927f3c65ea273b34b62bb7",
+          "after": "f8d58d46e0dc0e27565a4cc7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "821c1342f96a71fd893e5492",
+          "after": "821c1342f96a71fd893e5492"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8251ec436bc47e99846ce78824832b103e443f2770883e5894f879ad1983a466",
+          "after": "9007a9c777edb6a76654b81d5edb7d0fbfd69d5420f3b2bdb1bb1a1f9e81e520"
+        },
+        {
+          "scope": "published-finding",
+          "before": "850d2d49d44c97fe8ec4b00c",
+          "after": "84a89e087e44277951b33730"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8658dbeec499284ead89a3a06e349dffebdd71f418f6e82c3bbeb79097b14045",
+          "after": "4217adc126284404e0f375d2b921300da87746ef40f703c729f683bce0f33001"
+        },
+        {
+          "scope": "published-finding",
+          "before": "87db1888ef9ff28fe76daac5",
+          "after": "f192ea26e77fc06cb9694e32"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8936726be3e4f3e2802ec20a",
+          "after": "8936726be3e4f3e2802ec20a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8faf446b4d5b9936f3c23b41",
+          "after": "1b37b8f06b88e6c89f99120e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "9136f7483d956e256c892964",
+          "after": "f7600a92e9b848b36206ea14"
+        },
+        {
+          "scope": "published-finding",
+          "before": "929e9977faf050b6e46d2a24917e19a26ba8318fcd89b8d4b7546c13008900d2",
+          "after": "929e9977faf050b6e46d2a24917e19a26ba8318fcd89b8d4b7546c13008900d2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "9319e83c9a703135460e5e6d",
+          "after": "ea98c204200585638730ee0a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "93635054d822ea129f6ba5fc95bd9384e456166b0ada0d49741df6451f46fcf3",
+          "after": "93635054d822ea129f6ba5fc95bd9384e456166b0ada0d49741df6451f46fcf3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "94354bf3067836d10d108716",
+          "after": "33a4a352d33c046011e380f4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "94a990c664ff9d6619ff6154",
+          "after": "fc8e26ab54d4e05983d9da5a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "9b5cc1c89385c22ece7f80c9",
+          "after": "c9ea44f1686e7c68c1a9fa37"
+        },
+        {
+          "scope": "published-finding",
+          "before": "9c791af9bf562d6f0f36e09ddeb1f21b4a3445b649064d21ec4d34d33c6abece",
+          "after": "2b298f494c99d0f0040f7a8b856421813066caa21d7d6d26d36bb573d41626be"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a2f7f759c39a28c7f6e5fde8",
+          "after": "da66ad68e50df410b5e216fb"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a3d6021535fe652a88a19166",
+          "after": "fe94bf5cd93fd50ebbdda505"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a7bae2da9e35914d1ce7535ffbe476259ad14be1ec48fe709cee4b630e4912d7",
+          "after": "6b04514720490cab7e046a84050f6c4602f3e25ca0fe31768b0355fc79280911"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a7e26c84f6dd67e3ed0488c0",
+          "after": "d5ec23bd1aedcd99bdd5508f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "aadabdb230cdca69efed139b",
+          "after": "e6ec24e484210cf72be317c0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ac4f3170f7372c3a1f043052",
+          "after": "4db707dffd1e79a9edccb159"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ac5c1768047afb4115671a0c45bafb493bfe6202cd4d467c29cbcfb6c1456856",
+          "after": "ac5c1768047afb4115671a0c45bafb493bfe6202cd4d467c29cbcfb6c1456856"
+        },
+        {
+          "scope": "published-finding",
+          "before": "adcd14ad2b28f3e2578d1bc8393ac1534e036f9eebe9184c6d56422401ca3ad1",
+          "after": "ddb49431293b92e2274b32f0da322f79ab173c936bd13f39f11a2c785caeba9f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ae4a4c812cf574d326d29598",
+          "after": "542300ccccfac3438e1ebbbb"
+        },
+        {
+          "scope": "published-finding",
+          "before": "af888b17b5473029a2cbb419a2174bbdf1a17dc32105631fd2ea9e939d12c2cf",
+          "after": "c663509184840bc36c80350890ef43d30f7c56d6b22d1e2699b540999ee57dbb"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b008a4d60ac25ca821bf9ef7",
+          "after": "9aa763d7a8a8783603a77317"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b12b56541998cbc9fb0e3bef",
+          "after": "88dfda8b7e3b3c894687bd77"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b2df275e53d9023656929f92",
+          "after": "b4f14cfa14b23acd16b26420"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b5e79e45488e3683350f96b2",
+          "after": "81b4870107f9fdfdf71dd8ba"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b653a6b921e1d654a6024a40",
+          "after": "a65c0ec085405a4a73d3e709"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b7ee55a9a13d9a8adb9d06e7",
+          "after": "aca6b4d20b8cf78474986c84"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b95de529b6eae4203163b663",
+          "after": "b288e6118e6648f1bad833db"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ba08ca1241f7e0b49bcd2089",
+          "after": "2aa69f1d071aec8a6b44e3e8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "bb4d57619b6f718b3452d875",
+          "after": "bb4d57619b6f718b3452d875"
+        },
+        {
+          "scope": "published-finding",
+          "before": "bd432a9f00dd89aac602fd41",
+          "after": "8b74a3b65d5d79360bf3b437"
+        },
+        {
+          "scope": "published-finding",
+          "before": "bdedb9b4694d1b33e03f9ff8",
+          "after": "b50864f9d04116acc068a6fe"
+        },
+        {
+          "scope": "published-finding",
+          "before": "be21ff1d2c78d00ae276ea73",
+          "after": "163725212b0b90f1aa5a24fd"
+        },
+        {
+          "scope": "published-finding",
+          "before": "be306a2bcdaae4d4fac6711d",
+          "after": "557fdebc3c00f7671cb544b8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c382c44106429227d6dec564973b11b1ad47f0e2144162fa468f34cba076a40c",
+          "after": "fe445d7e34e86390434c066e2055ad5392a9c347e5a70a38d2eea96faa28fcec"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c3bd6fb2edceedc6a094201d",
+          "after": "17d4a03084d80fe57c001458"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c3daa8357d4df6afbbc66deb",
+          "after": "a93f35e2a464c76db3a8f9c0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c5121169d57fa43ca2471ead",
+          "after": "14eaed2e43bf8ed78ba3381f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c5274df40b46a3d5ac6eb337",
+          "after": "4a4d6e8c39f3b1d90ccf4107"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c9fd771a03ff257ab01f1bbb",
+          "after": "438694d0499c21d58987f8f1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ca2f4f4ace1375c1fc4e2560",
+          "after": "2d60be3e2b543f255b1eab84"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cae5ba9ff4e6428757071e539bae66c72598c5c603e9a6217a7d9dcb50dfce04",
+          "after": "8958859403ede2a376e0108c204bc7ebc6e96034b9b253e1958750341eeef19d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cc72192dde16d4d9b689a87d705293ca24539b45adee9cb29d2188f896991591",
+          "after": "272d5a7dfc0f667f683dec4f89d1cc5f0491cef907213dcf1e0bed5c27245724"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cee8dfee1fae9de0f85e5951",
+          "after": "f1393a61566e965ae8bfc917"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d03d234e002a7889c6ca8273",
+          "after": "d03d234e002a7889c6ca8273"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d1307772aaf69be58c20b10a",
+          "after": "2d150af87db567b5f6760e21"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d2d1be3533839ec8ffe93bf4",
+          "after": "e1e64bdd7c4d87addeb68629"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d49e24a09e1c335ed1fa02b7",
+          "after": "63a7272fa948beec7e88b8b1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d4d38dce99fb3ca440f68bc4844cb6dc85f71f482a0893114bbb5544eaf2fdec",
+          "after": "78d9846ed4e92c3b093de2d75e58a4a0e46f43956a3f6dee8cc42271c6fae486"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d66084fd90d56ba41ccba0bd",
+          "after": "a9840d3c7a618d2f75feaf2e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d7bcf74394c18d1bdeedd84b0c4a6c0e0f118cb7656be65d35b2fa4d5c8e7ad1",
+          "after": "68e0183ee3683f6ce7dccaa333c581e2ac521a44ed448e9516d192a1d83fb4e6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d8b5f015b62cecdba693821e359936584a03e367da61b9c7aa80a15bb17ff321",
+          "after": "bf166e66b1b885241f452addc6e0ae1d530fd5046078d3ad84886472918422ef"
+        },
+        {
+          "scope": "published-finding",
+          "before": "daa418a7a7499122f24538ae",
+          "after": "a8c895ee0ef0b4bb84328d3d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "dcd55ca24ba34c7f76e9f4f4",
+          "after": "06f427708ecd42b3f9456a3e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "de785a38b383a0986b087e43",
+          "after": "8829e5907f69f84318839cc9"
+        },
+        {
+          "scope": "published-finding",
+          "before": "de7e1a29c91b6649c8b569e257026c9f076f20f6d3c7194e1c72f60228f4cfa4",
+          "after": "2c7d8fc731bdb5dfba8575cd108fedd4fa59267668ee1dcf418ecfb7ea5d9383"
+        },
+        {
+          "scope": "published-finding",
+          "before": "df33d3bb46376a691ce90923",
+          "after": "8baa70ecd8a10803bea9d9b0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "dfa292aca8dd16bc4cf5be73",
+          "after": "bee27aa29dc7b1644c724b3c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e14763b258b82e5084689cec",
+          "after": "5992a5088b8360aa2a791f56"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e24eb34abe6110f6e9bc38dd",
+          "after": "0742ce1bb4972abf8bc64c36"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e2fb2682473d5d334b9ca8ef",
+          "after": "4cc60ac28ca1f262eb3aecbf"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e389473276b9bc5ab588b8a9",
+          "after": "6bbda76a04aafcfac656e75e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e6f654dc963a73f4b4f3c811",
+          "after": "d712ef195b540694f318db4a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e84781ce30bfde6ed434eaf0e5c02483a5b47c285c26369ff80c2f3b1f12d65d",
+          "after": "2f9dba51c4c2b761b4b648677fb6a367026f0645de463beeaad26b18f8e9e15a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e84d14b249923b4322e8370d",
+          "after": "df9bb73e23205976d73f2bfe"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ecf453d0e4ffa48bba16dba32a3cf9373d5be696b2d6996e49f74c26da2a7466",
+          "after": "1db69f93f898818fa0e4fa08ebfee807efe081479fd31d9929377dfaa2f58f8d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "edf43599fdf64ec3a9ab9233",
+          "after": "d9bf74a9c1810c98a1ad0b43"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f09521ac8bffde93a971f284",
+          "after": "8dd7d07a587a1429a6795818"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f0b980d346a58497531aa954",
+          "after": "3a4cc94aa9ee0b8fe208baac"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f461bfa725eda1122fd9a4fb",
+          "after": "407c3c54cf605a663e3a21a2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f4deabe035bc5728c9240e82",
+          "after": "51892720599740bfc3df4128"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f602b1c3ec8e451641c968b2",
+          "after": "86940959abfbb49e667d9083"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f81171152bdd1e27b531171cb1e7e5dc4073b50a9eb63146d0cc31a81f6fa497",
+          "after": "f81171152bdd1e27b531171cb1e7e5dc4073b50a9eb63146d0cc31a81f6fa497"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f840621ea605753c29869eb8",
+          "after": "bc423e582267d0dbdf55f7d3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "fa28ec95944a7231b447c9fe",
+          "after": "56b09f0a586e145d78bc750d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "fec3aecc34900248f38883d3",
+          "after": "c5a4a77a098bd737ca036b71"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:0dc4dd5bf8be54dd88f2d909",
+          "after": "port-fact:22dc6b6a44412aea6b5b04c6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:153eefd6c05c9bf74cf2e9d5",
+          "after": "port-fact:6a7b8db2a943721c6a2b6c80"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:38a5fd0bd9c316333a433209",
+          "after": "port-fact:6f69ff0f040bfc0905619312"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:408f6e69d0d763f9cdccf69e",
+          "after": "port-fact:5fc8be21b03b9cb382809864"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:439835707849f9aa82eed0df",
+          "after": "port-fact:0dfd937cb280d64492165212"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:470cf9e9b64b970dcf3342a2",
+          "after": "port-fact:bbbc134c39de398b0d6e7195"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:4881b1768be9ec1ae2ba5d29",
+          "after": "port-fact:77eb24412baf7be35dc0ed2f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:5cd732720c9734808ca35218",
+          "after": "port-fact:0e3382d6732bc7ebfc84fb99"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:7aadd8ac2dd133b72edbc696",
+          "after": "port-fact:fb6afd9bc406aa274a8d220e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:7e531dde58716cfab24d6f89",
+          "after": "port-fact:409011ad94b486ed625759e6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:935edd93acbcc2b0b418a0ad",
+          "after": "port-fact:40d1f08a788a6ce20f73fad6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:a0698884fb4479b3b0d32c37",
+          "after": "port-fact:b6df0ec2686818e619390221"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:a7056c28f615d4175123ec9d",
+          "after": "port-fact:910e2af9bfa5211f28793c2b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:ae4762c49732aaf5499e6765",
+          "after": "port-fact:9be2581ecbd7f8374850a297"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:df17ab0139a3503ca3529143",
+          "after": "port-fact:39bbaf9bdadf44ad7bed4c44"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:e0b684019bb35e6f4c2b37b0",
+          "after": "port-fact:93df0b1ef30514887e8c44d5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:e435ff555f5dae8ff8b7c7ab",
+          "after": "port-fact:1010a71ae63ab1cbd1f9c34e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:eba8266bac1eb9fdfbf97c7f",
+          "after": "port-fact:291dcf0f43bb438ffc1de736"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:f094ae09a27e13137de18ec8",
+          "after": "port-fact:37c595b49144470bef86d673"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:f1db500b970f8c264c61c77e",
+          "after": "port-fact:75a5596760b23802ca57918b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:f2f5a92b632f9f55dd7a872d",
+          "after": "port-fact:7beb9abf79b2cb6a4aa338d8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:f4f71d4fec560b7b2129b8fb",
+          "after": "port-fact:e65cfb90efd89a12ad8c50c3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:f8e46cbece2df62fd191ab1f",
+          "after": "port-fact:236a2b6465ca6f819246fce8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:065adb2bfb67fc0c733cbfd4",
+          "after": "port-gap:7b883fc4b157386b27ae651f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:15849871a28a170e587d968e",
+          "after": "port-gap:421d81383143577b01c4ddcc"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:2350b6231e034d4dcbc5aba8",
+          "after": "port-gap:32e2eb9f978a9ff1fc997913"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:2e131b6e62728632dfa4b608",
+          "after": "port-gap:7ce8c6add51e1d8fdab8f0c3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:a1382d1264bce7639aaf1c25",
+          "after": "port-gap:a1382d1264bce7639aaf1c25"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:f4069a975fd9c519582fbe30",
+          "after": "port-gap:f4069a975fd9c519582fbe30"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:2d8098af8a60d9fc78d69c50",
+          "after": "port-model:a66a38f7ebc3d689c9ff373d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:50a4e0431f1658ef5687ee63",
+          "after": "port-model:620fff99ae314d0b7fd6eabc"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:5bb2120e732e3ccf3f845f4f",
+          "after": "port-model:9559cf61ec89fe8c192710cf"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:70c6dd7709557547617074f1",
+          "after": "port-model:fa4a5190c24bad2c8536979a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:a182c5821f2b0a40df87f8d5",
+          "after": "port-model:94e0baf197355b21a1e5c7c2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:c1cd7b788efa9aa66d14094f",
+          "after": "port-model:1942b99fcfaad23a6e22f9cd"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:c897a94bad7e0c63d9509f87",
+          "after": "port-model:3500329fffcf8d96188ff03b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:f0772a6fd3da5baa9723066e",
+          "after": "port-model:98224316c5f44973472ce582"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:f90b40e28e8d159679615aee",
+          "after": "port-model:d7ac43902b4d9137ccf83953"
+        }
+      ],
+      "identity_occurrence_counts": {
+        "id": 205,
+        "snapshot_id": 553,
+        "semantic_parse_id": 547,
+        "edge_id": 11,
+        "original_snapshot_edge_id": 2,
+        "parse_id": 4,
+        "factory_context_id": 9,
+        "source_value_id": 79,
+        "factory_call_edge_id": 1,
+        "condition_value_id": 20,
+        "factory_callback_contexts": 2,
+        "binding_id": 11,
+        "declaration_id": 11,
+        "formal_binding_id": 2,
+        "lookup_dependencies": 2,
+        "constructor_seed_value_id": 2,
+        "guaranteed_contexts": 11,
+        "input_value_id": 10,
+        "possible_contexts": 11,
+        "receiver_id": 29,
+        "input_value_ids": 9,
+        "fact_id": 7,
+        "input_fact_ids": 11,
+        "fact_ids": 8,
+        "gap_ids": 6,
+        "snapshot_edge_id": 2,
+        "formal_parameter_declaration_id": 2,
+        "inputs": 10,
+        "parameter_declaration_id": 1,
+        "port_declaration_id": 2,
+        "provider_declaration_id": 1,
+        "alias_declaration_id": 2,
+        "formal_declaration_id": 1,
+        "navigation_input_value_id": 5,
+        "ambient_read_binding_id": 4
+      },
+      "authenticated_publication_version_changes": [],
+      "authenticated_component_version_changes": [
+        {
+          "path": "evidence/0/details/consumer/factory_parameter_identity/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/0/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/0/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/0/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/0/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/6/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/6/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/6/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/6/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/9/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/9/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/9/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/9/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/13/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/13/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/13/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/13/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/16/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/16/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/16/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/16/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/23/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/23/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/23/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/counterexample_producers/0/source_trace/23/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/1/observed/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/1/observed/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/4/observed/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/4/observed/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/5/observed/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/5/observed/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/6/observed/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/6/observed/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/9/observed/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/port_wiring/source_facts/9/observed/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/7/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/7/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/7/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/7/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/14/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/14/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/14/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/14/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/21/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/21/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/21/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/21/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/54/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/54/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/54/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/54/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/63/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/63/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/63/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/63/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/67/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/67/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/67/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/67/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/70/environment_audit/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/70/environment_audit/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/70/lexical_absence/version",
+          "field": "version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        },
+        {
+          "path": "evidence/0/details/source_trace/70/lexical_model_version",
+          "field": "lexical_model_version",
+          "component": "lexical_bindings",
+          "before": "captured-lexical-bindings-2",
+          "after": "captured-lexical-bindings-3",
+          "matches_own_summary": true,
+          "registered_reason": "Reviewed lexical absence fix excludes supported default RHS expressions from declaration tokens; all other values and fields remain compared."
+        }
+      ],
+      "differences": [],
+      "graph_node_ids_identical": true,
+      "graph_edge_ids_identical": true
+    }
+  ]
+}

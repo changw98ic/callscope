@@ -1,0 +1,39 @@
+{
+  "schema": "callscope.atomicity-migration-record.v1",
+  "development_only": true,
+  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+  "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+  "observation": "reports/astra-iteration5/ATOMICITY_DEVELOPMENT_OBSERVATIONS.json",
+  "component_identities": {
+    "atomicity": {
+      "version": "static-atomicity-contracts-2-shared",
+      "sha256": "3914a3d0b8390472cfe9dfe923b325f6fcad574799a69625eef59843f840c736"
+    },
+    "completion": {
+      "version": "captured-completion-summaries-1",
+      "sha256": "35dd3124f2bd6a33156d9e48a716172f11fff79ec90d1e0340166dc34510c77e"
+    },
+    "environment": {
+      "version": "captured-builtin-environment-1",
+      "sha256": "39e388c78584e176640109c869b3c3fe58819619e82bb29a570d9de1381d9566"
+    },
+    "lexical": {
+      "version": "captured-lexical-bindings-2",
+      "sha256": "c2820fd2d08be101bd8b51cc996fce69b0c2c2beffea94a1498b6b011fb75672"
+    }
+  },
+  "previous_environment_candidate_sha256": "be115185a54c441170424565b2872ddef7abe0e406d8df5a1fa9b840030a03c8",
+  "dependency_refresh_reason": "Object.assign fixed API occurrence registration; argument effects and purity are not certified",
+  "published_finding_count": 1,
+  "development_finding_count": 1,
+  "comparisons": [
+    {
+      "index": 0,
+      "finite_fact_differences": []
+    }
+  ],
+  "target_executed": false,
+  "tool_tests_run": false,
+  "published_v7_snapshot_or_artifacts_modified": false,
+  "scope": "Saved-source static migration observations, not runtime lock correctness or complete business behavior"
+}

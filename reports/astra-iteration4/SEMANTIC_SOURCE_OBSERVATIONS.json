@@ -1,0 +1,477 @@
+{
+  "version": "semantic-snapshot-sources-1",
+  "method": "Read-only captured snapshot JSON and trusted CST parsing; no repository I/O, target execution, builds or tests.",
+  "implementation_sha256": "dab9108e47787b451665563bc08aab62e906eb0e02d3f77c2f70182bf00f5381",
+  "snapshots": [
+    {
+      "repository": "codepatchbay",
+      "snapshot_id": "3952ccb24bb530f5acf7096329ab085043c8e8bf8ee25f77e0ed623cb3be3ec5",
+      "projected_documents": [
+        {
+          "file": "core/indexing/local-code-index/gc.ts",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "33255f5489b611224e0c6ff07c44c557075c86cb3e6de011c9a76e48d5b13b6f",
+          "semantic_parse_id": "a5380038b3ab17c7e6066269005dbf712482144d91880eabd75b8b8ec0a43700",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type"
+          ],
+          "original_text_utf8_sha256": "33255f5489b611224e0c6ff07c44c557075c86cb3e6de011c9a76e48d5b13b6f",
+          "derived_text_utf8_sha256": "8ca4d72a480f03a92bd84f335e7d70df0fdc6b55e89474b9447847c2cb970dd1",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0
+        },
+        {
+          "file": "core/indexing/local-code-index/rules/types.ts",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "0bfbf006ca1f9d3c1562ba3132e1640872172bae5093f15cfb1ebe631ab865e8",
+          "semantic_parse_id": "7def2814c42b8b391e3913e3720511d869d5b2df42189de5451773703b429663",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "type_only_abstract_property"
+          ],
+          "original_text_utf8_sha256": "0bfbf006ca1f9d3c1562ba3132e1640872172bae5093f15cfb1ebe631ab865e8",
+          "derived_text_utf8_sha256": "a36696e05e212336bc49d3ea97a316a9010723881b6848fbddc80a928141d62e",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0
+        },
+        {
+          "file": "shared/primitives/process-tree.ts",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "abfec6d1fead9de5f5f2edd0414fbcecbef816f5fbb72011c0c6ebd75e5cb82a",
+          "semantic_parse_id": "354199d2eac49e6eadf5158680ba63e67ffcde40a619194d36239341fe36813c",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type"
+          ],
+          "original_text_utf8_sha256": "abfec6d1fead9de5f5f2edd0414fbcecbef816f5fbb72011c0c6ebd75e5cb82a",
+          "derived_text_utf8_sha256": "613f7859410608d3b9082dd9a1a755c422b5c30c7a50fde5a7e0927bbe9acaca",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0
+        }
+      ],
+      "binding_observations": [],
+      "historical_gaps": []
+    },
+    {
+      "repository": "winwincode",
+      "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+      "projected_documents": [
+        {
+          "file": "apps/client/src/application.ts",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "semantic_parse_id": "18be711704903bc0e1590cc9f022e768ea835dcc06fb974558907672274d0330",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "qualified_import_type",
+            "qualified_import_type"
+          ],
+          "original_text_utf8_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "derived_text_utf8_sha256": "8d7e28af6ec3d6c522c31dde15f5a4e887fa8a147b2e6d847e9b8f7983a9ef9b",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "callback_symbols": [
+            "mountWinWinCodeClient.<object@278:33>.deliveryContext"
+          ]
+        },
+        {
+          "file": "apps/client/src/candidate-run-preview-control-plane.ts",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "badb0d69f9444af7fb39a8b47ba39bc2bfae721f71acb38e7bdcf8501d04685b",
+          "semantic_parse_id": "a6409141729d034e64a304cba2183fab7b2569cedeeb92976c718e702bad55bb",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type"
+          ],
+          "original_text_utf8_sha256": "badb0d69f9444af7fb39a8b47ba39bc2bfae721f71acb38e7bdcf8501d04685b",
+          "derived_text_utf8_sha256": "d473dd101c494c0452219906d3795e9bb1734006bc14ea9f5b83a192ea3a5eab",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0
+        },
+        {
+          "file": "apps/client/src/community-control-plane-client.ts",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+          "semantic_parse_id": "8f3c9e0981ce25599bad410f59c4d662d5dfcf133a7285581dcee2d00013bfd6",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type",
+            "qualified_import_type"
+          ],
+          "original_text_utf8_sha256": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+          "derived_text_utf8_sha256": "6e7b4390a3ba3c7254b2229d6119c88e937d810c27acb1e6a1855ea7befe9b9b",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0
+        },
+        {
+          "file": "apps/client/src/home-recent-visits.ts",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "fbcb9a8028444f55d0f77d6fa5e439351ed302a8eaace2bee6e588d5cd0604a1",
+          "semantic_parse_id": "f7380a0f9ba770df1d0d7d45a218491bef1db603f6a128506804c666f368797b",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "literal_nul_cst_surrogate"
+          ],
+          "original_text_utf8_sha256": "fbcb9a8028444f55d0f77d6fa5e439351ed302a8eaace2bee6e588d5cd0604a1",
+          "derived_text_utf8_sha256": "f0e672ece25151f475cb2c06083633d334420f4f454f227aa5b86703baa1d3d2",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0
+        },
+        {
+          "file": "apps/client/src/readiness-view-model.ts",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "65e85b02f17cec977449883eed76e1876952f9421b928bc18c6ce1d2cec3b142",
+          "semantic_parse_id": "6aa888fb10d46d25ebf1e42d3081138f0e0da97e962a1d8d449abbe6eb43c8f0",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "literal_nul_cst_surrogate",
+            "literal_nul_cst_surrogate"
+          ],
+          "original_text_utf8_sha256": "65e85b02f17cec977449883eed76e1876952f9421b928bc18c6ce1d2cec3b142",
+          "derived_text_utf8_sha256": "fb0139879f512426ad90491370a9bb52b34173208199435333a1f7392df4db7f",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0
+        },
+        {
+          "file": "schema/winwincode-export/v1/validate.js",
+          "loaded": true,
+          "issues": [],
+          "source_hash": "0229ef6d0d7b632dfe3cd39e8c25eb848f1b122b5e275e7dcf5d7e517d35d6dc",
+          "semantic_parse_id": "7c01a9c95170cc5ea52b2c227fa44853c8c786bead8aec10b1d7378f7acd1721",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "adapted",
+          "rules": [
+            "literal_nul_cst_surrogate"
+          ],
+          "original_text_utf8_sha256": "0229ef6d0d7b632dfe3cd39e8c25eb848f1b122b5e275e7dcf5d7e517d35d6dc",
+          "derived_text_utf8_sha256": "58d1ed9ef917551d7a245cfa73d3572169c478d7e0d69fee5ff2010eae83c9e1",
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0
+        }
+      ],
+      "binding_observations": [
+        {
+          "owner": "WorkerMain.accept_control",
+          "call": "self.accept_dispatch",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 764,
+            "column": 17,
+            "end_line": 764,
+            "end_column": 52,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 30515,
+            "end_byte": 30550,
+            "original_file_start_byte": 30515,
+            "original_file_end_byte": 30550,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "1b6b1c4c080c879fff8731973e5a317e54181ff3f172f8cc70657884c12d2c94",
+            "source_line": "                self.accept_dispatch(dispatch, now).await",
+            "source_excerpt": "self.accept_dispatch(dispatch, now)",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "e28f2f88146bdb282697ea2454486367c5cb212385fe50cb94ce888898984dfa",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "edge_id": "rust-call:14eb734d0b2507bebd041dd4",
+          "target": "rust:crates/winwincode-worker/src/lib#WorkerMain.accept_dispatch",
+          "issues": []
+        },
+        {
+          "owner": "WorkerMain.start_dispatch",
+          "call": "self\n            .codex\n            .ensure_thread",
+          "location": {
+            "file": "crates/winwincode-worker/src/lib.rs",
+            "line": 2744,
+            "column": 36,
+            "end_line": 2754,
+            "end_column": 15,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 109800,
+            "end_byte": 110230,
+            "original_file_start_byte": 109800,
+            "original_file_end_byte": 110230,
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "grammar": "rust",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "span_hash": "273b14f10a063bd94e70c17e848ab45b503ffa9ac3309df9818c630210522022",
+            "source_line": "        let thread_session = match self",
+            "source_excerpt": "self\n            .codex\n            .ensure_thread(CodexThreadStart {\n                run_key: &run_key,\n                worker_id: &self.config.worker_id,\n                job: &dispatch.job,\n                lease: &dispatch.lease,\n                worker_session_id: &prepared.active.worker_session_id,\n                workspace: &prepared.checkout,\n                workspace_revision: &prepared.workspace_revision,\n            })",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "e28f2f88146bdb282697ea2454486367c5cb212385fe50cb94ce888898984dfa",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+              "original_text_utf8_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+              "projection_version": null,
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "edge_id": null,
+          "target": null,
+          "issues": [
+            {
+              "code": "call_binding_unknown",
+              "message": "快照没有有效确定的内部 callee；候选、动态或部分来源不提升。",
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "line": 2744,
+              "edge_id": "rust-call:7361363e9b06ce272fa0136d",
+              "resolution": "dynamic",
+              "candidates": [
+                "rust:crates/winwincode-codex/src/adapter#<ProductionCodexAdapter as CodexCoreAdapter>.ensure_thread",
+                "rust:crates/winwincode-codex/src/contract#CodexCoreAdapter.ensure_thread"
+              ],
+              "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+            }
+          ]
+        },
+        {
+          "owner": "surfaceHash",
+          "call": "scopeHash",
+          "location": {
+            "file": "packages/browser-core/src/scope-context.ts",
+            "line": 272,
+            "column": 10,
+            "end_line": 272,
+            "end_column": 42,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 9212,
+            "end_byte": 9244,
+            "original_file_start_byte": 9212,
+            "original_file_end_byte": 9244,
+            "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+            "grammar": "typescript",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "span_hash": "5b77819112d23f4c98cfab5e7061a9096a4f9ac20ddc8420f060938b0adfe6e7",
+            "source_line": "  return scopeHash(`#${path}`, selection)",
+            "source_excerpt": "scopeHash(`#${path}`, selection)",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "a7168f70683a32482eb65788971e884359666ea3a6684e6d20fa950aca99c4f4",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+              "original_text_utf8_sha256": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+              "projection_version": "ts-syntax-projection-1",
+              "projection_mode": "original",
+              "derived_text_utf8_sha256": null,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "edge_id": "d03d234e002a7889c6ca8273",
+          "target": "ts:packages/browser-core/src/scope-context#scopeHash",
+          "issues": []
+        }
+      ],
+      "historical_gaps": [
+        {
+          "file": "crates/winwincode-execution-port/src/diagnostic_parser.rs",
+          "saved_status": "parse_error",
+          "issues": [
+            {
+              "code": "source_not_parsed",
+              "message": "历史快照源码状态 parse_error：Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。；新 parser 不能补成旧事实。",
+              "file": "crates/winwincode-execution-port/src/diagnostic_parser.rs",
+              "line": 0
+            }
+          ]
+        }
+      ],
+      "nested_same_point_calls": [
+        {
+          "call_expression": "routeParameters(browser.location.hash).get",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 287,
+            "column": 30,
+            "end_line": 287,
+            "end_column": 84,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 11350,
+            "end_byte": 11404,
+            "original_file_start_byte": 11350,
+            "original_file_end_byte": 11404,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "grammar": "typescript",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "span_hash": "31c1d5748971a5d6838e97060d42b82e2a1e34e5d4bff26b8ae5beaa0249fad0",
+            "source_line": "          const deliveryId = routeParameters(browser.location.hash).get('delivery') as DeliveryId | null",
+            "source_excerpt": "routeParameters(browser.location.hash).get('delivery')",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "18be711704903bc0e1590cc9f022e768ea835dcc06fb974558907672274d0330",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+              "original_text_utf8_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "projection_version": "ts-syntax-projection-1",
+              "projection_mode": "adapted",
+              "derived_text_utf8_sha256": "8d7e28af6ec3d6c522c31dde15f5a4e887fa8a147b2e6d847e9b8f7983a9ef9b",
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "edge_id": null,
+          "target": null,
+          "issues": [
+            {
+              "code": "call_binding_unknown",
+              "message": "快照没有有效确定的内部 callee；候选、动态或部分来源不提升。",
+              "file": "apps/client/src/application.ts",
+              "line": 287,
+              "edge_id": "ed92d8a3ee6af6aaab3628b4",
+              "resolution": "dynamic",
+              "candidates": [],
+              "reason": "对象/this/类方法分派不推断为确定调用"
+            }
+          ]
+        },
+        {
+          "call_expression": "routeParameters",
+          "location": {
+            "file": "apps/client/src/application.ts",
+            "line": 287,
+            "column": 30,
+            "end_line": 287,
+            "end_column": 68,
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "start_byte": 11350,
+            "end_byte": 11388,
+            "original_file_start_byte": 11350,
+            "original_file_end_byte": 11388,
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "grammar": "typescript",
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "span_hash": "4c498ce1ac95faa2496ee58cf2b94a6d2c10c42ef3a389248a7f6b7447107309",
+            "source_line": "          const deliveryId = routeParameters(browser.location.hash).get('delivery') as DeliveryId | null",
+            "source_excerpt": "routeParameters(browser.location.hash)",
+            "source_excerpt_truncated": false,
+            "semantic_parse_id": "18be711704903bc0e1590cc9f022e768ea835dcc06fb974558907672274d0330",
+            "parse_identity": {
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "snapshot_id": "66019560ade80433538040084e66645953cdf9825b71760b9f8ff0abcd777200",
+              "original_text_utf8_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+              "projection_version": "ts-syntax-projection-1",
+              "projection_mode": "adapted",
+              "derived_text_utf8_sha256": "8d7e28af6ec3d6c522c31dde15f5a4e887fa8a147b2e6d847e9b8f7983a9ef9b",
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "literal_authority": "original_saved_source_text_only",
+              "position_map": "identity_utf8_bytes_and_line_columns"
+            }
+          },
+          "edge_id": "8936726be3e4f3e2802ec20a",
+          "target": "ts:apps/client/src/application#routeParameters",
+          "issues": []
+        }
+      ],
+      "support_input_observation": {
+        "path": "Cargo.lock",
+        "issues": [
+          {
+            "code": "support_input_only",
+            "message": "已解析实现源码匹配 0 项；辅助输入不充当实现。",
+            "file": "Cargo.lock",
+            "line": 0
+          }
+        ]
+      }
+    }
+  ]
+}

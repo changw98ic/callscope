@@ -1,0 +1,3389 @@
+{
+  "builder_version": "saved-formal-release-report-1",
+  "generated_at": "2026-10-13T04:17:43.754477+00:00",
+  "freeze": {
+    "package_version": "0.12.0",
+    "publication_series": "v12",
+    "analyzer_version": "static-multilang-12",
+    "detector_version": "call-rules-11-whole-judgments",
+    "schema_version": "2",
+    "tool_identity": {
+      "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f",
+      "graph_backend": "axon-graph-core-1",
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+    }
+  },
+  "projects": [
+    {
+      "repository": "codepatchbay",
+      "snapshot": {
+        "id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+        "project_id": "ac6694a563ea5a6ef75f",
+        "project_name": "CodePatchBay — static source review",
+        "created_at": "2026-10-13T03:26:26.358184+00:00",
+        "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+        "policy_hash": "c11c67291de2eb257c6b6195cae16f92333abe2f9ca323881403c954cd737714",
+        "status": "partial",
+        "component_versions": {
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-2-shared",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "budget_contracts": {
+            "analyzer": "static-local-budget-contracts-1",
+            "policy_schema": "static-local-budget-policy-v1"
+          },
+          "completion_summaries": "captured-completion-summaries-1",
+          "field_contracts": {
+            "analyzer": "static-field-contracts-4-ir",
+            "policy_schema": "static-field-policy-v2"
+          },
+          "field_relations": "captured-field-source-relations-1",
+          "field_summaries": "finite-field-summaries-5-ir",
+          "goal_contracts": {
+            "adapters": {
+              "atomicity": {
+                "analyzer": "source-derived-atomicity-completion-1",
+                "policy_schema": "adapter-validated-v1"
+              },
+              "pipeline": {
+                "analyzer": "finite-parameter-record-budget-flow-1",
+                "policy_schema": "parameter-record-budget-policy-1"
+              },
+              "status": {
+                "analyzer": "finite-status-classification-1",
+                "policy_schema": "static-status-policy-v1"
+              }
+            },
+            "policy_schema": "static-goal-policy-v1",
+            "registry": "static-whole-judgment-registry-1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-3",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "report_claims": {
+            "analyzer": "captured-report-source-chains-1",
+            "policy_schema": "static-report-claim-policy-v1"
+          },
+          "semantic_environment": "captured-builtin-environment-1",
+          "semantic_ir": "finite-immutable-semantic-ir-3",
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          }
+        }
+      },
+      "coverage": {
+        "files_selected": 333,
+        "files_parsed": 330,
+        "file_statuses": {
+          "parsed": 330,
+          "unsupported": 3
+        },
+        "unparsed_files": [
+          {
+            "file": "scripts/cutover-orchestrator.sh",
+            "hash": "b778bdd63930cf5c6949c59f1edbd7e479fd174e67061415c9060dc057cdf173",
+            "language": "shell",
+            "status": "unsupported",
+            "error": "此源码语言不在当前分析能力或配置范围中"
+          },
+          {
+            "file": "scripts/install.sh",
+            "hash": "66ff4f1fe9117c5eaea89fddfa9833fa39f6a623ca0d19226592fc51363515cb",
+            "language": "shell",
+            "status": "unsupported",
+            "error": "此源码语言不在当前分析能力或配置范围中"
+          },
+          {
+            "file": "skills/claude-code/install.sh",
+            "hash": "9b39d3047e51fcca47b307aab8306e59b6a1302a445c05ca8aa762aa4544af38",
+            "language": "shell",
+            "status": "unsupported",
+            "error": "此源码语言不在当前分析能力或配置范围中"
+          }
+        ],
+        "support_inputs": [
+          {
+            "error": null,
+            "hash": "c772ddd68d356db4683b26755a8f471598d226bd9b61c1213014afd8ea2112b9",
+            "kind": "support_input",
+            "path": "README.md",
+            "size_bytes": 16896,
+            "status": "captured",
+            "text_hash": "c772ddd68d356db4683b26755a8f471598d226bd9b61c1213014afd8ea2112b9"
+          },
+          {
+            "error": null,
+            "hash": "a76855082449cae7b16a133cd0ceb8a28707d446908ff628e215a30252920ad1",
+            "kind": "support_input",
+            "path": "package.json",
+            "size_bytes": 5001,
+            "status": "captured",
+            "text_hash": "a76855082449cae7b16a133cd0ceb8a28707d446908ff628e215a30252920ad1"
+          }
+        ],
+        "selection_scope": [
+          "."
+        ],
+        "excluded": [
+          ".git",
+          ".beads",
+          ".callscope",
+          ".test-tmp",
+          "node_modules",
+          "third_party",
+          "vendor",
+          "generated",
+          "dist",
+          "dist-tests",
+          "build",
+          "coverage",
+          "tests",
+          "__tests__",
+          "fixtures",
+          "**/*.test.ts",
+          "**/*.spec.ts",
+          "**/*.test.tsx",
+          "**/*.spec.tsx"
+        ],
+        "meaning": "Captured source and parser scope only; no function or business coverage percentage is inferred."
+      },
+      "scans": [
+        {
+          "phase": "cold",
+          "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+          "created": true,
+          "status": "partial"
+        },
+        {
+          "phase": "warm",
+          "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+          "created": false,
+          "status": "partial"
+        }
+      ],
+      "node_count": 11085,
+      "edge_count": 60571,
+      "scope_changes": {
+        "previous_policy_path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-policy.json",
+        "previous_policy_sha256": "134671b5cb1cc7f6acb3514e63eac6a1e7bd3d53d48b750d38d8d35b9b63faa0",
+        "current_policy_path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-policy.json",
+        "current_policy_sha256": "4b28c0237ffd7d4491b127b42a69e85a33e15511c1831c1746b70c0eb045c766",
+        "policy_bytes_identical": false,
+        "changed_sections": [
+          {
+            "section": "analysis",
+            "before_sha256": "389d4cd777f60da5f230c0732338a6a5923ffc1f0ebe705b11e736d8a712fbf5",
+            "after_sha256": "4e9d6713b1332ae3d3282801dde1e41992b74f3937bbcb6b976420abdd331578"
+          },
+          {
+            "section": "goal_contracts",
+            "before_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "after_sha256": "7855f21ff7370f38e507d0d5eacaa79fbf16efd338284e61ee23f6ccc20e4fcc"
+          },
+          {
+            "section": "report_claims",
+            "before_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "after_sha256": "295a2f7a91a059c5463451a78ba09d8937655d553c09d0b5b232589c191d0775"
+          }
+        ],
+        "saved_effective_policy_hash": "c11c67291de2eb257c6b6195cae16f92333abe2f9ca323881403c954cd737714",
+        "saved_effective_analysis": {
+          "exclude": [
+            ".git",
+            ".beads",
+            ".callscope",
+            ".test-tmp",
+            "node_modules",
+            "third_party",
+            "vendor",
+            "generated",
+            "dist",
+            "dist-tests",
+            "build",
+            "coverage",
+            "tests",
+            "__tests__",
+            "fixtures",
+            "**/*.test.ts",
+            "**/*.spec.ts",
+            "**/*.test.tsx",
+            "**/*.spec.tsx"
+          ],
+          "languages": [
+            "python",
+            "typescript"
+          ],
+          "max_file_bytes": 1048576,
+          "module_aliases": {},
+          "rust_crates": {},
+          "rust_helper_profiles": [],
+          "rust_interface_models": [],
+          "source_roots": [
+            "."
+          ],
+          "support_inputs": [
+            "README.md",
+            "package.json"
+          ]
+        },
+        "changed_models_and_capture_are_explicit": true,
+        "repository_source_hash_changed_since_previous": true,
+        "current_support_inputs": [
+          {
+            "path": "README.md",
+            "hash": "c772ddd68d356db4683b26755a8f471598d226bd9b61c1213014afd8ea2112b9",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "package.json",
+            "hash": "a76855082449cae7b16a133cd0ceb8a28707d446908ff628e215a30252920ad1",
+            "status": "captured",
+            "language": null
+          }
+        ],
+        "current_captured_code_file_status_counts": {
+          "parsed": 330,
+          "unsupported": 3
+        },
+        "original_frozen_rule_and_observation_bytes_changed": false
+      },
+      "overlapping_source_selections": [],
+      "configured_local_assessment_count": 10
+    },
+    {
+      "repository": "winwincode",
+      "snapshot": {
+        "id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28",
+        "project_id": "1dec368a20d2f5075901",
+        "project_name": "WinWinCode / 项目源码静态调用核对",
+        "created_at": "2026-10-13T03:50:27.480554+00:00",
+        "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+        "policy_hash": "b1e290e7b61da9b404129887b1c41a4f86dcd5e25d7c851fb69822eda9ec4ac8",
+        "status": "partial",
+        "component_versions": {
+          "completion_summaries": "captured-completion-summaries-1",
+          "goal_contracts": {
+            "adapters": {
+              "device": {
+                "analyzer": "static-device-spec-protocol-flow-1",
+                "policy_schema": "static-device-spec-protocol-policy-v1"
+              },
+              "navigation": {
+                "analyzer": "conditional-navigation-obligations-1",
+                "policy_schema": "adapter-validated-v1"
+              }
+            },
+            "policy_schema": "static-goal-policy-v1",
+            "registry": "static-whole-judgment-registry-1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-3",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "navigation_contracts": {
+            "analyzer": "static-navigation-contracts-2-shared",
+            "policy_schema": "static-navigation-policy-v1"
+          },
+          "port_wiring": "finite-port-wiring-2-shared",
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "report_claims": {
+            "analyzer": "captured-report-source-chains-1",
+            "policy_schema": "static-report-claim-policy-v1"
+          },
+          "rust": {
+            "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+            "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+          },
+          "semantic_environment": "captured-builtin-environment-1",
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        }
+      },
+      "coverage": {
+        "files_selected": 471,
+        "files_parsed": 465,
+        "file_statuses": {
+          "parse_error": 6,
+          "parsed": 465
+        },
+        "unparsed_files": [
+          {
+            "file": "crates/winwincode-execution-port/src/diagnostic_parser.rs",
+            "hash": "2b269d95ba428593c7fef9d44f2e3bcf61169948cc06ae1323fb2b402dbb2a94",
+            "language": "rust",
+            "status": "parse_error",
+            "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+          },
+          {
+            "file": "crates/winwincode-server/src/worker_session_credentials.rs",
+            "hash": "aabf3032041c1948b32fbedbdcf091660fe43462046ca1978b50fdf038b2c826",
+            "language": "rust",
+            "status": "parse_error",
+            "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+          },
+          {
+            "file": "crates/winwincode-storage/src/provider_exchange.rs",
+            "hash": "acf121ba2ba8dd255eae567dc0b026d3e0b9192df1bb81a14d5704ba668c23db",
+            "language": "rust",
+            "status": "parse_error",
+            "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+          },
+          {
+            "file": "crates/winwincode-worker/src/managed_session.rs",
+            "hash": "f7ce61001e543a4bc9d1d2155fb8fea993c16968fe09aa2d3393c024674c8b99",
+            "language": "rust",
+            "status": "parse_error",
+            "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+          },
+          {
+            "file": "crates/winwincode-worker/src/probe_evidence.rs",
+            "hash": "d818583ac54fc8a0ede68380aa2fc8fb6cf00185101a0a0c47d712e265f72610",
+            "language": "rust",
+            "status": "parse_error",
+            "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+          },
+          {
+            "file": "crates/winwincode-worker/src/probe_scheduler.rs",
+            "hash": "7db625341cbf8a4e2262b33911a0a4dfdf6a120b3b72660f0357701c34d0511d",
+            "language": "rust",
+            "status": "parse_error",
+            "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+          }
+        ],
+        "support_inputs": [
+          {
+            "error": null,
+            "hash": "24564a7ee1025079e1ecc86c8b40b08b17694be4ebe5663f2bc2e0e947be5eb5",
+            "kind": "support_input",
+            "path": "Cargo.lock",
+            "size_bytes": 308496,
+            "status": "captured",
+            "text_hash": "24564a7ee1025079e1ecc86c8b40b08b17694be4ebe5663f2bc2e0e947be5eb5"
+          },
+          {
+            "error": null,
+            "hash": "e33d73f372e5e00e361ce7783743c977aceb07107effea3990886e71c0f7a5b4",
+            "kind": "support_input",
+            "path": "Cargo.toml",
+            "size_bytes": 5595,
+            "status": "captured",
+            "text_hash": "e33d73f372e5e00e361ce7783743c977aceb07107effea3990886e71c0f7a5b4"
+          },
+          {
+            "error": null,
+            "hash": "58feece6f0dee6b5d00954f91f68ae8c1440583e84f4a5c6b42aed289767294e",
+            "kind": "support_input",
+            "path": "README.md",
+            "size_bytes": 7011,
+            "status": "captured",
+            "text_hash": "58feece6f0dee6b5d00954f91f68ae8c1440583e84f4a5c6b42aed289767294e"
+          },
+          {
+            "error": null,
+            "hash": "900bfd942abc7f889540469721e5540c1a329f18124457a67f64b5ea1e793515",
+            "kind": "support_input",
+            "path": "apps/client/src/generated/contracts.ts",
+            "size_bytes": 292282,
+            "status": "captured",
+            "text_hash": "900bfd942abc7f889540469721e5540c1a329f18124457a67f64b5ea1e793515"
+          },
+          {
+            "error": null,
+            "hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "kind": "support_input",
+            "path": "apps/client/src/generated/control-plane-client.ts",
+            "size_bytes": 246305,
+            "status": "captured",
+            "text_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24"
+          },
+          {
+            "error": null,
+            "hash": "d09555f1bf9921e1cc5f5d796150dc7aff5b4aa5a78d67e6f9adee70530f9de7",
+            "kind": "support_input",
+            "path": "crates/winwincode-api/Cargo.toml",
+            "size_bytes": 440,
+            "status": "captured",
+            "text_hash": "d09555f1bf9921e1cc5f5d796150dc7aff5b4aa5a78d67e6f9adee70530f9de7"
+          },
+          {
+            "error": null,
+            "hash": "8c453928bc68c7980a5c00a262087244f5b3987e2fee6bc0043d13cfafb40037",
+            "kind": "support_input",
+            "path": "crates/winwincode-api/src/generated.rs",
+            "size_bytes": 429086,
+            "status": "captured",
+            "text_hash": "8c453928bc68c7980a5c00a262087244f5b3987e2fee6bc0043d13cfafb40037"
+          },
+          {
+            "error": null,
+            "hash": "698553efb4d8f6f3a7677c624b25acbc0a93e49a1c2e5e3ead5ef055dc7b945c",
+            "kind": "support_input",
+            "path": "crates/winwincode-delivery/Cargo.toml",
+            "size_bytes": 1453,
+            "status": "captured",
+            "text_hash": "698553efb4d8f6f3a7677c624b25acbc0a93e49a1c2e5e3ead5ef055dc7b945c"
+          },
+          {
+            "error": null,
+            "hash": "0f66a8a3d0c5b209a5c89b349e3dcca68b7f3f910935cfae5e48f65123cb087f",
+            "kind": "support_input",
+            "path": "crates/winwincode-domain/Cargo.toml",
+            "size_bytes": 442,
+            "status": "captured",
+            "text_hash": "0f66a8a3d0c5b209a5c89b349e3dcca68b7f3f910935cfae5e48f65123cb087f"
+          },
+          {
+            "error": null,
+            "hash": "358d71db1b6deee97e0dd4364d2c3e30f0ac029105ec40bf9d9e477d8c347c68",
+            "kind": "support_input",
+            "path": "crates/winwincode-domain/src/generated.rs",
+            "size_bytes": 33260,
+            "status": "captured",
+            "text_hash": "358d71db1b6deee97e0dd4364d2c3e30f0ac029105ec40bf9d9e477d8c347c68"
+          },
+          {
+            "error": null,
+            "hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+            "kind": "support_input",
+            "path": "docs/architecture.md",
+            "size_bytes": 17137,
+            "status": "captured",
+            "text_hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3"
+          }
+        ],
+        "selection_scope": [
+          "."
+        ],
+        "excluded": [
+          ".git",
+          ".beads",
+          ".agents",
+          ".codex",
+          ".callscope",
+          ".analysis-tools",
+          ".venv",
+          "venv",
+          "__pycache__",
+          "node_modules",
+          "target",
+          "dist",
+          "build",
+          "coverage",
+          "third_party",
+          "upstream",
+          "vendor",
+          "generated",
+          "tests",
+          "test",
+          "__tests__",
+          "examples",
+          "scripts",
+          "crates/winwincode-test-assets",
+          "**/*.test.ts",
+          "**/*.test.tsx",
+          "**/*.spec.ts",
+          "**/*.spec.tsx",
+          "**/*.generated.ts",
+          "**/generated.rs",
+          "**/*_tests.rs",
+          "**/test_support.rs",
+          "**/build.rs"
+        ],
+        "meaning": "Captured source and parser scope only; no function or business coverage percentage is inferred."
+      },
+      "scans": [
+        {
+          "phase": "cold",
+          "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28",
+          "created": true,
+          "status": "partial"
+        },
+        {
+          "phase": "warm",
+          "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28",
+          "created": false,
+          "status": "partial"
+        }
+      ],
+      "node_count": 32407,
+      "edge_count": 171983,
+      "scope_changes": {
+        "previous_policy_path": "/workspace/callscope/reports/astra-iteration9/winwincode-policy.json",
+        "previous_policy_sha256": "7331e395f929c6fe031265a9e8c8190cdad5fb158b35b54b7d614c30c899a11b",
+        "current_policy_path": "/workspace/callscope/reports/astra-iteration10/winwincode-policy.json",
+        "current_policy_sha256": "831df3cfaba119a575c53dc34970471d0203951653cf4632061d701849bd6c87",
+        "policy_bytes_identical": false,
+        "changed_sections": [
+          {
+            "section": "analysis",
+            "before_sha256": "02cd8ff618810a0e9f4a952e78ec1c1b4520449c03abd9401de69adbb6b8cc91",
+            "after_sha256": "748520acd36fd9d27ed7168b6421b4ec3e57465b9d5dc7bc124056d39af6b167"
+          },
+          {
+            "section": "goal_contracts",
+            "before_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "after_sha256": "939ed98d42bafbe4b5d862bd6cabee911e376edf569d1c63c992234fac174196"
+          },
+          {
+            "section": "report_claims",
+            "before_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "after_sha256": "f011d89497363ec2ef594c9d574613fb0aa102ff81ef8f89c298cef4b335dbe6"
+          }
+        ],
+        "saved_effective_policy_hash": "b1e290e7b61da9b404129887b1c41a4f86dcd5e25d7c851fb69822eda9ec4ac8",
+        "saved_effective_analysis": {
+          "exclude": [
+            ".git",
+            ".beads",
+            ".agents",
+            ".codex",
+            ".callscope",
+            ".analysis-tools",
+            ".venv",
+            "venv",
+            "__pycache__",
+            "node_modules",
+            "target",
+            "dist",
+            "build",
+            "coverage",
+            "third_party",
+            "upstream",
+            "vendor",
+            "generated",
+            "tests",
+            "test",
+            "__tests__",
+            "examples",
+            "scripts",
+            "crates/winwincode-test-assets",
+            "**/*.test.ts",
+            "**/*.test.tsx",
+            "**/*.spec.ts",
+            "**/*.spec.tsx",
+            "**/*.generated.ts",
+            "**/generated.rs",
+            "**/*_tests.rs",
+            "**/test_support.rs",
+            "**/build.rs"
+          ],
+          "languages": [
+            "python",
+            "typescript",
+            "rust"
+          ],
+          "max_file_bytes": 4194304,
+          "module_aliases": {
+            "@winwincode/browser-core/query-cache": "packages/browser-core/src/query-cache.ts",
+            "@winwincode/browser-core/scope-context": "packages/browser-core/src/scope-context.ts",
+            "@winwincode/browser-ui": "packages/browser-ui/src/index.ts",
+            "@winwincode/client": "apps/client/src/index.ts",
+            "@winwincode/contracts": "packages/contracts/src/index.ts",
+            "@winwincode/contracts/browser-control": "packages/contracts/src/browser-control.ts",
+            "@winwincode/control-plane-client": "packages/control-plane-client/src/index.ts",
+            "@winwincode/strongflow": "packages/strongflow/src/index.ts"
+          },
+          "rust_crates": {
+            "winwincode_api": "crates/winwincode-api",
+            "winwincode_audit": "crates/winwincode-audit",
+            "winwincode_cli": "crates/winwincode-cli",
+            "winwincode_client_port": "crates/winwincode-client-port",
+            "winwincode_codex": "crates/winwincode-codex",
+            "winwincode_connector_github": "crates/winwincode-connector-github",
+            "winwincode_connector_jira": "crates/winwincode-connector-jira",
+            "winwincode_connector_linear": "crates/winwincode-connector-linear",
+            "winwincode_connector_slack": "crates/winwincode-connector-slack",
+            "winwincode_connector_teams": "crates/winwincode-connector-teams",
+            "winwincode_connector_webhook": "crates/winwincode-connector-webhook",
+            "winwincode_control_plane": "crates/winwincode-control-plane",
+            "winwincode_data_export": "crates/winwincode-data-export",
+            "winwincode_delivery": "crates/winwincode-delivery",
+            "winwincode_device_client": "crates/winwincode-device-client",
+            "winwincode_domain": "crates/winwincode-domain",
+            "winwincode_evidence_export": "crates/winwincode-evidence-export",
+            "winwincode_execution_port": "crates/winwincode-execution-port",
+            "winwincode_fusion": "crates/winwincode-fusion",
+            "winwincode_integration_core": "crates/winwincode-integration-core",
+            "winwincode_integration_sqlite": "crates/winwincode-integration-sqlite",
+            "winwincode_kernel": "crates/kernel",
+            "winwincode_kernel_helper": "crates/helper",
+            "winwincode_local": "crates/winwincode-local",
+            "winwincode_observability_core": "crates/winwincode-observability-core",
+            "winwincode_observability_sqlite": "crates/winwincode-observability-sqlite",
+            "winwincode_provider": "crates/winwincode-provider",
+            "winwincode_publication": "crates/winwincode-publication",
+            "winwincode_repository_context": "crates/winwincode-repository-context",
+            "winwincode_s3_artifact_adapter": "crates/winwincode-s3-artifact-adapter",
+            "winwincode_server": "crates/winwincode-server",
+            "winwincode_session": "crates/winwincode-session",
+            "winwincode_storage": "crates/winwincode-storage",
+            "winwincode_test_assets": "crates/winwincode-test-assets",
+            "winwincode_worker": "crates/winwincode-worker"
+          },
+          "rust_helper_profiles": [
+            {
+              "crate_root": "crates/winwincode-api",
+              "id": "serde-1.0.228-declared-helper-v1",
+              "workspace_manifest": "Cargo.toml"
+            },
+            {
+              "crate_root": "crates/winwincode-delivery",
+              "id": "serde-1.0.228-declared-helper-v1",
+              "workspace_manifest": "Cargo.toml"
+            }
+          ],
+          "rust_interface_models": [
+            "rust-core-cmp-eq-interface-v1"
+          ],
+          "source_roots": [
+            "."
+          ],
+          "support_inputs": [
+            "Cargo.lock",
+            "Cargo.toml",
+            "README.md",
+            "apps/client/src/generated/contracts.ts",
+            "apps/client/src/generated/control-plane-client.ts",
+            "crates/winwincode-api/Cargo.toml",
+            "crates/winwincode-api/src/generated.rs",
+            "crates/winwincode-delivery/Cargo.toml",
+            "crates/winwincode-domain/Cargo.toml",
+            "crates/winwincode-domain/src/generated.rs",
+            "docs/architecture.md"
+          ]
+        },
+        "changed_models_and_capture_are_explicit": true,
+        "repository_source_hash_changed_since_previous": true,
+        "current_support_inputs": [
+          {
+            "path": "Cargo.lock",
+            "hash": "24564a7ee1025079e1ecc86c8b40b08b17694be4ebe5663f2bc2e0e947be5eb5",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "Cargo.toml",
+            "hash": "e33d73f372e5e00e361ce7783743c977aceb07107effea3990886e71c0f7a5b4",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "README.md",
+            "hash": "58feece6f0dee6b5d00954f91f68ae8c1440583e84f4a5c6b42aed289767294e",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "apps/client/src/generated/contracts.ts",
+            "hash": "900bfd942abc7f889540469721e5540c1a329f18124457a67f64b5ea1e793515",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "apps/client/src/generated/control-plane-client.ts",
+            "hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-api/Cargo.toml",
+            "hash": "d09555f1bf9921e1cc5f5d796150dc7aff5b4aa5a78d67e6f9adee70530f9de7",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-api/src/generated.rs",
+            "hash": "8c453928bc68c7980a5c00a262087244f5b3987e2fee6bc0043d13cfafb40037",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-delivery/Cargo.toml",
+            "hash": "698553efb4d8f6f3a7677c624b25acbc0a93e49a1c2e5e3ead5ef055dc7b945c",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-domain/Cargo.toml",
+            "hash": "0f66a8a3d0c5b209a5c89b349e3dcca68b7f3f910935cfae5e48f65123cb087f",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-domain/src/generated.rs",
+            "hash": "358d71db1b6deee97e0dd4364d2c3e30f0ac029105ec40bf9d9e477d8c347c68",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "docs/architecture.md",
+            "hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+            "status": "captured",
+            "language": null
+          }
+        ],
+        "current_captured_code_file_status_counts": {
+          "parsed": 465,
+          "parse_error": 6
+        },
+        "original_frozen_rule_and_observation_bytes_changed": false
+      },
+      "overlapping_source_selections": [
+        {
+          "claim_type": "guarded_call_sequence",
+          "selected_definitions": [
+            {
+              "file": "crates/winwincode-codex/src/adapter.rs",
+              "symbol": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn"
+            }
+          ],
+          "rule_ids": [
+            "wwc-report-adapter-durable-exact-turn",
+            "wwc-report-submission-intent-kernel-order"
+          ],
+          "meaning": "Same source selected by multiple rules; not additional functional coverage."
+        }
+      ],
+      "configured_local_assessment_count": 2
+    }
+  ],
+  "goals": [
+    {
+      "repository": "codepatchbay",
+      "goal_id": "CPB-01",
+      "assessment": "scoped_static_judgment_reproduced",
+      "complete_assessment": true,
+      "full_goal_supported": true,
+      "derived_judgment": "On the checked normal pipeline record/message path, the submitted retries field is transported as metadata but the managed worker constructs an independent selected literal. Actual queue, phase and infrastructure decisions use their distinct local authorities. Existing records, finalizer-only, early returns, opaque consumers and unsuccessful/not-run operations bound this finding; retry capability is present.",
+      "finding_id": "c5702ff61b2fe477fb28b9dc",
+      "evidence_id": "71f6cf7c7a31d0977b4c9a06",
+      "saved_model_ids": [
+        "normal-async-callback-transfer-v1",
+        "normal-authenticated-json-broker-channel-v1",
+        "normal-durable-record-channel-v1",
+        "ordinary-record-tree-flow-v1",
+        "source-derived-module-assembly-v1",
+        "standard-json-record-codec-v1"
+      ],
+      "obligation_statuses": {
+        "supported": 6
+      },
+      "obligation_count": 6
+    },
+    {
+      "repository": "codepatchbay",
+      "goal_id": "CPB-02",
+      "assessment": "scoped_static_judgment_reproduced",
+      "complete_assessment": true,
+      "full_goal_supported": true,
+      "derived_judgment": {
+        "authority_terminal_membership": true,
+        "classification_differs": true,
+        "kind": "conditional_terminal_classification_difference",
+        "recovery_is_required_or_authorized": false,
+        "status": "superseded",
+        "terminal_state_can_be_illegally_mutated": false,
+        "valid_identity_predicate_result": false
+      },
+      "finding_id": "4b842226073458a0e78e4030",
+      "evidence_id": "042e5b5d63099be326f960a9",
+      "saved_model_ids": [
+        "ordinary-record-status-predicate-normal-projection-v1"
+      ],
+      "obligation_statuses": {
+        "supported": 5
+      },
+      "obligation_count": 5
+    },
+    {
+      "repository": "codepatchbay",
+      "goal_id": "CPB-03",
+      "assessment": "scoped_static_judgment_reproduced",
+      "complete_assessment": true,
+      "full_goal_supported": true,
+      "derived_judgment": "Two same-project/key/description default submissions can both observe no row; the first protected insert can be guardedly scheduled before the second protected check; the pending-only inner check then inserts a second nonterminal row",
+      "finding_id": "a6270e2d476c805d8c26eb60",
+      "evidence_id": "78f93f2d73951286ebc21de9",
+      "saved_model_ids": [
+        "atomic-file-normal-publish-v1",
+        "directory-owner-lock-normal-operation-v1",
+        "ecmascript-literal-module-import-v1",
+        "ecmascript-plain-json-record-array-v1",
+        "ecmascript-source-closed-instance-v1",
+        "finite-queue-interleaving-v1",
+        "node-logical-path-identity-v1",
+        "node-source-hash-key-v1"
+      ],
+      "obligation_statuses": {
+        "supported": 7
+      },
+      "obligation_count": 7
+    },
+    {
+      "repository": "winwincode",
+      "goal_id": "WWC-01",
+      "assessment": "scoped_static_judgment_reproduced",
+      "complete_assessment": true,
+      "full_goal_supported": true,
+      "derived_judgment": "The selected source-derived absent-query path reaches the actual production port callback and rejects its create before command calls, under the retained platform/form conditions.",
+      "finding_id": "333b5dc5882abce976c0d9dc",
+      "evidence_id": "1f75ceee5eab722beeb2d270",
+      "saved_model_ids": [
+        "dom-anchor-append-listener-1",
+        "js-hash-path-strip-1",
+        "literal-promise-all-destructuring-assembly-1",
+        "ordinary-source-method-invocation-1",
+        "ordinary-static-object-and-freeze-assembly-1"
+      ],
+      "obligation_statuses": {
+        "supported": 7
+      },
+      "obligation_count": 7
+    },
+    {
+      "repository": "winwincode",
+      "goal_id": "WWC-02",
+      "assessment": "scoped_static_judgment_reproduced",
+      "complete_assessment": true,
+      "full_goal_supported": true,
+      "derived_judgment": "Under the explicitly retained normal production, JSON/Serde and active Device conditions, the closed UI command field omission reaches None and the nonblank authority guard rejects before criterion use/commit.",
+      "finding_id": "89fc6bad0b0557c4623dd65b",
+      "evidence_id": "3a311ed2a8291589c7016d8c",
+      "saved_model_ids": [
+        "captured-device-json-serde-dispatch-v1"
+      ],
+      "obligation_statuses": {
+        "supported": 5
+      },
+      "obligation_count": 5
+    }
+  ],
+  "goal_count": 5,
+  "complete_assessment_count": 5,
+  "original_claim_supported_count": 5,
+  "obligation_count": 30,
+  "recorded_goal_status_counts": {
+    "scoped_static_judgment_reproduced": 5
+  },
+  "recorded_obligation_status_counts": {
+    "supported": 30
+  },
+  "chains": [
+    {
+      "repository": "codepatchbay",
+      "rule_id": "cpb-report-agent-execution-policy",
+      "claim_type": "agent_execution_policy",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "所选runAgent的正常源码入口；允许名单、注入pool及实际agent返回值由运行环境提供。",
+            "源码条件和正常语句先后按显式有限模型解释；不证明provider/平台/外部进程的真实能力或隔离效果。"
+          ],
+          "counterexamples": [
+            "pool为注入端口，源代码方法名不确定唯一实现。",
+            "native/off/custom、平台probe、显式allowKeys、provider配置和过滤后的环境写入会改变边界；具体条件由源码提取。",
+            "只读检查依赖阶段与审计文件；没有审计文件、读取失败等源码分支不能当作违规已检出。"
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent_review",
+          "note": "来源角色仅选源码；allowlist、字段/回调、readonly检查、子环境过滤及sandbox分支从捕获AST自动提取，未执行外部provider。",
+          "reviewer": "Astra original report",
+          "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "codepatchbay",
+      "rule_id": "cpb-report-conditional-delivery-result",
+      "claim_type": "conditional_delivery_result",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected source declarations, lexical identities and call edges belong to the same authenticated snapshot.",
+            "Extracted normal source control describes attempted finalization, deferred publication and current-attempt projection. Provider ports, callback activation, physical I/O and receipt truth remain conditional.",
+            "Execution result, delivery result and queue projection are interpreted separately; captured source structure does not establish remote success, global exactly-once publication or eventual recovery completion."
+          ],
+          "counterexamples": [
+            "Auto-finalization can be disabled, and blocked/cancelled/finalizer-only paths retain their own guards and result sources.",
+            "Terminal publication rejects invalid writer results and unequal existing results; cleanup, retention and mutation fences can stop publication.",
+            "Readback and journal requirements depend on finalization mode; a recovery plan is not evidence that all recovery has completed."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Locator-only selection for execution, finalization, terminal publication and queue projection. The detector derives intermediate formulas, bindings, fields, guards and calls from authenticated saved source.",
+          "reviewer": "source-derived-report-chains",
+          "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "codepatchbay",
+      "rule_id": "cpb-report-engine-stage-chain",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected declarations and saved source are authenticated in the same snapshot.",
+            "Relations describe captured source structure and selected normal reaching, not target execution, completion or whole-repository correctness."
+          ],
+          "counterexamples": [
+            "Blocked/failed guard returns and the crash handler remain distinct paths.",
+            "The execution context remains injectable; source order is not all-path completion."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Locator-only source selection; original report wording is not consumed by the detector.",
+          "reviewer": "source-derived-report-chains",
+          "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "codepatchbay",
+      "rule_id": "cpb-report-job-audit-best-effort",
+      "claim_type": "best_effort_finalization",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected declarations and saved source are authenticated in the same snapshot.",
+            "Relations describe captured source structure and selected normal reaching, not target execution, completion or whole-repository correctness."
+          ],
+          "counterexamples": [
+            "This selected job finalization subject is not the Hub access-audit contract.",
+            "An empty catch prevents that source failure escaping; it does not prove a finalization attempt succeeds."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Locator-only source selection; original report wording is not consumed by the detector.",
+          "reviewer": "source-derived-report-chains",
+          "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "codepatchbay",
+      "rule_id": "cpb-report-trusted-probe-command-source",
+      "claim_type": "structured_command_source",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [
+        {
+          "code": "structured_command_intermediate_values_and_external_effects_not_fully_proven",
+          "origin": "unresolved",
+          "runtime_or_full_noninterference_proven": false,
+          "source_only": true
+        }
+      ],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        },
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "node-structured-execfile-source-contract-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected declarations and saved source are authenticated in the same snapshot.",
+            "Relations describe captured source structure and selected normal reaching, not target execution, completion or whole-repository correctness."
+          ],
+          "counterexamples": [
+            "The HEAD source and shell option are captured expressions; no Git or probe is executed.",
+            "Opaque effects, policy-map contents and full expectedEvidence noninterference are not inferred from a direct call."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Locator-only source selection; original report wording is not consumed by the detector.",
+          "reviewer": "source-derived-report-chains",
+          "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "codepatchbay",
+      "rule_id": "cpb-report-unsupported-probe-evidence",
+      "claim_type": "unsupported_method_evidence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [
+        {
+          "code": "structured_record_markers_do_not_prove_all_input_retention_or_persistence",
+          "origin": "unresolved",
+          "source_only": true
+        }
+      ],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected declarations and saved source are authenticated in the same snapshot.",
+            "Relations describe captured source structure and selected normal reaching, not target execution, completion or whole-repository correctness."
+          ],
+          "counterexamples": [
+            "Static diff scope is structural evidence, not requirements semantics.",
+            "External hardGate observations and their conditional merging are separate from automatic probe collection."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Locator-only source selection; original report wording is not consumed by the detector.",
+          "reviewer": "source-derived-report-chains",
+          "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-adapter-durable-exact-turn",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "Submission-intent/persist_run and exact-turn reconciliation are distinct source operations.",
+            "Captured cfg test-support branches and durable/recovered state guards are preserved; no crash-consistency exercise has been performed."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-chat-delivery-workrun-requests",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "The Chat creation path is an independent counterexample to blanket task-creation failure.",
+            "Command confirmations, authorization, request identities and subsequent work-item/run failures are retained; injected client target is not determined by method name."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-device-provider-deployment",
+      "claim_type": "deployment_provider_split",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": false,
+        "state": "partial_source_relations",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [
+        {
+          "code": "report_source_role_graph_binding_limited",
+          "declaration_binding_limits": {
+            "attribute_macros_unknown": true
+          },
+          "location": {
+            "column": 5,
+            "column_base": 1,
+            "column_unit": "utf8_bytes",
+            "coordinate_space": "captured_text_utf8",
+            "end_byte": 13509,
+            "end_column": 6,
+            "end_line": 347,
+            "file": "crates/winwincode-server/src/main.rs",
+            "grammar": "rust",
+            "line": 340,
+            "original_file_end_byte": 13509,
+            "original_file_start_byte": 13130,
+            "parse_identity": {
+              "coordinate_space": "captured_text_utf8",
+              "derived_text_utf8_sha256": null,
+              "literal_authority": "original_saved_source_text_only",
+              "original_text_utf8_sha256": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+              "position_map": "identity_utf8_bytes_and_line_columns",
+              "projection_mode": "original",
+              "projection_version": null,
+              "raw_prefix_bytes": 0,
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28"
+            },
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "raw_prefix_bytes": 0,
+            "semantic_parse_id": "35341a0a4625dd23dca0d5dcadbeec868a809a4918d658f0be296353372a2466",
+            "source_excerpt": "fn accept(\n        &mut self,\n        _context: winwincode_control_plane::DurableExecutionPortContext<'_>,\n        _message: winwincode_control_plane::DurableExecutionPortSupplement<'_>,\n    ) -> Result<Vec<ExecutionPortMessage>, winwincode_control_plane::DurableExecutionPortError>\n    {\n        Err(winwincode_control_plane::DurableExecutionPortError::UnsupportedMessage)\n    }",
+            "source_excerpt_truncated": false,
+            "source_hash": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+            "source_line": "    fn accept(",
+            "span_hash": "7d944a347d86b109437b7240f2a86fa8144f974bc260f37f5d18ab30cd6d125d",
+            "start_byte": 13130
+          },
+          "origin": "unresolved",
+          "role": "boundary",
+          "source_body_available": true,
+          "source_gaps": [
+            {
+              "code": "graph_declaration_not_unique",
+              "file": "crates/winwincode-server/src/main.rs",
+              "line": 340,
+              "message": "图声明不是唯一、完整的捕获函数/方法。"
+            }
+          ]
+        },
+        {
+          "code": "report_source_role_graph_binding_limited",
+          "declaration_binding_limits": {
+            "attribute_macros_unknown": true
+          },
+          "location": {
+            "column": 1,
+            "column_base": 1,
+            "column_unit": "utf8_bytes",
+            "coordinate_space": "captured_text_utf8",
+            "end_byte": 10828,
+            "end_column": 2,
+            "end_line": 262,
+            "file": "crates/winwincode-worker/src/main.rs",
+            "grammar": "rust",
+            "line": 154,
+            "original_file_end_byte": 10828,
+            "original_file_start_byte": 6268,
+            "parse_identity": {
+              "coordinate_space": "captured_text_utf8",
+              "derived_text_utf8_sha256": null,
+              "literal_authority": "original_saved_source_text_only",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "position_map": "identity_utf8_bytes_and_line_columns",
+              "projection_mode": "original",
+              "projection_version": null,
+              "raw_prefix_bytes": 0,
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28"
+            },
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "raw_prefix_bytes": 0,
+            "semantic_parse_id": "9b1b6a5da0112fe2c51a6fb79d5a27871960f56673e992fefecf2eef97a8e7fe",
+            "source_excerpt": "async fn run_worker(bootstrap: WorkerBootstrap) -> Result<(), Box<dyn std::error::Error>> {\n    let WorkerBootstrap {\n        exit_after_work,\n        worker_id,\n        worker_instance_id,\n        started_at,\n        data_directory,\n        provider_directory,\n        source_directory,\n        server_origin,\n        credential_path,\n        model_route,\n    } = bootstrap;\n    let capabilities = worker_capabilities()?;\n    let execution_mode = configured_execution_mode(\"WWC_WORKER_EXECUTION_MODE\")?;\n    let observer_mode = configured_observer_mode(\"WWC_WORKER_OBSERVER_MODE\")?;\n    let observation_model = configured_observation_model(observer_mode, required)?;\n    let (port, handle) = RemoteWorkerPort::open(\n        &server_origin,\n        &fs::read(required(\"WWC_WORKER_TLS_ROOT_DER_FILE\")?)?,\n        credential_path,\n        worker_id.clone(),\n        worker_instance_id.clone(),\n        Duration::from_secs(15),\n    )?;\n    let codex = production_codex(\n        &data_directory,\n        &provider_directory,\n        model_route,\n        capabilities.clone(),\n        execution_mode,\n        observer_mode,\n    )?;\n    let validation_artifacts =\n        DurableValidationArtifactStore::open(data_directory.join(\"worker-validation-artifacts\"))?;\n    let workspaces =\n        JobWorkspaceRuntime::open(data_directory.join(\"worker-workspaces\"), &source_directory)?\n            .with_validation_artifact_port(validation_artifacts);\n    let config = WorkerConfig {\n        worker_id,\n        worker_instance_id: worker_instance_id.clone(),\n        started_at: started_at.clone(),\n        capabilities,\n    };\n    let intake_log = data_directory.join(\"codex-runtime\").join(\"model-intake.log\");\n    let mut worker = WorkerMain::new(config, port, codex, workspaces)\n        .with_device_providers(&provider_directory)?\n        .with_observer_mode(observer_mode)\n        .with_registration_request_namespace(&worker_instance_id, &started_at)\n        .with_model_intake_log(&intake_log);\n    if let Some(observation_model) = observation_model {\n        worker = worker.with_observation_model(observation_model);\n    }\n\n    while worker.lifecycle() == WorkerLifecycleState::Booting\n        || worker.lifecycle() == WorkerLifecycleState::Registering\n    {\n        match Box::pin(worker.start(started_at.clone())).await {\n            Ok(()) => {\n                Box::pin(drain_controls(&mut worker, &handle)).await?;\n            }\n            Err(error) => {\n                // Secret-safe lifecycle category only: a Device StrongFlow\n                // Worker that silently retries registration forever is\n                // indistinguishable from a hung process in production logs.\n                eprintln!(\n                    \"winwincode-worker: registration/start retry category={:?} reason={} lifecycle={:?}\",\n                    error.code,\n                    error.reason,\n                    worker.lifecycle()\n                );\n            }\n        }\n        if worker.lifecycle() != WorkerLifecycleState::Active {\n            tokio::time::sleep(Duration::from_millis(250)).await;\n        }\n    }\n\n    let mut heartbeat = tokio::time::interval(Duration::from_secs(1));\n    let mut drive = tokio::time::interval(Duration::from_millis(25));\n    loop {\n        tokio::select! {\n            _ = tokio::signal::ctrl_c() => break,\n            _ = heartbeat.tick() => {\n                let now = now_instant()?;\n                if Box::pin(worker.heartbeat(now.clone())).await.is_ok() {\n                    Box::pin(drain_controls(&mut worker, &handle)).await?;\n                }\n            }\n            _ = drive.tick() => {\n                let now = now_instant()?;\n                Box::pin(drain_controls(&mut worker, &handle)).await?;\n                // Retry pending Worker→Server evidence every drive tick so a\n                // Server restart / Connection-refused window cannot strand\n                // runtime.event / artifact.chunk / JobOutcome in the outbox.\n                if worker.lifecycle() == WorkerLifecycleState::Active\n                    && Box::pin(worker.flush_",
+            "source_excerpt_truncated": true,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "source_line": "async fn run_worker(bootstrap: WorkerBootstrap) -> Result<(), Box<dyn std::error::Error>> {",
+            "span_hash": "ab106e71bf791a0283412d398b3b36bdc13d453808b0b2a0c49ccb285c8b5982",
+            "start_byte": 6268
+          },
+          "origin": "unresolved",
+          "role": "bootstrap",
+          "source_body_available": true,
+          "source_gaps": [
+            {
+              "code": "graph_declaration_not_unique",
+              "file": "crates/winwincode-worker/src/main.rs",
+              "line": 154,
+              "message": "图声明不是唯一、完整的捕获函数/方法。"
+            }
+          ]
+        },
+        {
+          "code": "deployment_candidate_chain_not_global_dispatch_or_credential_availability",
+          "full_provider_flow_proven": false,
+          "origin": "unresolved",
+          "source_only": true
+        }
+      ],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        },
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "source-derived-production-construction-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected declarations and saved source are authenticated in the same snapshot.",
+            "Relations describe captured source structure and selected normal reaching, not target execution, completion or whole-repository correctness."
+          ],
+          "counterexamples": [
+            "One server boundary result does not imply an absent provider in a separate Worker deployment.",
+            "This does not prove credentials are configured, every provider is usable or generic dispatch has one global target."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Locator-only source selection; original report wording is not consumed by the detector.",
+          "reviewer": "source-derived-report-chains",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-kernel-create-session-interface",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "The async operand to Self::guard and its runtime manager calls are source evidence; the current pattern may not close future activation/inner statement order."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-kernel-reconcile-exact-interface",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "Completed/Failed/Absent/InProgress and recover/start-if-idle branches remain distinct source conditions, not observed history facts."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-kernel-submit-turn-interface",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "Ordinary start-or-steer is not exact-turn reconciliation; the async helper boundary is retained."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-production-adapter-embedded-kernel",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "Directory/helper/store/outbox/action-gate and Kernel construction can fail; source presence does not certify a running deployment.",
+            "Installed Codex CLI execution is not part of this captured production constructor chain."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-submission-intent-kernel-order",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected declarations and saved source are authenticated in the same snapshot.",
+            "Relations describe captured source structure and selected normal reaching, not target execution, completion or whole-repository correctness."
+          ],
+          "counterexamples": [
+            "Settled and cfg-controlled fault branches can return before the exact Kernel interface.",
+            "Source assignment/persist order does not verify durable crash consistency or Kernel completion."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Locator-only source selection; original report wording is not consumed by the detector.",
+          "reviewer": "source-derived-report-chains",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-worker-bootstrap-entries",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": false,
+        "state": "partial_source_relations",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [
+        {
+          "code": "report_source_role_graph_binding_limited",
+          "declaration_binding_limits": {
+            "attribute_macros_unknown": true
+          },
+          "location": {
+            "column": 1,
+            "column_base": 1,
+            "column_unit": "utf8_bytes",
+            "coordinate_space": "captured_text_utf8",
+            "end_byte": 1970,
+            "end_column": 2,
+            "end_line": 50,
+            "file": "crates/winwincode-worker/src/main.rs",
+            "grammar": "rust",
+            "line": 34,
+            "original_file_end_byte": 1970,
+            "original_file_start_byte": 1352,
+            "parse_identity": {
+              "coordinate_space": "captured_text_utf8",
+              "derived_text_utf8_sha256": null,
+              "literal_authority": "original_saved_source_text_only",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "position_map": "identity_utf8_bytes_and_line_columns",
+              "projection_mode": "original",
+              "projection_version": null,
+              "raw_prefix_bytes": 0,
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28"
+            },
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "raw_prefix_bytes": 0,
+            "semantic_parse_id": "9b1b6a5da0112fe2c51a6fb79d5a27871960f56673e992fefecf2eef97a8e7fe",
+            "source_excerpt": "fn main() {\n    let mut args = env::args().skip(1);\n    match args.next().as_deref() {\n        Some(\"--version\") => println!(\"winwincode-worker {}\", env!(\"CARGO_PKG_VERSION\")),\n        Some(\"--check\") | None => print_identity(),\n        Some(\"--remote\") if args.next().is_none() => {\n            run_worker_process(run_remote());\n        }\n        Some(\"--managed-session\") => match args.next() {\n            Some(config_path) if args.next().is_none() => {\n                run_worker_process(run_managed(&config_path));\n            }\n            _ => usage_error(),\n        },\n        Some(_) => usage_error(),\n    }\n}",
+            "source_excerpt_truncated": false,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "source_line": "fn main() {",
+            "span_hash": "b46fbedf51136152dafe28f5b7614bd17f17598b7cf7bfba6adc99cd7ed65a4c",
+            "start_byte": 1352
+          },
+          "origin": "unresolved",
+          "role": "entry",
+          "source_body_available": true,
+          "source_gaps": [
+            {
+              "code": "graph_declaration_not_unique",
+              "file": "crates/winwincode-worker/src/main.rs",
+              "line": 34,
+              "message": "图声明不是唯一、完整的捕获函数/方法。"
+            }
+          ]
+        },
+        {
+          "code": "report_source_role_graph_binding_limited",
+          "declaration_binding_limits": {
+            "attribute_macros_unknown": true
+          },
+          "location": {
+            "column": 1,
+            "column_base": 1,
+            "column_unit": "utf8_bytes",
+            "coordinate_space": "captured_text_utf8",
+            "end_byte": 4295,
+            "end_column": 2,
+            "end_line": 111,
+            "file": "crates/winwincode-worker/src/main.rs",
+            "grammar": "rust",
+            "line": 97,
+            "original_file_end_byte": 4295,
+            "original_file_start_byte": 3451,
+            "parse_identity": {
+              "coordinate_space": "captured_text_utf8",
+              "derived_text_utf8_sha256": null,
+              "literal_authority": "original_saved_source_text_only",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "position_map": "identity_utf8_bytes_and_line_columns",
+              "projection_mode": "original",
+              "projection_version": null,
+              "raw_prefix_bytes": 0,
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28"
+            },
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "raw_prefix_bytes": 0,
+            "semantic_parse_id": "9b1b6a5da0112fe2c51a6fb79d5a27871960f56673e992fefecf2eef97a8e7fe",
+            "source_excerpt": "async fn run_remote() -> Result<(), Box<dyn std::error::Error>> {\n    let bootstrap = WorkerBootstrap {\n        exit_after_work: false,\n        worker_id: WorkerId(required(\"WWC_WORKER_ID\")?),\n        worker_instance_id: WorkerInstanceId(required(\"WWC_WORKER_INSTANCE_ID\")?),\n        started_at: env::var(\"WWC_WORKER_STARTED_AT\").map_or(now_instant()?, Instant),\n        data_directory: PathBuf::from(required(\"WWC_WORKER_DATA_DIRECTORY\")?),\n        provider_directory: PathBuf::from(required(\"WWC_DEVICE_PROVIDER_DIRECTORY\")?),\n        source_directory: PathBuf::from(required(\"WWC_WORKER_SOURCE_ROOT\")?),\n        server_origin: required(\"WWC_WORKER_SERVER_ORIGIN\")?,\n        credential_path: PathBuf::from(required(\"WWC_WORKER_CREDENTIAL_FILE\")?),\n        model_route: default_model_route(),\n    };\n    Box::pin(run_worker(bootstrap)).await\n}",
+            "source_excerpt_truncated": false,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "source_line": "async fn run_remote() -> Result<(), Box<dyn std::error::Error>> {",
+            "span_hash": "c312bb11fbf5c818b667fb722ee53d785f571bbde7e79940b84c773ebd9472ec",
+            "start_byte": 3451
+          },
+          "origin": "unresolved",
+          "role": "remote",
+          "source_body_available": true,
+          "source_gaps": [
+            {
+              "code": "graph_declaration_not_unique",
+              "file": "crates/winwincode-worker/src/main.rs",
+              "line": 97,
+              "message": "图声明不是唯一、完整的捕获函数/方法。"
+            }
+          ]
+        },
+        {
+          "code": "report_source_role_graph_binding_limited",
+          "declaration_binding_limits": {
+            "attribute_macros_unknown": true
+          },
+          "location": {
+            "column": 1,
+            "column_base": 1,
+            "column_unit": "utf8_bytes",
+            "coordinate_space": "captured_text_utf8",
+            "end_byte": 6055,
+            "end_column": 2,
+            "end_line": 149,
+            "file": "crates/winwincode-worker/src/main.rs",
+            "grammar": "rust",
+            "line": 118,
+            "original_file_end_byte": 6055,
+            "original_file_start_byte": 4636,
+            "parse_identity": {
+              "coordinate_space": "captured_text_utf8",
+              "derived_text_utf8_sha256": null,
+              "literal_authority": "original_saved_source_text_only",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "position_map": "identity_utf8_bytes_and_line_columns",
+              "projection_mode": "original",
+              "projection_version": null,
+              "raw_prefix_bytes": 0,
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28"
+            },
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "raw_prefix_bytes": 0,
+            "semantic_parse_id": "9b1b6a5da0112fe2c51a6fb79d5a27871960f56673e992fefecf2eef97a8e7fe",
+            "source_excerpt": "async fn run_managed(config_path: &str) -> Result<(), Box<dyn std::error::Error>> {\n    let config = ManagedSessionConfig::read(std::path::Path::new(config_path))?;\n    let credential = WorkerSessionCredential::load(&config.worker_credential_path)?;\n    eprintln!(\n        \"winwincode-worker: managed session {} for worker {} instance {} under lease {} with fencing token {} on {} (client {} instance {}); worker session credential digest {}\",\n        config.worker_session_id.0,\n        config.worker_id.0,\n        config.worker_instance_id.0,\n        config.occupancy_lease_id.0,\n        config.occupancy_fencing_token,\n        config.repository_binding_id.0,\n        config.client_node_id.0,\n        config.client_instance_id.0,\n        credential.digest().0,\n    );\n    Box::pin(run_worker(WorkerBootstrap {\n        exit_after_work: true,\n        worker_id: config.worker_id.clone(),\n        worker_instance_id: config.worker_instance_id.clone(),\n        started_at: now_instant()?,\n        data_directory: config.data_directory.clone(),\n        provider_directory: config.provider_directory.clone(),\n        source_directory: config.source_directory.clone(),\n        server_origin: config.server_origin.clone(),\n        credential_path: credential.path().to_path_buf(),\n        model_route: config\n            .model_route\n            .clone()\n            .unwrap_or_else(default_model_route),\n    }))\n    .await\n}",
+            "source_excerpt_truncated": false,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "source_line": "async fn run_managed(config_path: &str) -> Result<(), Box<dyn std::error::Error>> {",
+            "span_hash": "6d80bf35a9aa9f813aeb2156617f055c780dd04bd306d0c83218ed1a704eb4f1",
+            "start_byte": 4636
+          },
+          "origin": "unresolved",
+          "role": "managed",
+          "source_body_available": true,
+          "source_gaps": [
+            {
+              "code": "graph_declaration_not_unique",
+              "file": "crates/winwincode-worker/src/main.rs",
+              "line": 118,
+              "message": "图声明不是唯一、完整的捕获函数/方法。"
+            }
+          ]
+        }
+      ],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "The remote and managed-session command branches remain separate source-selected entry conditions."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-worker-production-construction",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": false,
+        "state": "partial_source_relations",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [
+        {
+          "code": "report_source_role_graph_binding_limited",
+          "declaration_binding_limits": {
+            "attribute_macros_unknown": true
+          },
+          "location": {
+            "column": 1,
+            "column_base": 1,
+            "column_unit": "utf8_bytes",
+            "coordinate_space": "captured_text_utf8",
+            "end_byte": 10828,
+            "end_column": 2,
+            "end_line": 262,
+            "file": "crates/winwincode-worker/src/main.rs",
+            "grammar": "rust",
+            "line": 154,
+            "original_file_end_byte": 10828,
+            "original_file_start_byte": 6268,
+            "parse_identity": {
+              "coordinate_space": "captured_text_utf8",
+              "derived_text_utf8_sha256": null,
+              "literal_authority": "original_saved_source_text_only",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "position_map": "identity_utf8_bytes_and_line_columns",
+              "projection_mode": "original",
+              "projection_version": null,
+              "raw_prefix_bytes": 0,
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28"
+            },
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "raw_prefix_bytes": 0,
+            "semantic_parse_id": "9b1b6a5da0112fe2c51a6fb79d5a27871960f56673e992fefecf2eef97a8e7fe",
+            "source_excerpt": "async fn run_worker(bootstrap: WorkerBootstrap) -> Result<(), Box<dyn std::error::Error>> {\n    let WorkerBootstrap {\n        exit_after_work,\n        worker_id,\n        worker_instance_id,\n        started_at,\n        data_directory,\n        provider_directory,\n        source_directory,\n        server_origin,\n        credential_path,\n        model_route,\n    } = bootstrap;\n    let capabilities = worker_capabilities()?;\n    let execution_mode = configured_execution_mode(\"WWC_WORKER_EXECUTION_MODE\")?;\n    let observer_mode = configured_observer_mode(\"WWC_WORKER_OBSERVER_MODE\")?;\n    let observation_model = configured_observation_model(observer_mode, required)?;\n    let (port, handle) = RemoteWorkerPort::open(\n        &server_origin,\n        &fs::read(required(\"WWC_WORKER_TLS_ROOT_DER_FILE\")?)?,\n        credential_path,\n        worker_id.clone(),\n        worker_instance_id.clone(),\n        Duration::from_secs(15),\n    )?;\n    let codex = production_codex(\n        &data_directory,\n        &provider_directory,\n        model_route,\n        capabilities.clone(),\n        execution_mode,\n        observer_mode,\n    )?;\n    let validation_artifacts =\n        DurableValidationArtifactStore::open(data_directory.join(\"worker-validation-artifacts\"))?;\n    let workspaces =\n        JobWorkspaceRuntime::open(data_directory.join(\"worker-workspaces\"), &source_directory)?\n            .with_validation_artifact_port(validation_artifacts);\n    let config = WorkerConfig {\n        worker_id,\n        worker_instance_id: worker_instance_id.clone(),\n        started_at: started_at.clone(),\n        capabilities,\n    };\n    let intake_log = data_directory.join(\"codex-runtime\").join(\"model-intake.log\");\n    let mut worker = WorkerMain::new(config, port, codex, workspaces)\n        .with_device_providers(&provider_directory)?\n        .with_observer_mode(observer_mode)\n        .with_registration_request_namespace(&worker_instance_id, &started_at)\n        .with_model_intake_log(&intake_log);\n    if let Some(observation_model) = observation_model {\n        worker = worker.with_observation_model(observation_model);\n    }\n\n    while worker.lifecycle() == WorkerLifecycleState::Booting\n        || worker.lifecycle() == WorkerLifecycleState::Registering\n    {\n        match Box::pin(worker.start(started_at.clone())).await {\n            Ok(()) => {\n                Box::pin(drain_controls(&mut worker, &handle)).await?;\n            }\n            Err(error) => {\n                // Secret-safe lifecycle category only: a Device StrongFlow\n                // Worker that silently retries registration forever is\n                // indistinguishable from a hung process in production logs.\n                eprintln!(\n                    \"winwincode-worker: registration/start retry category={:?} reason={} lifecycle={:?}\",\n                    error.code,\n                    error.reason,\n                    worker.lifecycle()\n                );\n            }\n        }\n        if worker.lifecycle() != WorkerLifecycleState::Active {\n            tokio::time::sleep(Duration::from_millis(250)).await;\n        }\n    }\n\n    let mut heartbeat = tokio::time::interval(Duration::from_secs(1));\n    let mut drive = tokio::time::interval(Duration::from_millis(25));\n    loop {\n        tokio::select! {\n            _ = tokio::signal::ctrl_c() => break,\n            _ = heartbeat.tick() => {\n                let now = now_instant()?;\n                if Box::pin(worker.heartbeat(now.clone())).await.is_ok() {\n                    Box::pin(drain_controls(&mut worker, &handle)).await?;\n                }\n            }\n            _ = drive.tick() => {\n                let now = now_instant()?;\n                Box::pin(drain_controls(&mut worker, &handle)).await?;\n                // Retry pending Worker→Server evidence every drive tick so a\n                // Server restart / Connection-refused window cannot strand\n                // runtime.event / artifact.chunk / JobOutcome in the outbox.\n                if worker.lifecycle() == WorkerLifecycleState::Active\n                    && Box::pin(worker.flush_",
+            "source_excerpt_truncated": true,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "source_line": "async fn run_worker(bootstrap: WorkerBootstrap) -> Result<(), Box<dyn std::error::Error>> {",
+            "span_hash": "ab106e71bf791a0283412d398b3b36bdc13d453808b0b2a0c49ccb285c8b5982",
+            "start_byte": 6268
+          },
+          "origin": "unresolved",
+          "role": "shared_loop",
+          "source_body_available": true,
+          "source_gaps": [
+            {
+              "code": "graph_declaration_not_unique",
+              "file": "crates/winwincode-worker/src/main.rs",
+              "line": 154,
+              "message": "图声明不是唯一、完整的捕获函数/方法。"
+            }
+          ]
+        },
+        {
+          "code": "report_source_role_graph_binding_limited",
+          "declaration_binding_limits": {
+            "attribute_macros_unknown": true
+          },
+          "location": {
+            "column": 1,
+            "column_base": 1,
+            "column_unit": "utf8_bytes",
+            "coordinate_space": "captured_text_utf8",
+            "end_byte": 15782,
+            "end_column": 2,
+            "end_line": 375,
+            "file": "crates/winwincode-worker/src/main.rs",
+            "grammar": "rust",
+            "line": 315,
+            "original_file_end_byte": 15782,
+            "original_file_start_byte": 13028,
+            "parse_identity": {
+              "coordinate_space": "captured_text_utf8",
+              "derived_text_utf8_sha256": null,
+              "literal_authority": "original_saved_source_text_only",
+              "original_text_utf8_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+              "position_map": "identity_utf8_bytes_and_line_columns",
+              "projection_mode": "original",
+              "projection_version": null,
+              "raw_prefix_bytes": 0,
+              "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "semantic_source_version": "semantic-snapshot-sources-1",
+              "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28"
+            },
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+            "raw_prefix_bytes": 0,
+            "semantic_parse_id": "9b1b6a5da0112fe2c51a6fb79d5a27871960f56673e992fefecf2eef97a8e7fe",
+            "source_excerpt": "fn production_codex(\n    data_directory: &std::path::Path,\n    provider_directory: &std::path::Path,\n    model_route: ModelGatewayRoute,\n    capabilities: WorkerCapabilitySet,\n    execution_mode: ExecutionMode,\n    observer_mode: ObserverMode,\n) -> Result<ProductionCodexAdapter, Box<dyn std::error::Error>> {\n    let helper_release_manifest = HelperReleaseManifest::from_file(&PathBuf::from(required(\n        \"WWC_WORKER_HELPER_RELEASE_MANIFEST\",\n    )?))?;\n    let store = winwincode_provider::DeviceProviderStore::open(provider_directory)?;\n    let snapshot = store.snapshot(\"local\")?;\n    let extensions = store.restore_extensions(&data_directory.join(\"codex-runtime/kernel-home\"))?;\n    let mut discovered_capabilities = Vec::new();\n    for server in extensions {\n        for tool in server.tools {\n            discovered_capabilities.push(\n                winwincode_execution_port::capability_adapter::CapabilityDescriptor::mcp(\n                    &server.server,\n                    &tool,\n                    server.digest.trim_start_matches(\"sha256:\"),\n                    winwincode_execution_port::capability_adapter::CapabilityHealth::Healthy,\n                    winwincode_execution_port::capability_adapter::CapabilityOrigin::CodexCoreMcp,\n                )?,\n            );\n        }\n    }\n    let default_provider = snapshot\n        .providers\n        .iter()\n        .find(|provider| provider.config.enabled && provider.credential_configured)\n        .ok_or(\"configure a Provider on this Device before starting a Worker\")?;\n    let provider_id = env::var(\"WWC_WORKER_MODEL_PROVIDER_ID\")\n        .unwrap_or_else(|_| default_provider.config.provider_id.clone());\n    let model_id = env::var(\"WWC_WORKER_MODEL_ID\")\n        .unwrap_or_else(|_| default_provider.config.model_ids[0].clone());\n    let options = ProductionCodexOptions {\n        data_directory: data_directory.join(\"codex-runtime\"),\n        helper_executable: PathBuf::from(required(\"WWC_WORKER_HELPER_EXECUTABLE\")?),\n        helper_release_manifest,\n        provider: provider_id,\n        model: model_id,\n        gateway_route: model_route,\n        registered_capabilities: capabilities,\n        discovered_capabilities,\n        action_signing_key: ActionEnforcementSigningKey::from_bytes(parse_hex_key(&required(\n            \"WWC_WORKER_ACTION_SIGNING_KEY_HEX\",\n        )?)?)?,\n        execution_envelope: ExecutionEnvelopeToken {\n            version: 1,\n            digest: Sha256Digest(required(\"WWC_WORKER_EXECUTION_ENVELOPE_DIGEST\")?),\n        },\n        execution_mode,\n        observer_mode,\n    };\n    Ok(\n        ProductionCodexAdapter::open(ProductionCodexConfig::try_new(options)?)?\n            .with_device_extensions(provider_directory.to_path_buf())?,\n    )\n}",
+            "source_excerpt_truncated": false,
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "source_line": "fn production_codex(",
+            "span_hash": "b272e828de1bffb3cc79d3615a702afdaf04bab16da6525157bf1f2564bec563",
+            "start_byte": 13028
+          },
+          "origin": "unresolved",
+          "role": "adapter_factory",
+          "source_body_available": true,
+          "source_gaps": [
+            {
+              "code": "graph_declaration_not_unique",
+              "file": "crates/winwincode-worker/src/main.rs",
+              "line": 315,
+              "message": "图声明不是唯一、完整的捕获函数/方法。"
+            }
+          ]
+        }
+      ],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "Generic WorkerMain methods are not globally bound to the production Codex adapter by this construction evidence.",
+            "Provider/helper/TLS/configuration and allocation errors can prevent later statements."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-worker-typed-dispatch",
+      "claim_type": "guarded_call_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected definitions and raw source are authenticated in the same snapshot.",
+            "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+          ],
+          "counterexamples": [
+            "Generic CodexCoreAdapter ensure_thread/submit_turn remain source invocation candidates; no unique production CALLS edge is manufactured.",
+            "Replay, lifecycle, authority, stage-contract, capacity, checkout and start errors keep their branches; this is not all-failure resource cleanup proof."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared.",
+          "reviewer": "captured-source-report-expansion",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-report-workrun-state-guards",
+      "claim_type": "state_guard_sequence",
+      "assessment": {
+        "captured_source_structure_supported": true,
+        "full_functionality_proven": false,
+        "normal_control_model_registered": true,
+        "original_five_goal_acceptance_computed": false,
+        "runtime_verified": false,
+        "scoped_source_supported": true,
+        "state": "scoped_source_relations_supported",
+        "whole_report_reproduced": false
+      },
+      "analysis_gaps": [
+        {
+          "code": "iterator_selection_and_macro_runtime_semantics_not_fully_proven",
+          "origin": "unresolved",
+          "source_only": true
+        }
+      ],
+      "trusted_models": [
+        {
+          "conditions": [
+            "only recorded captured source expressions and conditional normal reaching are interpreted",
+            "opaque calls, actual field values, physical effects and all-function termination remain unproved"
+          ],
+          "id": "captured-normal-statement-control-v1",
+          "origin": "trusted-model",
+          "runtime_verified": false
+        }
+      ],
+      "policy_declarations": {
+        "applicability": {
+          "conditions": [
+            "Selected declarations and saved source are authenticated in the same snapshot.",
+            "Relations describe captured source structure and selected normal reaching, not target execution, completion or whole-repository correctness."
+          ],
+          "counterexamples": [
+            "No candidate or a Result error can prevent a later call.",
+            "Iterator/matches source predicates are preserved without claiming all runtime states or expanding macros."
+          ],
+          "kind": "conditional"
+        },
+        "descriptive_counterexamples_are_computed_evidence": false,
+        "origin": "policy-declared",
+        "provenance": {
+          "author_approved": false,
+          "authority": "independent-static-report-benchmark",
+          "note": "Locator-only source selection; original report wording is not consumed by the detector.",
+          "reviewer": "source-derived-report-chains",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md"
+        }
+      }
+    }
+  ],
+  "chain_count": 18,
+  "chain_states": {
+    "scoped_source_relations_supported": 15,
+    "partial_source_relations": 3
+  },
+  "captured_source_structure_supported_count": 18,
+  "scoped_source_supported_count": 15,
+  "baseline_total": 26,
+  "selected_baseline_total": 26,
+  "baseline_counts": {
+    "reproduced": 10,
+    "unknown": 3,
+    "mismatch": 0,
+    "evidence_only": 13,
+    "source_changed": 0,
+    "source_missing": 0,
+    "evidence_unavailable": 0,
+    "endpoint_missing": 0,
+    "ambiguous": 0
+  },
+  "baseline_change_count": 0,
+  "referenced_raw_file_count": 36,
+  "target_commit_checks": [
+    {
+      "repository": "codepatchbay",
+      "frozen_commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+      "actual_commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+      "commit_matches": true,
+      "live_referenced_source_hashes_match": true,
+      "saved_referenced_source_hashes_match": true,
+      "working_tree_clean_claimed": false
+    },
+    {
+      "repository": "winwincode",
+      "frozen_commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+      "actual_commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+      "commit_matches": true,
+      "live_referenced_source_hashes_match": true,
+      "saved_referenced_source_hashes_match": true,
+      "working_tree_clean_claimed": false
+    }
+  ],
+  "alignment_catalog": {
+    "section_count": 32,
+    "statement_count": 130,
+    "all_catalog_items_preserved": true,
+    "baseline_observations": [
+      {
+        "id": "cpb.engine.checklist-materialization-call",
+        "repo": "codepatchbay",
+        "actual_statement": "runJobInner 显式调用冻结 checklist 并构建 DAG 的函数。",
+        "scope": [],
+        "counterevidence": [
+          "此前的创建、准备或规划可提前返回 blocked/failed，因此不能把结构边解释为每次必经。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/0",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.engine.service-to-run-call",
+        "repo": "codepatchbay",
+        "actual_statement": "生产服务适配入口显式调用核心 runJob。",
+        "scope": [],
+        "counterevidence": [
+          "对象端口的动态分支并未因此获得唯一实现。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/1",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.engine.service-to-dag-path",
+        "repo": "codepatchbay",
+        "actual_statement": "runJobWithServices 经 runJob、runJobInner 存在到 executeWorkflowDag 的正长度显式静态路径。",
+        "scope": [],
+        "counterevidence": [
+          "runJobInner 的前置阻塞或规划失败会提前返回；静态路径不证明运行可达或每次必经。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_path",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/2",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.probe.trusted-policy-call",
+        "repo": "codepatchbay",
+        "actual_statement": "runChecklistProbes 显式加载本地可信 probe 策略。",
+        "scope": [],
+        "counterevidence": [
+          "策略加载不证明 probe 被执行，也不证明其业务验收条件成立。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/3",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.cli.dynamic-command-boundary",
+        "repo": "codepatchbay",
+        "actual_statement": "main 中 mod.run 的目标由动态模块选择决定，不能无条件绑定到唯一内部 handler。",
+        "scope": [],
+        "counterevidence": [
+          "源码命令表提供有价值的候选，保留未知不应等于丢弃表和导入来源。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "unknown_required",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/4",
+          "status": "unknown",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.engine.injected-append-boundary",
+        "repo": "codepatchbay",
+        "actual_statement": "runJobInner 的 ctx.appendEvent 不具有所有调用上下文共享的唯一实现。",
+        "scope": [],
+        "counterevidence": [
+          "生产 adapter 的已知对象成员可形成条件候选；这不等于没有实现。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "unknown_required",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/5",
+          "status": "unknown",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.engine.production-port-composition",
+        "repo": "codepatchbay",
+        "actual_statement": "buildServices 为核心引擎组装端口，appendEvent 等成员受 broker/dataRoot 条件影响。",
+        "scope": [],
+        "counterevidence": [
+          "核心不直接 import server 不代表它不能调用注入的 server 实现。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/6",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.fix.readiness-before-enqueue",
+        "repo": "codepatchbay",
+        "actual_statement": "fix.run 的 readiness 失败分支在 enqueue 之前提前返回。",
+        "scope": [],
+        "counterevidence": [
+          "传入依赖本身的行为未由此证明；前置检查通过也不是后续执行成功保证。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/7",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.dispatch.queue-inbox-process-chain",
+        "repo": "codepatchbay",
+        "actual_statement": "编排器通过持久 inbox 和独立 managed-worker 进程衔接执行入口。",
+        "scope": [],
+        "counterevidence": [
+          "存在链路不证明租约、消息持久性、重放和所有崩溃恢复交错已通过。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/8",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.finalization.completed-is-not-published",
+        "repo": "codepatchbay",
+        "actual_statement": "核心 completed 结果仍须通过按配置要求的 assignment finalization 才写成成功交付结果。",
+        "scope": [],
+        "counterevidence": [
+          "autoFinalize 关闭时不要求相同远端发布路径；不能把 dry-run 当发布失败。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/9",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.gap.pipeline-retry-budget-disconnected",
+        "repo": "codepatchbay",
+        "actual_statement": "pipeline --retries 的 metadata.maxRetries 与已读 managed-worker/FailureRouter 执行预算未接线。",
+        "scope": [
+          "限定 pipeline 提交进入受管理队列执行的已读生产链。"
+        ],
+        "counterevidence": [
+          "phase/DAG/infra retry 是独立预算；job-store.retryJob 消费其自身参数并不证明读取本次 pipeline metadata。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/10",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.gap.superseded-terminal-disagreement",
+        "repo": "codepatchbay",
+        "actual_statement": "materializer 将 superseded 归终态，而 job-store 的 TERMINAL_STATUSES 和 isTerminal 不包含它。",
+        "scope": [
+          "job 对象具有有效 jobId 且 status 为 superseded。"
+        ],
+        "counterevidence": [
+          "event-store 仍使用包含 superseded 的集合封住业务变更；没有证明终态数据被篡改。",
+          "被替代任务是否应允许恢复是另一个产品决策。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/11",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "cpb.gap.active-key-dedupe-window",
+        "repo": "codepatchbay",
+        "actual_statement": "fix 的全非终态同键复用合同与 queue 事务内只去重 pending 的条件之间存在并发窗口。",
+        "scope": [
+          "两个同 project/幂等 key 提交并发。",
+          "第二次前置读取先于第一次持久入队；第二次权威写入晚于第一次被改为 scheduled。"
+        ],
+        "counterevidence": [
+          "顺序 facade 调用会复用活动项；同描述且第一项仍 pending 时底层去重有效。",
+          "本轮未运行并发复现或推断发生频率。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+          "artifact_sha256": "fe21ed8b8949eefd5d44a1fbb53fc93caaa173c192aeeedb6ee774a2f32a234d",
+          "json_pointer": "/current/observations/12",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.client.diagnostic-scope-call",
+        "repo": "winwincode",
+        "actual_statement": "客户端组合入口中的 diagnosticScope 显式调用 browser-core 的 resolveScopeContext。",
+        "scope": [],
+        "counterevidence": [
+          "session=null 分支提前返回；结构连接不表示运行时一定调用。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/0",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.scope.surface-hash-call",
+        "repo": "winwincode",
+        "actual_statement": "surfaceHash 直接调用 scopeHash 构造带范围的新路由。",
+        "scope": [],
+        "counterevidence": [],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/1",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.delivery.start-next-to-item",
+        "repo": "winwincode",
+        "actual_statement": "WorkRunAggregate.start_next 的 self.start_item 绑定同一具体 aggregate 的固有方法。",
+        "scope": [],
+        "counterevidence": [
+          "start_next 可因没有可运行项或验证失败提前返回。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/2",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.delivery.start-item-validation",
+        "repo": "winwincode",
+        "actual_statement": "WorkRunAggregate.start_item 首先调用同一 aggregate 的 validate。",
+        "scope": [],
+        "counterevidence": [],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/3",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.codex.submit-turn-persist-call",
+        "repo": "winwincode",
+        "actual_statement": "ProductionCodexAdapter 的 submit_turn 显式调用自身固有 persist_run。",
+        "scope": [],
+        "counterevidence": [
+          "cfg(test-support) 后续可插入早退；不改变此前 persist_run 的源码绑定，也不证明后续 Kernel 必定调用。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/4",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.worker.control-to-dispatch-call",
+        "repo": "winwincode",
+        "actual_statement": "WorkerMain.accept_control 的 JobDispatch 分支调用自身 accept_dispatch。",
+        "scope": [],
+        "counterevidence": [
+          "不同 ControlMessage 分支和 durable replay 可选择其他路径。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "confirmed_static_call",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/5",
+          "status": "reproduced",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.worker.generic-codex-boundary",
+        "repo": "winwincode",
+        "actual_statement": "WorkerMain.start_dispatch 中 codex.ensure_thread 的实现依赖 Codex 泛型参数，不能全局确定唯一具体 adapter。",
+        "scope": [],
+        "counterevidence": [
+          "生产 main 使用 production_codex，不能因泛型未知断言缺少实际执行实现。"
+        ],
+        "priority": "P1",
+        "original_expected_outcome": "unknown_required",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/6",
+          "status": "unknown",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.client.auth-factory-composition",
+        "repo": "winwincode",
+        "actual_statement": "客户端把 createAuthSessionViewModel 返回对象交给 authSession 并调用其 restore。",
+        "scope": [],
+        "counterevidence": [
+          "该对象内部的 client.restore 仍依赖传入 client 组合，不能把所有包装层折叠成唯一后端函数。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/7",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.protocol.client-to-rust-dispatch",
+        "repo": "winwincode",
+        "actual_statement": "客户端生成合同的 command/query/event 路径与 Rust HTTP 路由及 typed dispatcher 形成协议连接。",
+        "scope": [],
+        "counterevidence": [
+          "相同 endpoint 不证明所有 payload 通过授权或后端业务处理；生成合同文件此前被工具生产策略排除。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/8",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.codex.intent-before-kernel",
+        "repo": "winwincode",
+        "actual_statement": "submit_turn 保存 submission intent 后才进入 Kernel exact reconcile 路径，中途可提前返回。",
+        "scope": [],
+        "counterevidence": [
+          "没有执行崩溃恢复；cfg test-support 的故障注入也不是本轮已运行证据。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/9",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.device.production-provider-composition",
+        "repo": "winwincode",
+        "actual_statement": "生产 worker 显式安装 Device provider，Server 的 DeviceModelBoundary unsupported 不能单独说明缺模型实现。",
+        "scope": [],
+        "counterevidence": [
+          "仅确认安装路径；没有读取真实凭据或证明所有 provider 配置可用。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/10",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.gap.dashboard-new-task-context",
+        "repo": "winwincode",
+        "actual_statement": "默认生产看板的新建任务导航不带 delivery，而真实 TaskPort.create 在 deliveryContext=null 时拒绝。",
+        "scope": [
+          "默认 boot 未注入 taskSeed，使用真实 task port。",
+          "用户从可见看板新建任务入口进入，URL 没有 delivery。"
+        ],
+        "counterevidence": [
+          "带有效 delivery 的手工链接或其他入口可避开；ChatDeliveryCreator 有独立 DeliveryCreate 链。",
+          "my-work-page 的类似区块被隐藏，不用它证明可见触达。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/11",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      },
+      {
+        "id": "wwc.gap.device-clarification-verification",
+        "repo": "winwincode",
+        "actual_statement": "Device 交付需求编辑构造的 update_spec 没有 verificationCommand，而 Rust Device specification 分支要求该字段非空。",
+        "scope": [
+          "该交付的 sourceProductSessionId 解析为 Some(Device target)。",
+          "通过生产 clarification 页面保存规格。"
+        ],
+        "counterevidence": [
+          "非 Device 分支可从仓库推导命令；Chat 创建请求显式保留确认命令。",
+          "请求被拒绝不等于已保存规格被清空；本轮未做 UI 运行复现。"
+        ],
+        "priority": "P2",
+        "original_expected_outcome": "evidence_only",
+        "current_saved_evidence": {
+          "artifact": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+          "artifact_sha256": "e8658903c8942b2b3fc7a91ac3aa6824ea56bc78cd0be0276723d56397cef045",
+          "json_pointer": "/current/observations/12",
+          "status": "evidence_only",
+          "meaning": "Existing baseline observation result only; evidence_only is not an automatically reproduced business conclusion."
+        }
+      }
+    ],
+    "target_source_hashes": [
+      {
+        "repository": "codepatchbay",
+        "file": "cli/commands/fix.ts",
+        "original_baseline_source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+        "current_read_source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "cli/commands/pipeline.ts",
+        "original_baseline_source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+        "current_read_source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "cli/cpb.ts",
+        "original_baseline_source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+        "current_read_source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "core/contracts/idempotency.ts",
+        "original_baseline_source_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+        "current_read_source_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "core/engine/run-job-checklist-dag.ts",
+        "original_baseline_source_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+        "current_read_source_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "core/engine/run-job-execute-dag.ts",
+        "original_baseline_source_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+        "current_read_source_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "core/engine/run-job.ts",
+        "original_baseline_source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+        "current_read_source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "core/workflow/probe-runner.ts",
+        "original_baseline_source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+        "current_read_source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "runtime/worker/assignment-finalizer.ts",
+        "original_baseline_source_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+        "current_read_source_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "runtime/worker/managed-worker.ts",
+        "original_baseline_source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+        "current_read_source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/orchestrator/failure-router.ts",
+        "original_baseline_source_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+        "current_read_source_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/orchestrator/hub-orchestrator.ts",
+        "original_baseline_source_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+        "current_read_source_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/orchestrator/worker-supervisor.ts",
+        "original_baseline_source_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+        "current_read_source_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/services/engine-runner.ts",
+        "original_baseline_source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "current_read_source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/services/event/event-materializer.ts",
+        "original_baseline_source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+        "current_read_source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/services/event/event-store.ts",
+        "original_baseline_source_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+        "current_read_source_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/services/hub/hub-queue.ts",
+        "original_baseline_source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+        "current_read_source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/services/job/job-store.ts",
+        "original_baseline_source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+        "current_read_source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "codepatchbay",
+        "file": "server/services/review/review-dispatch.ts",
+        "original_baseline_source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+        "current_read_source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/application.ts",
+        "original_baseline_source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+        "current_read_source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/auth-view-model.ts",
+        "original_baseline_source_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+        "current_read_source_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/boot.ts",
+        "original_baseline_source_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+        "current_read_source_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/chat-delivery-creator.ts",
+        "original_baseline_source_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+        "current_read_source_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/community-control-plane-client.ts",
+        "original_baseline_source_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+        "current_read_source_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/decision-clarification-view-model.ts",
+        "original_baseline_source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+        "current_read_source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/generated/control-plane-client.ts",
+        "original_baseline_source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "current_read_source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/home-dashboard-page.ts",
+        "original_baseline_source_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+        "current_read_source_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "apps/client/src/task-entry-view-model.ts",
+        "original_baseline_source_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+        "current_read_source_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "original_baseline_source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+        "current_read_source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+        "original_baseline_source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+        "current_read_source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "crates/winwincode-delivery/src/application/workrun.rs",
+        "original_baseline_source_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+        "current_read_source_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "original_baseline_source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+        "current_read_source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "crates/winwincode-server/src/server.rs",
+        "original_baseline_source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+        "current_read_source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "original_baseline_source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+        "current_read_source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "crates/winwincode-worker/src/main.rs",
+        "original_baseline_source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+        "current_read_source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      },
+      {
+        "repository": "winwincode",
+        "file": "packages/browser-core/src/scope-context.ts",
+        "original_baseline_source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+        "current_read_source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+        "source_role": "Original frozen machine baseline supporting file; report text remains the broader benchmark."
+      }
+    ],
+    "counts_are_navigation_inventory_not_functional_coverage": true
+  },
+  "alignment_report_scope": {
+    "whole_report_reproduction_claimed": false,
+    "entire_report_exceeded_claimed": false,
+    "new_functional_pass_rate_computed": false,
+    "paragraph_semantic_equivalence_computed": false,
+    "unmodeled_domains_are_not_approved": true,
+    "benchmark_text_used_to_generate_machine_evidence": false,
+    "meaning": "Specific saved judgments and selected source chains can support comparable code-level report content; broader responsibility interpretation, unreviewed areas and literal whole-report reproduction are not supplied by this mapping."
+  },
+  "identity_verified": true,
+  "syntax_bookkeeping": {
+    "file_count": 54,
+    "checks": [
+      {
+        "file": "__init__.py",
+        "sha256": "c8c0bac738a138be4f3edc11b9bb66eb0c9748e52952b789b59119935b9f50a3",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "__main__.py",
+        "sha256": "76fa916e93e0ae1a6c1bb51dcc0bcf289c014e9f760a47165f8a84401ccf41d7",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "_vendor/__init__.py",
+        "sha256": "54e642395418cf032062984f2fdf7738f941b0d4e65a80eb4b17035352d1cd6e",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "_vendor/axon/__init__.py",
+        "sha256": "b14143d00f9c2a3129521de3890bd2e6b4dfce5890f839f04225f54e5967c5c1",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "_vendor/axon/graph.py",
+        "sha256": "23f4f7f40eb8daa08ec8280276e36f7b415296790db745536e81da2f2685d55b",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "_vendor/axon/model.py",
+        "sha256": "4c08aa32a93dbd1a66da2f89c161904fd0205cdf5372527f8cc0dc4e2e85c2ee",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "analysis.py",
+        "sha256": "8dc8fa620dc89c4220ab629d2e3e82a02b3715c71bfe216c30b31d6164511f0d",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "analysis_inputs.py",
+        "sha256": "f6d50a875138dad649b21303de5d3fc0a2def76a01b7256d340f6e32e92bd380",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "analyzer.py",
+        "sha256": "575d19d0bd7bcc0a542fb576e93da520645735f7db04fcd904bf50b49d35bea6",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "atomicity_analysis.py",
+        "sha256": "3914a3d0b8390472cfe9dfe923b325f6fcad574799a69625eef59843f840c736",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "atomicity_completion.py",
+        "sha256": "db9c3fbe22986309bfc8b4b341c2c44f23dc26092601674aea154a00a4b96cc8",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "axon_adapter.py",
+        "sha256": "50ecf8605e854631f2cc1ea63a8f6a4836e2bd4e5f785448dc3444ef245d0bcc",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "baseline.py",
+        "sha256": "db09661e194ca132aed2bf6f4405d3d33ef9ad4157cf690a03f84fb4fe72b905",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "budget_analysis.py",
+        "sha256": "9d05d7045360cf25ea9960e5d9635e96abe3247ba9fa12a6045800105f251555",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "cli.py",
+        "sha256": "881275d4f19a4ecc9f76682940e0beffadc838b356c676a3e1cb02f710ed4b8f",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "cocoindex_runner.py",
+        "sha256": "277f35925d6d73b88c585d326e2abe8683cc434eaaacbc357f426a67aff4124a",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "cocoindex_worker.py",
+        "sha256": "464e4f6f11a606efd3b518fdc59338e580b3ac06b67ee6eaa5c9a3954cb912ec",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "completion_summaries.py",
+        "sha256": "35dd3124f2bd6a33156d9e48a716172f11fff79ec90d1e0340166dc34510c77e",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "config.py",
+        "sha256": "23a6eaed47944f008aea6fa61495e1e776ea955578b92edf5f5ca4957f72a9f3",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "detectors.py",
+        "sha256": "7d58089323539636ccc9882af82685ffdb7f7eac0ca6817f5a3474ddb2366645",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "device_flow.py",
+        "sha256": "9b5dac3aa967197c3925cf809d657dae6c063dde9afe6447d66e7aecd5f9fed5",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "field_analysis.py",
+        "sha256": "613c02f28a6f798fa739c4ddf88711f5628f05facc684d46a4a2119c925e78a8",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "field_relations.py",
+        "sha256": "6bb036b06cc05e8728cc858b012a650ca496d21026e7288bf2349c00f6ffe98c",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "field_summaries.py",
+        "sha256": "8ecda3c6be660b4d911b22b0c5dd1f586ecdd748bb31930071e8ad4a4f52d7d8",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "goal_registry.py",
+        "sha256": "ab67aec4d34a7f5ad54d7c8d75cb150f590e3ca4d74d39af65824aaf7589d6a3",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "graph.py",
+        "sha256": "1e64e50eda9e566d61abe4e9360b5b94afca84d787bb923a59e24d85b50b9e09",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "input_capture.py",
+        "sha256": "608948041d09c4008bbbabaf558c66449a3db2edd92c1bc257f8632cb332d9ed",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "lexical_bindings.py",
+        "sha256": "4f53f2750d52aebdfac7488b086a221ae0b27b88d1e30eb7da85c1ebdad1a56d",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "mcp.py",
+        "sha256": "1bb34ae14ea8fea0e895059b870863d0c278643e566b3615b04113afa9fb1d84",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "models.py",
+        "sha256": "df19dfb2d7490dd03739f0649021679b9da51fc65c3d9f7508b710c1233f4efa",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "navigation_analysis.py",
+        "sha256": "5e4b23130ce301c23937f504b71a39a54ebcb064d84a0f5c4ed77928201e70be",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "navigation_completion.py",
+        "sha256": "ba6250f5eb52e1f43a44e28d2a0f5afd06fdceffcc0aa1c4ea37d567c1277d5e",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "parsers.py",
+        "sha256": "ec155507887c35fab93654c35e0a94746a179c5f8f5e74d3b9570cdb0e973407",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "pipeline_channels.py",
+        "sha256": "32df938a2b82ec32bd57bb6d8638e2e54658d031d74019507e9fc8014f89bfa4",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "pipeline_flow.py",
+        "sha256": "5cdc18c91500132491aa53e01ea11de82307dd230cdad92a82fe76a4de8e7bdc",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "port_wiring.py",
+        "sha256": "388d9968a7511106b379545bbea86cb69a60e9d38c2354905f940e250fb75a47",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "project_report.py",
+        "sha256": "c822e5409302a6cbe25934626fe88616825caa05a65558d41acb3629f6c3d17a",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "report_agent_policy_analysis.py",
+        "sha256": "e7d72ede10b651150607cea6311583d98d234de18a651bf2e090596c2f0995e3",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "report_chain_analysis.py",
+        "sha256": "d56730392174f1ca0bd3c4d1e096c719770e51ff37d1898e0a7bfe1553a240cd",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "report_delivery_analysis.py",
+        "sha256": "a7b5b9777fd55514b16a9026372ede78bfaec933ee0f7df8fe9422d390bfffa5",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "rust_analyzer.py",
+        "sha256": "331cd7994a1eecdf0f794f6035f13226b5fd5333249baee5def5e79b33b23411",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "rust_helpers.py",
+        "sha256": "71ffdf4d0f5785106c1de6f24ec782665f82882aa455f1c09a2b6714cbf6cca7",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "semantic_environment.py",
+        "sha256": "39e388c78584e176640109c869b3c3fe58819619e82bb29a570d9de1381d9566",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "semantic_ir.py",
+        "sha256": "8b220fb90d07656289e175cc0aa3d92bec5f7d0daa357322e825f71039320c56",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "semantic_sources.py",
+        "sha256": "dab9108e47787b451665563bc08aab62e906eb0e02d3f77c2f70182bf00f5381",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "server.py",
+        "sha256": "99166444f46c3742b01b1430d80c839805218807e749c2dc50d431585a022add",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "service.py",
+        "sha256": "d0198aa10da38e8eadf47b613838af4c55b84f3ecb112ff52f5872a1cefd1f70",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "source_reader.py",
+        "sha256": "26811437ac66d30fd64731ff13dd650c5e9a7fb2750a2bd5ba7d8802a68c4a4c",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "static_contracts.py",
+        "sha256": "95c0c0a7baef364e7eed506aac0828f41bf0cab269342a99a99d2b28fbde9bb7",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "status_analysis.py",
+        "sha256": "9ab3b61c501ec5dae5e140dfcdbb6f933826421fb1a050fb6cb51ed58f7c6e25",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "store.py",
+        "sha256": "458df2ef42e9c8b26273f5319ec4f19efe9f38e6166703446151e91dfcd87ac9",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "syntax_projection.py",
+        "sha256": "3d40b850fc9f62af6f30c3213928ad5b48ea258111c510f5245216760bbc8c2f",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "typescript_analyzer.py",
+        "sha256": "62ef7c07364111139061d09212535891cff6c1e5be074e7828a660ce3c31a78b",
+        "python_ast_parsed": true
+      },
+      {
+        "file": "value_analysis.py",
+        "sha256": "3963bc48baf8fb8a3f05afd292f50bb6ab1d67e48aef716c3ff7cf3a27efab07",
+        "python_ast_parsed": true
+      }
+    ],
+    "benchmark_reports": [
+      {
+        "file": "astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "sha256": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900"
+      },
+      {
+        "file": "astra-baseline/WINWINCODE_ANALYSIS.md",
+        "sha256": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950"
+      }
+    ],
+    "new_behavior_assessment": false,
+    "test_suite_run": false,
+    "meaning": "Frozen byte identity and syntax bookkeeping only"
+  },
+  "input_artifacts": [
+    {
+      "file": "CORE_FREEZE.json",
+      "sha256": "73e70d5f186022bb7ef2afcc0118bdf95656264380705d50aff882b085bfc242",
+      "bytes": 10688
+    },
+    {
+      "file": "codepatchbay-integration.json",
+      "sha256": "5f349e2731d32346ea5dd3a248671ceaec5f2a04708caf190bb56050ce032217",
+      "bytes": 32471
+    },
+    {
+      "file": "winwincode-integration.json",
+      "sha256": "aa490b55676d6a3b184e32a99bf431ce3cc1b55e9ed53b07448e2ad3df9421ce",
+      "bytes": 46389
+    },
+    {
+      "file": "codepatchbay-automatic-report.json",
+      "sha256": "6ff36204cda0ceb12fe15e8d1dc2e999ad71bc9d59d3d87faedb449816d58eb9",
+      "bytes": 242864045
+    },
+    {
+      "file": "winwincode-automatic-report.json",
+      "sha256": "884202b5715f42c61a428479c18d91963b6452410a1f009855fd9a0ae130b8d7",
+      "bytes": 51286115
+    },
+    {
+      "file": "goal-ledger.json",
+      "sha256": "20fe301d50a157e2e18440ab1b2e5d6ea735c885c90d65bdd1ec028c4da6f819",
+      "bytes": 168797502
+    },
+    {
+      "file": "ORIGINAL_BASELINE_COMPARISON.json",
+      "sha256": "24d2440606d7f1d4bbc08eef177160443147fe9d4962f59590b701c6ad03d0da",
+      "bytes": 1551
+    },
+    {
+      "file": "PUBLICATION_IDENTITY.json",
+      "sha256": "9554376331b9a42ccab0f136d9a6033db6a9f72c7d5d812d896153176a522df8",
+      "bytes": 84163
+    },
+    {
+      "file": "REPORT_ALIGNMENT_RESULTS.json",
+      "sha256": "ab0546941a0b30f46167742cca029bfd43aad57276d3b54c70a1805cb650c45d",
+      "bytes": 6410321
+    },
+    {
+      "file": "CLI_REPORT_READBACK.json",
+      "sha256": "5c9acfc141ed8f73f12b52c5b026b90f236b6756eaf2777e6e41972e19f1d0da",
+      "bytes": 469
+    }
+  ],
+  "stream_projection": {
+    "file": "render_report_summaries.py",
+    "sha256": "9d6afc7ab97ae2da3524a859744c9b615b8150c475df9ad7ed53740301a42825",
+    "retained": "report summaries, explicit model slots and ledger statuses only; original evidence unchanged"
+  },
+  "normal_cli_report_readback": {
+    "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+    "operation": "normal_saved_snapshot_cli_report_query",
+    "report_matches_saved_publication": true,
+    "markdown_sha256": "56163f3779b0a1d563c931eec57bc69b6e09676fc5a705d05af1e430cddca199",
+    "tool_source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f",
+    "target_imported_or_executed": false,
+    "target_tests_run": false,
+    "tool_test_suite_run": false
+  },
+  "scope_gap_navigation_available": true,
+  "behavior": {
+    "only_saved_artifacts_and_frozen_core_read": true,
+    "database_opened": false,
+    "analyzer_invoked": false,
+    "new_rating_computed": false,
+    "reviewer_approval_added": false,
+    "target_workspace_read": false,
+    "target_imported_or_executed": false,
+    "target_tests_run": false,
+    "target_build_run": false,
+    "tool_test_suite_run": false
+  },
+  "report": {
+    "file": "REPORT.md",
+    "sha256": "2e54324d627cbd64ba58c85e330c5bf5a92ece4a91202af2ced8ec662825004b",
+    "bytes": 11811
+  },
+  "builder_source_sha256": "959b2e029a7968300af2a60e4f2078a55397f94879c131adbfb25eafcccd9d66"
+}

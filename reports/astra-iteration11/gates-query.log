@@ -1,0 +1,3 @@
+{"rule": "cpb-report-readiness-abrupt-guard", "supported": true, "gaps": [], "facts": 38, "operations": 1112, "groups": ["readiness"]}
+{"rule": "cpb-report-completion-gate-conditions", "supported": true, "gaps": [], "facts": 78, "operations": 720, "groups": ["completion"]}
+{"rule": "cpb-report-access-audit-response", "supported": true, "gaps": [], "facts": 61, "operations": 2544, "groups": ["access_audit"]}

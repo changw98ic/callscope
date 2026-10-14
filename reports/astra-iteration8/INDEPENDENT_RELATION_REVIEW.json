@@ -1,0 +1,1773 @@
+{
+  "kind": "independent_complete_saved_relation_comparison",
+  "method": "Recursive whole-finding comparison, retaining list order, every non-identity value and bijective identity references; only authenticated publication-version fields differ. Navigation abstract-N IDs are scoped to their actual _Engine instance: the main producer/consumer engine and each separately constructed counterexample engine.",
+  "abstract_identity_scope_source": {
+    "file": "callscope/navigation_analysis.py",
+    "sha256": "5e4b23130ce301c23937f504b71a39a54ebcb064d84a0f5c4ed77928201e70be",
+    "basis": "analyze_navigation_contracts constructs one _Engine for producer/consumer, then a fresh _Engine inside each counterexample selector iteration; value() allocates abstract-N from self.counter."
+  },
+  "analyzer_or_target_executed": false,
+  "tests_run": false,
+  "comparisons": [
+    {
+      "repository": "codepatchbay",
+      "rule_id": "cpb-astra-active-key-authority",
+      "inputs": [
+        {
+          "path": "reports/astra-iteration6/codepatchbay-summary.json",
+          "sha256": "f7a685d4a309c8584cb41cbb241ffa0c123ccbee5a0a57cf505e1305b46fd4cf"
+        },
+        {
+          "path": "reports/astra-iteration8/codepatchbay-summary.json",
+          "sha256": "b3d73bc9b59cf193bed68219e44e95e75ce5892143b6b08b81a2a7c0049ede36"
+        }
+      ],
+      "input_bytes_stable": true,
+      "source_hash_unchanged": true,
+      "policy_hash_unchanged": true,
+      "all_non_identity_values_and_relations_preserved": true,
+      "identity_mapping": [
+        {
+          "scope": "published-finding",
+          "before": "0d439b1bd7d4c2775f751ea1068435e4761b227a284da76c5deeb3646ba13ba0",
+          "after": "0d439b1bd7d4c2775f751ea1068435e4761b227a284da76c5deeb3646ba13ba0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0f48785fb2b8e0a5f893ce2a0b7c899d3072f564a84f633413d7888c8e745bea",
+          "after": "0f48785fb2b8e0a5f893ce2a0b7c899d3072f564a84f633413d7888c8e745bea"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0fab66397b1f29377b6d75fb266bf8c49f3852bc3e91887320f5cd1d9b9869ce",
+          "after": "0fab66397b1f29377b6d75fb266bf8c49f3852bc3e91887320f5cd1d9b9869ce"
+        },
+        {
+          "scope": "published-finding",
+          "before": "132e3685c55bc7599d63515b",
+          "after": "132e3685c55bc7599d63515b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1a1352ec78b8d81549420737",
+          "after": "1a1352ec78b8d81549420737"
+        },
+        {
+          "scope": "published-finding",
+          "before": "275c79b3b2305830e9ca5819012c5aa0361c49de093f9c4364401399b01b9cb0",
+          "after": "275c79b3b2305830e9ca5819012c5aa0361c49de093f9c4364401399b01b9cb0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "29c3f1e0d8e66d7de787805f",
+          "after": "29c3f1e0d8e66d7de787805f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "2c99ab7045b0e1ce783bfe35",
+          "after": "2c99ab7045b0e1ce783bfe35"
+        },
+        {
+          "scope": "published-finding",
+          "before": "35643989b8ff9a0e1b8ed3f3",
+          "after": "35643989b8ff9a0e1b8ed3f3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "377fb9701cdc2ecfbda644d6be8279316c45057af839aa52f35a5bf98f1c0927",
+          "after": "377fb9701cdc2ecfbda644d6be8279316c45057af839aa52f35a5bf98f1c0927"
+        },
+        {
+          "scope": "published-finding",
+          "before": "57e9084b74af92dd40852ba07d53189d0f711c82cb2a45b342c5ef4c9c643d3c",
+          "after": "57e9084b74af92dd40852ba07d53189d0f711c82cb2a45b342c5ef4c9c643d3c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "59722e8a4dbf7c2d5acd3fa3",
+          "after": "e8a25ed8b0f586487af1bb56"
+        },
+        {
+          "scope": "published-finding",
+          "before": "623ae85327f6de59ec74b54b",
+          "after": "623ae85327f6de59ec74b54b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6db5cc047c0a4f5105e788cef7a50c09a2331bbcbab8c83359c09d2849039b4c",
+          "after": "6db5cc047c0a4f5105e788cef7a50c09a2331bbcbab8c83359c09d2849039b4c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "790440a30ba55590ef2b31f6",
+          "after": "790440a30ba55590ef2b31f6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7fcf38d23c5cad03b29a0269",
+          "after": "7fcf38d23c5cad03b29a0269"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8221a7e397571514cfc4a348",
+          "after": "8221a7e397571514cfc4a348"
+        },
+        {
+          "scope": "published-finding",
+          "before": "86a783c03d2cdf2327f819df333c5ee39ac77cad465f399ea5b652fab53b8b4e",
+          "after": "86a783c03d2cdf2327f819df333c5ee39ac77cad465f399ea5b652fab53b8b4e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8ab42d436d1c8316176c84811f257c2a5d69c1a2c160efb41d91321eddd106ca",
+          "after": "8ab42d436d1c8316176c84811f257c2a5d69c1a2c160efb41d91321eddd106ca"
+        },
+        {
+          "scope": "published-finding",
+          "before": "915766f56223988c02b0e6f4",
+          "after": "915766f56223988c02b0e6f4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "958c78d457c8e9f90038438b570ee9477925c6ec22e5031ba126a9bc6e1dd1a2",
+          "after": "958c78d457c8e9f90038438b570ee9477925c6ec22e5031ba126a9bc6e1dd1a2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "98758602e5b71ae4beaaf163",
+          "after": "f56fc846da640061bd693bd5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "9f60dace7723f3fb59a1d4b9",
+          "after": "9f60dace7723f3fb59a1d4b9"
+        },
+        {
+          "scope": "published-finding",
+          "before": "bb30d7634f2767734524c52ed5732ba9a4b4e0d496799416d2b9771d079454f0",
+          "after": "32ebea8ebf05691a52a1bbf76a4dc711fc3053d1691a3a2fcf25502e7e023f19"
+        },
+        {
+          "scope": "published-finding",
+          "before": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+          "after": "3a987ec8a0ced043379a0e75a6f5932c24982e807e1d252d9b0fc0033183f977"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c22b295931c4407cf6ee42da",
+          "after": "c22b295931c4407cf6ee42da"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c3af868ac4eca88425e06a7077b30faae81bdb92450173086d97e144092db2e0",
+          "after": "e001bc6f98be2c87048702dc0cff9a5cf2416b48a2c9e851b599e72af0abdc2d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cc1c547d363700fde75ce4bf03aed6688b77bd821f69ee5bb5f0c6375ec03575",
+          "after": "028cd94ff871af6eae99d8fb22fd7098ebfc6fe83133794ebe709165d734db25"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d393d93528b4c8e53de0cd5a26452136d419c467dc18dc793c52e799792a23b8",
+          "after": "d393d93528b4c8e53de0cd5a26452136d419c467dc18dc793c52e799792a23b8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "db87ffa0b18a3d60064bdef339acc4448b58dc9f3754459ea5bfdd1b4b47fdfe",
+          "after": "db87ffa0b18a3d60064bdef339acc4448b58dc9f3754459ea5bfdd1b4b47fdfe"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ddaff3daf3ba5eefed05ada2",
+          "after": "ddaff3daf3ba5eefed05ada2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "de38a8cc769b9288a41d4a167130a178fdf4aa960fcba57c67cd961dcdcd6b29",
+          "after": "c51bb5415b291279ce2b12cd87ee7bb0ac81bdce9d8430f00b96c810c618cf45"
+        },
+        {
+          "scope": "published-finding",
+          "before": "edc4c2e76ba6728a9c00437cea4cc4cc3ba78c22eaa33abfca70dc2a4afa0eea",
+          "after": "edc4c2e76ba6728a9c00437cea4cc4cc3ba78c22eaa33abfca70dc2a4afa0eea"
+        },
+        {
+          "scope": "published-finding",
+          "before": "efe8f62a710938284fb84d06fc85f62b679c5a4905694822eb5ff69fd650297f",
+          "after": "c185e9de38cdfe6db3a9ae4fa0a25a7d3f0406dfc6dfb16aca44c41770bf2f6f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f544491145e5a215befd5788",
+          "after": "f544491145e5a215befd5788"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f5555fd23e39ef7f38348511",
+          "after": "f5555fd23e39ef7f38348511"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f60cd363c5faefa2913930411ed74ce3be0249efd9d6b781d0c917e8b0cbdcc7",
+          "after": "f60cd363c5faefa2913930411ed74ce3be0249efd9d6b781d0c917e8b0cbdcc7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f76a9dd13eec5a891cb9827e",
+          "after": "f76a9dd13eec5a891cb9827e"
+        }
+      ],
+      "identity_occurrence_counts": {
+        "snapshot_id": 180,
+        "semantic_parse_id": 189,
+        "edge_id": 13,
+        "graph_edge_id": 3,
+        "id": 8,
+        "binding_id": 17,
+        "declaration_id": 17
+      },
+      "authenticated_publication_version_changes": [
+        {
+          "path": "evidence/0/details/captured_source_inputs/0/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/0/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/0/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/1/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/1/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/1/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/2/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/2/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/2/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/3/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/3/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/3/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/4/parse_provenance/snapshot_identity/analyzer_version",
+          "field": "analyzer_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/4/parse_provenance/snapshot_identity/detector_version",
+          "field": "detector_version",
+          "matches_own_summary": true
+        },
+        {
+          "path": "evidence/0/details/captured_source_inputs/4/parse_provenance/snapshot_identity/parser_version",
+          "field": "parser_version",
+          "matches_own_summary": true
+        }
+      ],
+      "differences": [],
+      "graph_node_ids_identical": true,
+      "graph_edge_ids_identical": true
+    },
+    {
+      "repository": "winwincode",
+      "rule_id": "wwc-astra-navigation-context",
+      "inputs": [
+        {
+          "path": "reports/astra-iteration6/winwincode-summary.json",
+          "sha256": "935c65a357996301bb0f48b1ce5e65538afca64eae48c5b7939964f47b5027b3"
+        },
+        {
+          "path": "reports/astra-iteration8/winwincode-summary.json",
+          "sha256": "3186bead53bacac4ca2272047f456d8af614320978a54e45bf6febbaa09f1232"
+        }
+      ],
+      "input_bytes_stable": true,
+      "source_hash_unchanged": true,
+      "policy_hash_unchanged": true,
+      "all_non_identity_values_and_relations_preserved": true,
+      "identity_mapping": [
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-112",
+          "after": "abstract-103"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-12",
+          "after": "abstract-12"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-123",
+          "after": "abstract-123"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-125",
+          "after": "abstract-125"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-142",
+          "after": "abstract-133"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-152",
+          "after": "abstract-152"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-158",
+          "after": "abstract-158"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-21",
+          "after": "abstract-21"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-26",
+          "after": "abstract-26"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-27",
+          "after": "abstract-27"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-28",
+          "after": "abstract-28"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-29",
+          "after": "abstract-29"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-3",
+          "after": "abstract-3"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-30",
+          "after": "abstract-30"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-31",
+          "after": "abstract-31"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-33",
+          "after": "abstract-33"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-35",
+          "after": "abstract-35"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-4",
+          "after": "abstract-4"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-5",
+          "after": "abstract-5"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-52",
+          "after": "abstract-43"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-6",
+          "after": "abstract-6"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-63",
+          "after": "abstract-63"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-65",
+          "after": "abstract-65"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-7",
+          "after": "abstract-7"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-82",
+          "after": "abstract-73"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-93",
+          "after": "abstract-93"
+        },
+        {
+          "scope": "counterexample-navigation-engine:0",
+          "before": "abstract-95",
+          "after": "abstract-95"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-1",
+          "after": "abstract-1"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-105",
+          "after": "abstract-96"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-115",
+          "after": "abstract-115"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-117",
+          "after": "abstract-117"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-134",
+          "after": "abstract-125"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-137",
+          "after": "abstract-122"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-143",
+          "after": "abstract-143"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-151",
+          "after": "abstract-151"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-16",
+          "after": "abstract-16"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-178",
+          "after": "abstract-178"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-180",
+          "after": "abstract-180"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-181",
+          "after": "abstract-181"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-182",
+          "after": "abstract-182"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-183",
+          "after": "abstract-183"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-184",
+          "after": "abstract-184"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-188",
+          "after": "abstract-188"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-192",
+          "after": "abstract-192"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-199",
+          "after": "abstract-199"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-200",
+          "after": "abstract-200"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-201",
+          "after": "abstract-201"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-21",
+          "after": "abstract-21"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-211",
+          "after": "abstract-211"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-212",
+          "after": "abstract-212"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-214",
+          "after": "abstract-214"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-215",
+          "after": "abstract-215"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-22",
+          "after": "abstract-22"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-23",
+          "after": "abstract-23"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-24",
+          "after": "abstract-24"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-25",
+          "after": "abstract-25"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-26",
+          "after": "abstract-26"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-28",
+          "after": "abstract-28"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-3",
+          "after": "abstract-3"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-30",
+          "after": "abstract-30"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-4",
+          "after": "abstract-4"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-47",
+          "after": "abstract-38"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-5",
+          "after": "abstract-5"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-57",
+          "after": "abstract-57"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-59",
+          "after": "abstract-59"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-6",
+          "after": "abstract-6"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-76",
+          "after": "abstract-67"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-86",
+          "after": "abstract-86"
+        },
+        {
+          "scope": "main-navigation-engine",
+          "before": "abstract-88",
+          "after": "abstract-88"
+        },
+        {
+          "scope": "published-finding",
+          "before": "00fdf9ebb3997a7149c5d79d",
+          "after": "850d2d49d44c97fe8ec4b00c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0262386ce3a2fdc93d8e46bd",
+          "after": "02900966ba4e6905a7736dc4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "08ffea9b944d6aa293d1c329",
+          "after": "54ac58234b51eba8280565d1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "09c2d6edbdf67252233a3321",
+          "after": "e389473276b9bc5ab588b8a9"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0a2aad06e19efbc9aa7aef9f",
+          "after": "de785a38b383a0986b087e43"
+        },
+        {
+          "scope": "published-finding",
+          "before": "0f7f3352fbbbaf82c7da901d",
+          "after": "c3daa8357d4df6afbbc66deb"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1295eeb007d425a18356ea8961c05fea811c0d5399d9140668a5063e03967f2b",
+          "after": "1295eeb007d425a18356ea8961c05fea811c0d5399d9140668a5063e03967f2b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1314fc710525bed9b1719b72",
+          "after": "e84d14b249923b4322e8370d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "13a64989566cb19c4268d936bc87a68e3ca8fb09a20f8f131980c0d5bcbcca03",
+          "after": "13a64989566cb19c4268d936bc87a68e3ca8fb09a20f8f131980c0d5bcbcca03"
+        },
+        {
+          "scope": "published-finding",
+          "before": "14c4433de9f3f14d17e82ef3",
+          "after": "ac4f3170f7372c3a1f043052"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1706da08f66598783dbe5076",
+          "after": "4f361fe3df20185ad2910df4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1844b932fd9c78f229cffad4",
+          "after": "1844b932fd9c78f229cffad4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "19ac6e50530b6124a7c91f08",
+          "after": "f602b1c3ec8e451641c968b2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "19c89a2d0a5b955fe48f977a",
+          "after": "0fc4f9ec779d3a32b1c36b2a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1afd193bf0513a68f57f0b28",
+          "after": "761cf6ddc50b122a06323335"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1b30bba0872a75a085a5d6d7d8e95851245b97e87feda261d9d60278d4304d09",
+          "after": "1b30bba0872a75a085a5d6d7d8e95851245b97e87feda261d9d60278d4304d09"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1eaabcc989992fe4d1b04545",
+          "after": "b12b56541998cbc9fb0e3bef"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1ed52a9b0bc8abfedf509c66",
+          "after": "6d49aed27ad5e3f4d6df6629"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1f7c4641c68a0ab42d1d1969",
+          "after": "1a73d6e39cdcccc03ebc8dd7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1fce94f502483cc5b43c78ea247ceeb28c14a759d643eb17548ea5affa8cc822",
+          "after": "d4d38dce99fb3ca440f68bc4844cb6dc85f71f482a0893114bbb5544eaf2fdec"
+        },
+        {
+          "scope": "published-finding",
+          "before": "1fcfbaee7d0c894220131c04",
+          "after": "1f11eb78c4c84e581eefd6ac"
+        },
+        {
+          "scope": "published-finding",
+          "before": "207c11ceb45de21078630ab9",
+          "after": "ae4a4c812cf574d326d29598"
+        },
+        {
+          "scope": "published-finding",
+          "before": "27b9de2ab5b9a6e7e427d33c",
+          "after": "660b609c5f6ec59b83527cd3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "27cb95028dad580f7ea8f96a",
+          "after": "e24eb34abe6110f6e9bc38dd"
+        },
+        {
+          "scope": "published-finding",
+          "before": "2860bebcf7a9a041472b9944",
+          "after": "0b1133e2b62659029e32a874"
+        },
+        {
+          "scope": "published-finding",
+          "before": "28893e311e64b8818d09e2e1",
+          "after": "34805552ab0f4239db285b64"
+        },
+        {
+          "scope": "published-finding",
+          "before": "29398f1896edbe73c410a96c",
+          "after": "edf43599fdf64ec3a9ab9233"
+        },
+        {
+          "scope": "published-finding",
+          "before": "29602c41ff85d0edcea8a538",
+          "after": "a3d6021535fe652a88a19166"
+        },
+        {
+          "scope": "published-finding",
+          "before": "2dd69c6a5c5cb96067ff8e99",
+          "after": "bdedb9b4694d1b33e03f9ff8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "30ea432204b45f186eaa591f",
+          "after": "a7e26c84f6dd67e3ed0488c0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "318ad6b895ae996c91af0f32",
+          "after": "17f61c6693c6cdfe6b323649"
+        },
+        {
+          "scope": "published-finding",
+          "before": "325408186b55fb98d645374b",
+          "after": "4f96f7de599dd7fae809bf12"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3738b6e7cd966ac55f7bacae",
+          "after": "6e860e944366394ae69ebc6f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3774a0686507ea6be27f899a",
+          "after": "4d6009db42a4a1168ecb0612"
+        },
+        {
+          "scope": "published-finding",
+          "before": "397a70015bb94b80896256e1",
+          "after": "e6f654dc963a73f4b4f3c811"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3a56e9d7cb492245a0cb197a",
+          "after": "06edfbdbcd8d55cd56ff6591"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3b77d5d53e413a7c5b9e0041",
+          "after": "1cc61b9a35d228b74f210b62"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3e89ce8bceed9bb8b7206fc5",
+          "after": "662086d1d9edecdb85493435"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3eb37cc9b16f204f8a1eb87a",
+          "after": "08f9d12ba1324db5cdb63276"
+        },
+        {
+          "scope": "published-finding",
+          "before": "3ef7fd46935dd9177f62e7a5",
+          "after": "42bd8bca7edd0f8fdc19d521"
+        },
+        {
+          "scope": "published-finding",
+          "before": "404a1221c5417c84625c17a9",
+          "after": "fec3aecc34900248f38883d3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "45261d1727d62c0136e2b10e11d44658128cd319b2e1e96882236487ad73e66f",
+          "after": "45261d1727d62c0136e2b10e11d44658128cd319b2e1e96882236487ad73e66f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4604c626fd4425757bbb9828",
+          "after": "1705f2258ff43d0c7be025d1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "460c87cf2d43051861e34500",
+          "after": "6babdab707e8a3e349adfe9f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "480e0cc099cce058e49ee519",
+          "after": "078ce055f1a22421e0ed3d35"
+        },
+        {
+          "scope": "published-finding",
+          "before": "49fd9f7b867699669e985e13",
+          "after": "369bb4bc977647313c9aee94"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4a4033fd1fe73b79a4c5a4de",
+          "after": "265b4b79f9ea56f6927d6cfa"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4b91e206fa6d82d3efb4e946",
+          "after": "4adb980955bf5227dde28d2b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "4d214329ea5688f24bb35e27",
+          "after": "ba08ca1241f7e0b49bcd2089"
+        },
+        {
+          "scope": "published-finding",
+          "before": "50e1fcf1f111e1975998bb740201ff24169163622cc1d3ce02b8a06192b49f9b",
+          "after": "a7bae2da9e35914d1ce7535ffbe476259ad14be1ec48fe709cee4b630e4912d7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "525a837da919b0a1098fce30",
+          "after": "525a837da919b0a1098fce30"
+        },
+        {
+          "scope": "published-finding",
+          "before": "547281abfac3347e01b975dd",
+          "after": "f4deabe035bc5728c9240e82"
+        },
+        {
+          "scope": "published-finding",
+          "before": "56781938f2409dee8b5da9557980968840cb81e7d9e6f3dddc26a9bd8187df4d",
+          "after": "56781938f2409dee8b5da9557980968840cb81e7d9e6f3dddc26a9bd8187df4d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "571490c84ccdccddac211f43",
+          "after": "a2f7f759c39a28c7f6e5fde8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "576732234ed4d09144e9c8d4",
+          "after": "103c5c83a3e9c55010a38168"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5a996e34d920b45b289853a9",
+          "after": "5d9a1e32d3933cfef0d31ae6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5ac343ef257d033ae84645e5",
+          "after": "9136f7483d956e256c892964"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5b42d7e036217d7ace02a7adcfa683671a713e62b65b6f9fa26ea50ee3aab634",
+          "after": "5b42d7e036217d7ace02a7adcfa683671a713e62b65b6f9fa26ea50ee3aab634"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5badfc55579878aa9b83f4cb",
+          "after": "4b5d0c0629448482090a89d5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5be0e838401f2288f41bacbd",
+          "after": "791ea3139606701275a1ca66"
+        },
+        {
+          "scope": "published-finding",
+          "before": "5d106352965a92b1f17c7962",
+          "after": "5d106352965a92b1f17c7962"
+        },
+        {
+          "scope": "published-finding",
+          "before": "615c8c972ee5457154b80050ef4ef5b0a05a31de730ad408e41bea8813582bf0",
+          "after": "615c8c972ee5457154b80050ef4ef5b0a05a31de730ad408e41bea8813582bf0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "61ace2ddf84e2d5f2183dbca8e1a00ace3ee9a39d7dcbbab7ae3efa16a1083a5",
+          "after": "61ace2ddf84e2d5f2183dbca8e1a00ace3ee9a39d7dcbbab7ae3efa16a1083a5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6257f2e63e71ac04260d2d10",
+          "after": "fa28ec95944a7231b447c9fe"
+        },
+        {
+          "scope": "published-finding",
+          "before": "63da331b692fa86a84eb1874",
+          "after": "ca2f4f4ace1375c1fc4e2560"
+        },
+        {
+          "scope": "published-finding",
+          "before": "640931a5622d449ab3aa8a141336e6b45818397c97cbcc35e4491645bc55eae7",
+          "after": "9c791af9bf562d6f0f36e09ddeb1f21b4a3445b649064d21ec4d34d33c6abece"
+        },
+        {
+          "scope": "published-finding",
+          "before": "64b6ff2096ac30e06413f5cb9bda11a887ad5495e068d9277316e143bf4b0732",
+          "after": "64b6ff2096ac30e06413f5cb9bda11a887ad5495e068d9277316e143bf4b0732"
+        },
+        {
+          "scope": "published-finding",
+          "before": "64e5cf57d649d76ffdcd0dda",
+          "after": "bd432a9f00dd89aac602fd41"
+        },
+        {
+          "scope": "published-finding",
+          "before": "657c70e8b8332f5913051463",
+          "after": "daa418a7a7499122f24538ae"
+        },
+        {
+          "scope": "published-finding",
+          "before": "67bd3fd49f82182c19e6a2d5",
+          "after": "df33d3bb46376a691ce90923"
+        },
+        {
+          "scope": "published-finding",
+          "before": "67f1c7bcbaceec13fd09c663",
+          "after": "05e157b82bab235cbca99877"
+        },
+        {
+          "scope": "published-finding",
+          "before": "685f648c3f15c5126bc900a34502f4bb1488dacfea35cc29d57dfb5f7ee51622",
+          "after": "685f648c3f15c5126bc900a34502f4bb1488dacfea35cc29d57dfb5f7ee51622"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6b97bf804faa48f4b6c85bf4",
+          "after": "22b37fb8e2c97a13800f3d5d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6d0b2bf3261179175f94973b",
+          "after": "c9fd771a03ff257ab01f1bbb"
+        },
+        {
+          "scope": "published-finding",
+          "before": "6ee892ae14b3669ecb887eeb",
+          "after": "b008a4d60ac25ca821bf9ef7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7218b742147778517d0958b9",
+          "after": "b5e79e45488e3683350f96b2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "727329830f258fd88e7ca575",
+          "after": "c3bd6fb2edceedc6a094201d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "72bdebecf26f5be874354aca",
+          "after": "b95de529b6eae4203163b663"
+        },
+        {
+          "scope": "published-finding",
+          "before": "737d02e6ca2da311f89662c7",
+          "after": "e14763b258b82e5084689cec"
+        },
+        {
+          "scope": "published-finding",
+          "before": "747aa99fbe6d0addd35767ea",
+          "after": "368312a0024b218852a73e35"
+        },
+        {
+          "scope": "published-finding",
+          "before": "747c81fab8585ce01957918a",
+          "after": "046d9fa064374036bb58927a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "74fb68ec91f2ac29a756e327",
+          "after": "94a990c664ff9d6619ff6154"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7583a99ed4508c19218c8a4c",
+          "after": "64e333ea3a531d9a94b51fbe"
+        },
+        {
+          "scope": "published-finding",
+          "before": "75ec8331a4ebc9a0954f0218",
+          "after": "4fa1b585e20f558d89225e08"
+        },
+        {
+          "scope": "published-finding",
+          "before": "76a70a745c8396723cfd76ef",
+          "after": "6ef766ae65ec13eb342906d9"
+        },
+        {
+          "scope": "published-finding",
+          "before": "776faf1fd38aedf357cb54c59adaa2a5bd379e2af011496781a90ec7d5b069dc",
+          "after": "776faf1fd38aedf357cb54c59adaa2a5bd379e2af011496781a90ec7d5b069dc"
+        },
+        {
+          "scope": "published-finding",
+          "before": "79ffc69de2e21eb84a8edd1e",
+          "after": "d66084fd90d56ba41ccba0bd"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7b31ec504b01c154da476263d4e4039bad3efc10e17ba296b1f27772b03c3631",
+          "after": "de7e1a29c91b6649c8b569e257026c9f076f20f6d3c7194e1c72f60228f4cfa4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7be24431fda3e28f41cf409b",
+          "after": "3a54ecdb6a7fa25d973b715c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7c24e79514f5553de3fb4b2a",
+          "after": "dfa292aca8dd16bc4cf5be73"
+        },
+        {
+          "scope": "published-finding",
+          "before": "7ecffe6397cb0615227b1b6d",
+          "after": "e2fb2682473d5d334b9ca8ef"
+        },
+        {
+          "scope": "published-finding",
+          "before": "820679dc5c0d7fc2dee6c89f",
+          "after": "cee8dfee1fae9de0f85e5951"
+        },
+        {
+          "scope": "published-finding",
+          "before": "821c1342f96a71fd893e5492",
+          "after": "821c1342f96a71fd893e5492"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8251ec436bc47e99846ce78824832b103e443f2770883e5894f879ad1983a466",
+          "after": "8251ec436bc47e99846ce78824832b103e443f2770883e5894f879ad1983a466"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8449d3fb6084d8a5df166441",
+          "after": "f0b980d346a58497531aa954"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8658dbeec499284ead89a3a06e349dffebdd71f418f6e82c3bbeb79097b14045",
+          "after": "8658dbeec499284ead89a3a06e349dffebdd71f418f6e82c3bbeb79097b14045"
+        },
+        {
+          "scope": "published-finding",
+          "before": "88a0fbc74062314b6bc2b328",
+          "after": "aadabdb230cdca69efed139b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "88e7441463ec491f31ae04d1",
+          "after": "3a8c408ba2c74c5466e6eb38"
+        },
+        {
+          "scope": "published-finding",
+          "before": "88e798167c93b4f3ff677836",
+          "after": "87db1888ef9ff28fe76daac5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8936726be3e4f3e2802ec20a",
+          "after": "8936726be3e4f3e2802ec20a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8b4e379689d77cb8602d7db8",
+          "after": "1c145e54f45ec37ee2d46f08"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8c7daba89f67755a912ff0f1",
+          "after": "b7ee55a9a13d9a8adb9d06e7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8ec3a6350d0caa780d9a7891",
+          "after": "7538a14814436f7d257eb1ac"
+        },
+        {
+          "scope": "published-finding",
+          "before": "8f91e0bd17501f5359711356",
+          "after": "430065143ce421eb099bc88c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "929e9977faf050b6e46d2a24917e19a26ba8318fcd89b8d4b7546c13008900d2",
+          "after": "929e9977faf050b6e46d2a24917e19a26ba8318fcd89b8d4b7546c13008900d2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "93635054d822ea129f6ba5fc95bd9384e456166b0ada0d49741df6451f46fcf3",
+          "after": "93635054d822ea129f6ba5fc95bd9384e456166b0ada0d49741df6451f46fcf3"
+        },
+        {
+          "scope": "published-finding",
+          "before": "96716b9ccfc3b7c1d5484dcb",
+          "after": "8faf446b4d5b9936f3c23b41"
+        },
+        {
+          "scope": "published-finding",
+          "before": "9718624d9616dbf2e5872d69",
+          "after": "00ffc055f285471434fc0ad6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "97acaf07a9ecc35128355841",
+          "after": "49227d325a1c85bf37a284ce"
+        },
+        {
+          "scope": "published-finding",
+          "before": "99987b2ea89f135e90ae343d",
+          "after": "60dc3cc26fe7c2be3428f7dc"
+        },
+        {
+          "scope": "published-finding",
+          "before": "99e6e890a9fde942676cf326",
+          "after": "6c06b0239efcdc9ee5f952e7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "9c8850b4a77825914b852934",
+          "after": "2aec6034d6c381b065bac572"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a230bd1c43d654c76066133f",
+          "after": "3122721701fa5a2fefc6ab68"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a5f35675c063c871a12e911d",
+          "after": "3ed954b2ede9f4e2e53758b2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a604239c547f3f361c1ae6c6",
+          "after": "1ce4e3333fb70f206c60d160"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a70c734e34ecb9a0955494d4",
+          "after": "5af1283dc1e987e689379579"
+        },
+        {
+          "scope": "published-finding",
+          "before": "a9658a9d0b4df7a26a5f6b1c",
+          "after": "2c4cbabfb364936509a81174"
+        },
+        {
+          "scope": "published-finding",
+          "before": "abd23c71b42132a379293bbe",
+          "after": "7b927f3c65ea273b34b62bb7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ac5c1768047afb4115671a0c45bafb493bfe6202cd4d467c29cbcfb6c1456856",
+          "after": "ac5c1768047afb4115671a0c45bafb493bfe6202cd4d467c29cbcfb6c1456856"
+        },
+        {
+          "scope": "published-finding",
+          "before": "adcd14ad2b28f3e2578d1bc8393ac1534e036f9eebe9184c6d56422401ca3ad1",
+          "after": "adcd14ad2b28f3e2578d1bc8393ac1534e036f9eebe9184c6d56422401ca3ad1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ade2150cdfac209723a3a9e8",
+          "after": "42a84ccf70a26bf54f63af80"
+        },
+        {
+          "scope": "published-finding",
+          "before": "af888b17b5473029a2cbb419a2174bbdf1a17dc32105631fd2ea9e939d12c2cf",
+          "after": "af888b17b5473029a2cbb419a2174bbdf1a17dc32105631fd2ea9e939d12c2cf"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b03ab5ef2c7799c8e3b95490",
+          "after": "6ce87b4d8f4c6f5e4570b252"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b0bb37b3afac31d076b45a6a",
+          "after": "75bad3cce1d440e9bff9f349"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b109323defabb779f93a0c2ba9f8698895628f06d36324e4704d23771f8d8981",
+          "after": "26c3fec06e59f39a6a307918c2a4d270035e7c91fd7faf8707a8091dfe917018"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b5716931133134dfd6a608cb",
+          "after": "474b91665bcf7d611cc0f0c7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b63602d52eba70aeb9a735b3",
+          "after": "d1307772aaf69be58c20b10a"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b71420c42c71640ea0ba2a4d",
+          "after": "5fb8a43c8b84893a4c703f72"
+        },
+        {
+          "scope": "published-finding",
+          "before": "b8dd46b58139a7258638e544",
+          "after": "2dac4671da27334ffa3197cd"
+        },
+        {
+          "scope": "published-finding",
+          "before": "bb4d57619b6f718b3452d875",
+          "after": "bb4d57619b6f718b3452d875"
+        },
+        {
+          "scope": "published-finding",
+          "before": "beea6fd5cdd1c62ad9cb794e",
+          "after": "be306a2bcdaae4d4fac6711d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "bf226e8a897d4a132fe4fe0e",
+          "after": "f840621ea605753c29869eb8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "bff1c77e5ccbdf9bd4e0e354",
+          "after": "1d1682eff12cc932a41c0a6f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c1955672898bcc8d4c2fbe99",
+          "after": "b653a6b921e1d654a6024a40"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c382c44106429227d6dec564973b11b1ad47f0e2144162fa468f34cba076a40c",
+          "after": "c382c44106429227d6dec564973b11b1ad47f0e2144162fa468f34cba076a40c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c4f7e10b7266f73da7b35a2c",
+          "after": "22ba443fd0e31570d0cbb15c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c51c5e545739ac96d705fe57",
+          "after": "35d10bd511def4c65c0f2366"
+        },
+        {
+          "scope": "published-finding",
+          "before": "c6588c896ab9180072445411",
+          "after": "94354bf3067836d10d108716"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cae5ba9ff4e6428757071e539bae66c72598c5c603e9a6217a7d9dcb50dfce04",
+          "after": "cae5ba9ff4e6428757071e539bae66c72598c5c603e9a6217a7d9dcb50dfce04"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cb549bf228dd835422a6b588454770980f8d109db2b58365744bd52aea7cb3fc",
+          "after": "61004fa8e78649e076ab56e6f3b69f194e27b2cc3e77ca1717dca4d99ba2ac62"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cc72192dde16d4d9b689a87d705293ca24539b45adee9cb29d2188f896991591",
+          "after": "cc72192dde16d4d9b689a87d705293ca24539b45adee9cb29d2188f896991591"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cc7c07d169c165dd3cd60973",
+          "after": "c5274df40b46a3d5ac6eb337"
+        },
+        {
+          "scope": "published-finding",
+          "before": "cca2f66886fe47b7feb52361",
+          "after": "f09521ac8bffde93a971f284"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ce1e215f254185cb2a7f1d5a",
+          "after": "d49e24a09e1c335ed1fa02b7"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d03d234e002a7889c6ca8273",
+          "after": "d03d234e002a7889c6ca8273"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d11d3d441e20c061113d842b",
+          "after": "050c6227260447031fb6a0ca"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d274add079363d88174bb374",
+          "after": "be21ff1d2c78d00ae276ea73"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d7bcf74394c18d1bdeedd84b0c4a6c0e0f118cb7656be65d35b2fa4d5c8e7ad1",
+          "after": "d7bcf74394c18d1bdeedd84b0c4a6c0e0f118cb7656be65d35b2fa4d5c8e7ad1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "d8b5f015b62cecdba693821e359936584a03e367da61b9c7aa80a15bb17ff321",
+          "after": "d8b5f015b62cecdba693821e359936584a03e367da61b9c7aa80a15bb17ff321"
+        },
+        {
+          "scope": "published-finding",
+          "before": "db657ed4208b3dc127bf7730",
+          "after": "63ebc03273e38f2768da5a28"
+        },
+        {
+          "scope": "published-finding",
+          "before": "dde0c6a065a6bead012543da",
+          "after": "b2df275e53d9023656929f92"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ded0098d2b4b6057cf49a37a",
+          "after": "9319e83c9a703135460e5e6d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e452414ef3a5892d34bdf4fa",
+          "after": "14d39c1caca4838c54673e18"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e515997b75aab1f24e0e11d8",
+          "after": "2a3da10c45396820dbba686e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e718261572e9600754256898",
+          "after": "c5121169d57fa43ca2471ead"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e72cde7cc9c6a178ae19aad2",
+          "after": "66322d7d49fad78a7cb47c88"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e7f840ef0ccd3bda609e237d",
+          "after": "4badd8907cdf442743a1bd2c"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e84781ce30bfde6ed434eaf0e5c02483a5b47c285c26369ff80c2f3b1f12d65d",
+          "after": "e84781ce30bfde6ed434eaf0e5c02483a5b47c285c26369ff80c2f3b1f12d65d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "e86cb3d349d2fde587995644",
+          "after": "dcd55ca24ba34c7f76e9f4f4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ec6a420384c4c9e2f78107ef",
+          "after": "4d46e6c806098e8c1b6dfb00"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ecdf55f441bad716e58fa77a",
+          "after": "344fa8ced811145c423b24db"
+        },
+        {
+          "scope": "published-finding",
+          "before": "ecf453d0e4ffa48bba16dba32a3cf9373d5be696b2d6996e49f74c26da2a7466",
+          "after": "ecf453d0e4ffa48bba16dba32a3cf9373d5be696b2d6996e49f74c26da2a7466"
+        },
+        {
+          "scope": "published-finding",
+          "before": "edba2c6fa14320e0ce0113f3d1d2b2e81705fdb28d20d90d5b51928cad9eb15e",
+          "after": "6c852552fc255c646b136c3b84e2b99be265e30e92b78070ebebac090b4b4293"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f0a0591d5240b7430ccde769",
+          "after": "4343f5042ef817eb23797e54"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f32a11b5c8ed5764bd8ce471",
+          "after": "1de1e5828cd8370742786530"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f3c2a5e4cf63ae7cb21a28de",
+          "after": "15b9c6498ddfcabd54b78e14"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f485d44cf9f9593bdc7e37f1",
+          "after": "437c716d9e740ba30e8a384b"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f703aab412315db10e5fb662",
+          "after": "0151bf79d52466ad0002b8e6"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f81171152bdd1e27b531171cb1e7e5dc4073b50a9eb63146d0cc31a81f6fa497",
+          "after": "f81171152bdd1e27b531171cb1e7e5dc4073b50a9eb63146d0cc31a81f6fa497"
+        },
+        {
+          "scope": "published-finding",
+          "before": "f9287e13e351859564b5ae7f",
+          "after": "45e122c9de952f2807785667"
+        },
+        {
+          "scope": "published-finding",
+          "before": "fc5e65b765927e6087d0a1d2",
+          "after": "d2d1be3533839ec8ffe93bf4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "fc89bf33b589d837ec5588cc",
+          "after": "9b5cc1c89385c22ece7f80c9"
+        },
+        {
+          "scope": "published-finding",
+          "before": "fdad72fe237f10cfc8742dd1",
+          "after": "f461bfa725eda1122fd9a4fb"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:182223771558e596a6891380",
+          "after": "port-fact:470cf9e9b64b970dcf3342a2"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:27d760180f14670f0d3dc694",
+          "after": "port-fact:f094ae09a27e13137de18ec8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:3fad0f2dad40b90ba3fb5299",
+          "after": "port-fact:38a5fd0bd9c316333a433209"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:6076125315919c3f5140a191",
+          "after": "port-fact:f1db500b970f8c264c61c77e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:690be43e4613d797a5e8ca69",
+          "after": "port-fact:0dc4dd5bf8be54dd88f2d909"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:6f8926d6c98e636f8d26a277",
+          "after": "port-fact:e435ff555f5dae8ff8b7c7ab"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:74e33c55edf4a15e0b0884f6",
+          "after": "port-fact:7e531dde58716cfab24d6f89"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:75364841a70b1128be9f1b63",
+          "after": "port-fact:a7056c28f615d4175123ec9d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:975864f8207d52ae4370acb0",
+          "after": "port-fact:439835707849f9aa82eed0df"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:98fe9b42e3121f4050d76db5",
+          "after": "port-fact:5cd732720c9734808ca35218"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:aadbfc70f8cc0a24893f538f",
+          "after": "port-fact:4881b1768be9ec1ae2ba5d29"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:aaf2b7e9615423a14df664c7",
+          "after": "port-fact:e0b684019bb35e6f4c2b37b0"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:ac63b3db393cd98d8acd6042",
+          "after": "port-fact:7aadd8ac2dd133b72edbc696"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:acb78035c5c775a7826d035e",
+          "after": "port-fact:f8e46cbece2df62fd191ab1f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:b2bd7d23d0bc5a8b44c61bc0",
+          "after": "port-fact:f2f5a92b632f9f55dd7a872d"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:b9276d5b5281ced992721f5f",
+          "after": "port-fact:a0698884fb4479b3b0d32c37"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:c5303048711b3fff3822a093",
+          "after": "port-fact:f4f71d4fec560b7b2129b8fb"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:c7e3860e37da4e7a29b80034",
+          "after": "port-fact:153eefd6c05c9bf74cf2e9d5"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:ca070d017eaa912430e211dd",
+          "after": "port-fact:935edd93acbcc2b0b418a0ad"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:d0a29e28f9915cc9dbadf1b0",
+          "after": "port-fact:ae4762c49732aaf5499e6765"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:d731c4e1e68890ecdb0fee72",
+          "after": "port-fact:408f6e69d0d763f9cdccf69e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:e854d309a01319afd269087a",
+          "after": "port-fact:df17ab0139a3503ca3529143"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-fact:f03162cd4d67adf965cd3ddf",
+          "after": "port-fact:eba8266bac1eb9fdfbf97c7f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:1ffbf2d4f72174699f64ea8b",
+          "after": "port-gap:2e131b6e62728632dfa4b608"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:5f7285a41714e4f6f18aa260",
+          "after": "port-gap:15849871a28a170e587d968e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:5fbfa504d0f7ac84f7a22467",
+          "after": "port-gap:065adb2bfb67fc0c733cbfd4"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:9b9cff5db6efbdcf3cc718d0",
+          "after": "port-gap:2350b6231e034d4dcbc5aba8"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:a1382d1264bce7639aaf1c25",
+          "after": "port-gap:a1382d1264bce7639aaf1c25"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-gap:f4069a975fd9c519582fbe30",
+          "after": "port-gap:f4069a975fd9c519582fbe30"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:551cb91e02bb6c1101ac2df8",
+          "after": "port-model:c897a94bad7e0c63d9509f87"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:56f51a2b6bd056ecd0706118",
+          "after": "port-model:c1cd7b788efa9aa66d14094f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:75cf502e4cce887024ded487",
+          "after": "port-model:2d8098af8a60d9fc78d69c50"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:785846088f91524e03e4935d",
+          "after": "port-model:f0772a6fd3da5baa9723066e"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:8fb67848d419c6164739e0a5",
+          "after": "port-model:50a4e0431f1658ef5687ee63"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:bad7718a66ccafc75bfe6132",
+          "after": "port-model:f90b40e28e8d159679615aee"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:d85003eb9d543b9e5821f3a7",
+          "after": "port-model:5bb2120e732e3ccf3f845f4f"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:f006cd6dec55931282385a15",
+          "after": "port-model:70c6dd7709557547617074f1"
+        },
+        {
+          "scope": "published-finding",
+          "before": "port-model:f9a438d183ad19d0bc6e0236",
+          "after": "port-model:a182c5821f2b0a40df87f8d5"
+        }
+      ],
+      "identity_occurrence_counts": {
+        "id": 205,
+        "snapshot_id": 553,
+        "semantic_parse_id": 547,
+        "edge_id": 11,
+        "original_snapshot_edge_id": 2,
+        "parse_id": 4,
+        "factory_context_id": 9,
+        "source_value_id": 79,
+        "factory_call_edge_id": 1,
+        "condition_value_id": 20,
+        "factory_callback_contexts": 2,
+        "binding_id": 11,
+        "declaration_id": 11,
+        "formal_binding_id": 2,
+        "lookup_dependencies": 2,
+        "constructor_seed_value_id": 2,
+        "guaranteed_contexts": 11,
+        "input_value_id": 10,
+        "possible_contexts": 11,
+        "receiver_id": 29,
+        "input_value_ids": 9,
+        "fact_id": 7,
+        "input_fact_ids": 11,
+        "fact_ids": 8,
+        "gap_ids": 6,
+        "snapshot_edge_id": 2,
+        "formal_parameter_declaration_id": 2,
+        "inputs": 10,
+        "parameter_declaration_id": 1,
+        "port_declaration_id": 2,
+        "provider_declaration_id": 1,
+        "alias_declaration_id": 2,
+        "formal_declaration_id": 1,
+        "navigation_input_value_id": 5,
+        "ambient_read_binding_id": 4
+      },
+      "authenticated_publication_version_changes": [],
+      "differences": [],
+      "graph_node_ids_identical": true,
+      "graph_edge_ids_identical": true
+    }
+  ]
+}

@@ -1,0 +1,696 @@
+{
+  "repository": "winwincode",
+  "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28",
+  "source_checks": [
+    {
+      "path": "apps/client/src/application.ts",
+      "expected_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+      "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "apps/client/src/auth-view-model.ts",
+      "expected_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+      "source_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "apps/client/src/boot.ts",
+      "expected_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+      "source_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "apps/client/src/chat-delivery-creator.ts",
+      "expected_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+      "source_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "apps/client/src/community-control-plane-client.ts",
+      "expected_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+      "source_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "apps/client/src/decision-clarification-view-model.ts",
+      "expected_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+      "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "apps/client/src/generated/control-plane-client.ts",
+      "expected_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+      "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+      "source_status": "captured_support_input",
+      "status": "matched",
+      "evidence_origin": "support_input",
+      "support_input_available": true,
+      "support_source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+      "support_text_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24"
+    },
+    {
+      "path": "apps/client/src/home-dashboard-page.ts",
+      "expected_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+      "source_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "apps/client/src/task-entry-view-model.ts",
+      "expected_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+      "source_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "crates/winwincode-codex/src/adapter.rs",
+      "expected_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+      "source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+      "expected_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+      "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/workrun.rs",
+      "expected_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+      "source_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "crates/winwincode-server/src/dispatcher.rs",
+      "expected_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+      "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "crates/winwincode-server/src/server.rs",
+      "expected_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+      "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "crates/winwincode-worker/src/lib.rs",
+      "expected_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+      "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "crates/winwincode-worker/src/main.rs",
+      "expected_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+      "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    },
+    {
+      "path": "packages/browser-core/src/scope-context.ts",
+      "expected_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+      "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+      "source_status": "parsed",
+      "status": "matched",
+      "evidence_origin": "source_file"
+    }
+  ],
+  "observations": [
+    {
+      "id": "wwc.client.diagnostic-scope-call",
+      "source_checks": [
+        {
+          "path": "apps/client/src/application.ts",
+          "expected_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "packages/browser-core/src/scope-context.ts",
+          "expected_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.scope.surface-hash-call",
+      "source_checks": [
+        {
+          "path": "packages/browser-core/src/scope-context.ts",
+          "expected_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.delivery.start-next-to-item",
+      "source_checks": [
+        {
+          "path": "crates/winwincode-delivery/src/application/workrun.rs",
+          "expected_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+          "source_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.delivery.start-item-validation",
+      "source_checks": [
+        {
+          "path": "crates/winwincode-delivery/src/application/workrun.rs",
+          "expected_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+          "source_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.codex.submit-turn-persist-call",
+      "source_checks": [
+        {
+          "path": "crates/winwincode-codex/src/adapter.rs",
+          "expected_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+          "source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.worker.control-to-dispatch-call",
+      "source_checks": [
+        {
+          "path": "crates/winwincode-worker/src/lib.rs",
+          "expected_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.worker.generic-codex-boundary",
+      "source_checks": [
+        {
+          "path": "crates/winwincode-worker/src/lib.rs",
+          "expected_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-worker/src/main.rs",
+          "expected_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+          "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.client.auth-factory-composition",
+      "source_checks": [
+        {
+          "path": "apps/client/src/application.ts",
+          "expected_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/auth-view-model.ts",
+          "expected_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+          "source_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.protocol.client-to-rust-dispatch",
+      "source_checks": [
+        {
+          "path": "apps/client/src/generated/control-plane-client.ts",
+          "expected_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "source_status": "captured_support_input",
+          "status": "matched",
+          "evidence_origin": "support_input",
+          "support_input_available": true,
+          "support_source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "support_text_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24"
+        },
+        {
+          "path": "crates/winwincode-server/src/dispatcher.rs",
+          "expected_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-server/src/server.rs",
+          "expected_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.codex.intent-before-kernel",
+      "source_checks": [
+        {
+          "path": "crates/winwincode-codex/src/adapter.rs",
+          "expected_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+          "source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.device.production-provider-composition",
+      "source_checks": [
+        {
+          "path": "crates/winwincode-worker/src/lib.rs",
+          "expected_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-worker/src/main.rs",
+          "expected_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+          "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.gap.dashboard-new-task-context",
+      "source_checks": [
+        {
+          "path": "apps/client/src/application.ts",
+          "expected_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/boot.ts",
+          "expected_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+          "source_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/chat-delivery-creator.ts",
+          "expected_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+          "source_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/community-control-plane-client.ts",
+          "expected_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+          "source_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/home-dashboard-page.ts",
+          "expected_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+          "source_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/task-entry-view-model.ts",
+          "expected_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+          "source_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "packages/browser-core/src/scope-context.ts",
+          "expected_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    },
+    {
+      "id": "wwc.gap.device-clarification-verification",
+      "source_checks": [
+        {
+          "path": "apps/client/src/application.ts",
+          "expected_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/chat-delivery-creator.ts",
+          "expected_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+          "source_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "apps/client/src/decision-clarification-view-model.ts",
+          "expected_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+          "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        },
+        {
+          "path": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+          "expected_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+          "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+          "source_status": "parsed",
+          "status": "matched",
+          "evidence_origin": "source_file"
+        }
+      ]
+    }
+  ],
+  "target_identity": {
+    "root": "/workspace/winwincode",
+    "frozen_commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+    "actual_commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+    "commit_matches": true,
+    "git_metadata_read_only": true,
+    "git_read_error": null,
+    "working_tree_clean_claimed": false,
+    "live_referenced_source_checks": [
+      {
+        "path": "apps/client/src/application.ts",
+        "expected_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+        "actual_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+        "status": "matched"
+      },
+      {
+        "path": "apps/client/src/auth-view-model.ts",
+        "expected_sha256": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+        "actual_sha256": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+        "status": "matched"
+      },
+      {
+        "path": "apps/client/src/boot.ts",
+        "expected_sha256": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+        "actual_sha256": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+        "status": "matched"
+      },
+      {
+        "path": "apps/client/src/chat-delivery-creator.ts",
+        "expected_sha256": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+        "actual_sha256": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+        "status": "matched"
+      },
+      {
+        "path": "apps/client/src/community-control-plane-client.ts",
+        "expected_sha256": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+        "actual_sha256": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+        "status": "matched"
+      },
+      {
+        "path": "apps/client/src/decision-clarification-view-model.ts",
+        "expected_sha256": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+        "actual_sha256": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+        "status": "matched"
+      },
+      {
+        "path": "apps/client/src/generated/control-plane-client.ts",
+        "expected_sha256": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "actual_sha256": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "status": "matched"
+      },
+      {
+        "path": "apps/client/src/home-dashboard-page.ts",
+        "expected_sha256": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+        "actual_sha256": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+        "status": "matched"
+      },
+      {
+        "path": "apps/client/src/task-entry-view-model.ts",
+        "expected_sha256": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+        "actual_sha256": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+        "status": "matched"
+      },
+      {
+        "path": "crates/winwincode-codex/src/adapter.rs",
+        "expected_sha256": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+        "actual_sha256": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+        "status": "matched"
+      },
+      {
+        "path": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+        "expected_sha256": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+        "actual_sha256": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+        "status": "matched"
+      },
+      {
+        "path": "crates/winwincode-delivery/src/application/workrun.rs",
+        "expected_sha256": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+        "actual_sha256": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+        "status": "matched"
+      },
+      {
+        "path": "crates/winwincode-server/src/dispatcher.rs",
+        "expected_sha256": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+        "actual_sha256": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+        "status": "matched"
+      },
+      {
+        "path": "crates/winwincode-server/src/server.rs",
+        "expected_sha256": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+        "actual_sha256": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+        "status": "matched"
+      },
+      {
+        "path": "crates/winwincode-worker/src/lib.rs",
+        "expected_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+        "actual_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+        "status": "matched"
+      },
+      {
+        "path": "crates/winwincode-worker/src/main.rs",
+        "expected_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+        "actual_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+        "status": "matched"
+      },
+      {
+        "path": "packages/browser-core/src/scope-context.ts",
+        "expected_sha256": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+        "actual_sha256": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+        "status": "matched"
+      }
+    ],
+    "live_referenced_source_hashes_match": true,
+    "saved_referenced_source_checks": [
+      {
+        "path": "apps/client/src/application.ts",
+        "expected_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+        "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "apps/client/src/auth-view-model.ts",
+        "expected_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+        "source_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "apps/client/src/boot.ts",
+        "expected_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+        "source_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "apps/client/src/chat-delivery-creator.ts",
+        "expected_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+        "source_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "apps/client/src/community-control-plane-client.ts",
+        "expected_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+        "source_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "apps/client/src/decision-clarification-view-model.ts",
+        "expected_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+        "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "apps/client/src/generated/control-plane-client.ts",
+        "expected_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "source_status": "captured_support_input",
+        "status": "matched",
+        "evidence_origin": "support_input",
+        "support_input_available": true,
+        "support_source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+        "support_text_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24"
+      },
+      {
+        "path": "apps/client/src/home-dashboard-page.ts",
+        "expected_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+        "source_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "apps/client/src/task-entry-view-model.ts",
+        "expected_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+        "source_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "crates/winwincode-codex/src/adapter.rs",
+        "expected_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+        "source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+        "expected_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+        "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "crates/winwincode-delivery/src/application/workrun.rs",
+        "expected_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+        "source_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "crates/winwincode-server/src/dispatcher.rs",
+        "expected_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+        "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "crates/winwincode-server/src/server.rs",
+        "expected_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+        "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "crates/winwincode-worker/src/lib.rs",
+        "expected_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+        "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "crates/winwincode-worker/src/main.rs",
+        "expected_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+        "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      },
+      {
+        "path": "packages/browser-core/src/scope-context.ts",
+        "expected_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+        "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+        "source_status": "parsed",
+        "status": "matched",
+        "evidence_origin": "source_file"
+      }
+    ],
+    "saved_referenced_source_hashes_match": true
+  },
+  "interpretation": "All 26 frozen source observations remain in the denominator. Evidence-only and intentional unknown items are preserved. This comparison is not precision, recall, functional coverage, runtime success, a business judgment, or approval."
+}

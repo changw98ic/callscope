@@ -1,0 +1,1457 @@
+{
+  "snapshot": {
+    "id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+    "project_id": "c0161b0c9cd0b014ebd2",
+    "project_name": "订单调用结构示例",
+    "root": "/workspace/callscope/examples/order_service",
+    "created_at": "2026-10-11T10:41:12.582619+00:00",
+    "source_hash": "3a812527ca14c62e47d27ad11b1aa7ae6e7f3225ec639bc6067091b1f75911d3",
+    "analyzer_version": "static-multilang-2",
+    "policy_hash": "50cb9f86fbdc69d24696d6b9e0e315e516b099284818d3a653423a0c43cee7b6",
+    "status": "partial",
+    "nodes": [
+      {
+        "id": "app.api.fetch_order",
+        "name": "fetch_order",
+        "qualname": "app.api.fetch_order",
+        "module": "app.api",
+        "file": "app/api.py",
+        "line": 12,
+        "end_line": 14,
+        "kind": "function",
+        "signature": "fetch_order(order_id: str) -> dict[str, object]",
+        "layer": "API",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "entrypoint": true,
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.api.submit_order",
+        "name": "submit_order",
+        "qualname": "app.api.submit_order",
+        "module": "app.api",
+        "file": "app/api.py",
+        "line": 7,
+        "end_line": 9,
+        "kind": "function",
+        "signature": "submit_order(order_id: str, payload: dict[str, object]) -> str",
+        "layer": "API",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "entrypoint": true,
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.domain.get_order",
+        "name": "get_order",
+        "qualname": "app.domain.get_order",
+        "module": "app.domain",
+        "file": "app/domain.py",
+        "line": 16,
+        "end_line": 17,
+        "kind": "function",
+        "signature": "get_order(order_id: str) -> dict[str, object]",
+        "layer": "DOMAIN",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.domain.refresh_order",
+        "name": "refresh_order",
+        "qualname": "app.domain.refresh_order",
+        "module": "app.domain",
+        "file": "app/domain.py",
+        "line": 20,
+        "end_line": 24,
+        "kind": "function",
+        "signature": "refresh_order(order_id: str, remaining: int) -> None",
+        "layer": "DOMAIN",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "entrypoint": true,
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.domain.save_order",
+        "name": "save_order",
+        "qualname": "app.domain.save_order",
+        "module": "app.domain",
+        "file": "app/domain.py",
+        "line": 12,
+        "end_line": 13,
+        "kind": "function",
+        "signature": "save_order(order_id: str, payload: dict[str, object]) -> str",
+        "layer": "DOMAIN",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.domain.validate_order",
+        "name": "validate_order",
+        "qualname": "app.domain.validate_order",
+        "module": "app.domain",
+        "file": "app/domain.py",
+        "line": 7,
+        "end_line": 9,
+        "kind": "function",
+        "signature": "validate_order(payload: dict[str, object]) -> bool",
+        "layer": "DOMAIN",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.notifications.retry_notification",
+        "name": "retry_notification",
+        "qualname": "app.notifications.retry_notification",
+        "module": "app.notifications",
+        "file": "app/notifications.py",
+        "line": 6,
+        "end_line": 9,
+        "kind": "function",
+        "signature": "retry_notification(order_id: str, remaining: int) -> None",
+        "layer": "DOMAIN",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.plugins.dispatch_hook",
+        "name": "dispatch_hook",
+        "qualname": "app.plugins.dispatch_hook",
+        "module": "app.plugins",
+        "file": "app/plugins.py",
+        "line": 6,
+        "end_line": 7,
+        "kind": "function",
+        "signature": "dispatch_hook(callback: Callable[[str], None], order_id: str) -> None",
+        "layer": "EXTENSION",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "entrypoint": true,
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.storage.read_order",
+        "name": "read_order",
+        "qualname": "app.storage.read_order",
+        "module": "app.storage",
+        "file": "app/storage.py",
+        "line": 11,
+        "end_line": 12,
+        "kind": "function",
+        "signature": "read_order(order_id: str) -> dict[str, object]",
+        "layer": "STORAGE",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "language": "python"
+        }
+      },
+      {
+        "id": "app.storage.write_order",
+        "name": "write_order",
+        "qualname": "app.storage.write_order",
+        "module": "app.storage",
+        "file": "app/storage.py",
+        "line": 6,
+        "end_line": 8,
+        "kind": "function",
+        "signature": "write_order(order_id: str, payload: dict[str, object]) -> str",
+        "layer": "STORAGE",
+        "metadata": {
+          "async": false,
+          "conditional_definition": false,
+          "decorated_binding": false,
+          "decorators": [],
+          "language": "python"
+        }
+      },
+      {
+        "id": "module:app",
+        "name": "app",
+        "qualname": "module:app",
+        "module": "app",
+        "file": "app/__init__.py",
+        "line": 1,
+        "end_line": 1,
+        "kind": "module",
+        "signature": "",
+        "layer": null,
+        "metadata": {
+          "import_aliases": [
+            "app"
+          ],
+          "is_package": true,
+          "language": "python",
+          "source_status": "parsed"
+        }
+      },
+      {
+        "id": "module:app.api",
+        "name": "app.api",
+        "qualname": "module:app.api",
+        "module": "app.api",
+        "file": "app/api.py",
+        "line": 1,
+        "end_line": 14,
+        "kind": "module",
+        "signature": "",
+        "layer": null,
+        "metadata": {
+          "import_aliases": [
+            "app.api"
+          ],
+          "is_package": false,
+          "language": "python",
+          "source_status": "parsed"
+        }
+      },
+      {
+        "id": "module:app.domain",
+        "name": "app.domain",
+        "qualname": "module:app.domain",
+        "module": "app.domain",
+        "file": "app/domain.py",
+        "line": 1,
+        "end_line": 24,
+        "kind": "module",
+        "signature": "",
+        "layer": null,
+        "metadata": {
+          "import_aliases": [
+            "app.domain"
+          ],
+          "is_package": false,
+          "language": "python",
+          "source_status": "parsed"
+        }
+      },
+      {
+        "id": "module:app.notifications",
+        "name": "app.notifications",
+        "qualname": "module:app.notifications",
+        "module": "app.notifications",
+        "file": "app/notifications.py",
+        "line": 1,
+        "end_line": 9,
+        "kind": "module",
+        "signature": "",
+        "layer": null,
+        "metadata": {
+          "import_aliases": [
+            "app.notifications"
+          ],
+          "is_package": false,
+          "language": "python",
+          "source_status": "parsed"
+        }
+      },
+      {
+        "id": "module:app.plugins",
+        "name": "app.plugins",
+        "qualname": "module:app.plugins",
+        "module": "app.plugins",
+        "file": "app/plugins.py",
+        "line": 1,
+        "end_line": 7,
+        "kind": "module",
+        "signature": "",
+        "layer": null,
+        "metadata": {
+          "import_aliases": [
+            "app.plugins"
+          ],
+          "is_package": false,
+          "language": "python",
+          "source_status": "parsed"
+        }
+      },
+      {
+        "id": "module:app.storage",
+        "name": "app.storage",
+        "qualname": "module:app.storage",
+        "module": "app.storage",
+        "file": "app/storage.py",
+        "line": 1,
+        "end_line": 12,
+        "kind": "module",
+        "signature": "",
+        "layer": null,
+        "metadata": {
+          "import_aliases": [
+            "app.storage"
+          ],
+          "is_package": false,
+          "language": "python",
+          "source_status": "parsed"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "31f6d8a8a976cadfe3e077b3",
+        "source": "app.api.submit_order",
+        "target": "app.domain.save_order",
+        "expression": "save_order",
+        "file": "app/api.py",
+        "line": 9,
+        "column": 11,
+        "resolution": "resolved",
+        "candidates": [],
+        "reason": "静态声明绑定",
+        "metadata": {
+          "binding_model": "lexical_declaration",
+          "callee_kind": "callable",
+          "execution_order_verified": false,
+          "external_symbol": null,
+          "lexical_scope": "app.api.submit_order",
+          "static_only": true
+        }
+      },
+      {
+        "id": "be243b8ac0e4256f7286e955",
+        "source": "app.api.fetch_order",
+        "target": "app.storage.read_order",
+        "expression": "read_order",
+        "file": "app/api.py",
+        "line": 14,
+        "column": 11,
+        "resolution": "resolved",
+        "candidates": [],
+        "reason": "静态声明绑定",
+        "metadata": {
+          "binding_model": "lexical_declaration",
+          "callee_kind": "callable",
+          "execution_order_verified": false,
+          "external_symbol": null,
+          "lexical_scope": "app.api.fetch_order",
+          "static_only": true
+        }
+      },
+      {
+        "id": "332362db63238abf5c3d64cc",
+        "source": "app.domain.save_order",
+        "target": "app.storage.write_order",
+        "expression": "write_order",
+        "file": "app/domain.py",
+        "line": 13,
+        "column": 11,
+        "resolution": "resolved",
+        "candidates": [],
+        "reason": "静态声明绑定",
+        "metadata": {
+          "binding_model": "lexical_declaration",
+          "callee_kind": "callable",
+          "execution_order_verified": false,
+          "external_symbol": null,
+          "lexical_scope": "app.domain.save_order",
+          "static_only": true
+        }
+      },
+      {
+        "id": "16fcee69180aa4f2eb969f61",
+        "source": "app.domain.get_order",
+        "target": "app.storage.read_order",
+        "expression": "read_order",
+        "file": "app/domain.py",
+        "line": 17,
+        "column": 11,
+        "resolution": "resolved",
+        "candidates": [],
+        "reason": "静态声明绑定",
+        "metadata": {
+          "binding_model": "lexical_declaration",
+          "callee_kind": "callable",
+          "execution_order_verified": false,
+          "external_symbol": null,
+          "lexical_scope": "app.domain.get_order",
+          "static_only": true
+        }
+      },
+      {
+        "id": "5e51276ac3c4b7169ed78f0f",
+        "source": "app.domain.refresh_order",
+        "target": "app.notifications.retry_notification",
+        "expression": "retry_notification",
+        "file": "app/domain.py",
+        "line": 24,
+        "column": 4,
+        "resolution": "resolved",
+        "candidates": [],
+        "reason": "静态声明绑定",
+        "metadata": {
+          "binding_model": "lexical_declaration",
+          "callee_kind": "callable",
+          "execution_order_verified": false,
+          "external_symbol": null,
+          "lexical_scope": "app.domain.refresh_order",
+          "static_only": true
+        }
+      },
+      {
+        "id": "781a2015ced6ddd6139e7e6e",
+        "source": "app.notifications.retry_notification",
+        "target": "app.domain.refresh_order",
+        "expression": "domain.refresh_order",
+        "file": "app/notifications.py",
+        "line": 9,
+        "column": 4,
+        "resolution": "resolved",
+        "candidates": [],
+        "reason": "静态声明绑定",
+        "metadata": {
+          "binding_model": "lexical_declaration",
+          "callee_kind": "callable",
+          "execution_order_verified": false,
+          "external_symbol": null,
+          "lexical_scope": "app.notifications.retry_notification",
+          "static_only": true
+        }
+      },
+      {
+        "id": "9af1c3ee6617161810dd7e5e",
+        "source": "app.plugins.dispatch_hook",
+        "target": null,
+        "expression": "callback",
+        "file": "app/plugins.py",
+        "line": 7,
+        "column": 4,
+        "resolution": "dynamic",
+        "candidates": [],
+        "reason": "参数/回调的运行时值未推断",
+        "metadata": {
+          "callee_kind": "unknown",
+          "execution_order_verified": false,
+          "external_symbol": null,
+          "lexical_scope": "app.plugins.dispatch_hook",
+          "static_only": true
+        }
+      }
+    ],
+    "files": [
+      {
+        "path": "app/__init__.py",
+        "hash": "5e3fb4230c066a267b132792926cca2634f9c04654b21535f4b809ef77132dd4",
+        "content": "\"\"\"供 CallScope 只读分析的订单模块示例，不是运行或测试入口。\"\"\"\n",
+        "status": "parsed",
+        "language": "python",
+        "error": null,
+        "module": "app"
+      },
+      {
+        "path": "app/api.py",
+        "hash": "4624ede911b332cbecce8d696668e0c90e7b151f3d145f73815ecc844d41353c",
+        "content": "\"\"\"入口与配置中的调用结构约束配套；本文件不会被分析器执行。\"\"\"\n\nfrom app.domain import save_order\nfrom app.storage import read_order\n\n\ndef submit_order(order_id: str, payload: dict[str, object]) -> str:\n    \"\"\"示例缺口：validate_order 已存在，入口没有连接到它。\"\"\"\n    return save_order(order_id, payload)\n\n\ndef fetch_order(order_id: str) -> dict[str, object]:\n    \"\"\"示例缺口：绕过 get_order，直接调用了配置禁止的存储入口。\"\"\"\n    return read_order(order_id)\n",
+        "status": "parsed",
+        "language": "python",
+        "error": null,
+        "module": "app.api"
+      },
+      {
+        "path": "app/domain.py",
+        "hash": "91b427e1e04d43e43405ca9d961f2d13f6d9e7af6a10e669b8742cdb835318ec",
+        "content": "\"\"\"领域函数；这里只演示调用关系，不向分析器声明业务正确性。\"\"\"\n\nfrom app.notifications import retry_notification\nfrom app.storage import read_order, write_order\n\n\ndef validate_order(payload: dict[str, object]) -> bool:\n    \"\"\"存在实现不意味着调用链已经接入，也不证明其业务逻辑正确。\"\"\"\n    return \"items\" in payload\n\n\ndef save_order(order_id: str, payload: dict[str, object]) -> str:\n    return write_order(order_id, payload)\n\n\ndef get_order(order_id: str) -> dict[str, object]:\n    return read_order(order_id)\n\n\ndef refresh_order(order_id: str, remaining: int) -> None:\n    \"\"\"与 retry_notification 组成调用环；含计数条件，环本身不是不终止证据。\"\"\"\n    if remaining <= 0:\n        return\n    retry_notification(order_id, remaining - 1)\n",
+        "status": "parsed",
+        "language": "python",
+        "error": null,
+        "module": "app.domain"
+      },
+      {
+        "path": "app/notifications.py",
+        "hash": "c09a2f30a166175d4a799418c017b4a7abcec2b97fc7e4ec616b19e9bb9f4a2f",
+        "content": "\"\"\"通过模块引用形成调用环，避免在导入时读取未定义函数。\"\"\"\n\nimport app.domain as domain\n\n\ndef retry_notification(order_id: str, remaining: int) -> None:\n    if remaining <= 0:\n        return\n    domain.refresh_order(order_id, remaining - 1)\n",
+        "status": "parsed",
+        "language": "python",
+        "error": null,
+        "module": "app.notifications"
+      },
+      {
+        "path": "app/plugins.py",
+        "hash": "cabebe5d2134cbad7264ecb72cdaf426e2810f35c430e8e49b7f3b7e64dbb10f",
+        "content": "\"\"\"动态回调示例：参数的具体调用目标不从源码猜测。\"\"\"\n\nfrom typing import Callable\n\n\ndef dispatch_hook(callback: Callable[[str], None], order_id: str) -> None:\n    callback(order_id)\n",
+        "status": "parsed",
+        "language": "python",
+        "error": null,
+        "module": "app.plugins"
+      },
+      {
+        "path": "app/storage.py",
+        "hash": "aae0b241583766ed9f4d1327c19442f319f8ee2c865a5bfef3063234a1706928",
+        "content": "\"\"\"简单存储入口，仅供静态读取。\"\"\"\n\n_orders: dict[str, dict[str, object]] = {}\n\n\ndef write_order(order_id: str, payload: dict[str, object]) -> str:\n    _orders[order_id] = payload\n    return order_id\n\n\ndef read_order(order_id: str) -> dict[str, object]:\n    return _orders[order_id]\n",
+        "status": "parsed",
+        "language": "python",
+        "error": null,
+        "module": "app.storage"
+      }
+    ],
+    "diagnostics": [],
+    "stats": {
+      "ambiguous_calls": 0,
+      "ambiguous_symbols": 0,
+      "by_language": {
+        "python": {
+          "ambiguous_calls": 0,
+          "dynamic_calls": 1,
+          "edges": 7,
+          "external_callback_boundaries": 0,
+          "external_calls": 0,
+          "files_failed": 0,
+          "files_parsed": 6,
+          "files_total": 6,
+          "nodes": 16,
+          "resolved_calls": 6,
+          "unresolved_calls": 0
+        }
+      },
+      "call_resolution_incomplete": true,
+      "component_versions": {
+        "python": {
+          "analyzer": "python-ast-2",
+          "parser": "cpython-3.12.14"
+        }
+      },
+      "coverage_incomplete": false,
+      "dynamic_calls": 1,
+      "edges": 7,
+      "entrypoints_count": 4,
+      "excluded_paths": [],
+      "external_callback_boundaries": 0,
+      "external_calls": 0,
+      "files_failed": 0,
+      "files_parsed": 6,
+      "files_total": 6,
+      "frontend_stats": {
+        "python": {
+          "ambiguous_calls": 0,
+          "ambiguous_symbols": 0,
+          "attribute_invalidations": [],
+          "call_resolution_incomplete": true,
+          "coverage_incomplete": false,
+          "dynamic_calls": 1,
+          "edges": 7,
+          "excluded_paths": [],
+          "external_callback_boundaries": 0,
+          "external_calls": 0,
+          "files_failed": 0,
+          "files_parsed": 6,
+          "files_total": 6,
+          "incomplete": true,
+          "limitations": [
+            "不证明分支可执行、调用顺序、返回值或业务结果",
+            "不执行代码/测试/构建，不验证外部依赖可用性",
+            "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+            "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+            "构造器内部调用保持未知，不推断初始化路径"
+          ],
+          "nodes": 16,
+          "parser_version": "cpython-3.12.14",
+          "resolution_model": "static lexical binding; no runtime execution",
+          "resolved_calls": 6,
+          "scan_errors": [],
+          "source_roots": [
+            "."
+          ],
+          "stubs_not_analyzed": [],
+          "symlinks_skipped": [],
+          "unknown_attribute_writes": [],
+          "unresolved_calls": 0
+        }
+      },
+      "incomplete": true,
+      "languages_requested": [
+        "python"
+      ],
+      "limitations": [
+        "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+        "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+        "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+        "快照是读取到的源码集合，不是工作区原子捕获"
+      ],
+      "nodes": 16,
+      "resolution_model": "explicit static lexical bindings; no target execution",
+      "resolved_calls": 6,
+      "rules_count": 5,
+      "scan_errors": [],
+      "source_roots": [
+        "."
+      ],
+      "supported_languages": [
+        "python",
+        "typescript",
+        "rust"
+      ],
+      "symlinks_skipped": [],
+      "unresolved_calls": 0,
+      "unsupported_files": []
+    },
+    "config": {
+      "analysis": {
+        "exclude": [
+          ".callscope/**",
+          "__pycache__/**",
+          ".git/**",
+          ".venv/**"
+        ],
+        "languages": [
+          "python"
+        ],
+        "max_file_bytes": 1048576,
+        "module_aliases": {},
+        "rust_crates": {},
+        "source_roots": [
+          "."
+        ]
+      },
+      "entrypoints": [
+        "app.api.submit_order",
+        "app.api.fetch_order",
+        "app.domain.refresh_order",
+        "app.plugins.dispatch_hook"
+      ],
+      "layers": {
+        "API": [
+          "app.api.*"
+        ],
+        "DOMAIN": [
+          "app.domain.*",
+          "app.notifications.*"
+        ],
+        "EXTENSION": [
+          "app.plugins.*"
+        ],
+        "STORAGE": [
+          "app.storage.*"
+        ]
+      },
+      "project": {
+        "name": "订单调用结构示例"
+      },
+      "rules": [
+        {
+          "description": "声明的结构约束：提交入口的调用图中必须可达 validate_order。只检查连接，不证明校验执行顺序、覆盖率或正确性。",
+          "from": "app.api.submit_order",
+          "id": "submit-validation-connected",
+          "kind": "required_path",
+          "severity": "high",
+          "to": "app.domain.validate_order"
+        },
+        {
+          "description": "声明的结构约束：提交入口必须经某条确定调用路径到达持久化入口。",
+          "from": "app.api.submit_order",
+          "id": "submit-persistence-connected",
+          "kind": "required_path",
+          "severity": "medium",
+          "to": "app.storage.write_order"
+        },
+        {
+          "description": "声明的结构约束：读取入口必须连接领域层 get_order；示例刻意保留未接入的实现。",
+          "from": "app.api.fetch_order",
+          "id": "fetch-domain-connected",
+          "kind": "required_path",
+          "severity": "high",
+          "to": "app.domain.get_order"
+        },
+        {
+          "description": "声明的分层约束：API 函数不得直接调用 storage.read_order。是否采用这一边界由项目维护者决定。",
+          "from": "app.api.*",
+          "id": "api-cannot-read-storage-directly",
+          "kind": "forbidden_call",
+          "severity": "high",
+          "to": "app.storage.read_order"
+        },
+        {
+          "description": "声明的结构约束：save_order 必须包含到 write_order 的确定直接调用。",
+          "from": "app.domain.save_order",
+          "id": "save-delegates-write",
+          "kind": "required_call",
+          "severity": "medium",
+          "to": "app.storage.write_order"
+        }
+      ],
+      "schema_version": 1
+    },
+    "detector_version": "call-rules-1",
+    "schema_version": "1",
+    "parser_version": "{\"python\":{\"analyzer\":\"python-ast-2\",\"parser\":\"cpython-3.12.14\"}}"
+  },
+  "findings": [
+    {
+      "id": "finding:8a9e842585710b26938aa57f53b1f7ed",
+      "type": "forbidden_call",
+      "severity": "high",
+      "status": "open",
+      "title": "app.api.fetch_order 存在禁止调用",
+      "description": "找到一条违反显式规则的确定静态连接；不表示该路径必然运行。",
+      "node_ids": [
+        "app.api.fetch_order",
+        "app.storage.read_order"
+      ],
+      "edge_ids": [
+        "be243b8ac0e4256f7286e955"
+      ],
+      "evidence": [
+        {
+          "id": "evidence:b5741065a637ed5e73fe5741e14aca9a",
+          "kind": "static_call_graph",
+          "message": "找到一条违反显式规则的确定静态连接；不表示该路径必然运行。",
+          "locations": [
+            {
+              "column": 11,
+              "file": "app/api.py",
+              "line": 14
+            },
+            {
+              "column": 0,
+              "file": "app/api.py",
+              "line": 12
+            },
+            {
+              "column": 0,
+              "file": "app/storage.py",
+              "line": 11
+            }
+          ],
+          "node_ids": [
+            "app.api.fetch_order",
+            "app.storage.read_order"
+          ],
+          "edge_ids": [
+            "be243b8ac0e4256f7286e955"
+          ],
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "call_path_interpretation": "静态结构可达，不代表必然执行或行为正确。",
+            "completeness_scope": "explicit_static_call_model",
+            "detector_version": "call-rules-1",
+            "executed": false,
+            "gaps": [],
+            "matched_source_ids": [
+              "app.api.fetch_order",
+              "app.api.submit_order"
+            ],
+            "matched_target_ids": [
+              "app.storage.read_order"
+            ],
+            "minimum_call_edges": 1,
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-2\",\"parser\":\"cpython-3.12.14\"}}",
+            "policy_hash": "50cb9f86fbdc69d24696d6b9e0e315e516b099284818d3a653423a0c43cee7b6",
+            "proven_violation": true,
+            "quantifier": "each_source_to_at_least_one_target",
+            "rule": {
+              "description": "声明的分层约束：API 函数不得直接调用 storage.read_order。是否采用这一边界由项目维护者决定。",
+              "from": "app.api.*",
+              "id": "api-cannot-read-storage-directly",
+              "kind": "forbidden_call",
+              "severity": "high",
+              "to": "app.storage.read_order"
+            },
+            "schema_version": "1",
+            "search_complete": true,
+            "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+            "source_hash": "3a812527ca14c62e47d27ad11b1aa7ae6e7f3225ec639bc6067091b1f75911d3",
+            "source_id": "app.api.fetch_order",
+            "witness_edge_ids": [
+              "be243b8ac0e4256f7286e955"
+            ],
+            "witness_node_ids": [
+              "app.api.fetch_order",
+              "app.storage.read_order"
+            ],
+            "world_assumption": "explicit_static_calls_only"
+          }
+        }
+      ],
+      "rule_id": "api-cannot-read-storage-directly",
+      "fingerprint": "daeeab9c5a793409ebde73224ec84a3670880dc5343a6a7e4116a62b2bec7405",
+      "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+      "metadata": {
+        "detector_version": "call-rules-1",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "decision": null,
+      "disposition": "unreviewed",
+      "decision_expired": false
+    },
+    {
+      "id": "finding:e8fea8bd8c94c212124dbc4165e9322b",
+      "type": "required_path",
+      "severity": "high",
+      "status": "open",
+      "title": "app.api.submit_order 的必需路径未确认",
+      "description": "已分析的确定调用关系未满足显式规则；每个源必须连接至少一个匹配目标。",
+      "node_ids": [
+        "app.api.submit_order",
+        "app.domain.validate_order"
+      ],
+      "edge_ids": [],
+      "evidence": [
+        {
+          "id": "evidence:c1f9dc0a54459701b4de329b08b80157",
+          "kind": "static_call_graph",
+          "message": "已分析的确定调用关系未满足显式规则；每个源必须连接至少一个匹配目标。",
+          "locations": [
+            {
+              "column": 0,
+              "file": "app/api.py",
+              "line": 7
+            },
+            {
+              "column": 0,
+              "file": "app/domain.py",
+              "line": 7
+            }
+          ],
+          "node_ids": [
+            "app.api.submit_order",
+            "app.domain.validate_order"
+          ],
+          "edge_ids": [],
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "call_path_interpretation": "静态结构可达，不代表必然执行或行为正确。",
+            "completeness_scope": "explicit_static_call_model",
+            "detector_version": "call-rules-1",
+            "executed": false,
+            "gaps": [],
+            "matched_source_ids": [
+              "app.api.submit_order"
+            ],
+            "matched_target_ids": [
+              "app.domain.validate_order"
+            ],
+            "minimum_call_edges": 1,
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-2\",\"parser\":\"cpython-3.12.14\"}}",
+            "policy_hash": "50cb9f86fbdc69d24696d6b9e0e315e516b099284818d3a653423a0c43cee7b6",
+            "proven_violation": true,
+            "quantifier": "each_source_to_at_least_one_target",
+            "rule": {
+              "description": "声明的结构约束：提交入口的调用图中必须可达 validate_order。只检查连接，不证明校验执行顺序、覆盖率或正确性。",
+              "from": "app.api.submit_order",
+              "id": "submit-validation-connected",
+              "kind": "required_path",
+              "severity": "high",
+              "to": "app.domain.validate_order"
+            },
+            "schema_version": "1",
+            "search_complete": true,
+            "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+            "source_hash": "3a812527ca14c62e47d27ad11b1aa7ae6e7f3225ec639bc6067091b1f75911d3",
+            "source_id": "app.api.submit_order",
+            "witness_edge_ids": [],
+            "witness_node_ids": [],
+            "world_assumption": "explicit_static_calls_only"
+          }
+        }
+      ],
+      "rule_id": "submit-validation-connected",
+      "fingerprint": "0e6c74f0314a854157b7b894f3d7cd36080f363118472d6be28cf7e8db6c21b4",
+      "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+      "metadata": {
+        "detector_version": "call-rules-1",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "decision": null,
+      "disposition": "unreviewed",
+      "decision_expired": false
+    },
+    {
+      "id": "finding:2c32485cd43b5fec3946af3193f3ca5f",
+      "type": "required_path",
+      "severity": "high",
+      "status": "open",
+      "title": "app.api.fetch_order 的必需路径未确认",
+      "description": "已分析的确定调用关系未满足显式规则；每个源必须连接至少一个匹配目标。",
+      "node_ids": [
+        "app.api.fetch_order",
+        "app.domain.get_order"
+      ],
+      "edge_ids": [],
+      "evidence": [
+        {
+          "id": "evidence:f30ed3d953f7297d1add12a9481461b6",
+          "kind": "static_call_graph",
+          "message": "已分析的确定调用关系未满足显式规则；每个源必须连接至少一个匹配目标。",
+          "locations": [
+            {
+              "column": 0,
+              "file": "app/api.py",
+              "line": 12
+            },
+            {
+              "column": 0,
+              "file": "app/domain.py",
+              "line": 16
+            }
+          ],
+          "node_ids": [
+            "app.api.fetch_order",
+            "app.domain.get_order"
+          ],
+          "edge_ids": [],
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "call_path_interpretation": "静态结构可达，不代表必然执行或行为正确。",
+            "completeness_scope": "explicit_static_call_model",
+            "detector_version": "call-rules-1",
+            "executed": false,
+            "gaps": [],
+            "matched_source_ids": [
+              "app.api.fetch_order"
+            ],
+            "matched_target_ids": [
+              "app.domain.get_order"
+            ],
+            "minimum_call_edges": 1,
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-2\",\"parser\":\"cpython-3.12.14\"}}",
+            "policy_hash": "50cb9f86fbdc69d24696d6b9e0e315e516b099284818d3a653423a0c43cee7b6",
+            "proven_violation": true,
+            "quantifier": "each_source_to_at_least_one_target",
+            "rule": {
+              "description": "声明的结构约束：读取入口必须连接领域层 get_order；示例刻意保留未接入的实现。",
+              "from": "app.api.fetch_order",
+              "id": "fetch-domain-connected",
+              "kind": "required_path",
+              "severity": "high",
+              "to": "app.domain.get_order"
+            },
+            "schema_version": "1",
+            "search_complete": true,
+            "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+            "source_hash": "3a812527ca14c62e47d27ad11b1aa7ae6e7f3225ec639bc6067091b1f75911d3",
+            "source_id": "app.api.fetch_order",
+            "witness_edge_ids": [],
+            "witness_node_ids": [],
+            "world_assumption": "explicit_static_calls_only"
+          }
+        }
+      ],
+      "rule_id": "fetch-domain-connected",
+      "fingerprint": "3ada1be17277c1ba0fb29ce91c69e33185f56a9c5d276e81237175ccdec37f26",
+      "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+      "metadata": {
+        "detector_version": "call-rules-1",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "decision": null,
+      "disposition": "unreviewed",
+      "decision_expired": false
+    },
+    {
+      "id": "finding:6a673d454add69d8f9ce0ecf0c250ec3",
+      "type": "suspected_unreachable",
+      "severity": "low",
+      "status": "uncertain",
+      "title": "配置入口未确定可达 app.domain.get_order",
+      "description": "在配置入口的确定调用闭包中未发现该节点。动态调用、外部入口或框架行为可能使用它；不能据此判定死代码。",
+      "node_ids": [
+        "app.domain.get_order"
+      ],
+      "edge_ids": [],
+      "evidence": [
+        {
+          "id": "evidence:13cb11a8f93dbc623d860b50aa6f9d6e",
+          "kind": "static_call_graph",
+          "message": "在配置入口的确定调用闭包中未发现该节点。动态调用、外部入口或框架行为可能使用它；不能据此判定死代码。",
+          "locations": [
+            {
+              "column": 0,
+              "file": "app/domain.py",
+              "line": 16
+            },
+            {
+              "column": 4,
+              "file": "app/plugins.py",
+              "line": 7
+            }
+          ],
+          "node_ids": [
+            "app.domain.get_order"
+          ],
+          "edge_ids": [],
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "completeness_scope": "explicit_static_call_model",
+            "dead_code": "not_determined",
+            "detector_version": "call-rules-1",
+            "entrypoint_ids": [
+              "app.api.fetch_order",
+              "app.api.submit_order",
+              "app.domain.refresh_order",
+              "app.plugins.dispatch_hook"
+            ],
+            "entrypoint_patterns": [
+              "app.api.fetch_order",
+              "app.api.submit_order",
+              "app.domain.refresh_order",
+              "app.plugins.dispatch_hook"
+            ],
+            "executed": false,
+            "gaps": [
+              {
+                "candidates": [],
+                "column": 4,
+                "edge_id": "9af1c3ee6617161810dd7e5e",
+                "expression": "callback",
+                "file": "app/plugins.py",
+                "kind": "call_resolution",
+                "line": 7,
+                "reason": "参数/回调的运行时值未推断",
+                "resolution": "dynamic",
+                "source": "app.plugins.dispatch_hook",
+                "target": null
+              }
+            ],
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-2\",\"parser\":\"cpython-3.12.14\"}}",
+            "policy_hash": "50cb9f86fbdc69d24696d6b9e0e315e516b099284818d3a653423a0c43cee7b6",
+            "reachable_nodes": 8,
+            "schema_version": "1",
+            "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+            "source_hash": "3a812527ca14c62e47d27ad11b1aa7ae6e7f3225ec639bc6067091b1f75911d3"
+          }
+        }
+      ],
+      "rule_id": "",
+      "fingerprint": "8fcd31f53ae92357a90cac1b95e0ccb9b161425eb014dad858f2ba789d5a8c58",
+      "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+      "metadata": {
+        "detector_version": "call-rules-1",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "decision": null,
+      "disposition": "unreviewed",
+      "decision_expired": false
+    },
+    {
+      "id": "finding:7321e4d7efdab0bde192e9ea8adb7396",
+      "type": "suspected_unreachable",
+      "severity": "low",
+      "status": "uncertain",
+      "title": "配置入口未确定可达 app.domain.validate_order",
+      "description": "在配置入口的确定调用闭包中未发现该节点。动态调用、外部入口或框架行为可能使用它；不能据此判定死代码。",
+      "node_ids": [
+        "app.domain.validate_order"
+      ],
+      "edge_ids": [],
+      "evidence": [
+        {
+          "id": "evidence:f4d8850840e8edf8cb8434d1c16e9a83",
+          "kind": "static_call_graph",
+          "message": "在配置入口的确定调用闭包中未发现该节点。动态调用、外部入口或框架行为可能使用它；不能据此判定死代码。",
+          "locations": [
+            {
+              "column": 0,
+              "file": "app/domain.py",
+              "line": 7
+            },
+            {
+              "column": 4,
+              "file": "app/plugins.py",
+              "line": 7
+            }
+          ],
+          "node_ids": [
+            "app.domain.validate_order"
+          ],
+          "edge_ids": [],
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "completeness_scope": "explicit_static_call_model",
+            "dead_code": "not_determined",
+            "detector_version": "call-rules-1",
+            "entrypoint_ids": [
+              "app.api.fetch_order",
+              "app.api.submit_order",
+              "app.domain.refresh_order",
+              "app.plugins.dispatch_hook"
+            ],
+            "entrypoint_patterns": [
+              "app.api.fetch_order",
+              "app.api.submit_order",
+              "app.domain.refresh_order",
+              "app.plugins.dispatch_hook"
+            ],
+            "executed": false,
+            "gaps": [
+              {
+                "candidates": [],
+                "column": 4,
+                "edge_id": "9af1c3ee6617161810dd7e5e",
+                "expression": "callback",
+                "file": "app/plugins.py",
+                "kind": "call_resolution",
+                "line": 7,
+                "reason": "参数/回调的运行时值未推断",
+                "resolution": "dynamic",
+                "source": "app.plugins.dispatch_hook",
+                "target": null
+              }
+            ],
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-2\",\"parser\":\"cpython-3.12.14\"}}",
+            "policy_hash": "50cb9f86fbdc69d24696d6b9e0e315e516b099284818d3a653423a0c43cee7b6",
+            "reachable_nodes": 8,
+            "schema_version": "1",
+            "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+            "source_hash": "3a812527ca14c62e47d27ad11b1aa7ae6e7f3225ec639bc6067091b1f75911d3"
+          }
+        }
+      ],
+      "rule_id": "",
+      "fingerprint": "b71071cf5d3577796b02559b82844c718c7c79d79183e264d81764e884530336",
+      "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+      "metadata": {
+        "detector_version": "call-rules-1",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "decision": null,
+      "disposition": "unreviewed",
+      "decision_expired": false
+    },
+    {
+      "id": "finding:be042060d6df99f939fe665b3914d0f7",
+      "type": "call_cycle",
+      "severity": "info",
+      "status": "open",
+      "title": "静态调用环（2 个节点）",
+      "description": "确定调用关系形成强连通分量。它可能是正常协作结构；不能据此判断运行时循环或不终止。",
+      "node_ids": [
+        "app.domain.refresh_order",
+        "app.notifications.retry_notification"
+      ],
+      "edge_ids": [
+        "5e51276ac3c4b7169ed78f0f",
+        "781a2015ced6ddd6139e7e6e"
+      ],
+      "evidence": [
+        {
+          "id": "evidence:743cb17f3e6b259beecc7a17098940db",
+          "kind": "static_call_graph",
+          "message": "确定调用关系形成强连通分量。它可能是正常协作结构；不能据此判断运行时循环或不终止。",
+          "locations": [
+            {
+              "column": 4,
+              "file": "app/domain.py",
+              "line": 24
+            },
+            {
+              "column": 4,
+              "file": "app/notifications.py",
+              "line": 9
+            },
+            {
+              "column": 0,
+              "file": "app/domain.py",
+              "line": 20
+            },
+            {
+              "column": 0,
+              "file": "app/notifications.py",
+              "line": 6
+            }
+          ],
+          "node_ids": [
+            "app.domain.refresh_order",
+            "app.notifications.retry_notification"
+          ],
+          "edge_ids": [
+            "5e51276ac3c4b7169ed78f0f",
+            "781a2015ced6ddd6139e7e6e"
+          ],
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "completeness_scope": "explicit_static_call_model",
+            "component_edge_ids": [
+              "5e51276ac3c4b7169ed78f0f",
+              "781a2015ced6ddd6139e7e6e"
+            ],
+            "component_node_ids": [
+              "app.domain.refresh_order",
+              "app.notifications.retry_notification"
+            ],
+            "detector_version": "call-rules-1",
+            "executed": false,
+            "fact": "strongly_connected_component",
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-2\",\"parser\":\"cpython-3.12.14\"}}",
+            "policy_hash": "50cb9f86fbdc69d24696d6b9e0e315e516b099284818d3a653423a0c43cee7b6",
+            "policy_violation": false,
+            "schema_version": "1",
+            "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+            "source_hash": "3a812527ca14c62e47d27ad11b1aa7ae6e7f3225ec639bc6067091b1f75911d3",
+            "termination": "not_determined",
+            "witness_edge_ids": [
+              "5e51276ac3c4b7169ed78f0f",
+              "781a2015ced6ddd6139e7e6e"
+            ],
+            "witness_node_ids": [
+              "app.domain.refresh_order",
+              "app.notifications.retry_notification",
+              "app.domain.refresh_order"
+            ]
+          }
+        }
+      ],
+      "rule_id": "",
+      "fingerprint": "69c9435077b42d2a2dbb53a2a4b70f2492f2ffcb9c683a8c8211e81be66c3fef",
+      "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+      "metadata": {
+        "detector_version": "call-rules-1",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。"
+      },
+      "decision": null,
+      "disposition": "unreviewed",
+      "decision_expired": false
+    },
+    {
+      "id": "finding:78cd091d642c8883311a7c0fb26cec26",
+      "type": "unresolved_call",
+      "severity": "info",
+      "status": "uncertain",
+      "title": "调用目标未确定：callback",
+      "description": "该调用缺少唯一的静态目标；这是一项分析缺口，不等同于目标不存在或功能缺失。",
+      "node_ids": [
+        "app.plugins.dispatch_hook"
+      ],
+      "edge_ids": [
+        "9af1c3ee6617161810dd7e5e"
+      ],
+      "evidence": [
+        {
+          "id": "evidence:5774e4db5935f49325aab122b0614dc3",
+          "kind": "static_call_graph",
+          "message": "该调用缺少唯一的静态目标；这是一项分析缺口，不等同于目标不存在或功能缺失。",
+          "locations": [
+            {
+              "column": 4,
+              "file": "app/plugins.py",
+              "line": 7
+            },
+            {
+              "column": 0,
+              "file": "app/plugins.py",
+              "line": 6
+            }
+          ],
+          "node_ids": [
+            "app.plugins.dispatch_hook"
+          ],
+          "edge_ids": [
+            "9af1c3ee6617161810dd7e5e"
+          ],
+          "details": {
+            "analyzer_version": "static-multilang-2",
+            "call_site": {
+              "candidates": [],
+              "column": 4,
+              "edge_id": "9af1c3ee6617161810dd7e5e",
+              "expression": "callback",
+              "file": "app/plugins.py",
+              "kind": "call_resolution",
+              "line": 7,
+              "reason": "参数/回调的运行时值未推断",
+              "resolution": "dynamic",
+              "source": "app.plugins.dispatch_hook",
+              "target": null
+            },
+            "candidates_are_confirmed": false,
+            "completeness_scope": "explicit_static_call_model",
+            "detector_version": "call-rules-1",
+            "executed": false,
+            "model_limits": [
+              "implicit_magic_calls",
+              "runtime_registration",
+              "external_implementations"
+            ],
+            "parser_version": "{\"python\":{\"analyzer\":\"python-ast-2\",\"parser\":\"cpython-3.12.14\"}}",
+            "policy_hash": "50cb9f86fbdc69d24696d6b9e0e315e516b099284818d3a653423a0c43cee7b6",
+            "schema_version": "1",
+            "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+            "source_hash": "3a812527ca14c62e47d27ad11b1aa7ae6e7f3225ec639bc6067091b1f75911d3"
+          }
+        }
+      ],
+      "rule_id": "",
+      "fingerprint": "9c3e72328a8e460e67f45029a233bb86a2e343ac9dfb7b46bf1fea9dd4973bfb",
+      "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+      "metadata": {
+        "detector_version": "call-rules-1",
+        "interpretation": "仅为静态结构事实或相对显式规则的发现，不保证运行行为。",
+        "resolution": "dynamic"
+      },
+      "decision": null,
+      "disposition": "unreviewed",
+      "decision_expired": false
+    }
+  ],
+  "publication": {
+    "snapshot_id": "3de379f1374aa20234bfe18db35180753439b3314315977c5ab2a840796be6af",
+    "created": true,
+    "status": "partial",
+    "stats": {
+      "source_roots": [
+        "."
+      ],
+      "excluded_paths": [],
+      "symlinks_skipped": [],
+      "scan_errors": [],
+      "unsupported_files": [],
+      "files_total": 6,
+      "files_parsed": 6,
+      "files_failed": 0,
+      "nodes": 16,
+      "edges": 7,
+      "resolved_calls": 6,
+      "external_calls": 0,
+      "dynamic_calls": 1,
+      "ambiguous_calls": 0,
+      "unresolved_calls": 0,
+      "external_callback_boundaries": 0,
+      "by_language": {
+        "python": {
+          "files_total": 6,
+          "files_parsed": 6,
+          "files_failed": 0,
+          "nodes": 16,
+          "edges": 7,
+          "resolved_calls": 6,
+          "external_calls": 0,
+          "dynamic_calls": 1,
+          "ambiguous_calls": 0,
+          "unresolved_calls": 0,
+          "external_callback_boundaries": 0
+        }
+      },
+      "languages_requested": [
+        "python"
+      ],
+      "supported_languages": [
+        "python",
+        "typescript",
+        "rust"
+      ],
+      "frontend_stats": {
+        "python": {
+          "source_roots": [
+            "."
+          ],
+          "excluded_paths": [],
+          "symlinks_skipped": [],
+          "stubs_not_analyzed": [],
+          "scan_errors": [],
+          "files_total": 6,
+          "files_parsed": 6,
+          "files_failed": 0,
+          "nodes": 16,
+          "edges": 7,
+          "resolved_calls": 6,
+          "external_calls": 0,
+          "dynamic_calls": 1,
+          "ambiguous_calls": 0,
+          "unresolved_calls": 0,
+          "external_callback_boundaries": 0,
+          "parser_version": "cpython-3.12.14",
+          "ambiguous_symbols": 0,
+          "attribute_invalidations": [],
+          "unknown_attribute_writes": [],
+          "coverage_incomplete": false,
+          "call_resolution_incomplete": true,
+          "incomplete": true,
+          "resolution_model": "static lexical binding; no runtime execution",
+          "limitations": [
+            "不证明分支可执行、调用顺序、返回值或业务结果",
+            "不执行代码/测试/构建，不验证外部依赖可用性",
+            "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+            "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+            "构造器内部调用保持未知，不推断初始化路径"
+          ]
+        }
+      },
+      "component_versions": {
+        "python": {
+          "analyzer": "python-ast-2",
+          "parser": "cpython-3.12.14"
+        }
+      },
+      "rules_count": 5,
+      "entrypoints_count": 4,
+      "ambiguous_symbols": 0,
+      "coverage_incomplete": false,
+      "call_resolution_incomplete": true,
+      "incomplete": true,
+      "resolution_model": "explicit static lexical bindings; no target execution",
+      "limitations": [
+        "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+        "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+        "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+        "快照是读取到的源码集合，不是工作区原子捕获"
+      ]
+    },
+    "finding_count": 7
+  }
+}

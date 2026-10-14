@@ -1,0 +1,31 @@
+{
+  "status": "preparing_complete_original_scope",
+  "previous_candidate_directory": "astra-iteration12",
+  "previous_candidate_freeze_preserved": true,
+  "previous_candidate_not_published_complete": true,
+  "core_code_changes_from_candidate": false,
+  "expected_tool_source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+  "missing_original_finite_content": [
+    "CodePatchBay task entry read/projection responsibility",
+    "WinWinCode candidate commit, role and evidence-source contract inventory"
+  ],
+  "additional_scope_is_source_locators_not_expected_answers": true,
+  "copied_helpers": {
+    "publication_identity.py": "9430eb936c0c3f4c4b7863d8a194c4e4de98893ad459a4150463b1ca6dd96fe7",
+    "freeze_core.py": "757c4b9667f7b3a8009428b7dbb144f242388ee32f2a2a1ce001dbb54e9bc7ce",
+    "scan_repository.py": "8b00b0788299512c040558c4648e8bd49ca91d5199e577f6ab74f61cfa30cdcd",
+    "report_shared_references.py": "0eed0838ab20faf5387a7cd3be9c33682382d680e14e95650cb388a704e85124",
+    "compare_original_baseline.py": "b7f6b008fdfb34b81c97c9c971bf72a309148bdac91c38ffb713d92bc3a733ba",
+    "compile_goal_ledger.py": "d95146ab40e3c5f0b7c2ba07a61332a39b4d5f9954d38f8db746af765ea9adeb",
+    "build_report_alignment.py": "678ce4b52573f8a3c01b441264232514fb8ba495fd54d88349d6585524d42791",
+    "render_report_summaries.py": "869ba713b8dd0e09913d4b845857758342691ea73b00579f074e6932eb6c5b58",
+    "render_analysis_briefs.py": "9a6d7c7ab2e4591c741146cd7b564b931582c8d6f710e3ea5f6e448f96e187f8",
+    "build_release_report.py": "b2c417bbe321065ef772147808f8cba49a6ec09dfe947d3bc6ab30f0d157668f",
+    "readback_report_cli.py": "5c745e47f98814e5e05f64e75d821ec98a6a90fc2f6244d5f52000bad60984e2",
+    "REPORT_ALIGNMENT_CATALOG.json": "4498259053d6b813b69edcef701f69f647e4143f8e31e1ebc08f9c2a2f8a33e0",
+    "codepatchbay-policy.json": "38acb0b64547d783bebaa12dfc6bb3ecf56a3433f431d268302829eb4149186b",
+    "winwincode-policy.json": "2045c242f432ee27bd83727a866725709cbc1d99d1d3e329bc412076bd56177b"
+  },
+  "formal_scan_started": false,
+  "formal_completion_claimed": false
+}

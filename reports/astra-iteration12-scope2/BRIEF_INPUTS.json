@@ -1,0 +1,1273 @@
+{
+  "version": "saved-static-analysis-brief-1",
+  "presentation_only": true,
+  "new_assessment_generated": false,
+  "script_sha256": "9a6d7c7ab2e4591c741146cd7b564b931582c8d6f710e3ea5f6e448f96e187f8",
+  "streaming_reader_path": "render_report_summaries.py",
+  "streaming_reader_sha256": "869ba713b8dd0e09913d4b845857758342691ea73b00579f074e6932eb6c5b58",
+  "selection_basis": "Saved semantic witnesses/checks/conditions, finite tables, partial ownership assessment and false boundaries; labels are navigation only.",
+  "streaming_fields": [
+    "version",
+    "snapshot",
+    "judgments",
+    "functional_chains",
+    "source_relation_index",
+    "report_scope",
+    "target_executed",
+    "target_tests_run",
+    "target_build_run",
+    "runtime_functionality_verified"
+  ],
+  "small_pattern_fields": [
+    "relation_witnesses",
+    "ownership_assessment",
+    "responsibility_interpretation",
+    "record_boundary",
+    "command_boundary",
+    "retention_boundary",
+    "persisted_selection_recheck_relation",
+    "groups"
+  ],
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "snapshot_id": "dd5d4e3cc349b57eb87d0f810a415560bfd5f6b1022a990a35190a44d0e50ebb",
+      "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+      "policy_hash": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887",
+      "report_path": "codepatchbay-automatic-report.json",
+      "report_sha256": "47d26d8b44c382cbaf80d84e0a063bfccafafd45fac137962fccdd2d28a37ad7",
+      "integration_sha256": "14ec2da687fc96870a5b511d86bebc7ab5d262334e9f52fb3b2f3d65108f815c",
+      "output": "codepatchbay-analysis-brief.md",
+      "output_sha256": "15abaec56701898f906b55b9c5a559e87dd203c71bed9d853bef858f89926c9c",
+      "line_count": 136,
+      "source_relation_count": 16,
+      "selected_saved_values": [
+        {
+          "rule_id": "cpb-captured-record-resource-writers",
+          "claim_type": "resource_writer_ownership",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/0/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "ownership_assessment",
+              "full_value_ref": "/functional_chains/0/pattern/ownership_assessment"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "responsibility_interpretation",
+              "full_value_ref": "/functional_chains/0/pattern/responsibility_interpretation"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "all_mutations_authorized_proven",
+              "full_value_ref": "/functional_chains/0/pattern/all_mutations_authorized_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-event-index-projection",
+          "claim_type": "event_index_projection",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/1/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "relation_witnesses",
+              "full_value_ref": "/functional_chains/1/pattern/relation_witnesses"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "normal_append_then_refresh_orders/0/conditions",
+              "full_value_ref": "/functional_chains/1/pattern/normal_append_then_refresh_orders/0/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "record_boundary/all_crash_recovery_interleavings_proven",
+              "full_value_ref": "/functional_chains/1/pattern/record_boundary/all_crash_recovery_interleavings_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-finalizer-conditional-publication",
+          "claim_type": "conditional_publication_boundary",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/2/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "relation_witnesses/0/callee_source",
+              "full_value_ref": "/functional_chains/2/pattern/relation_witnesses/0/callee_source"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "selected_mode_guard_witnesses/0/condition_source",
+              "full_value_ref": "/functional_chains/2/pattern/selected_mode_guard_witnesses/0/condition_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "scope/all_generic_push_configurations_have_an_authorizer_proven",
+              "full_value_ref": "/functional_chains/2/pattern/scope/all_generic_push_configurations_have_an_authorizer_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-access-audit-response",
+          "claim_type": "conditional_gate_relations",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/3/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "groups/access_audit/response_replacement_relations/0/conditions",
+              "full_value_ref": "/functional_chains/3/pattern/groups/access_audit/response_replacement_relations/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "groups/access_audit/response_replacement_relations/0/actual_response_writer_call/callee_source",
+              "full_value_ref": "/functional_chains/3/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "groups/access_audit/all_http_security_or_business_mutations_proven",
+              "full_value_ref": "/functional_chains/3/pattern/groups/access_audit/all_http_security_or_business_mutations_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-agent-execution-policy",
+          "claim_type": "agent_execution_policy",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/4/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "child_environment_filter/conditional_copy_attempts/0/guard/callee_source",
+              "full_value_ref": "/functional_chains/4/pattern/child_environment_filter/conditional_copy_attempts/0/guard/callee_source"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "admission_and_postexecution_review/execute_binding/callee_source",
+              "full_value_ref": "/functional_chains/4/pattern/admission_and_postexecution_review/execute_binding/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "all_secrets_denied_proven",
+              "full_value_ref": "/functional_chains/4/pattern/all_secrets_denied_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-completion-gate-conditions",
+          "claim_type": "conditional_gate_relations",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/5/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "groups/completion/condition_consumers/0/condition_abstract_form",
+              "full_value_ref": "/functional_chains/5/pattern/groups/completion/condition_consumers/0/condition_abstract_form"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "groups/completion/condition_consumers/0/condition_source",
+              "full_value_ref": "/functional_chains/5/pattern/groups/completion/condition_consumers/0/condition_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "groups/completion/checklist_internal_checks_proven",
+              "full_value_ref": "/functional_chains/5/pattern/groups/completion/checklist_internal_checks_proven"
+            }
+          ],
+          "finite_tables": [
+            {
+              "full_table_ref": "/functional_chains/5/pattern/groups/completion/mutating_finite_enum_partition/absent_input_partitions",
+              "shown_rows": 2,
+              "saved_total_rows": 2,
+              "saved_truncated": false
+            },
+            {
+              "full_table_ref": "/functional_chains/5/pattern/groups/completion/mutating_finite_enum_partition/record_partitions",
+              "shown_rows": 9,
+              "saved_total_rows": 9,
+              "saved_truncated": false
+            }
+          ],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-conditional-delivery-result",
+          "claim_type": "conditional_delivery_result",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/6/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "components/finalizer/conditional_finalization/0/supported",
+              "full_value_ref": "/functional_chains/6/pattern/components/finalizer/conditional_finalization/0/supported"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "interpretation",
+              "full_value_ref": "/functional_chains/6/pattern/interpretation"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "all_recovery_complete_proven",
+              "full_value_ref": "/functional_chains/6/pattern/all_recovery_complete_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-engine-stage-chain",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/7/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/entry/conditions/0/condition/operands/0/callee_source",
+              "full_value_ref": "/functional_chains/7/pattern/sequences/entry/conditions/0/condition/operands/0/callee_source"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "sequences/entry/orders/0/conditions",
+              "full_value_ref": "/functional_chains/7/pattern/sequences/entry/orders/0/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/entry/future_or_callback_activation_proven",
+              "full_value_ref": "/functional_chains/7/pattern/sequences/entry/future_or_callback_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-job-audit-best-effort",
+          "claim_type": "best_effort_finalization",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/8/pattern",
+          "semantic_values": [
+            {
+              "label": "保留边界",
+              "saved_path": "audit_subject_equivalence_to_other_systems_proven",
+              "full_value_ref": "/functional_chains/8/pattern/audit_subject_equivalence_to_other_systems_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-readiness-abrupt-guard",
+          "claim_type": "conditional_gate_relations",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/9/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "groups/readiness/relations/0/true_branch_always_abrupt",
+              "full_value_ref": "/functional_chains/9/pattern/groups/readiness/relations/0/true_branch_always_abrupt"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "groups/readiness/relations/0/conditions",
+              "full_value_ref": "/functional_chains/9/pattern/groups/readiness/relations/0/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "groups/readiness/readiness_implementation_success_or_external_state_proven",
+              "full_value_ref": "/functional_chains/9/pattern/groups/readiness/readiness_implementation_success_or_external_state_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-trusted-probe-command-source",
+          "claim_type": "structured_command_source",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/10/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "executions/0/same_parameter_field_source",
+              "full_value_ref": "/functional_chains/10/pattern/executions/0/same_parameter_field_source"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "lookups/0/arguments/0/callee_source",
+              "full_value_ref": "/functional_chains/10/pattern/lookups/0/arguments/0/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "expected_evidence_noninterference_proven",
+              "full_value_ref": "/functional_chains/10/pattern/expected_evidence_noninterference_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-report-unsupported-probe-evidence",
+          "claim_type": "unsupported_method_evidence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/11/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "marker_consumption_guard_sources/0/condition/operands/1/operands/0/callee_source",
+              "full_value_ref": "/functional_chains/11/pattern/marker_consumption_guard_sources/0/condition/operands/1/operands/0/callee_source"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "marker_assignment_attempts/1/branch_context/2/condition/callee_source",
+              "full_value_ref": "/functional_chains/11/pattern/marker_assignment_attempts/1/branch_context/2/condition/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "marker_field_business_meaning_inferred",
+              "full_value_ref": "/functional_chains/11/pattern/marker_field_business_meaning_inferred"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-review-fixed-state-lineage",
+          "claim_type": "conditional_state_lineage",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/12/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "interpretation",
+              "full_value_ref": "/functional_chains/12/pattern/interpretation"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "relation_witnesses/0/all_lineage_creation_proven",
+              "full_value_ref": "/functional_chains/12/pattern/relation_witnesses/0/all_lineage_creation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-task-read-projection",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/13/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/linked_record_lookup/orders/0/conditions",
+              "full_value_ref": "/functional_chains/13/pattern/sequences/linked_record_lookup/orders/0/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/linked_record_lookup/future_or_callback_activation_proven",
+              "full_value_ref": "/functional_chains/13/pattern/sequences/linked_record_lookup/future_or_callback_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-trusted-command-lineage",
+          "claim_type": "trusted_command_lineage",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/14/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "relation_witnesses",
+              "full_value_ref": "/functional_chains/14/pattern/relation_witnesses"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "loader_codec_joins/0/conditions",
+              "full_value_ref": "/functional_chains/14/pattern/loader_codec_joins/0/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "command_boundary/expected_evidence_as_executable_source_proven",
+              "full_value_ref": "/functional_chains/14/pattern/command_boundary/expected_evidence_as_executable_source_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "cpb-unsupported-record-retention",
+          "claim_type": "unsupported_record_retention",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/15/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "relation_witnesses",
+              "full_value_ref": "/functional_chains/15/pattern/relation_witnesses"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "explicit_key_precedence_counter_sources/0/conditions",
+              "full_value_ref": "/functional_chains/15/pattern/explicit_key_precedence_counter_sources/0/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "retention_boundary/all_input_retention_or_artifact_durability_proven",
+              "full_value_ref": "/functional_chains/15/pattern/retention_boundary/all_input_retention_or_artifact_durability_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        }
+      ]
+    },
+    {
+      "repository": "winwincode",
+      "snapshot_id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+      "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+      "policy_hash": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+      "report_path": "winwincode-automatic-report.json",
+      "report_sha256": "65312658d7c9adc0cfbb8feb98af35b13791c03ba0466d6c3f3e149c74751cb1",
+      "integration_sha256": "df8ea8684b5de5b142fa129bef9587153c126082cb13d83c62150af8fa89a6f8",
+      "output": "winwincode-analysis-brief.md",
+      "output_sha256": "446e51ad17d3bd3ea0207345cf9a490dbfc0f0992484ff87c3829f663fcdc72c",
+      "line_count": 151,
+      "source_relation_count": 20,
+      "selected_saved_values": [
+        {
+          "rule_id": "wwc-browser-continuation-lifecycle",
+          "claim_type": "browser_async_lifecycle",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/0/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "scope_conditions",
+              "full_value_ref": "/functional_chains/0/pattern/scope_conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "closed_result_disposal_consumers/0/close_before_normal_return",
+              "full_value_ref": "/functional_chains/0/pattern/closed_result_disposal_consumers/0/close_before_normal_return"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "all_async_callbacks_guarded_proven",
+              "full_value_ref": "/functional_chains/0/pattern/all_async_callbacks_guarded_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-captured-record-resource-writers",
+          "claim_type": "resource_writer_ownership",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/1/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "ownership_assessment",
+              "full_value_ref": "/functional_chains/1/pattern/ownership_assessment"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "responsibility_interpretation",
+              "full_value_ref": "/functional_chains/1/pattern/responsibility_interpretation"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "all_mutations_authorized_proven",
+              "full_value_ref": "/functional_chains/1/pattern/all_mutations_authorized_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-delivery-evidence-frozen-contract-slice",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/2/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/canonical_evidence/orders/0/conditions",
+              "full_value_ref": "/functional_chains/2/pattern/sequences/canonical_evidence/orders/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "sequences/checkout_guard/conditions/0/condition/operands/0/callee_source",
+              "full_value_ref": "/functional_chains/2/pattern/sequences/checkout_guard/conditions/0/condition/operands/0/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/canonical_evidence/future_or_callback_activation_proven",
+              "full_value_ref": "/functional_chains/2/pattern/sequences/canonical_evidence/future_or_callback_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-document-device-provider-deployment-scope",
+          "claim_type": "document_deployment_consistency",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/3/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "relation_witnesses",
+              "full_value_ref": "/functional_chains/3/pattern/relation_witnesses"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "conditions",
+              "full_value_ref": "/functional_chains/3/pattern/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "whole_report_reproduction_claimed",
+              "full_value_ref": "/functional_chains/3/pattern/whole_report_reproduction_claimed"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-adapter-durable-exact-turn",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/4/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/adapter_submit/conditions/1/condition/operands/1/callee_source",
+              "full_value_ref": "/functional_chains/4/pattern/sequences/adapter_submit/conditions/1/condition/operands/1/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/adapter_submit/conditions/0/runtime_predicate_proven",
+              "full_value_ref": "/functional_chains/4/pattern/sequences/adapter_submit/conditions/0/runtime_predicate_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-chat-delivery-workrun-requests",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/5/pattern",
+          "semantic_values": [
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/builder/conditions/0/runtime_predicate_proven",
+              "full_value_ref": "/functional_chains/5/pattern/sequences/builder/conditions/0/runtime_predicate_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-chat-retained-request-identities",
+          "claim_type": "message_identity_relations",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/6/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "components/chat_request_identity/supported",
+              "full_value_ref": "/functional_chains/6/pattern/components/chat_request_identity/supported"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "components/chat_request_identity/builder_call_relations/0/supported",
+              "full_value_ref": "/functional_chains/6/pattern/components/chat_request_identity/builder_call_relations/0/supported"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "runtime_transport_or_physical_effect_proven",
+              "full_value_ref": "/functional_chains/6/pattern/runtime_transport_or_physical_effect_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-device-provider-deployment",
+          "claim_type": "deployment_provider_split",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/7/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "boundary_results/0/expression/callee_source",
+              "full_value_ref": "/functional_chains/7/pattern/boundary_results/0/expression/callee_source"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "installation_assignments/0/right/callee_source",
+              "full_value_ref": "/functional_chains/7/pattern/installation_assignments/0/right/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "deployments_or_provider_implementations_equivalent",
+              "full_value_ref": "/functional_chains/7/pattern/deployments_or_provider_implementations_equivalent"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-kernel-create-session-interface",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/8/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "nested_source_regions/0/conditions",
+              "full_value_ref": "/functional_chains/8/pattern/nested_source_regions/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "nested_source_regions/0/sequence/orders/0/conditions",
+              "full_value_ref": "/functional_chains/8/pattern/nested_source_regions/0/sequence/orders/0/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "nested_source_regions/0/body_activation_proven",
+              "full_value_ref": "/functional_chains/8/pattern/nested_source_regions/0/body_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-kernel-reconcile-exact-interface",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/9/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "nested_source_regions/0/conditions",
+              "full_value_ref": "/functional_chains/9/pattern/nested_source_regions/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "sequences/kernel_reconcile/conditions/0/condition/operands/0/callee_source",
+              "full_value_ref": "/functional_chains/9/pattern/sequences/kernel_reconcile/conditions/0/condition/operands/0/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "nested_source_regions/0/body_activation_proven",
+              "full_value_ref": "/functional_chains/9/pattern/nested_source_regions/0/body_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-kernel-submit-turn-interface",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/10/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "nested_source_regions/0/conditions",
+              "full_value_ref": "/functional_chains/10/pattern/nested_source_regions/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "sequences/kernel_submit/conditions/0/condition/callee_expression/object/callee_source",
+              "full_value_ref": "/functional_chains/10/pattern/sequences/kernel_submit/conditions/0/condition/callee_expression/object/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "nested_source_regions/0/body_activation_proven",
+              "full_value_ref": "/functional_chains/10/pattern/nested_source_regions/0/body_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-outbox-ack-correlation-fields",
+          "claim_type": "message_identity_relations",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/11/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "components/outbox_ack_correlation/projection_agreements/0/ordered_field_paths",
+              "full_value_ref": "/functional_chains/11/pattern/components/outbox_ack_correlation/projection_agreements/0/ordered_field_paths"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "components/outbox_ack_correlation/projection_agreements/1/ordered_field_paths",
+              "full_value_ref": "/functional_chains/11/pattern/components/outbox_ack_correlation/projection_agreements/1/ordered_field_paths"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "runtime_transport_or_physical_effect_proven",
+              "full_value_ref": "/functional_chains/11/pattern/runtime_transport_or_physical_effect_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-production-adapter-embedded-kernel",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/12/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/adapter_open/orders/0/conditions",
+              "full_value_ref": "/functional_chains/12/pattern/sequences/adapter_open/orders/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "sequences/adapter_open/orders/1/conditions",
+              "full_value_ref": "/functional_chains/12/pattern/sequences/adapter_open/orders/1/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/adapter_open/future_or_callback_activation_proven",
+              "full_value_ref": "/functional_chains/12/pattern/sequences/adapter_open/future_or_callback_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-submission-intent-kernel-order",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/13/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/submission/conditions/1/condition/operands/1/callee_source",
+              "full_value_ref": "/functional_chains/13/pattern/sequences/submission/conditions/1/condition/operands/1/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/submission/conditions/0/runtime_predicate_proven",
+              "full_value_ref": "/functional_chains/13/pattern/sequences/submission/conditions/0/runtime_predicate_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-worker-adapter-record-identities",
+          "claim_type": "message_identity_relations",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/14/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "components/worker_adapter_identity/components/adapter_ensure_thread/supported",
+              "full_value_ref": "/functional_chains/14/pattern/components/worker_adapter_identity/components/adapter_ensure_thread/supported"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "components/worker_adapter_identity/supported",
+              "full_value_ref": "/functional_chains/14/pattern/components/worker_adapter_identity/supported"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "runtime_transport_or_physical_effect_proven",
+              "full_value_ref": "/functional_chains/14/pattern/runtime_transport_or_physical_effect_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-worker-bootstrap-entries",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/15/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/entry/orders/0/conditions",
+              "full_value_ref": "/functional_chains/15/pattern/sequences/entry/orders/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "sequences/managed/orders/0/conditions",
+              "full_value_ref": "/functional_chains/15/pattern/sequences/managed/orders/0/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/entry/future_or_callback_activation_proven",
+              "full_value_ref": "/functional_chains/15/pattern/sequences/entry/future_or_callback_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-worker-production-construction",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/16/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/adapter_factory/orders/0/conditions",
+              "full_value_ref": "/functional_chains/16/pattern/sequences/adapter_factory/orders/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "sequences/adapter_factory/orders/1/conditions",
+              "full_value_ref": "/functional_chains/16/pattern/sequences/adapter_factory/orders/1/conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/adapter_factory/future_or_callback_activation_proven",
+              "full_value_ref": "/functional_chains/16/pattern/sequences/adapter_factory/future_or_callback_activation_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-worker-typed-dispatch",
+          "claim_type": "guarded_call_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/17/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/control/conditions/0/condition/operand/callee_expression/object/callee_source",
+              "full_value_ref": "/functional_chains/17/pattern/sequences/control/conditions/0/condition/operand/callee_expression/object/callee_source"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "sequences/control/conditions/0/condition/operand/callee_source",
+              "full_value_ref": "/functional_chains/17/pattern/sequences/control/conditions/0/condition/operand/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "sequences/control/conditions/0/runtime_predicate_proven",
+              "full_value_ref": "/functional_chains/17/pattern/sequences/control/conditions/0/runtime_predicate_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-workrun-finite-selection",
+          "claim_type": "rust_finite_state_selection",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/18/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "persisted_selection_recheck_relation/checks",
+              "full_value_ref": "/functional_chains/18/pattern/persisted_selection_recheck_relation/checks"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "source_model_conditions",
+              "full_value_ref": "/functional_chains/18/pattern/source_model_conditions"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "all_active_states_or_attempts_proven",
+              "full_value_ref": "/functional_chains/18/pattern/all_active_states_or_attempts_proven"
+            }
+          ],
+          "finite_tables": [
+            {
+              "full_table_ref": "/functional_chains/18/pattern/finite_effective_state_relation/rows",
+              "shown_rows": 8,
+              "saved_total_rows": 8,
+              "saved_truncated": false
+            }
+          ],
+          "display_selection_complete": false
+        },
+        {
+          "rule_id": "wwc-report-workrun-state-guards",
+          "claim_type": "state_guard_sequence",
+          "saved_assessment": {
+            "captured_source_structure_supported": true,
+            "full_functionality_proven": false,
+            "normal_control_model_registered": true,
+            "original_five_goal_acceptance_computed": false,
+            "runtime_verified": false,
+            "scoped_source_supported": true,
+            "state": "scoped_source_relations_supported",
+            "whole_report_reproduced": false
+          },
+          "pattern_ref": "/functional_chains/19/pattern",
+          "semantic_values": [
+            {
+              "label": "实际关系",
+              "saved_path": "sequences/selection/orders/0/conditions",
+              "full_value_ref": "/functional_chains/19/pattern/sequences/selection/orders/0/conditions"
+            },
+            {
+              "label": "实际条件/接线",
+              "saved_path": "selection_predicate_sources/1/expression/operands/0/operands/1/callee_source",
+              "full_value_ref": "/functional_chains/19/pattern/selection_predicate_sources/1/expression/operands/0/operands/1/callee_source"
+            },
+            {
+              "label": "保留边界",
+              "saved_path": "all_active_states_or_attempts_proven",
+              "full_value_ref": "/functional_chains/19/pattern/all_active_states_or_attempts_proven"
+            }
+          ],
+          "finite_tables": [],
+          "display_selection_complete": false
+        }
+      ]
+    }
+  ],
+  "database_opened": false,
+  "target_source_opened": false,
+  "analyzer_imported": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

@@ -1,0 +1,5 @@
+{"repository": "winwincode", "phase": "cold", "state": "started", "engine": "full", "frontends_recomputed": true, "global_detection": "full"}
+{"repository": "winwincode", "phase": "cold", "snapshot_id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372", "status": "partial", "created": true, "maintenance": {"engine": "full", "global_detection": "full"}}
+{"repository": "winwincode", "phase": "warm", "state": "started", "engine": "full", "frontends_recomputed": true, "global_detection": "full"}
+{"repository": "winwincode", "phase": "warm", "snapshot_id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372", "status": "partial", "created": false, "maintenance": {"engine": "full", "global_detection": "full"}}
+{"repository": "winwincode", "judgments": [{"goal_id": "WWC-01", "complete": true, "supported": true, "gaps": 0}, {"goal_id": "WWC-02", "complete": true, "supported": true, "gaps": 0}], "functional_chain_status_counts": {"scoped_source_relations_supported": 20}, "database_closed": true, "integration_artifact": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-integration.json"}

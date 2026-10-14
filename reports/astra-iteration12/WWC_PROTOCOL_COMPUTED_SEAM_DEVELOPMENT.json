@@ -1,0 +1,235 @@
+{
+  "development_query": true,
+  "not_formal_v14_result": true,
+  "source_report": "reports/astra-iteration11/winwincode-automatic-report.json",
+  "source_report_sha256": "01b324f5d68c082a673d034dc6117e53e7fb05c7c252f06107a794e388249135",
+  "module_sha256": "97532dea6e3a12ed89eba4dc89b49517349e03307e8a63f7e8c069bcf557c35c",
+  "module_stable": true,
+  "computed_seams": [
+    {
+      "kind": "finite_generated_json_serde_message_source_relation",
+      "text": "所选命令「delivery.update_spec」的生成 TypeScript 记录按「DeliveryUpdateSpecCommand → payload:DeliveryUpdateSpecPayload → spec:DeliverySpecInput」组织字段「verificationCommand」（optional=true）。已认证 Serde 模型将它映射到 Rust 字段「verification_command:Option<String>」，缺失值为「None」，源属性为「#[serde(default, skip_serializing_if = \"Option::is_none\")].#[serde(rename = \"verificationCommand\")]」。在原普通 JSON/已认证 Serde 及成功消息模型条件下，实际「POST /api/v1/commands」序列化记录与 Server 的同一路径解码/dispatcher 记录相接，typed variant 为「DeliveryUpdateSpecCommand」。这是所选协议字段与消息关系，不把 HTTP 已发生、所有 query/WS codec 或跨语言普通调用当成已证明。",
+      "goal_id": "WWC-02",
+      "finding_id": "7e7dc738afda264f3b24a0d8",
+      "evidence_id": "9144dc2875788bfdba88323b",
+      "adapter_finding_id": "6bf2661528fa4bfe69878542",
+      "adapter_evidence_id": "8779a9bb2e1ca26e3d8b0366",
+      "obligation_id": "D3",
+      "obligation_status": "supported",
+      "source_analysis_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details",
+      "source_obligation_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/obligations/2",
+      "source_relation_refs": [
+        {
+          "relation_id": "99aafc4f6070fba7baef67c47b897568f57746ed693ff03e93b8d9b58f4e34b6",
+          "kind": "generated_typescript_wire_record_path",
+          "source_class": "support-input-derived",
+          "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/46"
+        },
+        {
+          "relation_id": "45013b406087a9ff840ea9bb677f6343ff76a76058f1780a3e68a23cbeba46cc",
+          "kind": "wire_record_field_mapping_and_default",
+          "source_class": "support-input-derived",
+          "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/48"
+        },
+        {
+          "relation_id": "4c9ef7134a179f58914a5290ed5a120446391e569db80171fe9a6bce6cdc13ab",
+          "kind": "command_json_http_record_transport",
+          "source_class": "support-input-derived",
+          "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/51"
+        },
+        {
+          "relation_id": "7c6f9014472319686dea62dfb8306b80e233318a889091d687881d89eb6a612c",
+          "kind": "server_json_body_to_dispatcher",
+          "source_class": "source-derived",
+          "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/53"
+        },
+        {
+          "relation_id": "9de41baa7ee3e51b2dbeedb3b74064a8e4b1bfdfc3b6c0c84573cca712b4e3ed",
+          "kind": "typed_application_family_dispatch",
+          "source_class": "source-derived",
+          "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/55"
+        },
+        {
+          "relation_id": "5686b3a64747909a310747ed41c7466780d6bd934e8a4c9abb4e2a4befe842d1",
+          "kind": "typed_command_update_dispatch",
+          "source_class": "source-derived",
+          "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/relations/56"
+        }
+      ],
+      "models": [
+        {
+          "id": "captured-device-json-serde-dispatch-v1",
+          "version": "static-device-spec-protocol-flow-1",
+          "model_record_id": "e5d6e4d3d9bd1ae4ef2331737fb1a7e58a9c218bcd65abf80f1c05441d4b7b51",
+          "applicability_accepted": true,
+          "source_pointer": "/judgments/1/adapter_judgments/0/evidence/0/details/models/0"
+        }
+      ],
+      "conditions": {
+        "items": [
+          "Normal production clarification route; options.controlPlane override is absent, literal module imports complete normally, and form prerequisites permit save.",
+          "Protocol values are ordinary JSON data and the versioned native JSON/Serde provider model applies; successful delivery of that request is a condition, not an observed network execution.",
+          "Actor/scope authorization, catalog/revision/source-session/baseline guards permit reaching authority, and the update is not an earlier exact receipt replay.",
+          "The source product session resolves to an authorized active Device repository target. Non-Device and independent Chat paths remain counterexamples."
+        ],
+        "kind": "true_environment_and_model_conditions",
+        "provenance": {
+          "author_approved": false,
+          "authority": "Astra original WWC-02 source report, conditional code judgment",
+          "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md#wwc-02"
+        },
+        "source_class": "policy-declared"
+      },
+      "transport_model": "ordinary successful JSON message along authenticated command endpoint; no network execution",
+      "scope_boundaries": [
+        "No target code, tests, build, generated module or macro is executed.",
+        "Protocol/message/dependency records do not create or upgrade snapshot CALLS edges.",
+        "A successful ordinary-model message and an active Device branch are conditional, not observed running facts.",
+        "Role configuration does not establish actual injection or dependency identity."
+      ],
+      "supported_source_relation": true,
+      "source_locations": [
+        {
+          "file": "apps/client/src/generated/contracts.ts",
+          "line": 3541,
+          "column": 3,
+          "start_byte": 137271,
+          "end_byte": 137310,
+          "source_hash": "900bfd942abc7f889540469721e5540c1a329f18124457a67f64b5ea1e793515",
+          "span_hash": "a211ab726f441d8728e044f78f3f81b18c235bf16d13d6341ff6598efc23fa2c"
+        },
+        {
+          "file": "crates/winwincode-api/src/generated.rs",
+          "line": 5840,
+          "column": 5,
+          "start_byte": 237568,
+          "end_byte": 237608,
+          "source_hash": "8c453928bc68c7980a5c00a262087244f5b3987e2fee6bc0043d13cfafb40037",
+          "span_hash": "668309ca357005892eacbad1b63473d9109c20959b5371ae333cea6aa8104219"
+        },
+        {
+          "file": "apps/client/src/generated/control-plane-client.ts",
+          "line": 449,
+          "column": 20,
+          "start_byte": 199564,
+          "end_byte": 199587,
+          "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "span_hash": "eef2f9bef5344c08c448403db3c2fcda1976e31c634e4965018dcba1b05412dd"
+        },
+        {
+          "file": "apps/client/src/generated/control-plane-client.ts",
+          "line": 445,
+          "column": 5,
+          "start_byte": 199444,
+          "end_byte": 199451,
+          "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "span_hash": "1f58b9145b24d108d7ac38887338b3ea3229833b9c1e418250343f907bfd1047"
+        },
+        {
+          "file": "apps/client/src/generated/control-plane-client.ts",
+          "line": 443,
+          "column": 22,
+          "start_byte": 199420,
+          "end_byte": 199487,
+          "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "span_hash": "f5b96c8e9f2e16dc8ab6dd8596d622253af435ea73f6392822be624cc66aa99a"
+        },
+        {
+          "file": "apps/client/src/generated/control-plane-client.ts",
+          "line": 443,
+          "column": 3,
+          "start_byte": 199401,
+          "end_byte": 200996,
+          "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+          "span_hash": "f00f2b105d4d9eb03f38f42d55142a42324aa6eea932ee0a6b388b1cb532a03e"
+        },
+        {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2397,
+          "column": 24,
+          "start_byte": 85875,
+          "end_byte": 85905,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "span_hash": "ef35af056f55d72fa9c3111a2caa6073e1ec3de6ea2f15caf647123a80a38ba0"
+        },
+        {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2354,
+          "column": 9,
+          "start_byte": 84473,
+          "end_byte": 84508,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "span_hash": "b52e80591ce97449b504125f1cbf7aeac587fe88321dd75aef2b7d7a938dcdf3"
+        },
+        {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2344,
+          "column": 22,
+          "start_byte": 84062,
+          "end_byte": 84102,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "span_hash": "8b1a80632f23693593557a48ff165a537433d11b17874bd5d240c0881dc13689"
+        },
+        {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2337,
+          "column": 1,
+          "start_byte": 83723,
+          "end_byte": 84562,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "span_hash": "51b9eaee02496f82b86fdc3463d7f1c84b2b9cd462fe7f2cbb3439290878ace9"
+        },
+        {
+          "file": "crates/winwincode-server/src/application.rs",
+          "line": 1247,
+          "column": 13,
+          "start_byte": 55432,
+          "end_byte": 55490,
+          "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+          "span_hash": "10fc7052f2b4b75ff5d075cf6978ef7e46ef33c6fc62348798a895f2e3ba599a"
+        },
+        {
+          "file": "crates/winwincode-server/src/application.rs",
+          "line": 1232,
+          "column": 5,
+          "start_byte": 54844,
+          "end_byte": 55887,
+          "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+          "span_hash": "e8ee0b564027c512ae23ad6d40b41ee73f526231df1cba4608f198af9a271c9e"
+        },
+        {
+          "file": "crates/winwincode-server/src/application.rs",
+          "line": 650,
+          "column": 17,
+          "start_byte": 28229,
+          "end_byte": 28464,
+          "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+          "span_hash": "ee70f6218bfa5d4867107a0131052c984b7c1956a48a0ff58cf3420bc432aadf"
+        },
+        {
+          "file": "crates/winwincode-server/src/application.rs",
+          "line": 620,
+          "column": 5,
+          "start_byte": 26843,
+          "end_byte": 31345,
+          "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+          "span_hash": "63d309d6985751f7bd606e02b5a2dc5c8103361809ebc98281ba9f37285e005d"
+        }
+      ],
+      "captured_owner_graph_node_ids": [],
+      "presentation_truncated": false,
+      "full_source_records_preserved_at_pointer": true,
+      "source_gaps": [],
+      "creates_calls_edge": false,
+      "generated_support_upgraded_to_implementation": false,
+      "runtime_transport_or_physical_effect_proven": false,
+      "network_success_verified": false,
+      "all_http_query_or_websocket_contracts_proven": false
+    }
+  ],
+  "database_opened": false,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

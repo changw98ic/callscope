@@ -1,0 +1,119 @@
+{
+  "id": "cpb-report-agent-execution-policy",
+  "type": "agent_execution_policy",
+  "severity": "info",
+  "sources": [
+    {
+      "role": "runner",
+      "file": "core/agents/agent-runner.ts",
+      "symbol": "runAgent"
+    },
+    {
+      "role": "allowlist",
+      "file": "core/agents/agent-runner.ts",
+      "symbol": "allowedAgentsFromEnv"
+    },
+    {
+      "role": "pool_guard",
+      "file": "core/agents/agent-runner.ts",
+      "symbol": "poolWithExecute"
+    },
+    {
+      "role": "phase_policy",
+      "file": "core/agents/agent-runner.ts",
+      "symbol": "phaseWriteAllowOverride"
+    },
+    {
+      "role": "readonly_check",
+      "file": "core/agents/agent-runner.ts",
+      "symbol": "readOnlyMutationViolation"
+    },
+    {
+      "role": "failure_classifier",
+      "file": "core/agents/agent-runner.ts",
+      "symbol": "classifyError"
+    },
+    {
+      "role": "child_builder",
+      "file": "core/policy/child-env.ts",
+      "symbol": "buildChildEnv"
+    },
+    {
+      "role": "child_filter",
+      "file": "core/policy/child-env.ts",
+      "symbol": "_filterEnv"
+    },
+    {
+      "role": "child_predicate",
+      "file": "core/policy/child-env.ts",
+      "symbol": "shouldCopyChildEnvEntry"
+    },
+    {
+      "role": "child_keys",
+      "file": "core/policy/child-env.ts",
+      "symbol": "isAllowedChildEnvKey"
+    },
+    {
+      "role": "provider_credentials",
+      "file": "core/policy/child-env.ts",
+      "symbol": "allowedProviderCredentialsForOptions"
+    },
+    {
+      "role": "sandbox_mode",
+      "file": "core/policy/agent-sandbox.ts",
+      "symbol": "normalizedMode"
+    },
+    {
+      "role": "sandbox_policy",
+      "file": "core/policy/agent-sandbox.ts",
+      "symbol": "resolveAgentSandboxPolicy"
+    },
+    {
+      "role": "sandbox_launcher",
+      "file": "core/policy/agent-sandbox.ts",
+      "symbol": "buildAgentSandboxLaunch"
+    },
+    {
+      "role": "executable_roots",
+      "file": "core/policy/agent-sandbox.ts",
+      "symbol": "withExecutableReadRoots"
+    },
+    {
+      "role": "acp_child",
+      "file": "server/services/acp/acp-client.ts",
+      "symbol": "AcpClient.start"
+    },
+    {
+      "role": "acp_terminal",
+      "file": "server/services/acp/acp-client.ts",
+      "symbol": "AcpClient.createTerminal"
+    },
+    {
+      "role": "acp_env_projection",
+      "file": "server/services/acp/acp-client.ts",
+      "symbol": "childEnvWithoutControlPlaneAuditPath"
+    }
+  ],
+  "models": [
+    "captured-normal-statement-control-v1"
+  ],
+  "provenance": {
+    "authority": "independent_review",
+    "reviewer": "Astra original report",
+    "author_approved": false,
+    "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+    "note": "来源角色仅选源码；allowlist、字段/回调、readonly检查、子环境过滤及sandbox分支从捕获AST自动提取，未执行外部provider。"
+  },
+  "applicability": {
+    "kind": "conditional",
+    "conditions": [
+      "所选runAgent的正常源码入口；允许名单、注入pool及实际agent返回值由运行环境提供。",
+      "源码条件和正常语句先后按显式有限模型解释；不证明provider/平台/外部进程的真实能力或隔离效果。"
+    ],
+    "counterexamples": [
+      "pool为注入端口，源代码方法名不确定唯一实现。",
+      "native/off/custom、平台probe、显式allowKeys、provider配置和过滤后的环境写入会改变边界；具体条件由源码提取。",
+      "只读检查依赖阶段与审计文件；没有审计文件、读取失败等源码分支不能当作违规已检出。"
+    ]
+  }
+}

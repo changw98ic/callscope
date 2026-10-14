@@ -1,0 +1,2885 @@
+{
+  "kind": "independent_source_only_prefreeze_precision_review",
+  "date": "2026-10-12",
+  "reviewer": "Astra independent review agent",
+  "method": "Read current source text, saved development JSON, and target source bytes only.",
+  "analyzer_or_target_executed_by_reviewer": false,
+  "tool_or_target_tests_run": false,
+  "formal_frozen_result": false,
+  "prefreeze_source_blocker_found": false,
+  "development_input": {
+    "path": "reports/astra-iteration7/RUNTIME_CAPTURE_DEVELOPMENT.json",
+    "sha256": "f7708e135fdedafd129842dff2d9fcac2072797d092989d339b599d50b29fcfd",
+    "tool_identity": {
+      "source_hash": "80a5d491499451d1391f531e61a6f7cc6d5f4a58d51317c19e0082eedf172bbd",
+      "graph_backend": "axon-graph-core-1",
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+    }
+  },
+  "reviewed_candidate_modules": [
+    {
+      "path": "callscope/field_summaries.py",
+      "sha256": "10f33804c3b77913aef29e12a0a00c24ea43ab61f7c09276ed053becb7d69443"
+    },
+    {
+      "path": "callscope/semantic_ir.py",
+      "sha256": "c8fdf5ae9a0693708b43055411d6f58fcdd191ba5096ea2a7a8b53bb9294044a"
+    }
+  ],
+  "identity_caveat": "Development query predates final constructor/cell-owner evidence changes; its identity is not the later frozen tool identity.",
+  "contract": {
+    "goals": 5,
+    "necessary_obligations": 30,
+    "sha256": "9b6f4fda6aa24f055e288690e76405779e36758f8ba986799f78f2f96aa8d118",
+    "field_site_or_fact_counts_are_not_goal_coverage": true
+  },
+  "sites": [
+    {
+      "site_location": {
+        "file": "server/services/engine-runner.ts",
+        "line": 157,
+        "column": 10,
+        "end_line": 180,
+        "end_column": 5,
+        "column_unit": "utf8_bytes",
+        "column_base": 1,
+        "coordinate_space": "captured_text_utf8",
+        "raw_prefix_bytes": 0,
+        "start_byte": 6856,
+        "end_byte": 7796,
+        "original_file_start_byte": 6856,
+        "original_file_end_byte": 7796,
+        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+        "grammar": "typescript",
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "span_hash": "f06893a20ea6da41e15b41e664808374962884b419dba324110f149c72e04782",
+        "source_line": "  return runJob({",
+        "source_excerpt": "runJob({\n    ...jobOptions,\n    cpbRoot,\n    project,\n    hubRoot,\n    dataRoot: projectRuntimeRoot,\n    env,\n    sourcePath,\n    routing: opts.routing || null,\n    agentAvailability: opts.agentAvailability || null,\n    agentHealth: opts.agentHealth || null,\n    teamPolicy: opts.teamPolicy || null,\n    // Inject the existing process registry so verify hard-gate child PIDs are\n    // persisted to {dataRoot}/processes/ (same store worker-supervisor uses).\n    // opts.signal (AbortSignal) flows through ...opts above into ctx, reaching\n    // runVerify → runHardGates → runCommandTree without extra plumbing.\n    processHooks: jobId ? {\n      registerChild: (pid: number) => addChildPid(cpbRoot, jobId, pid, { dataRoot: projectRuntimeRoot }),\n    } : undefined,\n    ...services,\n    providerServices: callerProvidedProviderServices\n      ? normalizeProviderServices(jobOptions.providerServices)\n      : services.providerServices,\n  })",
+        "source_excerpt_truncated": false,
+        "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+        "parse_identity": {
+          "semantic_source_version": "semantic-snapshot-sources-1",
+          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+          "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "original",
+          "derived_text_utf8_sha256": null,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "literal_authority": "original_saved_source_text_only",
+          "position_map": "identity_utf8_bytes_and_line_columns"
+        }
+      },
+      "field_presence": "unknown",
+      "selected_field_shape_closed": true,
+      "whole_object_shape_closed": false,
+      "source_form_relation": "source_form_preserved_when_present",
+      "pre_completion_source_form_relation": "source_form_preserved_when_present",
+      "analysis_phase": "call argument before callee activation",
+      "reaching_value_origin_proven": false,
+      "opaque_effects_or_exceptions_excluded": false,
+      "runtime_value_verified": false,
+      "conditions": [
+        "selected site reached on normal prefix",
+        "entire copy-source own-enumerable data surfaces obey registered conditional model; no recursive child plainness assumed",
+        "each separately guarded actual Get resolves an own data property or getter-free missing read; it does not certify child surfaces"
+      ],
+      "gaps": [],
+      "rule": "cpb-astra-field-engine-options",
+      "json_pointer": "/observations/0/summary/assessments/0",
+      "transport_proven": false,
+      "full_functionality_proven": false,
+      "field_sources": [
+        {
+          "kind": "parameter_field_reference",
+          "binding_id": "d505db0138a1d91f346616031e2e90d22cbc3e35699427f7a3777ec8e5fa143f",
+          "binding_context": "5d8f2c65fbd25579950aa6b3",
+          "parameter_index": 0,
+          "field_path": [
+            "maxRetries"
+          ],
+          "evidence": {
+            "record": "EvidenceRef",
+            "evidence_id": "ade5e602be66c64c0f62cac93b8655b67140e3e3abf27eb32604c2bb055ecd67",
+            "file": "server/services/engine-runner.ts",
+            "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "start_byte": 5602,
+            "end_byte": 5619,
+            "model_id": "ecmascript-own-enumerable-field-copy-v1",
+            "guard_ids": [
+              "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+            ],
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "context_id": "5d8f2c65fbd25579950aa6b3",
+            "kind": "source"
+          },
+          "presence_or_runtime_value_proven": false
+        }
+      ],
+      "copy_steps": [
+        {
+          "record": "ObservationRef",
+          "observation_id": "14b2671c1f0d2a6aa2c0d389f807e3d19b725208f5b9f72f39401e0e43db1164",
+          "evidence": {
+            "record": "EvidenceRef",
+            "evidence_id": "f24df55aed1202fa8c57026c6278d2f59221ed87f806720bd3d042701448a74c",
+            "file": "server/services/engine-runner.ts",
+            "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "start_byte": 6869,
+            "end_byte": 6882,
+            "model_id": "ecmascript-own-enumerable-field-copy-v1",
+            "guard_ids": [
+              "2c6a2e781edfb0831bf7dc90",
+              "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+            ],
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "context_id": "5d8f2c65fbd25579950aa6b3",
+            "kind": "ordered_spread"
+          },
+          "alloc_id": "42ccf26d14391879a18a8ea25b51799f4faa0050651b1d845fc13afe4aa2ee0e",
+          "version_id": "74981ac73a19d8367d93d980f8d6dac881821d67c3416e1a24b61cedce943a4d",
+          "key": "maxRetries",
+          "captured_value_id": "9686c1ad0970e1f7a329e98ff754a609264ddf044d011a2a1bc7a07d59d95101",
+          "presence": "unknown"
+        },
+        {
+          "record": "ObservationRef",
+          "observation_id": "d208b16b7646a17e35e508f5521ff7ef33f207969c442868bb213fdc29566b33",
+          "evidence": {
+            "record": "EvidenceRef",
+            "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+            "file": "server/services/engine-runner.ts",
+            "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "start_byte": 5753,
+            "end_byte": 5766,
+            "model_id": "ecmascript-own-enumerable-field-copy-v1",
+            "guard_ids": [
+              "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+            ],
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "context_id": "5d8f2c65fbd25579950aa6b3",
+            "kind": "rest_copy"
+          },
+          "alloc_id": "8ee1ac96d35e31bb4c435d9c4600572310f1929f0df89426e3d7e4d9438b6c01",
+          "version_id": "fb4edc9c6447063edc2bf1c8753bbadc32f1930e7be4c3e39f36ce8bd7264466",
+          "key": "maxRetries",
+          "captured_value_id": "9686c1ad0970e1f7a329e98ff754a609264ddf044d011a2a1bc7a07d59d95101",
+          "presence": "unknown"
+        }
+      ],
+      "ir_selected_value": {
+        "record": "ValueRef",
+        "value_id": "9686c1ad0970e1f7a329e98ff754a609264ddf044d011a2a1bc7a07d59d95101",
+        "kind": "symbolic",
+        "evidence": [
+          {
+            "record": "EvidenceRef",
+            "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+            "file": "server/services/engine-runner.ts",
+            "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "start_byte": 5753,
+            "end_byte": 5766,
+            "model_id": "ecmascript-own-enumerable-field-copy-v1",
+            "guard_ids": [
+              "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+            ],
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "context_id": "5d8f2c65fbd25579950aa6b3",
+            "kind": "rest_copy"
+          }
+        ],
+        "object_ref": null,
+        "provenance": [
+          {
+            "record": "ProvenanceRef",
+            "kind": "parameter_field_reference",
+            "evidence": {
+              "record": "EvidenceRef",
+              "evidence_id": "ade5e602be66c64c0f62cac93b8655b67140e3e3abf27eb32604c2bb055ecd67",
+              "file": "server/services/engine-runner.ts",
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "start_byte": 5602,
+              "end_byte": 5619,
+              "model_id": "ecmascript-own-enumerable-field-copy-v1",
+              "guard_ids": [
+                "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+              ],
+              "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+              "context_id": "5d8f2c65fbd25579950aa6b3",
+              "kind": "source"
+            },
+            "binding": {
+              "record": "BindingKey",
+              "declaration_id": "d505db0138a1d91f346616031e2e90d22cbc3e35699427f7a3777ec8e5fa143f",
+              "context_id": "5d8f2c65fbd25579950aa6b3"
+            },
+            "parameter_index": 0,
+            "field_path": [
+              "maxRetries"
+            ]
+          }
+        ],
+        "literal_kind": "",
+        "source_text": "",
+        "alternatives": [],
+        "alias_roots": [
+          {
+            "record": "ObjectRef",
+            "alloc_id": "8ee1ac96d35e31bb4c435d9c4600572310f1929f0df89426e3d7e4d9438b6c01"
+          }
+        ],
+        "external_alias": true,
+        "capture_unknown": false,
+        "captured_bindings": [],
+        "barriers": []
+      },
+      "completion": {
+        "version": "captured-completion-summaries-1",
+        "kind": "ordinary_async",
+        "ordinary": true,
+        "async": true,
+        "generator": false,
+        "invocation_result": "promise",
+        "body_throw_effect": "promise_rejection",
+        "body_activation_proved": false,
+        "runtime_verified": false,
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 130,
+          "column": 8,
+          "end_line": 181,
+          "end_column": 2,
+          "start_byte": 5568,
+          "end_byte": 7799,
+          "original_file_start_byte": 5568,
+          "original_file_end_byte": 7799,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "span_hash": "468808ebaa7a3c7a9d9c97cac9cfd330c25bdabf82c02ca444e309fb65c3234e",
+          "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+          "coordinate_space": "captured_text_utf8",
+          "column_unit": "utf8_bytes",
+          "column_base": 1,
+          "raw_prefix_bytes": 0
+        },
+        "reason": null,
+        "thenable_identity_not_inferred": true,
+        "own_yield_present": false
+      },
+      "formal": {
+        "target_graph_node_id": "ts:core/engine/run-job#runJob",
+        "parameter_index": 0,
+        "location": {
+          "file": "core/engine/run-job.ts",
+          "line": 65,
+          "column": 30,
+          "end_line": 65,
+          "end_column": 47,
+          "column_unit": "utf8_bytes",
+          "column_base": 1,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "start_byte": 2422,
+          "end_byte": 2439,
+          "original_file_start_byte": 2422,
+          "original_file_end_byte": 2439,
+          "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+          "grammar": "typescript",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "span_hash": "58dfa903b234d2564b3bb069a8e994eec4d5f75224ecbe5033bb00f94d00a8fa",
+          "source_line": "export async function runJob(ctxInput: unknown): Promise<JobRunResult> {",
+          "source_excerpt": "ctxInput: unknown",
+          "source_excerpt_truncated": false,
+          "semantic_parse_id": "32ff728dc75753aa7da315e796278d746d134330af5225f39485249888efad3f",
+          "parse_identity": {
+            "semantic_source_version": "semantic-snapshot-sources-1",
+            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "original_text_utf8_sha256": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+            "projection_version": "ts-syntax-projection-1",
+            "projection_mode": "original",
+            "derived_text_utf8_sha256": null,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "literal_authority": "original_saved_source_text_only",
+            "position_map": "identity_utf8_bytes_and_line_columns"
+          }
+        },
+        "callee_function_kind": {
+          "version": "captured-completion-summaries-1",
+          "kind": "ordinary_async",
+          "ordinary": true,
+          "async": true,
+          "generator": false,
+          "invocation_result": "promise",
+          "body_throw_effect": "promise_rejection",
+          "body_activation_proved": false,
+          "runtime_verified": false,
+          "location": {
+            "file": "core/engine/run-job.ts",
+            "line": 65,
+            "column": 8,
+            "end_line": 107,
+            "end_column": 2,
+            "start_byte": 2400,
+            "end_byte": 4120,
+            "original_file_start_byte": 2400,
+            "original_file_end_byte": 4120,
+            "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+            "span_hash": "9edb3bc1a2177928f60c05022539a7b79d8737f3c2c0057f6f9d6946152c76ce",
+            "semantic_parse_id": "32ff728dc75753aa7da315e796278d746d134330af5225f39485249888efad3f",
+            "coordinate_space": "captured_text_utf8",
+            "column_unit": "utf8_bytes",
+            "column_base": 1,
+            "raw_prefix_bytes": 0
+          },
+          "reason": null,
+          "thenable_identity_not_inferred": true,
+          "own_yield_present": false
+        },
+        "argument_value_id": "407aa7b06002c8cf679064f7732eb4a7020d0175e698fe1256e88a3f3b4abd8d"
+      }
+    },
+    {
+      "site_location": {
+        "file": "server/services/hub/hub-queue.ts",
+        "line": 1580,
+        "column": 30,
+        "end_line": 1580,
+        "end_column": 106,
+        "column_unit": "utf8_bytes",
+        "column_base": 1,
+        "coordinate_space": "captured_text_utf8",
+        "raw_prefix_bytes": 0,
+        "start_byte": 55143,
+        "end_byte": 55219,
+        "original_file_start_byte": 55143,
+        "original_file_end_byte": 55219,
+        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+        "grammar": "typescript",
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "span_hash": "7d8f363cacd622c89492a5b226528553b8a38a97df90b170552a91a7f060ce84",
+        "source_line": "  const resolvedMeta = await resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata);",
+        "source_excerpt": "resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata)",
+        "source_excerpt_truncated": false,
+        "semantic_parse_id": "c3af868ac4eca88425e06a7077b30faae81bdb92450173086d97e144092db2e0",
+        "parse_identity": {
+          "semantic_source_version": "semantic-snapshot-sources-1",
+          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "original",
+          "derived_text_utf8_sha256": null,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "literal_authority": "original_saved_source_text_only",
+          "position_map": "identity_utf8_bytes_and_line_columns"
+        }
+      },
+      "field_presence": "unknown",
+      "selected_field_shape_closed": false,
+      "whole_object_shape_closed": false,
+      "source_form_relation": "unknown",
+      "pre_completion_source_form_relation": "unknown",
+      "analysis_phase": "call argument before callee activation",
+      "reaching_value_origin_proven": false,
+      "opaque_effects_or_exceptions_excluded": false,
+      "runtime_value_verified": false,
+      "conditions": [
+        "selected site reached on normal prefix",
+        "entire copy-source own-enumerable data surfaces obey registered conditional model; no recursive child plainness assumed",
+        "each separately guarded actual Get resolves an own data property or getter-free missing read; it does not certify child surfaces"
+      ],
+      "gaps": [
+        "field_get_value_origin_unknown"
+      ],
+      "rule": "cpb-astra-field-queue-agent-input",
+      "json_pointer": "/observations/1/summary/assessments/0",
+      "transport_proven": false,
+      "full_functionality_proven": false
+    },
+    {
+      "site_location": {
+        "file": "server/services/hub/hub-queue.ts",
+        "line": 1580,
+        "column": 30,
+        "end_line": 1580,
+        "end_column": 106,
+        "column_unit": "utf8_bytes",
+        "column_base": 1,
+        "coordinate_space": "captured_text_utf8",
+        "raw_prefix_bytes": 0,
+        "start_byte": 55143,
+        "end_byte": 55219,
+        "original_file_start_byte": 55143,
+        "original_file_end_byte": 55219,
+        "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+        "grammar": "typescript",
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "span_hash": "7d8f363cacd622c89492a5b226528553b8a38a97df90b170552a91a7f060ce84",
+        "source_line": "  const resolvedMeta = await resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata);",
+        "source_excerpt": "resolveAgentsForEntry(hubRoot, cpbRoot, projectId, normalizedInput.metadata)",
+        "source_excerpt_truncated": false,
+        "semantic_parse_id": "c3af868ac4eca88425e06a7077b30faae81bdb92450173086d97e144092db2e0",
+        "parse_identity": {
+          "semantic_source_version": "semantic-snapshot-sources-1",
+          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+          "original_text_utf8_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "original",
+          "derived_text_utf8_sha256": null,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "literal_authority": "original_saved_source_text_only",
+          "position_map": "identity_utf8_bytes_and_line_columns"
+        }
+      },
+      "field_presence": "unknown",
+      "selected_field_shape_closed": false,
+      "whole_object_shape_closed": false,
+      "source_form_relation": "unknown",
+      "pre_completion_source_form_relation": "unknown",
+      "analysis_phase": "call argument before callee activation",
+      "reaching_value_origin_proven": false,
+      "opaque_effects_or_exceptions_excluded": false,
+      "runtime_value_verified": false,
+      "conditions": [
+        "selected site reached on normal prefix",
+        "entire copy-source own-enumerable data surfaces obey registered conditional model; no recursive child plainness assumed",
+        "each separately guarded actual Get resolves an own data property or getter-free missing read; it does not certify child surfaces"
+      ],
+      "gaps": [
+        "field_get_value_origin_unknown"
+      ],
+      "rule": "cpb-astra-field-queue-agent-input",
+      "json_pointer": "/observations/1/summary/assessments/1",
+      "transport_proven": false,
+      "full_functionality_proven": false
+    },
+    {
+      "site_location": {
+        "file": "server/services/agent/agent-config.ts",
+        "line": 487,
+        "column": 66,
+        "end_line": 487,
+        "end_column": 82,
+        "column_unit": "utf8_bytes",
+        "column_base": 1,
+        "coordinate_space": "captured_text_utf8",
+        "raw_prefix_bytes": 0,
+        "start_byte": 16941,
+        "end_byte": 16957,
+        "original_file_start_byte": 16941,
+        "original_file_end_byte": 16957,
+        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+        "grammar": "typescript",
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "span_hash": "198e02d85b4ee06039d5e9832b3fbc4ccd42c534a6c7aca1d391154c40b68602",
+        "source_line": "  if (Object.keys(merged).length === 0 && !metadataRecord.agent) return metadata;",
+        "source_excerpt": "return metadata;",
+        "source_excerpt_truncated": false,
+        "semantic_parse_id": "7e0331963c38bc386d9745f0967a685c39580b920e7e0d46f2c24b692a1d7882",
+        "parse_identity": {
+          "semantic_source_version": "semantic-snapshot-sources-1",
+          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "original",
+          "derived_text_utf8_sha256": null,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "literal_authority": "original_saved_source_text_only",
+          "position_map": "identity_utf8_bytes_and_line_columns"
+        }
+      },
+      "field_presence": "unknown",
+      "selected_field_shape_closed": false,
+      "whole_object_shape_closed": false,
+      "source_form_relation": "unknown",
+      "pre_completion_source_form_relation": "unknown",
+      "analysis_phase": "body return expression before promise assimilation",
+      "reaching_value_origin_proven": false,
+      "opaque_effects_or_exceptions_excluded": false,
+      "runtime_value_verified": false,
+      "conditions": [
+        "selected site reached on normal prefix",
+        "entire copy-source own-enumerable data surfaces obey registered conditional model; no recursive child plainness assumed",
+        "each separately guarded actual Get resolves an own data property or getter-free missing read; it does not certify child surfaces"
+      ],
+      "gaps": [
+        "ir_captured_binding_write_possible"
+      ],
+      "rule": "cpb-astra-field-agent-metadata-return",
+      "json_pointer": "/observations/2/summary/assessments/0",
+      "transport_proven": false,
+      "full_functionality_proven": false
+    },
+    {
+      "site_location": {
+        "file": "server/services/agent/agent-config.ts",
+        "line": 489,
+        "column": 3,
+        "end_line": 493,
+        "end_column": 5,
+        "column_unit": "utf8_bytes",
+        "column_base": 1,
+        "coordinate_space": "captured_text_utf8",
+        "raw_prefix_bytes": 0,
+        "start_byte": 16961,
+        "end_byte": 17102,
+        "original_file_start_byte": 16961,
+        "original_file_end_byte": 17102,
+        "source_hash": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+        "grammar": "typescript",
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "span_hash": "166ad901eb5999053bd56329298c6c3a4eb8cf94a9d0f6c9657e8a0fec799aa3",
+        "source_line": "  return {",
+        "source_excerpt": "return {\n    ...metadata,\n    agents: Object.keys(merged).length > 0 ? merged : undefined,\n    agent: metadataRecord.agent || undefined,\n  };",
+        "source_excerpt_truncated": false,
+        "semantic_parse_id": "7e0331963c38bc386d9745f0967a685c39580b920e7e0d46f2c24b692a1d7882",
+        "parse_identity": {
+          "semantic_source_version": "semantic-snapshot-sources-1",
+          "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+          "original_text_utf8_sha256": "83a2eef775f1ff274054ee16fa749e195ae5a475f42abf520b2434e7ed6af484",
+          "projection_version": "ts-syntax-projection-1",
+          "projection_mode": "original",
+          "derived_text_utf8_sha256": null,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "literal_authority": "original_saved_source_text_only",
+          "position_map": "identity_utf8_bytes_and_line_columns"
+        }
+      },
+      "field_presence": "unknown",
+      "selected_field_shape_closed": false,
+      "whole_object_shape_closed": false,
+      "source_form_relation": "unknown",
+      "pre_completion_source_form_relation": "unknown",
+      "analysis_phase": "body return expression before promise assimilation",
+      "reaching_value_origin_proven": false,
+      "opaque_effects_or_exceptions_excluded": false,
+      "runtime_value_verified": false,
+      "conditions": [
+        "selected site reached on normal prefix",
+        "entire copy-source own-enumerable data surfaces obey registered conditional model; no recursive child plainness assumed",
+        "each separately guarded actual Get resolves an own data property or getter-free missing read; it does not certify child surfaces"
+      ],
+      "gaps": [
+        "ir_copy_surface_or_exclusions_not_certified"
+      ],
+      "rule": "cpb-astra-field-agent-metadata-return",
+      "json_pointer": "/observations/2/summary/assessments/1",
+      "transport_proven": false,
+      "full_functionality_proven": false
+    }
+  ],
+  "selected_engine_facts": [
+    {
+      "json_pointer": "/observations/0/summary/source_facts/16",
+      "fact": {
+        "operation": "object_rest_copy",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 137,
+          "column": 5,
+          "end_line": 137,
+          "end_column": 18,
+          "column_unit": "utf8_bytes",
+          "column_base": 1,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "start_byte": 5753,
+          "end_byte": 5766,
+          "original_file_start_byte": 5753,
+          "original_file_end_byte": 5766,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "grammar": "typescript",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "span_hash": "7f7cf717a1d23b8619c3f1b1e9635e0f269bd51ef709993270c991d298b29d5f",
+          "source_line": "    ...jobOptions",
+          "source_excerpt": "...jobOptions",
+          "source_excerpt_truncated": false,
+          "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+          "parse_identity": {
+            "semantic_source_version": "semantic-snapshot-sources-1",
+            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "projection_version": "ts-syntax-projection-1",
+            "projection_mode": "original",
+            "derived_text_utf8_sha256": null,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "literal_authority": "original_saved_source_text_only",
+            "position_map": "identity_utf8_bytes_and_line_columns"
+          }
+        },
+        "owner": "runJobWithServices",
+        "graph_node_id": "ts:server/services/engine-runner#runJobWithServices",
+        "call_context": "5d8f2c65fbd25579950aa6b3",
+        "actual_excluded_keys": [
+          "cpbRoot",
+          "project",
+          "sourcePath",
+          "hubRoot",
+          "workerBrokerClient"
+        ],
+        "exclusions_closed": true,
+        "rest_binding_id": "7e64bde1c2e46f3a1a6d2f6971df7286d1d04512adb34ac0df7a7101c401abf4",
+        "input_value_id": "a7f2280c89c5891d0f490f4349c0ff3dd0914218d9e2b75c7b00f77b8702e38e",
+        "output_value_id": "63b9088a6aafcf3e01bd96b8f0a2ff3acf910ac356fa6d39a29a18d743f238bb",
+        "copy_scope": "rest_binding_only",
+        "source_copy_is_new_object": true,
+        "source_copy_is_shallow": true,
+        "copy_model_supported": true,
+        "ir_object": {
+          "record": "ObjectVersion",
+          "alloc_id": "42ccf26d14391879a18a8ea25b51799f4faa0050651b1d845fc13afe4aa2ee0e",
+          "version_id": "74981ac73a19d8367d93d980f8d6dac881821d67c3416e1a24b61cedce943a4d",
+          "slots": [
+            {
+              "record": "FieldSlot",
+              "key": "cpbRoot",
+              "presence": "absent",
+              "value": {
+                "record": "ValueRef",
+                "value_id": "89784e7b774aac6dd0d616e287b3ad4ad3a3ac78f9d7ad736d01ace055c14f7b",
+                "kind": "absent",
+                "evidence": [
+                  {
+                    "record": "EvidenceRef",
+                    "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                    "file": "server/services/engine-runner.ts",
+                    "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                    "start_byte": 5753,
+                    "end_byte": 5766,
+                    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                    "guard_ids": [
+                      "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                    ],
+                    "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                    "context_id": "5d8f2c65fbd25579950aa6b3",
+                    "kind": "rest_copy"
+                  }
+                ],
+                "object_ref": null,
+                "provenance": [],
+                "literal_kind": "",
+                "source_text": "",
+                "alternatives": [],
+                "alias_roots": [],
+                "external_alias": false,
+                "capture_unknown": false,
+                "captured_bindings": [],
+                "barriers": []
+              },
+              "closed": true,
+              "observations": [],
+              "evidence": [
+                {
+                  "record": "EvidenceRef",
+                  "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                  "file": "server/services/engine-runner.ts",
+                  "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                  "start_byte": 5753,
+                  "end_byte": 5766,
+                  "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                  "guard_ids": [
+                    "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                  ],
+                  "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                  "context_id": "5d8f2c65fbd25579950aa6b3",
+                  "kind": "rest_copy"
+                }
+              ],
+              "barriers": []
+            },
+            {
+              "record": "FieldSlot",
+              "key": "hubRoot",
+              "presence": "absent",
+              "value": {
+                "record": "ValueRef",
+                "value_id": "89784e7b774aac6dd0d616e287b3ad4ad3a3ac78f9d7ad736d01ace055c14f7b",
+                "kind": "absent",
+                "evidence": [
+                  {
+                    "record": "EvidenceRef",
+                    "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                    "file": "server/services/engine-runner.ts",
+                    "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                    "start_byte": 5753,
+                    "end_byte": 5766,
+                    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                    "guard_ids": [
+                      "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                    ],
+                    "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                    "context_id": "5d8f2c65fbd25579950aa6b3",
+                    "kind": "rest_copy"
+                  }
+                ],
+                "object_ref": null,
+                "provenance": [],
+                "literal_kind": "",
+                "source_text": "",
+                "alternatives": [],
+                "alias_roots": [],
+                "external_alias": false,
+                "capture_unknown": false,
+                "captured_bindings": [],
+                "barriers": []
+              },
+              "closed": true,
+              "observations": [],
+              "evidence": [
+                {
+                  "record": "EvidenceRef",
+                  "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                  "file": "server/services/engine-runner.ts",
+                  "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                  "start_byte": 5753,
+                  "end_byte": 5766,
+                  "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                  "guard_ids": [
+                    "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                  ],
+                  "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                  "context_id": "5d8f2c65fbd25579950aa6b3",
+                  "kind": "rest_copy"
+                }
+              ],
+              "barriers": []
+            },
+            {
+              "record": "FieldSlot",
+              "key": "project",
+              "presence": "absent",
+              "value": {
+                "record": "ValueRef",
+                "value_id": "89784e7b774aac6dd0d616e287b3ad4ad3a3ac78f9d7ad736d01ace055c14f7b",
+                "kind": "absent",
+                "evidence": [
+                  {
+                    "record": "EvidenceRef",
+                    "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                    "file": "server/services/engine-runner.ts",
+                    "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                    "start_byte": 5753,
+                    "end_byte": 5766,
+                    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                    "guard_ids": [
+                      "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                    ],
+                    "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                    "context_id": "5d8f2c65fbd25579950aa6b3",
+                    "kind": "rest_copy"
+                  }
+                ],
+                "object_ref": null,
+                "provenance": [],
+                "literal_kind": "",
+                "source_text": "",
+                "alternatives": [],
+                "alias_roots": [],
+                "external_alias": false,
+                "capture_unknown": false,
+                "captured_bindings": [],
+                "barriers": []
+              },
+              "closed": true,
+              "observations": [],
+              "evidence": [
+                {
+                  "record": "EvidenceRef",
+                  "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                  "file": "server/services/engine-runner.ts",
+                  "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                  "start_byte": 5753,
+                  "end_byte": 5766,
+                  "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                  "guard_ids": [
+                    "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                  ],
+                  "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                  "context_id": "5d8f2c65fbd25579950aa6b3",
+                  "kind": "rest_copy"
+                }
+              ],
+              "barriers": []
+            },
+            {
+              "record": "FieldSlot",
+              "key": "sourcePath",
+              "presence": "absent",
+              "value": {
+                "record": "ValueRef",
+                "value_id": "89784e7b774aac6dd0d616e287b3ad4ad3a3ac78f9d7ad736d01ace055c14f7b",
+                "kind": "absent",
+                "evidence": [
+                  {
+                    "record": "EvidenceRef",
+                    "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                    "file": "server/services/engine-runner.ts",
+                    "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                    "start_byte": 5753,
+                    "end_byte": 5766,
+                    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                    "guard_ids": [
+                      "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                    ],
+                    "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                    "context_id": "5d8f2c65fbd25579950aa6b3",
+                    "kind": "rest_copy"
+                  }
+                ],
+                "object_ref": null,
+                "provenance": [],
+                "literal_kind": "",
+                "source_text": "",
+                "alternatives": [],
+                "alias_roots": [],
+                "external_alias": false,
+                "capture_unknown": false,
+                "captured_bindings": [],
+                "barriers": []
+              },
+              "closed": true,
+              "observations": [],
+              "evidence": [
+                {
+                  "record": "EvidenceRef",
+                  "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                  "file": "server/services/engine-runner.ts",
+                  "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                  "start_byte": 5753,
+                  "end_byte": 5766,
+                  "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                  "guard_ids": [
+                    "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                  ],
+                  "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                  "context_id": "5d8f2c65fbd25579950aa6b3",
+                  "kind": "rest_copy"
+                }
+              ],
+              "barriers": []
+            },
+            {
+              "record": "FieldSlot",
+              "key": "workerBrokerClient",
+              "presence": "absent",
+              "value": {
+                "record": "ValueRef",
+                "value_id": "89784e7b774aac6dd0d616e287b3ad4ad3a3ac78f9d7ad736d01ace055c14f7b",
+                "kind": "absent",
+                "evidence": [
+                  {
+                    "record": "EvidenceRef",
+                    "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                    "file": "server/services/engine-runner.ts",
+                    "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                    "start_byte": 5753,
+                    "end_byte": 5766,
+                    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                    "guard_ids": [
+                      "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                    ],
+                    "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                    "context_id": "5d8f2c65fbd25579950aa6b3",
+                    "kind": "rest_copy"
+                  }
+                ],
+                "object_ref": null,
+                "provenance": [],
+                "literal_kind": "",
+                "source_text": "",
+                "alternatives": [],
+                "alias_roots": [],
+                "external_alias": false,
+                "capture_unknown": false,
+                "captured_bindings": [],
+                "barriers": []
+              },
+              "closed": true,
+              "observations": [],
+              "evidence": [
+                {
+                  "record": "EvidenceRef",
+                  "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                  "file": "server/services/engine-runner.ts",
+                  "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                  "start_byte": 5753,
+                  "end_byte": 5766,
+                  "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                  "guard_ids": [
+                    "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                  ],
+                  "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                  "context_id": "5d8f2c65fbd25579950aa6b3",
+                  "kind": "rest_copy"
+                }
+              ],
+              "barriers": []
+            }
+          ],
+          "closed_shape": false,
+          "model_supported": true,
+          "fresh": true,
+          "escaped": false,
+          "external_aliasable": false,
+          "origin": null,
+          "evidence": [
+            {
+              "record": "EvidenceRef",
+              "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+              "file": "server/services/engine-runner.ts",
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "start_byte": 5753,
+              "end_byte": 5766,
+              "model_id": "ecmascript-own-enumerable-field-copy-v1",
+              "guard_ids": [
+                "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+              ],
+              "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+              "context_id": "5d8f2c65fbd25579950aa6b3",
+              "kind": "rest_copy"
+            }
+          ],
+          "barriers": [],
+          "conditional_allocation": false,
+          "base_closed_shape": true,
+          "copy_layers": [
+            {
+              "record": "CopyLayer",
+              "source_snapshot": {
+                "record": "ObjectVersion",
+                "alloc_id": "8ee1ac96d35e31bb4c435d9c4600572310f1929f0df89426e3d7e4d9438b6c01",
+                "version_id": "fb4edc9c6447063edc2bf1c8753bbadc32f1930e7be4c3e39f36ce8bd7264466",
+                "slots": [],
+                "closed_shape": false,
+                "model_supported": true,
+                "fresh": false,
+                "escaped": true,
+                "external_aliasable": true,
+                "origin": {
+                  "record": "ProvenanceRef",
+                  "kind": "parameter_field_reference",
+                  "evidence": {
+                    "record": "EvidenceRef",
+                    "evidence_id": "ade5e602be66c64c0f62cac93b8655b67140e3e3abf27eb32604c2bb055ecd67",
+                    "file": "server/services/engine-runner.ts",
+                    "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                    "start_byte": 5602,
+                    "end_byte": 5619,
+                    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                    "guard_ids": [
+                      "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                    ],
+                    "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                    "context_id": "5d8f2c65fbd25579950aa6b3",
+                    "kind": "source"
+                  },
+                  "binding": {
+                    "record": "BindingKey",
+                    "declaration_id": "d505db0138a1d91f346616031e2e90d22cbc3e35699427f7a3777ec8e5fa143f",
+                    "context_id": "5d8f2c65fbd25579950aa6b3"
+                  },
+                  "parameter_index": 0,
+                  "field_path": []
+                },
+                "evidence": [
+                  {
+                    "record": "EvidenceRef",
+                    "evidence_id": "ade5e602be66c64c0f62cac93b8655b67140e3e3abf27eb32604c2bb055ecd67",
+                    "file": "server/services/engine-runner.ts",
+                    "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                    "start_byte": 5602,
+                    "end_byte": 5619,
+                    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                    "guard_ids": [
+                      "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                    ],
+                    "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                    "context_id": "5d8f2c65fbd25579950aa6b3",
+                    "kind": "source"
+                  }
+                ],
+                "barriers": [],
+                "conditional_allocation": false,
+                "base_closed_shape": false,
+                "copy_layers": [],
+                "guards": [
+                  {
+                    "record": "ModelGuard",
+                    "guard_id": "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753",
+                    "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                    "evidence": [
+                      {
+                        "record": "EvidenceRef",
+                        "evidence_id": "636489890e8c31abb68cf5e43f4edb380a2b877e1305813af9fc4b7828e1ae48",
+                        "file": "server/services/engine-runner.ts",
+                        "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                        "start_byte": 5568,
+                        "end_byte": 7799,
+                        "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                        "guard_ids": [],
+                        "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                        "context_id": "5d8f2c65fbd25579950aa6b3",
+                        "kind": "model_source_environment"
+                      }
+                    ],
+                    "capabilities": [
+                      "own_data_copy",
+                      "own_data_shape",
+                      "own_data_write"
+                    ],
+                    "supported": true,
+                    "assumptions": [
+                      "entire current copy source is an ordinary own-enumerable data surface, without Proxy or other getter enumeration effects",
+                      "this model does not certify child referents or runtime standard APIs"
+                    ],
+                    "runtime_verified": false
+                  }
+                ],
+                "construction_guard": null
+              },
+              "evidence": {
+                "record": "EvidenceRef",
+                "evidence_id": "3ba6ab62f74f2e79bbd5710e011f5c2d8ead9cd5000e71d9ec09aa64860d2c38",
+                "file": "server/services/engine-runner.ts",
+                "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "start_byte": 5753,
+                "end_byte": 5766,
+                "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                "guard_ids": [
+                  "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+                ],
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "context_id": "5d8f2c65fbd25579950aa6b3",
+                "kind": "rest_copy"
+              },
+              "excluded_keys": [
+                "cpbRoot",
+                "hubRoot",
+                "project",
+                "sourcePath",
+                "workerBrokerClient"
+              ],
+              "exclusions_closed": true
+            }
+          ],
+          "guards": [
+            {
+              "record": "ModelGuard",
+              "guard_id": "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753",
+              "model_id": "ecmascript-own-enumerable-field-copy-v1",
+              "evidence": [
+                {
+                  "record": "EvidenceRef",
+                  "evidence_id": "636489890e8c31abb68cf5e43f4edb380a2b877e1305813af9fc4b7828e1ae48",
+                  "file": "server/services/engine-runner.ts",
+                  "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                  "start_byte": 5568,
+                  "end_byte": 7799,
+                  "model_id": "ecmascript-own-enumerable-field-copy-v1",
+                  "guard_ids": [],
+                  "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                  "context_id": "5d8f2c65fbd25579950aa6b3",
+                  "kind": "model_source_environment"
+                }
+              ],
+              "capabilities": [
+                "own_data_copy",
+                "own_data_shape",
+                "own_data_write"
+              ],
+              "supported": true,
+              "assumptions": [
+                "entire current copy source is an ordinary own-enumerable data surface, without Proxy or other getter enumeration effects",
+                "this model does not certify child referents or runtime standard APIs"
+              ],
+              "runtime_verified": false
+            }
+          ],
+          "construction_guard": null
+        },
+        "id": "72521ad16ac4d9d827b7d0d3"
+      }
+    },
+    {
+      "json_pointer": "/observations/0/summary/source_facts/213",
+      "fact": {
+        "operation": "new_literal_object_shape",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 85,
+          "column": 17,
+          "end_line": 119,
+          "end_column": 4,
+          "column_unit": "utf8_bytes",
+          "column_base": 1,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "start_byte": 3589,
+          "end_byte": 5322,
+          "original_file_start_byte": 3589,
+          "original_file_end_byte": 5322,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "grammar": "typescript",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "span_hash": "c57d618cdf347f6203946e18adbeddf7b88f48d86fcbb85b46bd337752316601",
+          "source_line": "  const ports = {",
+          "source_excerpt": "{\n    createJob: buildCreateJobPort(broker, runtimeDataRoot),\n    startPhase: broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase),\n    completePhase: broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase),\n    completeJob: broker\n      ? broker.completeJob.bind(broker)\n      : runtimeDataRoot\n      ? (root: string, project: string, jobId: string, opts: LooseRecord = {}) => completeJob(root, project, jobId, { ...opts, dataRoot: runtimeDataRoot })\n      : completeJob,\n    failJob: broker ? broker.failJob.bind(broker) : withJobOptions(failJob),\n    blockJob: broker ? broker.blockJob.bind(broker) : withJobOptions(blockJob),\n    appendEvent: broker\n      ? broker.appendEvent.bind(broker)\n      : runtimeDataRoot\n      ? (root: string, project: string, jobId: string, event: EventRecord, opts: LooseRecord = {}) => {\n        if (typeof jobId !== \"string\" || !/^[A-Za-z0-9][A-Za-z0-9-]*$/.test(jobId)) {\n          throw new Error(`invalid jobId for appendEvent: ${JSON.stringify(jobId)}`);\n        }\n        return appendEvent(root, project, jobId, event, { ...opts, dataRoot: runtimeDataRoot });\n      }\n      : appendEvent,\n    prepareTask: prepareTaskForEnv(runtimeEnv),\n    getPool: () => getManagedAcpPool({ cpbRoot, hubRoot, env: runtimeEnv }),\n    getArtifactIndex: broker\n      ? broker.getArtifactIndex.bind(broker)\n      : (root: string, project: string, jobId: string, opts: LooseRecord = {}) =>\n        buildArtifactIndex(root, project, jobId, { ...opts, dataRoot: runtimeDataRoot }),\n    providerServices: {\n      assertProviderAvailable,\n      getProviderAdapter,\n      delegateMarkProviderUnavailable,\n      delegateEnqueueProviderUsage,\n      readAgentRoutingMetrics,\n    },\n  }",
+          "source_excerpt_truncated": false,
+          "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+          "parse_identity": {
+            "semantic_source_version": "semantic-snapshot-sources-1",
+            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "projection_version": "ts-syntax-projection-1",
+            "projection_mode": "original",
+            "derived_text_utf8_sha256": null,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "literal_authority": "original_saved_source_text_only",
+            "position_map": "identity_utf8_bytes_and_line_columns"
+          }
+        },
+        "owner": "buildServices",
+        "graph_node_id": null,
+        "call_context": "dfb2d580c744ec7d489c2cb1",
+        "actual_literal_keys": [
+          "createJob",
+          "startPhase",
+          "completePhase",
+          "completeJob",
+          "failJob",
+          "blockJob",
+          "appendEvent",
+          "prepareTask",
+          "getPool",
+          "getArtifactIndex",
+          "providerServices"
+        ],
+        "parts": [
+          {
+            "kind": "property",
+            "name": "createJob",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 86,
+              "column": 5,
+              "end_line": 86,
+              "end_column": 59,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 3595,
+              "end_byte": 3649,
+              "original_file_start_byte": 3595,
+              "original_file_end_byte": 3649,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "f96e26e8fef07bdbe8c2ba9bbfcdde53521720f9c3655b12033b0115bec47802",
+              "source_line": "    createJob: buildCreateJobPort(broker, runtimeDataRoot),",
+              "source_excerpt": "createJob: buildCreateJobPort(broker, runtimeDataRoot)",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "startPhase",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 87,
+              "column": 5,
+              "end_line": 87,
+              "end_column": 85,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 3655,
+              "end_byte": 3735,
+              "original_file_start_byte": 3655,
+              "original_file_end_byte": 3735,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "d10228b98afe66c0e5a21c4e4cf912e84c06d442a5965b008b85d5c4008566be",
+              "source_line": "    startPhase: broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase),",
+              "source_excerpt": "startPhase: broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase)",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "completePhase",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 88,
+              "column": 5,
+              "end_line": 88,
+              "end_column": 94,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 3741,
+              "end_byte": 3830,
+              "original_file_start_byte": 3741,
+              "original_file_end_byte": 3830,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "52b7a5d3e3c3a831461add965fcabd91736d2b10235314cbe2830fcf654ed74e",
+              "source_line": "    completePhase: broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase),",
+              "source_excerpt": "completePhase: broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase)",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "completeJob",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 89,
+              "column": 5,
+              "end_line": 93,
+              "end_column": 20,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 3836,
+              "end_byte": 4095,
+              "original_file_start_byte": 3836,
+              "original_file_end_byte": 4095,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "90e263d0198c059406682059daa1223dc1fc5a56143a6e6a2f77875297704aee",
+              "source_line": "    completeJob: broker",
+              "source_excerpt": "completeJob: broker\n      ? broker.completeJob.bind(broker)\n      : runtimeDataRoot\n      ? (root: string, project: string, jobId: string, opts: LooseRecord = {}) => completeJob(root, project, jobId, { ...opts, dataRoot: runtimeDataRoot })\n      : completeJob",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "failJob",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 94,
+              "column": 5,
+              "end_line": 94,
+              "end_column": 76,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 4101,
+              "end_byte": 4172,
+              "original_file_start_byte": 4101,
+              "original_file_end_byte": 4172,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "ee7469f4b65ca737c1832e34591bb5f07e6ea6f7c4b869e97e862c08e85a08ee",
+              "source_line": "    failJob: broker ? broker.failJob.bind(broker) : withJobOptions(failJob),",
+              "source_excerpt": "failJob: broker ? broker.failJob.bind(broker) : withJobOptions(failJob)",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "blockJob",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 95,
+              "column": 5,
+              "end_line": 95,
+              "end_column": 79,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 4178,
+              "end_byte": 4252,
+              "original_file_start_byte": 4178,
+              "original_file_end_byte": 4252,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "25150113129f7431d6e9ac0bd0d070648097f9a8484ddcea8a0c3d6bfd7ba8ee",
+              "source_line": "    blockJob: broker ? broker.blockJob.bind(broker) : withJobOptions(blockJob),",
+              "source_excerpt": "blockJob: broker ? broker.blockJob.bind(broker) : withJobOptions(blockJob)",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "appendEvent",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 96,
+              "column": 5,
+              "end_line": 105,
+              "end_column": 20,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 4258,
+              "end_byte": 4752,
+              "original_file_start_byte": 4258,
+              "original_file_end_byte": 4752,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "bad002ebdb53ad94792b506b4d7ec0466554ca87711ee3ee8de3d65ccde05c0a",
+              "source_line": "    appendEvent: broker",
+              "source_excerpt": "appendEvent: broker\n      ? broker.appendEvent.bind(broker)\n      : runtimeDataRoot\n      ? (root: string, project: string, jobId: string, event: EventRecord, opts: LooseRecord = {}) => {\n        if (typeof jobId !== \"string\" || !/^[A-Za-z0-9][A-Za-z0-9-]*$/.test(jobId)) {\n          throw new Error(`invalid jobId for appendEvent: ${JSON.stringify(jobId)}`);\n        }\n        return appendEvent(root, project, jobId, event, { ...opts, dataRoot: runtimeDataRoot });\n      }\n      : appendEvent",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "prepareTask",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 106,
+              "column": 5,
+              "end_line": 106,
+              "end_column": 47,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 4758,
+              "end_byte": 4800,
+              "original_file_start_byte": 4758,
+              "original_file_end_byte": 4800,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "c1b07fd20858c09930826629cf965abed004df6cd22b36f2454101f238678d38",
+              "source_line": "    prepareTask: prepareTaskForEnv(runtimeEnv),",
+              "source_excerpt": "prepareTask: prepareTaskForEnv(runtimeEnv)",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "getPool",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 107,
+              "column": 5,
+              "end_line": 107,
+              "end_column": 76,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 4806,
+              "end_byte": 4877,
+              "original_file_start_byte": 4806,
+              "original_file_end_byte": 4877,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "829b9babdbec824dfe7675009f52472388cea1d229aca74bdcf13ae7095748bc",
+              "source_line": "    getPool: () => getManagedAcpPool({ cpbRoot, hubRoot, env: runtimeEnv }),",
+              "source_excerpt": "getPool: () => getManagedAcpPool({ cpbRoot, hubRoot, env: runtimeEnv })",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "getArtifactIndex",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 108,
+              "column": 5,
+              "end_line": 111,
+              "end_column": 89,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 4883,
+              "end_byte": 5123,
+              "original_file_start_byte": 4883,
+              "original_file_end_byte": 5123,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "9a534b0f23b4e474080c6ea6cee945dcc16fec9922d6f23f1d9318f6d0c5228e",
+              "source_line": "    getArtifactIndex: broker",
+              "source_excerpt": "getArtifactIndex: broker\n      ? broker.getArtifactIndex.bind(broker)\n      : (root: string, project: string, jobId: string, opts: LooseRecord = {}) =>\n        buildArtifactIndex(root, project, jobId, { ...opts, dataRoot: runtimeDataRoot })",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "providerServices",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 112,
+              "column": 5,
+              "end_line": 118,
+              "end_column": 6,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 5129,
+              "end_byte": 5317,
+              "original_file_start_byte": 5129,
+              "original_file_end_byte": 5317,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "fdd3bb47b2b7c33eeac813da02dff821b75b4bdf524000f61d8d70b58abdb5f0",
+              "source_line": "    providerServices: {",
+              "source_excerpt": "providerServices: {\n      assertProviderAvailable,\n      getProviderAdapter,\n      delegateMarkProviderUnavailable,\n      delegateEnqueueProviderUsage,\n      readAgentRoutingMetrics,\n    }",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          }
+        ],
+        "allocation": {
+          "record": "ObjectRef",
+          "alloc_id": "51e8bad46438f239c1e70ba0c926e21517ab4dcc471af93b0df1365e61a30e6a"
+        },
+        "construction_model_guard": {
+          "record": "ModelGuard",
+          "guard_id": "036b71045a345511d31c2d3b8a00640d9241086a98f1078b111c6fb357784ce1",
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "evidence": [
+            {
+              "record": "EvidenceRef",
+              "evidence_id": "34b6658cebddbe4084eedef5cd34d1d0a0ab07b1eb5023ea0d9202987bd581eb",
+              "file": "server/services/engine-runner.ts",
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "start_byte": 3589,
+              "end_byte": 5322,
+              "model_id": "ecmascript-own-enumerable-field-copy-v1",
+              "guard_ids": [
+                "d51968a43a50167da221c20bac2be88f325d31dcdd3254aa2d02d09a6ef214b9"
+              ],
+              "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+              "context_id": "dfb2d580c744ec7d489c2cb1",
+              "kind": "literal_construction_source"
+            }
+          ],
+          "capabilities": [
+            "private_literal_construction"
+          ],
+          "supported": true,
+          "assumptions": [
+            "this ordinary static data literal's new destination is an unnamed temporary during property evaluation, before the initializer binding is assigned",
+            "property expressions and registered shallow spreads do not receive that destination; children have no implicit reverse parent edge",
+            "protection ends before binding/return/argument exposure and does not exempt actual reachable roots, reflection, unsupported members or exhausted analysis"
+          ],
+          "runtime_verified": false
+        },
+        "construction_private_domain_released": true,
+        "whole_object_shape_closed": true,
+        "selected_field_closure_is_separate": true,
+        "id": "699e2f4c3212758715d86052"
+      }
+    },
+    {
+      "json_pointer": "/observations/0/summary/source_facts/215",
+      "fact": {
+        "operation": "actual_helper_selected_return_summary",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 155,
+          "column": 20,
+          "end_line": 155,
+          "end_column": 118,
+          "column_unit": "utf8_bytes",
+          "column_base": 1,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "start_byte": 6663,
+          "end_byte": 6761,
+          "original_file_start_byte": 6663,
+          "original_file_end_byte": 6761,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "grammar": "typescript",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "span_hash": "a955febcf35207a79851faa350c9cc9b99769338eb4ce312c8dd3df2c46c22b1",
+          "source_line": "  const services = buildServices(cpbRoot, { hubRoot, env, dataRoot: projectRuntimeRoot, workerBrokerClient: broker });",
+          "source_excerpt": "buildServices(cpbRoot, { hubRoot, env, dataRoot: projectRuntimeRoot, workerBrokerClient: broker })",
+          "source_excerpt_truncated": false,
+          "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+          "parse_identity": {
+            "semantic_source_version": "semantic-snapshot-sources-1",
+            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "projection_version": "ts-syntax-projection-1",
+            "projection_mode": "original",
+            "derived_text_utf8_sha256": null,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "literal_authority": "original_saved_source_text_only",
+            "position_map": "identity_utf8_bytes_and_line_columns"
+          }
+        },
+        "owner": "runJobWithServices",
+        "graph_node_id": "ts:server/services/engine-runner#runJobWithServices",
+        "call_context": "5d8f2c65fbd25579950aa6b3",
+        "edge_id": "fde7f8eaa64a8b1209e61834",
+        "target_graph_node_id": "ts:server/services/engine-runner#buildServices",
+        "selected_field_path": [
+          "maxRetries"
+        ],
+        "normal_return_count": 1,
+        "incomplete_or_fallthrough": false,
+        "selected_field_presence": "absent",
+        "selected_field_shape_closed": true,
+        "whole_object_shape_closed": true,
+        "normal_prefix_effects_unknown": true,
+        "invocation_or_completion_proven": false,
+        "id": "6be7c0c90aa6d990530e8fd7"
+      }
+    },
+    {
+      "json_pointer": "/observations/0/summary/source_facts/221",
+      "fact": {
+        "operation": "ordered_object_spread",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 158,
+          "column": 5,
+          "end_line": 158,
+          "end_column": 18,
+          "column_unit": "utf8_bytes",
+          "column_base": 1,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "start_byte": 6869,
+          "end_byte": 6882,
+          "original_file_start_byte": 6869,
+          "original_file_end_byte": 6882,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "grammar": "typescript",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "span_hash": "7f7cf717a1d23b8619c3f1b1e9635e0f269bd51ef709993270c991d298b29d5f",
+          "source_line": "    ...jobOptions,",
+          "source_excerpt": "...jobOptions",
+          "source_excerpt_truncated": false,
+          "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+          "parse_identity": {
+            "semantic_source_version": "semantic-snapshot-sources-1",
+            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "projection_version": "ts-syntax-projection-1",
+            "projection_mode": "original",
+            "derived_text_utf8_sha256": null,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "literal_authority": "original_saved_source_text_only",
+            "position_map": "identity_utf8_bytes_and_line_columns"
+          }
+        },
+        "owner": "runJobWithServices",
+        "graph_node_id": "ts:server/services/engine-runner#runJobWithServices",
+        "call_context": "5d8f2c65fbd25579950aa6b3",
+        "source_value_id": "63b9088a6aafcf3e01bd96b8f0a2ff3acf910ac356fa6d39a29a18d743f238bb",
+        "destination_value_id": "407aa7b06002c8cf679064f7732eb4a7020d0175e698fe1256e88a3f3b4abd8d",
+        "new_object_construction": true,
+        "not_same_object_overwrite": true,
+        "id": "092b0f1b366757069880e6e6"
+      }
+    },
+    {
+      "json_pointer": "/observations/0/summary/source_facts/234",
+      "fact": {
+        "operation": "ordered_object_spread",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 176,
+          "column": 5,
+          "end_line": 176,
+          "end_column": 16,
+          "column_unit": "utf8_bytes",
+          "column_base": 1,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "start_byte": 7628,
+          "end_byte": 7639,
+          "original_file_start_byte": 7628,
+          "original_file_end_byte": 7639,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "grammar": "typescript",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "span_hash": "9d95689f1b7f9aaaf8ecdbe24052e05bee208af7b4fe2cee3a12c1966cf4eafd",
+          "source_line": "    ...services,",
+          "source_excerpt": "...services",
+          "source_excerpt_truncated": false,
+          "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+          "parse_identity": {
+            "semantic_source_version": "semantic-snapshot-sources-1",
+            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "projection_version": "ts-syntax-projection-1",
+            "projection_mode": "original",
+            "derived_text_utf8_sha256": null,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "literal_authority": "original_saved_source_text_only",
+            "position_map": "identity_utf8_bytes_and_line_columns"
+          }
+        },
+        "owner": "runJobWithServices",
+        "graph_node_id": "ts:server/services/engine-runner#runJobWithServices",
+        "call_context": "5d8f2c65fbd25579950aa6b3",
+        "source_value_id": "314c7c438d22256dce32af84ea184df371811e73c64ebc7583013e62d1062bb9",
+        "destination_value_id": "407aa7b06002c8cf679064f7732eb4a7020d0175e698fe1256e88a3f3b4abd8d",
+        "new_object_construction": true,
+        "not_same_object_overwrite": true,
+        "id": "a527269f5fd7ed7010a9b4dc"
+      }
+    },
+    {
+      "json_pointer": "/observations/0/summary/source_facts/240",
+      "fact": {
+        "operation": "new_literal_object_shape",
+        "location": {
+          "file": "server/services/engine-runner.ts",
+          "line": 157,
+          "column": 17,
+          "end_line": 180,
+          "end_column": 4,
+          "column_unit": "utf8_bytes",
+          "column_base": 1,
+          "coordinate_space": "captured_text_utf8",
+          "raw_prefix_bytes": 0,
+          "start_byte": 6863,
+          "end_byte": 7795,
+          "original_file_start_byte": 6863,
+          "original_file_end_byte": 7795,
+          "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+          "grammar": "typescript",
+          "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "span_hash": "a5f84bdfda7d54e195f3185bc51b705a998ef7858f395313d05e37a324271588",
+          "source_line": "  return runJob({",
+          "source_excerpt": "{\n    ...jobOptions,\n    cpbRoot,\n    project,\n    hubRoot,\n    dataRoot: projectRuntimeRoot,\n    env,\n    sourcePath,\n    routing: opts.routing || null,\n    agentAvailability: opts.agentAvailability || null,\n    agentHealth: opts.agentHealth || null,\n    teamPolicy: opts.teamPolicy || null,\n    // Inject the existing process registry so verify hard-gate child PIDs are\n    // persisted to {dataRoot}/processes/ (same store worker-supervisor uses).\n    // opts.signal (AbortSignal) flows through ...opts above into ctx, reaching\n    // runVerify → runHardGates → runCommandTree without extra plumbing.\n    processHooks: jobId ? {\n      registerChild: (pid: number) => addChildPid(cpbRoot, jobId, pid, { dataRoot: projectRuntimeRoot }),\n    } : undefined,\n    ...services,\n    providerServices: callerProvidedProviderServices\n      ? normalizeProviderServices(jobOptions.providerServices)\n      : services.providerServices,\n  }",
+          "source_excerpt_truncated": false,
+          "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+          "parse_identity": {
+            "semantic_source_version": "semantic-snapshot-sources-1",
+            "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+            "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "projection_version": "ts-syntax-projection-1",
+            "projection_mode": "original",
+            "derived_text_utf8_sha256": null,
+            "coordinate_space": "captured_text_utf8",
+            "raw_prefix_bytes": 0,
+            "literal_authority": "original_saved_source_text_only",
+            "position_map": "identity_utf8_bytes_and_line_columns"
+          }
+        },
+        "owner": "runJobWithServices",
+        "graph_node_id": "ts:server/services/engine-runner#runJobWithServices",
+        "call_context": "5d8f2c65fbd25579950aa6b3",
+        "actual_literal_keys": [
+          "cpbRoot",
+          "project",
+          "hubRoot",
+          "dataRoot",
+          "env",
+          "sourcePath",
+          "routing",
+          "agentAvailability",
+          "agentHealth",
+          "teamPolicy",
+          "processHooks",
+          "providerServices"
+        ],
+        "parts": [
+          {
+            "kind": "spread",
+            "source_value_id": "63b9088a6aafcf3e01bd96b8f0a2ff3acf910ac356fa6d39a29a18d743f238bb",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 158,
+              "column": 5,
+              "end_line": 158,
+              "end_column": 18,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 6869,
+              "end_byte": 6882,
+              "original_file_start_byte": 6869,
+              "original_file_end_byte": 6882,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "7f7cf717a1d23b8619c3f1b1e9635e0f269bd51ef709993270c991d298b29d5f",
+              "source_line": "    ...jobOptions,",
+              "source_excerpt": "...jobOptions",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            }
+          },
+          {
+            "kind": "property",
+            "name": "cpbRoot",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 159,
+              "column": 5,
+              "end_line": 159,
+              "end_column": 12,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 6888,
+              "end_byte": 6895,
+              "original_file_start_byte": 6888,
+              "original_file_end_byte": 6895,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "7c9c33e071f946376402b5a0a112422d321f9f832f45a018ad4d083933d36505",
+              "source_line": "    cpbRoot,",
+              "source_excerpt": "cpbRoot",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "project",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 160,
+              "column": 5,
+              "end_line": 160,
+              "end_column": 12,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 6901,
+              "end_byte": 6908,
+              "original_file_start_byte": 6901,
+              "original_file_end_byte": 6908,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "244210e48437b6556980a70249a99369934a352429034cef9d7bd253b3bf2c01",
+              "source_line": "    project,",
+              "source_excerpt": "project",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "hubRoot",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 161,
+              "column": 5,
+              "end_line": 161,
+              "end_column": 12,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 6914,
+              "end_byte": 6921,
+              "original_file_start_byte": 6914,
+              "original_file_end_byte": 6921,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "e248f8f0f3fc7fa5427683c4fb9c19ad98279edea3f811b5b0459cc6779d51e9",
+              "source_line": "    hubRoot,",
+              "source_excerpt": "hubRoot",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "dataRoot",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 162,
+              "column": 5,
+              "end_line": 162,
+              "end_column": 33,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 6927,
+              "end_byte": 6955,
+              "original_file_start_byte": 6927,
+              "original_file_end_byte": 6955,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "bd4a46ba6f3071f6a08702b83d1d83eb912f482a0d8a8c68452abd41e1e0904c",
+              "source_line": "    dataRoot: projectRuntimeRoot,",
+              "source_excerpt": "dataRoot: projectRuntimeRoot",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "env",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 163,
+              "column": 5,
+              "end_line": 163,
+              "end_column": 8,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 6961,
+              "end_byte": 6964,
+              "original_file_start_byte": 6961,
+              "original_file_end_byte": 6964,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "b77349bf1fa9b26d45d545d7d64dad96737e9cfbb3cbb5f5d10fb77b0fcc44ad",
+              "source_line": "    env,",
+              "source_excerpt": "env",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "sourcePath",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 164,
+              "column": 5,
+              "end_line": 164,
+              "end_column": 15,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 6970,
+              "end_byte": 6980,
+              "original_file_start_byte": 6970,
+              "original_file_end_byte": 6980,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "56ffcf5f92a49b5a9ec206c9c7e13f2f2fd66c2fa98c408e184f6c8232d272f2",
+              "source_line": "    sourcePath,",
+              "source_excerpt": "sourcePath",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "routing",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 165,
+              "column": 5,
+              "end_line": 165,
+              "end_column": 34,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 6986,
+              "end_byte": 7015,
+              "original_file_start_byte": 6986,
+              "original_file_end_byte": 7015,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "74b8d1b4ec5b39a4928bf0e448dade876faec321e84095cf6d49a4309cc17e52",
+              "source_line": "    routing: opts.routing || null,",
+              "source_excerpt": "routing: opts.routing || null",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "agentAvailability",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 166,
+              "column": 5,
+              "end_line": 166,
+              "end_column": 54,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 7021,
+              "end_byte": 7070,
+              "original_file_start_byte": 7021,
+              "original_file_end_byte": 7070,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "76ea3a11d709c884223ca2701d379ccc3b7c42e77834011b85a2b45143e0a094",
+              "source_line": "    agentAvailability: opts.agentAvailability || null,",
+              "source_excerpt": "agentAvailability: opts.agentAvailability || null",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "agentHealth",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 167,
+              "column": 5,
+              "end_line": 167,
+              "end_column": 42,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 7076,
+              "end_byte": 7113,
+              "original_file_start_byte": 7076,
+              "original_file_end_byte": 7113,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "196b35cfa317af16c8c24e98346735d859108596286957bfd81710d8e044bf93",
+              "source_line": "    agentHealth: opts.agentHealth || null,",
+              "source_excerpt": "agentHealth: opts.agentHealth || null",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "teamPolicy",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 168,
+              "column": 5,
+              "end_line": 168,
+              "end_column": 40,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 7119,
+              "end_byte": 7154,
+              "original_file_start_byte": 7119,
+              "original_file_end_byte": 7154,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "4784bc3d73019fbdf6fd728417a1f8ef26709ceba4c59f0ae681adde5df3299c",
+              "source_line": "    teamPolicy: opts.teamPolicy || null,",
+              "source_excerpt": "teamPolicy: opts.teamPolicy || null",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "property",
+            "name": "processHooks",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 173,
+              "column": 5,
+              "end_line": 175,
+              "end_column": 18,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 7475,
+              "end_byte": 7622,
+              "original_file_start_byte": 7475,
+              "original_file_end_byte": 7622,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "ff22b5c95ea8c453c5a47a93d4b9205b66b3c82ef618a289aa53fb106ad9f061",
+              "source_line": "    processHooks: jobId ? {",
+              "source_excerpt": "processHooks: jobId ? {\n      registerChild: (pid: number) => addChildPid(cpbRoot, jobId, pid, { dataRoot: projectRuntimeRoot }),\n    } : undefined",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          },
+          {
+            "kind": "spread",
+            "source_value_id": "314c7c438d22256dce32af84ea184df371811e73c64ebc7583013e62d1062bb9",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 176,
+              "column": 5,
+              "end_line": 176,
+              "end_column": 16,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 7628,
+              "end_byte": 7639,
+              "original_file_start_byte": 7628,
+              "original_file_end_byte": 7639,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "9d95689f1b7f9aaaf8ecdbe24052e05bee208af7b4fe2cee3a12c1966cf4eafd",
+              "source_line": "    ...services,",
+              "source_excerpt": "...services",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            }
+          },
+          {
+            "kind": "property",
+            "name": "providerServices",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 177,
+              "column": 5,
+              "end_line": 179,
+              "end_column": 34,
+              "column_unit": "utf8_bytes",
+              "column_base": 1,
+              "coordinate_space": "captured_text_utf8",
+              "raw_prefix_bytes": 0,
+              "start_byte": 7645,
+              "end_byte": 7790,
+              "original_file_start_byte": 7645,
+              "original_file_end_byte": 7790,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "grammar": "typescript",
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "span_hash": "024232334f5fa1149696392f0a31651c48b056486bd6eec8673faa86b2c95d7b",
+              "source_line": "    providerServices: callerProvidedProviderServices",
+              "source_excerpt": "providerServices: callerProvidedProviderServices\n      ? normalizeProviderServices(jobOptions.providerServices)\n      : services.providerServices",
+              "source_excerpt_truncated": false,
+              "semantic_parse_id": "3c7aec0d4df71a957d5b483d49c9ad6d0acc64f70219aefa577ed3cdc0bc42f3",
+              "parse_identity": {
+                "semantic_source_version": "semantic-snapshot-sources-1",
+                "semantic_parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+                "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+                "original_text_utf8_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                "projection_version": "ts-syntax-projection-1",
+                "projection_mode": "original",
+                "derived_text_utf8_sha256": null,
+                "coordinate_space": "captured_text_utf8",
+                "raw_prefix_bytes": 0,
+                "literal_authority": "original_saved_source_text_only",
+                "position_map": "identity_utf8_bytes_and_line_columns"
+              }
+            },
+            "accessor": false
+          }
+        ],
+        "allocation": {
+          "record": "ObjectRef",
+          "alloc_id": "93f1eedd4a03d28a8f9003df758d4a254a24d966af16de3e8a23cfb9966bc583"
+        },
+        "construction_model_guard": {
+          "record": "ModelGuard",
+          "guard_id": "c6e5a35b1316a5a44346c76711b5e1511cdb57179820c96c72a9e11763a8ae1a",
+          "model_id": "ecmascript-own-enumerable-field-copy-v1",
+          "evidence": [
+            {
+              "record": "EvidenceRef",
+              "evidence_id": "5200ecd75a4bd3033b8c4efe63ee5a7684735c15bb6d1da3f90ce7159faf5518",
+              "file": "server/services/engine-runner.ts",
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "start_byte": 6863,
+              "end_byte": 7795,
+              "model_id": "ecmascript-own-enumerable-field-copy-v1",
+              "guard_ids": [
+                "2c6a2e781edfb0831bf7dc90",
+                "cef549488f30dc41fe96f38ed063892e0736737b7619df9e83d8f3a28703e753"
+              ],
+              "snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+              "context_id": "5d8f2c65fbd25579950aa6b3",
+              "kind": "literal_construction_source"
+            }
+          ],
+          "capabilities": [
+            "private_literal_construction"
+          ],
+          "supported": true,
+          "assumptions": [
+            "this ordinary static data literal's new destination is an unnamed temporary during property evaluation, before the initializer binding is assigned",
+            "property expressions and registered shallow spreads do not receive that destination; children have no implicit reverse parent edge",
+            "protection ends before binding/return/argument exposure and does not exempt actual reachable roots, reflection, unsupported members or exhausted analysis"
+          ],
+          "runtime_verified": false
+        },
+        "construction_private_domain_released": true,
+        "whole_object_shape_closed": false,
+        "selected_field_closure_is_separate": true,
+        "id": "00154338cf01be560784489b"
+      }
+    }
+  ],
+  "source_checks": [
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6856,
+      "end_byte": 7796,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "f06893a20ea6da41e15b41e664808374962884b419dba324110f149c72e04782",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 5602,
+      "end_byte": 5619,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "2edea92830fc87e24a37b15dc1921c1993423ac54b9a2a72a4231eebb7070c7a",
+      "saved_span_hash_matches": null
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6869,
+      "end_byte": 6882,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "7f7cf717a1d23b8619c3f1b1e9635e0f269bd51ef709993270c991d298b29d5f",
+      "saved_span_hash_matches": null
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 5753,
+      "end_byte": 5766,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "7f7cf717a1d23b8619c3f1b1e9635e0f269bd51ef709993270c991d298b29d5f",
+      "saved_span_hash_matches": null
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 5568,
+      "end_byte": 7799,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "468808ebaa7a3c7a9d9c97cac9cfd330c25bdabf82c02ca444e309fb65c3234e",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "core/engine/run-job.ts",
+      "start_byte": 2422,
+      "end_byte": 2439,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "58dfa903b234d2564b3bb069a8e994eec4d5f75224ecbe5033bb00f94d00a8fa",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "core/engine/run-job.ts",
+      "start_byte": 2400,
+      "end_byte": 4120,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "9edb3bc1a2177928f60c05022539a7b79d8737f3c2c0057f6f9d6946152c76ce",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/hub/hub-queue.ts",
+      "start_byte": 55143,
+      "end_byte": 55219,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "7d8f363cacd622c89492a5b226528553b8a38a97df90b170552a91a7f060ce84",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/agent/agent-config.ts",
+      "start_byte": 16941,
+      "end_byte": 16957,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "198e02d85b4ee06039d5e9832b3fbc4ccd42c534a6c7aca1d391154c40b68602",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/agent/agent-config.ts",
+      "start_byte": 16961,
+      "end_byte": 17102,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "166ad901eb5999053bd56329298c6c3a4eb8cf94a9d0f6c9657e8a0fec799aa3",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 5753,
+      "end_byte": 5766,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "7f7cf717a1d23b8619c3f1b1e9635e0f269bd51ef709993270c991d298b29d5f",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 5568,
+      "end_byte": 7799,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "468808ebaa7a3c7a9d9c97cac9cfd330c25bdabf82c02ca444e309fb65c3234e",
+      "saved_span_hash_matches": null
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 3589,
+      "end_byte": 5322,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "c57d618cdf347f6203946e18adbeddf7b88f48d86fcbb85b46bd337752316601",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 3595,
+      "end_byte": 3649,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "f96e26e8fef07bdbe8c2ba9bbfcdde53521720f9c3655b12033b0115bec47802",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 3655,
+      "end_byte": 3735,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "d10228b98afe66c0e5a21c4e4cf912e84c06d442a5965b008b85d5c4008566be",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 3741,
+      "end_byte": 3830,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "52b7a5d3e3c3a831461add965fcabd91736d2b10235314cbe2830fcf654ed74e",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 3836,
+      "end_byte": 4095,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "90e263d0198c059406682059daa1223dc1fc5a56143a6e6a2f77875297704aee",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 4101,
+      "end_byte": 4172,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "ee7469f4b65ca737c1832e34591bb5f07e6ea6f7c4b869e97e862c08e85a08ee",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 4178,
+      "end_byte": 4252,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "25150113129f7431d6e9ac0bd0d070648097f9a8484ddcea8a0c3d6bfd7ba8ee",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 4258,
+      "end_byte": 4752,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "bad002ebdb53ad94792b506b4d7ec0466554ca87711ee3ee8de3d65ccde05c0a",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 4758,
+      "end_byte": 4800,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "c1b07fd20858c09930826629cf965abed004df6cd22b36f2454101f238678d38",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 4806,
+      "end_byte": 4877,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "829b9babdbec824dfe7675009f52472388cea1d229aca74bdcf13ae7095748bc",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 4883,
+      "end_byte": 5123,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "9a534b0f23b4e474080c6ea6cee945dcc16fec9922d6f23f1d9318f6d0c5228e",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 5129,
+      "end_byte": 5317,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "fdd3bb47b2b7c33eeac813da02dff821b75b4bdf524000f61d8d70b58abdb5f0",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 3589,
+      "end_byte": 5322,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "c57d618cdf347f6203946e18adbeddf7b88f48d86fcbb85b46bd337752316601",
+      "saved_span_hash_matches": null
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6663,
+      "end_byte": 6761,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "a955febcf35207a79851faa350c9cc9b99769338eb4ce312c8dd3df2c46c22b1",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6869,
+      "end_byte": 6882,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "7f7cf717a1d23b8619c3f1b1e9635e0f269bd51ef709993270c991d298b29d5f",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 7628,
+      "end_byte": 7639,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "9d95689f1b7f9aaaf8ecdbe24052e05bee208af7b4fe2cee3a12c1966cf4eafd",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6863,
+      "end_byte": 7795,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "a5f84bdfda7d54e195f3185bc51b705a998ef7858f395313d05e37a324271588",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6888,
+      "end_byte": 6895,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "7c9c33e071f946376402b5a0a112422d321f9f832f45a018ad4d083933d36505",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6901,
+      "end_byte": 6908,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "244210e48437b6556980a70249a99369934a352429034cef9d7bd253b3bf2c01",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6914,
+      "end_byte": 6921,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "e248f8f0f3fc7fa5427683c4fb9c19ad98279edea3f811b5b0459cc6779d51e9",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6927,
+      "end_byte": 6955,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "bd4a46ba6f3071f6a08702b83d1d83eb912f482a0d8a8c68452abd41e1e0904c",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6961,
+      "end_byte": 6964,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "b77349bf1fa9b26d45d545d7d64dad96737e9cfbb3cbb5f5d10fb77b0fcc44ad",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6970,
+      "end_byte": 6980,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "56ffcf5f92a49b5a9ec206c9c7e13f2f2fd66c2fa98c408e184f6c8232d272f2",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6986,
+      "end_byte": 7015,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "74b8d1b4ec5b39a4928bf0e448dade876faec321e84095cf6d49a4309cc17e52",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 7021,
+      "end_byte": 7070,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "76ea3a11d709c884223ca2701d379ccc3b7c42e77834011b85a2b45143e0a094",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 7076,
+      "end_byte": 7113,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "196b35cfa317af16c8c24e98346735d859108596286957bfd81710d8e044bf93",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 7119,
+      "end_byte": 7154,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "4784bc3d73019fbdf6fd728417a1f8ef26709ceba4c59f0ae681adde5df3299c",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 7475,
+      "end_byte": 7622,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "ff22b5c95ea8c453c5a47a93d4b9205b66b3c82ef618a289aa53fb106ad9f061",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 7645,
+      "end_byte": 7790,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "024232334f5fa1149696392f0a31651c48b056486bd6eec8673faa86b2c95d7b",
+      "saved_span_hash_matches": true
+    },
+    {
+      "file": "server/services/engine-runner.ts",
+      "start_byte": 6863,
+      "end_byte": 7795,
+      "source_sha256_matches": true,
+      "range_within_source": true,
+      "span_sha256": "a5f84bdfda7d54e195f3185bc51b705a998ef7858f395313d05e37a324271588",
+      "saved_span_hash_matches": null
+    }
+  ],
+  "engine_source_assumptions": [
+    "selected parameter supplied on the provided-value branch",
+    "each modeled copy source has an entire ordinary own-enumerable data surface, without Proxy or other getter enumeration effects; child referents are not certified",
+    "each recorded actual Get additionally satisfies its separate nonrecursive own-data/getter-free-missing-read premise"
+  ],
+  "all_checked_source_refs_match": true,
+  "saved_input_unchanged_during_collection": true
+}

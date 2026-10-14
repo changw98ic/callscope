@@ -1,0 +1,27 @@
+Traceback (most recent call last):
+  File "/workspace/callscope/reports/astra-iteration12/query_responsibility_operations.py", line 91, in <module>
+    main()
+  File "/workspace/callscope/reports/astra-iteration12/query_responsibility_operations.py", line 41, in main
+    report, report_hash = _SavedJSON(report_path).load(selection)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/callscope/reports/astra-iteration11/render_report_summaries.py", line 206, in load
+    result = self.value(selection)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/callscope/reports/astra-iteration11/render_report_summaries.py", line 170, in value
+    item = self.value(child, pointer + "/" + key.replace("~", "~0").replace("/", "~1"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/callscope/reports/astra-iteration11/render_report_summaries.py", line 190, in value
+    item = self.value(child, pointer + "/" + str(count))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/callscope/reports/astra-iteration11/render_report_summaries.py", line 170, in value
+    item = self.value(child, pointer + "/" + key.replace("~", "~0").replace("/", "~1"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/callscope/reports/astra-iteration11/render_report_summaries.py", line 190, in value
+    item = self.value(child, pointer + "/" + str(count))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/callscope/reports/astra-iteration11/render_report_summaries.py", line 170, in value
+    item = self.value(child, pointer + "/" + key.replace("~", "~0").replace("/", "~1"))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/callscope/reports/astra-iteration11/render_report_summaries.py", line 159, in value
+    raise ValueError(f"Object projection does not match: {self.path.name}#{pointer}")
+ValueError: Object projection does not match: codepatchbay-automatic-report.json#/judgments/0/obligations/0/evidence

@@ -1,0 +1,29 @@
+# Captured documentation and Device source relation model
+
+This module supports `document_deployment_consistency` through `analyze_pattern(analysis)`. Rules select 12 authenticated Rust declaration roles and one to four data-only `documents: [{role, file}]` selectors. The models are `captured-document-deployment-qualified-source-v1` and `captured-normal-statement-control-v1`. No document is represented as a function symbol or a CALLS edge.
+
+The document source is exclusively `snapshot.input_evidence`. Original-file SHA-256 and byte size must agree with exactly reconstructed UTF-8 bytes, with either no prefix or one UTF-8 BOM. Decoded text has its own SHA-256. Facts retain decoded UTF-8 offsets and original-file offsets, full paragraphs/table rows, heading context, adjacent same-heading blocks, and sentence-level clauses. `document_scope` lists selected and authenticated captures. Missing or unauthenticated selected documents prevent a supported result.
+
+The finite clause model recognizes the explicit Provider Gateway / Control Plane internal exclusivity clause and the Worker model-stream-only clause. It preserves quantifiers, negations, quotes, nearby exceptions and deployment qualifiers. A matching token alone is insufficient. The two eligible clauses must occur in the same captured block, rather than being assembled from unrelated documents. Unrecognized prose remains unknown. The full block is evidence even when individual clauses are ineligible.
+
+Selected Rust declarations come from the normal authenticated CST/source-role loader. Source relations join local tuple binders, exact field and argument operands, callback source structure and actual saved call-site candidates. Lexical binders respect enclosing scopes and completed Rust let declarations; they are not heap identities. Actual call-site IDs and candidates are retained. Existing authenticated CALLS targets remain authenticated; contextual same-inherent-receiver or qualified-type candidates remain `authenticated_target=false` with their original unknown macro/trait/configuration reasons. Nothing creates, repairs or promotes CALLS. Deferred callbacks are source relationships, not proof of activation.
+
+`documentation_comparisons` is the first-class product result. Each item gives an actual finite statement, classification, document fact IDs, source fact IDs, and explicit uncertainty. The source witnesses and their conditions remain available separately. Documentation facts use the existing fact budget; selected source traversal uses the normal analysis operation budget. Exhaustion prevents supported output.
+
+The comparison deliberately preserves three distinctions:
+
+- “Control Plane 内部” does not assert project-wide exclusivity. A separate Device source composition can justify a deployment-scope clarification without refuting the narrower clause.
+- SQL-selected `Vec<u8>` material and `ResolvedSecret` are not merely credential-reference strings. These source relationships still cannot establish credential lifetime, credential contents, security compromise or an actual network operation.
+- A local Worker consumer can handle typed ExecutionPort model frames before transport fallback. This does not establish a bypass of the model-stream protocol.
+
+The development helper uses the real closed v13 saved WWC snapshot, obtains the shared internal `goal-source-query.lock`, authenticates selected sources and document captures, and invokes the new module directly. This is not a v14 publication, a retrospective modification of v13 findings, a target execution or an execution test. The helper records stable module bytes, rule bytes and the saved source identity. No original Astra report is an input to the analyzer.
+
+The relation is deliberately a source candidate/composition comparison. Shared lexical binders record the same source variable, not equality of all runtime values, ownership closure, arbitrary alias effects or macro-expanded writes. The selected constructor/body facts remain necessary evidence; a successful comparison does not certify every credential source in the repository. Normal no-error continuation is explicit: an `Ok(true)` local consumer returns early, a normal unconsumed branch can fall back to transport, and an error may propagate before fallback.
+
+## Actual saved-source development observation
+
+The final development query reads saved WWC snapshot `cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2` with source hash `eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2`. All 12 selected declarations have closed graph/source bindings. The selected architecture capture authenticates 17,137 original bytes, raw/text SHA-256 `85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3`. Both explicit eligible clauses are in the same paragraph at line 158.
+
+All 11 finite source witnesses are supported, with 232 saved source facts, 3,689 operations, no necessary gap and no exhausted budget. The three comparison statements retain their document/source fact IDs; all referenced IDs exist in the saved facts. The stable module SHA-256 is `fe4a3d0db94ab2c93efa57e057e6f091e55ba063b276f4152cba13767d2c5b75`. The final `documentation-source-query.json` SHA-256 is `493c408b8e924b53915c8fcd72d4521ed7f27170f662742cd8749d3b6413bacf`.
+
+This observation supports the finite deployment-scope clarification and material/reference distinction. It leaves long-term credential status unknown and explicitly does not establish protocol bypass, security compromise, actual provider effects or whole-report reproduction. Dynamic/candidate edge uncertainty remains in the individual relation facts. A formal new publication must still run the registered analyzer against its own new snapshot; this development observation never rewrites v13.

@@ -1,0 +1,78 @@
+[
+  {
+    "id": "cpb-captured-record-resource-writers",
+    "type": "resource_writer_ownership",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "eventCommit",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "appendEvent"
+      },
+      {
+        "role": "eventCommitRegion",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "appendEvent.<arrow@1188:44>"
+      },
+      {
+        "role": "eventBytes",
+        "file": "server/services/event/event-store.ts",
+        "symbol": "appendSerializedEventDurably"
+      },
+      {
+        "role": "materializer",
+        "file": "server/services/event/event-materializer.ts",
+        "symbol": "advanceMaterializedJob"
+      },
+      {
+        "role": "supersession",
+        "file": "server/services/event/event-materializer.ts",
+        "symbol": "EVENT_HANDLERS.job_superseded"
+      },
+      {
+        "role": "jobCreate",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "createJob"
+      },
+      {
+        "role": "indexProjection",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "updateJobsIndexEntry.<arrow@316:37>"
+      },
+      {
+        "role": "queueCommit",
+        "file": "server/services/hub/hub-queue.ts",
+        "symbol": "enqueue.<arrow@1595:36>"
+      },
+      {
+        "role": "queueSave",
+        "file": "server/services/hub/hub-queue.ts",
+        "symbol": "saveLocalQueue"
+      },
+      {
+        "role": "indexProjectionWrite",
+        "file": "server/services/job/job-store.ts",
+        "symbol": "updateJobsIndexEntry.<arrow@316:37>.<arrow@331:66>"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "captured-resource-writer-source-v1"
+    ],
+    "provenance": {
+      "authority": "original-full-report-source-scope",
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "author_approved": false,
+      "note": "Selectors locate saved declarations only; no expected guard, writer, resource or result is supplied."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected captured definitions are activated, recorded branches are reached normally, and explicit finite source models apply."
+      ],
+      "counterexamples": [
+        "Nested callbacks, opaque effects and deployment branches are not promoted to active runtime guarantees."
+      ]
+    }
+  }
+]

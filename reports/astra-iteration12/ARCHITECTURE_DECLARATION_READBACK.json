@@ -1,0 +1,46 @@
+{
+  "architecture_module_sha256": "98bae1b6310422a7d749aaf77032592d625128e9fea4d0e117647744f047dd2f",
+  "architecture_module_bytes_stable": true,
+  "readback_scope": "Actual saved source-operation artifacts are composed with the current declaration explainer; no database, target code or fixtures are loaded. This verifies exact summary/statement/operation references and bounded presentation, not original-report semantic completeness.",
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "development_only": true,
+      "not_formal_v14_result": true,
+      "source_artifact": "reports/astra-iteration12/responsibility-operations-codepatchbay-development.json",
+      "source_artifact_sha256": "00522596ade7af90eac7b53b34e5e744c68b3661dd462bbc01d60e9c3b10b827",
+      "saved_snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+      "operation_extractor_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+      "declaration_count": 346,
+      "operation_count": 14958,
+      "displayed_statement_count": 4497,
+      "summary_statement_ids_and_text_match": true,
+      "every_operation_pointer_matches_exact_id": true,
+      "all_operations_partitioned_without_loss": true,
+      "failures": [],
+      "all_readback_checks_passed": true
+    },
+    {
+      "repository": "winwincode",
+      "development_only": true,
+      "not_formal_v14_result": true,
+      "source_artifact": "reports/astra-iteration12/responsibility-operations-winwincode-development.json",
+      "source_artifact_sha256": "dda6ee5d9825e1308b71219825597b2edc3e09a38a1d28666d46231c0abf5804",
+      "saved_snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+      "operation_extractor_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+      "declaration_count": 489,
+      "operation_count": 9341,
+      "displayed_statement_count": 4690,
+      "summary_statement_ids_and_text_match": true,
+      "every_operation_pointer_matches_exact_id": true,
+      "all_operations_partitioned_without_loss": true,
+      "failures": [],
+      "all_readback_checks_passed": true
+    }
+  ],
+  "database_opened": false,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

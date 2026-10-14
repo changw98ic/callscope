@@ -1,0 +1,2 @@
+{"state": "normal_saved_report_cli_export_started", "snapshot_id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372", "tool_identity": {"source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc", "graph_backend": "axon-graph-core-1", "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"}, "target_executed": false}
+{"record": "/workspace/callscope/reports/astra-iteration12-scope2/CLI_REPORT_READBACK.json", "successful_readback": true, "markdown_bytes_equal": true, "logical_database_unchanged": true}

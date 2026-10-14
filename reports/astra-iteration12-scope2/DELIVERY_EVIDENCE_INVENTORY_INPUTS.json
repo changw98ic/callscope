@@ -1,0 +1,21 @@
+{
+  "kind": "saved_record_and_guard_presentation",
+  "presentation_only": true,
+  "input_report": "winwincode-delivery-evidence-contract-report.json",
+  "input_sha256": "1f4a165b47e99c1d178ce4ffc479881bd0031d2a9a6ada29573ac8ba00511d75",
+  "input_snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+  "selection": "actual selected declaration record_construction and guard_rejection operations",
+  "copied_counts": {
+    "record_construction": 21,
+    "record_fields": 141,
+    "guard_rejection": 19
+  },
+  "new_assessment_computed": false,
+  "runtime_authenticity_or_role_authority_inferred": false,
+  "output": "winwincode-delivery-evidence-contract-inventory.md",
+  "output_sha256": "6bdfbcf4e4dfc92dbf698c03bb94bfe0519e275250b37f02bb8f51fd73c6f824",
+  "line_count": 488,
+  "display_source_char_limit": 500,
+  "full_operations_preserved_in_input": true,
+  "target_executed": false
+}

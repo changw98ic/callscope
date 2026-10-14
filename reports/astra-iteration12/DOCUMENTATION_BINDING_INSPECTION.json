@@ -1,0 +1,1886 @@
+{
+  "snapshot_id": "cb8df7040351543262ead5637b910b0b2764be4d107818080faaf0af274f4da2",
+  "roles": {
+    "server_boundary": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-server/src/main#<DeviceModelBoundary as winwincode_control_plane::DurableExecutionPortDelegate>.accept",
+          "name": "accept",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [
+              {
+                "applies_to": "configured_crate_root_compilation_limit",
+                "attribute_name": "recursion_limit",
+                "cfg_evaluated": false,
+                "compilation_validated": false,
+                "crate_root": "crates/winwincode-server/src/main.rs",
+                "declaration_name_binding_transformed": false,
+                "end_byte": 67,
+                "end_line": 3,
+                "file": "crates/winwincode-server/src/main.rs",
+                "line": 3,
+                "literal_source": "\"256\"",
+                "macro_expansion_performed": false,
+                "macro_or_trait_target_resolution_closed": false,
+                "model_id": "rust-builtin-crate-limit-attribute-v1",
+                "source": "#![recursion_limit = \"256\"]",
+                "source_context_version": "rust-captured-source-context-1",
+                "source_sha256": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+                "span_sha256": "36646d442e74ef1052d1d51682dd82bc26843a86ac9b656bb2c7d5b551cc358f",
+                "start_byte": 40
+              }
+            ],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-server/src/main.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 347,
+              "file": "crates/winwincode-server/src/main.rs",
+              "line": 340
+            },
+            "declaration_only": false,
+            "impl_generic": false,
+            "impl_location": {
+              "column": 0,
+              "end_line": 348,
+              "file": "crates/winwincode-server/src/main.rs",
+              "line": 339
+            },
+            "impl_trait": "winwincode_control_plane::DurableExecutionPortDelegate",
+            "impl_trait_implementation": true,
+            "impl_type": "DeviceModelBoundary",
+            "impl_type_id": "rust:crates/winwincode-server/src/main#DeviceModelBoundary",
+            "impl_type_name": "DeviceModelBoundary",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-server/src/main.rs::"
+            ],
+            "plain_self_receiver": true,
+            "rust_namespace": "",
+            "self_parameter": "&mut self",
+            "static_method": false,
+            "trait_dispatch": true,
+            "value_parameter_count": 3
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": []
+    },
+    "worker_bootstrap": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-worker/src/main#run_worker",
+          "name": "run_worker",
+          "kind": "function",
+          "metadata": {
+            "async": true,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [
+              {
+                "applies_to": "configured_crate_root_compilation_limit",
+                "attribute_name": "recursion_limit",
+                "cfg_evaluated": false,
+                "compilation_validated": false,
+                "crate_root": "crates/winwincode-worker/src/main.rs",
+                "declaration_name_binding_transformed": false,
+                "end_byte": 67,
+                "end_line": 3,
+                "file": "crates/winwincode-worker/src/main.rs",
+                "line": 3,
+                "literal_source": "\"256\"",
+                "macro_expansion_performed": false,
+                "macro_or_trait_target_resolution_closed": false,
+                "model_id": "rust-builtin-crate-limit-attribute-v1",
+                "source": "#![recursion_limit = \"256\"]",
+                "source_context_version": "rust-captured-source-context-1",
+                "source_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+                "span_sha256": "36646d442e74ef1052d1d51682dd82bc26843a86ac9b656bb2c7d5b551cc358f",
+                "start_byte": 40
+              }
+            ],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-worker/src/main.rs",
+            "declaration_location": {
+              "column": 0,
+              "end_line": 262,
+              "file": "crates/winwincode-worker/src/main.rs",
+              "line": 154
+            },
+            "declaration_only": false,
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-worker/src/main.rs::"
+            ],
+            "plain_self_receiver": false,
+            "rust_namespace": "",
+            "self_parameter": "",
+            "static_method": false,
+            "trait_dispatch": false,
+            "value_parameter_count": 1
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": []
+    },
+    "worker_installation": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-worker/src/lib#WorkerMain.with_device_providers",
+          "name": "with_device_providers",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-worker/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 420,
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "line": 409
+            },
+            "declaration_only": false,
+            "impl_generic": true,
+            "impl_location": {
+              "column": 0,
+              "end_line": 4152,
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "line": 399
+            },
+            "impl_trait": "",
+            "impl_trait_implementation": false,
+            "impl_type": "WorkerMain<Port, Codex>",
+            "impl_type_id": "rust:crates/winwincode-worker/src/lib#WorkerMain",
+            "impl_type_name": "WorkerMain",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-worker/src/lib.rs::"
+            ],
+            "plain_self_receiver": true,
+            "rust_namespace": "",
+            "self_parameter": "mut self",
+            "static_method": false,
+            "trait_dispatch": false,
+            "value_parameter_count": 2
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": []
+    },
+    "worker_route": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-worker/src/lib#WorkerMain.send_execution_message",
+          "name": "send_execution_message",
+          "kind": "method",
+          "metadata": {
+            "async": true,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-worker/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 3966,
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "line": 3953
+            },
+            "declaration_only": false,
+            "impl_generic": true,
+            "impl_location": {
+              "column": 0,
+              "end_line": 4152,
+              "file": "crates/winwincode-worker/src/lib.rs",
+              "line": 399
+            },
+            "impl_trait": "",
+            "impl_trait_implementation": false,
+            "impl_type": "WorkerMain<Port, Codex>",
+            "impl_type_id": "rust:crates/winwincode-worker/src/lib#WorkerMain",
+            "impl_type_name": "WorkerMain",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-worker/src/lib.rs::"
+            ],
+            "plain_self_receiver": true,
+            "rust_namespace": "",
+            "self_parameter": "&mut self",
+            "static_method": false,
+            "trait_dispatch": false,
+            "value_parameter_count": 2
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": []
+    },
+    "device_send": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-worker/src/device_model#DeviceModels.send",
+          "name": "send",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-worker/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 181,
+              "file": "crates/winwincode-worker/src/device_model.rs",
+              "line": 122
+            },
+            "declaration_only": false,
+            "impl_generic": false,
+            "impl_location": {
+              "column": 0,
+              "end_line": 316,
+              "file": "crates/winwincode-worker/src/device_model.rs",
+              "line": 40
+            },
+            "impl_trait": "",
+            "impl_trait_implementation": false,
+            "impl_type": "DeviceModels",
+            "impl_type_id": "rust:crates/winwincode-worker/src/device_model#DeviceModels",
+            "impl_type_name": "DeviceModels",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-worker/src/lib.rs::device_model"
+            ],
+            "plain_self_receiver": true,
+            "rust_namespace": "device_model",
+            "self_parameter": "&mut self",
+            "static_method": false,
+            "trait_dispatch": false,
+            "value_parameter_count": 2
+          }
+        }
+      ],
+      "calls": [
+        {
+          "text": "DeviceProviderStore::open(&directory)",
+          "type": "call_expression",
+          "function_type": "scoped_identifier",
+          "fields": {
+            "value": "",
+            "path": "DeviceProviderStore",
+            "name": "open",
+            "field": ""
+          },
+          "parent_type": "field_expression",
+          "bindings": {
+            "store_open": {
+              "authenticated_target": false,
+              "captured_contextual_source_reference": false,
+              "contextual_reference_basis": null,
+              "saved_edge": {
+                "id": "rust-call:f8043e88aa84074969536dcb",
+                "resolution": "dynamic",
+                "target": null,
+                "candidates": [
+                  "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore"
+                ],
+                "reason": "当前词法作用域含未展开宏，可能引入同名绑定"
+              },
+              "callee_activation_or_unique_trait_dispatch_proven": false,
+              "edge_id": null,
+              "expected_selected_declaration": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+              "gaps": [
+                {
+                  "code": "call_owner_mismatch",
+                  "message": "调用点不属于唯一 exact lexical 图调用者；不按同名匹配。",
+                  "file": "crates/winwincode-worker/src/device_model.rs",
+                  "line": 150
+                }
+              ],
+              "callee_source": "DeviceProviderStore::open",
+              "creates_or_repairs_calls_edge": false
+            }
+          }
+        },
+        {
+          "text": "store.execute_model(&open)",
+          "type": "call_expression",
+          "function_type": "field_expression",
+          "fields": {
+            "value": "store",
+            "path": "",
+            "name": "",
+            "field": "execute_model"
+          },
+          "parent_type": "closure_expression",
+          "bindings": {
+            "model_execute": {
+              "authenticated_target": false,
+              "captured_contextual_source_reference": true,
+              "contextual_reference_basis": "exact_saved_candidate",
+              "saved_edge": {
+                "id": "rust-call:968af0f8dfe716d917b7efdb",
+                "resolution": "dynamic",
+                "target": null,
+                "candidates": [
+                  "rust:crates/winwincode-provider/src/device_model#DeviceProviderStore.execute_model"
+                ],
+                "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+              },
+              "callee_activation_or_unique_trait_dispatch_proven": false,
+              "edge_id": null,
+              "expected_selected_declaration": "rust:crates/winwincode-provider/src/device_model#DeviceProviderStore.execute_model",
+              "gaps": [
+                {
+                  "code": "call_owner_mismatch",
+                  "message": "调用点不属于唯一 exact lexical 图调用者；不按同名匹配。",
+                  "file": "crates/winwincode-worker/src/device_model.rs",
+                  "line": 151
+                }
+              ],
+              "callee_source": "store.execute_model",
+              "creates_or_repairs_calls_edge": false
+            }
+          }
+        },
+        {
+          "text": "DeviceProviderStore::open(&self.directory)",
+          "type": "call_expression",
+          "function_type": "scoped_identifier",
+          "fields": {
+            "value": "",
+            "path": "DeviceProviderStore",
+            "name": "open",
+            "field": ""
+          },
+          "parent_type": "try_expression",
+          "bindings": {
+            "store_open": {
+              "authenticated_target": true,
+              "captured_contextual_source_reference": true,
+              "contextual_reference_basis": "exact_saved_candidate",
+              "saved_edge": {
+                "id": "rust-call:82d680c825bc177d5c5818f3",
+                "resolution": "resolved",
+                "target": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+                "candidates": [],
+                "reason": ""
+              },
+              "callee_activation_or_unique_trait_dispatch_proven": false,
+              "edge_id": "rust-call:82d680c825bc177d5c5818f3",
+              "expected_selected_declaration": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+              "gaps": [],
+              "callee_source": "DeviceProviderStore::open",
+              "creates_or_repairs_calls_edge": false
+            }
+          }
+        }
+      ],
+      "shapes": []
+    },
+    "store_open": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+          "name": "open",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-provider/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 145,
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "line": 79
+            },
+            "declaration_only": false,
+            "impl_generic": false,
+            "impl_location": {
+              "column": 0,
+              "end_line": 487,
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "line": 74
+            },
+            "impl_trait": "",
+            "impl_trait_implementation": false,
+            "impl_type": "DeviceProviderStore",
+            "impl_type_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore",
+            "impl_type_name": "DeviceProviderStore",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-provider/src/lib.rs::device_store"
+            ],
+            "plain_self_receiver": false,
+            "rust_namespace": "device_store",
+            "self_parameter": "",
+            "static_method": true,
+            "trait_dispatch": false,
+            "value_parameter_count": 1
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": []
+    },
+    "model_execute": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-provider/src/device_model#DeviceProviderStore.execute_model",
+          "name": "execute_model",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-provider/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 67,
+              "file": "crates/winwincode-provider/src/device_model.rs",
+              "line": 26
+            },
+            "declaration_only": false,
+            "impl_generic": false,
+            "impl_location": {
+              "column": 0,
+              "end_line": 263,
+              "file": "crates/winwincode-provider/src/device_model.rs",
+              "line": 20
+            },
+            "impl_trait": "",
+            "impl_trait_implementation": false,
+            "impl_type": "DeviceProviderStore",
+            "impl_type_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore",
+            "impl_type_name": "DeviceProviderStore",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-provider/src/lib.rs::device_model"
+            ],
+            "plain_self_receiver": true,
+            "rust_namespace": "device_model",
+            "self_parameter": "&self",
+            "static_method": false,
+            "trait_dispatch": false,
+            "value_parameter_count": 2
+          }
+        }
+      ],
+      "calls": [
+        {
+          "text": "self.invoke_model(open)",
+          "type": "call_expression",
+          "function_type": "field_expression",
+          "fields": {
+            "value": "self",
+            "path": "",
+            "name": "",
+            "field": "invoke_model"
+          },
+          "parent_type": "field_expression",
+          "bindings": {
+            "model_invoke": {
+              "authenticated_target": false,
+              "captured_contextual_source_reference": false,
+              "contextual_reference_basis": null,
+              "saved_edge": {
+                "id": "rust-call:c8b67b3b002a1d9843692e6f",
+                "resolution": "dynamic",
+                "target": null,
+                "candidates": [
+                  "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore"
+                ],
+                "reason": "接收者源码受 cfg/属性宏或未展开宏影响"
+              },
+              "callee_activation_or_unique_trait_dispatch_proven": false,
+              "edge_id": null,
+              "expected_selected_declaration": "rust:crates/winwincode-provider/src/device_model#DeviceProviderStore.invoke_model",
+              "gaps": [
+                {
+                  "code": "call_binding_unknown",
+                  "message": "快照没有有效确定的内部 callee；候选、动态或部分来源不提升。",
+                  "file": "crates/winwincode-provider/src/device_model.rs",
+                  "line": 55,
+                  "edge_id": "rust-call:c8b67b3b002a1d9843692e6f",
+                  "resolution": "dynamic",
+                  "candidates": [
+                    "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore"
+                  ],
+                  "reason": "接收者源码受 cfg/属性宏或未展开宏影响"
+                }
+              ],
+              "callee_source": "self.invoke_model",
+              "creates_or_repairs_calls_edge": false
+            }
+          }
+        }
+      ],
+      "shapes": []
+    },
+    "model_invoke": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-provider/src/device_model#DeviceProviderStore.invoke_model",
+          "name": "invoke_model",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-provider/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 168,
+              "file": "crates/winwincode-provider/src/device_model.rs",
+              "line": 69
+            },
+            "declaration_only": false,
+            "impl_generic": false,
+            "impl_location": {
+              "column": 0,
+              "end_line": 263,
+              "file": "crates/winwincode-provider/src/device_model.rs",
+              "line": 20
+            },
+            "impl_trait": "",
+            "impl_trait_implementation": false,
+            "impl_type": "DeviceProviderStore",
+            "impl_type_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore",
+            "impl_type_name": "DeviceProviderStore",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-provider/src/lib.rs::device_model"
+            ],
+            "plain_self_receiver": true,
+            "rust_namespace": "device_model",
+            "self_parameter": "&self",
+            "static_method": false,
+            "trait_dispatch": false,
+            "value_parameter_count": 2
+          }
+        }
+      ],
+      "calls": [
+        {
+          "text": "self.resolve(provider_id)",
+          "type": "call_expression",
+          "function_type": "field_expression",
+          "fields": {
+            "value": "self",
+            "path": "",
+            "name": "",
+            "field": "resolve"
+          },
+          "parent_type": "try_expression",
+          "bindings": {
+            "secret_resolver": {
+              "authenticated_target": false,
+              "captured_contextual_source_reference": false,
+              "contextual_reference_basis": null,
+              "saved_edge": {
+                "id": "rust-call:5ecd82438458e871abb66487",
+                "resolution": "dynamic",
+                "target": null,
+                "candidates": [
+                  "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore"
+                ],
+                "reason": "接收者源码受 cfg/属性宏或未展开宏影响"
+              },
+              "callee_activation_or_unique_trait_dispatch_proven": false,
+              "edge_id": null,
+              "expected_selected_declaration": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.resolve",
+              "gaps": [
+                {
+                  "code": "call_binding_unknown",
+                  "message": "快照没有有效确定的内部 callee；候选、动态或部分来源不提升。",
+                  "file": "crates/winwincode-provider/src/device_model.rs",
+                  "line": 93,
+                  "edge_id": "rust-call:5ecd82438458e871abb66487",
+                  "resolution": "dynamic",
+                  "candidates": [
+                    "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore"
+                  ],
+                  "reason": "接收者源码受 cfg/属性宏或未展开宏影响"
+                }
+              ],
+              "callee_source": "self.resolve",
+              "creates_or_repairs_calls_edge": false
+            }
+          }
+        },
+        {
+          "text": "adapter.open(\n            &ProviderAdapterInvocation {\n                model_exchange_id: &open.model_exchange_id,\n                request_id: &open.request_id,\n                adapter_request_id: &adapter_request_id,\n                model_id,\n                content_type: &open.request.content_type,\n                payload: &payload,\n            },\n            &secret,\n        )",
+          "type": "call_expression",
+          "function_type": "field_expression",
+          "fields": {
+            "value": "adapter",
+            "path": "",
+            "name": "",
+            "field": "open"
+          },
+          "parent_type": "let_condition",
+          "bindings": {
+            "store_open": {
+              "authenticated_target": false,
+              "captured_contextual_source_reference": true,
+              "contextual_reference_basis": "exact_saved_candidate",
+              "saved_edge": {
+                "id": "rust-call:f44a596141f2b0a15b7216f4",
+                "resolution": "dynamic",
+                "target": null,
+                "candidates": [
+                  "rust:crates/winwincode-audit/src/store#AuditStore.open",
+                  "rust:crates/winwincode-codex/src/action_bridge#ExecutionPortActionGate.open",
+                  "rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.open",
+                  "rust:crates/winwincode-codex/src/candidate_artifact_outbox#CandidateArtifactOutbox.open",
+                  "rust:crates/winwincode-codex/src/diagnostic_artifact_outbox#DiagnosticArtifactOutbox.open",
+                  "rust:crates/winwincode-codex/src/model_port_client#WorkerModelPortClient.open",
+                  "rust:crates/winwincode-codex/src/outbox#ExecutionOutbox.open",
+                  "rust:crates/winwincode-codex/src/store#AdapterStore.open",
+                  "rust:crates/winwincode-control-plane/src/delivery_production_adapters#LocalDeliveryAuthority.open",
+                  "rust:crates/winwincode-control-plane/src/delivery_production_adapters#LocalExecutionJobDispatcher.open",
+                  "rust:crates/winwincode-control-plane/src/local_secret_store#LocalSecretStoreAdapter.open",
+                  "rust:crates/winwincode-control-plane/src/model_execution_runtime#DurableModelExchangeAuthority.open",
+                  "rust:crates/winwincode-control-plane/src/model_execution_runtime#ModelExecutionRuntime.open",
+                  "rust:crates/winwincode-control-plane/src/model_retry_planner#DurableModelRetryPreOpenPlanner.open",
+                  "rust:crates/winwincode-control-plane/src/model_retry_settlement#DurableModelRetryContextSource.open",
+                  "rust:crates/winwincode-control-plane/src/model_retry_settlement#DurableProviderRetrySettlement.open",
+                  "rust:crates/winwincode-control-plane/src/provider_gateway#ProviderGateway.open",
+                  "rust:crates/winwincode-control-plane/src/provider_production#<DeterministicLoopbackProviderAdapter as ProviderAdapterPort>.open",
+                  "rust:crates/winwincode-control-plane/src/provider_production#DurableProviderGatewayIdentitySource.open",
+                  "rust:crates/winwincode-control-plane/src/provider_production#StandaloneModelExecutionApplication.open",
+                  "rust:crates/winwincode-control-plane/src/publication_production#LocalPublicationAuthority.open",
+                  "rust:crates/winwincode-control-plane/src/publication_production#LocalPublicationProviderRegistry.open",
+                  "rust:crates/winwincode-control-plane/src/temporary_root_lease#TemporaryRootLeaseManager.open",
+                  "rust:crates/winwincode-control-plane/src/vault_secret_store#VaultKmsSecretStoreAdapter.open",
+                  "rust:crates/winwincode-control-plane/src/worker_execution_lifecycle#DurableWorkerExecutionLifecycle.open",
+                  "rust:crates/winwincode-device-client/src/managed_app#ManagedAppSupervisor.open",
+                  "rust:crates/winwincode-device-client/src/store#DeviceStore.open",
+                  "rust:crates/winwincode-device-client/src/worker_logs#WorkerLogRecorder.open",
+                  "rust:crates/winwincode-execution-port/src/action_enforcement#FileActionReceiptUseStore.open",
+                  "rust:crates/winwincode-integration-sqlite/src/lib#IntegrationStorage.open",
+                  "rust:crates/winwincode-integration-sqlite/src/slack_rate_limit#SlackRateLimitGate.open",
+                  "rust:crates/winwincode-observability-sqlite/src/lib#SqliteObservability.open",
+                  "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+                  "rust:crates/winwincode-provider/src/provider_https_sse#<HttpsSseProviderAdapter as ProviderAdapterPort>.open",
+                  "rust:crates/winwincode-provider/src/types#ProviderAdapterPort.open",
+                  "rust:crates/winwincode-repository-context/src/git_snapshot#GitRepositorySnapshot.open",
+                  "rust:crates/winwincode-server/src/auth_session#SqliteAuthSessionManager.open",
+                  "rust:crates/winwincode-server/src/client_candidates#ClientCandidatesApplication.open",
+                  "rust:crates/winwincode-server/src/client_connections#ClientConnectionsApplication.open",
+                  "rust:crates/winwincode-server/src/client_exchange#ClientExchangeApplication.open",
+                  "rust:crates/winwincode-server/src/client_occupancy#ClientOccupancyApplication.open",
+                  "rust:crates/winwincode-server/src/client_repositories#ClientRepositoriesApplication.open",
+                  "rust:crates/winwincode-server/src/client_sessions#ClientSessionsApplication.open",
+                  "rust:crates/winwincode-server/src/durable_event_hub#DurableEventHub.open",
+                  "rust:crates/winwincode-server/src/preview#PreviewApplication.open",
+                  "rust:crates/winwincode-server/src/remote_worker_transport#FileRemoteWorkerAuthenticator.open",
+                  "rust:crates/winwincode-server/src/user_accounts#UserAccountService.open",
+                  "rust:crates/winwincode-storage/src/artifact#ArtifactStore.open",
+                  "rust:crates/winwincode-storage/src/artifact#LocalArtifactObjectStore.open",
+                  "rust:crates/winwincode-storage/src/git_source#LocalGitSourceResolver.open",
+                  "rust:crates/winwincode-storage/src/lib#SqliteStorage.open",
+                  "rust:crates/winwincode-storage/src/worker_session_slots#WorkerSessionSlots.open",
+                  "rust:crates/winwincode-worker/src/action_enforcement#DurableWorkerActionEnforcement.open",
+                  "rust:crates/winwincode-worker/src/change_batch_store#ChangeBatchStore.open",
+                  "rust:crates/winwincode-worker/src/device_model#DeviceModels.open",
+                  "rust:crates/winwincode-worker/src/probe_evidence#DurableProbeEvidenceStore.open",
+                  "rust:crates/winwincode-worker/src/probe_reducer#ProbeReducer.open",
+                  "rust:crates/winwincode-worker/src/probe_scheduler#ProbeJournal.open",
+                  "rust:crates/winwincode-worker/src/probe_scheduler#ProbeScheduler.open",
+                  "rust:crates/winwincode-worker/src/remote_transport#RemoteWorkerPort.open",
+                  "rust:crates/winwincode-worker/src/validation_artifact#DurableValidationArtifactStore.open",
+                  "rust:crates/winwincode-worker/src/workspace#WorkspaceManager.open",
+                  "rust:crates/winwincode-worker/src/workspace_runtime#JobWorkspaceRuntime.open"
+                ],
+                "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+              },
+              "callee_activation_or_unique_trait_dispatch_proven": false,
+              "edge_id": null,
+              "expected_selected_declaration": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+              "gaps": [
+                {
+                  "code": "call_binding_unknown",
+                  "message": "快照没有有效确定的内部 callee；候选、动态或部分来源不提升。",
+                  "file": "crates/winwincode-provider/src/device_model.rs",
+                  "line": 101,
+                  "edge_id": "rust-call:f44a596141f2b0a15b7216f4",
+                  "resolution": "dynamic",
+                  "candidates": [
+                    "rust:crates/winwincode-audit/src/store#AuditStore.open",
+                    "rust:crates/winwincode-codex/src/action_bridge#ExecutionPortActionGate.open",
+                    "rust:crates/winwincode-codex/src/adapter#ProductionCodexAdapter.open",
+                    "rust:crates/winwincode-codex/src/candidate_artifact_outbox#CandidateArtifactOutbox.open",
+                    "rust:crates/winwincode-codex/src/diagnostic_artifact_outbox#DiagnosticArtifactOutbox.open",
+                    "rust:crates/winwincode-codex/src/model_port_client#WorkerModelPortClient.open",
+                    "rust:crates/winwincode-codex/src/outbox#ExecutionOutbox.open",
+                    "rust:crates/winwincode-codex/src/store#AdapterStore.open",
+                    "rust:crates/winwincode-control-plane/src/delivery_production_adapters#LocalDeliveryAuthority.open",
+                    "rust:crates/winwincode-control-plane/src/delivery_production_adapters#LocalExecutionJobDispatcher.open",
+                    "rust:crates/winwincode-control-plane/src/local_secret_store#LocalSecretStoreAdapter.open",
+                    "rust:crates/winwincode-control-plane/src/model_execution_runtime#DurableModelExchangeAuthority.open",
+                    "rust:crates/winwincode-control-plane/src/model_execution_runtime#ModelExecutionRuntime.open",
+                    "rust:crates/winwincode-control-plane/src/model_retry_planner#DurableModelRetryPreOpenPlanner.open",
+                    "rust:crates/winwincode-control-plane/src/model_retry_settlement#DurableModelRetryContextSource.open",
+                    "rust:crates/winwincode-control-plane/src/model_retry_settlement#DurableProviderRetrySettlement.open",
+                    "rust:crates/winwincode-control-plane/src/provider_gateway#ProviderGateway.open",
+                    "rust:crates/winwincode-control-plane/src/provider_production#<DeterministicLoopbackProviderAdapter as ProviderAdapterPort>.open",
+                    "rust:crates/winwincode-control-plane/src/provider_production#DurableProviderGatewayIdentitySource.open",
+                    "rust:crates/winwincode-control-plane/src/provider_production#StandaloneModelExecutionApplication.open",
+                    "rust:crates/winwincode-control-plane/src/publication_production#LocalPublicationAuthority.open",
+                    "rust:crates/winwincode-control-plane/src/publication_production#LocalPublicationProviderRegistry.open",
+                    "rust:crates/winwincode-control-plane/src/temporary_root_lease#TemporaryRootLeaseManager.open",
+                    "rust:crates/winwincode-control-plane/src/vault_secret_store#VaultKmsSecretStoreAdapter.open",
+                    "rust:crates/winwincode-control-plane/src/worker_execution_lifecycle#DurableWorkerExecutionLifecycle.open",
+                    "rust:crates/winwincode-device-client/src/managed_app#ManagedAppSupervisor.open",
+                    "rust:crates/winwincode-device-client/src/store#DeviceStore.open",
+                    "rust:crates/winwincode-device-client/src/worker_logs#WorkerLogRecorder.open",
+                    "rust:crates/winwincode-execution-port/src/action_enforcement#FileActionReceiptUseStore.open",
+                    "rust:crates/winwincode-integration-sqlite/src/lib#IntegrationStorage.open",
+                    "rust:crates/winwincode-integration-sqlite/src/slack_rate_limit#SlackRateLimitGate.open",
+                    "rust:crates/winwincode-observability-sqlite/src/lib#SqliteObservability.open",
+                    "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.open",
+                    "rust:crates/winwincode-provider/src/provider_https_sse#<HttpsSseProviderAdapter as ProviderAdapterPort>.open",
+                    "rust:crates/winwincode-provider/src/types#ProviderAdapterPort.open",
+                    "rust:crates/winwincode-repository-context/src/git_snapshot#GitRepositorySnapshot.open",
+                    "rust:crates/winwincode-server/src/auth_session#SqliteAuthSessionManager.open",
+                    "rust:crates/winwincode-server/src/client_candidates#ClientCandidatesApplication.open",
+                    "rust:crates/winwincode-server/src/client_connections#ClientConnectionsApplication.open",
+                    "rust:crates/winwincode-server/src/client_exchange#ClientExchangeApplication.open",
+                    "rust:crates/winwincode-server/src/client_occupancy#ClientOccupancyApplication.open",
+                    "rust:crates/winwincode-server/src/client_repositories#ClientRepositoriesApplication.open",
+                    "rust:crates/winwincode-server/src/client_sessions#ClientSessionsApplication.open",
+                    "rust:crates/winwincode-server/src/durable_event_hub#DurableEventHub.open",
+                    "rust:crates/winwincode-server/src/preview#PreviewApplication.open",
+                    "rust:crates/winwincode-server/src/remote_worker_transport#FileRemoteWorkerAuthenticator.open",
+                    "rust:crates/winwincode-server/src/user_accounts#UserAccountService.open",
+                    "rust:crates/winwincode-storage/src/artifact#ArtifactStore.open",
+                    "rust:crates/winwincode-storage/src/artifact#LocalArtifactObjectStore.open",
+                    "rust:crates/winwincode-storage/src/git_source#LocalGitSourceResolver.open",
+                    "rust:crates/winwincode-storage/src/lib#SqliteStorage.open",
+                    "rust:crates/winwincode-storage/src/worker_session_slots#WorkerSessionSlots.open",
+                    "rust:crates/winwincode-worker/src/action_enforcement#DurableWorkerActionEnforcement.open",
+                    "rust:crates/winwincode-worker/src/change_batch_store#ChangeBatchStore.open",
+                    "rust:crates/winwincode-worker/src/device_model#DeviceModels.open",
+                    "rust:crates/winwincode-worker/src/probe_evidence#DurableProbeEvidenceStore.open",
+                    "rust:crates/winwincode-worker/src/probe_reducer#ProbeReducer.open",
+                    "rust:crates/winwincode-worker/src/probe_scheduler#ProbeJournal.open",
+                    "rust:crates/winwincode-worker/src/probe_scheduler#ProbeScheduler.open",
+                    "rust:crates/winwincode-worker/src/remote_transport#RemoteWorkerPort.open",
+                    "rust:crates/winwincode-worker/src/validation_artifact#DurableValidationArtifactStore.open",
+                    "rust:crates/winwincode-worker/src/workspace#WorkspaceManager.open",
+                    "rust:crates/winwincode-worker/src/workspace_runtime#JobWorkspaceRuntime.open"
+                  ],
+                  "reason": "字段/变量/表达式接收者、trait 和 Deref 分派未推断；同名仅为候选"
+                }
+              ],
+              "callee_source": "adapter.open",
+              "creates_or_repairs_calls_edge": false
+            }
+          }
+        }
+      ],
+      "shapes": []
+    },
+    "secret_resolver": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore.resolve",
+          "name": "resolve",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-provider/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 486,
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "line": 471
+            },
+            "declaration_only": false,
+            "impl_generic": false,
+            "impl_location": {
+              "column": 0,
+              "end_line": 487,
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "line": 74
+            },
+            "impl_trait": "",
+            "impl_trait_implementation": false,
+            "impl_type": "DeviceProviderStore",
+            "impl_type_id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore",
+            "impl_type_name": "DeviceProviderStore",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-provider/src/lib.rs::device_store"
+            ],
+            "plain_self_receiver": true,
+            "rust_namespace": "device_store",
+            "self_parameter": "&self",
+            "static_method": false,
+            "trait_dispatch": false,
+            "value_parameter_count": 2
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": [
+        {
+          "type": "field_expression",
+          "source": "self.connection.query_row",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "self.connection",
+            "field": "query_row",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_expression",
+              "source": "self.connection"
+            },
+            {
+              "type": "field_identifier",
+              "source": "query_row"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "self.connection",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "self",
+            "field": "connection",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "self",
+              "source": "self"
+            },
+            {
+              "type": "field_identifier",
+              "source": "connection"
+            }
+          ]
+        },
+        {
+          "type": "closure_expression",
+          "source": "|row| Ok((row.get(0)?, row.get(1)?))",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "Ok((row.get(0)?, row.get(1)?))",
+            "parameters": "|row|"
+          },
+          "children": [
+            {
+              "type": "closure_parameters",
+              "source": "|row|"
+            },
+            {
+              "type": "call_expression",
+              "source": "Ok((row.get(0)?, row.get(1)?))"
+            }
+          ]
+        },
+        {
+          "type": "tuple_expression",
+          "source": "(row.get(0)?, row.get(1)?)",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "try_expression",
+              "source": "row.get(0)?"
+            },
+            {
+              "type": "try_expression",
+              "source": "row.get(1)?"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "row.get",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "row",
+            "field": "get",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "row"
+            },
+            {
+              "type": "field_identifier",
+              "source": "get"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "row.get",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "row",
+            "field": "get",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "row"
+            },
+            {
+              "type": "field_identifier",
+              "source": "get"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "ResolvedSecret::from_bytes(secret).map_err",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "ResolvedSecret::from_bytes(secret)",
+            "field": "map_err",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "call_expression",
+              "source": "ResolvedSecret::from_bytes(secret)"
+            },
+            {
+              "type": "field_identifier",
+              "source": "map_err"
+            }
+          ]
+        },
+        {
+          "type": "closure_expression",
+          "source": "|_| DeviceProviderError",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "DeviceProviderError",
+            "parameters": "|_|"
+          },
+          "children": [
+            {
+              "type": "closure_parameters",
+              "source": "|_|"
+            },
+            {
+              "type": "identifier",
+              "source": "DeviceProviderError"
+            }
+          ]
+        },
+        {
+          "type": "tuple_expression",
+          "source": "(config, secret)",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "config"
+            },
+            {
+              "type": "identifier",
+              "source": "secret"
+            }
+          ]
+        }
+      ]
+    },
+    "secret_constructor": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-provider/src/types#ResolvedSecret.from_bytes",
+          "name": "from_bytes",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-provider/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 504,
+              "file": "crates/winwincode-provider/src/types.rs",
+              "line": 499
+            },
+            "declaration_only": false,
+            "impl_generic": false,
+            "impl_location": {
+              "column": 0,
+              "end_line": 511,
+              "file": "crates/winwincode-provider/src/types.rs",
+              "line": 493
+            },
+            "impl_trait": "",
+            "impl_trait_implementation": false,
+            "impl_type": "ResolvedSecret",
+            "impl_type_id": "rust:crates/winwincode-provider/src/types#ResolvedSecret",
+            "impl_type_name": "ResolvedSecret",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-provider/src/lib.rs::types"
+            ],
+            "plain_self_receiver": false,
+            "rust_namespace": "types",
+            "self_parameter": "",
+            "static_method": true,
+            "trait_dispatch": false,
+            "value_parameter_count": 1
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": [
+        {
+          "type": "field_expression",
+          "source": "bytes.is_empty",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "bytes",
+            "field": "is_empty",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "bytes"
+            },
+            {
+              "type": "field_identifier",
+              "source": "is_empty"
+            }
+          ]
+        },
+        {
+          "type": "struct_expression",
+          "source": "Self { bytes }",
+          "fields": {
+            "name": "Self",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "{ bytes }",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "type_identifier",
+              "source": "Self"
+            },
+            {
+              "type": "field_initializer_list",
+              "source": "{ bytes }"
+            }
+          ]
+        },
+        {
+          "type": "shorthand_field_initializer",
+          "source": "bytes",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "bytes"
+            }
+          ]
+        }
+      ]
+    },
+    "provider_factory": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-provider/src/device_store#adapter",
+          "name": "adapter",
+          "kind": "function",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-provider/src/lib.rs",
+            "declaration_location": {
+              "column": 0,
+              "end_line": 555,
+              "file": "crates/winwincode-provider/src/device_store.rs",
+              "line": 526
+            },
+            "declaration_only": false,
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-provider/src/lib.rs::device_store"
+            ],
+            "plain_self_receiver": false,
+            "rust_namespace": "device_store",
+            "self_parameter": "",
+            "static_method": false,
+            "trait_dispatch": false,
+            "value_parameter_count": 1
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": [
+        {
+          "type": "field_expression",
+          "source": "HttpsSseProviderConfig::try_new(\n        config.provider_id.clone(),\n        config.endpoint.clone(),\n        HttpsSseProviderTimeouts {\n            connect: Duration::from_secs(15),\n            idle: Duration::from_mins(1),\n            total: Duration::from_mins(5),\n        },\n        HttpsSseProviderLimits {\n            response_bytes: 16 * 1024 * 1024,\n            event_bytes: 1024 * 1024,\n            events: 65536,\n        },\n    )\n    .map_err",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "HttpsSseProviderConfig::try_new(\n        config.provider_id.clone(),\n        config.endpoint.clone(),\n        HttpsSseProviderTimeouts {\n            connect: Duration::from_secs(15),\n            idle: Duration::from_mins(1),\n            total: Duration::from_mins(5),\n        },\n        HttpsSseProviderLimits {\n            response_bytes: 16 * 1024 * 1024,\n            event_bytes: 1024 * 1024,\n            events: 65536,\n        },\n    )",
+            "field": "map_err",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "call_expression",
+              "source": "HttpsSseProviderConfig::try_new(\n        config.provider_id.clone(),\n        config.endpoint.clone(),\n        HttpsSseProviderTimeouts {\n            connect: Duration::from_secs(15),\n            idle: Duration::from_mins(1),\n            total: Duration::from_mins(5),\n        },\n        HttpsSseProviderLimits {\n            response_bytes: 16 * 1024 * 1024,\n            event_bytes: 1024 * 1024,\n            events: 65536,\n        },\n    )"
+            },
+            {
+              "type": "field_identifier",
+              "source": "map_err"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "config.provider_id.clone",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "config.provider_id",
+            "field": "clone",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_expression",
+              "source": "config.provider_id"
+            },
+            {
+              "type": "field_identifier",
+              "source": "clone"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "config.provider_id",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "config",
+            "field": "provider_id",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "config"
+            },
+            {
+              "type": "field_identifier",
+              "source": "provider_id"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "config.endpoint.clone",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "config.endpoint",
+            "field": "clone",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_expression",
+              "source": "config.endpoint"
+            },
+            {
+              "type": "field_identifier",
+              "source": "clone"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "config.endpoint",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "config",
+            "field": "endpoint",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "config"
+            },
+            {
+              "type": "field_identifier",
+              "source": "endpoint"
+            }
+          ]
+        },
+        {
+          "type": "struct_expression",
+          "source": "HttpsSseProviderTimeouts {\n            connect: Duration::from_secs(15),\n            idle: Duration::from_mins(1),\n            total: Duration::from_mins(5),\n        }",
+          "fields": {
+            "name": "HttpsSseProviderTimeouts",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "{\n            connect: Duration::from_secs(15),\n            idle: Duration::from_mins(1),\n            total: Duration::from_mins(5),\n        }",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "type_identifier",
+              "source": "HttpsSseProviderTimeouts"
+            },
+            {
+              "type": "field_initializer_list",
+              "source": "{\n            connect: Duration::from_secs(15),\n            idle: Duration::from_mins(1),\n            total: Duration::from_mins(5),\n        }"
+            }
+          ]
+        },
+        {
+          "type": "field_initializer",
+          "source": "connect: Duration::from_secs(15)",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "Duration::from_secs(15)",
+            "field": "connect",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_identifier",
+              "source": "connect"
+            },
+            {
+              "type": "call_expression",
+              "source": "Duration::from_secs(15)"
+            }
+          ]
+        },
+        {
+          "type": "field_initializer",
+          "source": "idle: Duration::from_mins(1)",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "Duration::from_mins(1)",
+            "field": "idle",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_identifier",
+              "source": "idle"
+            },
+            {
+              "type": "call_expression",
+              "source": "Duration::from_mins(1)"
+            }
+          ]
+        },
+        {
+          "type": "field_initializer",
+          "source": "total: Duration::from_mins(5)",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "Duration::from_mins(5)",
+            "field": "total",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_identifier",
+              "source": "total"
+            },
+            {
+              "type": "call_expression",
+              "source": "Duration::from_mins(5)"
+            }
+          ]
+        },
+        {
+          "type": "struct_expression",
+          "source": "HttpsSseProviderLimits {\n            response_bytes: 16 * 1024 * 1024,\n            event_bytes: 1024 * 1024,\n            events: 65536,\n        }",
+          "fields": {
+            "name": "HttpsSseProviderLimits",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "{\n            response_bytes: 16 * 1024 * 1024,\n            event_bytes: 1024 * 1024,\n            events: 65536,\n        }",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "type_identifier",
+              "source": "HttpsSseProviderLimits"
+            },
+            {
+              "type": "field_initializer_list",
+              "source": "{\n            response_bytes: 16 * 1024 * 1024,\n            event_bytes: 1024 * 1024,\n            events: 65536,\n        }"
+            }
+          ]
+        },
+        {
+          "type": "field_initializer",
+          "source": "response_bytes: 16 * 1024 * 1024",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "16 * 1024 * 1024",
+            "field": "response_bytes",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_identifier",
+              "source": "response_bytes"
+            },
+            {
+              "type": "binary_expression",
+              "source": "16 * 1024 * 1024"
+            }
+          ]
+        },
+        {
+          "type": "field_initializer",
+          "source": "event_bytes: 1024 * 1024",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "1024 * 1024",
+            "field": "event_bytes",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_identifier",
+              "source": "event_bytes"
+            },
+            {
+              "type": "binary_expression",
+              "source": "1024 * 1024"
+            }
+          ]
+        },
+        {
+          "type": "field_initializer",
+          "source": "events: 65536",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "65536",
+            "field": "events",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "field_identifier",
+              "source": "events"
+            },
+            {
+              "type": "integer_literal",
+              "source": "65536"
+            }
+          ]
+        },
+        {
+          "type": "closure_expression",
+          "source": "|_| DeviceProviderError",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "DeviceProviderError",
+            "parameters": "|_|"
+          },
+          "children": [
+            {
+              "type": "closure_parameters",
+              "source": "|_|"
+            },
+            {
+              "type": "identifier",
+              "source": "DeviceProviderError"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "transport\n            .with_specific_tls_roots(vec![fs::read(path)?])\n            .map_err",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "transport\n            .with_specific_tls_roots(vec![fs::read(path)?])",
+            "field": "map_err",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "call_expression",
+              "source": "transport\n            .with_specific_tls_roots(vec![fs::read(path)?])"
+            },
+            {
+              "type": "field_identifier",
+              "source": "map_err"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "transport\n            .with_specific_tls_roots",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "transport",
+            "field": "with_specific_tls_roots",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "transport"
+            },
+            {
+              "type": "field_identifier",
+              "source": "with_specific_tls_roots"
+            }
+          ]
+        },
+        {
+          "type": "closure_expression",
+          "source": "|_| DeviceProviderError",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "DeviceProviderError",
+            "parameters": "|_|"
+          },
+          "children": [
+            {
+              "type": "closure_parameters",
+              "source": "|_|"
+            },
+            {
+              "type": "identifier",
+              "source": "DeviceProviderError"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "config.protocol",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "config",
+            "field": "protocol",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "config"
+            },
+            {
+              "type": "field_identifier",
+              "source": "protocol"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "transport\n            .with_anthropic_messages(8192, ProviderTokenPricing::default())\n            .map_err",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "transport\n            .with_anthropic_messages(8192, ProviderTokenPricing::default())",
+            "field": "map_err",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "call_expression",
+              "source": "transport\n            .with_anthropic_messages(8192, ProviderTokenPricing::default())"
+            },
+            {
+              "type": "field_identifier",
+              "source": "map_err"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "transport\n            .with_anthropic_messages",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "transport",
+            "field": "with_anthropic_messages",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "transport"
+            },
+            {
+              "type": "field_identifier",
+              "source": "with_anthropic_messages"
+            }
+          ]
+        },
+        {
+          "type": "closure_expression",
+          "source": "|_| DeviceProviderError",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "DeviceProviderError",
+            "parameters": "|_|"
+          },
+          "children": [
+            {
+              "type": "closure_parameters",
+              "source": "|_|"
+            },
+            {
+              "type": "identifier",
+              "source": "DeviceProviderError"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "HttpsSseProviderAdapter::try_new(transport).map_err",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "HttpsSseProviderAdapter::try_new(transport)",
+            "field": "map_err",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "call_expression",
+              "source": "HttpsSseProviderAdapter::try_new(transport)"
+            },
+            {
+              "type": "field_identifier",
+              "source": "map_err"
+            }
+          ]
+        },
+        {
+          "type": "closure_expression",
+          "source": "|_| DeviceProviderError",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "",
+            "field": "",
+            "body": "DeviceProviderError",
+            "parameters": "|_|"
+          },
+          "children": [
+            {
+              "type": "closure_parameters",
+              "source": "|_|"
+            },
+            {
+              "type": "identifier",
+              "source": "DeviceProviderError"
+            }
+          ]
+        }
+      ]
+    },
+    "provider_open": {
+      "selected": [
+        {
+          "id": "rust:crates/winwincode-provider/src/provider_https_sse#<HttpsSseProviderAdapter as ProviderAdapterPort>.open",
+          "name": "open",
+          "kind": "method",
+          "metadata": {
+            "async": false,
+            "attribute_macros_unknown": false,
+            "attributes": [],
+            "builtin_crate_attribute_models": [],
+            "cfg_conditions": [],
+            "cfg_test": false,
+            "conditional_definition": false,
+            "crate_root": "crates/winwincode-provider/src/lib.rs",
+            "declaration_location": {
+              "column": 4,
+              "end_line": 805,
+              "file": "crates/winwincode-provider/src/provider_https_sse.rs",
+              "line": 796
+            },
+            "declaration_only": false,
+            "impl_generic": false,
+            "impl_location": {
+              "column": 0,
+              "end_line": 861,
+              "file": "crates/winwincode-provider/src/provider_https_sse.rs",
+              "line": 791
+            },
+            "impl_trait": "ProviderAdapterPort",
+            "impl_trait_implementation": true,
+            "impl_type": "HttpsSseProviderAdapter",
+            "impl_type_id": "rust:crates/winwincode-provider/src/provider_https_sse#HttpsSseProviderAdapter",
+            "impl_type_name": "HttpsSseProviderAdapter",
+            "language": "rust",
+            "method_constraint_gaps": [],
+            "method_type_parameters": "",
+            "method_where_clause": "",
+            "module_contexts": [
+              "crates/winwincode-provider/src/lib.rs::provider_https_sse"
+            ],
+            "plain_self_receiver": true,
+            "rust_namespace": "provider_https_sse",
+            "self_parameter": "&self",
+            "static_method": false,
+            "trait_dispatch": true,
+            "value_parameter_count": 3
+          }
+        }
+      ],
+      "calls": [],
+      "shapes": [
+        {
+          "type": "field_expression",
+          "source": "self.open_https",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "self",
+            "field": "open_https",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "self",
+              "source": "self"
+            },
+            {
+              "type": "field_identifier",
+              "source": "open_https"
+            }
+          ]
+        },
+        {
+          "type": "field_expression",
+          "source": "credential.expose",
+          "fields": {
+            "name": "",
+            "type": "",
+            "value": "credential",
+            "field": "expose",
+            "body": "",
+            "parameters": ""
+          },
+          "children": [
+            {
+              "type": "identifier",
+              "source": "credential"
+            },
+            {
+              "type": "field_identifier",
+              "source": "expose"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "target_executed": false,
+  "candidate_nodes": [
+    {
+      "id": "rust:crates/winwincode-provider/src/device_store#DeviceProviderStore",
+      "name": "DeviceProviderStore",
+      "kind": "type",
+      "metadata": {
+        "attribute_macros_unknown": false,
+        "attributes": [],
+        "builtin_crate_attribute_models": [],
+        "cfg_conditions": [],
+        "conditional_definition": false,
+        "declaration_location": {
+          "column": 0,
+          "end_line": 72,
+          "file": "crates/winwincode-provider/src/device_store.rs",
+          "line": 69
+        },
+        "generic_definition": false,
+        "helper_nested_model_gaps": [],
+        "language": "rust",
+        "module_contexts": [
+          "crates/winwincode-provider/src/lib.rs::device_store"
+        ],
+        "type_alias_unknown": false,
+        "type_kind": "struct_item"
+      }
+    }
+  ]
+}

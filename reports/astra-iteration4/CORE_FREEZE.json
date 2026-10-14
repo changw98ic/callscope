@@ -1,0 +1,18 @@
+{
+  "package_version": "0.7.0",
+  "tool_identity": {
+    "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+  },
+  "module_sha256": {
+    "semantic_sources": "dab9108e47787b451665563bc08aab62e906eb0e02d3f77c2f70182bf00f5381",
+    "lexical_bindings": "5e8d787afd041afc6b30452b7d33fb1f6e2692f182f8dcbd14d36c05ab2ac081",
+    "port_wiring": "7e7291643aa873a697b7ea9d123fb274732badeb617754f73d7619ad6a9efc45",
+    "navigation_analysis": "84fef8803a8cd378f572faa29683dbadfa39e7bc4967751efc3eb098b105f3e1",
+    "atomicity_analysis": "899f6fdb7fab0e67576cf4543e404dc76a4d4eb8604b55a6aae21be2234254c6"
+  },
+  "freeze_review": "Astra independent source review; all reported P1 fixed or downgraded",
+  "target_executed": false,
+  "tool_tests_run": false
+}

@@ -1,0 +1,1416 @@
+{
+  "kind": "current-product-documentation-and-saved-publication-readback",
+  "created_at": "2026-10-14T10:02:02.621999+00:00",
+  "root_documents": [
+    {
+      "file": "README.md",
+      "sha256": "31e71d33ebf1ed394b1081c6439177db7a010b74deaf2dea4545dc4c4046843e",
+      "bytes": 56783
+    },
+    {
+      "file": "docs/API.md",
+      "sha256": "bea4a098b1866d36740d13e6890fcfcf5706ea8dacf7c7cc225898172603a009",
+      "bytes": 51412
+    },
+    {
+      "file": "docs/AUTOMATED_REPORTS.md",
+      "sha256": "3cbc235c2d22906eb3fa48ae8b594b7bae0b5b1a7f6a2318ca04f58e035f4ecd",
+      "bytes": 12176
+    }
+  ],
+  "reused_document_owner_record": {
+    "file": "PRODUCT_DOCUMENTATION_PUBLICATION.json",
+    "sha256": "65e613df1b8cd0734401fdd63c18d9f21e70308448f70b904d71b3a754184df6",
+    "files": [
+      {
+        "file": "docs/ARCHITECTURE_V1_1.md",
+        "sha256": "d48f2e88dca08a7df99915685ac4704bee059ed4481c618786770f290bc4a0f5",
+        "bytes": 52277,
+        "current_formal_directory": "reports/astra-iteration12-scope2",
+        "changes": "回填scope2正式分析、报告、有限原内容完成和CLI读回；当前链接转scope2，历史v13/v12及运行/全程序边界保留。",
+        "initial_preparation_changes": "同步v0.14身份和正式结果待生成状态；补条件沿袭/发布、操作职责解释及文档部署边界；v13/v12数字明确历史。"
+      },
+      {
+        "file": "docs/IMPLEMENTATION_CONTRACT.md",
+        "sha256": "d3eb73e471961281bd1bfd36835a76a4b6dde2c985790ef64154d2422574cb50",
+        "bytes": 38138,
+        "current_formal_directory": "reports/astra-iteration12-scope2",
+        "changes": "以原两报告有限内容合同定义完整范围；旧GOAL_ACCEPTANCE五/30仅子追踪，回填正式账本、观察比较、身份及有限内容complete。",
+        "initial_preparation_changes": "修正v0.11旧current身份与词法/Rust版本；补goal/report规则、文档locators、真实操作解释和报告v3协议；区分旧账本与当前正式状态。"
+      },
+      {
+        "file": "docs/CAPABILITY_ROADMAP.md",
+        "sha256": "fc7bb6976abd03fcb77d7f97eccbf339c6320764132a661a131b3796b35557ea",
+        "bytes": 27979,
+        "current_formal_directory": "reports/astra-iteration12-scope2",
+        "changes": "回填scope2真实字段/条件、职责操作、文档部署及报告结果；原已读有限内容目标完成，计数不作覆盖率。",
+        "initial_preparation_changes": "按功能正确性、可扩展性、性能排序；列本轮已实现能力与待正式生成结果，历史差距不再冒充当前未实现。"
+      },
+      {
+        "file": "docs/UPSTREAM_REUSE.md",
+        "sha256": "8ba66b4ef395f7021f6edb780351a58fd17d35813428f78cd35ba99ded18cd36",
+        "bytes": 8581,
+        "current_formal_directory": "reports/astra-iteration12-scope2",
+        "changes": "回填scope2正常full冷/热同ID与报告保存状态，保留上游固定来源及历史memo记录，不宣称本轮缓存收益。",
+        "initial_preparation_changes": "同步v0.14，保留Axon/CocoIndex固定来源与许可；区分当前full重算和历史CocoIndex memo复用；不增加上游能力宣称。"
+      },
+      {
+        "file": "docs/EXTENDING.md",
+        "sha256": "a5fe22fac0b271d8d012e9714c80d4a1c1354194061d6925aad81fa123068510",
+        "bytes": 46444,
+        "current_formal_directory": "reports/astra-iteration12-scope2",
+        "changes": "保留v14实际扩展协议并回填scope2正常分析/报告及有限内容完成；不增加复审门或动态插件。",
+        "initial_preparation_changes": "更新source-chains3/policy-v2-documents/report3/presentation2；补三个固定类型、文档和引用协议及未知默认；无动态插件或复审门。"
+      },
+      {
+        "file": "docs/STATIC_SCOPE.md",
+        "sha256": "85afa79ecc77de38fbdb80b4c0b0bc948bc0c4cb2cc4ed5610db4a7a24f9fa38",
+        "bytes": 47764,
+        "current_formal_directory": "reports/astra-iteration12-scope2",
+        "changes": "回填scope2正式保存范围与原有限内容完成状态；partial图、source-only、原未审与运行边界继续保留。",
+        "initial_preparation_changes": "单列v0.14实现和正式结果待生成；明确字段/条件、职责与文档三方面的实际证据和未证明边界；旧v13结果标历史。"
+      }
+    ],
+    "validation": {
+      "files": 6,
+      "local_markdown_links_checked": 263,
+      "missing_local_link_targets": [],
+      "whitespace_conflict_or_fence_issues": []
+    },
+    "all_recorded_document_hashes_match": true
+  },
+  "root_local_markdown_links_checked": 262,
+  "root_link_checks": [
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration12/CURRENT_GOAL.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/AUTOMATED_REPORTS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration12-scope2/codepatchbay-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration12-scope2/winwincode-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration12-scope2/REPORT_SCOPE_GAPS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration12-scope2/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/codepatchbay-analysis-brief.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/winwincode-analysis-brief.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/codepatchbay-analysis-summary.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/winwincode-analysis-summary.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/BRIEF_INPUTS.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/PUBLICATION_IDENTITY.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/REPORT_SCOPE_GAPS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/ORIGINAL_BASELINE_COMPARISON.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/REPORT_ALIGNMENT_RESULTS.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/codepatchbay-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/codepatchbay-automatic-report.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/winwincode-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/winwincode-automatic-report.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration11/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/codepatchbay-analysis-summary.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/winwincode-analysis-summary.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/PUBLICATION_IDENTITY.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/codepatchbay-baseline-v12-and-v11.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/winwincode-baseline-v12-and-v11.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/GOAL_JUDGMENT_EVIDENCE.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/REPORT_ALIGNMENT_RESULTS.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/REPORT_SCOPE_GAPS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/codepatchbay-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/codepatchbay-automatic-report.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/winwincode-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/winwincode-automatic-report.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration10/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "requirements-maintenance.lock",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/UPSTREAM_REUSE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "THIRD_PARTY_NOTICES.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/STATIC_SCOPE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/winwincode-policy.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/STATIC_SCOPE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/STATIC_SCOPE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/winwincode-policy.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/codepatchbay-policy.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/STATIC_SCOPE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/codepatchbay-policy.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/codepatchbay-policy.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/capability-baseline.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/BASELINE_CONTRACT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/CAPABILITY_ROADMAP.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/ARCHITECTURE_V1_1.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/STATIC_SCOPE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/EXTENDING.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/UPSTREAM_REUSE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "THIRD_PARTY_NOTICES.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/INDEPENDENT_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/API.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "examples/order_service/README.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/IMPLEMENTATION_CONTRACT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/MULTILANGUAGE_CONTRACT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/CAPABILITY_ROADMAP.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-baseline/BASELINE_CONTRACT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/real-repositories/WINWINCODE_SOURCE_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/real-repositories/CODEPATCHBAY_SOURCE_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/real-repositories/REAL_REPOSITORIES_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/upstream-reuse/UPSTREAM_REUSE_SCAN.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/upstream-reuse/INDEPENDENT_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/upstream-reuse/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/upstream-reuse/codepatchbay-witness-comparison.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/upstream-reuse/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/upstream-reuse/winwincode-witness-comparison.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/codepatchbay-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/codepatchbay-rule-witnesses.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/codepatchbay-baseline-v4-and-v3.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/winwincode-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/winwincode-rule-witnesses.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/winwincode-baseline-v4-and-v3.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration1/TS_PROJECTION_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/INDEPENDENT_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/capability-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/static-contract-witnesses.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/saved-query-observations.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/codepatchbay-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/codepatchbay-baseline-v5-and-v4.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/winwincode-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration2/winwincode-baseline-v5-and-v4.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/PARAMETER_EVIDENCE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/NAVIGATION_EVIDENCE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/ATOMICITY_EVIDENCE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/INDEPENDENT_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/capability-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/finite-contract-witnesses.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/worker-generic-binding-witness.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/codepatchbay-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/codepatchbay-baseline-v6-and-v5.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/winwincode-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration3/winwincode-baseline-v6-and-v5.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/INDEPENDENT_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/GOAL_ACCEPTANCE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/capability-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/finite-contract-witnesses.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/saved-query-observations.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/codepatchbay-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/codepatchbay-baseline-v7-and-v6.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/winwincode-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration4/winwincode-baseline-v7-and-v6.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/INDEPENDENT_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/field-assessments.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/finite-contract-witnesses.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/capability-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/saved-query-observations.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/codepatchbay-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/codepatchbay-baseline-v8-and-v7.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/winwincode-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/winwincode-baseline-v8-and-v7.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration5/SUPERSEDED_SCANS.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/INDEPENDENT_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/field-assessments.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/budget-assessments.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/BUDGET_FORMAL_REVIEW.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/capability-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/finite-contract-witnesses.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/saved-query-observations.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/IR_MIGRATION_COMPARISON.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/IR_MIGRATION_RESULT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/codepatchbay-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/codepatchbay-baseline-v9-and-v8.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/winwincode-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration6/winwincode-baseline-v9-and-v8.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration7/SUPERSEDED_CANDIDATE.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/field-assessments.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/FIELD_VERSION_COMPARISON.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/capability-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/codepatchbay-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/codepatchbay-baseline-v10-and-v9.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/winwincode-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration8/winwincode-baseline-v10-and-v9.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/INDEPENDENT_REVIEW.md",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/field-assessments.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/field-relations.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/FIELD_VERSION_COMPARISON.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/saved-query-observations.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/codepatchbay-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/codepatchbay-baseline-v11-and-v10.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/winwincode-summary.json",
+      "target_exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "reports/astra-iteration9/winwincode-baseline-v11-and-v10.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/CORE_FREEZE.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "AUTOMATED_REPORTS.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/codepatchbay-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/codepatchbay-automatic-report.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/winwincode-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/winwincode-automatic-report.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/ORIGINAL_BASELINE_COMPARISON.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration12-scope2/PUBLICATION_IDENTITY.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/codepatchbay-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/codepatchbay-automatic-report.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/winwincode-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/winwincode-automatic-report.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/GOAL_JUDGMENT_EVIDENCE.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/ORIGINAL_BASELINE_COMPARISON.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/PUBLICATION_IDENTITY.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/CLI_REPORT_READBACK.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/codepatchbay-analysis-summary.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/winwincode-analysis-summary.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/REPORT_SCOPE_GAPS.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration11/REPORT_ALIGNMENT_RESULTS.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/codepatchbay-analysis-summary.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/winwincode-analysis-summary.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/codepatchbay-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/winwincode-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/PUBLICATION_IDENTITY.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/GOAL_JUDGMENT_EVIDENCE.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/REPORT_ALIGNMENT_RESULTS.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration10/REPORT_SCOPE_GAPS.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "UPSTREAM_REUSE.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-baseline/BASELINE_CONTRACT.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration7/SUPERSEDED_CANDIDATE.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration8/field-assessments.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration8/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration9/field-assessments.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration9/field-relations.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration9/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration4/finite-contract-witnesses.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "STATIC_SCOPE.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration9/saved-query-observations.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration4/GOAL_ACCEPTANCE.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration9/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/API.md",
+      "href": "../reports/astra-iteration9/REPORT.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12-scope2/codepatchbay-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12-scope2/winwincode-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12-scope2/PUBLICATION_IDENTITY.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12/REPORT_COMPLETION_CONTRACT.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/codepatchbay-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/winwincode-automatic-report.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/goal-ledger.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/GOAL_JUDGMENT_EVIDENCE.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/codepatchbay-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/winwincode-integration.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/CORE_FREEZE.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/ORIGINAL_BASELINE_COMPARISON.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/PUBLICATION_IDENTITY.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12-scope2/codepatchbay-analysis-brief.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12-scope2/winwincode-analysis-brief.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12-scope2/BRIEF_INPUTS.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration12-scope2/REPORT_SCOPE_GAPS.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/REPORT_SCOPE_GAPS.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/PROJECT_REPORT_PRESENTATION_DESIGN.md",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/CLI_REPORT_READBACK.json",
+      "target_exists": true
+    },
+    {
+      "document": "docs/AUTOMATED_REPORTS.md",
+      "href": "../reports/astra-iteration11/REPORT_ALIGNMENT_RESULTS.json",
+      "target_exists": true
+    }
+  ],
+  "missing_local_link_targets": [],
+  "formal_release_input_manifest": {
+    "file": "RELEASE_REPORT_INPUTS.json",
+    "sha256": "e930a37433b499743bcde6af2139e84fc18aee46d918586174c1fee4c095f383"
+  },
+  "formal_release_report": {
+    "file": "REPORT.md",
+    "sha256": "c967974adad26203dcec358b85937cb508ac7e095c4d82723e9f5d5216dcf1f3",
+    "bytes": 152504
+  },
+  "recorded_frozen_python_source_files": 65,
+  "frozen_source_checks_repeated": false,
+  "source_identity_basis": "successful saved release source inventory and artifact identity checks; only new documentation changes checked here",
+  "original_finite_content_complete": true,
+  "whole_program_functional_completeness_proven": false,
+  "new_source_analysis": false,
+  "database_opened": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "tool_test_suite_run": false
+}

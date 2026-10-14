@@ -1,0 +1,98 @@
+{
+  "id": "wwc-delivery-evidence-frozen-contract-slice",
+  "type": "guarded_call_sequence",
+  "severity": "info",
+  "sources": [
+    {
+      "role": "verdict_root",
+      "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+      "symbol": "resolve_production_verdict"
+    },
+    {
+      "role": "verification_runtime",
+      "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+      "symbol": "resolve_verification_runtime"
+    },
+    {
+      "role": "role_requirements",
+      "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+      "symbol": "required_roles"
+    },
+    {
+      "role": "finding_sources",
+      "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+      "symbol": "resolve_findings"
+    },
+    {
+      "role": "source_event_lookup",
+      "file": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+      "symbol": "exact_source_event"
+    },
+    {
+      "role": "canonical_evidence",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "symbol": "resolve_delivery_evidence"
+    },
+    {
+      "role": "direct_candidate_source",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "symbol": "resolve_direct_candidate_source"
+    },
+    {
+      "role": "runtime_source",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "symbol": "resolve_runtime_source"
+    },
+    {
+      "role": "runtime_terminal",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "symbol": "validate_runtime_terminal"
+    },
+    {
+      "role": "checkout_guard",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "symbol": "validate_checkout_attestation"
+    },
+    {
+      "role": "runtime_identity",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "symbol": "runtime_source_identity"
+    },
+    {
+      "role": "checkout_capture",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "symbol": "checkout_attestation_from_snapshot"
+    },
+    {
+      "role": "runtime_capture",
+      "file": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "symbol": "accepted_runtime_source"
+    },
+    {
+      "role": "frozen_commit_accessor",
+      "file": "crates/winwincode-delivery/src/domain/candidate.rs",
+      "symbol": "FrozenDeliveryCandidate.candidate_commit_id"
+    }
+  ],
+  "models": [
+    "captured-normal-statement-control-v1"
+  ],
+  "provenance": {
+    "authority": "selected-production-delivery-contract-sources",
+    "reviewer": "captured-normal-source-inventory",
+    "author_approved": false,
+    "source_doc": "crates/winwincode-delivery/src/domain/evidence.rs",
+    "note": "Selectors locate existing production declarations only. No expected record fields, guard predicates, call edges, accepted roles or runtime outcome is configured."
+  },
+  "applicability": {
+    "kind": "conditional",
+    "conditions": [
+      "Only selected captured production Rust declarations, record operands and explicit source guards are inventoried.",
+      "Normal continuation excludes propagated Result errors and explicit rejection branches; no all-path reachability or physical effect is inferred."
+    ],
+    "counterexamples": [
+      "The declaration or transport of a role/lease/fencing/source field does not establish caller authority, runtime authenticity, executor permissions or a complete publish boundary.",
+      "Stored input, derived Evidence classifications and frozen candidate references retain their own provenance; actual runtime event truth and command success remain unknown."
+    ]
+  }
+}

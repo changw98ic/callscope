@@ -1,0 +1,20 @@
+{
+  "kind": "superseded_v10_evidence_identity_issue_review",
+  "target_or_analyzer_executed": false,
+  "input": {
+    "path": "reports/astra-iteration7/codepatchbay-summary.json",
+    "sha256": "9d9d751c6d58b7eae6c25f4052b931c66bbf5cde46f54bd923e53ac0f0864dfa",
+    "snapshot_id": "38ac19d2d7646471f9431f5f4a727bfd963656f947557f78055d9bee7b8a8814",
+    "tool_identity": {
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+      "graph_backend": "axon-graph-core-1",
+      "source_hash": "dc5abc91496bf810ded9af95323a0b4bfe5050160e17896071e27b26ab289aa3"
+    }
+  },
+  "semantic_ir_version": "finite-immutable-semantic-ir-2",
+  "distinct_mismatched_record_count": 0,
+  "id_collision_count": 0,
+  "mismatches": [],
+  "collisions": {},
+  "decision": "Requires evidence() reconstruction, new tool freeze and formal republishing; semantic engine proof not independently shown wrong by this identity defect."
+}

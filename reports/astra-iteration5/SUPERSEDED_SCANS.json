@@ -1,0 +1,26 @@
+{
+  "superseded_tool_identity": {
+    "source_hash": "a59d89b8893d183a335010499db355df7aba57f4da8fdf9a566d5a215cb0a7f7",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+  },
+  "scans": [
+    {
+      "repository": "codepatchbay",
+      "snapshot_ids": [
+        "46213d80ab0d65a7534f5f18ac885686103f13dae8cf227059b96b4b4b284d30"
+      ],
+      "artifact_sha256": "bce88dac9a0977cff35d39f4b83c26b6f593d254974594404962123e0bb0444e"
+    },
+    {
+      "repository": "winwincode",
+      "snapshot_ids": [
+        "8ceb89d579e364e36e42750715f6de41c8c947e276651b754474a0ab4f4891c4"
+      ],
+      "artifact_sha256": "f3bb4a3683f3b3c08c2da5ab9207f6338eb6270568532b647959f81601e77081"
+    }
+  ],
+  "reason": "Incorrect source_copy_is_new_object label on ordinary object destructuring. Field summary v2 corrects source facts; full unknown judgments unchanged. Immutable database snapshots are retained, never edited.",
+  "final_artifacts_follow_new_core": true,
+  "target_executed": false
+}

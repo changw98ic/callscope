@@ -1,0 +1,43 @@
+{
+  "repository": "codepatchbay",
+  "snapshot_id": "dd5d4e3cc349b57eb87d0f810a415560bfd5f6b1022a990a35190a44d0e50ebb",
+  "validator_version": "responsibility-shared-reference-structure-1",
+  "check": "actual_in_memory_responsibility_shared_reference_structure",
+  "current_report_object_pointer": "/architecture/responsibility_explanations",
+  "source_index_pointer_scope": "this_responsibility_explanation_object",
+  "reference_counts": {
+    "evidence_ref": 28430,
+    "location_ref": 207137,
+    "operation_pointer": 59180,
+    "source_evidence_refs_pointer": 59180,
+    "source_locations_pointer": 59180
+  },
+  "source_location_index_count": 30358,
+  "evidence_reference_index_count": 5061,
+  "operation_count": 15223,
+  "distinct_referenced_location_count": 30358,
+  "distinct_referenced_evidence_count": 5061,
+  "distinct_referenced_operation_count": 15223,
+  "index_canonical_json_sha256": {
+    "source_location_index": "5409f4a503c6dfb9b9d3854356416b836700964b325cb32165321bcc29514022",
+    "evidence_reference_index": "6259bbce6dd11d45c14843494fd7a49886481e64388ffca8c149d53cd17a3e69"
+  },
+  "source_location_coordinate_space_counts": {
+    "captured_text_utf8": 30358
+  },
+  "failure_count": 0,
+  "failures": [],
+  "failure_details_truncated": false,
+  "all_explicit_shared_references_resolve_and_match": true,
+  "full_pattern_labels_and_arbitrary_strings_treated_as_references": false,
+  "source_locations_or_utf8_spans_modified": false,
+  "source_span_bytes_revalidated_by_this_structure_check": false,
+  "canonical_source_anchor_fields_required_on_each_referenced_location": [
+    "file",
+    "source_hash",
+    "start_byte",
+    "end_byte",
+    "span_hash"
+  ],
+  "model_or_runtime_guarantees_inferred_from_reference_resolution": false
+}

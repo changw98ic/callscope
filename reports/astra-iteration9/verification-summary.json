@@ -1,0 +1,40 @@
+{
+  "verification_mode": "normal static scans and saved queries, independent source/artifact review, syntax/link checks; no test suite",
+  "package_version": "0.11.0",
+  "pyproject_version": "0.11.0",
+  "tool_identity": {
+    "source_hash": "38933589ba90c08a8769fafa720e9c7258d29f17303c37dfadbdf491c579de7c",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+  },
+  "formal_scan_tool_identities_match": true,
+  "frozen_baseline_sha256": "16b4b05c8818fa1eecf396132ebe2ea29a8f0068801165f0649da379d9041dd7",
+  "original_acceptance_contract_sha256": "9b6f4fda6aa24f055e288690e76405779e36758f8ba986799f78f2f96aa8d118",
+  "original_goal_count": 5,
+  "original_required_obligation_count": 30,
+  "frozen_core_identity": {
+    "source_hash": "38933589ba90c08a8769fafa720e9c7258d29f17303c37dfadbdf491c579de7c",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+  },
+  "policy_bytes_identical_to_v9": true,
+  "policy_bytes_identical_to_v10": true,
+  "archived_core_source_files_verified": 43,
+  "normal_saved_query_groups": 7,
+  "normal_saved_finite_findings": 10,
+  "normal_saved_source_responses": 21,
+  "normal_saved_queries_snapshot_consistent": true,
+  "tool_python_source_syntax_review_files": 43,
+  "javascript_source_syntax_check": "node --check web/app.js",
+  "markdown_documents_checked": 18,
+  "local_links_checked": 328,
+  "missing_local_links": [],
+  "target_state_artifact": "target-state-observations.json",
+  "saved_query_artifact": "saved-query-observations.json",
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "tool_test_suite_run": false,
+  "browser_verification_run": false,
+  "package_installation_verification_run": false
+}

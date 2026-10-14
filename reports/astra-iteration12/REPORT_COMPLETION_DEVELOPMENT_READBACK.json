@@ -1,0 +1,424 @@
+{
+  "kind": "interim_actual_development_content_readback",
+  "formal_acceptance_evaluated": false,
+  "overall_complete": false,
+  "source_artifacts": [
+    {
+      "file": "reports/astra-iteration12/COMPLETION_CODEPATCHBAY_DEVELOPMENT_PROJECTION.json",
+      "sha256": "1c05dab40143775ca8b9e21b9bca7bb207549484f93f279799125721c18e2b33"
+    },
+    {
+      "file": "reports/astra-iteration12/documentation-source-query.json",
+      "sha256": "d24ace60fda5712d522ed794b8756ec1d6437baf10a319e40e59bbb11da1aca7",
+      "stage": "first non-final development query confirmed by owner"
+    },
+    {
+      "file": "reports/astra-iteration12/COMPLETION_WINWINCODE_DEVELOPMENT_PROJECTION.json",
+      "sha256": "c51d945521eb4a95020476cb2f38658245c35246709fc6ede902c530746af056",
+      "stage": "first development responsibility output; final shared-index output pending"
+    }
+  ],
+  "actual_cpb_source_explanations_observed": [
+    {
+      "original_scope_group": "cpb-command-queue",
+      "original_finite_topic": "dynamic command/environment source",
+      "actual_owner": {
+        "file": "cli/cpb.ts",
+        "symbol": "main",
+        "graph_node_id": "ts:cli/cpb#main"
+      },
+      "actual_statement": "在调用形式「import」中提供第 1 个实参「path.join(CPB_EXECUTOR_ROOT, \"cli\", \"commands\", COMMANDS[cmd])」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "actual_operation_id": "7c4a81aa4f126ca88c6fc9ba",
+      "source_explanation_file": "responsibility-explanations-codepatchbay-development.json",
+      "source_file_sha256": "a4f7d1ff0269d4f034ff7ccd2a5626f36545eddf32458db30b4caa3e0e1759ba",
+      "source_json_pointer": "/explanations/declaration_explanations/7/statements/12",
+      "operation_pointer": "/operations/253",
+      "source_refs": [
+        {
+          "rule_id": "cpb-astra-pipeline-retry-integrated",
+          "goal_id": "CPB-01",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false,
+          "source_artifact_pointer": "/judgments/0"
+        }
+      ],
+      "meaning": "Actual saved source-form explanation observed; not formal v14 acceptance or runtime guarantee."
+    },
+    {
+      "original_scope_group": "cpb-engine-audit",
+      "original_finite_topic": "broker/local source record construction",
+      "actual_owner": {
+        "file": "server/services/engine-runner.ts",
+        "symbol": "buildServices",
+        "graph_node_id": "ts:server/services/engine-runner#buildServices"
+      },
+      "actual_statement": "构造捕获记录，字段按源码次序为「createJob ← buildCreateJobPort(broker, runtimeDataRoot)；startPhase ← broker ? broker.startPhase.bind(broker) : withJobOptions(startPhase)；completePhase ← broker ? broker.completePhase.bind(broker) : withJobOptions(completePhase)；completeJob ← broker\\n      ? broker.completeJob.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, opts: LooseRecord = {}) => comp…［展示截断；完整操作保留］；failJob ← broker ? broker.failJob.bind(broker) : withJobOptions(failJob)；blockJob ← broker ? broker.blockJob.bind(broker) : withJobOptions(blockJob)；appendEvent ← broker\\n      ? broker.appendEvent.bind(broker)\\n      : runtimeDataRoot\\n      ? (root: string, project: string, jobId: string, event: EventRecord, opts: Loose…［展示截断；完整操作保留］；prepareTask ← prepareTaskForEnv(runtimeEnv)；getPool ← () => getManagedAcpPool({ cpbRoot, hubRoot, env: runtimeEnv })；getArtifactIndex ← broker\\n      ? broker.getArtifactIndex.bind(broker)\\n      : (root: string, project: string, jobId: string, opts: LooseRecord = {}) =>\\n        buildArtifactIn…［展示截断；完整操作保留］；providerServices ← {\\n      assertProviderAvailable,\\n      getProviderAdapter,\\n      delegateMarkProviderUnavailable,\\n      delegateEnqueueProviderUsage,\\n      readAgentRoutin…［展示截断；完整操作保留］」。不据构造形式推断物理持久化。",
+      "actual_operation_id": "e9f750061378e4b6133c34f4",
+      "source_explanation_file": "responsibility-explanations-codepatchbay-development.json",
+      "source_file_sha256": "a4f7d1ff0269d4f034ff7ccd2a5626f36545eddf32458db30b4caa3e0e1759ba",
+      "source_json_pointer": "/explanations/declaration_explanations/184/statements/2",
+      "operation_pointer": "/operations/6981",
+      "source_refs": [
+        {
+          "rule_id": "cpb-astra-pipeline-retry-integrated",
+          "goal_id": "CPB-01",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false,
+          "source_artifact_pointer": "/judgments/0"
+        }
+      ],
+      "meaning": "Actual saved source-form explanation observed; not formal v14 acceptance or runtime guarantee."
+    },
+    {
+      "original_scope_group": "cpb-command-queue",
+      "original_finite_topic": "dynamic command/environment source",
+      "actual_owner": {
+        "file": "server/services/executor-root.ts",
+        "symbol": "resolveExecutorRoot",
+        "graph_node_id": "ts:server/services/executor-root#resolveExecutorRoot"
+      },
+      "actual_statement": "以「return path.resolve(stringValue(envRecord.CPB_EXECUTOR_ROOT) || stringValue(fallbackRoot));」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+      "actual_operation_id": "2af77f9417ebeb82d5e9fcc6",
+      "source_explanation_file": "responsibility-explanations-codepatchbay-development.json",
+      "source_file_sha256": "a4f7d1ff0269d4f034ff7ccd2a5626f36545eddf32458db30b4caa3e0e1759ba",
+      "source_json_pointer": "/explanations/declaration_explanations/205/statements/2",
+      "operation_pointer": "/operations/7497",
+      "source_refs": [
+        {
+          "rule_id": "cpb-astra-pipeline-retry-integrated",
+          "goal_id": "CPB-01",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false,
+          "source_artifact_pointer": "/judgments/0"
+        }
+      ],
+      "meaning": "Actual saved source-form explanation observed; not formal v14 acceptance or runtime guarantee."
+    }
+  ],
+  "documentation_interim_result": {
+    "scoped_source_supported": false,
+    "classification": "unknown_or_partial_source_comparison",
+    "statement": null,
+    "necessary_gaps": [
+      {
+        "code": "documentation_source_relation_not_closed",
+        "relation": "device_message_body_connects_local_store_to_model_callback_source"
+      },
+      {
+        "code": "documentation_source_relation_not_closed",
+        "relation": "local_execute_contains_selected_invoke_source"
+      },
+      {
+        "code": "documentation_source_relation_not_closed",
+        "relation": "resolved_config_and_secret_reach_same_local_provider_source"
+      }
+    ],
+    "document_scope_preserved": [
+      {
+        "sentence": "Provider Gateway 是 Control Plane 内部的唯一模型路由和长期 Credential 使用者",
+        "explicit_scope": "Control Plane 内部",
+        "location": {
+          "file": "docs/architecture.md",
+          "line": 158,
+          "end_line": 158,
+          "start_byte": 8738,
+          "end_byte": 8830,
+          "coordinate_space": "captured_document_text_utf8",
+          "source_hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+          "text_sha256": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+          "span_hash": "cd6ab9c9b9056a3f5dc498497138d960cb71d7a84a710287d89c579c12256b90",
+          "source_excerpt": "Provider Gateway 是 Control Plane 内部的唯一模型路由和长期 Credential 使用者",
+          "source_excerpt_truncated": false,
+          "original_file_byte_offset": 0,
+          "column": 1,
+          "end_column": 93,
+          "column_unit": "utf8_bytes",
+          "original_file_start_byte": 8738,
+          "original_file_end_byte": 8830
+        }
+      },
+      {
+        "sentence": "Worker 只通过 `execution-port-model-stream` 请求模型并接收流；请求中只带短期引用、路由和预算事实",
+        "explicit_scope": null,
+        "location": {
+          "file": "docs/architecture.md",
+          "line": 158,
+          "end_line": 158,
+          "start_byte": 8833,
+          "end_byte": 8958,
+          "coordinate_space": "captured_document_text_utf8",
+          "source_hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+          "text_sha256": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+          "span_hash": "c04364d723ac2f919c5dc7e7feb7122dbb7fed7c32b2377664cb8dae4d6bd3c7",
+          "source_excerpt": "Worker 只通过 `execution-port-model-stream` 请求模型并接收流；请求中只带短期引用、路由和预算事实",
+          "source_excerpt_truncated": false,
+          "original_file_byte_offset": 0,
+          "column": 96,
+          "end_column": 221,
+          "column_unit": "utf8_bytes",
+          "original_file_start_byte": 8833,
+          "original_file_end_byte": 8958
+        }
+      }
+    ]
+  },
+  "pending_finite_content_readback": [
+    "actual static scopeMatches/matchCount relation not visible in selected declaration-explanation projection; full operations/helper selection must be checked before considering the original static-scope clause explained",
+    "original FIXED→job_superseded→lineage and GitHub/dry-run conditions await new state_lineage/publication development source output",
+    "WWC initial responsibility content has been read; final shared-index output and qualified documentation comparison still pending",
+    "all v14 formal references and completion assessment remain pending"
+  ],
+  "navigation_labels_or_operation_counts_used_as_completion": false,
+  "target_source_read": false,
+  "database_opened": false,
+  "analyzer_run": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "actual_wwc_source_explanations_observed": [
+    {
+      "actual_owner": {
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient",
+        "graph_node_id": "ts:apps/client/src/application#mountWinWinCodeClient"
+      },
+      "actual_summary": "构造捕获记录，字段按源码次序为「now ← now」。不据构造形式推断物理持久化。 将「browser」作为第 1 个实参交给已绑定接口「ts:apps/client/src/preferences#mountPreferences」，对应捕获形参「browser: Window」。该普通调用关系不替代进程或网络协议关系。 包含赋值/更新「brand.textContent = 'WinWinCode'」，捕获目标为「brand.textContent」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。 捕获 binding「browser」的初始化来源为「options.window ?? window」；保留该声明与初始化表达式，不推任意后续读取的当前值。 对捕获 binding「accessFailureSession」存在源更新「accessFailureSession = authSession」；循环和分支条件见操作上下文，未推执行次数或最终数值。",
+      "source_file": "responsibility-explanations-winwincode-development.json",
+      "source_file_sha256": "817dbe94d7f6db34756661ce07c3be7e7daa938b2ad5b39841d845629fcfd49b",
+      "source_json_pointer": "/explanations/declaration_explanations/0",
+      "summary_statement_ids": [
+        "db34449664fae0a40835cb47",
+        "9566424e1d6f2337321eeeef",
+        "ba9b139d791d15b92fd4fa8b",
+        "60978d2bab249df225ed30e9",
+        "72ee41fee6177c5b3c214b3a"
+      ],
+      "is_final_v14_acceptance": false,
+      "source_statements": [
+        {
+          "id": "60978d2bab249df225ed30e9",
+          "operation_id": "06e7a919b7ddc343853bbad7",
+          "operation_pointer": "/operations/0"
+        },
+        {
+          "id": "9566424e1d6f2337321eeeef",
+          "operation_id": "126867745ee51af1005b60b8",
+          "operation_pointer": "/operations/5"
+        },
+        {
+          "id": "db34449664fae0a40835cb47",
+          "operation_id": "5c1094a2d016d51589fcb7c8",
+          "operation_pointer": "/operations/14"
+        },
+        {
+          "id": "72ee41fee6177c5b3c214b3a",
+          "operation_id": "e6efc6d96236809596ffb5be",
+          "operation_pointer": "/operations/61"
+        },
+        {
+          "id": "ba9b139d791d15b92fd4fa8b",
+          "operation_id": "319b799f00be3abf2d5088ab",
+          "operation_pointer": "/operations/443"
+        }
+      ],
+      "reference_resolution_requires_final_schema_readback": true
+    },
+    {
+      "actual_owner": {
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn",
+        "graph_node_id": "rust:crates/winwincode-codex/src/adapter#<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn"
+      },
+      "actual_summary": "以无显式实参的调用形式「self.run_key_for_thread(thread_id)?.to_owned」调用尚未唯一绑定的目标；没有据调用存在断言激活、存储或网络效果。 包含赋值/更新「run.record.submission_digest = Some(submission_digest)」，捕获目标为「run.record.submission_digest」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。 捕获 binding「run_key」的初始化来源为「self.run_key_for_thread(thread_id)?.to_owned()」；保留该声明与初始化表达式，不推任意后续读取的当前值。 条件「goal != expected_goal」的捕获提前退出分支为「Err_return：Err(conflict())」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return Err(conflict())」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+      "source_file": "responsibility-explanations-winwincode-development.json",
+      "source_file_sha256": "817dbe94d7f6db34756661ce07c3be7e7daa938b2ad5b39841d845629fcfd49b",
+      "source_json_pointer": "/explanations/declaration_explanations/302",
+      "summary_statement_ids": [
+        "b3407851fcc3312ceef96a78",
+        "5d8c579dc64c57bfbe3a3f92",
+        "0454dc395a42ababd021f01b",
+        "2cd950f9bcf24b4c868fafa6",
+        "5e0b2d1b49dabf9a0df0d627"
+      ],
+      "is_final_v14_acceptance": false,
+      "source_statements": [
+        {
+          "id": "0454dc395a42ababd021f01b",
+          "operation_id": "4e383597569a7a31651589fa",
+          "operation_pointer": "/operations/6447"
+        },
+        {
+          "id": "b3407851fcc3312ceef96a78",
+          "operation_id": "6a28ecb3d0e06f99ac901c90",
+          "operation_pointer": "/operations/6448"
+        },
+        {
+          "id": "2cd950f9bcf24b4c868fafa6",
+          "operation_id": "799dc91d08350e2382d0ca36",
+          "operation_pointer": "/operations/6459"
+        },
+        {
+          "id": "5e0b2d1b49dabf9a0df0d627",
+          "operation_id": "3c596c1da481faa1ed5c1efc",
+          "operation_pointer": "/operations/6460"
+        },
+        {
+          "id": "5d8c579dc64c57bfbe3a3f92",
+          "operation_id": "97808b5e4a9aa8d81379f7a8",
+          "operation_pointer": "/operations/6482"
+        }
+      ],
+      "reference_resolution_requires_final_schema_readback": true
+    },
+    {
+      "actual_owner": {
+        "file": "crates/winwincode-delivery/src/application/workrun.rs",
+        "symbol": "WorkRunAggregate.start_item",
+        "graph_node_id": "rust:crates/winwincode-delivery/src/application/workrun#WorkRunAggregate.start_item"
+      },
+      "actual_summary": "构造捕获记录，字段按源码次序为「work_item ← work_item；attempt ← attempt」。不据构造形式推断物理持久化。 以无显式实参的调用形式「self.validate」调用已绑定接口「rust:crates/winwincode-delivery/src/application/workrun#WorkRunAggregate.validate」；没有据调用存在断言激活、存储或网络效果。 包含赋值/更新「work_item.state = WorkItemState::InProgress」，捕获目标为「work_item.state」；这是所选声明的源写操作，不是唯一所有者或写入已发生的证明。 捕获 binding「item」的初始化来源为「self\\n            .items\\n            .iter()\\n            .find(|item| {\\n                &item.id == id\\n                    && work_item_is_runnable(item, &self.items)\\n                    && !self.runs.iter().any(|run| {\\n                        &run.work_item_id == id\\n                            && matches!(\\n                                run.state,\\…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。 以字段投影形式「work_item」关联路径「work_item」；只描述捕获来源，不证明当时的字段值。",
+      "source_file": "responsibility-explanations-winwincode-development.json",
+      "source_file_sha256": "817dbe94d7f6db34756661ce07c3be7e7daa938b2ad5b39841d845629fcfd49b",
+      "source_json_pointer": "/explanations/declaration_explanations/361",
+      "summary_statement_ids": [
+        "da6ebf0150e9dd9832288c79",
+        "af00189e7a4ed4fc202b9af8",
+        "3990310031e1eb2940c99a90",
+        "5c6cd4ff48a8422a029e55d5",
+        "defae5b2a5dbfe9f89c0fc86"
+      ],
+      "is_final_v14_acceptance": false,
+      "source_statements": [
+        {
+          "id": "af00189e7a4ed4fc202b9af8",
+          "operation_id": "e514c29646040f596250bcd0",
+          "operation_pointer": "/operations/7246"
+        },
+        {
+          "id": "5c6cd4ff48a8422a029e55d5",
+          "operation_id": "2d38fd90b914704577a12842",
+          "operation_pointer": "/operations/7247"
+        },
+        {
+          "id": "3990310031e1eb2940c99a90",
+          "operation_id": "94a14c613303821a00be8ca2",
+          "operation_pointer": "/operations/7261"
+        },
+        {
+          "id": "da6ebf0150e9dd9832288c79",
+          "operation_id": "977b73010d602db5ecf187eb",
+          "operation_pointer": "/operations/7265"
+        },
+        {
+          "id": "defae5b2a5dbfe9f89c0fc86",
+          "operation_id": "4b7d812aea3400e32688f618",
+          "operation_pointer": "/operations/7266"
+        }
+      ],
+      "reference_resolution_requires_final_schema_readback": true
+    },
+    {
+      "actual_owner": {
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.accept_control",
+        "graph_node_id": "rust:crates/winwincode-worker/src/lib#WorkerMain.accept_control"
+      },
+      "actual_summary": "将「result」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-worker/src/lib#WorkerMain.accept_registration」，对应捕获形参「result: &WorkerRegistrationResultMessage」。该普通调用关系不替代进程或网络协议关系。 条件「self\\n                    .workspaces\\n                    .is_observation_model_exchange(&chunk.model_exchange_id)\\n                    .map_err(|_| workspace_error())?」的捕获提前退出分支为「return：self.accept_observation_model_chunk(chunk, &now).await」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。 以「return self.accept_observation_model_chunk(chunk, &now).await」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。 保留同一块中的正常源码顺序：语句位置「0」的操作「fde8e4a41ebd4de89c0e6387」先于语句位置「1」的操作「9fa0e1c779572a7648704ed3」。顺序本身不证明步骤成功、回调激活或前后记录具有同一身份。",
+      "source_file": "responsibility-explanations-winwincode-development.json",
+      "source_file_sha256": "817dbe94d7f6db34756661ce07c3be7e7daa938b2ad5b39841d845629fcfd49b",
+      "source_json_pointer": "/explanations/declaration_explanations/398",
+      "summary_statement_ids": [
+        "38ab9c035d450f97a483c883",
+        "9ef8cb914926ed46456c4b1c",
+        "4dc9120a8b3945d216440866",
+        "fbde6a91f77c677be7428572"
+      ],
+      "is_final_v14_acceptance": false,
+      "source_statements": [
+        {
+          "id": "38ab9c035d450f97a483c883",
+          "operation_id": "fde8e4a41ebd4de89c0e6387",
+          "operation_pointer": "/operations/8032"
+        },
+        {
+          "id": "fbde6a91f77c677be7428572",
+          "operation_id": "08f3b91cc2f2d7ddb5116418",
+          "operation_pointer": "/operations/8035"
+        },
+        {
+          "id": "9ef8cb914926ed46456c4b1c",
+          "operation_id": "edc7a800e1d7951f0984ea70",
+          "operation_pointer": "/operations/8050"
+        },
+        {
+          "id": "4dc9120a8b3945d216440866",
+          "operation_id": "7efa59f2c39107401d8998e3",
+          "operation_pointer": "/operations/8051"
+        }
+      ],
+      "reference_resolution_requires_final_schema_readback": true
+    },
+    {
+      "actual_owner": {
+        "file": "crates/winwincode-worker/src/main.rs",
+        "symbol": "run_worker",
+        "graph_node_id": "rust:crates/winwincode-worker/src/main#run_worker"
+      },
+      "actual_summary": "构造捕获记录，字段按源码次序为「worker_id ← worker_id；worker_instance_id ← worker_instance_id.clone()；started_at ← started_at.clone()；capabilities ← capabilities」。不据构造形式推断物理持久化。 以无显式实参的调用形式「worker_capabilities」调用已绑定接口「rust:crates/winwincode-worker/src/main#worker_capabilities」；没有据调用存在断言激活、存储或网络效果。 捕获 binding「capabilities」的初始化来源为「worker_capabilities()?」；保留该声明与初始化表达式，不推任意后续读取的当前值。 对捕获 binding「worker」存在源更新「worker = worker.with_observation_model(observation_model)」；循环和分支条件见操作上下文，未推执行次数或最终数值。 以字段投影形式「capabilities」关联路径「capabilities」；只描述捕获来源，不证明当时的字段值。",
+      "source_file": "responsibility-explanations-winwincode-development.json",
+      "source_file_sha256": "817dbe94d7f6db34756661ce07c3be7e7daa938b2ad5b39841d845629fcfd49b",
+      "source_json_pointer": "/explanations/declaration_explanations/414",
+      "summary_statement_ids": [
+        "1ed551261957231e0e4c2968",
+        "54f4b49b9ccb835302a76028",
+        "3d9f06eb15d83762d2d70048",
+        "0be0896dbbb264d97fb00d7e",
+        "f18159cad61bf7d3bd605493"
+      ],
+      "is_final_v14_acceptance": false,
+      "source_statements": [
+        {
+          "id": "3d9f06eb15d83762d2d70048",
+          "operation_id": "77583f85b239768db31f1d08",
+          "operation_pointer": "/operations/8354"
+        },
+        {
+          "id": "54f4b49b9ccb835302a76028",
+          "operation_id": "778812283ab65c694e1a6ba8",
+          "operation_pointer": "/operations/8355"
+        },
+        {
+          "id": "1ed551261957231e0e4c2968",
+          "operation_id": "0990fe15e970ce06b6317a3f",
+          "operation_pointer": "/operations/8399"
+        },
+        {
+          "id": "f18159cad61bf7d3bd605493",
+          "operation_id": "bf6dbcb9542e8f856fbd863e",
+          "operation_pointer": "/operations/8402"
+        },
+        {
+          "id": "0be0896dbbb264d97fb00d7e",
+          "operation_id": "d4404ce2791805fcedcab161",
+          "operation_pointer": "/operations/8418"
+        }
+      ],
+      "reference_resolution_requires_final_schema_readback": true
+    }
+  ],
+  "wwc_interim_analysis_gaps": [
+    {
+      "code": "responsibility_selected_declaration_unavailable",
+      "file": "apps/client/src/generated/control-plane-client.ts",
+      "symbol": "createControlPlaneHttpClient",
+      "source_gaps": [
+        {
+          "code": "support_input_only",
+          "message": "已解析实现源码匹配 0 项；辅助输入不充当实现。",
+          "file": "apps/client/src/generated/control-plane-client.ts",
+          "line": 0
+        }
+      ]
+    }
+  ]
+}

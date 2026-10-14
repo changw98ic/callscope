@@ -1,0 +1,126 @@
+[
+  {
+    "type": "conditional_gate_relations",
+    "severity": "info",
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-js-plain-record-gate-conditions-v1"
+    ],
+    "provenance": {
+      "authority": "original-static-report-benchmark",
+      "reviewer": "source-derived-conditional-gate-relations",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "note": "Declaration locators only; no expected guards, outcomes or return values are configured."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Authenticated captured declarations are active and the selected branch is reached.",
+        "Ordinary stable plain records and normal completion of opaque preceding operations; no getters, Proxy, concurrent mutation or runtime evidence guarantees."
+      ],
+      "counterexamples": [
+        "A source return relation does not prove readiness implementation, external verdict truth, audit durability or actual HTTP delivery."
+      ]
+    },
+    "id": "cpb-report-readiness-abrupt-guard",
+    "sources": [
+      {
+        "role": "readiness_entry",
+        "file": "cli/commands/fix.ts",
+        "symbol": "run"
+      },
+      {
+        "role": "readiness_predicate",
+        "file": "cli/commands/fix.ts",
+        "symbol": "isReadinessFailure"
+      }
+    ]
+  },
+  {
+    "type": "conditional_gate_relations",
+    "severity": "info",
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-js-plain-record-gate-conditions-v1"
+    ],
+    "provenance": {
+      "authority": "original-static-report-benchmark",
+      "reviewer": "source-derived-conditional-gate-relations",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "note": "Declaration locators only; no expected guards, outcomes or return values are configured."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Authenticated captured declarations are active and the selected branch is reached.",
+        "Ordinary stable plain records and normal completion of opaque preceding operations; no getters, Proxy, concurrent mutation or runtime evidence guarantees."
+      ],
+      "counterexamples": [
+        "A source return relation does not prove readiness implementation, external verdict truth, audit durability or actual HTTP delivery."
+      ]
+    },
+    "id": "cpb-report-completion-gate-conditions",
+    "sources": [
+      {
+        "role": "completion_evaluator",
+        "file": "core/engine/completion-gate.ts",
+        "symbol": "evaluateCompletionGate"
+      },
+      {
+        "role": "mutating_predicate",
+        "file": "core/engine/completion-gate.ts",
+        "symbol": "isMutatingJob"
+      },
+      {
+        "role": "gate_result",
+        "file": "core/engine/completion-gate.ts",
+        "symbol": "gateResult"
+      }
+    ]
+  },
+  {
+    "type": "conditional_gate_relations",
+    "severity": "info",
+    "models": [
+      "captured-normal-statement-control-v1",
+      "finite-js-plain-record-gate-conditions-v1"
+    ],
+    "provenance": {
+      "authority": "original-static-report-benchmark",
+      "reviewer": "source-derived-conditional-gate-relations",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+      "note": "Declaration locators only; no expected guards, outcomes or return values are configured."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Authenticated captured declarations are active and the selected branch is reached.",
+        "Ordinary stable plain records and normal completion of opaque preceding operations; no getters, Proxy, concurrent mutation or runtime evidence guarantees."
+      ],
+      "counterexamples": [
+        "A source return relation does not prove readiness implementation, external verdict truth, audit durability or actual HTTP delivery."
+      ]
+    },
+    "id": "cpb-report-access-audit-response",
+    "sources": [
+      {
+        "role": "access_server",
+        "file": "server/index.ts",
+        "symbol": "startHubServer"
+      },
+      {
+        "role": "response_writer",
+        "file": "server/index.ts",
+        "symbol": "sendJson"
+      },
+      {
+        "role": "audit_opener",
+        "file": "server/services/audit/hub-access-audit.ts",
+        "symbol": "openHubAccessAudit"
+      }
+    ]
+  }
+]

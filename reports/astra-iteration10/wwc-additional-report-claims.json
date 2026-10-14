@@ -1,0 +1,335 @@
+[
+  {
+    "id": "wwc-report-worker-bootstrap-entries",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "entry",
+        "file": "crates/winwincode-worker/src/main.rs",
+        "symbol": "main"
+      },
+      {
+        "role": "remote",
+        "file": "crates/winwincode-worker/src/main.rs",
+        "symbol": "run_remote"
+      },
+      {
+        "role": "managed",
+        "file": "crates/winwincode-worker/src/main.rs",
+        "symbol": "run_managed"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "The remote and managed-session command branches remain separate source-selected entry conditions."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-worker-production-construction",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "shared_loop",
+        "file": "crates/winwincode-worker/src/main.rs",
+        "symbol": "run_worker"
+      },
+      {
+        "role": "adapter_factory",
+        "file": "crates/winwincode-worker/src/main.rs",
+        "symbol": "production_codex"
+      },
+      {
+        "role": "worker_constructor",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.new"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "Generic WorkerMain methods are not globally bound to the production Codex adapter by this construction evidence.",
+        "Provider/helper/TLS/configuration and allocation errors can prevent later statements."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-worker-typed-dispatch",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "control",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.accept_control"
+      },
+      {
+        "role": "dispatch",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.accept_dispatch"
+      },
+      {
+        "role": "start",
+        "file": "crates/winwincode-worker/src/lib.rs",
+        "symbol": "WorkerMain.start_dispatch"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "Generic CodexCoreAdapter ensure_thread/submit_turn remain source invocation candidates; no unique production CALLS edge is manufactured.",
+        "Replay, lifecycle, authority, stage-contract, capacity, checkout and start errors keep their branches; this is not all-failure resource cleanup proof."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-production-adapter-embedded-kernel",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "adapter_open",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "ProductionCodexAdapter.open"
+      },
+      {
+        "role": "kernel_constructor",
+        "file": "crates/kernel/src/lib.rs",
+        "symbol": "Kernel.new"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "Directory/helper/store/outbox/action-gate and Kernel construction can fail; source presence does not certify a running deployment.",
+        "Installed Codex CLI execution is not part of this captured production constructor chain."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-adapter-durable-exact-turn",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "adapter_submit",
+        "file": "crates/winwincode-codex/src/adapter.rs",
+        "symbol": "<ProductionCodexAdapter as CodexCoreAdapter>.submit_turn"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "Submission-intent/persist_run and exact-turn reconciliation are distinct source operations.",
+        "Captured cfg test-support branches and durable/recovered state guards are preserved; no crash-consistency exercise has been performed."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-kernel-create-session-interface",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "kernel_create",
+        "file": "crates/kernel/src/lib.rs",
+        "symbol": "Kernel.create_session"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "The async operand to Self::guard and its runtime manager calls are source evidence; the current pattern may not close future activation/inner statement order."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-kernel-submit-turn-interface",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "kernel_submit",
+        "file": "crates/kernel/src/lib.rs",
+        "symbol": "Kernel.submit_turn"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "Ordinary start-or-steer is not exact-turn reconciliation; the async helper boundary is retained."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-kernel-reconcile-exact-interface",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "kernel_reconcile",
+        "file": "crates/kernel/src/lib.rs",
+        "symbol": "Kernel.reconcile_turn_exact"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "Completed/Failed/Absent/InProgress and recover/start-if-idle branches remain distinct source conditions, not observed history facts."
+      ]
+    }
+  },
+  {
+    "id": "wwc-report-chat-delivery-workrun-requests",
+    "type": "guarded_call_sequence",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "builder",
+        "file": "apps/client/src/chat-delivery-creator.ts",
+        "symbol": "createChatDeliveryCreator.create"
+      },
+      {
+        "role": "entry",
+        "file": "apps/client/src/chat-delivery-creator.ts",
+        "symbol": "createChatDeliveryCreator.<object@321:9>.create"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1"
+    ],
+    "provenance": {
+      "authority": "independent-static-report-benchmark",
+      "reviewer": "captured-source-report-expansion",
+      "author_approved": false,
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "note": "Source locators only; the detector derives calls, guards, construction operands and normal source order. No generic target or precomputed path is declared."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected definitions and raw source are authenticated in the same snapshot.",
+        "Recorded source structure and conditional normal reaching are the evidence scope; target execution, all-path completion, generic runtime activation and physical side effects are not established."
+      ],
+      "counterexamples": [
+        "The Chat creation path is an independent counterexample to blanket task-creation failure.",
+        "Command confirmations, authorization, request identities and subsequent work-item/run failures are retained; injected client target is not determined by method name."
+      ]
+    }
+  }
+]

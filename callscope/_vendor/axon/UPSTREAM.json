@@ -1,0 +1,29 @@
+{
+  "repository": "https://github.com/harshkedia177/axon",
+  "commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+  "version": "1.0.1",
+  "license": "MIT",
+  "license_basis": "Explicit SPDX declaration license = \"MIT\" in pyproject.toml at pinned commit; repository tree contains no standalone LICENSE. LICENSE.txt contains standard MIT terms with the declared author attribution, not a claimed upstream LICENSE copy.",
+  "files": [
+    {
+      "source": "src/axon/core/graph/model.py",
+      "local": "model.py",
+      "modifications": [
+        "Trailing blank line added during source import; no semantic change."
+      ],
+      "local_sha256": "4c08aa32a93dbd1a66da2f89c161904fd0205cdf5372527f8cc0dc4e2e85c2ee",
+      "upstream_git_blob_sha": "69c1f36848d9adfb53ad4c879c80e8880ec44648"
+    },
+    {
+      "source": "src/axon/core/graph/graph.py",
+      "local": "graph.py",
+      "modifications": [
+        "Only absolute model import changed to relative import.",
+        "Trailing blank line added during source import; no semantic change."
+      ],
+      "local_sha256": "23f4f7f40eb8daa08ec8280276e36f7b415296790db745536e81da2f2685d55b",
+      "upstream_git_blob_sha": "df3c3368eaae8b5a4fd5806af9cf7859aa7c0a23"
+    }
+  ],
+  "boundaries": "Graph data model and indexes only; no resolver, confidence inference, dead-code determination, CLI, watcher, LLM or execution."
+}

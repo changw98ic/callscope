@@ -1,0 +1,128 @@
+{
+  "id": "wwc-navigation-complete-judgment",
+  "type": "navigation_query_context",
+  "severity": "high",
+  "producer": {
+    "file": "apps/client/src/home-dashboard-page.ts",
+    "symbol": "mountHomeDashboardPage",
+    "site": "assignment",
+    "target": [
+      "newTask",
+      "href"
+    ]
+  },
+  "consumer": {
+    "file": "apps/client/src/application.ts",
+    "symbol": "mountWinWinCodeClient",
+    "factory_callee": "createControlPlaneTaskPort",
+    "argument_index": 0,
+    "callback_property": "deliveryContext",
+    "returned_method": "create"
+  },
+  "counterexample_producers": [
+    {
+      "file": "apps/client/src/home-dashboard-page.ts",
+      "symbol": "homeDecisionHash",
+      "site": "call",
+      "callee": "scopeHash"
+    }
+  ],
+  "models": [
+    "url-search-params-v1",
+    "js-string-url-slicing-v1",
+    "object-freeze-inert-v1"
+  ],
+  "ambient": {
+    "kind": "navigation_hash_stability",
+    "read_path": [
+      "browser",
+      "location",
+      "hash"
+    ],
+    "conditions": [
+      "用户沿所选href导航，提交时当前hash仍是该导航结果。",
+      "使用标准浏览器DOM和URLSearchParams语义；不证明运行时改写或外部脚本行为。"
+    ]
+  },
+  "provenance": {
+    "authority": "independent_review",
+    "reviewer": "Astra",
+    "author_approved": false,
+    "source_doc": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+    "note": "只声明所选生产者、端口、模型和真实环境接缝；键集合、调用绑定、回调关系和拒绝链必须从保存源码生成。"
+  },
+  "applicability": {
+    "kind": "conditional",
+    "conditions": [
+      "评审默认生产端口的看板新任务入口；正常看板已挂载，用户满足捕获的表单前置条件并提交。",
+      "导航及事件使用显式标准环境模型；源码装配、callback、返回/拒绝和HTTP先后必须全部自动提取闭合。"
+    ],
+    "counterexamples": [
+      "传入taskSeed时可走fake端口分支。",
+      "手工带有效delivery的URL或独立Chat创建流程不属于此入口的缺键结论。"
+    ]
+  },
+  "wiring": {
+    "boot": {
+      "file": "apps/client/src/boot.ts",
+      "callee": "mountWinWinCodeClient",
+      "argument_index": 0
+    },
+    "injection": {
+      "file": "apps/client/src/application.ts",
+      "symbol": "mountWinWinCodeClient.renderTaskEntry",
+      "callee": "createTaskEntryViewModel",
+      "argument_index": 0,
+      "property": "port"
+    },
+    "use": {
+      "file": "apps/client/src/task-entry-view-model.ts",
+      "symbol": "createTaskEntryViewModel",
+      "parameter_index": 0,
+      "property": "port",
+      "returned_method": "submit",
+      "method": "create"
+    }
+  },
+  "completion": {
+    "route_selector": {
+      "file": "apps/client/src/application.ts",
+      "symbol": "mountWinWinCodeClient.homeSubRoute"
+    },
+    "route_dispatcher": {
+      "file": "apps/client/src/application.ts",
+      "symbol": "mountWinWinCodeClient.performRender"
+    },
+    "page": {
+      "file": "apps/client/src/task-entry-page.ts",
+      "symbol": "mountTaskEntryPage"
+    },
+    "page_callee": "mountTaskEntryPage",
+    "http_boundary_path": [
+      "options",
+      "client",
+      "command"
+    ],
+    "required_query_keys": [
+      "delivery"
+    ],
+    "models": [
+      "dom-anchor-append-listener-1",
+      "js-hash-path-strip-1",
+      "ordinary-source-method-invocation-1"
+    ],
+    "producer_composition": {
+      "file": "apps/client/src/my-work-page.ts",
+      "symbol": "mountMyWorkPage"
+    },
+    "producer_host": {
+      "file": "apps/client/src/application.ts",
+      "symbol": "mountWinWinCodeClient.renderHome"
+    },
+    "producer_host_callee": "mountMyWorkPage",
+    "chat_counterexample": {
+      "file": "apps/client/src/chat-delivery-creator.ts",
+      "symbol": "createChatDeliveryCreator.create"
+    }
+  }
+}

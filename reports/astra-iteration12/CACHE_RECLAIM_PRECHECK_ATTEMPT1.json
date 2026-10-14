@@ -1,0 +1,912 @@
+{
+  "kind": "reversible_rebuildable_memo_reclaim",
+  "started_at_utc": "2026-10-14T07:29:54.257560+00:00",
+  "reviewed_plan_sha256": "f5c22d53efa0e4ea4f4e67d50e6ad9fde7e5327c77637b128856dc6e6f2466fe",
+  "status": "no_eligible_memo_directories",
+  "archive": "/workspace/callscope/reports/astra-iteration12/rebuildable-memo-archive.tar.gz",
+  "free_bytes_before": 2996842496,
+  "removed": [],
+  "skipped": [
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/winwincode-v8.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration3/winwincode-v6.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration4/winwincode-v7.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/winwincode-v10.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/winwincode-v11.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/winwincode-v10.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/winwincode-v9.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration2/winwincode-v5.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration1/winwincode-v4.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/winwincode-v3.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration5/codepatchbay-v8.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration3/codepatchbay-v6.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration2/codepatchbay-v5.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration1/codepatchbay-v4.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration4/codepatchbay-v7.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration8/codepatchbay-v10.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-v11.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration7/codepatchbay-v10.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration6/codepatchbay-v9.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/codepatchbay-v3.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    },
+    {
+      "path": "/workspace/callscope/reports/upstream-reuse/demo.sqlite3.cocoindex",
+      "stage": "pre_archive_active_references",
+      "references": [],
+      "inspection_errors": [
+        {
+          "pid": 1,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 2,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 3,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 443,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8679,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        },
+        {
+          "pid": 8681,
+          "kind": "mapped_file",
+          "error": "PermissionError"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "bytecode_caches_preserved": [
+    "/workspace/callscope/reports/astra-iteration10/__pycache__",
+    "/workspace/callscope/reports/astra-iteration8/__pycache__",
+    "/workspace/callscope/reports/astra-iteration9/__pycache__",
+    "/workspace/callscope/reports/astra-iteration7/__pycache__"
+  ],
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "cocoindex_environment_opened": false,
+  "formal_database_opened": false,
+  "common_query_lock_acquired": false,
+  "uncompressed_tar_created": false,
+  "pre_archive_process_inspection_errors": [
+    {
+      "pid": 1,
+      "kind": "mapped_file",
+      "error": "PermissionError"
+    },
+    {
+      "pid": 2,
+      "kind": "mapped_file",
+      "error": "PermissionError"
+    },
+    {
+      "pid": 3,
+      "kind": "mapped_file",
+      "error": "PermissionError"
+    },
+    {
+      "pid": 443,
+      "kind": "mapped_file",
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8679,
+      "kind": "mapped_file",
+      "error": "PermissionError"
+    },
+    {
+      "pid": 8681,
+      "kind": "mapped_file",
+      "error": "PermissionError"
+    }
+  ],
+  "completed_at_utc": "2026-10-14T07:29:54.276627+00:00",
+  "free_bytes_after": 2996842496,
+  "free_byte_change": 0,
+  "reviewed_plan_bytes_unchanged": true
+}

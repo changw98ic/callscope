@@ -1,0 +1,382 @@
+{
+  "snapshot_id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+  "from": "ts:core/engine/run-job#runJob",
+  "to": "ts:core/engine/run-job-execute-dag#executeWorkflowDag",
+  "status": "found",
+  "complete": false,
+  "completeness_scope": "explicit_static_call_model",
+  "model": {
+    "kind": "explicit_static_call_model",
+    "external_calls": "terminals_unless_callback_boundary_is_identified",
+    "unmodeled": [
+      "implicit_magic_calls",
+      "runtime_registration",
+      "external_implementations"
+    ],
+    "meaning": "完整性仅针对显式静态调用模型，不代表已排除所有运行时可能调用。"
+  },
+  "node_ids": [
+    "ts:core/engine/run-job#runJob",
+    "ts:core/engine/run-job#runJobInner",
+    "ts:core/engine/run-job-execute-dag#executeWorkflowDag"
+  ],
+  "edge_ids": [
+    "8a62b9a8fbd15a264d220870",
+    "7aee7dad0a2229111bb0a128"
+  ],
+  "nodes": [
+    {
+      "id": "ts:core/engine/run-job#runJob",
+      "name": "runJob",
+      "qualname": "ts:core/engine/run-job#runJob",
+      "module": "ts:core/engine/run-job",
+      "file": "core/engine/run-job.ts",
+      "line": 65,
+      "end_line": 107,
+      "kind": "function",
+      "signature": "runJob(ctxInput: unknown): Promise<JobRunResult>",
+      "layer": null,
+      "metadata": {
+        "async": true,
+        "declaration_only": false,
+        "dispatch": "lexical",
+        "language": "typescript",
+        "lexical_scope": "",
+        "static": false,
+        "syntax_kind": "function_declaration"
+      }
+    },
+    {
+      "id": "ts:core/engine/run-job#runJobInner",
+      "name": "runJobInner",
+      "qualname": "ts:core/engine/run-job#runJobInner",
+      "module": "ts:core/engine/run-job",
+      "file": "core/engine/run-job.ts",
+      "line": 109,
+      "end_line": 190,
+      "kind": "function",
+      "signature": "runJobInner(ctx: RunJobContext): Promise<JobRunResult>",
+      "layer": null,
+      "metadata": {
+        "async": true,
+        "declaration_only": false,
+        "dispatch": "lexical",
+        "language": "typescript",
+        "lexical_scope": "",
+        "static": false,
+        "syntax_kind": "function_declaration"
+      }
+    },
+    {
+      "id": "ts:core/engine/run-job-execute-dag#executeWorkflowDag",
+      "name": "executeWorkflowDag",
+      "qualname": "ts:core/engine/run-job-execute-dag#executeWorkflowDag",
+      "module": "ts:core/engine/run-job-execute-dag",
+      "file": "core/engine/run-job-execute-dag.ts",
+      "line": 1783,
+      "end_line": 2067,
+      "kind": "function",
+      "signature": "executeWorkflowDag(\n  ctx: ExecuteWorkflowDagContext,\n  input: ExecuteWorkflowDagInput,\n): Promise<JobRunResult>",
+      "layer": null,
+      "metadata": {
+        "async": true,
+        "declaration_only": false,
+        "dispatch": "lexical",
+        "language": "typescript",
+        "lexical_scope": "",
+        "static": false,
+        "syntax_kind": "function_declaration"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "8a62b9a8fbd15a264d220870",
+      "source": "ts:core/engine/run-job#runJob",
+      "target": "ts:core/engine/run-job#runJobInner",
+      "expression": "runJobInner",
+      "file": "core/engine/run-job.ts",
+      "line": 75,
+      "column": 25,
+      "resolution": "resolved",
+      "candidates": [],
+      "reason": "唯一词法实现声明",
+      "metadata": {
+        "binding_model": "lexical_declaration",
+        "call_kind": "call",
+        "execution_order_verified": false,
+        "language": "typescript",
+        "static_only": true,
+        "syntax_kind": "call_expression"
+      }
+    },
+    {
+      "id": "7aee7dad0a2229111bb0a128",
+      "source": "ts:core/engine/run-job#runJobInner",
+      "target": "ts:core/engine/run-job-execute-dag#executeWorkflowDag",
+      "expression": "executeWorkflowDag",
+      "file": "core/engine/run-job.ts",
+      "line": 177,
+      "column": 9,
+      "resolution": "resolved",
+      "candidates": [],
+      "reason": "唯一词法实现声明",
+      "metadata": {
+        "binding_model": "lexical_declaration",
+        "call_kind": "call",
+        "execution_order_verified": false,
+        "exported_file": "core/engine/run-job-execute-dag.ts",
+        "exported_name": "executeWorkflowDag",
+        "language": "typescript",
+        "static_only": true,
+        "syntax_kind": "call_expression"
+      }
+    }
+  ],
+  "gaps": [
+    {
+      "kind": "source_coverage",
+      "file": "core/indexing/local-code-index/gc.ts",
+      "status": "parse_error",
+      "reason": "Tree-sitter 语法错误/不支持语法，行：225, 378, 390, 441, 453, 495"
+    },
+    {
+      "kind": "source_coverage",
+      "file": "core/indexing/local-code-index/rules/types.ts",
+      "status": "parse_error",
+      "reason": "Tree-sitter 语法错误/不支持语法，行：30"
+    },
+    {
+      "kind": "source_coverage",
+      "file": "scripts/cutover-orchestrator.sh",
+      "status": "unsupported",
+      "reason": "此源码语言不在当前分析能力或配置范围中"
+    },
+    {
+      "kind": "source_coverage",
+      "file": "scripts/install.sh",
+      "status": "unsupported",
+      "reason": "此源码语言不在当前分析能力或配置范围中"
+    },
+    {
+      "kind": "source_coverage",
+      "file": "shared/primitives/process-tree.ts",
+      "status": "parse_error",
+      "reason": "Tree-sitter 语法错误/不支持语法，行：952"
+    },
+    {
+      "kind": "source_coverage",
+      "file": "skills/claude-code/install.sh",
+      "status": "unsupported",
+      "reason": "此源码语言不在当前分析能力或配置范围中"
+    },
+    {
+      "kind": "snapshot_coverage",
+      "reason": "分析器标记 coverage_incomplete，源码扫描范围不完整。"
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "43aa1b610a11bdb470ed9961",
+      "source": "ts:core/agents/agent-runner#acpAuditHasMutation",
+      "target": null,
+      "expression": "text\n      .split",
+      "file": "core/agents/agent-runner.ts",
+      "line": 835,
+      "column": 11,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "9ae249a7578e87c7e49a69b8",
+      "source": "ts:core/agents/agent-runner#acpAuditHasMutation",
+      "target": null,
+      "expression": "text\n      .split(\"\\n\")\n      .filter",
+      "file": "core/agents/agent-runner.ts",
+      "line": 835,
+      "column": 11,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "b2cd53c1b30add90045ae359",
+      "source": "ts:core/agents/agent-runner#acpAuditHasMutation",
+      "target": null,
+      "expression": "text\n      .split(\"\\n\")\n      .filter(Boolean)\n      .some",
+      "file": "core/agents/agent-runner.ts",
+      "line": 835,
+      "column": 11,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "external_callback_boundary",
+      "edge_id": "f8e3e8d2ae2c45690fc196f6",
+      "source": "ts:core/agents/agent-runner#acpAuditHasMutation",
+      "target": null,
+      "expression": "readFile",
+      "file": "core/agents/agent-runner.ts",
+      "line": 834,
+      "column": 23,
+      "resolution": "external",
+      "candidates": [],
+      "reason": "外部调用可能通过回调或隐式分派重入本地代码；相关路径不能从外部实现静态确认。",
+      "callback_candidates": [],
+      "callable_arguments": []
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "2d8338fbf49f6b85752fac36",
+      "source": "ts:core/agents/agent-runner#allowedAgentsFromEnv",
+      "target": null,
+      "expression": "parsed\n      .filter((entry): entry is string => typeof entry === \"string\")\n      .map",
+      "file": "core/agents/agent-runner.ts",
+      "line": 338,
+      "column": 23,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "846ded11aba01592d12858fa",
+      "source": "ts:core/agents/agent-runner#allowedAgentsFromEnv",
+      "target": null,
+      "expression": "parsed\n      .filter",
+      "file": "core/agents/agent-runner.ts",
+      "line": 338,
+      "column": 23,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "a9761103480261bff2817e0b",
+      "source": "ts:core/agents/agent-runner#allowedAgentsFromEnv",
+      "target": null,
+      "expression": "parsed\n      .filter((entry): entry is string => typeof entry === \"string\")\n      .map((entry) => entry.trim())\n      .filter",
+      "file": "core/agents/agent-runner.ts",
+      "line": 338,
+      "column": 23,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "external_callback_boundary",
+      "edge_id": "cb5317286e4a4ea2de187b5d",
+      "source": "ts:core/agents/agent-runner#allowedAgentsFromEnv",
+      "target": null,
+      "expression": "JSON.parse",
+      "file": "core/agents/agent-runner.ts",
+      "line": 336,
+      "column": 19,
+      "resolution": "external",
+      "candidates": [],
+      "reason": "外部调用可能通过回调或隐式分派重入本地代码；相关路径不能从外部实现静态确认。",
+      "callback_candidates": [],
+      "callable_arguments": []
+    },
+    {
+      "kind": "external_callback_boundary",
+      "edge_id": "dec273b6ad5cb6e7c0b0cdd8",
+      "source": "ts:core/agents/agent-runner#allowedAgentsFromEnv",
+      "target": null,
+      "expression": "Array.isArray",
+      "file": "core/agents/agent-runner.ts",
+      "line": 337,
+      "column": 9,
+      "resolution": "external",
+      "candidates": [],
+      "reason": "外部调用可能通过回调或隐式分派重入本地代码；相关路径不能从外部实现静态确认。",
+      "callback_candidates": [],
+      "callable_arguments": []
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "0e60f3b4eb8bb14ac476f28a",
+      "source": "ts:core/agents/agent-runner#classifyError",
+      "target": null,
+      "expression": "lowerMsg.includes",
+      "file": "core/agents/agent-runner.ts",
+      "line": 684,
+      "column": 7,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "0ff3300ca5a94deb1a0e62ff",
+      "source": "ts:core/agents/agent-runner#classifyError",
+      "target": null,
+      "expression": "lowerMsg.includes",
+      "file": "core/agents/agent-runner.ts",
+      "line": 727,
+      "column": 69,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "1c3dd0c5cb42e6ec25f0aa7a",
+      "source": "ts:core/agents/agent-runner#classifyError",
+      "target": null,
+      "expression": "lowerMsg.includes",
+      "file": "core/agents/agent-runner.ts",
+      "line": 780,
+      "column": 39,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    },
+    {
+      "kind": "call_resolution",
+      "edge_id": "1d575a2781fba838dd860a2b",
+      "source": "ts:core/agents/agent-runner#classifyError",
+      "target": null,
+      "expression": "lowerMsg.includes",
+      "file": "core/agents/agent-runner.ts",
+      "line": 714,
+      "column": 60,
+      "resolution": "dynamic",
+      "candidates": [],
+      "reason": "对象/this/类方法分派不推断为确定调用"
+    }
+  ],
+  "gap_count": 2123,
+  "gaps_truncated": true,
+  "gap_sample_limit": 20,
+  "gap_snapshot_id": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+  "full_gap_evidence": "snapshot_edges_diagnostics_and_source_statuses",
+  "reason": "找到一条最短的确定静态调用路径。",
+  "endpoint_status": {
+    "from": {
+      "status": "matched",
+      "node_ids": [
+        "ts:core/engine/run-job#runJob"
+      ]
+    },
+    "to": {
+      "status": "matched",
+      "node_ids": [
+        "ts:core/engine/run-job-execute-dag#executeWorkflowDag"
+      ]
+    }
+  },
+  "interpretation": "静态调用路径存在只说明结构可达，不保证运行或功能正确。普通外部调用作为图终端；已识别的外部回调边界作为解析缺口。",
+  "search": {
+    "scope": "resolved_internal_calls",
+    "exhaustive": false,
+    "visited_nodes": 13,
+    "closure_nodes": 750,
+    "shortest_in_resolved_graph": true,
+    "depth_limit": null
+  }
+}

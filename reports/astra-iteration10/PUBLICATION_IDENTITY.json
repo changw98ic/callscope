@@ -1,0 +1,1935 @@
+{
+  "schema_version": 1,
+  "kind": "original_baseline_publication_identity",
+  "baseline_sha256": "16b4b05c8818fa1eecf396132ebe2ea29a8f0068801165f0649da379d9041dd7",
+  "artifact_script_path": "/workspace/callscope/reports/astra-iteration10/compare_original_baseline.py",
+  "artifact_script_sha256": "1a860ee0561d415a201dfe4a67fa292c97fca9b04993b4979db539d7188e4b0a",
+  "artifact_script_is_core_freeze_member": false,
+  "baseline_contract_sha256": "c1d5c35d65a3adfe16fc14991f086a1914ad11217118508a5eeed3b896db88ff",
+  "baseline_id": "astra-static-two-repositories-v1",
+  "observation_count": 26,
+  "referenced_raw_file_count": 36,
+  "evaluator_version": "frozen-static-baseline-1.3",
+  "evaluator_source_hash": "db09661e194ca132aed2bf6f4405d3d33ef9ad4157cf690a03f84fb4fe72b905",
+  "query_lock": {
+    "path": "/workspace/callscope/.analysis-tools/goal-source-query.lock",
+    "protocol": "fcntl.flock LOCK_EX; compatible with shell flock"
+  },
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "database": "/workspace/callscope/reports/astra-iteration10/codepatchbay-v12.sqlite3",
+      "database_sha256": "68e554c736cc0531de8fdeb6e435428491273247de972cf50dac4525e3ce1f95",
+      "metadata": {
+        "id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+        "project_id": "ac6694a563ea5a6ef75f",
+        "root": "/workspace/codepatchbay",
+        "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+        "policy_hash": "c11c67291de2eb257c6b6195cae16f92333abe2f9ca323881403c954cd737714",
+        "analyzer_version": "static-multilang-12",
+        "detector_version": "call-rules-11-whole-judgments",
+        "schema_version": "2",
+        "finding_count": 40569,
+        "stats": {
+          "ambiguous_calls": 429,
+          "ambiguous_symbols": 1,
+          "atomicity_contracts_count": 1,
+          "budget_contracts_count": 2,
+          "by_language": {
+            "python": {
+              "ambiguous_calls": 0,
+              "dynamic_calls": 41,
+              "edges": 74,
+              "external_callback_boundaries": 16,
+              "external_calls": 24,
+              "files_failed": 0,
+              "files_parsed": 2,
+              "files_total": 2,
+              "nodes": 28,
+              "resolved_calls": 9,
+              "unresolved_calls": 0
+            },
+            "typescript": {
+              "ambiguous_calls": 429,
+              "dynamic_calls": 18285,
+              "edges": 60497,
+              "external_callback_boundaries": 11880,
+              "external_calls": 18405,
+              "files_failed": 0,
+              "files_parsed": 328,
+              "files_total": 328,
+              "nodes": 11057,
+              "resolved_calls": 23371,
+              "unresolved_calls": 7
+            }
+          },
+          "call_resolution_incomplete": true,
+          "component_versions": {
+            "atomicity_contracts": {
+              "analyzer": "static-atomicity-contracts-2-shared",
+              "policy_schema": "static-atomicity-policy-v1"
+            },
+            "budget_contracts": {
+              "analyzer": "static-local-budget-contracts-1",
+              "policy_schema": "static-local-budget-policy-v1"
+            },
+            "completion_summaries": "captured-completion-summaries-1",
+            "field_contracts": {
+              "analyzer": "static-field-contracts-4-ir",
+              "policy_schema": "static-field-policy-v2"
+            },
+            "field_relations": "captured-field-source-relations-1",
+            "field_summaries": "finite-field-summaries-5-ir",
+            "goal_contracts": {
+              "adapters": {
+                "atomicity": {
+                  "analyzer": "source-derived-atomicity-completion-1",
+                  "policy_schema": "adapter-validated-v1"
+                },
+                "pipeline": {
+                  "analyzer": "finite-parameter-record-budget-flow-1",
+                  "policy_schema": "parameter-record-budget-policy-1"
+                },
+                "status": {
+                  "analyzer": "finite-status-classification-1",
+                  "policy_schema": "static-status-policy-v1"
+                }
+              },
+              "policy_schema": "static-goal-policy-v1",
+              "registry": "static-whole-judgment-registry-1"
+            },
+            "lexical_bindings": "captured-lexical-bindings-3",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "report_claims": {
+              "analyzer": "captured-report-source-chains-1",
+              "policy_schema": "static-report-claim-policy-v1"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_ir": "finite-immutable-semantic-ir-3",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            },
+            "value_contracts": {
+              "analyzer": "static-value-contracts-1",
+              "policy_schema": "static-value-policy-v1"
+            }
+          },
+          "coverage_incomplete": true,
+          "dynamic_calls": 18326,
+          "edges": 60571,
+          "entrypoints_count": 5,
+          "excluded_paths": [
+            ".agents",
+            ".beads",
+            ".git",
+            ".test-tmp",
+            "tests"
+          ],
+          "external_callback_boundaries": 11896,
+          "external_calls": 18429,
+          "field_contracts_count": 3,
+          "files_failed": 3,
+          "files_parsed": 330,
+          "files_total": 333,
+          "frontend_stats": {
+            "python": {
+              "ambiguous_calls": 0,
+              "ambiguous_symbols": 0,
+              "attribute_invalidations": [
+                [
+                  "skills.hermes.adapter.CPBStream",
+                  "_base_url"
+                ],
+                [
+                  "skills.hermes.adapter.CPBStream",
+                  "_project"
+                ],
+                [
+                  "skills.hermes.adapter.CPBStream",
+                  "_reconnect_interval"
+                ],
+                [
+                  "skills.hermes.adapter.CPBStream",
+                  "_stopped"
+                ],
+                [
+                  "skills.openclaw.adapter.CPBClient",
+                  "base_url"
+                ]
+              ],
+              "call_resolution_incomplete": true,
+              "coverage_incomplete": false,
+              "dynamic_calls": 41,
+              "edges": 74,
+              "excluded_paths": [],
+              "external_callback_boundaries": 16,
+              "external_calls": 24,
+              "files_failed": 0,
+              "files_parsed": 2,
+              "files_total": 2,
+              "incomplete": true,
+              "limitations": [
+                "不证明分支可执行、调用顺序、返回值或业务结果",
+                "不执行代码/测试/构建，不验证外部依赖可用性",
+                "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+                "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+                "构造器内部调用保持未知，不推断初始化路径"
+              ],
+              "nodes": 28,
+              "parser_version": "cpython-3.12.14",
+              "resolution_model": "static lexical binding; no runtime execution",
+              "resolved_calls": 9,
+              "scan_errors": [],
+              "source_roots": [
+                "."
+              ],
+              "stubs_not_analyzed": [],
+              "symlinks_skipped": [],
+              "unknown_attribute_writes": [],
+              "unresolved_calls": 0
+            },
+            "typescript": {
+              "ambiguous_calls": 429,
+              "ambiguous_symbols": 1,
+              "analyzer_version": "typescript-tree-sitter-call-2-projection-1",
+              "call_resolution_incomplete": true,
+              "coverage_incomplete": true,
+              "dynamic_calls": 18285,
+              "edges": 60497,
+              "external_callback_boundaries": 11880,
+              "external_calls": 18405,
+              "files_failed": 0,
+              "files_parsed": 328,
+              "files_total": 328,
+              "incomplete": true,
+              "language": "typescript",
+              "limitations": [
+                "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+                "类型/接口不证明对象运行时目标",
+                "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+                "不证明分支、顺序、返回值、加载成功或业务结果"
+              ],
+              "nodes": 11057,
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;ts-syntax-projection-1",
+              "raw_parse_error_files": 3,
+              "resolved_calls": 23371,
+              "syntax_projected_files": 3,
+              "syntax_projection_edits_by_rule": {
+                "qualified_import_type": 10,
+                "type_only_abstract_property": 1
+              },
+              "syntax_projection_partial_files": 0,
+              "syntax_projection_version": "ts-syntax-projection-1",
+              "unresolved_calls": 7
+            }
+          },
+          "goal_contracts_count": 3,
+          "incomplete": true,
+          "languages_requested": [
+            "python",
+            "typescript"
+          ],
+          "limitations": [
+            "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+            "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+            "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+            "快照是读取到的源码集合，不是工作区原子捕获"
+          ],
+          "navigation_contracts_count": 0,
+          "nodes": 11085,
+          "report_claims_count": 6,
+          "resolution_model": "explicit static lexical bindings; no target execution",
+          "resolved_calls": 23380,
+          "rules_count": 10,
+          "scan_errors": [],
+          "source_roots": [
+            "."
+          ],
+          "static_contracts_count": 1,
+          "support_input_capture_version": "support-input-capture-1",
+          "support_inputs_count": 2,
+          "support_inputs_incomplete": false,
+          "supported_languages": [
+            "python",
+            "typescript",
+            "rust"
+          ],
+          "symlinks_skipped": [],
+          "unresolved_calls": 7,
+          "unsupported_files": [
+            {
+              "language": "shell",
+              "path": "scripts/cutover-orchestrator.sh"
+            },
+            {
+              "language": "shell",
+              "path": "scripts/install.sh"
+            },
+            {
+              "language": "shell",
+              "path": "skills/claude-code/install.sh"
+            }
+          ],
+          "value_contracts_count": 1
+        },
+        "finding_type_counts": {
+          "call_cycle": 2,
+          "external_callback_boundary": 11896,
+          "forbidden_call": 1,
+          "recursive_call": 51,
+          "required_path": 1,
+          "static_atomicity_protected_deduplication": 1,
+          "static_contract_literal_set_consistency": 1,
+          "static_goal_judgment": 3,
+          "static_local_budget": 2,
+          "static_parameter_field_flow": 3,
+          "static_report_claim": 6,
+          "static_value_call_argument_value": 1,
+          "suspected_unreachable": 9839,
+          "unresolved_call": 18762
+        }
+      },
+      "publication_identity_checks": {
+        "analyzer_version": true,
+        "detector_version": true,
+        "schema_version": true,
+        "tool_identity": true,
+        "effective_policy_hash_matches_frozen_policy": true
+      },
+      "component_versions": {
+        "atomicity_contracts": {
+          "analyzer": "static-atomicity-contracts-2-shared",
+          "policy_schema": "static-atomicity-policy-v1"
+        },
+        "budget_contracts": {
+          "analyzer": "static-local-budget-contracts-1",
+          "policy_schema": "static-local-budget-policy-v1"
+        },
+        "completion_summaries": "captured-completion-summaries-1",
+        "field_contracts": {
+          "analyzer": "static-field-contracts-4-ir",
+          "policy_schema": "static-field-policy-v2"
+        },
+        "field_relations": "captured-field-source-relations-1",
+        "field_summaries": "finite-field-summaries-5-ir",
+        "goal_contracts": {
+          "adapters": {
+            "atomicity": {
+              "analyzer": "source-derived-atomicity-completion-1",
+              "policy_schema": "adapter-validated-v1"
+            },
+            "pipeline": {
+              "analyzer": "finite-parameter-record-budget-flow-1",
+              "policy_schema": "parameter-record-budget-policy-1"
+            },
+            "status": {
+              "analyzer": "finite-status-classification-1",
+              "policy_schema": "static-status-policy-v1"
+            }
+          },
+          "policy_schema": "static-goal-policy-v1",
+          "registry": "static-whole-judgment-registry-1"
+        },
+        "lexical_bindings": "captured-lexical-bindings-3",
+        "maintenance": {
+          "backend": "cocoindex",
+          "global_detection": "full",
+          "granularity": "language",
+          "protocol": 1,
+          "version": "1.0.25"
+        },
+        "python": {
+          "analyzer": "python-ast-3-captured",
+          "parser": "cpython-3.12.14"
+        },
+        "report_claims": {
+          "analyzer": "captured-report-source-chains-1",
+          "policy_schema": "static-report-claim-policy-v1"
+        },
+        "semantic_environment": "captured-builtin-environment-1",
+        "semantic_ir": "finite-immutable-semantic-ir-3",
+        "semantic_sources": "semantic-snapshot-sources-1",
+        "static_contracts": {
+          "analyzer": "static-contracts-1",
+          "policy_schema": "static-contract-policy-v1"
+        },
+        "support_input_capture": "support-input-capture-1",
+        "tool": {
+          "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+          "graph_backend": "axon-graph-core-1",
+          "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+        },
+        "typescript": {
+          "analyzer": "typescript-tree-sitter-call-2-projection-1",
+          "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+        },
+        "value_contracts": {
+          "analyzer": "static-value-contracts-1",
+          "policy_schema": "static-value-policy-v1"
+        }
+      },
+      "target_identity": {
+        "root": "/workspace/codepatchbay",
+        "frozen_commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+        "actual_commit": "4f2d2eca31d90b0122db1c1429dd365672db2393",
+        "commit_matches": true,
+        "git_metadata_read_only": true,
+        "git_read_error": null,
+        "working_tree_clean_claimed": false,
+        "live_referenced_source_checks": [
+          {
+            "path": "cli/commands/fix.ts",
+            "expected_sha256": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "actual_sha256": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "status": "matched"
+          },
+          {
+            "path": "cli/commands/pipeline.ts",
+            "expected_sha256": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "actual_sha256": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "status": "matched"
+          },
+          {
+            "path": "cli/cpb.ts",
+            "expected_sha256": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+            "actual_sha256": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+            "status": "matched"
+          },
+          {
+            "path": "core/contracts/idempotency.ts",
+            "expected_sha256": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+            "actual_sha256": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+            "status": "matched"
+          },
+          {
+            "path": "core/engine/run-job-checklist-dag.ts",
+            "expected_sha256": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+            "actual_sha256": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+            "status": "matched"
+          },
+          {
+            "path": "core/engine/run-job-execute-dag.ts",
+            "expected_sha256": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+            "actual_sha256": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+            "status": "matched"
+          },
+          {
+            "path": "core/engine/run-job.ts",
+            "expected_sha256": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+            "actual_sha256": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+            "status": "matched"
+          },
+          {
+            "path": "core/workflow/probe-runner.ts",
+            "expected_sha256": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+            "actual_sha256": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+            "status": "matched"
+          },
+          {
+            "path": "runtime/worker/assignment-finalizer.ts",
+            "expected_sha256": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+            "actual_sha256": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+            "status": "matched"
+          },
+          {
+            "path": "runtime/worker/managed-worker.ts",
+            "expected_sha256": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+            "actual_sha256": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+            "status": "matched"
+          },
+          {
+            "path": "server/orchestrator/failure-router.ts",
+            "expected_sha256": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+            "actual_sha256": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+            "status": "matched"
+          },
+          {
+            "path": "server/orchestrator/hub-orchestrator.ts",
+            "expected_sha256": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+            "actual_sha256": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+            "status": "matched"
+          },
+          {
+            "path": "server/orchestrator/worker-supervisor.ts",
+            "expected_sha256": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+            "actual_sha256": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+            "status": "matched"
+          },
+          {
+            "path": "server/services/engine-runner.ts",
+            "expected_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "actual_sha256": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "status": "matched"
+          },
+          {
+            "path": "server/services/event/event-materializer.ts",
+            "expected_sha256": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+            "actual_sha256": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+            "status": "matched"
+          },
+          {
+            "path": "server/services/event/event-store.ts",
+            "expected_sha256": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+            "actual_sha256": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+            "status": "matched"
+          },
+          {
+            "path": "server/services/hub/hub-queue.ts",
+            "expected_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+            "actual_sha256": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+            "status": "matched"
+          },
+          {
+            "path": "server/services/job/job-store.ts",
+            "expected_sha256": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+            "actual_sha256": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+            "status": "matched"
+          },
+          {
+            "path": "server/services/review/review-dispatch.ts",
+            "expected_sha256": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+            "actual_sha256": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+            "status": "matched"
+          }
+        ],
+        "live_referenced_source_hashes_match": true,
+        "saved_referenced_source_checks": [
+          {
+            "path": "cli/commands/fix.ts",
+            "expected_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "cli/commands/pipeline.ts",
+            "expected_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "cli/cpb.ts",
+            "expected_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+            "source_hash": "e6da09a200efb3977f1c2b20fde7ccc7cfe1a4baf2c741d353dd6f3ff41a1115",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "core/contracts/idempotency.ts",
+            "expected_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+            "source_hash": "8ab99736798fa50dbc981b5c99bf21d29199b89bb67ecf61e03f486164765dd4",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "core/engine/run-job-checklist-dag.ts",
+            "expected_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+            "source_hash": "b9f5e1ac7cc9339e88dd66a45a7cf00f4c7a2ed4e6694feb14b0c41f8db8c932",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "core/engine/run-job-execute-dag.ts",
+            "expected_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+            "source_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "core/engine/run-job.ts",
+            "expected_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+            "source_hash": "ae4a6baf16e3ca09c360f14ff52c084b83fc99a7206280fe4f7092d3b720a3cf",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "core/workflow/probe-runner.ts",
+            "expected_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+            "source_hash": "db55df27ea8397a4f221becc78429f5f80eaa3685a37d9d403c7d2bbf2570a5d",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "runtime/worker/assignment-finalizer.ts",
+            "expected_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+            "source_hash": "fc3ca6710ff76013e9839c8f57bd692296377058b6f750d997c327c377c73c98",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "runtime/worker/managed-worker.ts",
+            "expected_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+            "source_hash": "75cdd41a20c71a7f0c7c500080ab7743417f932d35e4179a031b822831c633ca",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/orchestrator/failure-router.ts",
+            "expected_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+            "source_hash": "8abe3a09afcf48aa46b9380f9955e6c9e3e0411c1b02a29a9d2b4f1d721ea1a9",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/orchestrator/hub-orchestrator.ts",
+            "expected_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+            "source_hash": "41e248486eeae6f36b8f66b87df56a466bb1d4c5cb86d4c09066012e170f8454",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/orchestrator/worker-supervisor.ts",
+            "expected_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+            "source_hash": "08e94b0348b717cfe082fa4fe32eba0683605bda08cd35f91ee1a00560ac0953",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/services/engine-runner.ts",
+            "expected_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/services/event/event-materializer.ts",
+            "expected_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+            "source_hash": "b996cee994fe63b138a41e3805319d73de5ff21ff902090993324739ee69c993",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/services/event/event-store.ts",
+            "expected_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+            "source_hash": "9323053b0a49589604dc8b568a4448feb53d68f8d8cf1411c56dca8ef01da750",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/services/hub/hub-queue.ts",
+            "expected_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+            "source_hash": "0bd13766a2a2fcd271c2ead8166fbbd6f782fde32f63954ccced88a4cb2de02c",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/services/job/job-store.ts",
+            "expected_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+            "source_hash": "1b18f79636c4c4078eda53a7df8fa92236357b4afef41bc9372b7d2034e707d7",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "server/services/review/review-dispatch.ts",
+            "expected_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+            "source_hash": "24405468ce46d08b50b14f541511a0f85f99f9e06c8b61cd6cbeef2c395adba9",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          }
+        ],
+        "saved_referenced_source_hashes_match": true
+      },
+      "scope_changes": {
+        "previous_policy_path": "/workspace/callscope/reports/astra-iteration9/codepatchbay-policy.json",
+        "previous_policy_sha256": "134671b5cb1cc7f6acb3514e63eac6a1e7bd3d53d48b750d38d8d35b9b63faa0",
+        "current_policy_path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-policy.json",
+        "current_policy_sha256": "4b28c0237ffd7d4491b127b42a69e85a33e15511c1831c1746b70c0eb045c766",
+        "policy_bytes_identical": false,
+        "changed_sections": [
+          {
+            "section": "analysis",
+            "before_sha256": "389d4cd777f60da5f230c0732338a6a5923ffc1f0ebe705b11e736d8a712fbf5",
+            "after_sha256": "4e9d6713b1332ae3d3282801dde1e41992b74f3937bbcb6b976420abdd331578"
+          },
+          {
+            "section": "goal_contracts",
+            "before_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "after_sha256": "7855f21ff7370f38e507d0d5eacaa79fbf16efd338284e61ee23f6ccc20e4fcc"
+          },
+          {
+            "section": "report_claims",
+            "before_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "after_sha256": "295a2f7a91a059c5463451a78ba09d8937655d553c09d0b5b232589c191d0775"
+          }
+        ],
+        "saved_effective_policy_hash": "c11c67291de2eb257c6b6195cae16f92333abe2f9ca323881403c954cd737714",
+        "saved_effective_analysis": {
+          "exclude": [
+            ".git",
+            ".beads",
+            ".callscope",
+            ".test-tmp",
+            "node_modules",
+            "third_party",
+            "vendor",
+            "generated",
+            "dist",
+            "dist-tests",
+            "build",
+            "coverage",
+            "tests",
+            "__tests__",
+            "fixtures",
+            "**/*.test.ts",
+            "**/*.spec.ts",
+            "**/*.test.tsx",
+            "**/*.spec.tsx"
+          ],
+          "languages": [
+            "python",
+            "typescript"
+          ],
+          "max_file_bytes": 1048576,
+          "module_aliases": {},
+          "rust_crates": {},
+          "rust_helper_profiles": [],
+          "rust_interface_models": [],
+          "source_roots": [
+            "."
+          ],
+          "support_inputs": [
+            "README.md",
+            "package.json"
+          ]
+        },
+        "changed_models_and_capture_are_explicit": true,
+        "repository_source_hash_changed_since_previous": true,
+        "current_support_inputs": [
+          {
+            "path": "README.md",
+            "hash": "c772ddd68d356db4683b26755a8f471598d226bd9b61c1213014afd8ea2112b9",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "package.json",
+            "hash": "a76855082449cae7b16a133cd0ceb8a28707d446908ff628e215a30252920ad1",
+            "status": "captured",
+            "language": null
+          }
+        ],
+        "current_captured_code_file_status_counts": {
+          "parsed": 330,
+          "unsupported": 3
+        },
+        "original_frozen_rule_and_observation_bytes_changed": false
+      },
+      "selected_observation_count": 13
+    },
+    {
+      "repository": "winwincode",
+      "database": "/workspace/callscope/reports/astra-iteration10/winwincode-v12.sqlite3",
+      "database_sha256": "941321d006c015e4105a1fd150a4ff714230a782f561ea8f86b4f50d51f9e634",
+      "metadata": {
+        "id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28",
+        "project_id": "1dec368a20d2f5075901",
+        "root": "/workspace/winwincode",
+        "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+        "policy_hash": "b1e290e7b61da9b404129887b1c41a4f86dcd5e25d7c851fb69822eda9ec4ac8",
+        "analyzer_version": "static-multilang-12",
+        "detector_version": "call-rules-11-whole-judgments",
+        "schema_version": "2",
+        "finding_count": 139700,
+        "stats": {
+          "ambiguous_calls": 62,
+          "ambiguous_symbols": 24,
+          "atomicity_contracts_count": 0,
+          "budget_contracts_count": 0,
+          "by_language": {
+            "python": {
+              "ambiguous_calls": 0,
+              "dynamic_calls": 0,
+              "edges": 0,
+              "external_callback_boundaries": 0,
+              "external_calls": 0,
+              "files_failed": 0,
+              "files_parsed": 0,
+              "files_total": 0,
+              "nodes": 0,
+              "resolved_calls": 0,
+              "unresolved_calls": 0
+            },
+            "rust": {
+              "ambiguous_calls": 57,
+              "dynamic_calls": 124920,
+              "edges": 160941,
+              "external_callback_boundaries": 7260,
+              "external_calls": 22701,
+              "files_failed": 6,
+              "files_parsed": 345,
+              "files_total": 351,
+              "nodes": 29471,
+              "resolved_calls": 11867,
+              "unresolved_calls": 1396
+            },
+            "typescript": {
+              "ambiguous_calls": 5,
+              "dynamic_calls": 4680,
+              "edges": 11042,
+              "external_callback_boundaries": 1299,
+              "external_calls": 1896,
+              "files_failed": 0,
+              "files_parsed": 120,
+              "files_total": 120,
+              "nodes": 2936,
+              "resolved_calls": 4426,
+              "unresolved_calls": 35
+            }
+          },
+          "call_resolution_incomplete": true,
+          "component_versions": {
+            "completion_summaries": "captured-completion-summaries-1",
+            "goal_contracts": {
+              "adapters": {
+                "device": {
+                  "analyzer": "static-device-spec-protocol-flow-1",
+                  "policy_schema": "static-device-spec-protocol-policy-v1"
+                },
+                "navigation": {
+                  "analyzer": "conditional-navigation-obligations-1",
+                  "policy_schema": "adapter-validated-v1"
+                }
+              },
+              "policy_schema": "static-goal-policy-v1",
+              "registry": "static-whole-judgment-registry-1"
+            },
+            "lexical_bindings": "captured-lexical-bindings-3",
+            "maintenance": {
+              "backend": "cocoindex",
+              "global_detection": "full",
+              "granularity": "language",
+              "protocol": 1,
+              "version": "1.0.25"
+            },
+            "navigation_contracts": {
+              "analyzer": "static-navigation-contracts-2-shared",
+              "policy_schema": "static-navigation-policy-v1"
+            },
+            "port_wiring": "finite-port-wiring-2-shared",
+            "python": {
+              "analyzer": "python-ast-3-captured",
+              "parser": "cpython-3.12.14"
+            },
+            "report_claims": {
+              "analyzer": "captured-report-source-chains-1",
+              "policy_schema": "static-report-claim-policy-v1"
+            },
+            "rust": {
+              "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+              "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+            },
+            "semantic_environment": "captured-builtin-environment-1",
+            "semantic_sources": "semantic-snapshot-sources-1",
+            "static_contracts": {
+              "analyzer": "static-contracts-1",
+              "policy_schema": "static-contract-policy-v1"
+            },
+            "support_input_capture": "support-input-capture-1",
+            "tool": {
+              "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+              "graph_backend": "axon-graph-core-1",
+              "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+            },
+            "typescript": {
+              "analyzer": "typescript-tree-sitter-call-2-projection-1",
+              "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+              "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+            }
+          },
+          "coverage_incomplete": true,
+          "dynamic_calls": 129600,
+          "edges": 171983,
+          "entrypoints_count": 0,
+          "excluded_paths": [
+            ".agents",
+            ".beads",
+            ".codex",
+            ".git",
+            "apps/client/scripts",
+            "apps/client/src/generated",
+            "crates/helper/build.rs",
+            "crates/winwincode-api/src/generated.rs",
+            "crates/winwincode-api/tests",
+            "crates/winwincode-audit/tests",
+            "crates/winwincode-cli/tests",
+            "crates/winwincode-codex/build.rs",
+            "crates/winwincode-connector-github/tests",
+            "crates/winwincode-connector-jira/tests",
+            "crates/winwincode-connector-linear/tests",
+            "crates/winwincode-connector-slack/tests",
+            "crates/winwincode-connector-teams/tests",
+            "crates/winwincode-connector-webhook/tests",
+            "crates/winwincode-control-plane/src/product_session_execution_application_tests.rs",
+            "crates/winwincode-control-plane/tests",
+            "crates/winwincode-data-export/tests",
+            "crates/winwincode-delivery/tests",
+            "crates/winwincode-device-client/tests",
+            "crates/winwincode-domain/src/generated.rs",
+            "crates/winwincode-evidence-export/tests",
+            "crates/winwincode-execution-port/src/generated.rs",
+            "crates/winwincode-execution-port/tests",
+            "crates/winwincode-fusion/tests",
+            "crates/winwincode-integration-core/tests",
+            "crates/winwincode-integration-sqlite/tests",
+            "crates/winwincode-local/tests",
+            "crates/winwincode-observability-core/tests",
+            "crates/winwincode-observability-sqlite/tests",
+            "crates/winwincode-provider/src/provider_anthropic_namespace_safety_tests.rs",
+            "crates/winwincode-provider/src/provider_anthropic_namespace_tests.rs",
+            "crates/winwincode-provider/tests",
+            "crates/winwincode-publication/src/test_support.rs",
+            "crates/winwincode-publication/tests",
+            "crates/winwincode-repository-context/tests",
+            "crates/winwincode-s3-artifact-adapter/tests",
+            "crates/winwincode-server/examples",
+            "crates/winwincode-server/tests",
+            "crates/winwincode-session/tests",
+            "crates/winwincode-storage/tests",
+            "crates/winwincode-test-assets",
+            "crates/winwincode-worker/tests",
+            "packages/browser-ui/scripts",
+            "packages/contracts/src/device-provider.generated.ts",
+            "schema/winwincode/v1/examples",
+            "scripts",
+            "tests",
+            "third_party",
+            "upstream"
+          ],
+          "external_callback_boundaries": 8559,
+          "external_calls": 24597,
+          "field_contracts_count": 0,
+          "files_failed": 6,
+          "files_parsed": 465,
+          "files_total": 471,
+          "frontend_stats": {
+            "python": {},
+            "rust": {
+              "ambiguous_calls": 57,
+              "ambiguous_symbols": 24,
+              "analyzer_version": "rust-tree-sitter-1.7-generic-lexical",
+              "call_resolution_incomplete": true,
+              "conditional_nodes": 1776,
+              "coverage_incomplete": true,
+              "dynamic_calls": 124920,
+              "edges": 160941,
+              "external_callback_boundaries": 29600,
+              "external_calls": 22701,
+              "files_failed": 6,
+              "files_parsed": 345,
+              "files_total": 351,
+              "generic_same_impl_model": "rust-generic-same-impl-lexical-v1",
+              "generic_same_impl_resolved_calls": 494,
+              "helper_model_version": "rust-derive-helper-model-1",
+              "helper_models_accepted": 1,
+              "incomplete": true,
+              "language": "rust",
+              "limitations": [
+                "未运行Cargo/rustc/测试，未验证类型、可见性或依赖可用性",
+                "具体Self及同一泛型固有impl内的直接self/Self词法声明可绑定；未验证泛型实例、参数类型或bounds",
+                "泛型词法模型不封闭旁支宏生成的命名空间；字段/跨impl泛型/trait目标/显式包装self保留未知",
+                "不展开宏或选择cfg配置；属性宏、Deref和闭包/Future激活保留未知",
+                "显式helper/标准接口模型仅在捕获名称环境与注册假设内绑定；生成体和实际标准库/toolchain未验证",
+                "不推断隐式Drop/Deref/运算符分派、回调或跨语言调用",
+                "模块解析仅使用配置crate根与已捕获源码；不猜测Cargo自定义target"
+              ],
+              "macro_definitions_not_expanded": 3,
+              "module_gaps": [
+                {
+                  "available": [],
+                  "candidate_files": [
+                    "crates/winwincode-api/src/generated.rs",
+                    "crates/winwincode-api/src/generated/mod.rs"
+                  ],
+                  "file": "crates/winwincode-api/src/lib.rs",
+                  "line": 8,
+                  "module": "generated"
+                },
+                {
+                  "available": [],
+                  "candidate_files": [
+                    "crates/winwincode-control-plane/src/product_session_execution_application_tests.rs"
+                  ],
+                  "file": "crates/winwincode-control-plane/src/product_session_execution_application.rs",
+                  "line": 2311,
+                  "module": "tests"
+                },
+                {
+                  "available": [],
+                  "candidate_files": [
+                    "crates/winwincode-domain/src/generated.rs",
+                    "crates/winwincode-domain/src/generated/mod.rs"
+                  ],
+                  "file": "crates/winwincode-domain/src/lib.rs",
+                  "line": 9,
+                  "module": "generated"
+                },
+                {
+                  "available": [],
+                  "candidate_files": [
+                    "crates/winwincode-execution-port/src/generated.rs",
+                    "crates/winwincode-execution-port/src/generated/mod.rs"
+                  ],
+                  "file": "crates/winwincode-execution-port/src/lib.rs",
+                  "line": 22,
+                  "module": "generated"
+                },
+                {
+                  "available": [],
+                  "candidate_files": [
+                    "crates/winwincode-provider/src/provider_anthropic_namespace_tests.rs"
+                  ],
+                  "file": "crates/winwincode-provider/src/provider_anthropic.rs",
+                  "line": 2216,
+                  "module": "provider_anthropic_namespace_tests"
+                },
+                {
+                  "available": [],
+                  "candidate_files": [
+                    "crates/winwincode-provider/src/provider_anthropic_namespace_safety_tests.rs"
+                  ],
+                  "file": "crates/winwincode-provider/src/provider_anthropic.rs",
+                  "line": 2220,
+                  "module": "provider_anthropic_namespace_safety_tests"
+                },
+                {
+                  "available": [],
+                  "candidate_files": [
+                    "crates/winwincode-publication/src/test_support.rs",
+                    "crates/winwincode-publication/src/test_support/mod.rs"
+                  ],
+                  "file": "crates/winwincode-publication/src/lib.rs",
+                  "line": 45,
+                  "module": "test_support"
+                }
+              ],
+              "nodes": 29471,
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14",
+              "resolution_model": "Rust source-body lexical bindings; no compiler or target execution",
+              "resolved_calls": 11867,
+              "standard_interface_models_applied": 2,
+              "unmapped_crate_files": [],
+              "unresolved_calls": 1396
+            },
+            "typescript": {
+              "ambiguous_calls": 5,
+              "ambiguous_symbols": 0,
+              "analyzer_version": "typescript-tree-sitter-call-2-projection-1",
+              "call_resolution_incomplete": true,
+              "coverage_incomplete": false,
+              "dynamic_calls": 4680,
+              "edges": 11042,
+              "external_callback_boundaries": 1299,
+              "external_calls": 1896,
+              "files_failed": 0,
+              "files_parsed": 120,
+              "files_total": 120,
+              "incomplete": true,
+              "language": "typescript",
+              "limitations": [
+                "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+                "类型/接口不证明对象运行时目标",
+                "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+                "不证明分支、顺序、返回值、加载成功或业务结果"
+              ],
+              "nodes": 2936,
+              "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;ts-syntax-projection-1",
+              "raw_parse_error_files": 6,
+              "resolved_calls": 4426,
+              "syntax_projected_files": 6,
+              "syntax_projection_edits_by_rule": {
+                "literal_nul_cst_surrogate": 4,
+                "qualified_import_type": 27
+              },
+              "syntax_projection_partial_files": 0,
+              "syntax_projection_version": "ts-syntax-projection-1",
+              "unresolved_calls": 35
+            }
+          },
+          "goal_contracts_count": 2,
+          "incomplete": true,
+          "languages_requested": [
+            "python",
+            "typescript",
+            "rust"
+          ],
+          "limitations": [
+            "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+            "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+            "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+            "快照是读取到的源码集合，不是工作区原子捕获"
+          ],
+          "navigation_contracts_count": 1,
+          "nodes": 32407,
+          "report_claims_count": 12,
+          "resolution_model": "explicit static lexical bindings; no target execution",
+          "resolved_calls": 16293,
+          "rules_count": 10,
+          "scan_errors": [],
+          "source_roots": [
+            "."
+          ],
+          "static_contracts_count": 1,
+          "support_input_capture_version": "support-input-capture-1",
+          "support_inputs_count": 11,
+          "support_inputs_incomplete": false,
+          "supported_languages": [
+            "python",
+            "typescript",
+            "rust"
+          ],
+          "symlinks_skipped": [
+            "CLAUDE.md"
+          ],
+          "unresolved_calls": 1431,
+          "unsupported_files": [],
+          "value_contracts_count": 0
+        },
+        "finding_type_counts": {
+          "call_cycle": 4,
+          "external_callback_boundary": 8509,
+          "recursive_call": 10,
+          "static_contract_required_object_fields": 1,
+          "static_goal_judgment": 2,
+          "static_navigation_query_context": 1,
+          "static_report_claim": 12,
+          "unresolved_call": 131161
+        }
+      },
+      "publication_identity_checks": {
+        "analyzer_version": true,
+        "detector_version": true,
+        "schema_version": true,
+        "tool_identity": true,
+        "effective_policy_hash_matches_frozen_policy": true
+      },
+      "component_versions": {
+        "completion_summaries": "captured-completion-summaries-1",
+        "goal_contracts": {
+          "adapters": {
+            "device": {
+              "analyzer": "static-device-spec-protocol-flow-1",
+              "policy_schema": "static-device-spec-protocol-policy-v1"
+            },
+            "navigation": {
+              "analyzer": "conditional-navigation-obligations-1",
+              "policy_schema": "adapter-validated-v1"
+            }
+          },
+          "policy_schema": "static-goal-policy-v1",
+          "registry": "static-whole-judgment-registry-1"
+        },
+        "lexical_bindings": "captured-lexical-bindings-3",
+        "maintenance": {
+          "backend": "cocoindex",
+          "global_detection": "full",
+          "granularity": "language",
+          "protocol": 1,
+          "version": "1.0.25"
+        },
+        "navigation_contracts": {
+          "analyzer": "static-navigation-contracts-2-shared",
+          "policy_schema": "static-navigation-policy-v1"
+        },
+        "port_wiring": "finite-port-wiring-2-shared",
+        "python": {
+          "analyzer": "python-ast-3-captured",
+          "parser": "cpython-3.12.14"
+        },
+        "report_claims": {
+          "analyzer": "captured-report-source-chains-1",
+          "policy_schema": "static-report-claim-policy-v1"
+        },
+        "rust": {
+          "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+          "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+        },
+        "semantic_environment": "captured-builtin-environment-1",
+        "semantic_sources": "semantic-snapshot-sources-1",
+        "static_contracts": {
+          "analyzer": "static-contracts-1",
+          "policy_schema": "static-contract-policy-v1"
+        },
+        "support_input_capture": "support-input-capture-1",
+        "tool": {
+          "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+          "graph_backend": "axon-graph-core-1",
+          "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+        },
+        "typescript": {
+          "analyzer": "typescript-tree-sitter-call-2-projection-1",
+          "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+        }
+      },
+      "target_identity": {
+        "root": "/workspace/winwincode",
+        "frozen_commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+        "actual_commit": "da407e4f3df3719718b23bd8913b73fe3ff73857",
+        "commit_matches": true,
+        "git_metadata_read_only": true,
+        "git_read_error": null,
+        "working_tree_clean_claimed": false,
+        "live_referenced_source_checks": [
+          {
+            "path": "apps/client/src/application.ts",
+            "expected_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "actual_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "status": "matched"
+          },
+          {
+            "path": "apps/client/src/auth-view-model.ts",
+            "expected_sha256": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+            "actual_sha256": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+            "status": "matched"
+          },
+          {
+            "path": "apps/client/src/boot.ts",
+            "expected_sha256": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+            "actual_sha256": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+            "status": "matched"
+          },
+          {
+            "path": "apps/client/src/chat-delivery-creator.ts",
+            "expected_sha256": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+            "actual_sha256": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+            "status": "matched"
+          },
+          {
+            "path": "apps/client/src/community-control-plane-client.ts",
+            "expected_sha256": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+            "actual_sha256": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+            "status": "matched"
+          },
+          {
+            "path": "apps/client/src/decision-clarification-view-model.ts",
+            "expected_sha256": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+            "actual_sha256": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+            "status": "matched"
+          },
+          {
+            "path": "apps/client/src/generated/control-plane-client.ts",
+            "expected_sha256": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "actual_sha256": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "status": "matched"
+          },
+          {
+            "path": "apps/client/src/home-dashboard-page.ts",
+            "expected_sha256": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+            "actual_sha256": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+            "status": "matched"
+          },
+          {
+            "path": "apps/client/src/task-entry-view-model.ts",
+            "expected_sha256": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+            "actual_sha256": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+            "status": "matched"
+          },
+          {
+            "path": "crates/winwincode-codex/src/adapter.rs",
+            "expected_sha256": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+            "actual_sha256": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+            "status": "matched"
+          },
+          {
+            "path": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+            "expected_sha256": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+            "actual_sha256": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+            "status": "matched"
+          },
+          {
+            "path": "crates/winwincode-delivery/src/application/workrun.rs",
+            "expected_sha256": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+            "actual_sha256": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+            "status": "matched"
+          },
+          {
+            "path": "crates/winwincode-server/src/dispatcher.rs",
+            "expected_sha256": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+            "actual_sha256": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+            "status": "matched"
+          },
+          {
+            "path": "crates/winwincode-server/src/server.rs",
+            "expected_sha256": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+            "actual_sha256": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+            "status": "matched"
+          },
+          {
+            "path": "crates/winwincode-worker/src/lib.rs",
+            "expected_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "actual_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "status": "matched"
+          },
+          {
+            "path": "crates/winwincode-worker/src/main.rs",
+            "expected_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "actual_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "status": "matched"
+          },
+          {
+            "path": "packages/browser-core/src/scope-context.ts",
+            "expected_sha256": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+            "actual_sha256": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+            "status": "matched"
+          }
+        ],
+        "live_referenced_source_hashes_match": true,
+        "saved_referenced_source_checks": [
+          {
+            "path": "apps/client/src/application.ts",
+            "expected_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "source_hash": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "apps/client/src/auth-view-model.ts",
+            "expected_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+            "source_hash": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "apps/client/src/boot.ts",
+            "expected_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+            "source_hash": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "apps/client/src/chat-delivery-creator.ts",
+            "expected_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+            "source_hash": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "apps/client/src/community-control-plane-client.ts",
+            "expected_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+            "source_hash": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "apps/client/src/decision-clarification-view-model.ts",
+            "expected_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+            "source_hash": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "apps/client/src/generated/control-plane-client.ts",
+            "expected_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "source_status": "captured_support_input",
+            "status": "matched",
+            "evidence_origin": "support_input",
+            "support_input_available": true,
+            "support_source_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "support_text_hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24"
+          },
+          {
+            "path": "apps/client/src/home-dashboard-page.ts",
+            "expected_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+            "source_hash": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "apps/client/src/task-entry-view-model.ts",
+            "expected_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+            "source_hash": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "crates/winwincode-codex/src/adapter.rs",
+            "expected_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+            "source_hash": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+            "expected_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+            "source_hash": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "crates/winwincode-delivery/src/application/workrun.rs",
+            "expected_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+            "source_hash": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "crates/winwincode-server/src/dispatcher.rs",
+            "expected_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+            "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "crates/winwincode-server/src/server.rs",
+            "expected_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+            "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "crates/winwincode-worker/src/lib.rs",
+            "expected_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "source_hash": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "crates/winwincode-worker/src/main.rs",
+            "expected_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "source_hash": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          },
+          {
+            "path": "packages/browser-core/src/scope-context.ts",
+            "expected_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+            "source_hash": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+            "source_status": "parsed",
+            "status": "matched",
+            "evidence_origin": "source_file"
+          }
+        ],
+        "saved_referenced_source_hashes_match": true
+      },
+      "scope_changes": {
+        "previous_policy_path": "/workspace/callscope/reports/astra-iteration9/winwincode-policy.json",
+        "previous_policy_sha256": "7331e395f929c6fe031265a9e8c8190cdad5fb158b35b54b7d614c30c899a11b",
+        "current_policy_path": "/workspace/callscope/reports/astra-iteration10/winwincode-policy.json",
+        "current_policy_sha256": "831df3cfaba119a575c53dc34970471d0203951653cf4632061d701849bd6c87",
+        "policy_bytes_identical": false,
+        "changed_sections": [
+          {
+            "section": "analysis",
+            "before_sha256": "02cd8ff618810a0e9f4a952e78ec1c1b4520449c03abd9401de69adbb6b8cc91",
+            "after_sha256": "748520acd36fd9d27ed7168b6421b4ec3e57465b9d5dc7bc124056d39af6b167"
+          },
+          {
+            "section": "goal_contracts",
+            "before_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "after_sha256": "939ed98d42bafbe4b5d862bd6cabee911e376edf569d1c63c992234fac174196"
+          },
+          {
+            "section": "report_claims",
+            "before_sha256": "74234e98afe7498fb5daf1f36ac2d78acc339464f950703b8c019892f982b90b",
+            "after_sha256": "f011d89497363ec2ef594c9d574613fb0aa102ff81ef8f89c298cef4b335dbe6"
+          }
+        ],
+        "saved_effective_policy_hash": "b1e290e7b61da9b404129887b1c41a4f86dcd5e25d7c851fb69822eda9ec4ac8",
+        "saved_effective_analysis": {
+          "exclude": [
+            ".git",
+            ".beads",
+            ".agents",
+            ".codex",
+            ".callscope",
+            ".analysis-tools",
+            ".venv",
+            "venv",
+            "__pycache__",
+            "node_modules",
+            "target",
+            "dist",
+            "build",
+            "coverage",
+            "third_party",
+            "upstream",
+            "vendor",
+            "generated",
+            "tests",
+            "test",
+            "__tests__",
+            "examples",
+            "scripts",
+            "crates/winwincode-test-assets",
+            "**/*.test.ts",
+            "**/*.test.tsx",
+            "**/*.spec.ts",
+            "**/*.spec.tsx",
+            "**/*.generated.ts",
+            "**/generated.rs",
+            "**/*_tests.rs",
+            "**/test_support.rs",
+            "**/build.rs"
+          ],
+          "languages": [
+            "python",
+            "typescript",
+            "rust"
+          ],
+          "max_file_bytes": 4194304,
+          "module_aliases": {
+            "@winwincode/browser-core/query-cache": "packages/browser-core/src/query-cache.ts",
+            "@winwincode/browser-core/scope-context": "packages/browser-core/src/scope-context.ts",
+            "@winwincode/browser-ui": "packages/browser-ui/src/index.ts",
+            "@winwincode/client": "apps/client/src/index.ts",
+            "@winwincode/contracts": "packages/contracts/src/index.ts",
+            "@winwincode/contracts/browser-control": "packages/contracts/src/browser-control.ts",
+            "@winwincode/control-plane-client": "packages/control-plane-client/src/index.ts",
+            "@winwincode/strongflow": "packages/strongflow/src/index.ts"
+          },
+          "rust_crates": {
+            "winwincode_api": "crates/winwincode-api",
+            "winwincode_audit": "crates/winwincode-audit",
+            "winwincode_cli": "crates/winwincode-cli",
+            "winwincode_client_port": "crates/winwincode-client-port",
+            "winwincode_codex": "crates/winwincode-codex",
+            "winwincode_connector_github": "crates/winwincode-connector-github",
+            "winwincode_connector_jira": "crates/winwincode-connector-jira",
+            "winwincode_connector_linear": "crates/winwincode-connector-linear",
+            "winwincode_connector_slack": "crates/winwincode-connector-slack",
+            "winwincode_connector_teams": "crates/winwincode-connector-teams",
+            "winwincode_connector_webhook": "crates/winwincode-connector-webhook",
+            "winwincode_control_plane": "crates/winwincode-control-plane",
+            "winwincode_data_export": "crates/winwincode-data-export",
+            "winwincode_delivery": "crates/winwincode-delivery",
+            "winwincode_device_client": "crates/winwincode-device-client",
+            "winwincode_domain": "crates/winwincode-domain",
+            "winwincode_evidence_export": "crates/winwincode-evidence-export",
+            "winwincode_execution_port": "crates/winwincode-execution-port",
+            "winwincode_fusion": "crates/winwincode-fusion",
+            "winwincode_integration_core": "crates/winwincode-integration-core",
+            "winwincode_integration_sqlite": "crates/winwincode-integration-sqlite",
+            "winwincode_kernel": "crates/kernel",
+            "winwincode_kernel_helper": "crates/helper",
+            "winwincode_local": "crates/winwincode-local",
+            "winwincode_observability_core": "crates/winwincode-observability-core",
+            "winwincode_observability_sqlite": "crates/winwincode-observability-sqlite",
+            "winwincode_provider": "crates/winwincode-provider",
+            "winwincode_publication": "crates/winwincode-publication",
+            "winwincode_repository_context": "crates/winwincode-repository-context",
+            "winwincode_s3_artifact_adapter": "crates/winwincode-s3-artifact-adapter",
+            "winwincode_server": "crates/winwincode-server",
+            "winwincode_session": "crates/winwincode-session",
+            "winwincode_storage": "crates/winwincode-storage",
+            "winwincode_test_assets": "crates/winwincode-test-assets",
+            "winwincode_worker": "crates/winwincode-worker"
+          },
+          "rust_helper_profiles": [
+            {
+              "crate_root": "crates/winwincode-api",
+              "id": "serde-1.0.228-declared-helper-v1",
+              "workspace_manifest": "Cargo.toml"
+            },
+            {
+              "crate_root": "crates/winwincode-delivery",
+              "id": "serde-1.0.228-declared-helper-v1",
+              "workspace_manifest": "Cargo.toml"
+            }
+          ],
+          "rust_interface_models": [
+            "rust-core-cmp-eq-interface-v1"
+          ],
+          "source_roots": [
+            "."
+          ],
+          "support_inputs": [
+            "Cargo.lock",
+            "Cargo.toml",
+            "README.md",
+            "apps/client/src/generated/contracts.ts",
+            "apps/client/src/generated/control-plane-client.ts",
+            "crates/winwincode-api/Cargo.toml",
+            "crates/winwincode-api/src/generated.rs",
+            "crates/winwincode-delivery/Cargo.toml",
+            "crates/winwincode-domain/Cargo.toml",
+            "crates/winwincode-domain/src/generated.rs",
+            "docs/architecture.md"
+          ]
+        },
+        "changed_models_and_capture_are_explicit": true,
+        "repository_source_hash_changed_since_previous": true,
+        "current_support_inputs": [
+          {
+            "path": "Cargo.lock",
+            "hash": "24564a7ee1025079e1ecc86c8b40b08b17694be4ebe5663f2bc2e0e947be5eb5",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "Cargo.toml",
+            "hash": "e33d73f372e5e00e361ce7783743c977aceb07107effea3990886e71c0f7a5b4",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "README.md",
+            "hash": "58feece6f0dee6b5d00954f91f68ae8c1440583e84f4a5c6b42aed289767294e",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "apps/client/src/generated/contracts.ts",
+            "hash": "900bfd942abc7f889540469721e5540c1a329f18124457a67f64b5ea1e793515",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "apps/client/src/generated/control-plane-client.ts",
+            "hash": "aeab6863d5bf9d5c6c854417a1634b80714a2f3a79ddcd567b0c8f7b0387bb24",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-api/Cargo.toml",
+            "hash": "d09555f1bf9921e1cc5f5d796150dc7aff5b4aa5a78d67e6f9adee70530f9de7",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-api/src/generated.rs",
+            "hash": "8c453928bc68c7980a5c00a262087244f5b3987e2fee6bc0043d13cfafb40037",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-delivery/Cargo.toml",
+            "hash": "698553efb4d8f6f3a7677c624b25acbc0a93e49a1c2e5e3ead5ef055dc7b945c",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-domain/Cargo.toml",
+            "hash": "0f66a8a3d0c5b209a5c89b349e3dcca68b7f3f910935cfae5e48f65123cb087f",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "crates/winwincode-domain/src/generated.rs",
+            "hash": "358d71db1b6deee97e0dd4364d2c3e30f0ac029105ec40bf9d9e477d8c347c68",
+            "status": "captured",
+            "language": null
+          },
+          {
+            "path": "docs/architecture.md",
+            "hash": "85edf0b16c089ed02b8e531d1e12bf2e2e25d15e3886fdcd0ea58b8ab937dbe3",
+            "status": "captured",
+            "language": null
+          }
+        ],
+        "current_captured_code_file_status_counts": {
+          "parsed": 465,
+          "parse_error": 6
+        },
+        "original_frozen_rule_and_observation_bytes_changed": false
+      },
+      "selected_observation_count": 13
+    }
+  ],
+  "target_executed": false,
+  "target_tests_run": false,
+  "tool_test_suite_run": false,
+  "is_review_or_approval": false,
+  "interpretation": "All 26 frozen source observations remain in the denominator. Evidence-only and intentional unknown items are preserved. This comparison is not precision, recall, functional coverage, runtime success, a business judgment, or approval.",
+  "implementation": {
+    "freeze_path": "/workspace/callscope/reports/astra-iteration10/CORE_FREEZE.json",
+    "freeze_sha256": "73e70d5f186022bb7ef2afcc0118bdf95656264380705d50aff882b085bfc242",
+    "archive_path": "/workspace/callscope/reports/astra-iteration10/frozen-core-source",
+    "publication_series": "v12",
+    "tool_identity": {
+      "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f",
+      "graph_backend": "axon-graph-core-1",
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+    },
+    "expected_tool_identity": {
+      "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f",
+      "graph_backend": "axon-graph-core-1",
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+    },
+    "tool_identity_matches": true,
+    "runtime_versions": {
+      "package_version": "0.12.0",
+      "analyzer_version": "static-multilang-12",
+      "detector_version": "call-rules-11-whole-judgments",
+      "schema_version": "2"
+    },
+    "version_matches": {
+      "package_version": true,
+      "analyzer_version": true,
+      "detector_version": true,
+      "schema_version": true
+    },
+    "expected_python_source_count": 54,
+    "current_python_source_count": 54,
+    "archive_python_source_count": 54,
+    "current_inventory_matches": true,
+    "archive_inventory_matches": true,
+    "current_missing_paths": [],
+    "current_extra_paths": [],
+    "current_changed_paths": [],
+    "archive_missing_paths": [],
+    "archive_extra_paths": [],
+    "archive_changed_paths": [],
+    "archive_inventory_sha256": "df304c70434807d1a7ddd1e7eb0ac3558de0e281bb255236c467860852332eea",
+    "current_inventory_sha256": "df304c70434807d1a7ddd1e7eb0ac3558de0e281bb255236c467860852332eea",
+    "benchmark_report_checks": [
+      {
+        "path": "astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "actual_path": "/workspace/callscope/reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "expected_sha256": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+        "actual_sha256": "863f5dfe52ced7129a0bda499afa4a89b30d2db9396c654a5120204cfe422900",
+        "matched": true
+      },
+      {
+        "path": "astra-baseline/WINWINCODE_ANALYSIS.md",
+        "actual_path": "/workspace/callscope/reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+        "expected_sha256": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+        "actual_sha256": "b3f8b1def361595e2bd3540a6bca5381ef4ad2a71d4f3c49535bf3f24f212950",
+        "matched": true
+      }
+    ],
+    "frozen_policy_file_checks": [
+      {
+        "path": "codepatchbay-policy.json",
+        "actual_path": "/workspace/callscope/reports/astra-iteration10/codepatchbay-policy.json",
+        "expected_sha256": "4b28c0237ffd7d4491b127b42a69e85a33e15511c1831c1746b70c0eb045c766",
+        "actual_sha256": "4b28c0237ffd7d4491b127b42a69e85a33e15511c1831c1746b70c0eb045c766",
+        "matched": true
+      },
+      {
+        "path": "winwincode-policy.json",
+        "actual_path": "/workspace/callscope/reports/astra-iteration10/winwincode-policy.json",
+        "expected_sha256": "831df3cfaba119a575c53dc34970471d0203951653cf4632061d701849bd6c87",
+        "actual_sha256": "831df3cfaba119a575c53dc34970471d0203951653cf4632061d701849bd6c87",
+        "matched": true
+      }
+    ],
+    "is_review_or_approval": false,
+    "verified": true
+  },
+  "shared_component_checks": {
+    "completion_summaries": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": "captured-completion-summaries-1",
+        "winwincode": "captured-completion-summaries-1"
+      }
+    },
+    "goal_contracts": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": {
+          "adapters": {
+            "atomicity": {
+              "analyzer": "source-derived-atomicity-completion-1",
+              "policy_schema": "adapter-validated-v1"
+            },
+            "pipeline": {
+              "analyzer": "finite-parameter-record-budget-flow-1",
+              "policy_schema": "parameter-record-budget-policy-1"
+            },
+            "status": {
+              "analyzer": "finite-status-classification-1",
+              "policy_schema": "static-status-policy-v1"
+            }
+          },
+          "policy_schema": "static-goal-policy-v1",
+          "registry": "static-whole-judgment-registry-1"
+        },
+        "winwincode": {
+          "adapters": {
+            "device": {
+              "analyzer": "static-device-spec-protocol-flow-1",
+              "policy_schema": "static-device-spec-protocol-policy-v1"
+            },
+            "navigation": {
+              "analyzer": "conditional-navigation-obligations-1",
+              "policy_schema": "adapter-validated-v1"
+            }
+          },
+          "policy_schema": "static-goal-policy-v1",
+          "registry": "static-whole-judgment-registry-1"
+        }
+      },
+      "comparison_scope": "Shared registry/schema and shared adapter versions; enabled adapter selections legitimately differ by project.",
+      "shared_adapter_names": []
+    },
+    "lexical_bindings": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": "captured-lexical-bindings-3",
+        "winwincode": "captured-lexical-bindings-3"
+      }
+    },
+    "maintenance": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": {
+          "backend": "cocoindex",
+          "global_detection": "full",
+          "granularity": "language",
+          "protocol": 1,
+          "version": "1.0.25"
+        },
+        "winwincode": {
+          "backend": "cocoindex",
+          "global_detection": "full",
+          "granularity": "language",
+          "protocol": 1,
+          "version": "1.0.25"
+        }
+      }
+    },
+    "python": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": {
+          "analyzer": "python-ast-3-captured",
+          "parser": "cpython-3.12.14"
+        },
+        "winwincode": {
+          "analyzer": "python-ast-3-captured",
+          "parser": "cpython-3.12.14"
+        }
+      }
+    },
+    "report_claims": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": {
+          "analyzer": "captured-report-source-chains-1",
+          "policy_schema": "static-report-claim-policy-v1"
+        },
+        "winwincode": {
+          "analyzer": "captured-report-source-chains-1",
+          "policy_schema": "static-report-claim-policy-v1"
+        }
+      }
+    },
+    "semantic_environment": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": "captured-builtin-environment-1",
+        "winwincode": "captured-builtin-environment-1"
+      }
+    },
+    "semantic_sources": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": "semantic-snapshot-sources-1",
+        "winwincode": "semantic-snapshot-sources-1"
+      }
+    },
+    "static_contracts": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": {
+          "analyzer": "static-contracts-1",
+          "policy_schema": "static-contract-policy-v1"
+        },
+        "winwincode": {
+          "analyzer": "static-contracts-1",
+          "policy_schema": "static-contract-policy-v1"
+        }
+      }
+    },
+    "support_input_capture": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": "support-input-capture-1",
+        "winwincode": "support-input-capture-1"
+      }
+    },
+    "tool": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": {
+          "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+          "graph_backend": "axon-graph-core-1",
+          "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+        },
+        "winwincode": {
+          "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+          "graph_backend": "axon-graph-core-1",
+          "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+        }
+      }
+    },
+    "typescript": {
+      "same_between_databases": true,
+      "values": {
+        "codepatchbay": {
+          "analyzer": "typescript-tree-sitter-call-2-projection-1",
+          "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+        },
+        "winwincode": {
+          "analyzer": "typescript-tree-sitter-call-2-projection-1",
+          "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+          "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+        }
+      }
+    }
+  },
+  "verified": true,
+  "same_shared_component_versions": true
+}

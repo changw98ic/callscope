@@ -1,0 +1,158 @@
+{
+  "id": "wwc-report-device-spec-command-flow",
+  "severity": "high",
+  "roles": {
+    "producer": {
+      "file": "apps/client/src/decision-clarification-view-model.ts",
+      "symbol": "clarificationUpdateCommand"
+    },
+    "port_factory": {
+      "file": "apps/client/src/decision-clarification-view-model.ts",
+      "symbol": "createControlPlaneClarificationPort"
+    },
+    "view_model": {
+      "file": "apps/client/src/decision-clarification-view-model.ts",
+      "symbol": "createClarificationViewModel"
+    },
+    "application": {
+      "file": "apps/client/src/application.ts",
+      "symbol": "mountWinWinCodeClient"
+    },
+    "application_route": {
+      "file": "apps/client/src/application.ts",
+      "symbol": "mountWinWinCodeClient.renderDecisionClarification"
+    },
+    "observer_factory": {
+      "file": "apps/client/src/core/connection-state.ts",
+      "symbol": "observeControlPlaneClient"
+    },
+    "cache_factory": {
+      "file": "packages/browser-core/src/query-cache.ts",
+      "symbol": "createQueryCache"
+    },
+    "client_factory": {
+      "file": "apps/client/src/community-control-plane-client.ts",
+      "symbol": "createControlPlaneClient"
+    },
+    "neutral_factory": {
+      "file": "packages/control-plane-client/src/index.ts",
+      "symbol": "createControlPlaneClient"
+    },
+    "generated_transport": {
+      "file": "apps/client/src/community-control-plane-client.ts",
+      "symbol": "generatedTransport"
+    },
+    "http_factory": {
+      "file": "apps/client/src/generated/control-plane-client.ts",
+      "symbol": "createControlPlaneHttpClient"
+    },
+    "server_dispatcher": {
+      "file": "crates/winwincode-server/src/dispatcher.rs",
+      "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command"
+    },
+    "server_family": {
+      "file": "crates/winwincode-server/src/dispatcher.rs",
+      "symbol": "CommandFamily.from_name"
+    },
+    "server_application_dispatcher": {
+      "file": "crates/winwincode-server/src/application.rs",
+      "symbol": "<StandaloneControlPlaneApplication as TypedControlPlaneApiPort>.command"
+    },
+    "server_delivery_dispatcher": {
+      "file": "crates/winwincode-server/src/application.rs",
+      "symbol": "StandaloneControlPlaneApplication.delivery_command"
+    },
+    "server_update": {
+      "file": "crates/winwincode-control-plane/src/delivery_application.rs",
+      "symbol": "ControlPlane.delivery_update_spec"
+    },
+    "server_map": {
+      "file": "crates/winwincode-control-plane/src/delivery_application.rs",
+      "symbol": "map_command"
+    },
+    "server_resolve": {
+      "file": "crates/winwincode-control-plane/src/delivery_application.rs",
+      "symbol": "ControlPlane.resolve_specification_authority"
+    },
+    "server_take": {
+      "file": "crates/winwincode-control-plane/src/delivery_application.rs",
+      "symbol": "ControlPlane.take_delivery_authority"
+    },
+    "authority_installer": {
+      "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+      "symbol": "ControlPlane.install_local_delivery_adapters"
+    },
+    "authority_specification": {
+      "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+      "symbol": "<LocalDeliveryAuthority as DeliveryAuthorityPort>.specification"
+    },
+    "authority_decoder": {
+      "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+      "symbol": "decode_payload"
+    },
+    "authority_device_target": {
+      "file": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+      "symbol": "LocalDeliveryAuthority.device_target"
+    },
+    "chat_producer": {
+      "file": "apps/client/src/chat-delivery-creator.ts",
+      "symbol": "createChatDeliveryCreator"
+    },
+    "server_router": {
+      "file": "crates/winwincode-server/src/server.rs",
+      "symbol": "router"
+    },
+    "server_http_command": {
+      "file": "crates/winwincode-server/src/server.rs",
+      "symbol": "command"
+    },
+    "server_http_parser": {
+      "file": "crates/winwincode-server/src/server.rs",
+      "symbol": "parse_json_body"
+    },
+    "criterion_values": {
+      "file": "apps/client/src/decision-clarification-view-model.ts",
+      "symbol": "valuesFrom"
+    }
+  },
+  "protocol": {
+    "command": "delivery.update_spec",
+    "schema_version": "winwincode/v1",
+    "wire_field": "verificationCommand",
+    "rust_field": "verification_command",
+    "command_enum_variant": "DeliveryUpdateSpec",
+    "command_request_variant": "DeliveryUpdateSpecCommand",
+    "command_type": "DeliveryUpdateSpecCommand",
+    "payload_type": "DeliveryUpdateSpecPayload",
+    "spec_type": "DeliverySpecInput",
+    "command_discriminator_type": "DeliveryUpdateSpecCommandCommand",
+    "request_type": "CommandRequest",
+    "rust_file": "crates/winwincode-api/src/generated.rs",
+    "typescript_file": "apps/client/src/generated/contracts.ts",
+    "serde_profile": {
+      "id": "serde-1.0.228-declared-helper-v1",
+      "crate_root": "crates/winwincode-api",
+      "workspace_manifest": "Cargo.toml"
+    },
+    "rust_domain_file": "crates/winwincode-domain/src/generated.rs",
+    "schema_version_type": "SchemaVersion",
+    "schema_version_variant": "WinwincodeV1"
+  },
+  "models": [
+    "captured-device-json-serde-dispatch-v1"
+  ],
+  "provenance": {
+    "authority": "Astra original WWC-02 source report, conditional code judgment",
+    "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md#wwc-02",
+    "author_approved": false
+  },
+  "applicability": {
+    "kind": "conditional",
+    "conditions": [
+      "Normal production clarification route; options.controlPlane override is absent, literal module imports complete normally, and form prerequisites permit save.",
+      "Protocol values are ordinary JSON data and the versioned native JSON/Serde provider model applies; successful delivery of that request is a condition, not an observed network execution.",
+      "Actor/scope authorization, catalog/revision/source-session/baseline guards permit reaching authority, and the update is not an earlier exact receipt replay.",
+      "The source product session resolves to an authorized active Device repository target. Non-Device and independent Chat paths remain counterexamples."
+    ]
+  }
+}

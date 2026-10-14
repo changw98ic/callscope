@@ -1,0 +1,2318 @@
+{
+  "kind": "saved_actual_gate_pattern_presentation",
+  "formal_report": false,
+  "input": "reports/astra-iteration11/gates-source-query.json",
+  "input_sha256": "a8066ea9d863626e1a22db711170f84ab23aed2e1c9dc0b78a21a2350b9f7307",
+  "report_renderer_version": "captured-project-analysis-report-2",
+  "renderer_sha256": "ac0ba0469c11447a5ce43924b733601acb5f7d8f5f0c8bbfb38e3d20701d3200",
+  "entries": [
+    {
+      "rule_id": "cpb-report-readiness-abrupt-guard",
+      "presentation": {
+        "version": "captured-relation-presentation-1",
+        "presentation_only": true,
+        "full_pattern_ref": "/results/0/pattern",
+        "limits": {
+          "section_nodes": 224,
+          "depth": 8,
+          "list_items": 6,
+          "dictionary_fields": 40,
+          "string_characters": 240,
+          "table_rows": 64,
+          "table_columns": 12,
+          "tables": 24,
+          "table_search_nodes": 16384
+        },
+        "sections": [
+          {
+            "name": "version",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/version",
+            "value": "captured-conditional-gate-relations-1",
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "model",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/model",
+            "value": "finite-js-plain-record-gate-conditions-v1",
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "groups",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/groups",
+            "value": {
+              "readiness": {
+                "scoped_source_supported": true,
+                "readiness_implementation_success_or_external_state_proven": false,
+                "relations": [
+                  {
+                    "source_fact_refs": [
+                      "/results/0/source_facts/37"
+                    ],
+                    "kind": "source_predicate_abrupt_guard_dominates_later_calls",
+                    "origin": "source-derived",
+                    "conditional_gate_version": "captured-conditional-gate-relations-1",
+                    "role": "readiness_entry",
+                    "argument_binding_declaration_id": "54a1db8291cfa7b07e6d4ffa75e79ae07f814393334f0e4119c48015eb9cbf44",
+                    "true_branch_always_abrupt": true,
+                    "source_order_not_runtime_enqueue_success": true,
+                    "id": "baaf2940efd181755bf79b3d",
+                    "location": {
+                      "file": "cli/commands/fix.ts",
+                      "line": 506,
+                      "column": 3,
+                      "end_line": 509,
+                      "start_byte": 21182,
+                      "end_byte": 21317,
+                      "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/location"
+                    },
+                    "actual_predicate_call": {
+                      "source_fact_refs": [
+                        "/results/0/source_facts/13"
+                      ],
+                      "kind": "captured_call_step",
+                      "origin": "source-derived",
+                      "role": "readiness_entry",
+                      "owner_graph_node_id": "ts:cli/commands/fix#run",
+                      "callee_source": "isReadinessFailure",
+                      "actual_callee_graph_node_id": "ts:cli/commands/fix#isReadinessFailure",
+                      "authenticated_call_edge_id": "04397b66192f668821507c8c",
+                      "captured_site_edge_id": "04397b66192f668821507c8c",
+                      "binding_state": "authenticated_internal_call",
+                      "captured_resolution": "resolved",
+                      "result_binding_source": null,
+                      "call_is_entire_binding_initializer": false,
+                      "callee_activation_proven": false,
+                      "call_runtime_success_proven": false,
+                      "id": "cb971b2174bffd9859780d42",
+                      "location": {
+                        "file": "cli/commands/fix.ts",
+                        "line": 506,
+                        "column": 7,
+                        "end_line": 506,
+                        "start_byte": 21186,
+                        "end_byte": 21215,
+                        "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/location"
+                      },
+                      "arguments": [
+                        {
+                          "kind": "identifier",
+                          "name": "readiness",
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 506,
+                            "column": 26,
+                            "end_line": 506,
+                            "start_byte": 21205,
+                            "end_byte": 21214,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/arguments/0/location"
+                          },
+                          "reference": {
+                            "state": "unique",
+                            "declaration_id": "54a1db8291cfa7b07e6d4ffa75e79ae07f814393334f0e4119c48015eb9cbf44",
+                            "declaration_kind": "const",
+                            "parameter_index": null,
+                            "identity_complete": true,
+                            "declaration_location": {
+                              "file": "cli/commands/fix.ts",
+                              "line": 505,
+                              "column": 9,
+                              "end_line": 505,
+                              "start_byte": 21115,
+                              "end_byte": 21178,
+                              "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/arguments/0/reference/declaration_location"
+                            },
+                            "binder_location": {
+                              "file": "cli/commands/fix.ts",
+                              "line": 505,
+                              "column": 9,
+                              "end_line": 505,
+                              "start_byte": 21115,
+                              "end_byte": 21124,
+                              "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/arguments/0/reference/binder_location"
+                            }
+                          }
+                        }
+                      ],
+                      "binding_gaps": [],
+                      "branch_context": [
+                        {
+                          "kind": "if",
+                          "branch": "condition",
+                          "condition_truth_proven": false,
+                          "condition": {
+                            "kind": "call_expression",
+                            "callee_source": "isReadinessFailure",
+                            "call_effects_or_result_proven": false,
+                            "location": {
+                              "file": "cli/commands/fix.ts",
+                              "line": 506,
+                              "column": 7,
+                              "end_line": 506,
+                              "start_byte": 21186,
+                              "end_byte": 21215,
+                              "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/branch_context/0/condition/location"
+                            },
+                            "callee_expression": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/branch_context/0/condition/callee_expression/kind"
+                              },
+                              "name": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/branch_context/0/condition/callee_expression/name"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/branch_context/0/condition/callee_expression/location"
+                              },
+                              "reference": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/branch_context/0/condition/callee_expression/reference"
+                              }
+                            },
+                            "arguments": [
+                              {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/branch_context/0/condition/arguments/0"
+                              }
+                            ]
+                          },
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 506,
+                            "column": 3,
+                            "end_line": 509,
+                            "start_byte": 21182,
+                            "end_byte": 21317,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/actual_predicate_call/branch_context/0/location"
+                          }
+                        }
+                      ]
+                    },
+                    "predicate_summary": {
+                      "role": "readiness_predicate",
+                      "parameter_declaration_id": "ec11cd48523cbffc6b08ec15938c43986785072b211b1913d7bcd4eaa793ca87",
+                      "plain_stable_input_model_required": true,
+                      "all_return_values_boolean_literals": false,
+                      "return_paths": [
+                        {
+                          "completion_kind": "return_statement",
+                          "fact_id": "f4a6b35b2e2b7092e5fb7f44",
+                          "conditions": [],
+                          "value": {
+                            "kind": "binary",
+                            "operator": "===",
+                            "left": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/predicate_summary/return_paths/0/value/left/kind"
+                              },
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/predicate_summary/return_paths/0/value/left/key"
+                              },
+                              "optional": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/predicate_summary/return_paths/0/value/left/optional"
+                              },
+                              "object": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/predicate_summary/return_paths/0/value/left/object"
+                              }
+                            },
+                            "right": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/predicate_summary/return_paths/0/value/right/kind"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/predicate_summary/return_paths/0/value/right/value"
+                              }
+                            }
+                          },
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 466,
+                            "column": 3,
+                            "end_line": 466,
+                            "start_byte": 19624,
+                            "end_byte": 19646,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/predicate_summary/return_paths/0/location"
+                          }
+                        }
+                      ]
+                    },
+                    "argument_initializer": {
+                      "kind": "opaque_call",
+                      "source": "deps.assertFixReadiness",
+                      "call_fact_id": "5ff59a628ed0598350344cf0",
+                      "actual_target_role": null,
+                      "return_value_or_effect_proven": false,
+                      "arguments": [
+                        {
+                          "kind": "record",
+                          "fields": {
+                            "cpbRoot": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/argument_initializer/arguments/0/fields/cpbRoot/kind"
+                              },
+                              "name": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/argument_initializer/arguments/0/fields/cpbRoot/name"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/argument_initializer/arguments/0/fields/cpbRoot/declaration_id"
+                              }
+                            },
+                            "project": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/argument_initializer/arguments/0/fields/project/kind"
+                              },
+                              "name": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/argument_initializer/arguments/0/fields/project/name"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/argument_initializer/arguments/0/fields/project/declaration_id"
+                              }
+                            }
+                          },
+                          "spreads": []
+                        }
+                      ]
+                    },
+                    "source_predicate_expression": {
+                      "kind": "binary",
+                      "operator": "===",
+                      "left": {
+                        "kind": "get",
+                        "key": "ok",
+                        "optional": false,
+                        "object": {
+                          "kind": "input",
+                          "name": "r",
+                          "declaration_id": "ec11cd48523cbffc6b08ec15938c43986785072b211b1913d7bcd4eaa793ca87"
+                        }
+                      },
+                      "right": {
+                        "kind": "literal",
+                        "value": false
+                      }
+                    },
+                    "returned_values": [
+                      {
+                        "kind": "return_statement",
+                        "runtime_completion_proven": false,
+                        "location": {
+                          "file": "cli/commands/fix.ts",
+                          "line": 508,
+                          "column": 5,
+                          "end_line": 508,
+                          "start_byte": 21258,
+                          "end_byte": 21313,
+                          "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/location"
+                        },
+                        "returned_expression": {
+                          "kind": "call_expression",
+                          "callee_source": "exitCodeForPreSubmitFailure",
+                          "call_effects_or_result_proven": false,
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 508,
+                            "column": 12,
+                            "end_line": 508,
+                            "start_byte": 21265,
+                            "end_byte": 21312,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/location"
+                          },
+                          "callee_expression": {
+                            "kind": "identifier",
+                            "name": "exitCodeForPreSubmitFailure",
+                            "location": {
+                              "file": "cli/commands/fix.ts",
+                              "line": 508,
+                              "column": 12,
+                              "end_line": 508,
+                              "start_byte": 21265,
+                              "end_byte": 21292,
+                              "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/callee_expression/location"
+                            },
+                            "reference": {
+                              "state": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/callee_expression/reference/state"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/callee_expression/reference/declaration_id"
+                              },
+                              "declaration_kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/callee_expression/reference/declaration_kind"
+                              },
+                              "parameter_index": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/callee_expression/reference/parameter_index"
+                              },
+                              "identity_complete": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/callee_expression/reference/identity_complete"
+                              },
+                              "declaration_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/callee_expression/reference/declaration_location"
+                              },
+                              "binder_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/callee_expression/reference/binder_location"
+                              }
+                            }
+                          },
+                          "arguments": [
+                            {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/arguments/0/kind"
+                              },
+                              "member": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/arguments/0/member"
+                              },
+                              "current_referent_value_proven": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/arguments/0/current_referent_value_proven"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/arguments/0/location"
+                              },
+                              "object": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/arguments/0/object"
+                              },
+                              "member_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/returned_values/0/returned_expression/arguments/0/member_location"
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "later_call_sites": {
+                      "shown_items": [
+                        {
+                          "callee_source": "hashTaskKey",
+                          "guard_true_blocks_normal_reaching": true,
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 517,
+                            "column": 17,
+                            "end_line": 517,
+                            "start_byte": 21717,
+                            "end_byte": 21751,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/later_call_sites/0/location"
+                          }
+                        },
+                        {
+                          "callee_source": "deps.loadQueue",
+                          "guard_true_blocks_normal_reaching": true,
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 520,
+                            "column": 21,
+                            "end_line": 520,
+                            "start_byte": 21837,
+                            "end_byte": 21860,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/later_call_sites/1/location"
+                          }
+                        },
+                        {
+                          "callee_source": "Array.isArray",
+                          "guard_true_blocks_normal_reaching": true,
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 524,
+                            "column": 21,
+                            "end_line": 524,
+                            "start_byte": 21933,
+                            "end_byte": 21962,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/later_call_sites/2/location"
+                          }
+                        },
+                        {
+                          "callee_source": "entries.filter",
+                          "guard_true_blocks_normal_reaching": true,
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 525,
+                            "column": 28,
+                            "end_line": 527,
+                            "start_byte": 22012,
+                            "end_byte": 22109,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/later_call_sites/3/location"
+                          }
+                        },
+                        {
+                          "callee_source": "selectIdempotentEntry",
+                          "guard_true_blocks_normal_reaching": true,
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 528,
+                            "column": 22,
+                            "end_line": 528,
+                            "start_byte": 22132,
+                            "end_byte": 22180,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/later_call_sites/4/location"
+                          }
+                        },
+                        {
+                          "callee_source": "out.log",
+                          "guard_true_blocks_normal_reaching": true,
+                          "location": {
+                            "file": "cli/commands/fix.ts",
+                            "line": 530,
+                            "column": 7,
+                            "end_line": 530,
+                            "start_byte": 22258,
+                            "end_byte": 22312,
+                            "full_location_ref": "/results/0/pattern/groups/readiness/relations/0/later_call_sites/5/location"
+                          }
+                        }
+                      ],
+                      "shown_count": 6,
+                      "total_count": 19,
+                      "truncated": true,
+                      "full_value_ref": "/results/0/pattern/groups/readiness/relations/0/later_call_sites"
+                    },
+                    "conditions": [
+                      "the selected entry and predicate declarations are active",
+                      "the initializer and opaque calls before the return complete normally",
+                      "the predicate reads the same stable ordinary result record; no getters, Proxy or external mutation"
+                    ]
+                  }
+                ],
+                "predicate_finite_partition": {
+                  "complete": false,
+                  "ordinary_record_partition_complete": true,
+                  "record_cell_count": 2,
+                  "other_cell_semantics": "all other stable plain property values indistinguishable to captured strict comparisons",
+                  "ordinary_record_no_getters_or_proxy_required": true,
+                  "runtime_inputs_exercised": false,
+                  "dimensions_derived_from_source_literals": {
+                    "ok": [
+                      false
+                    ]
+                  },
+                  "record_partitions": {
+                    "presentation_table_ref": "/entries/0/presentation/tables/0",
+                    "full_value_ref": "/results/0/pattern/groups/readiness/predicate_finite_partition/record_partitions",
+                    "total_rows": 2,
+                    "presentation_only": true
+                  },
+                  "absent_input_partitions": {
+                    "presentation_table_ref": "/entries/0/presentation/tables/1",
+                    "full_value_ref": "/results/0/pattern/groups/readiness/predicate_finite_partition/absent_input_partitions",
+                    "total_rows": 2,
+                    "presentation_only": true
+                  }
+                },
+                "necessary_gaps": []
+              }
+            },
+            "truncated": true,
+            "omitted_provenance_fields": 2,
+            "visited_nodes": 191
+          },
+          {
+            "name": "scoped_source_supported",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/scoped_source_supported",
+            "value": true,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "source_return_conditions_computed",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/source_return_conditions_computed",
+            "value": true,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "target_code_executed",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/target_code_executed",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "runtime_verified",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/runtime_verified",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "all_project_functionality_proven",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/all_project_functionality_proven",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "trusted_model",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/trusted_model",
+            "value": {
+              "origin": "trusted-model",
+              "id": "finite-js-plain-record-gate-conditions-v1",
+              "ordinary_boolean_and_strict_literal_equality": true,
+              "finite_enum_cells_derived_from_source_literals": true,
+              "captured_lexical_binding_identity_is_not_heap_identity": true,
+              "opaque_calls_must_complete_normally_for_following_source_to_be_reached": true,
+              "getters_proxy_external_mutation_and_concurrency_excluded": true
+            },
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 8
+          },
+          {
+            "name": "budgets",
+            "presentation_only": true,
+            "full_value_ref": "/results/0/pattern/budgets",
+            "value": {
+              "summary_path_limit": 256,
+              "truncated": false
+            },
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 3
+          }
+        ],
+        "tables": [
+          {
+            "name": "record_partitions",
+            "full_table_ref": "/results/0/pattern/groups/readiness/predicate_finite_partition/record_partitions",
+            "columns": [
+              "property_cells",
+              "boolean_result",
+              "unknown"
+            ],
+            "total_rows": 2,
+            "rows": [
+              {
+                "full_row_ref": "/results/0/pattern/groups/readiness/predicate_finite_partition/record_partitions/0",
+                "cells": {
+                  "boolean_result": true,
+                  "unknown": false,
+                  "property_cells": {
+                    "ok": false
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/0/pattern/groups/readiness/predicate_finite_partition/record_partitions/1",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "ok": "<other-than-captured-literals>"
+                  }
+                },
+                "truncated": false
+              }
+            ],
+            "presentation_only": true,
+            "truncated": false
+          },
+          {
+            "name": "absent_input_partitions",
+            "full_table_ref": "/results/0/pattern/groups/readiness/predicate_finite_partition/absent_input_partitions",
+            "columns": [
+              "input_cell",
+              "boolean_result",
+              "unknown"
+            ],
+            "total_rows": 2,
+            "rows": [
+              {
+                "full_row_ref": "/results/0/pattern/groups/readiness/predicate_finite_partition/absent_input_partitions/0",
+                "cells": {
+                  "input_cell": "missing",
+                  "boolean_result": null,
+                  "unknown": true
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/0/pattern/groups/readiness/predicate_finite_partition/absent_input_partitions/1",
+                "cells": {
+                  "input_cell": "null",
+                  "boolean_result": null,
+                  "unknown": true
+                },
+                "truncated": false
+              }
+            ],
+            "presentation_only": true,
+            "truncated": false
+          }
+        ],
+        "truncated": true,
+        "table_discovery_truncated": true,
+        "meaning": "Bounded display of actual saved pattern values. Full pattern and source facts remain unchanged; omissions are not analysis gaps or new conclusions."
+      },
+      "markdown_characters": 23979
+    },
+    {
+      "rule_id": "cpb-report-completion-gate-conditions",
+      "presentation": {
+        "version": "captured-relation-presentation-1",
+        "presentation_only": true,
+        "full_pattern_ref": "/results/1/pattern",
+        "limits": {
+          "section_nodes": 224,
+          "depth": 8,
+          "list_items": 6,
+          "dictionary_fields": 40,
+          "string_characters": 240,
+          "table_rows": 64,
+          "table_columns": 12,
+          "tables": 24,
+          "table_search_nodes": 16384
+        },
+        "sections": [
+          {
+            "name": "version",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/version",
+            "value": "captured-conditional-gate-relations-1",
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "model",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/model",
+            "value": "finite-js-plain-record-gate-conditions-v1",
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "groups",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/groups",
+            "value": {
+              "completion": {
+                "scoped_source_supported": true,
+                "checklist_internal_checks_proven": false,
+                "external_verdict_or_evidence_truth_proven": false,
+                "statement": "Return records, local condition dependencies and source order are computed separately. Path conditions retain prior short circuits; local conditions describe the current gate only. No target inputs were executed.",
+                "mutating_predicate": {
+                  "role": "mutating_predicate",
+                  "parameter_declaration_id": "839e1c8b0175115f21835c233f3ab68a4ef45206c01a06fe765a66a8fec5dcd3",
+                  "plain_stable_input_model_required": true,
+                  "all_return_values_boolean_literals": true,
+                  "return_paths": [
+                    {
+                      "completion_kind": "return_statement",
+                      "fact_id": "576c872820801c305ca97936",
+                      "conditions": [
+                        {
+                          "equals_truth": true,
+                          "predicate_fact_id": "d4b33e2ec60760ab7d9ab07c",
+                          "condition": {
+                            "kind": "not",
+                            "operand": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/0/conditions/0/condition/operand/kind"
+                              },
+                              "name": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/0/conditions/0/condition/operand/name"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/0/conditions/0/condition/operand/declaration_id"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "value": {
+                        "kind": "literal",
+                        "value": false
+                      },
+                      "location": {
+                        "file": "core/engine/completion-gate.ts",
+                        "line": 108,
+                        "column": 13,
+                        "end_line": 108,
+                        "start_byte": 3342,
+                        "end_byte": 3354,
+                        "full_location_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/0/location"
+                      }
+                    },
+                    {
+                      "completion_kind": "return_statement",
+                      "fact_id": "dbcd033040656df248c55966",
+                      "conditions": [
+                        {
+                          "equals_truth": false,
+                          "predicate_fact_id": "d4b33e2ec60760ab7d9ab07c",
+                          "condition": {
+                            "kind": "not",
+                            "operand": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/0/condition/operand/kind"
+                              },
+                              "name": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/0/condition/operand/name"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/0/condition/operand/declaration_id"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "equals_truth": true,
+                          "predicate_fact_id": "fc15604a945cce6680250c5b",
+                          "condition": {
+                            "kind": "binary",
+                            "operator": "||",
+                            "left": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/1/condition/left/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/1/condition/left/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/1/condition/left/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/1/condition/left/right"
+                              }
+                            },
+                            "right": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/1/condition/right/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/1/condition/right/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/1/condition/right/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/conditions/1/condition/right/right"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "value": {
+                        "kind": "literal",
+                        "value": false
+                      },
+                      "location": {
+                        "file": "core/engine/completion-gate.ts",
+                        "line": 110,
+                        "column": 45,
+                        "end_line": 110,
+                        "start_byte": 3427,
+                        "end_byte": 3439,
+                        "full_location_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/1/location"
+                      }
+                    },
+                    {
+                      "completion_kind": "return_statement",
+                      "fact_id": "9e50f5acaecaf9d50a16510c",
+                      "conditions": [
+                        {
+                          "equals_truth": false,
+                          "predicate_fact_id": "d4b33e2ec60760ab7d9ab07c",
+                          "condition": {
+                            "kind": "not",
+                            "operand": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/0/condition/operand/kind"
+                              },
+                              "name": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/0/condition/operand/name"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/0/condition/operand/declaration_id"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "equals_truth": false,
+                          "predicate_fact_id": "fc15604a945cce6680250c5b",
+                          "condition": {
+                            "kind": "binary",
+                            "operator": "||",
+                            "left": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/1/condition/left/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/1/condition/left/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/1/condition/left/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/1/condition/left/right"
+                              }
+                            },
+                            "right": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/1/condition/right/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/1/condition/right/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/1/condition/right/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/1/condition/right/right"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "equals_truth": true,
+                          "predicate_fact_id": "1199ed0d9b70e9460e66db84",
+                          "condition": {
+                            "kind": "binary",
+                            "operator": "||",
+                            "left": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/2/condition/left/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/2/condition/left/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/2/condition/left/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/2/condition/left/right"
+                              }
+                            },
+                            "right": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/2/condition/right/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/2/condition/right/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/2/condition/right/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/conditions/2/condition/right/right"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "value": {
+                        "kind": "literal",
+                        "value": false
+                      },
+                      "location": {
+                        "file": "core/engine/completion-gate.ts",
+                        "line": 113,
+                        "column": 55,
+                        "end_line": 113,
+                        "start_byte": 3605,
+                        "end_byte": 3617,
+                        "full_location_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/2/location"
+                      }
+                    },
+                    {
+                      "completion_kind": "return_statement",
+                      "fact_id": "7e459b910b47e760a28f9119",
+                      "conditions": [
+                        {
+                          "equals_truth": false,
+                          "predicate_fact_id": "d4b33e2ec60760ab7d9ab07c",
+                          "condition": {
+                            "kind": "not",
+                            "operand": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/0/condition/operand/kind"
+                              },
+                              "name": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/0/condition/operand/name"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/0/condition/operand/declaration_id"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "equals_truth": false,
+                          "predicate_fact_id": "fc15604a945cce6680250c5b",
+                          "condition": {
+                            "kind": "binary",
+                            "operator": "||",
+                            "left": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/1/condition/left/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/1/condition/left/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/1/condition/left/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/1/condition/left/right"
+                              }
+                            },
+                            "right": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/1/condition/right/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/1/condition/right/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/1/condition/right/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/1/condition/right/right"
+                              }
+                            }
+                          }
+                        },
+                        {
+                          "equals_truth": false,
+                          "predicate_fact_id": "1199ed0d9b70e9460e66db84",
+                          "condition": {
+                            "kind": "binary",
+                            "operator": "||",
+                            "left": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/2/condition/left/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/2/condition/left/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/2/condition/left/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/2/condition/left/right"
+                              }
+                            },
+                            "right": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/2/condition/right/kind"
+                              },
+                              "operator": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/2/condition/right/operator"
+                              },
+                              "left": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/2/condition/right/left"
+                              },
+                              "right": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/conditions/2/condition/right/right"
+                              }
+                            }
+                          }
+                        }
+                      ],
+                      "value": {
+                        "kind": "literal",
+                        "value": true
+                      },
+                      "location": {
+                        "file": "core/engine/completion-gate.ts",
+                        "line": 114,
+                        "column": 3,
+                        "end_line": 114,
+                        "start_byte": 3620,
+                        "end_byte": 3631,
+                        "full_location_ref": "/results/1/pattern/groups/completion/mutating_predicate/return_paths/3/location"
+                      }
+                    }
+                  ]
+                },
+                "mutating_finite_enum_partition": {
+                  "complete": true,
+                  "ordinary_record_partition_complete": true,
+                  "record_cell_count": 9,
+                  "other_cell_semantics": "all other stable plain property values indistinguishable to captured strict comparisons",
+                  "ordinary_record_no_getters_or_proxy_required": true,
+                  "runtime_inputs_exercised": false,
+                  "dimensions_derived_from_source_literals": {
+                    "planMode": [
+                      "none",
+                      "parent"
+                    ],
+                    "workflow": [
+                      "docs",
+                      "readonly"
+                    ]
+                  },
+                  "record_partitions": {
+                    "presentation_table_ref": "/entries/1/presentation/tables/0",
+                    "full_value_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions",
+                    "total_rows": 9,
+                    "presentation_only": true
+                  },
+                  "absent_input_partitions": {
+                    "presentation_table_ref": "/entries/1/presentation/tables/1",
+                    "full_value_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/absent_input_partitions",
+                    "total_rows": 2,
+                    "presentation_only": true
+                  }
+                },
+                "gate_return_paths": {
+                  "shown_items": [
+                    {
+                      "completion_kind": "return_statement",
+                      "fact_id": "106879843b8f5ab0e8d5c89a",
+                      "authenticated_result_constructor": true,
+                      "conditions": [
+                        {
+                          "equals_truth": true,
+                          "predicate_fact_id": "c638ea5f98cdb192f2a97cbd",
+                          "condition": {
+                            "kind": "input",
+                            "name": "checklist",
+                            "declaration_id": "952fdb817337e3c4eac25e633da13ada829ba8def945ddd950292d94f531f5d5"
+                          }
+                        },
+                        {
+                          "equals_truth": true,
+                          "predicate_fact_id": "1815507108490c793a3e7987",
+                          "condition": {
+                            "kind": "binary",
+                            "operator": "!==",
+                            "left": {
+                              "kind": "get",
+                              "key": "outcome",
+                              "optional": false,
+                              "object": {
+                                "kind": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/conditions/1/condition/left/object/kind"
+                                },
+                                "source": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/conditions/1/condition/left/object/source"
+                                },
+                                "call_fact_id": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/conditions/1/condition/left/object/call_fact_id"
+                                },
+                                "actual_target_role": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/conditions/1/condition/left/object/actual_target_role"
+                                },
+                                "return_value_or_effect_proven": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/conditions/1/condition/left/object/return_value_or_effect_proven"
+                                },
+                                "arguments": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/conditions/1/condition/left/object/arguments"
+                                }
+                              }
+                            },
+                            "right": {
+                              "kind": "literal",
+                              "value": "complete"
+                            }
+                          }
+                        }
+                      ],
+                      "value": {
+                        "kind": "opaque_call",
+                        "source": "gateResult",
+                        "call_fact_id": "d35f81f9094cd201c589f334",
+                        "actual_target_role": "gate_result",
+                        "return_value_or_effect_proven": false,
+                        "arguments": {
+                          "shown_items": [
+                            {
+                              "kind": "binary",
+                              "operator": "||",
+                              "left": {
+                                "kind": "get",
+                                "key": "outcome",
+                                "optional": false,
+                                "object": {
+                                  "remaining_fields_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/value/arguments/0/left/object"
+                                }
+                              },
+                              "remaining_fields_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/value/arguments/0"
+                            }
+                          ],
+                          "shown_count": 1,
+                          "total_count": 4,
+                          "truncated": true,
+                          "full_value_ref": "/results/1/pattern/groups/completion/gate_return_paths/0/value/arguments"
+                        }
+                      },
+                      "remaining_fields_ref": "/results/1/pattern/groups/completion/gate_return_paths/0"
+                    }
+                  ],
+                  "shown_count": 1,
+                  "total_count": 19,
+                  "truncated": true,
+                  "full_value_ref": "/results/1/pattern/groups/completion/gate_return_paths"
+                },
+                "remaining_fields_ref": "/results/1/pattern/groups/completion"
+              }
+            },
+            "truncated": true,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 224
+          },
+          {
+            "name": "scoped_source_supported",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/scoped_source_supported",
+            "value": true,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "source_return_conditions_computed",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/source_return_conditions_computed",
+            "value": true,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "target_code_executed",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/target_code_executed",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "runtime_verified",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/runtime_verified",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "all_project_functionality_proven",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/all_project_functionality_proven",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "trusted_model",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/trusted_model",
+            "value": {
+              "origin": "trusted-model",
+              "id": "finite-js-plain-record-gate-conditions-v1",
+              "ordinary_boolean_and_strict_literal_equality": true,
+              "finite_enum_cells_derived_from_source_literals": true,
+              "captured_lexical_binding_identity_is_not_heap_identity": true,
+              "opaque_calls_must_complete_normally_for_following_source_to_be_reached": true,
+              "getters_proxy_external_mutation_and_concurrency_excluded": true
+            },
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 8
+          },
+          {
+            "name": "budgets",
+            "presentation_only": true,
+            "full_value_ref": "/results/1/pattern/budgets",
+            "value": {
+              "summary_path_limit": 256,
+              "truncated": false
+            },
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 3
+          }
+        ],
+        "tables": [
+          {
+            "name": "record_partitions",
+            "full_table_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions",
+            "columns": [
+              "property_cells",
+              "boolean_result",
+              "unknown"
+            ],
+            "total_rows": 9,
+            "rows": [
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/0",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "none",
+                    "workflow": "docs"
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/1",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "none",
+                    "workflow": "readonly"
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/2",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "none",
+                    "workflow": "<other-than-captured-literals>"
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/3",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "parent",
+                    "workflow": "docs"
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/4",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "parent",
+                    "workflow": "readonly"
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/5",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "parent",
+                    "workflow": "<other-than-captured-literals>"
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/6",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "<other-than-captured-literals>",
+                    "workflow": "docs"
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/7",
+                "cells": {
+                  "boolean_result": false,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "<other-than-captured-literals>",
+                    "workflow": "readonly"
+                  }
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/record_partitions/8",
+                "cells": {
+                  "boolean_result": true,
+                  "unknown": false,
+                  "property_cells": {
+                    "planMode": "<other-than-captured-literals>",
+                    "workflow": "<other-than-captured-literals>"
+                  }
+                },
+                "truncated": false
+              }
+            ],
+            "presentation_only": true,
+            "truncated": false
+          },
+          {
+            "name": "absent_input_partitions",
+            "full_table_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/absent_input_partitions",
+            "columns": [
+              "input_cell",
+              "boolean_result",
+              "unknown"
+            ],
+            "total_rows": 2,
+            "rows": [
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/absent_input_partitions/0",
+                "cells": {
+                  "input_cell": "missing",
+                  "boolean_result": false,
+                  "unknown": false
+                },
+                "truncated": false
+              },
+              {
+                "full_row_ref": "/results/1/pattern/groups/completion/mutating_finite_enum_partition/absent_input_partitions/1",
+                "cells": {
+                  "input_cell": "null",
+                  "boolean_result": false,
+                  "unknown": false
+                },
+                "truncated": false
+              }
+            ],
+            "presentation_only": true,
+            "truncated": false
+          }
+        ],
+        "truncated": true,
+        "table_discovery_truncated": true,
+        "meaning": "Bounded display of actual saved pattern values. Full pattern and source facts remain unchanged; omissions are not analysis gaps or new conclusions."
+      },
+      "markdown_characters": 27777
+    },
+    {
+      "rule_id": "cpb-report-access-audit-response",
+      "presentation": {
+        "version": "captured-relation-presentation-1",
+        "presentation_only": true,
+        "full_pattern_ref": "/results/2/pattern",
+        "limits": {
+          "section_nodes": 224,
+          "depth": 8,
+          "list_items": 6,
+          "dictionary_fields": 40,
+          "string_characters": 240,
+          "table_rows": 64,
+          "table_columns": 12,
+          "tables": 24,
+          "table_search_nodes": 16384
+        },
+        "sections": [
+          {
+            "name": "version",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/version",
+            "value": "captured-conditional-gate-relations-1",
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "model",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/model",
+            "value": "finite-js-plain-record-gate-conditions-v1",
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "groups",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/groups",
+            "value": {
+              "access_audit": {
+                "scoped_source_supported": true,
+                "job_audit_subject_equivalence_claimed": false,
+                "all_http_security_or_business_mutations_proven": false,
+                "response_replacement_relations": [
+                  {
+                    "source_fact_refs": [
+                      "/results/2/source_facts/58"
+                    ],
+                    "kind": "awaited_access_audit_response_replacement",
+                    "origin": "source-derived",
+                    "conditional_gate_version": "captured-conditional-gate-relations-1",
+                    "opener_call_fact_id": "03b68f4df81879acc163c39a",
+                    "opener_result_declaration_id": "19efdab5e3e1669abe3d093426107c50a993a391f86e0560d98a150e00cd26dc",
+                    "actual_awaited_method": "append",
+                    "response_binding_declaration_id": "8dbb856a98a7669f0b001c352a3925dcb500b2aa24c4383cea203691c0a4852c",
+                    "catch_return_or_throw_before_response": false,
+                    "callback_activation_proven": false,
+                    "audit_write_durability_proven": false,
+                    "business_mutation_rollback_proven": false,
+                    "actual_http_response_delivery_proven": false,
+                    "id": "4099d1333a4aca31bef104d5",
+                    "location": {
+                      "file": "server/index.ts",
+                      "line": 414,
+                      "column": 5,
+                      "end_line": 440,
+                      "start_byte": 15470,
+                      "end_byte": 16418,
+                      "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/location"
+                    },
+                    "awaited_call_location": {
+                      "file": "server/index.ts",
+                      "line": 415,
+                      "column": 13,
+                      "end_line": 427,
+                      "start_byte": 15488,
+                      "end_byte": 15987,
+                      "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/awaited_call_location"
+                    },
+                    "audit_arguments": [
+                      {
+                        "kind": "object",
+                        "location": {
+                          "file": "server/index.ts",
+                          "line": 415,
+                          "column": 32,
+                          "end_line": 427,
+                          "start_byte": 15507,
+                          "end_byte": 15986,
+                          "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/location"
+                        },
+                        "construction": {
+                          "fixed_data_source_shape_complete": true,
+                          "runtime_object_or_presence_proven": false,
+                          "fields": {
+                            "requestId": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/requestId/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/requestId/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/requestId/location"
+                              }
+                            },
+                            "method": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/method/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/method/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/method/location"
+                              }
+                            },
+                            "path": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/path/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/path/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/path/location"
+                              }
+                            },
+                            "statusCode": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/statusCode/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/statusCode/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/statusCode/location"
+                              }
+                            },
+                            "outcome": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/outcome/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/outcome/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/outcome/location"
+                              }
+                            },
+                            "principalId": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/principalId/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/principalId/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/principalId/location"
+                              }
+                            },
+                            "principalSource": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/principalSource/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/principalSource/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/principalSource/location"
+                              }
+                            },
+                            "remoteAddress": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/remoteAddress/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/remoteAddress/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/remoteAddress/location"
+                              }
+                            },
+                            "requiredScope": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/requiredScope/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/requiredScope/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/requiredScope/location"
+                              }
+                            },
+                            "errorCode": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/errorCode/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/errorCode/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/errorCode/location"
+                              }
+                            },
+                            "durationMs": {
+                              "key": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/durationMs/key"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/durationMs/value"
+                              },
+                              "location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/fields/durationMs/location"
+                              }
+                            }
+                          },
+                          "parts": {
+                            "shown_items": [
+                              {
+                                "key": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/0/key"
+                                },
+                                "value": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/0/value"
+                                },
+                                "location": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/0/location"
+                                }
+                              },
+                              {
+                                "key": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/1/key"
+                                },
+                                "value": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/1/value"
+                                },
+                                "location": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/1/location"
+                                }
+                              },
+                              {
+                                "key": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/2/key"
+                                },
+                                "value": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/2/value"
+                                },
+                                "location": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/2/location"
+                                }
+                              },
+                              {
+                                "key": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/3/key"
+                                },
+                                "value": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/3/value"
+                                },
+                                "location": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/3/location"
+                                }
+                              },
+                              {
+                                "key": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/4/key"
+                                },
+                                "value": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/4/value"
+                                },
+                                "location": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/4/location"
+                                }
+                              },
+                              {
+                                "key": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/5/key"
+                                },
+                                "value": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/5/value"
+                                },
+                                "location": {
+                                  "omitted_for_presentation": true,
+                                  "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts/5/location"
+                                }
+                              }
+                            ],
+                            "shown_count": 6,
+                            "total_count": 11,
+                            "truncated": true,
+                            "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/audit_arguments/0/construction/parts"
+                          }
+                        }
+                      }
+                    ],
+                    "failure_response": {
+                      "kind": "record",
+                      "fields": {
+                        "statusCode": {
+                          "kind": "literal",
+                          "value": 503
+                        },
+                        "payload": {
+                          "kind": "record",
+                          "fields": {
+                            "error": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/error/kind"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/error/value"
+                              }
+                            },
+                            "code": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/code/kind"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/code/value"
+                              }
+                            },
+                            "message": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/message/kind"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/message/value"
+                              }
+                            },
+                            "requestId": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/requestId/kind"
+                              },
+                              "name": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/requestId/name"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/payload/fields/requestId/declaration_id"
+                              }
+                            }
+                          },
+                          "spreads": []
+                        },
+                        "headers": {
+                          "kind": "record",
+                          "fields": {
+                            "retry-after": {
+                              "kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/headers/fields/retry-after/kind"
+                              },
+                              "value": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/failure_response/fields/headers/fields/retry-after/value"
+                              }
+                            }
+                          },
+                          "spreads": []
+                        }
+                      },
+                      "spreads": []
+                    },
+                    "catch_assignment_location": {
+                      "file": "server/index.ts",
+                      "line": 430,
+                      "column": 7,
+                      "end_line": 439,
+                      "start_byte": 16132,
+                      "end_byte": 16411,
+                      "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/catch_assignment_location"
+                    },
+                    "actual_response_writer_call": {
+                      "source_fact_refs": [
+                        "/results/2/source_facts/57"
+                      ],
+                      "kind": "captured_call_step",
+                      "origin": "source-derived",
+                      "role": "access_server",
+                      "owner_graph_node_id": "ts:server/index#startHubServer.<arrow@195:30>",
+                      "callee_source": "sendJson",
+                      "actual_callee_graph_node_id": "ts:server/index#sendJson",
+                      "authenticated_call_edge_id": "061961006a25235706f2e22c",
+                      "captured_site_edge_id": "061961006a25235706f2e22c",
+                      "binding_state": "authenticated_internal_call",
+                      "captured_resolution": "resolved",
+                      "result_binding_source": null,
+                      "call_is_entire_binding_initializer": false,
+                      "callee_activation_proven": false,
+                      "call_runtime_success_proven": false,
+                      "id": "5d95583e0dc6620f54e556bc",
+                      "location": {
+                        "file": "server/index.ts",
+                        "line": 444,
+                        "column": 5,
+                        "end_line": 444,
+                        "start_byte": 16548,
+                        "end_byte": 16620,
+                        "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/location"
+                      },
+                      "arguments": [
+                        {
+                          "kind": "identifier",
+                          "name": "reply",
+                          "location": {
+                            "file": "server/index.ts",
+                            "line": 444,
+                            "column": 14,
+                            "end_line": 444,
+                            "start_byte": 16557,
+                            "end_byte": 16562,
+                            "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/0/location"
+                          },
+                          "reference": {
+                            "state": "unique",
+                            "declaration_id": "2ca2abe21c8a06da813950b042eab792e7e90b7b86da6ad5365c45f1ed891406",
+                            "declaration_kind": "parameter",
+                            "parameter_index": 1,
+                            "identity_complete": true,
+                            "declaration_location": {
+                              "file": "server/index.ts",
+                              "line": 195,
+                              "column": 37,
+                              "end_line": 195,
+                              "start_byte": 6517,
+                              "end_byte": 6533,
+                              "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/0/reference/declaration_location"
+                            },
+                            "binder_location": {
+                              "file": "server/index.ts",
+                              "line": 195,
+                              "column": 47,
+                              "end_line": 195,
+                              "start_byte": 6527,
+                              "end_byte": 6532,
+                              "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/0/reference/binder_location"
+                            }
+                          }
+                        },
+                        {
+                          "kind": "member_expression",
+                          "member": "statusCode",
+                          "current_referent_value_proven": false,
+                          "location": {
+                            "file": "server/index.ts",
+                            "line": 444,
+                            "column": 21,
+                            "end_line": 444,
+                            "start_byte": 16564,
+                            "end_byte": 16583,
+                            "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/location"
+                          },
+                          "object": {
+                            "kind": "identifier",
+                            "name": "response",
+                            "location": {
+                              "file": "server/index.ts",
+                              "line": 444,
+                              "column": 21,
+                              "end_line": 444,
+                              "start_byte": 16564,
+                              "end_byte": 16572,
+                              "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/object/location"
+                            },
+                            "reference": {
+                              "state": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/object/reference/state"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/object/reference/declaration_id"
+                              },
+                              "declaration_kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/object/reference/declaration_kind"
+                              },
+                              "parameter_index": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/object/reference/parameter_index"
+                              },
+                              "identity_complete": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/object/reference/identity_complete"
+                              },
+                              "declaration_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/object/reference/declaration_location"
+                              },
+                              "binder_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/object/reference/binder_location"
+                              }
+                            }
+                          },
+                          "member_location": {
+                            "file": "server/index.ts",
+                            "line": 444,
+                            "column": 30,
+                            "end_line": 444,
+                            "start_byte": 16573,
+                            "end_byte": 16583,
+                            "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/1/member_location"
+                          }
+                        },
+                        {
+                          "kind": "member_expression",
+                          "member": "payload",
+                          "current_referent_value_proven": false,
+                          "location": {
+                            "file": "server/index.ts",
+                            "line": 444,
+                            "column": 42,
+                            "end_line": 444,
+                            "start_byte": 16585,
+                            "end_byte": 16601,
+                            "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/location"
+                          },
+                          "object": {
+                            "kind": "identifier",
+                            "name": "response",
+                            "location": {
+                              "file": "server/index.ts",
+                              "line": 444,
+                              "column": 42,
+                              "end_line": 444,
+                              "start_byte": 16585,
+                              "end_byte": 16593,
+                              "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/object/location"
+                            },
+                            "reference": {
+                              "state": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/object/reference/state"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/object/reference/declaration_id"
+                              },
+                              "declaration_kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/object/reference/declaration_kind"
+                              },
+                              "parameter_index": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/object/reference/parameter_index"
+                              },
+                              "identity_complete": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/object/reference/identity_complete"
+                              },
+                              "declaration_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/object/reference/declaration_location"
+                              },
+                              "binder_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/object/reference/binder_location"
+                              }
+                            }
+                          },
+                          "member_location": {
+                            "file": "server/index.ts",
+                            "line": 444,
+                            "column": 51,
+                            "end_line": 444,
+                            "start_byte": 16594,
+                            "end_byte": 16601,
+                            "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/2/member_location"
+                          }
+                        },
+                        {
+                          "kind": "member_expression",
+                          "member": "headers",
+                          "current_referent_value_proven": false,
+                          "location": {
+                            "file": "server/index.ts",
+                            "line": 444,
+                            "column": 60,
+                            "end_line": 444,
+                            "start_byte": 16603,
+                            "end_byte": 16619,
+                            "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/location"
+                          },
+                          "object": {
+                            "kind": "identifier",
+                            "name": "response",
+                            "location": {
+                              "file": "server/index.ts",
+                              "line": 444,
+                              "column": 60,
+                              "end_line": 444,
+                              "start_byte": 16603,
+                              "end_byte": 16611,
+                              "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/object/location"
+                            },
+                            "reference": {
+                              "state": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/object/reference/state"
+                              },
+                              "declaration_id": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/object/reference/declaration_id"
+                              },
+                              "declaration_kind": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/object/reference/declaration_kind"
+                              },
+                              "parameter_index": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/object/reference/parameter_index"
+                              },
+                              "identity_complete": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/object/reference/identity_complete"
+                              },
+                              "declaration_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/object/reference/declaration_location"
+                              },
+                              "binder_location": {
+                                "omitted_for_presentation": true,
+                                "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/object/reference/binder_location"
+                              }
+                            }
+                          },
+                          "member_location": {
+                            "file": "server/index.ts",
+                            "line": 444,
+                            "column": 69,
+                            "end_line": 444,
+                            "start_byte": 16612,
+                            "end_byte": 16619,
+                            "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/actual_response_writer_call/arguments/3/member_location"
+                          }
+                        }
+                      ],
+                      "binding_gaps": [],
+                      "branch_context": []
+                    },
+                    "response_field_arguments": {
+                      "shown_items": [
+                        {
+                          "kind": "identifier",
+                          "name": "reply",
+                          "location": {
+                            "file": "server/index.ts",
+                            "line": 444,
+                            "column": 14,
+                            "end_line": 444,
+                            "start_byte": 16557,
+                            "end_byte": 16562,
+                            "full_location_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/response_field_arguments/0/location"
+                          },
+                          "reference": {
+                            "state": "unique",
+                            "remaining_fields_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/response_field_arguments/0/reference"
+                          }
+                        }
+                      ],
+                      "shown_count": 1,
+                      "total_count": 4,
+                      "truncated": true,
+                      "full_value_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0/response_field_arguments"
+                    },
+                    "remaining_fields_ref": "/results/2/pattern/groups/access_audit/response_replacement_relations/0"
+                  }
+                ],
+                "remaining_fields_ref": "/results/2/pattern/groups/access_audit"
+              }
+            },
+            "truncated": true,
+            "omitted_provenance_fields": 2,
+            "visited_nodes": 224
+          },
+          {
+            "name": "scoped_source_supported",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/scoped_source_supported",
+            "value": true,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "source_return_conditions_computed",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/source_return_conditions_computed",
+            "value": true,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "target_code_executed",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/target_code_executed",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "runtime_verified",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/runtime_verified",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "all_project_functionality_proven",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/all_project_functionality_proven",
+            "value": false,
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 1
+          },
+          {
+            "name": "trusted_model",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/trusted_model",
+            "value": {
+              "origin": "trusted-model",
+              "id": "finite-js-plain-record-gate-conditions-v1",
+              "ordinary_boolean_and_strict_literal_equality": true,
+              "finite_enum_cells_derived_from_source_literals": true,
+              "captured_lexical_binding_identity_is_not_heap_identity": true,
+              "opaque_calls_must_complete_normally_for_following_source_to_be_reached": true,
+              "getters_proxy_external_mutation_and_concurrency_excluded": true
+            },
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 8
+          },
+          {
+            "name": "budgets",
+            "presentation_only": true,
+            "full_value_ref": "/results/2/pattern/budgets",
+            "value": {
+              "summary_path_limit": 256,
+              "truncated": false
+            },
+            "truncated": false,
+            "omitted_provenance_fields": 0,
+            "visited_nodes": 3
+          }
+        ],
+        "tables": [],
+        "truncated": true,
+        "table_discovery_truncated": true,
+        "meaning": "Bounded display of actual saved pattern values. Full pattern and source facts remain unchanged; omissions are not analysis gaps or new conclusions."
+      },
+      "markdown_characters": 38203
+    }
+  ],
+  "analysis_rerun": false,
+  "assessment_computed": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

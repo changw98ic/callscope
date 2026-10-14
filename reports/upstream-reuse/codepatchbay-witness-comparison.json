@@ -1,0 +1,49 @@
+{
+  "repository": "codepatchbay",
+  "old_snapshot": "e91c3726e1238304414eab681edbd8045246e0c11b4e5e7244125910754aa7d7",
+  "new_snapshot": "4376321a4081901f9a62e74b6a9a1cbedfacf1a2f2d68278ac2bbdf6ce3d8db2",
+  "observations": [
+    {
+      "rule_id": "cpb-observed-cli-project-argument",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-observed-task-result-rendering",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-observed-fix-shared-result-renderer",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-observed-server-engine-delegation",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-observed-runjob-crash-wrapper",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-observed-checklist-materialization",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-observed-runjob-to-dag-path",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-observed-task-view-sanitization",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-capability-dynamic-command-boundary",
+      "same_observed_structure_and_source_evidence": true
+    },
+    {
+      "rule_id": "cpb-observed-pure-result-helper-no-engine-call",
+      "same_observed_structure_and_source_evidence": true
+    }
+  ],
+  "source_hash_unchanged": true,
+  "policy_hash_unchanged": true
+}

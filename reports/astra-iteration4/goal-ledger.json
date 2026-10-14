@@ -1,0 +1,3814 @@
+{
+  "schema_version": 1,
+  "kind": "full_static_goal_acceptance_ledger",
+  "acceptance_contract": {
+    "path": "GOAL_ACCEPTANCE.md",
+    "version": "v1",
+    "sha256": "9b6f4fda6aa24f055e288690e76405779e36758f8ba986799f78f2f96aa8d118"
+  },
+  "frozen_observations": {
+    "path": "../astra-baseline/capability-baseline.json",
+    "preserved": true,
+    "separate_from_goal_assessment": true,
+    "sha256": "16b4b05c8818fa1eecf396132ebe2ea29a8f0068801165f0649da379d9041dd7",
+    "classification_unchanged": true
+  },
+  "provenance_categories": [
+    "source-derived",
+    "trusted-model",
+    "policy-declared",
+    "unresolved"
+  ],
+  "assessment_semantics": {
+    "pending": "尚未评估；不得视为通过。",
+    "scoped_static_judgment_reproduced": "必要自动子义务全部闭合；仅在明确静态模型与真实环境条件内支持完整claim。",
+    "claim_refuted_or_narrowed": "自动证据反驳原claim或要求收窄，保留出处与反证。",
+    "partial_obligations_supported": "只支持局部义务；完整来源、绑定、guard、运输或保护关系仍缺。",
+    "unknown_or_source_invalid": "必要来源、身份、解析或模型不满足；不能作完整负证。"
+  },
+  "evidence_rules": {
+    "automatic_relations_required": true,
+    "source_model_policy_unresolved_separate": true,
+    "role_location_is_not_relation_proof": true,
+    "missing_analysis_is_not_environment_condition": true,
+    "manual_source_pack_is_not_automatic_result": true,
+    "empty_findings_is_not_acceptance": true,
+    "call_sample_reproduction_is_not_goal_acceptance": true,
+    "interleaving_must_be_model_derived": true,
+    "target_runtime_proof": false
+  },
+  "evaluation": {
+    "state": "evaluated_partial",
+    "method": "manual_review_of_saved_automatic_evidence",
+    "automatic_obligation_solver_used": false,
+    "automatic_business_judgment_performed": false,
+    "snapshots": [
+      {
+        "id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+        "project_id": "ac6694a563ea5a6ef75f",
+        "root": "/workspace/codepatchbay",
+        "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+        "analyzer_version": "static-multilang-7",
+        "detector_version": "call-rules-6-semantic-relations",
+        "parser_version": "{\"atomicity_contracts\":{\"analyzer\":\"static-atomicity-contracts-1\",\"policy_schema\":\"static-atomicity-policy-v1\"},\"lexical_bindings\":\"captured-lexical-bindings-1\",\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"semantic_sources\":\"semantic-snapshot-sources-1\",\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"},\"value_contracts\":{\"analyzer\":\"static-value-contracts-1\",\"policy_schema\":\"static-value-policy-v1\"}}",
+        "schema_version": "2",
+        "status": "partial",
+        "component_versions": {
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-1",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-1",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          }
+        }
+      },
+      {
+        "id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+        "project_id": "1dec368a20d2f5075901",
+        "root": "/workspace/winwincode",
+        "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+        "analyzer_version": "static-multilang-7",
+        "detector_version": "call-rules-6-semantic-relations",
+        "parser_version": "{\"lexical_bindings\":\"captured-lexical-bindings-1\",\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"navigation_contracts\":{\"analyzer\":\"static-navigation-contracts-1\",\"policy_schema\":\"static-navigation-policy-v1\"},\"port_wiring\":\"finite-port-wiring-1\",\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"rust\":{\"analyzer\":\"rust-tree-sitter-1.7-generic-lexical\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14\"},\"semantic_sources\":\"semantic-snapshot-sources-1\",\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+        "schema_version": "2",
+        "status": "partial",
+        "component_versions": {
+          "lexical_bindings": "captured-lexical-bindings-1",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "navigation_contracts": {
+            "analyzer": "static-navigation-contracts-1",
+            "policy_schema": "static-navigation-policy-v1"
+          },
+          "port_wiring": "finite-port-wiring-1",
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "rust": {
+            "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+            "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        }
+      }
+    ],
+    "implementation": {
+      "tool_version": "0.7.0",
+      "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c",
+      "schema_version": "2",
+      "analyzer_version": "static-multilang-7",
+      "detector_version": "call-rules-6-semantic-relations"
+    },
+    "artifact_inventory": [
+      {
+        "path": "codepatchbay-baseline-v7-and-v6.json",
+        "sha256": "70486523725d965988ca55508af220eb86aa372fc2f45dc1ec388edb77047240",
+        "role": "formal_saved_evidence_or_comparison"
+      },
+      {
+        "path": "codepatchbay-summary.json",
+        "sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+        "role": "formal_saved_evidence_or_comparison"
+      },
+      {
+        "path": "winwincode-baseline-v7-and-v6.json",
+        "sha256": "e233a046386d9dfec6d5805c950fdd26ac9605df31e61d48173ce6e676d92ea3",
+        "role": "formal_saved_evidence_or_comparison"
+      },
+      {
+        "path": "winwincode-summary.json",
+        "sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+        "role": "formal_saved_evidence_or_comparison"
+      }
+    ],
+    "excluded_from_automatic_witnesses": [
+      "SEMANTIC_SOURCE_OBSERVATIONS.json",
+      "LEXICAL_BINDING_OBSERVATIONS.json",
+      "NAVIGATION_DEVELOPMENT_OBSERVATIONS.json",
+      "PORT_WIRING_OBSERVATIONS.json",
+      "ATOMICITY_DEVELOPMENT_OBSERVATIONS.json",
+      "../astra-iteration3/parameter-observations.json"
+    ],
+    "reason": "手工逐30义务评估正式自动事实；staging及人工锚点不作formal成果。",
+    "references_checked_during_authoring": 114
+  },
+  "goal_count": 5,
+  "required_obligation_count": 30,
+  "goals": [
+    {
+      "id": "CPB-01",
+      "repository": "codepatchbay",
+      "claim": {
+        "title": "pipeline重试选项与受管理执行预算",
+        "source_report": "../astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "source_claim_id": "CPB-01",
+        "conditions": [
+          "正常pipeline提交进入受管理执行链；所选重试预算归属必须明确。",
+          "输入、装配、记录/消息和消费者的实际来源需要逐段闭合；不能假设中间分析已完成。"
+        ],
+        "counterexamples": [
+          "请求值可能也是3；worker常量3是另一个对象构造。",
+          "旧pending entry复用、finalizer-only和不同重试预算单列。",
+          "opaque supervisor或其它消费者限制全程序无消费的负结论。"
+        ],
+        "origin": "frozen_independent_review",
+        "author_approved": false
+      },
+      "source": [
+        {
+          "origin": "source-derived",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/2/evidence/0/details",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        }
+      ],
+      "model": [],
+      "policy": [
+        {
+          "origin": "policy-declared",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/2/evidence/0/details/provenance",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "gaps": [
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "parseCommonFlags分支/返回到run.parsed的完整值链未自动闭合。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "CPB-01.P1"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "默认queue、worker direct/broker、动态bridge实际装配仍缺。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/unknown/0",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "消费者callee源码选择与未知绑定事实。"
+            }
+          ],
+          "obligation_id": "CPB-01.P2"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "normalization、new/existing、scheduler、assignment、JSON/inbox逐段运输未自动闭合；人工稿不算自动。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/unknown/1",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "worker metadata读取出处，transport=false。"
+            }
+          ],
+          "obligation_id": "CPB-01.P3"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "bridge/engine rest、services spread及最终消费者未连接；不是已证明同对象覆盖。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "CPB-01.P4"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "没有自动预算读/计数/guard/阶段关系；opaque消费者未闭合，不作全程序无消费负证。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "CPB-01.P5"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "请求可能为3、复用、finalizer-only、不同预算及opaque反证尚未全自动连接；形式不等于运行值。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/unknown/2",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "producer matches与consumer mismatch是独立AST来源形式。"
+            }
+          ],
+          "obligation_id": "CPB-01.P6"
+        }
+      ],
+      "witness": [
+        {
+          "origin": "source-derived",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/2/evidence/0/details",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        },
+        {
+          "origin": "policy-declared",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/2/evidence/0/details/provenance",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "CPB-01.P1",
+          "title": "参数来源",
+          "required": true,
+          "requirement": "初始化、flag写入、默认、返回binding及enqueue字段逐声明关联。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/source_fact/producer",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "实际enqueue字段为parsed.retries，flag赋值仅语法出处。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/guard_and_counterexample_sources/0",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "实际enqueue字段为parsed.retries，flag赋值仅语法出处。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "parseCommonFlags分支/返回到run.parsed的完整值链未自动闭合。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/source_fact/producer",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "实际enqueue字段为parsed.retries，flag赋值仅语法出处。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/guard_and_counterexample_sources/0",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "实际enqueue字段为parsed.retries，flag赋值仅语法出处。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "实际enqueue字段为parsed.retries，flag赋值仅语法出处。 parseCommonFlags分支/返回到run.parsed的完整值链未自动闭合。"
+          }
+        },
+        {
+          "id": "CPB-01.P2",
+          "title": "正常装配",
+          "required": true,
+          "requirement": "CLI、队列、scheduler、assignment、direct/broker worker和bridge实际来源；注入覆盖另列。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/source_fact/subject/calls/0/callee",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "消费者callee源码选择与未知绑定事实。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "默认queue、worker direct/broker、动态bridge实际装配仍缺。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/2/evidence/0/details/unknown/0",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "消费者callee源码选择与未知绑定事实。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/source_fact/subject/calls/0/callee",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "消费者callee源码选择与未知绑定事实。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/unknown/0",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "消费者callee源码选择与未知绑定事实。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "消费者callee源码选择与未知绑定事实。 默认queue、worker direct/broker、动态bridge实际装配仍缺。"
+          }
+        },
+        {
+          "id": "CPB-01.P3",
+          "title": "中间字段",
+          "required": true,
+          "requirement": "规范化、new/existing、candidate/assignment、JSON与inbox运输和worker.metadata逐段关联。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/guard_and_counterexample_sources/1",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "worker metadata读取出处，transport=false。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "normalization、new/existing、scheduler、assignment、JSON/inbox逐段运输未自动闭合；人工稿不算自动。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/2/evidence/0/details/unknown/1",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "worker metadata读取出处，transport=false。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/guard_and_counterexample_sources/1",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "worker metadata读取出处，transport=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/unknown/1",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "worker metadata读取出处，transport=false。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "worker metadata读取出处，transport=false。 normalization、new/existing、scheduler、assignment、JSON/inbox逐段运输未自动闭合；人工稿不算自动。"
+          }
+        },
+        {
+          "id": "CPB-01.P4",
+          "title": "消费选择",
+          "required": true,
+          "requirement": "worker构造、分支、转交、rest/spread及service返回键；覆盖须证明对象身份与顺序。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/source_fact/subject",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "worker独立新调用对象为literal3，保留object-path及分支。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "bridge/engine rest、services spread及最终消费者未连接；不是已证明同对象覆盖。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/source_fact/subject",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "worker独立新调用对象为literal3，保留object-path及分支。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "worker独立新调用对象为literal3，保留object-path及分支。 bridge/engine rest、services spread及最终消费者未连接；不是已证明同对象覆盖。"
+          }
+        },
+        {
+          "id": "CPB-01.P5",
+          "title": "预算决策",
+          "required": true,
+          "requirement": "实际预算读/比较、计数和阶段及opaque消费者；不同预算不合并。",
+          "source": [],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "没有自动预算读/计数/guard/阶段关系；opaque消费者未闭合，不作全程序无消费负证。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "unknown_or_source_invalid",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "暂无有效预算决策自动证据。 没有自动预算读/计数/guard/阶段关系；opaque消费者未闭合，不作全程序无消费负证。"
+          }
+        },
+        {
+          "id": "CPB-01.P6",
+          "title": "结论与反证",
+          "required": true,
+          "requirement": "保留输入可能相同、复用、分支、预算及opaque反证，限定完整结论。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/source_fact",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "producer matches与consumer mismatch是独立AST来源形式。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "请求可能为3、复用、finalizer-only、不同预算及opaque反证尚未全自动连接；形式不等于运行值。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/2/evidence/0/details/unknown/2",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "producer matches与consumer mismatch是独立AST来源形式。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/source_fact",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "producer matches与consumer mismatch是独立AST来源形式。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/2/evidence/0/details/unknown/2",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "producer matches与consumer mismatch是独立AST来源形式。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "producer matches与consumer mismatch是独立AST来源形式。 请求可能为3、复用、finalizer-only、不同预算及opaque反证尚未全自动连接；形式不等于运行值。"
+          }
+        }
+      ],
+      "assessment": {
+        "status": "partial_obligations_supported",
+        "method": "manual_review_of_saved_automatic_evidence",
+        "full_claim_reproduced": false,
+        "reason": "必要分析仍缺；source_fact/有限assembly/五findings及10/10call均不是完整目标。",
+        "unclosed_required_obligations": [
+          "CPB-01.P1",
+          "CPB-01.P2",
+          "CPB-01.P3",
+          "CPB-01.P4",
+          "CPB-01.P5",
+          "CPB-01.P6"
+        ]
+      },
+      "snapshot": {
+        "id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+        "project_id": "ac6694a563ea5a6ef75f",
+        "root": "/workspace/codepatchbay",
+        "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+        "analyzer_version": "static-multilang-7",
+        "detector_version": "call-rules-6-semantic-relations",
+        "parser_version": "{\"atomicity_contracts\":{\"analyzer\":\"static-atomicity-contracts-1\",\"policy_schema\":\"static-atomicity-policy-v1\"},\"lexical_bindings\":\"captured-lexical-bindings-1\",\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"semantic_sources\":\"semantic-snapshot-sources-1\",\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"},\"value_contracts\":{\"analyzer\":\"static-value-contracts-1\",\"policy_schema\":\"static-value-policy-v1\"}}",
+        "schema_version": "2",
+        "status": "partial",
+        "component_versions": {
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-1",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-1",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          }
+        }
+      },
+      "contract_identity": {
+        "rule_id": "cpb-astra-pipeline-retry-source-form",
+        "contract_hash": "d1f5515ac3c8aed55cd7d28b68267e1a692e910bbd033baa4bc0edac0c2de516",
+        "policy_hash": "74ec11d680fa842c1ec01f8677367f7ccca684a5f98cb1d66bf885824b53a156",
+        "finding_id": "9db966834aa1158053568ac5",
+        "finding_type": "static_value_call_argument_value",
+        "finding_status": "uncertain",
+        "author_approved": false
+      }
+    },
+    {
+      "id": "CPB-02",
+      "repository": "codepatchbay",
+      "claim": {
+        "title": "superseded跨层终态分类与具体消费者",
+        "source_report": "../astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "source_claim_id": "CPB-02",
+        "conditions": [
+          "合法job身份及状态投影；terminal与recoverable必须分别定义。"
+        ],
+        "counterexamples": [
+          "event-store含superseded的保护阻止非法后续业务变更。",
+          "缺jobId时isTerminal早真，不等于合法superseded job判读。",
+          "terminal分类一致不表示必须允许recovery。"
+        ],
+        "origin": "frozen_independent_review",
+        "author_approved": false
+      },
+      "source": [
+        {
+          "origin": "source-derived",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/0/evidence/0/details",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        }
+      ],
+      "model": [],
+      "policy": [
+        {
+          "origin": "policy-declared",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/0/evidence/0/details/provenance",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "gaps": [
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "job_superseded事件、state.status赋值及对象投影未分析；集合不是写入证据。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "CPB-02.S1"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "isTerminal的jobId早真、status默认、实际.has接收者和job身份未自动判读。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "CPB-02.S2"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "original来源→isTerminal返回→recover拒绝guard未连接。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "CPB-02.S3"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "终态保护与POST_TERMINAL_ALLOWED未自动分析，不能从集合差推断非法改写。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "CPB-02.S4"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "terminal/recoverable及具体消费者影响未推导，作者未批准。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "CPB-02.S5"
+        }
+      ],
+      "witness": [
+        {
+          "origin": "source-derived",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/0/evidence/0/details",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        },
+        {
+          "origin": "policy-declared",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/0/evidence/0/details/provenance",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "CPB-02.S1",
+          "title": "状态生产",
+          "required": true,
+          "requirement": "job_superseded入口、state.status赋值和对象身份。",
+          "source": [],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "job_superseded事件、state.status赋值及对象投影未分析；集合不是写入证据。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "unknown_or_source_invalid",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "暂无状态生产自动关系。 job_superseded事件、state.status赋值及对象投影未分析；集合不是写入证据。"
+          }
+        },
+        {
+          "id": "CPB-02.S2",
+          "title": "定义与谓词",
+          "required": true,
+          "requirement": "两个terminal集合、真实.has接收者及jobId/status默认条件。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/source_fact/reference",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "两个初始化集合的实际成员差，缺superseded。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/source_fact/subject",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "两个初始化集合的实际成员差，缺superseded。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "isTerminal的jobId早真、status默认、实际.has接收者和job身份未自动判读。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/source_fact/reference",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "两个初始化集合的实际成员差，缺superseded。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/source_fact/subject",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "两个初始化集合的实际成员差，缺superseded。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "两个初始化集合的实际成员差，缺superseded。 isTerminal的jobId早真、status默认、实际.has接收者和job身份未自动判读。"
+          }
+        },
+        {
+          "id": "CPB-02.S3",
+          "title": "消费guard",
+          "required": true,
+          "requirement": "original来源到isTerminal与recover拒绝guard的实际关系。",
+          "source": [],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "original来源→isTerminal返回→recover拒绝guard未连接。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "unknown_or_source_invalid",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "暂无recovery guard流自动证据。 original来源→isTerminal返回→recover拒绝guard未连接。"
+          }
+        },
+        {
+          "id": "CPB-02.S4",
+          "title": "权威保护",
+          "required": true,
+          "requirement": "event-store终态保护及POST_TERMINAL_ALLOWED反证分支。",
+          "source": [],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "终态保护与POST_TERMINAL_ALLOWED未自动分析，不能从集合差推断非法改写。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "unknown_or_source_invalid",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "暂无event-store保护推导。 终态保护与POST_TERMINAL_ALLOWED未自动分析，不能从集合差推断非法改写。"
+          }
+        },
+        {
+          "id": "CPB-02.S5",
+          "title": "政策和结论",
+          "required": true,
+          "requirement": "terminal、recoverable和具体业务影响分别说明；不强制所有用途集合相等。",
+          "source": [],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "terminal/recoverable及具体消费者影响未推导，作者未批准。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "unknown_or_source_invalid",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "配置不认证所有状态政策。 terminal/recoverable及具体消费者影响未推导，作者未批准。"
+          }
+        }
+      ],
+      "assessment": {
+        "status": "partial_obligations_supported",
+        "method": "manual_review_of_saved_automatic_evidence",
+        "full_claim_reproduced": false,
+        "reason": "必要分析仍缺；source_fact/有限assembly/五findings及10/10call均不是完整目标。",
+        "unclosed_required_obligations": [
+          "CPB-02.S1",
+          "CPB-02.S2",
+          "CPB-02.S3",
+          "CPB-02.S4",
+          "CPB-02.S5"
+        ]
+      },
+      "snapshot": {
+        "id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+        "project_id": "ac6694a563ea5a6ef75f",
+        "root": "/workspace/codepatchbay",
+        "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+        "analyzer_version": "static-multilang-7",
+        "detector_version": "call-rules-6-semantic-relations",
+        "parser_version": "{\"atomicity_contracts\":{\"analyzer\":\"static-atomicity-contracts-1\",\"policy_schema\":\"static-atomicity-policy-v1\"},\"lexical_bindings\":\"captured-lexical-bindings-1\",\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"semantic_sources\":\"semantic-snapshot-sources-1\",\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"},\"value_contracts\":{\"analyzer\":\"static-value-contracts-1\",\"policy_schema\":\"static-value-policy-v1\"}}",
+        "schema_version": "2",
+        "status": "partial",
+        "component_versions": {
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-1",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-1",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          }
+        }
+      },
+      "contract_identity": {
+        "rule_id": "cpb-astra-terminal-initializer-members",
+        "contract_hash": "3cbceb399081fb2060a9b636c454eb592983770f06b7e66336624910b5a4b941",
+        "policy_hash": "74ec11d680fa842c1ec01f8677367f7ccca684a5f98cb1d66bf885824b53a156",
+        "finding_id": "2250c4e76316ee8c434bc917",
+        "finding_type": "static_contract_literal_set_consistency",
+        "finding_status": "open",
+        "author_approved": false
+      }
+    },
+    {
+      "id": "CPB-03",
+      "repository": "codepatchbay",
+      "claim": {
+        "title": "同键预查与权威写入的条件并发窗口",
+        "source_report": "../astra-baseline/CODEPATCHBAY_ANALYSIS.md",
+        "source_claim_id": "CPB-03",
+        "conditions": [
+          "默认deps、同project和key、同逻辑权威资源以及保护协议适用。",
+          "真实并发、状态转换和commit条件须明确；实际交错需模型推导。"
+        ],
+        "counterexamples": [
+          "预查看到scheduled/in_progress时复用。",
+          "writer看到同复合key且pending时复用。",
+          "scheduler guard/容量/leader、回滚及lock/write失败可阻止风险。",
+          "process fence和目录owner lock寿命不同，writer内确有受保护二次检查。"
+        ],
+        "origin": "frozen_independent_review",
+        "author_approved": false
+      },
+      "source": [
+        {
+          "origin": "source-derived",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/1/evidence/0/details",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        }
+      ],
+      "model": [],
+      "policy": [
+        {
+          "origin": "policy-declared",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/1/evidence/0/details/provenance",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "gaps": [
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "候选不等于实际load/enqueue binding，facade到authority整链未证明。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/0",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "默认deps候选表达式已抽取，但assembly_state=policy_declared。"
+            }
+          ],
+          "obligation_id": "CPB-03.A1"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "实际deps/资源/hash值来源及整链仍缺；局部语法順序不是整次调用证明。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            }
+          ],
+          "obligation_id": "CPB-03.A2"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "物理目录别名、集合heap、实际部署依赖和全写者未闭合；词法身份不是资源身份。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/1",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "callback/resource词法转发和lockDir声明。"
+            }
+          ],
+          "obligation_id": "CPB-03.A3"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "find/push同member路径不证明entries heap/方法效果；commit与全写者未闭合。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/1",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "writer find/reuse/push及复合key/description来源差。"
+            }
+          ],
+          "obligation_id": "CPB-03.A5"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "updateEntry dispatch仍unknown；容量/leader/版本/回滚和实际状态可达未闭合。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            }
+          ],
+          "obligation_id": "CPB-03.A6"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "没有交错求解；all-writers及facade-to-authority整链缺失，不能算完整竞态裁决。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            }
+          ],
+          "obligation_id": "CPB-03.A7"
+        }
+      ],
+      "witness": [
+        {
+          "origin": "source-derived",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/1/evidence/0/details",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        },
+        {
+          "origin": "policy-declared",
+          "artifact": "codepatchbay-summary.json",
+          "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+          "json_pointer": "/rule_findings/1/evidence/0/details/provenance",
+          "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "CPB-03.A1",
+          "title": "实际deps",
+          "required": true,
+          "requirement": "resolveDeps默认load/enqueue、覆盖条件及run关联；role配置不是来源证据。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/dependency_assembly",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "默认deps候选表达式已抽取，但assembly_state=policy_declared。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "候选不等于实际load/enqueue binding，facade到authority整链未证明。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+                },
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/0",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "默认deps候选表达式已抽取，但assembly_state=policy_declared。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/dependency_assembly",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "默认deps候选表达式已抽取，但assembly_state=policy_declared。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/0",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "默认deps候选表达式已抽取，但assembly_state=policy_declared。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "默认deps候选表达式已抽取，但assembly_state=policy_declared。 候选不等于实际load/enqueue binding，facade到authority整链未证明。"
+          }
+        },
+        {
+          "id": "CPB-03.A2",
+          "title": "预查谓词",
+          "required": true,
+          "requirement": "同project/hash/非terminal选择、早退及enqueue前局部顺序。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/facade",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "read/select/write局部次序、project预筛选、early reuse、terminal谓词来源。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/predicates",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "read/select/write局部次序、project预筛选、early reuse、terminal谓词来源。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/comparison/status_domain/trusted_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "实际deps/资源/hash值来源及整链仍缺；局部语法順序不是整次调用证明。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/facade",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "read/select/write局部次序、project预筛选、early reuse、terminal谓词来源。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/predicates",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "read/select/write局部次序、project预筛选、early reuse、terminal谓词来源。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/comparison/status_domain/trusted_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "read/select/write局部次序、project预筛选、early reuse、terminal谓词来源。 实际deps/资源/hash值来源及整链仍缺；局部语法順序不是整次调用证明。"
+          }
+        },
+        {
+          "id": "CPB-03.A3",
+          "title": "资源关联",
+          "required": true,
+          "requirement": "hubRoot到实际queuePath和各读写者逻辑资源的来源与可信范围。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/wrapper_forwarding",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "callback/resource词法转发和lockDir声明。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/lifecycle/lock_resource_declaration",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "callback/resource词法转发和lockDir声明。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/protocol_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "物理目录别名、集合heap、实际部署依赖和全写者未闭合；词法身份不是资源身份。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+                },
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/1",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "callback/resource词法转发和lockDir声明。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/wrapper_forwarding",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "callback/resource词法转发和lockDir声明。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/lifecycle/lock_resource_declaration",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "callback/resource词法转发和lockDir声明。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/protocol_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/1",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "callback/resource词法转发和lockDir声明。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "callback/resource词法转发和lockDir声明。 物理目录别名、集合heap、实际部署依赖和全写者未闭合；词法身份不是资源身份。"
+          }
+        },
+        {
+          "id": "CPB-03.A4",
+          "title": "保护region",
+          "required": true,
+          "requirement": "callback转发、目录锁取得/读取/回调/保存/释放及错误；process fence独立。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/wrapper_forwarding",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "wrapper completion、取得guard/fresh-read/callback/save/release尝试及process fence独立范围。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/lifecycle",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "wrapper completion、取得guard/fresh-read/callback/save/release尝试及process fence独立范围。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/protocol_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            }
+          ],
+          "gaps": [],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/wrapper_forwarding",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "wrapper completion、取得guard/fresh-read/callback/save/release尝试及process fence独立范围。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/lifecycle",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "wrapper completion、取得guard/fresh-read/callback/save/release尝试及process fence独立范围。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/protocol_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            }
+          ],
+          "assessment": {
+            "status": "obligation_supported_in_declared_scope",
+            "full_obligation_supported": true,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "wrapper completion、取得guard/fresh-read/callback/save/release尝试及process fence独立范围。 仅满足本限定子义务，不等于goal完整。"
+          }
+        },
+        {
+          "id": "CPB-03.A5",
+          "title": "内层谓词与写入",
+          "required": true,
+          "requirement": "pending+复合key的find/reuse/push/commit及保护归属。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/authority",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "writer find/reuse/push及复合key/description来源差。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/comparison/key_structure",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "writer find/reuse/push及复合key/description来源差。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/protocol_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "find/push同member路径不证明entries heap/方法效果；commit与全写者未闭合。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+                },
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/1",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "writer find/reuse/push及复合key/description来源差。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/authority",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "writer find/reuse/push及复合key/description来源差。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/comparison/key_structure",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "writer find/reuse/push及复合key/description来源差。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/protocol_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples/1",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "writer find/reuse/push及复合key/description来源差。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "writer find/reuse/push及复合key/description来源差。 find/push同member路径不证明entries heap/方法效果；commit与全写者未闭合。"
+          }
+        },
+        {
+          "id": "CPB-03.A6",
+          "title": "状态竞争来源",
+          "required": true,
+          "requirement": "scheduler绑定及guarded状态更新、容量/leader/版本/回滚前提。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/transition",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "3处patch/guard、2处状态差见证，仅来源，runtime_transition_success=false。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "updateEntry dispatch仍unknown；容量/leader/版本/回滚和实际状态可达未闭合。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/transition",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "3处patch/guard、2处状态差见证，仅来源，runtime_transition_success=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "3处patch/guard、2处状态差见证，仅来源，runtime_transition_success=false。 updateEntry dispatch仍unknown；容量/leader/版本/回滚和实际状态可达未闭合。"
+          }
+        },
+        {
+          "id": "CPB-03.A7",
+          "title": "条件风险推导",
+          "required": true,
+          "requirement": "从抽取状态/操作及保护语义求得交错、条件和未知；禁止预填A/B场景冒充发现。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/comparison",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "selected region/符号谓词差已生成，interleaving=false。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_scope",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "selected region/符号谓词差已生成，interleaving=false。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/protocol_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "没有交错求解；all-writers及facade-to-authority整链缺失，不能算完整竞态裁决。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "codepatchbay-summary.json",
+                  "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+                  "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+                  "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_facts/comparison",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "selected region/符号谓词差已生成，interleaving=false。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_scope",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "selected region/符号谓词差已生成，interleaving=false。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/protocol_model",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/resource_mapping",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "逻辑资源条件不是物理身份证明。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "codepatchbay-summary.json",
+              "artifact_sha256": "bb51e595b7fb0c1f875ab17be60363b8e525ca4e56180461f1862c52aea592ec",
+              "json_pointer": "/rule_findings/1/evidence/0/details/unknown_samples",
+              "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+              "interpretation": "正式assembly/heap/protocol缺口，交错另见analysis_scope。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+            "runtime_verified": false,
+            "reason": "selected region/符号谓词差已生成，interleaving=false。 没有交错求解；all-writers及facade-to-authority整链缺失，不能算完整竞态裁决。"
+          }
+        }
+      ],
+      "assessment": {
+        "status": "partial_obligations_supported",
+        "method": "manual_review_of_saved_automatic_evidence",
+        "full_claim_reproduced": false,
+        "reason": "必要分析仍缺；source_fact/有限assembly/五findings及10/10call均不是完整目标。",
+        "unclosed_required_obligations": [
+          "CPB-03.A1",
+          "CPB-03.A2",
+          "CPB-03.A3",
+          "CPB-03.A5",
+          "CPB-03.A6",
+          "CPB-03.A7"
+        ]
+      },
+      "snapshot": {
+        "id": "4866cb471f54673322145c50750546b90077746e9fd83c3f58221aeafe92962a",
+        "project_id": "ac6694a563ea5a6ef75f",
+        "root": "/workspace/codepatchbay",
+        "source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+        "analyzer_version": "static-multilang-7",
+        "detector_version": "call-rules-6-semantic-relations",
+        "parser_version": "{\"atomicity_contracts\":{\"analyzer\":\"static-atomicity-contracts-1\",\"policy_schema\":\"static-atomicity-policy-v1\"},\"lexical_bindings\":\"captured-lexical-bindings-1\",\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"semantic_sources\":\"semantic-snapshot-sources-1\",\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"},\"value_contracts\":{\"analyzer\":\"static-value-contracts-1\",\"policy_schema\":\"static-value-policy-v1\"}}",
+        "schema_version": "2",
+        "status": "partial",
+        "component_versions": {
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-1",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-1",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          }
+        }
+      },
+      "contract_identity": {
+        "rule_id": "cpb-astra-active-key-authority",
+        "contract_hash": "47ab6b31e85f9d19586531167a0f65b7d1e8d4958dc33fa2a419bdfebf2eea2e",
+        "policy_hash": "74ec11d680fa842c1ec01f8677367f7ccca684a5f98cb1d66bf885824b53a156",
+        "finding_id": "480f1137cb02e8b96438b1b1",
+        "finding_type": "static_atomicity_protected_deduplication",
+        "finding_status": "uncertain",
+        "author_approved": false
+      }
+    },
+    {
+      "id": "WWC-01",
+      "repository": "winwincode",
+      "claim": {
+        "title": "看板导航到生产task port的delivery上下文",
+        "source_report": "../astra-baseline/WINWINCODE_ANALYSIS.md",
+        "source_claim_id": "WWC-01",
+        "conditions": [
+          "normal boot选择真实端口且表单前置条件成立。",
+          "沿所选href导航，callback提交时ambient hash仍对应目的路由。",
+          "标准DOM/URL模型适用；未完成binding/return/guard分析不是环境条件。"
+        ],
+        "counterexamples": [
+          "scopeHash保留seed已有query；缺键来自无query字面路由种子。",
+          "有效delivery URL或手工导航可避免缺键条件。",
+          "taskSeed/fake、Chat独立创建链不能与默认看板入口合并。"
+        ],
+        "origin": "frozen_independent_review",
+        "author_approved": false
+      },
+      "source": [
+        {
+          "origin": "source-derived",
+          "artifact": "winwincode-summary.json",
+          "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+          "json_pointer": "/rule_findings/1/evidence/0/details",
+          "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        }
+      ],
+      "model": [],
+      "policy": [
+        {
+          "origin": "policy-declared",
+          "artifact": "winwincode-summary.json",
+          "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+          "json_pointer": "/rule_findings/1/evidence/0/details/provenance",
+          "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "gaps": [
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "DOM目标receiver及可见组合尚未自动认证；href赋值不足以证明公开入口全闭合。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "obligation_id": "WWC-01.N1"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "route/event、公开VM plain对象及其它port method effects仍必要；assembly_complete不等于端到端。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "obligation_id": "WWC-01.N4"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "仅到达所选读/guard的正常prefix；authenticatedRouteContext等object/effect、激活/handling未闭合。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "obligation_id": "WWC-01.N5"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "平台效果未观察，route/event派发未静态闭合，读前改写与实现缺口需分开。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "obligation_id": "WWC-01.N6"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "有效URL、fake、Chat、可见入口及其它effects反证未全自动连接；不能泛化所有创建。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "obligation_id": "WWC-01.N7"
+        }
+      ],
+      "witness": [
+        {
+          "origin": "source-derived",
+          "artifact": "winwincode-summary.json",
+          "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+          "json_pointer": "/rule_findings/1/evidence/0/details",
+          "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        },
+        {
+          "origin": "policy-declared",
+          "artifact": "winwincode-summary.json",
+          "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+          "json_pointer": "/rule_findings/1/evidence/0/details/provenance",
+          "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "WWC-01.N1",
+          "title": "可见生产点",
+          "required": true,
+          "requirement": "newTask.href及实际组合、字面seed和导入binding。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/producer",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "实际href RHS、literal seed、导入来源和词法owner。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "DOM目标receiver及可见组合尚未自动认证；href赋值不足以证明公开入口全闭合。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "winwincode-summary.json",
+                  "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+                  "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+                  "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/producer",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "实际href RHS、literal seed、导入来源和词法owner。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "实际href RHS、literal seed、导入来源和词法owner。 DOM目标receiver及可见组合尚未自动认证；href赋值不足以证明公开入口全闭合。"
+          }
+        },
+        {
+          "id": "WWC-01.N2",
+          "title": "参数与返回链",
+          "required": true,
+          "requirement": "surfaceHash/scopeHash的参数返回、URLSearchParams receiver与有限键mutation。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_trace",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "82条有限normal-return来源关系含argument/return、receiver、key mutation。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/producer",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "82条有限normal-return来源关系含argument/return、receiver、key mutation。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/source_trace",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "82条有限normal-return来源关系含argument/return、receiver、key mutation。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/producer",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "82条有限normal-return来源关系含argument/return、receiver、key mutation。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "obligation_supported_in_declared_scope",
+            "full_obligation_supported": true,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "82条有限normal-return来源关系含argument/return、receiver、key mutation。 仅满足本限定子义务，不等于goal完整。"
+          }
+        },
+        {
+          "id": "WWC-01.N3",
+          "title": "查询抽象",
+          "required": true,
+          "requirement": "seed/possible/guaranteed keys、join和serialize，required key不在possible的闭合依据。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/producer/query_domain",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "closed possible为四scope键、guaranteed空、delivery不在possible。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/missing_query_keys",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "closed possible为四scope键、guaranteed空、delivery不在possible。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/producer/query_domain",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "closed possible为四scope键、guaranteed空、delivery不在possible。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/missing_query_keys",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "closed possible为四scope键、guaranteed空、delivery不在possible。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "obligation_supported_in_declared_scope",
+            "full_obligation_supported": true,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "closed possible为四scope键、guaranteed空、delivery不在possible。 仅满足本限定子义务，不等于goal完整。"
+          }
+        },
+        {
+          "id": "WWC-01.N4",
+          "title": "正常装配",
+          "required": true,
+          "requirement": "normal boot到真实factory、callback属性注入/调用、返回create方法到TaskPort/VM。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "23条事实、5有限装配段支持boot/factory/callback/injection/VM-use，未改CALLS。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/port_wiring/source_facts",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "23条事实、5有限装配段支持boot/factory/callback/injection/VM-use，未改CALLS。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/port_wiring/segments",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "23条事实、5有限装配段支持boot/factory/callback/injection/VM-use，未改CALLS。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/port_wiring/model_applications",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "route/event、公开VM plain对象及其它port method effects仍必要；assembly_complete不等于端到端。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "winwincode-summary.json",
+                  "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+                  "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+                  "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "23条事实、5有限装配段支持boot/factory/callback/injection/VM-use，未改CALLS。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/port_wiring/source_facts",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "23条事实、5有限装配段支持boot/factory/callback/injection/VM-use，未改CALLS。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/port_wiring/segments",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "23条事实、5有限装配段支持boot/factory/callback/injection/VM-use，未改CALLS。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/port_wiring/model_applications",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "23条事实、5有限装配段支持boot/factory/callback/injection/VM-use，未改CALLS。 route/event、公开VM plain对象及其它port method effects仍必要；assembly_complete不等于端到端。"
+          }
+        },
+        {
+          "id": "WWC-01.N5",
+          "title": "消费guard",
+          "required": true,
+          "requirement": "ambient hash到读键/null传播、callback返回及真实create在HTTP前throw。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer/query_lookups",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer/null_return_guards",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer/callback_results",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer/factory_null_throw_guards",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "仅到达所选读/guard的正常prefix；authenticatedRouteContext等object/effect、激活/handling未闭合。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "winwincode-summary.json",
+                  "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+                  "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+                  "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer/query_lookups",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer/null_return_guards",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer/callback_results",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。"
+            },
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/consumer/factory_null_throw_guards",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "同context读delivery→null→direct await→create throw，async结果为rejected Promise。 仅到达所选读/guard的正常prefix；authenticatedRouteContext等object/effect、激活/handling未闭合。"
+          }
+        },
+        {
+          "id": "WWC-01.N6",
+          "title": "环境接缝",
+          "required": true,
+          "requirement": "href到ambient hash、提交稳定条件及平台模型；未实现中间分析不伪装成条件。",
+          "source": [],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/ambient_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "真实平台/时序假设，未分析中间关系不得冒充环境条件。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "平台效果未观察，route/event派发未静态闭合，读前改写与实现缺口需分开。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "winwincode-summary.json",
+                  "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+                  "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+                  "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/ambient_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "真实平台/时序假设，未分析中间关系不得冒充环境条件。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "导航/读时hash是显式环境接缝，不是已证明参数流。 平台效果未观察，route/event派发未静态闭合，读前改写与实现缺口需分开。"
+          }
+        },
+        {
+          "id": "WWC-01.N7",
+          "title": "反证与结论",
+          "required": true,
+          "requirement": "保留已有query、fake/Chat等反证，限定默认入口条件拒绝范围。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/counterexample_producers",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "一个已配置反例也做来源domain分析。"
+            }
+          ],
+          "model": [
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            }
+          ],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "有效URL、fake、Chat、可见入口及其它effects反证未全自动连接；不能泛化所有创建。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "winwincode-summary.json",
+                  "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+                  "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+                  "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+                  "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/counterexample_producers",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "一个已配置反例也做来源domain分析。"
+            },
+            {
+              "origin": "trusted-model",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/standard_models",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "有版本的有限受信模型；不验证实际宿主/锁/执行。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/applicability",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/1/evidence/0/details/analysis_gaps",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "正式navigation/port缺口；scope按本子义务判读。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "一个已配置反例也做来源domain分析。 有效URL、fake、Chat、可见入口及其它effects反证未全自动连接；不能泛化所有创建。"
+          }
+        }
+      ],
+      "assessment": {
+        "status": "partial_obligations_supported",
+        "method": "manual_review_of_saved_automatic_evidence",
+        "full_claim_reproduced": false,
+        "reason": "必要分析仍缺；source_fact/有限assembly/五findings及10/10call均不是完整目标。",
+        "unclosed_required_obligations": [
+          "WWC-01.N1",
+          "WWC-01.N4",
+          "WWC-01.N5",
+          "WWC-01.N6",
+          "WWC-01.N7"
+        ]
+      },
+      "snapshot": {
+        "id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+        "project_id": "1dec368a20d2f5075901",
+        "root": "/workspace/winwincode",
+        "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+        "analyzer_version": "static-multilang-7",
+        "detector_version": "call-rules-6-semantic-relations",
+        "parser_version": "{\"lexical_bindings\":\"captured-lexical-bindings-1\",\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"navigation_contracts\":{\"analyzer\":\"static-navigation-contracts-1\",\"policy_schema\":\"static-navigation-policy-v1\"},\"port_wiring\":\"finite-port-wiring-1\",\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"rust\":{\"analyzer\":\"rust-tree-sitter-1.7-generic-lexical\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14\"},\"semantic_sources\":\"semantic-snapshot-sources-1\",\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+        "schema_version": "2",
+        "status": "partial",
+        "component_versions": {
+          "lexical_bindings": "captured-lexical-bindings-1",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "navigation_contracts": {
+            "analyzer": "static-navigation-contracts-1",
+            "policy_schema": "static-navigation-policy-v1"
+          },
+          "port_wiring": "finite-port-wiring-1",
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "rust": {
+            "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+            "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        }
+      },
+      "contract_identity": {
+        "rule_id": "wwc-astra-navigation-context",
+        "contract_hash": "7577987fd47df8c5f7b87b1103b395373b44c2bdaae2977eba6aee985a0155c2",
+        "policy_hash": "397f8feca012516fcaf2abea0e189f87a8d1eef6b02c466571f859f7555700da",
+        "finding_id": "e889ad8ba3543e2359bed2a9",
+        "finding_type": "static_navigation_query_context",
+        "finding_status": "uncertain",
+        "author_approved": false
+      }
+    },
+    {
+      "id": "WWC-02",
+      "repository": "winwincode",
+      "claim": {
+        "title": "Device更新spec的跨语言条件必填字段",
+        "source_report": "../astra-baseline/WINWINCODE_ANALYSIS.md",
+        "source_claim_id": "WWC-02",
+        "conditions": [
+          "所选真实UI/client/协议/dispatcher/authority生产链。",
+          "Device target条件活动及verification command非空要求。"
+        ],
+        "counterexamples": [
+          "非Device分支可从仓库回退命令。",
+          "Chat构造显式字段；criterion展示不等于顶层字段提交。",
+          "optional schema不能代替条件必填guard，不从UI文本猜可执行命令。"
+        ],
+        "origin": "frozen_independent_review",
+        "author_approved": false
+      },
+      "source": [
+        {
+          "origin": "source-derived",
+          "artifact": "winwincode-summary.json",
+          "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+          "json_pointer": "/rule_findings/0/evidence/0/details",
+          "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        }
+      ],
+      "model": [],
+      "policy": [
+        {
+          "origin": "policy-declared",
+          "artifact": "winwincode-summary.json",
+          "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+          "json_pointer": "/rule_findings/0/evidence/0/details/provenance",
+          "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "gaps": [
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "VM保存→真实client/application注入及命令路径未连接。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "WWC-02.D2"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "command/version、camel-snake/JSON缺省、Rustdecoder/dispatcher的跨语言运输尚未自动分析。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "WWC-02.D3"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "真实dispatcher/authority、Device条件、Option/空白guard及拒绝支配未自动闭合。",
+          "required_for_complete_judgment": true,
+          "evidence": [
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/unknown/0",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "仅确认Device then分支spec.verification_command语法出处。"
+            }
+          ],
+          "obligation_id": "WWC-02.D4"
+        },
+        {
+          "kind": "required_analysis_unclosed",
+          "origin": "unresolved",
+          "reason": "local/Chat/展示与提交/授权的完整反证关系未自动推导。",
+          "required_for_complete_judgment": true,
+          "obligation_id": "WWC-02.D5"
+        }
+      ],
+      "witness": [
+        {
+          "origin": "source-derived",
+          "artifact": "winwincode-summary.json",
+          "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+          "json_pointer": "/rule_findings/0/evidence/0/details",
+          "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+          "interpretation": "正式自动finding完整证据；分义务人工评审映射，不是自动goal solver。"
+        },
+        {
+          "origin": "policy-declared",
+          "artifact": "winwincode-summary.json",
+          "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+          "json_pointer": "/rule_findings/0/evidence/0/details/provenance",
+          "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+          "interpretation": "独立审查合同来源，未经目标作者批准。"
+        }
+      ],
+      "obligations": [
+        {
+          "id": "WWC-02.D1",
+          "title": "生产构造",
+          "required": true,
+          "requirement": "返回spec字段与缺verificationCommand的封闭依据。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/source_fact",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "1个直接返回封闭spec对象未构造verificationCommand。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/source_fact",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "1个直接返回封闭spec对象未构造verificationCommand。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "obligation_supported_in_declared_scope",
+            "full_obligation_supported": true,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "1个直接返回封闭spec对象未构造verificationCommand。 仅满足本限定子义务，不等于goal完整。"
+          }
+        },
+        {
+          "id": "WWC-02.D2",
+          "title": "真实提交",
+          "required": true,
+          "requirement": "VM保存到实际client/application注入、命令身份及spec路径。",
+          "source": [],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "VM保存→真实client/application注入及命令路径未连接。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "unknown_or_source_invalid",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "暂无clarification生产装配自动关系。 VM保存→真实client/application注入及命令路径未连接。"
+          }
+        },
+        {
+          "id": "WWC-02.D3",
+          "title": "协议身份",
+          "required": true,
+          "requirement": "update_spec版本、camel/snake字段映射、缺省JSON与Rustdecoder/dispatcher来源。",
+          "source": [],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "command/version、camel-snake/JSON缺省、Rustdecoder/dispatcher的跨语言运输尚未自动分析。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "unknown_or_source_invalid",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "辅助协议原文不是值流或调用。 command/version、camel-snake/JSON缺省、Rustdecoder/dispatcher的跨语言运输尚未自动分析。"
+          }
+        },
+        {
+          "id": "WWC-02.D4",
+          "title": "authority与guard",
+          "required": true,
+          "requirement": "create/update分派、Device条件、Option/空白检查及使用前拒绝。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/guard_and_counterexample_sources/0",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "仅确认Device then分支spec.verification_command语法出处。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "真实dispatcher/authority、Device条件、Option/空白guard及拒绝支配未自动闭合。",
+              "required_for_complete_judgment": true,
+              "evidence": [
+                {
+                  "origin": "unresolved",
+                  "artifact": "winwincode-summary.json",
+                  "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+                  "json_pointer": "/rule_findings/0/evidence/0/details/unknown/0",
+                  "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+                  "interpretation": "仅确认Device then分支spec.verification_command语法出处。"
+                }
+              ]
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/guard_and_counterexample_sources/0",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "仅确认Device then分支spec.verification_command语法出处。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            },
+            {
+              "origin": "unresolved",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/unknown/0",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "仅确认Device then分支spec.verification_command语法出处。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "仅确认Device then分支spec.verification_command语法出处。 真实dispatcher/authority、Device条件、Option/空白guard及拒绝支配未自动闭合。"
+          }
+        },
+        {
+          "id": "WWC-02.D5",
+          "title": "分支与反证",
+          "required": true,
+          "requirement": "local回退、Chat字段、展示与提交区别及授权限制。",
+          "source": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/guard_and_counterexample_sources/1",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "仅确认非Device分支select_verification_command调用出处。"
+            }
+          ],
+          "model": [],
+          "policy": [
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "gaps": [
+            {
+              "kind": "required_analysis_unclosed",
+              "origin": "unresolved",
+              "reason": "local/Chat/展示与提交/授权的完整反证关系未自动推导。",
+              "required_for_complete_judgment": true
+            }
+          ],
+          "witness": [
+            {
+              "origin": "source-derived",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/guard_and_counterexample_sources/1",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "仅确认非Device分支select_verification_command调用出处。"
+            },
+            {
+              "origin": "policy-declared",
+              "artifact": "winwincode-summary.json",
+              "artifact_sha256": "b7dfb9ee6f22970aa7975b567a6cf996beb562884bbc4a1150c23a3e181df615",
+              "json_pointer": "/rule_findings/0/evidence/0/details/contract_assumptions",
+              "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+              "interpretation": "显式合同条件及反证；来源为独立审查，author_approved=false。"
+            }
+          ],
+          "assessment": {
+            "status": "partial_obligations_supported",
+            "full_obligation_supported": false,
+            "method": "manual_review_of_saved_automatic_evidence",
+            "snapshot_id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+            "runtime_verified": false,
+            "reason": "仅确认非Device分支select_verification_command调用出处。 local/Chat/展示与提交/授权的完整反证关系未自动推导。"
+          }
+        }
+      ],
+      "assessment": {
+        "status": "partial_obligations_supported",
+        "method": "manual_review_of_saved_automatic_evidence",
+        "full_claim_reproduced": false,
+        "reason": "必要分析仍缺；source_fact/有限assembly/五findings及10/10call均不是完整目标。",
+        "unclosed_required_obligations": [
+          "WWC-02.D2",
+          "WWC-02.D3",
+          "WWC-02.D4",
+          "WWC-02.D5"
+        ]
+      },
+      "snapshot": {
+        "id": "10bcd33b59b4eb76f67eaabf825782cb3434d8a9c6909c106036a4c82db13b3e",
+        "project_id": "1dec368a20d2f5075901",
+        "root": "/workspace/winwincode",
+        "source_hash": "b68813b9ac07f1399436a4a29531392920494941d8454128d1ff8d4c35e12a87",
+        "analyzer_version": "static-multilang-7",
+        "detector_version": "call-rules-6-semantic-relations",
+        "parser_version": "{\"lexical_bindings\":\"captured-lexical-bindings-1\",\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"navigation_contracts\":{\"analyzer\":\"static-navigation-contracts-1\",\"policy_schema\":\"static-navigation-policy-v1\"},\"port_wiring\":\"finite-port-wiring-1\",\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"rust\":{\"analyzer\":\"rust-tree-sitter-1.7-generic-lexical\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14\"},\"semantic_sources\":\"semantic-snapshot-sources-1\",\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+        "schema_version": "2",
+        "status": "partial",
+        "component_versions": {
+          "lexical_bindings": "captured-lexical-bindings-1",
+          "maintenance": {
+            "backend": "cocoindex",
+            "global_detection": "full",
+            "granularity": "language",
+            "protocol": 1,
+            "version": "1.0.25"
+          },
+          "navigation_contracts": {
+            "analyzer": "static-navigation-contracts-1",
+            "policy_schema": "static-navigation-policy-v1"
+          },
+          "port_wiring": "finite-port-wiring-1",
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "rust": {
+            "analyzer": "rust-tree-sitter-1.7-generic-lexical",
+            "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "d0b2f76e6f8c398758e0d3ba2b8f0d583876de636062b758ac94e216afcbe49c"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        }
+      },
+      "contract_identity": {
+        "rule_id": "wwc-astra-device-spec-field-construction",
+        "contract_hash": "8543f89585c9e89e5ad118ea3eda9e008c1d92dda16d75c2e48509844228cc67",
+        "policy_hash": "397f8feca012516fcaf2abea0e189f87a8d1eef6b02c466571f859f7555700da",
+        "finding_id": "757ae0f6ec60c6e4f52ebcc9",
+        "finding_type": "static_contract_required_object_fields",
+        "finding_status": "uncertain",
+        "author_approved": false
+      }
+    }
+  ],
+  "assessment": {
+    "status": "partial_obligations_supported",
+    "full_goal_acceptance": false,
+    "reason": "五项完整claim全部尚有必要分析缺口；无scoped_static_judgment_reproduced。",
+    "goal_status_counts": {
+      "partial_obligations_supported": 5
+    },
+    "obligation_status_counts": {
+      "partial_obligations_supported": 19,
+      "unknown_or_source_invalid": 7,
+      "obligation_supported_in_declared_scope": 4
+    },
+    "unclosed_required_obligations": [
+      "CPB-01.P1",
+      "CPB-01.P2",
+      "CPB-01.P3",
+      "CPB-01.P4",
+      "CPB-01.P5",
+      "CPB-01.P6",
+      "CPB-02.S1",
+      "CPB-02.S2",
+      "CPB-02.S3",
+      "CPB-02.S4",
+      "CPB-02.S5",
+      "CPB-03.A1",
+      "CPB-03.A2",
+      "CPB-03.A3",
+      "CPB-03.A5",
+      "CPB-03.A6",
+      "CPB-03.A7",
+      "WWC-01.N1",
+      "WWC-01.N4",
+      "WWC-01.N5",
+      "WWC-01.N6",
+      "WWC-01.N7",
+      "WWC-02.D2",
+      "WWC-02.D3",
+      "WWC-02.D4",
+      "WWC-02.D5"
+    ],
+    "frozen_call_baseline_counts": {
+      "reproduced": 10,
+      "unknown": 3,
+      "evidence_only": 13
+    },
+    "call_baseline_is_separate": true,
+    "configured_finite_findings_count": 5,
+    "finite_findings_are_not_five_bugs": true
+  },
+  "interpretation": "依据正式自动证据作出的人工评审映射/范围判读；非通用自动义务solver或运行/业务证明。局部子义务、完整五目标、26观察分开。",
+  "obligation_assessment_semantics": {
+    "obligation_supported_in_declared_scope": "本子义务在列明源码/模型范围内支持，不表示goal完整。",
+    "partial_obligations_supported": "有局部自动事实，必要关系尚缺。",
+    "unknown_or_source_invalid": "本次是缺必要自动分析，未发现来源身份失效；人工来源稿不充见证。"
+  }
+}

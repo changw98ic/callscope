@@ -1,0 +1,260 @@
+{
+  "repository": "winwincode",
+  "scans": [
+    {
+      "snapshot_id": "f3b86812dec2cb36ae9188715fbd95482380aee55bdaa47d89ae92c042e42a5b",
+      "created": true,
+      "status": "partial",
+      "finding_count": 137895,
+      "maintenance": {
+        "engine": "cocoindex",
+        "version": "1.0.25",
+        "recomputed_languages": [
+          "python",
+          "rust",
+          "typescript"
+        ],
+        "reused_languages": [],
+        "uncached_languages": [],
+        "global_detection": "full"
+      },
+      "phase": "initial",
+      "stats": {
+        "files_total": 471,
+        "files_parsed": 459,
+        "files_failed": 12,
+        "nodes": 31941,
+        "edges": 170176,
+        "by_language": {
+          "python": {
+            "files_total": 0,
+            "files_parsed": 0,
+            "files_failed": 0,
+            "nodes": 0,
+            "edges": 0,
+            "resolved_calls": 0,
+            "external_calls": 0,
+            "dynamic_calls": 0,
+            "ambiguous_calls": 0,
+            "unresolved_calls": 0,
+            "external_callback_boundaries": 0
+          },
+          "typescript": {
+            "files_total": 120,
+            "files_parsed": 114,
+            "files_failed": 6,
+            "nodes": 2470,
+            "edges": 9235,
+            "resolved_calls": 3673,
+            "external_calls": 1566,
+            "dynamic_calls": 3967,
+            "ambiguous_calls": 4,
+            "unresolved_calls": 25,
+            "external_callback_boundaries": 1051
+          },
+          "rust": {
+            "files_total": 351,
+            "files_parsed": 345,
+            "files_failed": 6,
+            "nodes": 29471,
+            "edges": 160941,
+            "resolved_calls": 12684,
+            "external_calls": 22703,
+            "dynamic_calls": 124110,
+            "ambiguous_calls": 48,
+            "unresolved_calls": 1396,
+            "external_callback_boundaries": 7262
+          }
+        },
+        "component_versions": {
+          "tool": {
+            "source_hash": "f51101393a08d7e1177d53b4423276439cd4b65ccc6ac2198a463598961bcc73",
+            "graph_backend": "axon-graph-core-1",
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+          },
+          "maintenance": {
+            "backend": "cocoindex",
+            "version": "1.0.25",
+            "protocol": 1,
+            "granularity": "language",
+            "global_detection": "full"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "rust": {
+            "analyzer": "rust-tree-sitter-1.4",
+            "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+          }
+        }
+      }
+    },
+    {
+      "snapshot_id": "f3b86812dec2cb36ae9188715fbd95482380aee55bdaa47d89ae92c042e42a5b",
+      "created": false,
+      "status": "partial",
+      "finding_count": 137895,
+      "maintenance": {
+        "engine": "cocoindex",
+        "version": "1.0.25",
+        "recomputed_languages": [],
+        "reused_languages": [
+          "python",
+          "rust",
+          "typescript"
+        ],
+        "uncached_languages": [],
+        "global_detection": "full"
+      },
+      "phase": "repeat",
+      "stats": {
+        "files_total": 471,
+        "files_parsed": 459,
+        "files_failed": 12,
+        "nodes": 31941,
+        "edges": 170176,
+        "by_language": {
+          "python": {
+            "files_total": 0,
+            "files_parsed": 0,
+            "files_failed": 0,
+            "nodes": 0,
+            "edges": 0,
+            "resolved_calls": 0,
+            "external_calls": 0,
+            "dynamic_calls": 0,
+            "ambiguous_calls": 0,
+            "unresolved_calls": 0,
+            "external_callback_boundaries": 0
+          },
+          "typescript": {
+            "files_total": 120,
+            "files_parsed": 114,
+            "files_failed": 6,
+            "nodes": 2470,
+            "edges": 9235,
+            "resolved_calls": 3673,
+            "external_calls": 1566,
+            "dynamic_calls": 3967,
+            "ambiguous_calls": 4,
+            "unresolved_calls": 25,
+            "external_callback_boundaries": 1051
+          },
+          "rust": {
+            "files_total": 351,
+            "files_parsed": 345,
+            "files_failed": 6,
+            "nodes": 29471,
+            "edges": 160941,
+            "resolved_calls": 12684,
+            "external_calls": 22703,
+            "dynamic_calls": 124110,
+            "ambiguous_calls": 48,
+            "unresolved_calls": 1396,
+            "external_callback_boundaries": 7262
+          }
+        },
+        "component_versions": {
+          "tool": {
+            "source_hash": "f51101393a08d7e1177d53b4423276439cd4b65ccc6ac2198a463598961bcc73",
+            "graph_backend": "axon-graph-core-1",
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+          },
+          "maintenance": {
+            "backend": "cocoindex",
+            "version": "1.0.25",
+            "protocol": 1,
+            "granularity": "language",
+            "global_detection": "full"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "rust": {
+            "analyzer": "rust-tree-sitter-1.4",
+            "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+          }
+        }
+      }
+    }
+  ],
+  "source_hash": "1b93d04f02b5aa273bdad3e023b1a707d1ad460da06c44184305bb9edc00deb9",
+  "policy_hash": "74e4e833a8742b5c26b66989a2be0835c0febadad97dff5ea484c72f419d37a1",
+  "analyzer_version": "static-multilang-3",
+  "detector_version": "call-rules-3-axon",
+  "parser_version": "{\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"rust\":{\"analyzer\":\"rust-tree-sitter-1.4\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14\"},\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"f51101393a08d7e1177d53b4423276439cd4b65ccc6ac2198a463598961bcc73\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"}}",
+  "failed_files": [
+    {
+      "path": "apps/client/src/application.ts",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：966"
+    },
+    {
+      "path": "apps/client/src/candidate-run-preview-control-plane.ts",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：325, 333"
+    },
+    {
+      "path": "apps/client/src/community-control-plane-client.ts",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：2935, 2946"
+    },
+    {
+      "path": "apps/client/src/home-recent-visits.ts",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：135"
+    },
+    {
+      "path": "apps/client/src/readiness-view-model.ts",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：473, 482, 576"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/diagnostic_parser.rs",
+      "status": "parse_error",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+    },
+    {
+      "path": "crates/winwincode-server/src/worker_session_credentials.rs",
+      "status": "parse_error",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+    },
+    {
+      "path": "crates/winwincode-storage/src/provider_exchange.rs",
+      "status": "parse_error",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+    },
+    {
+      "path": "crates/winwincode-worker/src/managed_session.rs",
+      "status": "parse_error",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+    },
+    {
+      "path": "crates/winwincode-worker/src/probe_evidence.rs",
+      "status": "parse_error",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+    },
+    {
+      "path": "crates/winwincode-worker/src/probe_scheduler.rs",
+      "status": "parse_error",
+      "error": "Tree-sitter 检测到错误/缺失语法节点；仅提取可识别的局部结构。"
+    },
+    {
+      "path": "schema/winwincode-export/v1/validate.js",
+      "status": "parse_error",
+      "error": "Tree-sitter 语法错误/不支持语法，行：288"
+    }
+  ]
+}

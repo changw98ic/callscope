@@ -1,0 +1,56 @@
+{
+  "state": "prepared_only",
+  "ast_parsed": [
+    "publication_identity.py",
+    "freeze_core.py",
+    "scan_repository.py",
+    "compare_original_baseline.py",
+    "compile_goal_ledger.py",
+    "build_report_alignment.py",
+    "render_report_summaries.py",
+    "render_analysis_briefs.py",
+    "build_release_report.py",
+    "readback_report_cli.py"
+  ],
+  "normal_help_exit_zero": [
+    "freeze_core.py",
+    "scan_repository.py",
+    "compare_original_baseline.py",
+    "compile_goal_ledger.py",
+    "build_report_alignment.py",
+    "render_report_summaries.py",
+    "render_analysis_briefs.py",
+    "build_release_report.py",
+    "readback_report_cli.py"
+  ],
+  "freeze_executed": false,
+  "scans_executed": false,
+  "analysis_databases_opened": false,
+  "formal_artifacts_generated": false,
+  "target_executed": false,
+  "tests_or_builds_run": false,
+  "previous_publication": "astra-iteration11/v13",
+  "expected_versions": {
+    "package_version": "0.14.0",
+    "analyzer_version": "static-multilang-14",
+    "detector_version": "call-rules-13-architecture-explanations",
+    "schema_version": "2"
+  },
+  "helper_sha256": {
+    "publication_identity.py": "9430eb936c0c3f4c4b7863d8a194c4e4de98893ad459a4150463b1ca6dd96fe7",
+    "freeze_core.py": "757c4b9667f7b3a8009428b7dbb144f242388ee32f2a2a1ce001dbb54e9bc7ce",
+    "scan_repository.py": "1651e84f42b9fcad8b1619241724546aa3704cc35d74944561d009b2e7c15744",
+    "compare_original_baseline.py": "b7f6b008fdfb34b81c97c9c971bf72a309148bdac91c38ffb713d92bc3a733ba",
+    "compile_goal_ledger.py": "d95146ab40e3c5f0b7c2ba07a61332a39b4d5f9954d38f8db746af765ea9adeb",
+    "build_report_alignment.py": "6cad57fa1c1030d97dc727b0ada85f20d74f9519bc4c5b2a49ac1252ddea198f",
+    "render_report_summaries.py": "9cb4062e2bb713efcf7a6fb56cb0410dd7dd0667c491894eb26a5a230edbdbf9",
+    "render_analysis_briefs.py": "c5084e6f1b0f4b089c0556d29933b172d193ef3b2e4b57b7f89f374107dfca64",
+    "build_release_report.py": "9e05a076209bb708ca098ef020c17842ed29eb70d1766bd26a53685d7e2d287b",
+    "readback_report_cli.py": "5c745e47f98814e5e05f64e75d821ec98a6a90fc2f6244d5f52000bad60984e2"
+  },
+  "catalog_sha256": "4498259053d6b813b69edcef701f69f647e4143f8e31e1ebc08f9c2a2f8a33e0",
+  "pending_interfaces": [
+    "documentation deployment claim type/role/ID",
+    "architecture responsibility explanation report field schema"
+  ]
+}

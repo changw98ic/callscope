@@ -1,0 +1,123 @@
+[
+  {
+    "id": "wwc-browser-continuation-lifecycle",
+    "type": "browser_async_lifecycle",
+    "severity": "info",
+    "sources": [
+      {
+        "role": "shell",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient"
+      },
+      {
+        "role": "performRender",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.performRender"
+      },
+      {
+        "role": "authenticatedRouteContext",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.authenticatedRouteContext"
+      },
+      {
+        "role": "ensureAttentionMonitor",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.ensureAttentionMonitor"
+      },
+      {
+        "role": "renderChat",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderChat"
+      },
+      {
+        "role": "renderProjects",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderProjects"
+      },
+      {
+        "role": "renderDevice",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderDevice"
+      },
+      {
+        "role": "renderExtensions",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderExtensions"
+      },
+      {
+        "role": "renderSettings",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderSettings"
+      },
+      {
+        "role": "renderHome",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderHome"
+      },
+      {
+        "role": "renderTaskEntry",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderTaskEntry"
+      },
+      {
+        "role": "renderTaskRun",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderTaskRun"
+      },
+      {
+        "role": "renderDecisionClarification",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderDecisionClarification"
+      },
+      {
+        "role": "renderCandidateRunPreview",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderCandidateRunPreview"
+      },
+      {
+        "role": "renderReview",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderReview"
+      },
+      {
+        "role": "renderOnboarding",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.renderOnboarding"
+      },
+      {
+        "role": "launchRoute",
+        "file": "apps/client/src/application.ts",
+        "symbol": "mountWinWinCodeClient.launchRoute"
+      },
+      {
+        "role": "settingsShell",
+        "file": "apps/client/src/settings-page.ts",
+        "symbol": "mountSettingsPage"
+      },
+      {
+        "role": "usageConsumer",
+        "file": "apps/client/src/settings-page.ts",
+        "symbol": "mountSettingsPage.onUsageFirstOpen"
+      }
+    ],
+    "models": [
+      "captured-normal-statement-control-v1",
+      "browser-continuation-guard-source-v1"
+    ],
+    "provenance": {
+      "authority": "original-full-report-source-scope",
+      "source_doc": "reports/astra-baseline/WINWINCODE_ANALYSIS.md",
+      "author_approved": false,
+      "note": "Selectors locate saved declarations only; no expected guard, writer, resource or result is supplied."
+    },
+    "applicability": {
+      "kind": "conditional",
+      "conditions": [
+        "Selected captured definitions are activated, recorded branches are reached normally, and explicit finite source models apply."
+      ],
+      "counterexamples": [
+        "Nested callbacks, opaque effects and deployment branches are not promoted to active runtime guarantees."
+      ]
+    }
+  }
+]

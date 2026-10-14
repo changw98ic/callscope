@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "kind": "original_26_observation_comparison",
+  "baseline_id": "astra-static-two-repositories-v1",
+  "baseline_total": 26,
+  "selected_total": 26,
+  "repositories": [
+    {
+      "repository": "codepatchbay",
+      "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+      "counts": {
+        "reproduced": 4,
+        "unknown": 2,
+        "mismatch": 0,
+        "evidence_only": 7,
+        "source_changed": 0,
+        "source_missing": 0,
+        "evidence_unavailable": 0,
+        "endpoint_missing": 0,
+        "ambiguous": 0
+      },
+      "changes": [],
+      "selected_total": 13,
+      "comparison_artifact": "codepatchbay-baseline-v12-and-v11.json"
+    },
+    {
+      "repository": "winwincode",
+      "snapshot_id": "ee8ab91784696fc72e3101ca3887d86b45932a83832fb48875f2fd7ec54fca28",
+      "counts": {
+        "reproduced": 6,
+        "unknown": 1,
+        "mismatch": 0,
+        "evidence_only": 6,
+        "source_changed": 0,
+        "source_missing": 0,
+        "evidence_unavailable": 0,
+        "endpoint_missing": 0,
+        "ambiguous": 0
+      },
+      "changes": [],
+      "selected_total": 13,
+      "comparison_artifact": "winwincode-baseline-v12-and-v11.json"
+    }
+  ],
+  "publication_identity_verified": true,
+  "interpretation": "All 26 frozen source observations remain in the denominator. Evidence-only and intentional unknown items are preserved. This comparison is not precision, recall, functional coverage, runtime success, a business judgment, or approval."
+}

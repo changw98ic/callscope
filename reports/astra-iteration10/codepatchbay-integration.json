@@ -1,0 +1,849 @@
+{
+  "repository": "codepatchbay",
+  "scans": [
+    {
+      "phase": "cold",
+      "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+      "created": true,
+      "status": "partial",
+      "stats": {
+        "source_roots": [
+          "."
+        ],
+        "excluded_paths": [
+          ".agents",
+          ".beads",
+          ".git",
+          ".test-tmp",
+          "tests"
+        ],
+        "symlinks_skipped": [],
+        "scan_errors": [],
+        "unsupported_files": [
+          {
+            "path": "scripts/cutover-orchestrator.sh",
+            "language": "shell"
+          },
+          {
+            "path": "scripts/install.sh",
+            "language": "shell"
+          },
+          {
+            "path": "skills/claude-code/install.sh",
+            "language": "shell"
+          }
+        ],
+        "files_total": 333,
+        "files_parsed": 330,
+        "files_failed": 3,
+        "nodes": 11085,
+        "edges": 60571,
+        "resolved_calls": 23380,
+        "external_calls": 18429,
+        "dynamic_calls": 18326,
+        "ambiguous_calls": 429,
+        "unresolved_calls": 7,
+        "external_callback_boundaries": 11896,
+        "by_language": {
+          "python": {
+            "files_total": 2,
+            "files_parsed": 2,
+            "files_failed": 0,
+            "nodes": 28,
+            "edges": 74,
+            "resolved_calls": 9,
+            "external_calls": 24,
+            "dynamic_calls": 41,
+            "ambiguous_calls": 0,
+            "unresolved_calls": 0,
+            "external_callback_boundaries": 16
+          },
+          "typescript": {
+            "files_total": 328,
+            "files_parsed": 328,
+            "files_failed": 0,
+            "nodes": 11057,
+            "edges": 60497,
+            "resolved_calls": 23371,
+            "external_calls": 18405,
+            "dynamic_calls": 18285,
+            "ambiguous_calls": 429,
+            "unresolved_calls": 7,
+            "external_callback_boundaries": 11880
+          }
+        },
+        "languages_requested": [
+          "python",
+          "typescript"
+        ],
+        "supported_languages": [
+          "python",
+          "typescript",
+          "rust"
+        ],
+        "frontend_stats": {
+          "python": {
+            "ambiguous_calls": 0,
+            "ambiguous_symbols": 0,
+            "attribute_invalidations": [
+              [
+                "skills.hermes.adapter.CPBStream",
+                "_base_url"
+              ],
+              [
+                "skills.hermes.adapter.CPBStream",
+                "_project"
+              ],
+              [
+                "skills.hermes.adapter.CPBStream",
+                "_reconnect_interval"
+              ],
+              [
+                "skills.hermes.adapter.CPBStream",
+                "_stopped"
+              ],
+              [
+                "skills.openclaw.adapter.CPBClient",
+                "base_url"
+              ]
+            ],
+            "call_resolution_incomplete": true,
+            "coverage_incomplete": false,
+            "dynamic_calls": 41,
+            "edges": 74,
+            "excluded_paths": [],
+            "external_callback_boundaries": 16,
+            "external_calls": 24,
+            "files_failed": 0,
+            "files_parsed": 2,
+            "files_total": 2,
+            "incomplete": true,
+            "limitations": [
+              "不证明分支可执行、调用顺序、返回值或业务结果",
+              "不执行代码/测试/构建，不验证外部依赖可用性",
+              "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+              "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+              "构造器内部调用保持未知，不推断初始化路径"
+            ],
+            "nodes": 28,
+            "parser_version": "cpython-3.12.14",
+            "resolution_model": "static lexical binding; no runtime execution",
+            "resolved_calls": 9,
+            "scan_errors": [],
+            "source_roots": [
+              "."
+            ],
+            "stubs_not_analyzed": [],
+            "symlinks_skipped": [],
+            "unknown_attribute_writes": [],
+            "unresolved_calls": 0
+          },
+          "typescript": {
+            "ambiguous_calls": 429,
+            "ambiguous_symbols": 1,
+            "analyzer_version": "typescript-tree-sitter-call-2-projection-1",
+            "call_resolution_incomplete": true,
+            "coverage_incomplete": true,
+            "dynamic_calls": 18285,
+            "edges": 60497,
+            "external_callback_boundaries": 11880,
+            "external_calls": 18405,
+            "files_failed": 0,
+            "files_parsed": 328,
+            "files_total": 328,
+            "incomplete": true,
+            "language": "typescript",
+            "limitations": [
+              "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+              "类型/接口不证明对象运行时目标",
+              "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+              "不证明分支、顺序、返回值、加载成功或业务结果"
+            ],
+            "nodes": 11057,
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;ts-syntax-projection-1",
+            "raw_parse_error_files": 3,
+            "resolved_calls": 23371,
+            "syntax_projected_files": 3,
+            "syntax_projection_edits_by_rule": {
+              "qualified_import_type": 10,
+              "type_only_abstract_property": 1
+            },
+            "syntax_projection_partial_files": 0,
+            "syntax_projection_version": "ts-syntax-projection-1",
+            "unresolved_calls": 7
+          }
+        },
+        "component_versions": {
+          "tool": {
+            "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f",
+            "graph_backend": "axon-graph-core-1",
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+          },
+          "maintenance": {
+            "backend": "cocoindex",
+            "version": "1.0.25",
+            "protocol": 1,
+            "granularity": "language",
+            "global_detection": "full"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "lexical_bindings": "captured-lexical-bindings-3",
+          "semantic_environment": "captured-builtin-environment-1",
+          "completion_summaries": "captured-completion-summaries-1",
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-2-shared",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "field_contracts": {
+            "analyzer": "static-field-contracts-4-ir",
+            "policy_schema": "static-field-policy-v2"
+          },
+          "field_summaries": "finite-field-summaries-5-ir",
+          "semantic_ir": "finite-immutable-semantic-ir-3",
+          "field_relations": "captured-field-source-relations-1",
+          "budget_contracts": {
+            "analyzer": "static-local-budget-contracts-1",
+            "policy_schema": "static-local-budget-policy-v1"
+          },
+          "goal_contracts": {
+            "registry": "static-whole-judgment-registry-1",
+            "policy_schema": "static-goal-policy-v1",
+            "adapters": {
+              "atomicity": {
+                "analyzer": "source-derived-atomicity-completion-1",
+                "policy_schema": "adapter-validated-v1"
+              },
+              "pipeline": {
+                "analyzer": "finite-parameter-record-budget-flow-1",
+                "policy_schema": "parameter-record-budget-policy-1"
+              },
+              "status": {
+                "analyzer": "finite-status-classification-1",
+                "policy_schema": "static-status-policy-v1"
+              }
+            }
+          },
+          "report_claims": {
+            "analyzer": "captured-report-source-chains-1",
+            "policy_schema": "static-report-claim-policy-v1"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        },
+        "rules_count": 10,
+        "entrypoints_count": 5,
+        "ambiguous_symbols": 1,
+        "static_contracts_count": 1,
+        "value_contracts_count": 1,
+        "navigation_contracts_count": 0,
+        "atomicity_contracts_count": 1,
+        "field_contracts_count": 3,
+        "budget_contracts_count": 2,
+        "goal_contracts_count": 3,
+        "report_claims_count": 6,
+        "support_input_capture_version": "support-input-capture-1",
+        "support_inputs_count": 2,
+        "support_inputs_incomplete": false,
+        "coverage_incomplete": true,
+        "call_resolution_incomplete": true,
+        "incomplete": true,
+        "resolution_model": "explicit static lexical bindings; no target execution",
+        "limitations": [
+          "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+          "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+          "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+          "快照是读取到的源码集合，不是工作区原子捕获"
+        ]
+      },
+      "finding_count": 40569,
+      "maintenance": {
+        "engine": "cocoindex",
+        "version": "1.0.25",
+        "recomputed_languages": [
+          "python",
+          "typescript"
+        ],
+        "reused_languages": [],
+        "uncached_languages": [],
+        "global_detection": "full"
+      }
+    },
+    {
+      "phase": "warm",
+      "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+      "created": false,
+      "status": "partial",
+      "stats": {
+        "source_roots": [
+          "."
+        ],
+        "excluded_paths": [
+          ".agents",
+          ".beads",
+          ".git",
+          ".test-tmp",
+          "tests"
+        ],
+        "symlinks_skipped": [],
+        "scan_errors": [],
+        "unsupported_files": [
+          {
+            "path": "scripts/cutover-orchestrator.sh",
+            "language": "shell"
+          },
+          {
+            "path": "scripts/install.sh",
+            "language": "shell"
+          },
+          {
+            "path": "skills/claude-code/install.sh",
+            "language": "shell"
+          }
+        ],
+        "files_total": 333,
+        "files_parsed": 330,
+        "files_failed": 3,
+        "nodes": 11085,
+        "edges": 60571,
+        "resolved_calls": 23380,
+        "external_calls": 18429,
+        "dynamic_calls": 18326,
+        "ambiguous_calls": 429,
+        "unresolved_calls": 7,
+        "external_callback_boundaries": 11896,
+        "by_language": {
+          "python": {
+            "files_total": 2,
+            "files_parsed": 2,
+            "files_failed": 0,
+            "nodes": 28,
+            "edges": 74,
+            "resolved_calls": 9,
+            "external_calls": 24,
+            "dynamic_calls": 41,
+            "ambiguous_calls": 0,
+            "unresolved_calls": 0,
+            "external_callback_boundaries": 16
+          },
+          "typescript": {
+            "files_total": 328,
+            "files_parsed": 328,
+            "files_failed": 0,
+            "nodes": 11057,
+            "edges": 60497,
+            "resolved_calls": 23371,
+            "external_calls": 18405,
+            "dynamic_calls": 18285,
+            "ambiguous_calls": 429,
+            "unresolved_calls": 7,
+            "external_callback_boundaries": 11880
+          }
+        },
+        "languages_requested": [
+          "python",
+          "typescript"
+        ],
+        "supported_languages": [
+          "python",
+          "typescript",
+          "rust"
+        ],
+        "frontend_stats": {
+          "python": {
+            "ambiguous_calls": 0,
+            "ambiguous_symbols": 0,
+            "attribute_invalidations": [
+              [
+                "skills.hermes.adapter.CPBStream",
+                "_base_url"
+              ],
+              [
+                "skills.hermes.adapter.CPBStream",
+                "_project"
+              ],
+              [
+                "skills.hermes.adapter.CPBStream",
+                "_reconnect_interval"
+              ],
+              [
+                "skills.hermes.adapter.CPBStream",
+                "_stopped"
+              ],
+              [
+                "skills.openclaw.adapter.CPBClient",
+                "base_url"
+              ]
+            ],
+            "call_resolution_incomplete": true,
+            "coverage_incomplete": false,
+            "dynamic_calls": 41,
+            "edges": 74,
+            "excluded_paths": [],
+            "external_callback_boundaries": 16,
+            "external_calls": 24,
+            "files_failed": 0,
+            "files_parsed": 2,
+            "files_total": 2,
+            "incomplete": true,
+            "limitations": [
+              "不证明分支可执行、调用顺序、返回值或业务结果",
+              "不执行代码/测试/构建，不验证外部依赖可用性",
+              "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+              "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+              "构造器内部调用保持未知，不推断初始化路径"
+            ],
+            "nodes": 28,
+            "parser_version": "cpython-3.12.14",
+            "resolution_model": "static lexical binding; no runtime execution",
+            "resolved_calls": 9,
+            "scan_errors": [],
+            "source_roots": [
+              "."
+            ],
+            "stubs_not_analyzed": [],
+            "symlinks_skipped": [],
+            "unknown_attribute_writes": [],
+            "unresolved_calls": 0
+          },
+          "typescript": {
+            "ambiguous_calls": 429,
+            "ambiguous_symbols": 1,
+            "analyzer_version": "typescript-tree-sitter-call-2-projection-1",
+            "call_resolution_incomplete": true,
+            "coverage_incomplete": true,
+            "dynamic_calls": 18285,
+            "edges": 60497,
+            "external_callback_boundaries": 11880,
+            "external_calls": 18405,
+            "files_failed": 0,
+            "files_parsed": 328,
+            "files_total": 328,
+            "incomplete": true,
+            "language": "typescript",
+            "limitations": [
+              "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+              "类型/接口不证明对象运行时目标",
+              "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+              "不证明分支、顺序、返回值、加载成功或业务结果"
+            ],
+            "nodes": 11057,
+            "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;ts-syntax-projection-1",
+            "raw_parse_error_files": 3,
+            "resolved_calls": 23371,
+            "syntax_projected_files": 3,
+            "syntax_projection_edits_by_rule": {
+              "qualified_import_type": 10,
+              "type_only_abstract_property": 1
+            },
+            "syntax_projection_partial_files": 0,
+            "syntax_projection_version": "ts-syntax-projection-1",
+            "unresolved_calls": 7
+          }
+        },
+        "component_versions": {
+          "tool": {
+            "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f",
+            "graph_backend": "axon-graph-core-1",
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+          },
+          "maintenance": {
+            "backend": "cocoindex",
+            "version": "1.0.25",
+            "protocol": 1,
+            "granularity": "language",
+            "global_detection": "full"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          },
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "lexical_bindings": "captured-lexical-bindings-3",
+          "semantic_environment": "captured-builtin-environment-1",
+          "completion_summaries": "captured-completion-summaries-1",
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-2-shared",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "field_contracts": {
+            "analyzer": "static-field-contracts-4-ir",
+            "policy_schema": "static-field-policy-v2"
+          },
+          "field_summaries": "finite-field-summaries-5-ir",
+          "semantic_ir": "finite-immutable-semantic-ir-3",
+          "field_relations": "captured-field-source-relations-1",
+          "budget_contracts": {
+            "analyzer": "static-local-budget-contracts-1",
+            "policy_schema": "static-local-budget-policy-v1"
+          },
+          "goal_contracts": {
+            "registry": "static-whole-judgment-registry-1",
+            "policy_schema": "static-goal-policy-v1",
+            "adapters": {
+              "atomicity": {
+                "analyzer": "source-derived-atomicity-completion-1",
+                "policy_schema": "adapter-validated-v1"
+              },
+              "pipeline": {
+                "analyzer": "finite-parameter-record-budget-flow-1",
+                "policy_schema": "parameter-record-budget-policy-1"
+              },
+              "status": {
+                "analyzer": "finite-status-classification-1",
+                "policy_schema": "static-status-policy-v1"
+              }
+            }
+          },
+          "report_claims": {
+            "analyzer": "captured-report-source-chains-1",
+            "policy_schema": "static-report-claim-policy-v1"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        },
+        "rules_count": 10,
+        "entrypoints_count": 5,
+        "ambiguous_symbols": 1,
+        "static_contracts_count": 1,
+        "value_contracts_count": 1,
+        "navigation_contracts_count": 0,
+        "atomicity_contracts_count": 1,
+        "field_contracts_count": 3,
+        "budget_contracts_count": 2,
+        "goal_contracts_count": 3,
+        "report_claims_count": 6,
+        "support_input_capture_version": "support-input-capture-1",
+        "support_inputs_count": 2,
+        "support_inputs_incomplete": false,
+        "coverage_incomplete": true,
+        "call_resolution_incomplete": true,
+        "incomplete": true,
+        "resolution_model": "explicit static lexical bindings; no target execution",
+        "limitations": [
+          "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+          "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+          "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+          "快照是读取到的源码集合，不是工作区原子捕获"
+        ]
+      },
+      "finding_count": 40569,
+      "maintenance": {
+        "engine": "cocoindex",
+        "version": "1.0.25",
+        "recomputed_languages": [],
+        "reused_languages": [
+          "python",
+          "typescript"
+        ],
+        "uncached_languages": [],
+        "global_detection": "full"
+      }
+    }
+  ],
+  "snapshot_id": "7524afef4f9234ebef40eec1d74dbb91a3f56dc76f0191728c42d3bdd3cfb167",
+  "package_version": "0.12.0",
+  "publication_series": "v12",
+  "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+  "policy_hash": "c11c67291de2eb257c6b6195cae16f92333abe2f9ca323881403c954cd737714",
+  "analyzer_version": "static-multilang-12",
+  "detector_version": "call-rules-11-whole-judgments",
+  "parser_version": "{\"atomicity_contracts\":{\"analyzer\":\"static-atomicity-contracts-2-shared\",\"policy_schema\":\"static-atomicity-policy-v1\"},\"budget_contracts\":{\"analyzer\":\"static-local-budget-contracts-1\",\"policy_schema\":\"static-local-budget-policy-v1\"},\"completion_summaries\":\"captured-completion-summaries-1\",\"field_contracts\":{\"analyzer\":\"static-field-contracts-4-ir\",\"policy_schema\":\"static-field-policy-v2\"},\"field_relations\":\"captured-field-source-relations-1\",\"field_summaries\":\"finite-field-summaries-5-ir\",\"goal_contracts\":{\"adapters\":{\"atomicity\":{\"analyzer\":\"source-derived-atomicity-completion-1\",\"policy_schema\":\"adapter-validated-v1\"},\"pipeline\":{\"analyzer\":\"finite-parameter-record-budget-flow-1\",\"policy_schema\":\"parameter-record-budget-policy-1\"},\"status\":{\"analyzer\":\"finite-status-classification-1\",\"policy_schema\":\"static-status-policy-v1\"}},\"policy_schema\":\"static-goal-policy-v1\",\"registry\":\"static-whole-judgment-registry-1\"},\"lexical_bindings\":\"captured-lexical-bindings-3\",\"maintenance\":{\"backend\":\"cocoindex\",\"global_detection\":\"full\",\"granularity\":\"language\",\"protocol\":1,\"version\":\"1.0.25\"},\"python\":{\"analyzer\":\"python-ast-3-captured\",\"parser\":\"cpython-3.12.14\"},\"report_claims\":{\"analyzer\":\"captured-report-source-chains-1\",\"policy_schema\":\"static-report-claim-policy-v1\"},\"semantic_environment\":\"captured-builtin-environment-1\",\"semantic_ir\":\"finite-immutable-semantic-ir-3\",\"semantic_sources\":\"semantic-snapshot-sources-1\",\"static_contracts\":{\"analyzer\":\"static-contracts-1\",\"policy_schema\":\"static-contract-policy-v1\"},\"support_input_capture\":\"support-input-capture-1\",\"tool\":{\"axon_commit\":\"2b386fb38a468201ab2ec825ddea5ebf4c33f513\",\"graph_backend\":\"axon-graph-core-1\",\"source_hash\":\"664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f\"},\"typescript\":{\"analyzer\":\"typescript-tree-sitter-call-2-projection-1\",\"parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\",\"tsx_parser\":\"tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14\"},\"value_contracts\":{\"analyzer\":\"static-value-contracts-1\",\"policy_schema\":\"static-value-policy-v1\"}}",
+  "stats": {
+    "ambiguous_calls": 429,
+    "ambiguous_symbols": 1,
+    "atomicity_contracts_count": 1,
+    "budget_contracts_count": 2,
+    "by_language": {
+      "python": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 41,
+        "edges": 74,
+        "external_callback_boundaries": 16,
+        "external_calls": 24,
+        "files_failed": 0,
+        "files_parsed": 2,
+        "files_total": 2,
+        "nodes": 28,
+        "resolved_calls": 9,
+        "unresolved_calls": 0
+      },
+      "typescript": {
+        "ambiguous_calls": 429,
+        "dynamic_calls": 18285,
+        "edges": 60497,
+        "external_callback_boundaries": 11880,
+        "external_calls": 18405,
+        "files_failed": 0,
+        "files_parsed": 328,
+        "files_total": 328,
+        "nodes": 11057,
+        "resolved_calls": 23371,
+        "unresolved_calls": 7
+      }
+    },
+    "call_resolution_incomplete": true,
+    "component_versions": {
+      "atomicity_contracts": {
+        "analyzer": "static-atomicity-contracts-2-shared",
+        "policy_schema": "static-atomicity-policy-v1"
+      },
+      "budget_contracts": {
+        "analyzer": "static-local-budget-contracts-1",
+        "policy_schema": "static-local-budget-policy-v1"
+      },
+      "completion_summaries": "captured-completion-summaries-1",
+      "field_contracts": {
+        "analyzer": "static-field-contracts-4-ir",
+        "policy_schema": "static-field-policy-v2"
+      },
+      "field_relations": "captured-field-source-relations-1",
+      "field_summaries": "finite-field-summaries-5-ir",
+      "goal_contracts": {
+        "adapters": {
+          "atomicity": {
+            "analyzer": "source-derived-atomicity-completion-1",
+            "policy_schema": "adapter-validated-v1"
+          },
+          "pipeline": {
+            "analyzer": "finite-parameter-record-budget-flow-1",
+            "policy_schema": "parameter-record-budget-policy-1"
+          },
+          "status": {
+            "analyzer": "finite-status-classification-1",
+            "policy_schema": "static-status-policy-v1"
+          }
+        },
+        "policy_schema": "static-goal-policy-v1",
+        "registry": "static-whole-judgment-registry-1"
+      },
+      "lexical_bindings": "captured-lexical-bindings-3",
+      "maintenance": {
+        "backend": "cocoindex",
+        "global_detection": "full",
+        "granularity": "language",
+        "protocol": 1,
+        "version": "1.0.25"
+      },
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "report_claims": {
+        "analyzer": "captured-report-source-chains-1",
+        "policy_schema": "static-report-claim-policy-v1"
+      },
+      "semantic_environment": "captured-builtin-environment-1",
+      "semantic_ir": "finite-immutable-semantic-ir-3",
+      "semantic_sources": "semantic-snapshot-sources-1",
+      "static_contracts": {
+        "analyzer": "static-contracts-1",
+        "policy_schema": "static-contract-policy-v1"
+      },
+      "support_input_capture": "support-input-capture-1",
+      "tool": {
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "graph_backend": "axon-graph-core-1",
+        "source_hash": "664f0723371e930791f7a69669cdf33e2bde4d85f9342cfd21ac3fcb9c97a44f"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      },
+      "value_contracts": {
+        "analyzer": "static-value-contracts-1",
+        "policy_schema": "static-value-policy-v1"
+      }
+    },
+    "coverage_incomplete": true,
+    "dynamic_calls": 18326,
+    "edges": 60571,
+    "entrypoints_count": 5,
+    "excluded_paths": [
+      ".agents",
+      ".beads",
+      ".git",
+      ".test-tmp",
+      "tests"
+    ],
+    "external_callback_boundaries": 11896,
+    "external_calls": 18429,
+    "field_contracts_count": 3,
+    "files_failed": 3,
+    "files_parsed": 330,
+    "files_total": 333,
+    "frontend_stats": {
+      "python": {
+        "ambiguous_calls": 0,
+        "ambiguous_symbols": 0,
+        "attribute_invalidations": [
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_base_url"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_project"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_reconnect_interval"
+          ],
+          [
+            "skills.hermes.adapter.CPBStream",
+            "_stopped"
+          ],
+          [
+            "skills.openclaw.adapter.CPBClient",
+            "base_url"
+          ]
+        ],
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": false,
+        "dynamic_calls": 41,
+        "edges": 74,
+        "excluded_paths": [],
+        "external_callback_boundaries": 16,
+        "external_calls": 24,
+        "files_failed": 0,
+        "files_parsed": 2,
+        "files_total": 2,
+        "incomplete": true,
+        "limitations": [
+          "不证明分支可执行、调用顺序、返回值或业务结果",
+          "不执行代码/测试/构建，不验证外部依赖可用性",
+          "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+          "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+          "构造器内部调用保持未知，不推断初始化路径"
+        ],
+        "nodes": 28,
+        "parser_version": "cpython-3.12.14",
+        "resolution_model": "static lexical binding; no runtime execution",
+        "resolved_calls": 9,
+        "scan_errors": [],
+        "source_roots": [
+          "."
+        ],
+        "stubs_not_analyzed": [],
+        "symlinks_skipped": [],
+        "unknown_attribute_writes": [],
+        "unresolved_calls": 0
+      },
+      "typescript": {
+        "ambiguous_calls": 429,
+        "ambiguous_symbols": 1,
+        "analyzer_version": "typescript-tree-sitter-call-2-projection-1",
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": true,
+        "dynamic_calls": 18285,
+        "edges": 60497,
+        "external_callback_boundaries": 11880,
+        "external_calls": 18405,
+        "files_failed": 0,
+        "files_parsed": 328,
+        "files_total": 328,
+        "incomplete": true,
+        "language": "typescript",
+        "limitations": [
+          "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+          "类型/接口不证明对象运行时目标",
+          "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+          "不证明分支、顺序、返回值、加载成功或业务结果"
+        ],
+        "nodes": 11057,
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;ts-syntax-projection-1",
+        "raw_parse_error_files": 3,
+        "resolved_calls": 23371,
+        "syntax_projected_files": 3,
+        "syntax_projection_edits_by_rule": {
+          "qualified_import_type": 10,
+          "type_only_abstract_property": 1
+        },
+        "syntax_projection_partial_files": 0,
+        "syntax_projection_version": "ts-syntax-projection-1",
+        "unresolved_calls": 7
+      }
+    },
+    "goal_contracts_count": 3,
+    "incomplete": true,
+    "languages_requested": [
+      "python",
+      "typescript"
+    ],
+    "limitations": [
+      "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+      "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+      "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+      "快照是读取到的源码集合，不是工作区原子捕获"
+    ],
+    "navigation_contracts_count": 0,
+    "nodes": 11085,
+    "report_claims_count": 6,
+    "resolution_model": "explicit static lexical bindings; no target execution",
+    "resolved_calls": 23380,
+    "rules_count": 10,
+    "scan_errors": [],
+    "source_roots": [
+      "."
+    ],
+    "static_contracts_count": 1,
+    "support_input_capture_version": "support-input-capture-1",
+    "support_inputs_count": 2,
+    "support_inputs_incomplete": false,
+    "supported_languages": [
+      "python",
+      "typescript",
+      "rust"
+    ],
+    "symlinks_skipped": [],
+    "unresolved_calls": 7,
+    "unsupported_files": [
+      {
+        "language": "shell",
+        "path": "scripts/cutover-orchestrator.sh"
+      },
+      {
+        "language": "shell",
+        "path": "scripts/install.sh"
+      },
+      {
+        "language": "shell",
+        "path": "skills/claude-code/install.sh"
+      }
+    ],
+    "value_contracts_count": 1
+  },
+  "comparison": "New source models and inert support inputs; not a same-policy precision experiment.",
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false
+}

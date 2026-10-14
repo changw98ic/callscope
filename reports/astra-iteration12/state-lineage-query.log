@@ -1,0 +1,3 @@
+{"state": "captured_source_loaded", "saved_v13_snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe"}
+{"rule_id": "cpb-review-fixed-state-lineage", "supported": true, "gaps": [], "facts": 99, "operations": 2235, "incomplete": false}
+{"rule_id": "cpb-finalizer-conditional-publication", "supported": true, "gaps": [], "facts": 613, "operations": 16210, "incomplete": false}

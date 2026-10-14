@@ -1,0 +1,4044 @@
+{
+  "development_query": true,
+  "not_formal_v14_result": true,
+  "saved_snapshot_id": "7b58e73339e7ad28592c4a0bede1da0028935b30edd940419841971b354c2bfe",
+  "saved_source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+  "saved_policy_hash": "0fff976c5bcee4485b553448ac80df4298b47a8c4656aaab6062324d4e9bbdfc",
+  "saved_report_sha256": "6fe5fe8a23ce386b3d5641ed6f8964d6bb5aa90f19b735ff03d0f2bf6b046fb0",
+  "report_projection_only_omits_unused_fields": true,
+  "supplemental_development_policy_sha256": "38acb0b64547d783bebaa12dfc6bb3ecf56a3433f431d268302829eb4149186b",
+  "supplemental_development_selector_count": 16,
+  "current_module_sha256": "feed013a4e7e6f9114eade4848d4dafb36a8fdc1e3ed0eb8cd66ac0d583c4e72",
+  "query_module_bytes_stable": true,
+  "target_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "samples": {
+    "return_transfer": [
+      {
+        "id": "f2c4504cdc055e68aabf2edd",
+        "operation_kind": "return_transfer",
+        "actual_owner": {
+          "file": "bridges/engine-bridge.ts",
+          "symbol": "runJobWithServices",
+          "graph_node_id": "ts:bridges/engine-bridge#runJobWithServices",
+          "location": {
+            "file": "bridges/engine-bridge.ts",
+            "line": 18,
+            "column": 8,
+            "start_byte": 545,
+            "end_byte": 642,
+            "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+            "location_ref": "/source_location_index/6f66246399d6f64ff663eef7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "bridges/engine-bridge.ts",
+            "line": 19,
+            "column": 3,
+            "start_byte": 602,
+            "end_byte": 640,
+            "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+            "location_ref": "/source_location_index/b9a4597be3a55d2c9e98e769",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-astra-pipeline-retry-integrated",
+            "goal_id": "CPB-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/8938756c4dc51d3825f09d06",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "return runJobWithServerServices(opts);",
+          "node_kind": "return_statement",
+          "exit_kind": "return",
+          "value": {
+            "node_kind": "call_expression",
+            "source_text": "runJobWithServerServices(opts)",
+            "source_text_truncated": false,
+            "location": {
+              "file": "bridges/engine-bridge.ts",
+              "line": 19,
+              "column": 10,
+              "start_byte": 609,
+              "end_byte": 639,
+              "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+              "location_ref": "/source_location_index/f118acdb6c154549cec755b8",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "async_fulfillment_or_return_effect_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "bridges/engine-bridge.ts",
+            "line": 19,
+            "column": 3,
+            "start_byte": 602,
+            "end_byte": 640,
+            "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+            "location_ref": "/source_location_index/b9a4597be3a55d2c9e98e769",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "bridges/engine-bridge.ts",
+            "line": 18,
+            "column": 61,
+            "start_byte": 598,
+            "end_byte": 642,
+            "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+            "location_ref": "/source_location_index/ae51117aa8da8340fc890601",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "d8ba8ef9bec6d8d36461babc70e2f5324a50aef8fcba70032d78bf3193644fea"
+      },
+      {
+        "id": "b6dc87844028530e9833b193",
+        "operation_kind": "return_transfer",
+        "actual_owner": {
+          "file": "cli/commands/fix.ts",
+          "symbol": "resolveDeps",
+          "graph_node_id": "ts:cli/commands/fix#resolveDeps",
+          "location": {
+            "file": "cli/commands/fix.ts",
+            "line": 426,
+            "column": 1,
+            "start_byte": 17368,
+            "end_byte": 18904,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/bd78ee5ad2937d6ef20478ed",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/fix.ts",
+            "line": 441,
+            "column": 3,
+            "start_byte": 18258,
+            "end_byte": 18902,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/103457cce52ffc41d596aaa4",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-astra-active-key-complete",
+            "goal_id": "CPB-03",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/1c6a39757aa64ee19f9d5c8e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "return {\n    assertFixReadiness: o.assertFixReadiness ?? readinessMod.assertFixReadiness,\n    enqueue: o.enqueue ?? (hubQueueMod.enqueue as unknown as FixDeps[\"enqueue\"]),\n    loadQueue: o.loadQueue ?? (hubQueueMod.loadQueue as unknown as FixDeps[\"loadQueue\"]),\n    loadRegistry:\n      o.loadRegistry ?? (hubRegistryMod.loadRegistry as unknown as FixDeps[\"loadRegistry\"]),\n    resolve",
+          "node_kind": "return_statement",
+          "exit_kind": "return",
+          "value": {
+            "node_kind": "object",
+            "source_text": "{\n    assertFixReadiness: o.assertFixReadiness ?? readinessMod.assertFixReadiness,\n    enqueue: o.enqueue ?? (hubQueueMod.enqueue as unknown as FixDeps[\"enqueue\"]),\n    loadQueue: o.loadQueue ?? (hubQueueMod.loadQueue as unknown as FixDeps[\"loadQueue\"]),\n    loadRegistry:\n      o.loadRegistry ?? (hubRegistryMod.loadRegistry as unknown as FixDeps[\"loadRegistry\"]),\n    resolveHubRoot",
+            "source_text_truncated": true,
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 441,
+              "column": 10,
+              "start_byte": 18265,
+              "end_byte": 18901,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/ce79eae04ced1b204d543120",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "async_fulfillment_or_return_effect_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 441,
+            "column": 3,
+            "start_byte": 18258,
+            "end_byte": 18902,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/103457cce52ffc41d596aaa4",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 426,
+            "column": 59,
+            "start_byte": 17426,
+            "end_byte": 18904,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/e480545e4b1663ed854c4e67",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "explicit_return_value",
+            "from_operation_id": "7f08c305777e7c306cacce60",
+            "to_operation_id": "b6dc87844028530e9833b193",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "same_returned_literal_expression": true,
+            "async_fulfillment_proven": false
+          },
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "fb8c8391c06021105d2b7544",
+            "to_operation_id": "b6dc87844028530e9833b193",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "5560a02e899f07410038906290e20bdac38c76e3ba4b1ca14bb732126a3e5348"
+      }
+    ],
+    "call_argument_transfer": [
+      {
+        "id": "4977f2ce348fc180908a95f1",
+        "operation_kind": "call_argument_transfer",
+        "actual_owner": {
+          "file": "bridges/engine-bridge.ts",
+          "symbol": "runJobWithServices",
+          "graph_node_id": "ts:bridges/engine-bridge#runJobWithServices",
+          "location": {
+            "file": "bridges/engine-bridge.ts",
+            "line": 18,
+            "column": 8,
+            "start_byte": 545,
+            "end_byte": 642,
+            "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+            "location_ref": "/source_location_index/6f66246399d6f64ff663eef7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "bridges/engine-bridge.ts",
+            "line": 19,
+            "column": 10,
+            "start_byte": 609,
+            "end_byte": 639,
+            "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+            "location_ref": "/source_location_index/f118acdb6c154549cec755b8",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-astra-pipeline-retry-integrated",
+            "goal_id": "CPB-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/8938756c4dc51d3825f09d06",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "runJobWithServerServices(opts)",
+          "node_kind": "call_expression",
+          "callee": {
+            "source_text": "runJobWithServerServices",
+            "target_symbol": "ts:server/services/engine-runner#runJobWithServices",
+            "target_graph_node_id": "ts:server/services/engine-runner#runJobWithServices",
+            "binding_state": "authenticated_internal_call",
+            "authenticated_call_edge_id": "fd8f5b947d1f2873d388ab4b",
+            "captured_call_edge_id": "fd8f5b947d1f2873d388ab4b",
+            "captured_resolution": "resolved",
+            "binding_gaps": [],
+            "unknown_port_effects_remain_unknown": false
+          },
+          "receiver": null,
+          "argument_index": 0,
+          "argument_count": 1,
+          "argument": {
+            "node_kind": "identifier",
+            "source_text": "opts",
+            "source_text_truncated": false,
+            "location": {
+              "file": "bridges/engine-bridge.ts",
+              "line": 19,
+              "column": 35,
+              "start_byte": 634,
+              "end_byte": 638,
+              "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+              "location_ref": "/source_location_index/cdef0a9e97858674caf184b7",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "19eefb091b6e05b4da634a4442cc869c4bc27918c64b0c5ecd705e6dd46a29cd",
+              "root_name": "opts",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "19eefb091b6e05b4da634a4442cc869c4bc27918c64b0c5ecd705e6dd46a29cd",
+                "kind": "parameter",
+                "location": {
+                  "file": "bridges/engine-bridge.ts",
+                  "line": 18,
+                  "column": 41,
+                  "start_byte": 578,
+                  "end_byte": 597,
+                  "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+                  "location_ref": "/source_location_index/c6c5412d339a45911ccbac2f",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "19eefb091b6e05b4da634a4442cc869c4bc27918c64b0c5ecd705e6dd46a29cd",
+              "kind": "parameter",
+              "location": {
+                "file": "bridges/engine-bridge.ts",
+                "line": 18,
+                "column": 41,
+                "start_byte": 578,
+                "end_byte": 597,
+                "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+                "location_ref": "/source_location_index/c6c5412d339a45911ccbac2f",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "target_parameter": {
+            "file": "server/services/engine-runner.ts",
+            "symbol": "runJobWithServices",
+            "formal_parameter_index": 0,
+            "source_text": "opts: LooseRecord",
+            "location": {
+              "file": "server/services/engine-runner.ts",
+              "line": 130,
+              "column": 42,
+              "start_byte": 5602,
+              "end_byte": 5619,
+              "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+              "location_ref": "/source_location_index/9913a2f185b2bbcf28312110",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "d19ab26ded6f24ca33c8f36ef011daf0953ab79e3cff4d16c7db4ab1fcffa27a",
+              "root_name": "opts",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "d19ab26ded6f24ca33c8f36ef011daf0953ab79e3cff4d16c7db4ab1fcffa27a",
+                "kind": "parameter",
+                "location": {
+                  "file": "server/services/engine-runner.ts",
+                  "line": 130,
+                  "column": 41,
+                  "start_byte": 5601,
+                  "end_byte": 5620,
+                  "source_hash": "952b6a43e9d2e5a2040eae1c7c8ec5c000d26a12f1c44d395041434db48bd864",
+                  "location_ref": "/source_location_index/6ef1b2a802dc4ced54b52ea5",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "callee_activation_or_parameter_runtime_value_proven": false
+          },
+          "record_fields": [],
+          "interface_kind": "ordinary_captured_call_site",
+          "wire_or_storage_effect_inferred": false
+        },
+        "subject": {
+          "callee_source": "runJobWithServerServices",
+          "argument_index": 0
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "bridges/engine-bridge.ts",
+            "line": 19,
+            "column": 3,
+            "start_byte": 602,
+            "end_byte": 640,
+            "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+            "location_ref": "/source_location_index/b9a4597be3a55d2c9e98e769",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "bridges/engine-bridge.ts",
+            "line": 18,
+            "column": 61,
+            "start_byte": 598,
+            "end_byte": 642,
+            "source_hash": "b0647dd081f10fc07fb84117c925763859bfbf74b5544413104d2d15cce31076",
+            "location_ref": "/source_location_index/ae51117aa8da8340fc890601",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "a193e1189aed513f4a04dadedf17184b23612dbc29bcc0e00c224ffe0f217993"
+      },
+      {
+        "id": "af8838781101dddabce24d28",
+        "operation_kind": "call_argument_transfer",
+        "actual_owner": {
+          "file": "cli/commands/doctor.ts",
+          "symbol": "checkRuntimeHealth",
+          "graph_node_id": "ts:cli/commands/doctor#checkRuntimeHealth",
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 1,
+            "start_byte": 12355,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b4f6e0051d3ea718ffb02d03",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/doctor.ts",
+            "line": 307,
+            "column": 42,
+            "start_byte": 12479,
+            "end_byte": 12521,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/72b06511f03663ac77f5cfe7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/ec0c7c021afecc73b5596b3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/83858f35eb223e6efc47637a",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/97cdfd1ef4be4a969485f81a",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 3,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "import(\"../../server/services/runtime.js\")",
+          "node_kind": "call_expression",
+          "callee": {
+            "source_text": "import",
+            "target_symbol": null,
+            "target_graph_node_id": null,
+            "binding_state": "captured_call_site_unknown",
+            "authenticated_call_edge_id": null,
+            "captured_call_edge_id": "fa1b96d8c0ae934b3512cc8b",
+            "captured_resolution": "dynamic",
+            "binding_gaps": [
+              {
+                "code": "call_binding_unknown",
+                "message": "快照没有有效确定的内部 callee；候选、动态或部分来源不提升。",
+                "file": "cli/commands/doctor.ts",
+                "line": 307,
+                "edge_id": "fa1b96d8c0ae934b3512cc8b",
+                "resolution": "dynamic",
+                "candidates": [],
+                "reason": "动态 import 的加载与返回命名空间未展开"
+              }
+            ],
+            "unknown_port_effects_remain_unknown": true
+          },
+          "receiver": null,
+          "argument_index": 0,
+          "argument_count": 1,
+          "argument": {
+            "node_kind": "string",
+            "source_text": "\"../../server/services/runtime.js\"",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/doctor.ts",
+              "line": 307,
+              "column": 49,
+              "start_byte": 12486,
+              "end_byte": 12520,
+              "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+              "location_ref": "/source_location_index/8c8ca5c3ee2c7e6df8154249",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "target_parameter": null,
+          "record_fields": [],
+          "interface_kind": "ordinary_captured_call_site",
+          "wire_or_storage_effect_inferred": false
+        },
+        "subject": {
+          "callee_source": "import",
+          "argument_index": 0
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 307,
+            "column": 3,
+            "start_byte": 12440,
+            "end_byte": 12522,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/dfe18f83ab773c3151887305",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 82,
+            "start_byte": 12436,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/0f3450ed14fcbe342d78c7a3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "ae320a6d4b40bb72a90aa6a4b5677d0a41bdcc004056208faf8aa441723a9e36"
+      }
+    ],
+    "binding_initializer": [
+      {
+        "id": "8b101644efb614526e454bfe",
+        "operation_kind": "binding_initializer",
+        "actual_owner": {
+          "file": "cli/commands/doctor.ts",
+          "symbol": "checkRuntimeHealth",
+          "graph_node_id": "ts:cli/commands/doctor#checkRuntimeHealth",
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 1,
+            "start_byte": 12355,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b4f6e0051d3ea718ffb02d03",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 9,
+            "start_byte": 12531,
+            "end_byte": 12593,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/2ec15a3905d271c8ec373ec9",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/ec0c7c021afecc73b5596b3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/08bf438966a105c848063e7c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "health = await collectRuntimeHealth({ cpbRoot, executorRoot })",
+          "node_kind": "variable_declarator",
+          "target": {
+            "node_kind": "identifier",
+            "source_text": "health",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/doctor.ts",
+              "line": 308,
+              "column": 9,
+              "start_byte": 12531,
+              "end_byte": 12537,
+              "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+              "location_ref": "/source_location_index/71701fed3d96b6a519cf6888",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "1e0cd7c3f70a57f05971c54d001f6c5bea32788ab76cb30d3890c612ff843ad1",
+              "root_name": "health",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "1e0cd7c3f70a57f05971c54d001f6c5bea32788ab76cb30d3890c612ff843ad1",
+                "kind": "const",
+                "location": {
+                  "file": "cli/commands/doctor.ts",
+                  "line": 308,
+                  "column": 9,
+                  "start_byte": 12531,
+                  "end_byte": 12593,
+                  "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                  "location_ref": "/source_location_index/2ec15a3905d271c8ec373ec9",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "1e0cd7c3f70a57f05971c54d001f6c5bea32788ab76cb30d3890c612ff843ad1",
+              "kind": "const",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 308,
+                "column": 9,
+                "start_byte": 12531,
+                "end_byte": 12593,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/2ec15a3905d271c8ec373ec9",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "await_expression",
+            "source_text": "await collectRuntimeHealth({ cpbRoot, executorRoot })",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/doctor.ts",
+              "line": 308,
+              "column": 18,
+              "start_byte": 12540,
+              "end_byte": 12593,
+              "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+              "location_ref": "/source_location_index/4fbb953ee8e67df1ba4b27b6",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "=",
+          "runtime_initialization_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "1e0cd7c3f70a57f05971c54d001f6c5bea32788ab76cb30d3890c612ff843ad1",
+            "root_name": "health",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "1e0cd7c3f70a57f05971c54d001f6c5bea32788ab76cb30d3890c612ff843ad1",
+              "kind": "const",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 308,
+                "column": 9,
+                "start_byte": 12531,
+                "end_byte": 12593,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/2ec15a3905d271c8ec373ec9",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "write_target_kind": "local_binding"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 3,
+            "start_byte": 12525,
+            "end_byte": 12594,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/5c5caebb17061f3d97bb6cc0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 82,
+            "start_byte": 12436,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/0f3450ed14fcbe342d78c7a3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "8c4cdbb244a0f84a3ac61a86",
+            "to_operation_id": "8b101644efb614526e454bfe",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "99e39e66fe575dac251f3eca9521752d79bccd37274996c0ed1a2a32c62775d4"
+      },
+      {
+        "id": "ec779ece85dea2ca2223b109",
+        "operation_kind": "binding_initializer",
+        "actual_owner": {
+          "file": "cli/commands/fix.ts",
+          "symbol": "resolveDeps",
+          "graph_node_id": "ts:cli/commands/fix#resolveDeps",
+          "location": {
+            "file": "cli/commands/fix.ts",
+            "line": 426,
+            "column": 1,
+            "start_byte": 17368,
+            "end_byte": 18904,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/bd78ee5ad2937d6ef20478ed",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/fix.ts",
+            "line": 427,
+            "column": 9,
+            "start_byte": 17436,
+            "end_byte": 17454,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/1c55a5904d6d7d654be719d0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-astra-active-key-complete",
+            "goal_id": "CPB-03",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/1c6a39757aa64ee19f9d5c8e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "o = ctx.deps ?? {}",
+          "node_kind": "variable_declarator",
+          "target": {
+            "node_kind": "identifier",
+            "source_text": "o",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 427,
+              "column": 9,
+              "start_byte": 17436,
+              "end_byte": 17437,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/2a91bc40522f12ac25141359",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "259c8c30faee93022c31dc23352d82a95121f95ca054be31528b1bdd42e839c9",
+              "root_name": "o",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "259c8c30faee93022c31dc23352d82a95121f95ca054be31528b1bdd42e839c9",
+                "kind": "const",
+                "location": {
+                  "file": "cli/commands/fix.ts",
+                  "line": 427,
+                  "column": 9,
+                  "start_byte": 17436,
+                  "end_byte": 17454,
+                  "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                  "location_ref": "/source_location_index/1c55a5904d6d7d654be719d0",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "259c8c30faee93022c31dc23352d82a95121f95ca054be31528b1bdd42e839c9",
+              "kind": "const",
+              "location": {
+                "file": "cli/commands/fix.ts",
+                "line": 427,
+                "column": 9,
+                "start_byte": 17436,
+                "end_byte": 17454,
+                "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                "location_ref": "/source_location_index/1c55a5904d6d7d654be719d0",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "binary_expression",
+            "source_text": "ctx.deps ?? {}",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 427,
+              "column": 13,
+              "start_byte": 17440,
+              "end_byte": 17454,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/b7c96910b555ff12e2dbcb3f",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "=",
+          "runtime_initialization_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "259c8c30faee93022c31dc23352d82a95121f95ca054be31528b1bdd42e839c9",
+            "root_name": "o",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "259c8c30faee93022c31dc23352d82a95121f95ca054be31528b1bdd42e839c9",
+              "kind": "const",
+              "location": {
+                "file": "cli/commands/fix.ts",
+                "line": 427,
+                "column": 9,
+                "start_byte": 17436,
+                "end_byte": 17454,
+                "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                "location_ref": "/source_location_index/1c55a5904d6d7d654be719d0",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "write_target_kind": "local_binding"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 427,
+            "column": 3,
+            "start_byte": 17430,
+            "end_byte": 17455,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/873fc03d91e61ab46b5f99bd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 426,
+            "column": 59,
+            "start_byte": 17426,
+            "end_byte": 18904,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/e480545e4b1663ed854c4e67",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "25b48342b70fb76f4d400e1f5f9fe0be889f679725637808cc8d1f54bfb006e7"
+      }
+    ],
+    "normal_source_order": [
+      {
+        "id": "8c4cdbb244a0f84a3ac61a86",
+        "operation_kind": "normal_source_order",
+        "actual_owner": {
+          "file": "cli/commands/doctor.ts",
+          "symbol": "checkRuntimeHealth",
+          "graph_node_id": "ts:cli/commands/doctor#checkRuntimeHealth",
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 1,
+            "start_byte": 12355,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b4f6e0051d3ea718ffb02d03",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 9,
+            "start_byte": 12531,
+            "end_byte": 12593,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/2ec15a3905d271c8ec373ec9",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/ec0c7c021afecc73b5596b3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/08bf438966a105c848063e7c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "before_operation_id": "af8838781101dddabce24d28",
+          "after_operation_id": "8b101644efb614526e454bfe",
+          "before_statement_index": 0,
+          "after_statement_index": 1,
+          "normal_reaching_required": true,
+          "causal_dependency_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 3,
+            "start_byte": 12525,
+            "end_byte": 12594,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/5c5caebb17061f3d97bb6cc0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 82,
+            "start_byte": 12436,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/0f3450ed14fcbe342d78c7a3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "af8838781101dddabce24d28",
+            "to_operation_id": "8c4cdbb244a0f84a3ac61a86",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "9a2d933cbaadcf2449a7afed3c504c353f08b92e0075248352ea021e9e2407f2"
+      },
+      {
+        "id": "927bca819559b649f28f0fd0",
+        "operation_kind": "normal_source_order",
+        "actual_owner": {
+          "file": "cli/commands/doctor.ts",
+          "symbol": "checkRuntimeHealth",
+          "graph_node_id": "ts:cli/commands/doctor#checkRuntimeHealth",
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 1,
+            "start_byte": 12355,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b4f6e0051d3ea718ffb02d03",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/doctor.ts",
+            "line": 309,
+            "column": 3,
+            "start_byte": 12597,
+            "end_byte": 12627,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/e4ffe7d92e7f2090f648a34b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/ec0c7c021afecc73b5596b3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/7f0ceb306798d70406649ff6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "before_operation_id": "8b101644efb614526e454bfe",
+          "after_operation_id": "998b60a61187b3366ace08c9",
+          "before_statement_index": 1,
+          "after_statement_index": 2,
+          "normal_reaching_required": true,
+          "causal_dependency_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 309,
+            "column": 3,
+            "start_byte": 12597,
+            "end_byte": 12628,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b74f67a1cd33cfc6921a7e49",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 82,
+            "start_byte": 12436,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/0f3450ed14fcbe342d78c7a3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "8b101644efb614526e454bfe",
+            "to_operation_id": "927bca819559b649f28f0fd0",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "354772df2f7c19b235381cfb835786148243704e75e32b46aa7f1524bb0faeea"
+      }
+    ],
+    "record_construction": [
+      {
+        "id": "ae7bb4e05cc3393dca7fa751",
+        "operation_kind": "record_construction",
+        "actual_owner": {
+          "file": "cli/commands/doctor.ts",
+          "symbol": "checkRuntimeHealth",
+          "graph_node_id": "ts:cli/commands/doctor#checkRuntimeHealth",
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 1,
+            "start_byte": 12355,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b4f6e0051d3ea718ffb02d03",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 45,
+            "start_byte": 12567,
+            "end_byte": 12592,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/ae8001b922b5c5c7c75131bd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/ec0c7c021afecc73b5596b3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/3eb2cfeca572917ffd19f6a7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "{ cpbRoot, executorRoot }",
+          "node_kind": "object",
+          "record_type_source": null,
+          "record_fields": [
+            {
+              "name": "cpbRoot",
+              "source_text": "cpbRoot",
+              "source_path": {
+                "root_declaration_id": "27323c60dbd685feddbb9986ba6489f5abbbc9fc9446fc4189b7b0bf5eaab2c9",
+                "root_name": "cpbRoot",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "27323c60dbd685feddbb9986ba6489f5abbbc9fc9446fc4189b7b0bf5eaab2c9",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "cli/commands/doctor.ts",
+                    "line": 306,
+                    "column": 34,
+                    "start_byte": 12388,
+                    "end_byte": 12435,
+                    "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                    "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "binding": {
+                "declaration_id": "27323c60dbd685feddbb9986ba6489f5abbbc9fc9446fc4189b7b0bf5eaab2c9",
+                "kind": "parameter",
+                "location": {
+                  "file": "cli/commands/doctor.ts",
+                  "line": 306,
+                  "column": 34,
+                  "start_byte": 12388,
+                  "end_byte": 12435,
+                  "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                  "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 308,
+                "column": 47,
+                "start_byte": 12569,
+                "end_byte": 12576,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/08eacd881b434c712e97a67e",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "closed": true,
+              "runtime_field_presence_or_value_proven": false
+            },
+            {
+              "name": "executorRoot",
+              "source_text": "executorRoot",
+              "source_path": {
+                "root_declaration_id": "a650eb38ca48b49926f526e9a0346dd0fe8ad6b22fa957a77315373af41009c9",
+                "root_name": "executorRoot",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "a650eb38ca48b49926f526e9a0346dd0fe8ad6b22fa957a77315373af41009c9",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "cli/commands/doctor.ts",
+                    "line": 306,
+                    "column": 34,
+                    "start_byte": 12388,
+                    "end_byte": 12435,
+                    "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                    "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "binding": {
+                "declaration_id": "a650eb38ca48b49926f526e9a0346dd0fe8ad6b22fa957a77315373af41009c9",
+                "kind": "parameter",
+                "location": {
+                  "file": "cli/commands/doctor.ts",
+                  "line": 306,
+                  "column": 34,
+                  "start_byte": 12388,
+                  "end_byte": 12435,
+                  "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                  "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 308,
+                "column": 56,
+                "start_byte": 12578,
+                "end_byte": 12590,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/fbe5ecc4669e0c292872d00e",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "closed": true,
+              "runtime_field_presence_or_value_proven": false
+            }
+          ],
+          "closed_captured_shape": true,
+          "result_binding": null,
+          "ordinary_data_semantics_not_automatically_assumed": true
+        },
+        "subject": {
+          "field_names": [
+            "cpbRoot",
+            "executorRoot"
+          ],
+          "record_type_source": null
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 3,
+            "start_byte": 12525,
+            "end_byte": 12594,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/5c5caebb17061f3d97bb6cc0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 82,
+            "start_byte": 12436,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/0f3450ed14fcbe342d78c7a3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "field_projection_from_record",
+            "from_operation_id": "33150f445fe2253a338823a6",
+            "to_operation_id": "ae7bb4e05cc3393dca7fa751",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "field_name": "cpbRoot",
+            "relation_meaning": "the captured field initializer references this lexical path; no current heap value equality"
+          },
+          {
+            "kind": "field_projection_from_record",
+            "from_operation_id": "05d9ead5be5241d43b94ff66",
+            "to_operation_id": "ae7bb4e05cc3393dca7fa751",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "field_name": "executorRoot",
+            "relation_meaning": "the captured field initializer references this lexical path; no current heap value equality"
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "251ac8c4bb184302750f6c698720e7f59a776ece210ecf4b357b27ca4d8e6ae7"
+      },
+      {
+        "id": "0962a9913cf802222fc2c2da",
+        "operation_kind": "record_construction",
+        "actual_owner": {
+          "file": "cli/commands/fix.ts",
+          "symbol": "resolveDeps",
+          "graph_node_id": "ts:cli/commands/fix#resolveDeps",
+          "location": {
+            "file": "cli/commands/fix.ts",
+            "line": 426,
+            "column": 1,
+            "start_byte": 17368,
+            "end_byte": 18904,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/bd78ee5ad2937d6ef20478ed",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/fix.ts",
+            "line": 427,
+            "column": 25,
+            "start_byte": 17452,
+            "end_byte": 17454,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/f5bb6a5566ad7b3b78dbd6fa",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-astra-active-key-complete",
+            "goal_id": "CPB-03",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/1c6a39757aa64ee19f9d5c8e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "{}",
+          "node_kind": "object",
+          "record_type_source": null,
+          "record_fields": [],
+          "closed_captured_shape": true,
+          "result_binding": null,
+          "ordinary_data_semantics_not_automatically_assumed": true
+        },
+        "subject": {
+          "field_names": [],
+          "record_type_source": null
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 427,
+            "column": 3,
+            "start_byte": 17430,
+            "end_byte": 17455,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/873fc03d91e61ab46b5f99bd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 426,
+            "column": 59,
+            "start_byte": 17426,
+            "end_byte": 18904,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/e480545e4b1663ed854c4e67",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "66a68f626e2907bfc19c08a1db89301d79487b921086f474b55a99262a6e1de2"
+      }
+    ],
+    "record_field_projection": [
+      {
+        "id": "33150f445fe2253a338823a6",
+        "operation_kind": "record_field_projection",
+        "actual_owner": {
+          "file": "cli/commands/doctor.ts",
+          "symbol": "checkRuntimeHealth",
+          "graph_node_id": "ts:cli/commands/doctor#checkRuntimeHealth",
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 1,
+            "start_byte": 12355,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b4f6e0051d3ea718ffb02d03",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 47,
+            "start_byte": 12569,
+            "end_byte": 12576,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/08eacd881b434c712e97a67e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/ec0c7c021afecc73b5596b3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "shorthand_property_identifier",
+          "source_text": "cpbRoot",
+          "source_text_truncated": false,
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 47,
+            "start_byte": 12569,
+            "end_byte": 12576,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/08eacd881b434c712e97a67e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "27323c60dbd685feddbb9986ba6489f5abbbc9fc9446fc4189b7b0bf5eaab2c9",
+            "root_name": "cpbRoot",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "27323c60dbd685feddbb9986ba6489f5abbbc9fc9446fc4189b7b0bf5eaab2c9",
+              "kind": "parameter",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 306,
+                "column": 34,
+                "start_byte": 12388,
+                "end_byte": 12435,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "27323c60dbd685feddbb9986ba6489f5abbbc9fc9446fc4189b7b0bf5eaab2c9",
+            "kind": "parameter",
+            "location": {
+              "file": "cli/commands/doctor.ts",
+              "line": 306,
+              "column": 34,
+              "start_byte": 12388,
+              "end_byte": 12435,
+              "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+              "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [],
+          "runtime_value_proven": false,
+          "field_name": "cpbRoot",
+          "output_record_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 45,
+            "start_byte": 12567,
+            "end_byte": 12592,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/ae8001b922b5c5c7c75131bd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        },
+        "subject": {
+          "field_name": "cpbRoot",
+          "source_path": {
+            "root_declaration_id": "27323c60dbd685feddbb9986ba6489f5abbbc9fc9446fc4189b7b0bf5eaab2c9",
+            "root_name": "cpbRoot",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "27323c60dbd685feddbb9986ba6489f5abbbc9fc9446fc4189b7b0bf5eaab2c9",
+              "kind": "parameter",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 306,
+                "column": 34,
+                "start_byte": 12388,
+                "end_byte": 12435,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          }
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 3,
+            "start_byte": 12525,
+            "end_byte": 12594,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/5c5caebb17061f3d97bb6cc0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 82,
+            "start_byte": 12436,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/0f3450ed14fcbe342d78c7a3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "9ffbbdb3da2ce4147837333196d18043d8ba69dd54cf735f79828e2834bfd251"
+      },
+      {
+        "id": "05d9ead5be5241d43b94ff66",
+        "operation_kind": "record_field_projection",
+        "actual_owner": {
+          "file": "cli/commands/doctor.ts",
+          "symbol": "checkRuntimeHealth",
+          "graph_node_id": "ts:cli/commands/doctor#checkRuntimeHealth",
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 1,
+            "start_byte": 12355,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b4f6e0051d3ea718ffb02d03",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 56,
+            "start_byte": 12578,
+            "end_byte": 12590,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/fbe5ecc4669e0c292872d00e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/ec0c7c021afecc73b5596b3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "shorthand_property_identifier",
+          "source_text": "executorRoot",
+          "source_text_truncated": false,
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 56,
+            "start_byte": 12578,
+            "end_byte": 12590,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/fbe5ecc4669e0c292872d00e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "a650eb38ca48b49926f526e9a0346dd0fe8ad6b22fa957a77315373af41009c9",
+            "root_name": "executorRoot",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "a650eb38ca48b49926f526e9a0346dd0fe8ad6b22fa957a77315373af41009c9",
+              "kind": "parameter",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 306,
+                "column": 34,
+                "start_byte": 12388,
+                "end_byte": 12435,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "a650eb38ca48b49926f526e9a0346dd0fe8ad6b22fa957a77315373af41009c9",
+            "kind": "parameter",
+            "location": {
+              "file": "cli/commands/doctor.ts",
+              "line": 306,
+              "column": 34,
+              "start_byte": 12388,
+              "end_byte": 12435,
+              "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+              "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [],
+          "runtime_value_proven": false,
+          "field_name": "executorRoot",
+          "output_record_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 45,
+            "start_byte": 12567,
+            "end_byte": 12592,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/ae8001b922b5c5c7c75131bd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        },
+        "subject": {
+          "field_name": "executorRoot",
+          "source_path": {
+            "root_declaration_id": "a650eb38ca48b49926f526e9a0346dd0fe8ad6b22fa957a77315373af41009c9",
+            "root_name": "executorRoot",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "a650eb38ca48b49926f526e9a0346dd0fe8ad6b22fa957a77315373af41009c9",
+              "kind": "parameter",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 306,
+                "column": 34,
+                "start_byte": 12388,
+                "end_byte": 12435,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          }
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 308,
+            "column": 3,
+            "start_byte": 12525,
+            "end_byte": 12594,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/5c5caebb17061f3d97bb6cc0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 82,
+            "start_byte": 12436,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/0f3450ed14fcbe342d78c7a3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "bb6c3dcef3049dd715c7a40b2040697d07fa08b97dc47d195ddee9c879c8b53e"
+      }
+    ],
+    "field_write": [
+      {
+        "id": "998b60a61187b3366ace08c9",
+        "operation_kind": "field_write",
+        "actual_owner": {
+          "file": "cli/commands/doctor.ts",
+          "symbol": "checkRuntimeHealth",
+          "graph_node_id": "ts:cli/commands/doctor#checkRuntimeHealth",
+          "location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 1,
+            "start_byte": 12355,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b4f6e0051d3ea718ffb02d03",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/doctor.ts",
+            "line": 309,
+            "column": 3,
+            "start_byte": 12597,
+            "end_byte": 12627,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/e4ffe7d92e7f2090f648a34b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/ec0c7c021afecc73b5596b3c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-event-index-projection",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/7f0ceb306798d70406649ff6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "results.runtimeHealth = health",
+          "node_kind": "assignment_expression",
+          "target": {
+            "node_kind": "member_expression",
+            "source_text": "results.runtimeHealth",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/doctor.ts",
+              "line": 309,
+              "column": 3,
+              "start_byte": 12597,
+              "end_byte": 12618,
+              "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+              "location_ref": "/source_location_index/fe6eb5973d0f37ea9cc317fa",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "9179647010ec998e5f82fe08725f1933ef9c33da0f185e9adb1eeb7fab7a2244",
+              "root_name": "results",
+              "member_path": [
+                "runtimeHealth"
+              ],
+              "binding": {
+                "declaration_id": "9179647010ec998e5f82fe08725f1933ef9c33da0f185e9adb1eeb7fab7a2244",
+                "kind": "parameter",
+                "location": {
+                  "file": "cli/commands/doctor.ts",
+                  "line": 306,
+                  "column": 34,
+                  "start_byte": 12388,
+                  "end_byte": 12435,
+                  "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                  "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "9179647010ec998e5f82fe08725f1933ef9c33da0f185e9adb1eeb7fab7a2244",
+              "kind": "parameter",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 306,
+                "column": 34,
+                "start_byte": 12388,
+                "end_byte": 12435,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [
+              "runtimeHealth"
+            ],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "identifier",
+            "source_text": "health",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/doctor.ts",
+              "line": 309,
+              "column": 27,
+              "start_byte": 12621,
+              "end_byte": 12627,
+              "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+              "location_ref": "/source_location_index/7d8390ce232ab875a95c964e",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "1e0cd7c3f70a57f05971c54d001f6c5bea32788ab76cb30d3890c612ff843ad1",
+              "root_name": "health",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "1e0cd7c3f70a57f05971c54d001f6c5bea32788ab76cb30d3890c612ff843ad1",
+                "kind": "const",
+                "location": {
+                  "file": "cli/commands/doctor.ts",
+                  "line": 308,
+                  "column": 9,
+                  "start_byte": 12531,
+                  "end_byte": 12593,
+                  "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                  "location_ref": "/source_location_index/2ec15a3905d271c8ec373ec9",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "1e0cd7c3f70a57f05971c54d001f6c5bea32788ab76cb30d3890c612ff843ad1",
+              "kind": "const",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 308,
+                "column": 9,
+                "start_byte": 12531,
+                "end_byte": 12593,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/2ec15a3905d271c8ec373ec9",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "",
+          "assignment_success_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "9179647010ec998e5f82fe08725f1933ef9c33da0f185e9adb1eeb7fab7a2244",
+            "root_name": "results",
+            "member_path": [
+              "runtimeHealth"
+            ],
+            "binding": {
+              "declaration_id": "9179647010ec998e5f82fe08725f1933ef9c33da0f185e9adb1eeb7fab7a2244",
+              "kind": "parameter",
+              "location": {
+                "file": "cli/commands/doctor.ts",
+                "line": 306,
+                "column": 34,
+                "start_byte": 12388,
+                "end_byte": 12435,
+                "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+                "location_ref": "/source_location_index/cb8cfc99a248a80a3aac192d",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          }
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 309,
+            "column": 3,
+            "start_byte": 12597,
+            "end_byte": 12628,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/b74f67a1cd33cfc6921a7e49",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 2,
+          "block_location": {
+            "file": "cli/commands/doctor.ts",
+            "line": 306,
+            "column": 82,
+            "start_byte": 12436,
+            "end_byte": 13232,
+            "source_hash": "d34b2f3551286f08b121e1473ae551557740959a569ef6b3b95d9177421627ea",
+            "location_ref": "/source_location_index/0f3450ed14fcbe342d78c7a3",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "normal_source_before",
+            "from_operation_id": "927bca819559b649f28f0fd0",
+            "to_operation_id": "998b60a61187b3366ace08c9",
+            "binding_state": "captured_source_only",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "source_order_is_not_value_flow": true
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "3b53ab4e5175faabadaca257369963e21c3bad9f68338c8cc2d906e24b53c9c0"
+      },
+      {
+        "id": "69acf37a606def8da617a8bb",
+        "operation_kind": "field_write",
+        "actual_owner": {
+          "file": "core/agents/agent-runner.ts",
+          "symbol": "phaseWriteAllowOverride",
+          "graph_node_id": "ts:core/agents/agent-runner#phaseWriteAllowOverride",
+          "location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 357,
+            "column": 1,
+            "start_byte": 11644,
+            "end_byte": 15933,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/8c54f0794f1aaf737dba20de",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "core/agents/agent-runner.ts",
+            "line": 386,
+            "column": 7,
+            "start_byte": 12773,
+            "end_byte": 12814,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/7d114847f05d3a446a412740",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-report-agent-execution-policy",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/5007700075807bfd6699a2d1",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-report-agent-execution-policy",
+            "reference_role": "authenticated_existing_source_location",
+            "evidence_ref": "/evidence_reference_index/0b7800e4d738adf85a36365b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "baseEnv.CPB_AGENT_SANDBOX_INHERITED = \"1\"",
+          "node_kind": "assignment_expression",
+          "target": {
+            "node_kind": "member_expression",
+            "source_text": "baseEnv.CPB_AGENT_SANDBOX_INHERITED",
+            "source_text_truncated": false,
+            "location": {
+              "file": "core/agents/agent-runner.ts",
+              "line": 386,
+              "column": 7,
+              "start_byte": 12773,
+              "end_byte": 12808,
+              "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+              "location_ref": "/source_location_index/2c64bde4737f4586ef9737c7",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "4b5085998aa1da60fdc4f1f7c9da2b4e403fa2412df52bf4d77a325e9f0a65f6",
+              "root_name": "baseEnv",
+              "member_path": [
+                "CPB_AGENT_SANDBOX_INHERITED"
+              ],
+              "binding": {
+                "declaration_id": "4b5085998aa1da60fdc4f1f7c9da2b4e403fa2412df52bf4d77a325e9f0a65f6",
+                "kind": "const",
+                "location": {
+                  "file": "core/agents/agent-runner.ts",
+                  "line": 365,
+                  "column": 9,
+                  "start_byte": 11809,
+                  "end_byte": 11842,
+                  "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                  "location_ref": "/source_location_index/6543a214a41f372a262172a9",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "4b5085998aa1da60fdc4f1f7c9da2b4e403fa2412df52bf4d77a325e9f0a65f6",
+              "kind": "const",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 365,
+                "column": 9,
+                "start_byte": 11809,
+                "end_byte": 11842,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/6543a214a41f372a262172a9",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [
+              "CPB_AGENT_SANDBOX_INHERITED"
+            ],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "string",
+            "source_text": "\"1\"",
+            "source_text_truncated": false,
+            "location": {
+              "file": "core/agents/agent-runner.ts",
+              "line": 386,
+              "column": 45,
+              "start_byte": 12811,
+              "end_byte": 12814,
+              "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+              "location_ref": "/source_location_index/458cdb0fe325dba0c5aa2d6e",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "",
+          "assignment_success_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "4b5085998aa1da60fdc4f1f7c9da2b4e403fa2412df52bf4d77a325e9f0a65f6",
+            "root_name": "baseEnv",
+            "member_path": [
+              "CPB_AGENT_SANDBOX_INHERITED"
+            ],
+            "binding": {
+              "declaration_id": "4b5085998aa1da60fdc4f1f7c9da2b4e403fa2412df52bf4d77a325e9f0a65f6",
+              "kind": "const",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 365,
+                "column": 9,
+                "start_byte": 11809,
+                "end_byte": 11842,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/6543a214a41f372a262172a9",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          }
+        },
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(!hasExplicitSandbox)",
+            "location": {
+              "file": "core/agents/agent-runner.ts",
+              "line": 373,
+              "column": 3,
+              "start_byte": 12102,
+              "end_byte": 13014,
+              "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+              "location_ref": "/source_location_index/f2fa686289be803a95a1bc5c",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          },
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(sandboxPolicy === \"native\")",
+            "location": {
+              "file": "core/agents/agent-runner.ts",
+              "line": 385,
+              "column": 5,
+              "start_byte": 12733,
+              "end_byte": 13010,
+              "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+              "location_ref": "/source_location_index/3ba3c21f2900c60ef8057c34",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 386,
+            "column": 7,
+            "start_byte": 12773,
+            "end_byte": 12815,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/148d6ce260fc8df2ca38e47e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 385,
+            "column": 37,
+            "start_byte": 12765,
+            "end_byte": 12821,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/6d088f76ef177befa657bad6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "1ec6c9e5e64cfb45cc36d75326207796de8a7d81bcf5b83f160af78ce9511c57"
+      }
+    ],
+    "guard_rejection": [
+      {
+        "id": "1300fa66d9baacff91179542",
+        "operation_kind": "guard_rejection",
+        "actual_owner": {
+          "file": "cli/commands/fix.ts",
+          "symbol": "run",
+          "graph_node_id": "ts:cli/commands/fix#run",
+          "location": {
+            "file": "cli/commands/fix.ts",
+            "line": 469,
+            "column": 8,
+            "start_byte": 19657,
+            "end_byte": 24558,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/3170fe56c531f944da1ba2e6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/fix.ts",
+            "line": 475,
+            "column": 5,
+            "start_byte": 19842,
+            "end_byte": 19870,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/dba04710ccd91482a61c8efd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-report-readiness-abrupt-guard",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/6551620a5ce89dd7578a17f9",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-astra-active-key-complete",
+            "goal_id": "CPB-03",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/898ee95fed02a60210b4b229",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "return ExitCode.FixAccepted;",
+          "node_kind": "return_statement",
+          "condition_source": "(parsed.help)",
+          "condition_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 473,
+            "column": 6,
+            "start_byte": 19803,
+            "end_byte": 19816,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/3dfdb0fb981d3470b25931ef",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "exit_kind": "return",
+          "exit_source": "ExitCode.FixAccepted",
+          "guard_truth_or_rejection_observed": false,
+          "return_is_error_or_business_rejection_proven": false
+        },
+        "subject": {},
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(parsed.help)",
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 473,
+              "column": 3,
+              "start_byte": 19800,
+              "end_byte": 19874,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/7562a4eefe19e5f6fc030979",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 475,
+            "column": 5,
+            "start_byte": 19842,
+            "end_byte": 19870,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/dba04710ccd91482a61c8efd",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 473,
+            "column": 20,
+            "start_byte": 19817,
+            "end_byte": 19874,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/81203a0dafbf172928644565",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "62780aa05ed07d1f21ae8c94461927ea7006cc546aee797fa588e2b5c38d9b67"
+      },
+      {
+        "id": "67f34d8edc68dbf27254cef7",
+        "operation_kind": "guard_rejection",
+        "actual_owner": {
+          "file": "cli/commands/fix.ts",
+          "symbol": "run",
+          "graph_node_id": "ts:cli/commands/fix#run",
+          "location": {
+            "file": "cli/commands/fix.ts",
+            "line": 469,
+            "column": 8,
+            "start_byte": 19657,
+            "end_byte": 24558,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/3170fe56c531f944da1ba2e6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/fix.ts",
+            "line": 482,
+            "column": 5,
+            "start_byte": 20155,
+            "end_byte": 20189,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/ac441b69e207c8c8527eb07b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-report-readiness-abrupt-guard",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/6551620a5ce89dd7578a17f9",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-astra-active-key-complete",
+            "goal_id": "CPB-03",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/898ee95fed02a60210b4b229",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "return ExitCode.FixInvalidRequest;",
+          "node_kind": "return_statement",
+          "condition_source": "(!parsed.problem)",
+          "condition_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 480,
+            "column": 6,
+            "start_byte": 20034,
+            "end_byte": 20051,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/cd3947b09c7321fa4405debe",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "exit_kind": "return",
+          "exit_source": "ExitCode.FixInvalidRequest",
+          "guard_truth_or_rejection_observed": false,
+          "return_is_error_or_business_rejection_proven": false
+        },
+        "subject": {},
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(!parsed.problem)",
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 480,
+              "column": 3,
+              "start_byte": 20031,
+              "end_byte": 20193,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/d66b861e25173923f7168714",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 482,
+            "column": 5,
+            "start_byte": 20155,
+            "end_byte": 20189,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/ac441b69e207c8c8527eb07b",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 1,
+          "block_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 480,
+            "column": 24,
+            "start_byte": 20052,
+            "end_byte": 20193,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/4c24736d4377bc320f64b098",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "80ed9f0795f855a79b529fa6841601df85d123dcde8ee0d296cd2e8a65e4524a"
+      }
+    ],
+    "binding_update": [
+      {
+        "id": "c79252591ba6f16bec2990dd",
+        "operation_kind": "binding_update",
+        "actual_owner": {
+          "file": "cli/commands/fix.ts",
+          "symbol": "run",
+          "graph_node_id": "ts:cli/commands/fix#run",
+          "location": {
+            "file": "cli/commands/fix.ts",
+            "line": 469,
+            "column": 8,
+            "start_byte": 19657,
+            "end_byte": 24558,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/3170fe56c531f944da1ba2e6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/fix.ts",
+            "line": 494,
+            "column": 5,
+            "start_byte": 20634,
+            "end_byte": 20724,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/4b881dc28276ea807078a3a7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-report-readiness-abrupt-guard",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/6551620a5ce89dd7578a17f9",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-astra-active-key-complete",
+            "goal_id": "CPB-03",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/898ee95fed02a60210b4b229",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "project = await autoDetectProject(deps.loadRegistry, hubRoot, path.resolve(process.cwd()))",
+          "node_kind": "assignment_expression",
+          "target": {
+            "node_kind": "identifier",
+            "source_text": "project",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 494,
+              "column": 5,
+              "start_byte": 20634,
+              "end_byte": 20641,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/628624d62915640b28c04bf2",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "2d318bbb5fc14463a4e691638b2edd8c80bb07712ab933770da351c78b371819",
+              "root_name": "project",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "2d318bbb5fc14463a4e691638b2edd8c80bb07712ab933770da351c78b371819",
+                "kind": "let",
+                "location": {
+                  "file": "cli/commands/fix.ts",
+                  "line": 492,
+                  "column": 7,
+                  "start_byte": 20586,
+                  "end_byte": 20610,
+                  "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                  "location_ref": "/source_location_index/8f5a7d86548a4435dbc2f767",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "2d318bbb5fc14463a4e691638b2edd8c80bb07712ab933770da351c78b371819",
+              "kind": "let",
+              "location": {
+                "file": "cli/commands/fix.ts",
+                "line": 492,
+                "column": 7,
+                "start_byte": 20586,
+                "end_byte": 20610,
+                "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                "location_ref": "/source_location_index/8f5a7d86548a4435dbc2f767",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "await_expression",
+            "source_text": "await autoDetectProject(deps.loadRegistry, hubRoot, path.resolve(process.cwd()))",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 494,
+              "column": 15,
+              "start_byte": 20644,
+              "end_byte": 20724,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/24abe40831b720aff9919fc5",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "",
+          "actual_update_count_or_numeric_result_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "2d318bbb5fc14463a4e691638b2edd8c80bb07712ab933770da351c78b371819",
+            "root_name": "project",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "2d318bbb5fc14463a4e691638b2edd8c80bb07712ab933770da351c78b371819",
+              "kind": "let",
+              "location": {
+                "file": "cli/commands/fix.ts",
+                "line": 492,
+                "column": 7,
+                "start_byte": 20586,
+                "end_byte": 20610,
+                "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                "location_ref": "/source_location_index/8f5a7d86548a4435dbc2f767",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "write_target_kind": "local_binding"
+        },
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(!project)",
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 493,
+              "column": 3,
+              "start_byte": 20614,
+              "end_byte": 20729,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/88f0745cb19f3f691a6f3961",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 494,
+            "column": 5,
+            "start_byte": 20634,
+            "end_byte": 20725,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/222b381760c174e29ff87d06",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 493,
+            "column": 17,
+            "start_byte": 20628,
+            "end_byte": 20729,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/96478531115752767289d00c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "44c03eeadd80a7689eda08f605a1dda68b86f04c6201381a57d1636579138932"
+      },
+      {
+        "id": "ce09b3cde11fa9dbfd9cce44",
+        "operation_kind": "binding_update",
+        "actual_owner": {
+          "file": "cli/commands/fix.ts",
+          "symbol": "run",
+          "graph_node_id": "ts:cli/commands/fix#run",
+          "location": {
+            "file": "cli/commands/fix.ts",
+            "line": 469,
+            "column": 8,
+            "start_byte": 19657,
+            "end_byte": 24558,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/3170fe56c531f944da1ba2e6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/fix.ts",
+            "line": 517,
+            "column": 5,
+            "start_byte": 21705,
+            "end_byte": 21751,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/d178f87afe731a7b311524f5",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-report-readiness-abrupt-guard",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/6551620a5ce89dd7578a17f9",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-astra-active-key-complete",
+            "goal_id": "CPB-03",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/898ee95fed02a60210b4b229",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "source_text": "hashedKey = hashTaskKey(parsed.idempotencyKey)",
+          "node_kind": "assignment_expression",
+          "target": {
+            "node_kind": "identifier",
+            "source_text": "hashedKey",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 517,
+              "column": 5,
+              "start_byte": 21705,
+              "end_byte": 21714,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/d756e38af3bb66b215c01b90",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": {
+              "root_declaration_id": "906c92c47fb63a5e6e37b424775088a5866d9b54ed8ab88c106ea5b84664aa10",
+              "root_name": "hashedKey",
+              "member_path": [],
+              "binding": {
+                "declaration_id": "906c92c47fb63a5e6e37b424775088a5866d9b54ed8ab88c106ea5b84664aa10",
+                "kind": "let",
+                "location": {
+                  "file": "cli/commands/fix.ts",
+                  "line": 515,
+                  "column": 7,
+                  "start_byte": 21637,
+                  "end_byte": 21668,
+                  "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                  "location_ref": "/source_location_index/4f563e653085585eb95e66c3",
+                  "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                },
+                "state": "unique"
+              },
+              "copy_operations": [],
+              "runtime_referent_identity_proven": false
+            },
+            "binding": {
+              "declaration_id": "906c92c47fb63a5e6e37b424775088a5866d9b54ed8ab88c106ea5b84664aa10",
+              "kind": "let",
+              "location": {
+                "file": "cli/commands/fix.ts",
+                "line": 515,
+                "column": 7,
+                "start_byte": 21637,
+                "end_byte": 21668,
+                "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                "location_ref": "/source_location_index/4f563e653085585eb95e66c3",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "member_path": [],
+            "runtime_value_proven": false
+          },
+          "value": {
+            "node_kind": "call_expression",
+            "source_text": "hashTaskKey(parsed.idempotencyKey)",
+            "source_text_truncated": false,
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 517,
+              "column": 17,
+              "start_byte": 21717,
+              "end_byte": 21751,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/ff95e2423b3737c73d23422d",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "source_path": null,
+            "binding": null,
+            "member_path": null,
+            "runtime_value_proven": false
+          },
+          "assignment_operator": "",
+          "actual_update_count_or_numeric_result_proven": false
+        },
+        "subject": {
+          "target_path": {
+            "root_declaration_id": "906c92c47fb63a5e6e37b424775088a5866d9b54ed8ab88c106ea5b84664aa10",
+            "root_name": "hashedKey",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "906c92c47fb63a5e6e37b424775088a5866d9b54ed8ab88c106ea5b84664aa10",
+              "kind": "let",
+              "location": {
+                "file": "cli/commands/fix.ts",
+                "line": 515,
+                "column": 7,
+                "start_byte": 21637,
+                "end_byte": 21668,
+                "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+                "location_ref": "/source_location_index/4f563e653085585eb95e66c3",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "write_target_kind": "local_binding"
+        },
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(parsed.idempotencyKey)",
+            "location": {
+              "file": "cli/commands/fix.ts",
+              "line": 516,
+              "column": 3,
+              "start_byte": 21672,
+              "end_byte": 22681,
+              "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+              "location_ref": "/source_location_index/d94f8f016cdc6b980f634c6e",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 517,
+            "column": 5,
+            "start_byte": 21705,
+            "end_byte": 21752,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/629b35a377c21ddc8c312e54",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "cli/commands/fix.ts",
+            "line": 516,
+            "column": 30,
+            "start_byte": 21699,
+            "end_byte": 22681,
+            "source_hash": "5275c7d3cb7633c48ff4fca005207a78a6783527b445d25ac36e330cb3a9e083",
+            "location_ref": "/source_location_index/bd8003162e088240cfc3bfe0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "d2549e8d938f5c6449b134652deb3fef0fc6722b980ff2ef6fca1678d33cd49b"
+      }
+    ],
+    "protocol_literal_field": [
+      {
+        "id": "af7b167033f2b4ef430ea98f",
+        "operation_kind": "protocol_literal_field",
+        "actual_owner": {
+          "file": "cli/commands/pipeline.ts",
+          "symbol": "run",
+          "graph_node_id": "ts:cli/commands/pipeline#run",
+          "location": {
+            "file": "cli/commands/pipeline.ts",
+            "line": 134,
+            "column": 8,
+            "start_byte": 3584,
+            "end_byte": 6984,
+            "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "location_ref": "/source_location_index/0b5773e2f4c6e3a381ce44cc",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "cli/commands/pipeline.ts",
+            "line": 194,
+            "column": 11,
+            "start_byte": 5869,
+            "end_byte": 5883,
+            "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "location_ref": "/source_location_index/e060fc2421dadb4b977094c6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-astra-pipeline-retry-integrated",
+            "goal_id": "CPB-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/8fab1f94a5ab7e45ad11d89e",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          {
+            "rule_id": "cpb-astra-pipeline-retry-integrated",
+            "goal_id": "CPB-01",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/7f2f595ad20518ba45442197",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 2,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "string",
+          "source_text": "\"cli_pipeline\"",
+          "source_text_truncated": false,
+          "location": {
+            "file": "cli/commands/pipeline.ts",
+            "line": 194,
+            "column": 11,
+            "start_byte": 5869,
+            "end_byte": 5883,
+            "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "location_ref": "/source_location_index/e060fc2421dadb4b977094c6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": null,
+          "binding": null,
+          "member_path": null,
+          "runtime_value_proven": false,
+          "field_name": "type",
+          "literal_value": "cli_pipeline",
+          "enum_member_source": null,
+          "record_location": {
+            "file": "cli/commands/pipeline.ts",
+            "line": 189,
+            "column": 40,
+            "start_byte": 5742,
+            "end_byte": 6907,
+            "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "location_ref": "/source_location_index/e3c9e54ba6842f5eea26d03c",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "protocol_transport_semantics_proven": false
+        },
+        "subject": {
+          "field_name": "type"
+        },
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "cli/commands/pipeline.ts",
+            "line": 189,
+            "column": 3,
+            "start_byte": 5705,
+            "end_byte": 6909,
+            "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "location_ref": "/source_location_index/11b028667e48dc3d5f87a301",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 13,
+          "block_location": {
+            "file": "cli/commands/pipeline.ts",
+            "line": 134,
+            "column": 78,
+            "start_byte": 3654,
+            "end_byte": 6984,
+            "source_hash": "3df3f333ec4668352efde20049494c4a85bdf13049c808cd9f89f2d82f30b4ed",
+            "location_ref": "/source_location_index/71ae3fff67abf48edb114bd6",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "fcf165752e13eb631a69c4d43e59d6b5c068dbe6a2c9e64f779996f1656136cf"
+      },
+      {
+        "id": "c4d66bc6658be1443cdabd3f",
+        "operation_kind": "protocol_literal_field",
+        "actual_owner": {
+          "file": "core/agents/agent-runner.ts",
+          "symbol": "runAgent",
+          "graph_node_id": "ts:core/agents/agent-runner#runAgent",
+          "location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 475,
+            "column": 8,
+            "start_byte": 16811,
+            "end_byte": 20964,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/486231092a3f11ff000cc16f",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "core/agents/agent-runner.ts",
+            "line": 506,
+            "column": 13,
+            "start_byte": 17679,
+            "end_byte": 17708,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/cd2c5d70ff653e1d936774c0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-report-agent-execution-policy",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/5446bab29a02192622bfdb91",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "member_expression",
+          "source_text": "FailureKind.AGENT_UNAVAILABLE",
+          "source_text_truncated": false,
+          "location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 506,
+            "column": 13,
+            "start_byte": 17679,
+            "end_byte": 17708,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/cd2c5d70ff653e1d936774c0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "56ba1a2fa807c9a734421d485ccf98f87bd2b01bbaba9393bd2ae1806aea2915",
+            "root_name": "FailureKind",
+            "member_path": [
+              "AGENT_UNAVAILABLE"
+            ],
+            "binding": {
+              "declaration_id": "56ba1a2fa807c9a734421d485ccf98f87bd2b01bbaba9393bd2ae1806aea2915",
+              "kind": "import",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 5,
+                "column": 10,
+                "start_byte": 214,
+                "end_byte": 225,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/7c3c43a483be4654778cbe9f",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "56ba1a2fa807c9a734421d485ccf98f87bd2b01bbaba9393bd2ae1806aea2915",
+            "kind": "import",
+            "location": {
+              "file": "core/agents/agent-runner.ts",
+              "line": 5,
+              "column": 10,
+              "start_byte": 214,
+              "end_byte": 225,
+              "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+              "location_ref": "/source_location_index/7c3c43a483be4654778cbe9f",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [
+            "AGENT_UNAVAILABLE"
+          ],
+          "runtime_value_proven": false,
+          "field_name": "kind",
+          "literal_value": null,
+          "enum_member_source": "FailureKind.AGENT_UNAVAILABLE",
+          "record_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 504,
+            "column": 12,
+            "start_byte": 17648,
+            "end_byte": 18014,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/44043c08511d4d2af5a02bf8",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "protocol_transport_semantics_proven": false
+        },
+        "subject": {
+          "field_name": "kind"
+        },
+        "guards": [
+          {
+            "kind": "if",
+            "branch": "then",
+            "condition_source": "(allowedAgents !== null && !allowedAgents.includes(agentName))",
+            "location": {
+              "file": "core/agents/agent-runner.ts",
+              "line": 503,
+              "column": 3,
+              "start_byte": 17569,
+              "end_byte": 18019,
+              "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+              "location_ref": "/source_location_index/618ca959b3d8cbfcca164bac",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "condition_truth_proven": false
+          }
+        ],
+        "source_order": {
+          "statement_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 504,
+            "column": 5,
+            "start_byte": 17641,
+            "end_byte": 18015,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/4f6c5830a437c2603244be1a",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 503,
+            "column": 69,
+            "start_byte": 17635,
+            "end_byte": 18019,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/ca0ae710e345657a8322cc07",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "05c04a995c1605f0140eb3b4b9a374ee82f90fa5ed3d6746035762bcd5d4491b"
+      }
+    ],
+    "record_copy_projection": [
+      {
+        "id": "c0557a5835c72ad2bf7037db",
+        "operation_kind": "record_copy_projection",
+        "actual_owner": {
+          "file": "core/agents/agent-runner.ts",
+          "symbol": "phaseWriteAllowOverride",
+          "graph_node_id": "ts:core/agents/agent-runner#phaseWriteAllowOverride",
+          "location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 357,
+            "column": 1,
+            "start_byte": 11644,
+            "end_byte": 15933,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/8c54f0794f1aaf737dba20de",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "core/agents/agent-runner.ts",
+            "line": 365,
+            "column": 21,
+            "start_byte": 11821,
+            "end_byte": 11840,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/25df61a774ff39434264fd21",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-report-agent-execution-policy",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/5007700075807bfd6699a2d1",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "call_expression",
+          "source_text": "recordValue(env)",
+          "source_text_truncated": false,
+          "location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 365,
+            "column": 24,
+            "start_byte": 11824,
+            "end_byte": 11840,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/e3f585d87aa0cb0ade947f85",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": null,
+          "binding": null,
+          "member_path": null,
+          "runtime_value_proven": false,
+          "copy_form": "spread_element",
+          "destination_record_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 365,
+            "column": 19,
+            "start_byte": 11819,
+            "end_byte": 11842,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/8df46ca3de3783fa8308e76d",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "current_copy_surface_or_retention_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 365,
+            "column": 3,
+            "start_byte": 11803,
+            "end_byte": 11843,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/75a1c83f5a46685a59012b60",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": 0,
+          "block_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 364,
+            "column": 16,
+            "start_byte": 11799,
+            "end_byte": 15933,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/5476312d74b2db3c251a0d9d",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "952c4de72554324dc60b37bae45dec2bb4969a7019894c8b142884ab33386190"
+      },
+      {
+        "id": "f4f5f9f034eba40b14e639a7",
+        "operation_kind": "record_copy_projection",
+        "actual_owner": {
+          "file": "core/agents/agent-runner.ts",
+          "symbol": "classifyError.diagnostics",
+          "graph_node_id": "ts:core/agents/agent-runner#classifyError.diagnostics",
+          "location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 606,
+            "column": 23,
+            "start_byte": 21351,
+            "end_byte": 21514,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/81d5838dc279b277feaf3bf8",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "binding_state": "authenticated_internal_declaration",
+          "graph_binding_gaps": [],
+          "runtime_activation_proven": false
+        },
+        "source_locations": [
+          {
+            "file": "core/agents/agent-runner.ts",
+            "line": 612,
+            "column": 5,
+            "start_byte": 21500,
+            "end_byte": 21508,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/b5fac9ccea1826f0c1ed0ae0",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_refs": [
+          {
+            "rule_id": "cpb-report-agent-execution-policy",
+            "reference_role": "selection_context",
+            "evidence_ref": "/evidence_reference_index/1a82de33910c1f7674003ffe",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          }
+        ],
+        "source_evidence_reference_count": 1,
+        "source_evidence_references_truncated": false,
+        "operands": {
+          "node_kind": "identifier",
+          "source_text": "extra",
+          "source_text_truncated": false,
+          "location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 612,
+            "column": 8,
+            "start_byte": 21503,
+            "end_byte": 21508,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/9049ea8b9dc31815afbe31f7",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "source_path": {
+            "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+            "root_name": "extra",
+            "member_path": [],
+            "binding": {
+              "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+              "kind": "parameter",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 23,
+                "start_byte": 21351,
+                "end_byte": 21363,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "state": "unique"
+            },
+            "copy_operations": [],
+            "runtime_referent_identity_proven": false
+          },
+          "binding": {
+            "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+            "kind": "parameter",
+            "location": {
+              "file": "core/agents/agent-runner.ts",
+              "line": 606,
+              "column": 23,
+              "start_byte": 21351,
+              "end_byte": 21363,
+              "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+              "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+              "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+            },
+            "state": "unique"
+          },
+          "member_path": [],
+          "runtime_value_proven": false,
+          "copy_form": "spread_element",
+          "destination_record_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 606,
+            "column": 40,
+            "start_byte": 21368,
+            "end_byte": 21513,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/c4f21add56c7c579a01eb806",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "current_copy_surface_or_retention_proven": false
+        },
+        "subject": {},
+        "guards": [],
+        "source_order": {
+          "statement_location": {
+            "file": "core/agents/agent-runner.ts",
+            "line": 606,
+            "column": 39,
+            "start_byte": 21367,
+            "end_byte": 21514,
+            "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+            "location_ref": "/source_location_index/89fc943214b5fbd0e6ecf550",
+            "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+          },
+          "statement_index": null,
+          "block_location": null,
+          "normal_reaching_required": true,
+          "runtime_order_or_completion_proven": false,
+          "nested_callable_activation_proven": false
+        },
+        "relationships": [
+          {
+            "kind": "authenticated_argument_parameter_projection",
+            "from_operation_id": "214cc9604f75c61e0815afa4",
+            "to_operation_id": "f4f5f9f034eba40b14e639a7",
+            "binding_state": "authenticated_internal_call",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "authenticated_call_edge_id": "ebaf9f62c326d328f0c5aa51",
+            "formal_parameter": {
+              "file": "core/agents/agent-runner.ts",
+              "symbol": "classifyError.diagnostics",
+              "formal_parameter_index": 0,
+              "source_text": "extra = {}",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 24,
+                "start_byte": 21352,
+                "end_byte": 21362,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/5632968d4e4c713884f39db2",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "source_path": {
+                "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                "root_name": "extra",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "core/agents/agent-runner.ts",
+                    "line": 606,
+                    "column": 23,
+                    "start_byte": 21351,
+                    "end_byte": 21363,
+                    "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                    "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "callee_activation_or_parameter_runtime_value_proven": false
+            },
+            "actual_argument_index": 0,
+            "callee_activation_proven": false,
+            "current_heap_field_retention_proven": false
+          },
+          {
+            "kind": "authenticated_argument_parameter_projection",
+            "from_operation_id": "028f7bbc16bb4263888a58fb",
+            "to_operation_id": "f4f5f9f034eba40b14e639a7",
+            "binding_state": "authenticated_internal_call",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "authenticated_call_edge_id": "17ade83bcad382f9c48f112e",
+            "formal_parameter": {
+              "file": "core/agents/agent-runner.ts",
+              "symbol": "classifyError.diagnostics",
+              "formal_parameter_index": 0,
+              "source_text": "extra = {}",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 24,
+                "start_byte": 21352,
+                "end_byte": 21362,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/5632968d4e4c713884f39db2",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "source_path": {
+                "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                "root_name": "extra",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "core/agents/agent-runner.ts",
+                    "line": 606,
+                    "column": 23,
+                    "start_byte": 21351,
+                    "end_byte": 21363,
+                    "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                    "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "callee_activation_or_parameter_runtime_value_proven": false
+            },
+            "actual_argument_index": 0,
+            "callee_activation_proven": false,
+            "current_heap_field_retention_proven": false
+          },
+          {
+            "kind": "authenticated_argument_parameter_projection",
+            "from_operation_id": "cbdbc7799e14f226f6367465",
+            "to_operation_id": "f4f5f9f034eba40b14e639a7",
+            "binding_state": "authenticated_internal_call",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "authenticated_call_edge_id": "d61579129d56006cd83eba8c",
+            "formal_parameter": {
+              "file": "core/agents/agent-runner.ts",
+              "symbol": "classifyError.diagnostics",
+              "formal_parameter_index": 0,
+              "source_text": "extra = {}",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 24,
+                "start_byte": 21352,
+                "end_byte": 21362,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/5632968d4e4c713884f39db2",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "source_path": {
+                "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                "root_name": "extra",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "core/agents/agent-runner.ts",
+                    "line": 606,
+                    "column": 23,
+                    "start_byte": 21351,
+                    "end_byte": 21363,
+                    "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                    "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "callee_activation_or_parameter_runtime_value_proven": false
+            },
+            "actual_argument_index": 0,
+            "callee_activation_proven": false,
+            "current_heap_field_retention_proven": false
+          },
+          {
+            "kind": "authenticated_argument_parameter_projection",
+            "from_operation_id": "d585dfc0494a3301362f3b4a",
+            "to_operation_id": "f4f5f9f034eba40b14e639a7",
+            "binding_state": "authenticated_internal_call",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "authenticated_call_edge_id": "008924517ec33afb365ccaee",
+            "formal_parameter": {
+              "file": "core/agents/agent-runner.ts",
+              "symbol": "classifyError.diagnostics",
+              "formal_parameter_index": 0,
+              "source_text": "extra = {}",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 24,
+                "start_byte": 21352,
+                "end_byte": 21362,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/5632968d4e4c713884f39db2",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "source_path": {
+                "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                "root_name": "extra",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "core/agents/agent-runner.ts",
+                    "line": 606,
+                    "column": 23,
+                    "start_byte": 21351,
+                    "end_byte": 21363,
+                    "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                    "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "callee_activation_or_parameter_runtime_value_proven": false
+            },
+            "actual_argument_index": 0,
+            "callee_activation_proven": false,
+            "current_heap_field_retention_proven": false
+          },
+          {
+            "kind": "authenticated_argument_parameter_projection",
+            "from_operation_id": "26a1452215aa227bf04f08cc",
+            "to_operation_id": "f4f5f9f034eba40b14e639a7",
+            "binding_state": "authenticated_internal_call",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "authenticated_call_edge_id": "4d93270023ce24b444974da9",
+            "formal_parameter": {
+              "file": "core/agents/agent-runner.ts",
+              "symbol": "classifyError.diagnostics",
+              "formal_parameter_index": 0,
+              "source_text": "extra = {}",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 24,
+                "start_byte": 21352,
+                "end_byte": 21362,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/5632968d4e4c713884f39db2",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "source_path": {
+                "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                "root_name": "extra",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "core/agents/agent-runner.ts",
+                    "line": 606,
+                    "column": 23,
+                    "start_byte": 21351,
+                    "end_byte": 21363,
+                    "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                    "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "callee_activation_or_parameter_runtime_value_proven": false
+            },
+            "actual_argument_index": 0,
+            "callee_activation_proven": false,
+            "current_heap_field_retention_proven": false
+          },
+          {
+            "kind": "authenticated_argument_parameter_projection",
+            "from_operation_id": "ee7f220407e6d291ca6daf06",
+            "to_operation_id": "f4f5f9f034eba40b14e639a7",
+            "binding_state": "authenticated_internal_call",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "authenticated_call_edge_id": "709ead4ce403648bc258421d",
+            "formal_parameter": {
+              "file": "core/agents/agent-runner.ts",
+              "symbol": "classifyError.diagnostics",
+              "formal_parameter_index": 0,
+              "source_text": "extra = {}",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 24,
+                "start_byte": 21352,
+                "end_byte": 21362,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/5632968d4e4c713884f39db2",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "source_path": {
+                "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                "root_name": "extra",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "core/agents/agent-runner.ts",
+                    "line": 606,
+                    "column": 23,
+                    "start_byte": 21351,
+                    "end_byte": 21363,
+                    "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                    "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "callee_activation_or_parameter_runtime_value_proven": false
+            },
+            "actual_argument_index": 0,
+            "callee_activation_proven": false,
+            "current_heap_field_retention_proven": false
+          },
+          {
+            "kind": "authenticated_argument_parameter_projection",
+            "from_operation_id": "46a66da7fa97ecfe4294969c",
+            "to_operation_id": "f4f5f9f034eba40b14e639a7",
+            "binding_state": "authenticated_internal_call",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "authenticated_call_edge_id": "1e98ffd7ca65cfd7b63862d2",
+            "formal_parameter": {
+              "file": "core/agents/agent-runner.ts",
+              "symbol": "classifyError.diagnostics",
+              "formal_parameter_index": 0,
+              "source_text": "extra = {}",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 24,
+                "start_byte": 21352,
+                "end_byte": 21362,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/5632968d4e4c713884f39db2",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "source_path": {
+                "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                "root_name": "extra",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "core/agents/agent-runner.ts",
+                    "line": 606,
+                    "column": 23,
+                    "start_byte": 21351,
+                    "end_byte": 21363,
+                    "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                    "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "callee_activation_or_parameter_runtime_value_proven": false
+            },
+            "actual_argument_index": 0,
+            "callee_activation_proven": false,
+            "current_heap_field_retention_proven": false
+          },
+          {
+            "kind": "authenticated_argument_parameter_projection",
+            "from_operation_id": "57e914beb24795c5d5b87956",
+            "to_operation_id": "f4f5f9f034eba40b14e639a7",
+            "binding_state": "authenticated_internal_call",
+            "conditions": [
+              "captured statements and expressions are reached normally in the selected source context"
+            ],
+            "runtime_value_or_effect_proven": false,
+            "authenticated_call_edge_id": "0938e69f779a0e39480a8980",
+            "formal_parameter": {
+              "file": "core/agents/agent-runner.ts",
+              "symbol": "classifyError.diagnostics",
+              "formal_parameter_index": 0,
+              "source_text": "extra = {}",
+              "location": {
+                "file": "core/agents/agent-runner.ts",
+                "line": 606,
+                "column": 24,
+                "start_byte": 21352,
+                "end_byte": 21362,
+                "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                "location_ref": "/source_location_index/5632968d4e4c713884f39db2",
+                "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+              },
+              "source_path": {
+                "root_declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                "root_name": "extra",
+                "member_path": [],
+                "binding": {
+                  "declaration_id": "fb33c11b3dc0d1b9273d7d675e19be9c94d93831fa35c0148fa22327ecc29e96",
+                  "kind": "parameter",
+                  "location": {
+                    "file": "core/agents/agent-runner.ts",
+                    "line": 606,
+                    "column": 23,
+                    "start_byte": 21351,
+                    "end_byte": 21363,
+                    "source_hash": "e10d3b3338e7e07b7d7bf3ef267259b015f68de8a62c6987cf8982684014607c",
+                    "location_ref": "/source_location_index/e447e98320cab16eaaa445b5",
+                    "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+                  },
+                  "state": "unique"
+                },
+                "copy_operations": [],
+                "runtime_referent_identity_proven": false
+              },
+              "callee_activation_or_parameter_runtime_value_proven": false
+            },
+            "actual_argument_index": 0,
+            "callee_activation_proven": false,
+            "current_heap_field_retention_proven": false
+          }
+        ],
+        "proof_domain": "authenticated_captured_cst_lexical_and_existing_call_relations",
+        "limitations": {
+          "source_relation_only": true,
+          "runtime_operation_or_effect_proven": false,
+          "opaque_call_effects_known": false,
+          "unique_owner_or_authorization_proven": false,
+          "creates_calls_edge": false,
+          "old_scope_context_is_not_a_new_operation_judgment": true
+        },
+        "content_sha256": "691bf544e7162b2641a37d7e4f66877f476a0434f6ee96066eef209d77a05602"
+      }
+    ]
+  }
+}

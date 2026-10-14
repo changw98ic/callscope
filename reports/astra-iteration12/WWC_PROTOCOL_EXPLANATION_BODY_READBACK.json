@@ -1,0 +1,1711 @@
+{
+  "kind": "actual_final_development_protocol_explanation_body_readback",
+  "formal_acceptance": false,
+  "source_readback": "reports/astra-iteration12/REPORT_COMPLETION_WINWINCODE_FINAL_DEVELOPMENT_READBACK.json",
+  "actual_statements": [
+    {
+      "declaration_index": 380,
+      "statement_index": 9,
+      "declaration_id": "fbac207eb7a58aa6628a8211",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/application.rs",
+        "symbol": "StandaloneControlPlaneApplication.delivery_command",
+        "graph_node_id": "rust:crates/winwincode-server/src/application#StandaloneControlPlaneApplication.delivery_command",
+        "location": {
+          "file": "crates/winwincode-server/src/application.rs",
+          "line": 620,
+          "column": 5,
+          "start_byte": 26843,
+          "end_byte": 31345,
+          "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+          "location_ref": "/source_location_index/27206cb725664afa95e14312",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「state\\n                    .control_plane\\n                    .delivery_update_spec(&command)\\n                    .map」中提供第 1 个实参「CommandCompletedResponse::DeliveryUpdateSpecCompletedResponse」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "410d4b361a47024289723ac5",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7610",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "state\n                    .control_plane\n                    .delivery_update_spec(&command)\n                    .map(CommandCompletedResponse::DeliveryUpdateSpecCompletedResponse)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/380/statements/9"
+    },
+    {
+      "declaration_index": 380,
+      "statement_index": 10,
+      "declaration_id": "fbac207eb7a58aa6628a8211",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/application.rs",
+        "symbol": "StandaloneControlPlaneApplication.delivery_command",
+        "graph_node_id": "rust:crates/winwincode-server/src/application#StandaloneControlPlaneApplication.delivery_command",
+        "location": {
+          "file": "crates/winwincode-server/src/application.rs",
+          "line": 620,
+          "column": 5,
+          "start_byte": 26843,
+          "end_byte": 31345,
+          "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+          "location_ref": "/source_location_index/27206cb725664afa95e14312",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「state\\n                    .control_plane\\n                    .delivery_update_spec」中提供第 1 个实参「&command」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "66da51da32d71f3346ab686f",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7611",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "state\n                    .control_plane\n                    .delivery_update_spec(&command)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/380/statements/10"
+    },
+    {
+      "declaration_index": 384,
+      "statement_index": 3,
+      "declaration_id": "fec7b79a9ed822fcdabdeb89",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/application.rs",
+        "symbol": "<StandaloneControlPlaneApplication as TypedControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/application#<StandaloneControlPlaneApplication as TypedControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/application.rs",
+          "line": 1232,
+          "column": 5,
+          "start_byte": 54844,
+          "end_byte": 55887,
+          "source_hash": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+          "location_ref": "/source_location_index/8e9972eba0d937dbe1094c28",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「request」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/application#StandaloneControlPlaneApplication.delivery_command」，对应捕获形参「request: CommandRequest」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "1efd128c8d74a0b827b7c44d",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7654",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "self.delivery_command(request)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/384/statements/3"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 0,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "捕获 binding「envelope」的初始化来源为「decode(request.clone())?」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+      "operation_id": "0c3027e29a8ee131618a52fa",
+      "operation_kind": "binding_initializer",
+      "operation_pointer": "/operations/7661",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "let envelope: CommandEnvelope = decode(request.clone())?;",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/0"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 1,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「request.clone()」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#decode」，对应捕获形参「value: Value」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "ad777805f008234c53d67afe",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7662",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "decode(request.clone())",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/1"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 3,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「&envelope.actor」作为第 2 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#validate_actor」，对应捕获形参「actor: &Actor」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "41e7f6daa6d53e5b852ebefd",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7664",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "validate_actor(principal, &envelope.actor)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/3"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 4,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「principal」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#validate_actor」，对应捕获形参「principal: &AuthenticatedPrincipal」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "e8a6c24a204ee13e988672c2",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7665",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "validate_actor(principal, &envelope.actor)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/4"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 9,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "捕获 binding「typed」的初始化来源为「decode(request)?」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+      "operation_id": "f7e7280f8db770a5a64bba70",
+      "operation_kind": "binding_initializer",
+      "operation_pointer": "/operations/7670",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "let typed: CommandRequest = decode(request)?;",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/9"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 11,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「request」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/dispatcher#decode」，对应捕获形参「value: Value」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "50bdd67434b1158e12381e69",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7672",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "decode(request)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/11"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 12,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「self.application\\n            .authorize_scope」中提供第 1 个实参「principal」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "57a935f7e48f104d931df114",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7673",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "self.application\n            .authorize_scope(principal, &envelope.scope)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/12"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 13,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「self.application\\n            .authorize_scope」中提供第 2 个实参「&envelope.scope」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "a174af988e64a6a6c156eadf",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7674",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "self.application\n            .authorize_scope(principal, &envelope.scope)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/13"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 15,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "捕获 binding「response」的初始化来源为「self.application.command(\\n            principal,\\n            CommandFamily::from_name(&envelope.command),\\n            typed,\\n        )?」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+      "operation_id": "7ce34106c6295ded88c46564",
+      "operation_kind": "binding_initializer",
+      "operation_pointer": "/operations/7676",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "let response = self.application.command(\n            principal,\n            CommandFamily::from_name(&envelope.command),\n            typed,\n        )?;",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/15"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 17,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「self.application.command」中提供第 2 个实参「CommandFamily::from_name(&envelope.command)」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "8374750b6d5eba2e97ecdcd2",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7678",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "self.application.command(\n            principal,\n            CommandFamily::from_name(&envelope.command),\n            typed,\n        )",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/17"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 18,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「self.application.command」中提供第 3 个实参「typed」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "b2c9c6ac62e8295d26d5052d",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7679",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "self.application.command(\n            principal,\n            CommandFamily::from_name(&envelope.command),\n            typed,\n        )",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/18"
+    },
+    {
+      "declaration_index": 385,
+      "statement_index": 19,
+      "declaration_id": "abc8c5a04cf705911ddee4c2",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/dispatcher.rs",
+        "symbol": "<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "graph_node_id": "rust:crates/winwincode-server/src/dispatcher#<GeneratedContractDispatcher as ControlPlaneApiPort>.command",
+        "location": {
+          "file": "crates/winwincode-server/src/dispatcher.rs",
+          "line": 203,
+          "column": 5,
+          "start_byte": 7073,
+          "end_byte": 7739,
+          "source_hash": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+          "location_ref": "/source_location_index/488939e5351b910633edbb2e",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「self.application.command」中提供第 1 个实参「principal」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "ef49739d4d60578ac448493d",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7680",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "self.application.command(\n            principal,\n            CommandFamily::from_name(&envelope.command),\n            typed,\n        )",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/385/statements/19"
+    },
+    {
+      "declaration_index": 388,
+      "statement_index": 12,
+      "declaration_id": "510b9b32eec2c0920a3068f6",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/server.rs",
+        "symbol": "command",
+        "graph_node_id": "rust:crates/winwincode-server/src/server#command",
+        "location": {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2337,
+          "column": 1,
+          "start_byte": 83723,
+          "end_byte": 84562,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "location_ref": "/source_location_index/d54e4763310873efec955a0b",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "捕获 binding「body」的初始化来源为「match parse_json_body(request, origin.clone()).await {\\n        Ok(body) => body,\\n        Err(error) => return error.into_response(),\\n    }」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+      "operation_id": "1b6d31d00758b642ac3da2f8",
+      "operation_kind": "binding_initializer",
+      "operation_pointer": "/operations/7844",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "let body = match parse_json_body(request, origin.clone()).await {\n        Ok(body) => body,\n        Err(error) => return error.into_response(),\n    };",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/388/statements/12"
+    },
+    {
+      "declaration_index": 388,
+      "statement_index": 13,
+      "declaration_id": "510b9b32eec2c0920a3068f6",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/server.rs",
+        "symbol": "command",
+        "graph_node_id": "rust:crates/winwincode-server/src/server#command",
+        "location": {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2337,
+          "column": 1,
+          "start_byte": 83723,
+          "end_byte": 84562,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "location_ref": "/source_location_index/d54e4763310873efec955a0b",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「request」作为第 1 个实参交给已绑定接口「rust:crates/winwincode-server/src/server#parse_json_body」，对应捕获形参「request: Request<Body>」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "1f950dfa6a3e143f1313e0d3",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7846",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "parse_json_body(request, origin.clone())",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/388/statements/13"
+    },
+    {
+      "declaration_index": 388,
+      "statement_index": 14,
+      "declaration_id": "510b9b32eec2c0920a3068f6",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/server.rs",
+        "symbol": "command",
+        "graph_node_id": "rust:crates/winwincode-server/src/server#command",
+        "location": {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2337,
+          "column": 1,
+          "start_byte": 83723,
+          "end_byte": 84562,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "location_ref": "/source_location_index/d54e4763310873efec955a0b",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「origin.clone()」作为第 2 个实参交给已绑定接口「rust:crates/winwincode-server/src/server#parse_json_body」，对应捕获形参「origin: Option<HeaderValue>」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "d7109c25fee68ea7acd31d4b",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7847",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "parse_json_body(request, origin.clone())",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/388/statements/14"
+    },
+    {
+      "declaration_index": 388,
+      "statement_index": 22,
+      "declaration_id": "510b9b32eec2c0920a3068f6",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/server.rs",
+        "symbol": "command",
+        "graph_node_id": "rust:crates/winwincode-server/src/server#command",
+        "location": {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2337,
+          "column": 1,
+          "start_byte": 83723,
+          "end_byte": 84562,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "location_ref": "/source_location_index/d54e4763310873efec955a0b",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「state.api.command」中提供第 1 个实参「&principal」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "0b640a3aad18f9e718e96c6d",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7867",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "state.api.command(&principal, body)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/388/statements/22"
+    },
+    {
+      "declaration_index": 389,
+      "statement_index": 9,
+      "declaration_id": "145535651406ceda339b9e9d",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/server.rs",
+        "symbol": "parse_json_body",
+        "graph_node_id": "rust:crates/winwincode-server/src/server#parse_json_body",
+        "location": {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2383,
+          "column": 1,
+          "start_byte": 85401,
+          "end_byte": 86539,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "location_ref": "/source_location_index/360b659ecd479ade97f08168",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「value.get」中提供第 1 个实参「\"schemaVersion\"」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "510936fb9fd796927b3f4a32",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7889",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "value.get(\"schemaVersion\")",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/389/statements/9"
+    },
+    {
+      "declaration_index": 389,
+      "statement_index": 10,
+      "declaration_id": "145535651406ceda339b9e9d",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/server.rs",
+        "symbol": "parse_json_body",
+        "graph_node_id": "rust:crates/winwincode-server/src/server#parse_json_body",
+        "location": {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2383,
+          "column": 1,
+          "start_byte": 85401,
+          "end_byte": 86539,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "location_ref": "/source_location_index/360b659ecd479ade97f08168",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「value.get(\"schemaVersion\").and_then」中提供第 1 个实参「Value::as_str」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "849c8bf21ca162b47a1e49b3",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7890",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "value.get(\"schemaVersion\").and_then(Value::as_str)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/389/statements/10"
+    },
+    {
+      "declaration_index": 389,
+      "statement_index": 12,
+      "declaration_id": "145535651406ceda339b9e9d",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/server.rs",
+        "symbol": "parse_json_body",
+        "graph_node_id": "rust:crates/winwincode-server/src/server#parse_json_body",
+        "location": {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2383,
+          "column": 1,
+          "start_byte": 85401,
+          "end_byte": 86539,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "location_ref": "/source_location_index/360b659ecd479ade97f08168",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「Some」中提供第 1 个实参「SUPPORTED_SCHEMA_VERSION」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "e3f12067d36b13d711199dd7",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/7892",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "Some(SUPPORTED_SCHEMA_VERSION)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/389/statements/12"
+    },
+    {
+      "declaration_index": 389,
+      "statement_index": 15,
+      "declaration_id": "145535651406ceda339b9e9d",
+      "actual_owner": {
+        "file": "crates/winwincode-server/src/server.rs",
+        "symbol": "parse_json_body",
+        "graph_node_id": "rust:crates/winwincode-server/src/server#parse_json_body",
+        "location": {
+          "file": "crates/winwincode-server/src/server.rs",
+          "line": 2383,
+          "column": 1,
+          "start_byte": 85401,
+          "end_byte": 86539,
+          "source_hash": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+          "location_ref": "/source_location_index/360b659ecd479ade97f08168",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "条件「value.get(\"schemaVersion\").and_then(Value::as_str) != Some(SUPPORTED_SCHEMA_VERSION)」的捕获提前退出分支为「Err_return：Err(BoundaryError::new(\\n            StatusCode::UPGRADE_REQUIRED,\\n            \"CLIENT_UPGRADE_REQUIRED\",\\n            \"client protocol is unsupported; upgrade to winwincode/v1\",\\n            origin,\\n        )\\n        .with_request_id(request_id))」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+      "operation_id": "a3cd863712b9f16fee6f2d73",
+      "operation_kind": "guard_rejection",
+      "operation_pointer": "/operations/7895",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "return Err(BoundaryError::new(\n            StatusCode::UPGRADE_REQUIRED,\n            \"CLIENT_UPGRADE_REQUIRED\",\n            \"client protocol is unsupported; upgrade to winwincode/v1\",\n            origin,\n        )\n        .with_request_id(request_id))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/389/statements/15"
+    },
+    {
+      "declaration_index": 462,
+      "statement_index": 0,
+      "declaration_id": "cc006371c4fec27652b5fb2e",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.transportRequest",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.transportRequest",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 927,
+          "column": 3,
+          "start_byte": 33600,
+          "end_byte": 34206,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/b7948beb66a3a79e740c79ca",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "条件「(transportFetch === undefined)」的捕获提前退出分支为「throw：generated.createError({\\n        code: 'TRANSPORT_UNAVAILABLE',\\n        message: 'The browser HTTP transport is unavailable.',\\n        requestId: null,\\n        retryable: false,\\n        details: {},\\n      })」；正常继续受该分支限制。退出可能是拒绝、复用或返回结果，未从 return 名称猜测其业务含义。",
+      "operation_id": "9b46b2fdf88792fa7989862a",
+      "operation_kind": "guard_rejection",
+      "operation_pointer": "/operations/8940",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "throw generated.createError({\n        code: 'TRANSPORT_UNAVAILABLE',\n        message: 'The browser HTTP transport is unavailable.',\n        requestId: null,\n        retryable: false,\n        details: {},\n      })",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/462/statements/0"
+    },
+    {
+      "declaration_index": 462,
+      "statement_index": 1,
+      "declaration_id": "cc006371c4fec27652b5fb2e",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.transportRequest",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.transportRequest",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 927,
+          "column": 3,
+          "start_byte": 33600,
+          "end_byte": 34206,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/b7948beb66a3a79e740c79ca",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "以「throw generated.createError({\\n        code: 'TRANSPORT_UNAVAILABLE',\\n        message: 'The browser HTTP transport is unavailable.',\\n        requestId: null,\\n        retryable: false,\\n        details: {},\\n      })」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+      "operation_id": "a344fd1d87f8703a79b71f60",
+      "operation_kind": "return_transfer",
+      "operation_pointer": "/operations/8941",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "throw generated.createError({\n        code: 'TRANSPORT_UNAVAILABLE',\n        message: 'The browser HTTP transport is unavailable.',\n        requestId: null,\n        retryable: false,\n        details: {},\n      })",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/462/statements/1"
+    },
+    {
+      "declaration_index": 462,
+      "statement_index": 2,
+      "declaration_id": "cc006371c4fec27652b5fb2e",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.transportRequest",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.transportRequest",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 927,
+          "column": 3,
+          "start_byte": 33600,
+          "end_byte": 34206,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/b7948beb66a3a79e740c79ca",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「generated.createError」中提供第 1 个实参「{\\n        code: 'TRANSPORT_UNAVAILABLE',\\n        message: 'The browser HTTP transport is unavailable.',\\n        requestId: null,\\n        retryable: false,\\n        details: {},\\n      }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "91eb6d21d2973dcb404d2d0d",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/8942",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "generated.createError({\n        code: 'TRANSPORT_UNAVAILABLE',\n        message: 'The browser HTTP transport is unavailable.',\n        requestId: null,\n        retryable: false,\n        details: {},\n      })",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/462/statements/2"
+    },
+    {
+      "declaration_index": 462,
+      "statement_index": 3,
+      "declaration_id": "cc006371c4fec27652b5fb2e",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.transportRequest",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.transportRequest",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 927,
+          "column": 3,
+          "start_byte": 33600,
+          "end_byte": 34206,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/b7948beb66a3a79e740c79ca",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "构造捕获记录，字段按源码次序为「code ← 'TRANSPORT_UNAVAILABLE'；message ← 'The browser HTTP transport is unavailable.'；requestId ← null；retryable ← false；details ← {}」。不据构造形式推断物理持久化。",
+      "operation_id": "a6654490bd2c4870fc3cd0ac",
+      "operation_kind": "record_construction",
+      "operation_pointer": "/operations/8943",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "{\n        code: 'TRANSPORT_UNAVAILABLE',\n        message: 'The browser HTTP transport is unavailable.',\n        requestId: null,\n        retryable: false,\n        details: {},\n      }",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/462/statements/3"
+    },
+    {
+      "declaration_index": 462,
+      "statement_index": 5,
+      "declaration_id": "cc006371c4fec27652b5fb2e",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.transportRequest",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.transportRequest",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 927,
+          "column": 3,
+          "start_byte": 33600,
+          "end_byte": 34206,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/b7948beb66a3a79e740c79ca",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "以「return transportFetch(input, {\\n      ...init,\\n      credentials: 'include',\\n      ...(signal === undefined ? {} : { signal }),\\n    })」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+      "operation_id": "c72218d4aa85da92561f4cea",
+      "operation_kind": "return_transfer",
+      "operation_pointer": "/operations/8945",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "return transportFetch(input, {\n      ...init,\n      credentials: 'include',\n      ...(signal === undefined ? {} : { signal }),\n    })",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/462/statements/5"
+    },
+    {
+      "declaration_index": 462,
+      "statement_index": 6,
+      "declaration_id": "cc006371c4fec27652b5fb2e",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.transportRequest",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.transportRequest",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 927,
+          "column": 3,
+          "start_byte": 33600,
+          "end_byte": 34206,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/b7948beb66a3a79e740c79ca",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「transportFetch」中提供第 2 个实参「{\\n      ...init,\\n      credentials: 'include',\\n      ...(signal === undefined ? {} : { signal }),\\n    }」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "04b2591250eef104f82ca83e",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/8946",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "transportFetch(input, {\n      ...init,\n      credentials: 'include',\n      ...(signal === undefined ? {} : { signal }),\n    })",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/462/statements/6"
+    },
+    {
+      "declaration_index": 462,
+      "statement_index": 7,
+      "declaration_id": "cc006371c4fec27652b5fb2e",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.transportRequest",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.transportRequest",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 927,
+          "column": 3,
+          "start_byte": 33600,
+          "end_byte": 34206,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/b7948beb66a3a79e740c79ca",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「transportFetch」中提供第 1 个实参「input」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "1dddd649e9c3c46ad64e6938",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/8947",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "transportFetch(input, {\n      ...init,\n      credentials: 'include',\n      ...(signal === undefined ? {} : { signal }),\n    })",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/462/statements/7"
+    },
+    {
+      "declaration_index": 465,
+      "statement_index": 0,
+      "declaration_id": "6f35b7cae45ef279c17ff6ce",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.requestFetch",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.requestFetch",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1090,
+          "column": 3,
+          "start_byte": 39299,
+          "end_byte": 40398,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/e310909b8919426398c73f53",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "以「return async (input: string, init: ControlPlaneHttpRequestInit) => {\\n      if (signalIsAborted(signal)) throw generated.createError({\\n        code: 'REQUEST_CANCELLED',\\n        message: 'The Control Plane operation was cancelled.',\\n        requestId,\\n        retryable: false,\\n        details: {},\\n      })\\n      let response: ControlPlaneHttpResponse\\…［展示截断；完整操作保留］」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+      "operation_id": "553122a91677b900672451a6",
+      "operation_kind": "return_transfer",
+      "operation_pointer": "/operations/9082",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "return async (input: string, init: ControlPlaneHttpRequestInit) => {\n      if (signalIsAborted(signal)) throw generated.createError({\n        code: 'REQUEST_CANCELLED',\n        message: 'The Control Plane operation was cancelled.',\n        requestId,\n        retryable: false,\n        details: {},\n      })\n      let response: ControlPlaneHttpResponse\n      try {\n        response = a",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/465/statements/0"
+    },
+    {
+      "declaration_index": 476,
+      "statement_index": 0,
+      "declaration_id": "8c09d24069bd85b1334155e5",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.command",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.command",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1231,
+          "column": 5,
+          "start_byte": 44589,
+          "end_byte": 44772,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/3a779444b609676f9fb93c7f",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "以「return execute(command, requestOptions, fetchImplementation => (\\n        httpClient(fetchImplementation).submitCommand(command)\\n      ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+      "operation_id": "b4a40ec33386555999a69e25",
+      "operation_kind": "return_transfer",
+      "operation_pointer": "/operations/9240",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "return execute(command, requestOptions, fetchImplementation => (\n        httpClient(fetchImplementation).submitCommand(command)\n      ))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/476/statements/0"
+    },
+    {
+      "declaration_index": 476,
+      "statement_index": 1,
+      "declaration_id": "8c09d24069bd85b1334155e5",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.command",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.command",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1231,
+          "column": 5,
+          "start_byte": 44589,
+          "end_byte": 44772,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/3a779444b609676f9fb93c7f",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「requestOptions」作为第 2 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.execute」，对应捕获形参「requestOptions: ControlPlaneRequestOptions | undefined」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "04971519f196f298b68ee12f",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9241",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "execute(command, requestOptions, fetchImplementation => (\n        httpClient(fetchImplementation).submitCommand(command)\n      ))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/476/statements/1"
+    },
+    {
+      "declaration_index": 476,
+      "statement_index": 2,
+      "declaration_id": "8c09d24069bd85b1334155e5",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.command",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.command",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1231,
+          "column": 5,
+          "start_byte": 44589,
+          "end_byte": 44772,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/3a779444b609676f9fb93c7f",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「fetchImplementation => (\\n        httpClient(fetchImplementation).submitCommand(command)\\n      )」作为第 3 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.execute」，对应捕获形参「invoke: (fetchImplementation: ControlPlaneFetch) => Promise<Result>」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "3638aac488924dcde4ae44bd",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9242",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "execute(command, requestOptions, fetchImplementation => (\n        httpClient(fetchImplementation).submitCommand(command)\n      ))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/476/statements/2"
+    },
+    {
+      "declaration_index": 476,
+      "statement_index": 3,
+      "declaration_id": "8c09d24069bd85b1334155e5",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.command",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.command",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1231,
+          "column": 5,
+          "start_byte": 44589,
+          "end_byte": 44772,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/3a779444b609676f9fb93c7f",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「command」作为第 1 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.execute」，对应捕获形参「request: Request」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "bb4a25cca0257442d7a5bc9a",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9243",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "execute(command, requestOptions, fetchImplementation => (\n        httpClient(fetchImplementation).submitCommand(command)\n      ))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/476/statements/3"
+    },
+    {
+      "declaration_index": 478,
+      "statement_index": 0,
+      "declaration_id": "c8fac4c17129c70995339e03",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.query",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.query",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1236,
+          "column": 5,
+          "start_byte": 44778,
+          "end_byte": 44951,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/93600bf852aa4fca279f0464",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "以「return execute(query, requestOptions, fetchImplementation => (\\n        httpClient(fetchImplementation).submitQuery(query)\\n      ))」返回捕获表达式/记录，向调用方提供结果来源；消费者激活和实际交付效果另行保留。",
+      "operation_id": "baf8d2113cc3608a7dee9c2f",
+      "operation_kind": "return_transfer",
+      "operation_pointer": "/operations/9246",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "return execute(query, requestOptions, fetchImplementation => (\n        httpClient(fetchImplementation).submitQuery(query)\n      ))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/478/statements/0"
+    },
+    {
+      "declaration_index": 478,
+      "statement_index": 1,
+      "declaration_id": "c8fac4c17129c70995339e03",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.query",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.query",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1236,
+          "column": 5,
+          "start_byte": 44778,
+          "end_byte": 44951,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/93600bf852aa4fca279f0464",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「fetchImplementation => (\\n        httpClient(fetchImplementation).submitQuery(query)\\n      )」作为第 3 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.execute」，对应捕获形参「invoke: (fetchImplementation: ControlPlaneFetch) => Promise<Result>」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "2a490c9b056a84bdb86bdebd",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9247",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "execute(query, requestOptions, fetchImplementation => (\n        httpClient(fetchImplementation).submitQuery(query)\n      ))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/478/statements/1"
+    },
+    {
+      "declaration_index": 478,
+      "statement_index": 2,
+      "declaration_id": "c8fac4c17129c70995339e03",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.query",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.query",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1236,
+          "column": 5,
+          "start_byte": 44778,
+          "end_byte": 44951,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/93600bf852aa4fca279f0464",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「query」作为第 1 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.execute」，对应捕获形参「request: Request」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "3b67fae342ddffe3bd9b0154",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9248",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "execute(query, requestOptions, fetchImplementation => (\n        httpClient(fetchImplementation).submitQuery(query)\n      ))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/478/statements/2"
+    },
+    {
+      "declaration_index": 478,
+      "statement_index": 3,
+      "declaration_id": "c8fac4c17129c70995339e03",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.query",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.query",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1236,
+          "column": 5,
+          "start_byte": 44778,
+          "end_byte": 44951,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/93600bf852aa4fca279f0464",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「requestOptions」作为第 2 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#createControlPlaneClient.execute」，对应捕获形参「requestOptions: ControlPlaneRequestOptions | undefined」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "f2b379c1ae67d62cc73a0faf",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9249",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "execute(query, requestOptions, fetchImplementation => (\n        httpClient(fetchImplementation).submitQuery(query)\n      ))",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/478/statements/3"
+    },
+    {
+      "declaration_index": 480,
+      "statement_index": 5,
+      "declaration_id": "4406fcc4eafc9c34017576af",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.subscribe",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.subscribe",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1241,
+          "column": 5,
+          "start_byte": 44957,
+          "end_byte": 47596,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/f872f0bbf3af671948dd3a50",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "将「null」作为第 1 个实参交给已绑定接口「ts:packages/control-plane-client/src/index#cancelledError」，对应捕获形参「requestId: RequestId | null」。该普通调用关系不替代进程或网络协议关系。",
+      "operation_id": "a3d9726ffc9de7d037b246d0",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9257",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "cancelledError(null)",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/5"
+    },
+    {
+      "declaration_index": 480,
+      "statement_index": 6,
+      "declaration_id": "4406fcc4eafc9c34017576af",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.subscribe",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.subscribe",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1241,
+          "column": 5,
+          "start_byte": 44957,
+          "end_byte": 47596,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/f872f0bbf3af671948dd3a50",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "捕获 binding「socketClient」的初始化来源为「generated.createWebSocketClient({\\n        baseUrl: location.webSocketUrl,\\n        ...(options.transport?.createSocket === undefined\\n          ? {}\\n          : { createSocket: options.transport.createSocket }),\\n        reconnectDelayMillis,\\n        ...(subscriptionOptions.onEventQueued === undefined\\n          ? {}\\n          : { onEventQueued: subscrip…［展示截断；完整操作保留］」；保留该声明与初始化表达式，不推任意后续读取的当前值。",
+      "operation_id": "43653d5173d75f33296be68e",
+      "operation_kind": "binding_initializer",
+      "operation_pointer": "/operations/9258",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "socketClient = generated.createWebSocketClient({\n        baseUrl: location.webSocketUrl,\n        ...(options.transport?.createSocket === undefined\n          ? {}\n          : { createSocket: options.transport.createSocket }),\n        reconnectDelayMillis,\n        ...(subscriptionOptions.onEventQueued === undefined\n          ? {}\n          : { onEventQueued: subscriptionOptions.onEve",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/6"
+    },
+    {
+      "declaration_index": 480,
+      "statement_index": 7,
+      "declaration_id": "4406fcc4eafc9c34017576af",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.subscribe",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.subscribe",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1241,
+          "column": 5,
+          "start_byte": 44957,
+          "end_byte": 47596,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/f872f0bbf3af671948dd3a50",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「generated.createWebSocketClient」中提供第 1 个实参「{\\n        baseUrl: location.webSocketUrl,\\n        ...(options.transport?.createSocket === undefined\\n          ? {}\\n          : { createSocket: options.transport.createSocket }),\\n        reconnectDelayMillis,\\n        ...(subscriptionOptions.onEventQueued === undefined\\n          ? {}\\n          : { onEventQueued: subscriptionOptions.onEventQueued }),\\n …［展示截断；完整操作保留］」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "29f66abb552323e2ce4386d0",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9260",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "generated.createWebSocketClient({\n        baseUrl: location.webSocketUrl,\n        ...(options.transport?.createSocket === undefined\n          ? {}\n          : { createSocket: options.transport.createSocket }),\n        reconnectDelayMillis,\n        ...(subscriptionOptions.onEventQueued === undefined\n          ? {}\n          : { onEventQueued: subscriptionOptions.onEventQueued }),\n  ",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/7"
+    },
+    {
+      "declaration_index": 480,
+      "statement_index": 10,
+      "declaration_id": "4406fcc4eafc9c34017576af",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.subscribe",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.subscribe",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1241,
+          "column": 5,
+          "start_byte": 44957,
+          "end_byte": 47596,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/f872f0bbf3af671948dd3a50",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "保留记录复制/展开来源「(options.transport?.createSocket === undefined\\n          ? {}\\n          : { createSocket: options.transport.createSocket })」；该形式本身不证明全部字段在覆盖和后续写入后仍被保留。",
+      "operation_id": "f57d07acba94c00b334e3ed1",
+      "operation_kind": "record_copy_projection",
+      "operation_pointer": "/operations/9263",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "(options.transport?.createSocket === undefined\n          ? {}\n          : { createSocket: options.transport.createSocket })",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/10"
+    },
+    {
+      "declaration_index": 480,
+      "statement_index": 12,
+      "declaration_id": "4406fcc4eafc9c34017576af",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.subscribe",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.subscribe",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1241,
+          "column": 5,
+          "start_byte": 44957,
+          "end_byte": 47596,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/f872f0bbf3af671948dd3a50",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "构造捕获记录，字段按源码次序为「createSocket ← options.transport.createSocket」。不据构造形式推断物理持久化。",
+      "operation_id": "497333e1594e0c5dd88f93e4",
+      "operation_kind": "record_construction",
+      "operation_pointer": "/operations/9265",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "{ createSocket: options.transport.createSocket }",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/12"
+    },
+    {
+      "declaration_index": 480,
+      "statement_index": 13,
+      "declaration_id": "4406fcc4eafc9c34017576af",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.subscribe",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.subscribe",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1241,
+          "column": 5,
+          "start_byte": 44957,
+          "end_byte": 47596,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/f872f0bbf3af671948dd3a50",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "以字段投影形式「options.transport.createSocket」关联路径「options.transport.createSocket」；只描述捕获来源，不证明当时的字段值。",
+      "operation_id": "f0e03901cb28393b6262fa80",
+      "operation_kind": "record_field_projection",
+      "operation_pointer": "/operations/9266",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "options.transport.createSocket",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/13"
+    },
+    {
+      "declaration_index": 480,
+      "statement_index": 19,
+      "declaration_id": "4406fcc4eafc9c34017576af",
+      "actual_owner": {
+        "file": "packages/control-plane-client/src/index.ts",
+        "symbol": "createControlPlaneClient.<object@1149:9>.subscribe",
+        "graph_node_id": "ts:packages/control-plane-client/src/index#createControlPlaneClient.<object@1149:9>.subscribe",
+        "location": {
+          "file": "packages/control-plane-client/src/index.ts",
+          "line": 1241,
+          "column": 5,
+          "start_byte": 44957,
+          "end_byte": 47596,
+          "source_hash": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+          "location_ref": "/source_location_index/f872f0bbf3af671948dd3a50",
+          "pointer_scope": "this_responsibility_extraction_or_explanation_object"
+        },
+        "binding_state": "authenticated_internal_declaration",
+        "graph_binding_gaps": [],
+        "runtime_activation_proven": false
+      },
+      "text": "在调用形式「socketClient.subscribe」中提供第 1 个实参「subscriptionOptions.subscriptionId」；目标绑定为「captured_call_site_unknown」，不指定唯一实现或物理效果。",
+      "operation_id": "7e4b203a656c0a6728b4bd96",
+      "operation_kind": "call_argument_transfer",
+      "operation_pointer": "/operations/9321",
+      "source_evidence_refs": [
+        {
+          "goal_id": "WWC-02",
+          "rule_id": "wwc-report-device-spec-command-flow",
+          "reference_role": "selection_context",
+          "old_finding_proves_new_operation": false
+        }
+      ],
+      "operand_source_text": "socketClient.subscribe(\n          subscriptionOptions.subscriptionId,\n          subscriptionOptions.subscription,\n          subscriptionOptions.startAt ?? generated.latestSubscriptionStart,\n        )",
+      "formal_statement_pointer": "/architecture/responsibility_explanations/declaration_explanations/480/statements/19"
+    }
+  ],
+  "target_executed": false,
+  "database_read": false
+}

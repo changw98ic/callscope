@@ -1,0 +1,285 @@
+{
+  "schema": "callscope.budget-formal-review.v1",
+  "review_scope": "Read-only saved-source/graph/identity review, not target execution, tests, runtime budget correctness, or whole-project P5",
+  "review_state": "source_evidence_verified",
+  "formal_snapshot_id": "bc3350f010b470fb2bcf8e72e8e966bd432602ae07ec465666f797bb6a4ff1de",
+  "formal_source_hash": "1d6936acc5221e32e49acac4dba9b891dc4cd43052be092938ef9aadc120d7c5",
+  "development_snapshot_id": "fb9efe4704d83310958712a8b35089f06511d733258c63777e1d93af25bf89e8",
+  "freeze_tool_identity": {
+    "source_hash": "35aedb73739399068219e6b9b46840c27441f5b1f74430031234ffb285c8b7fc",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+  },
+  "budget_module_sha256": "9d05d7045360cf25ea9960e5d9635e96abe3247ba9fa12a6045800105f251555",
+  "budget_module_matches_frozen_and_development_identity": true,
+  "pointers": {
+    "summary": "reports/astra-iteration6/codepatchbay-summary.json",
+    "database": "reports/astra-iteration6/codepatchbay-v9.sqlite3",
+    "development": "reports/astra-iteration6/BUDGET_DEVELOPMENT_OBSERVATIONS.json",
+    "core_freeze": "reports/astra-iteration6/CORE_FREEZE.json"
+  },
+  "input_artifact_sha256": {
+    "codepatchbay-summary.json": "f7a685d4a309c8584cb41cbb241ffa0c123ccbee5a0a57cf505e1305b46fd4cf",
+    "BUDGET_DEVELOPMENT_OBSERVATIONS.json": "bf53fbe70c67f37e1a1184db36fedee1211bc249f4c1449829281f44e0b97a58",
+    "CORE_FREEZE.json": "aac9a27805814912a3472244f6f424db6792e17bbe04ba4d079490e3f3760a11"
+  },
+  "finding_count": 2,
+  "source_file_count": 3,
+  "deduplicated_span_count": 103,
+  "invalid_span_count": 0,
+  "source_files": [
+    {
+      "source_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+      "content_hash": "5fb852088e425a0e3bf1f1bd2db5b3682fe61f031f01b213fc9a0d08b908bd14",
+      "captured_status": "parsed",
+      "raw_prefix_bytes": 0,
+      "authenticated": true,
+      "file": "core/engine/run-job-execute-dag.ts",
+      "path_base": "formal snapshot repository root"
+    },
+    {
+      "source_hash": "183d1b34f3b90d0ed935033b5e686d2e5d43f74e44741178b376496ddf1f9960",
+      "content_hash": "183d1b34f3b90d0ed935033b5e686d2e5d43f74e44741178b376496ddf1f9960",
+      "captured_status": "parsed",
+      "raw_prefix_bytes": 0,
+      "authenticated": true,
+      "file": "core/engine/solver-loop.ts",
+      "path_base": "formal snapshot repository root"
+    },
+    {
+      "source_hash": "9a5b5b06fb5e120f3708e3999e90a14e8bdf05334828e930a7f92eaa18d7083c",
+      "content_hash": "9a5b5b06fb5e120f3708e3999e90a14e8bdf05334828e930a7f92eaa18d7083c",
+      "captured_status": "parsed",
+      "raw_prefix_bytes": 0,
+      "authenticated": true,
+      "file": "core/engine/phase-retry.ts",
+      "path_base": "formal snapshot repository root"
+    }
+  ],
+  "graph_declarations": [
+    {
+      "node_id": "ts:core/engine/run-job-execute-dag#runVerificationInfrastructureRetryLoop",
+      "file": "core/engine/run-job-execute-dag.ts",
+      "symbol": "ts:core/engine/run-job-execute-dag#runVerificationInfrastructureRetryLoop",
+      "valid_unique_captured_declaration": true
+    },
+    {
+      "node_id": "ts:core/engine/solver-loop#verificationInfrastructureRetryLimit",
+      "file": "core/engine/solver-loop.ts",
+      "symbol": "ts:core/engine/solver-loop#verificationInfrastructureRetryLimit",
+      "valid_unique_captured_declaration": true
+    },
+    {
+      "node_id": "ts:core/engine/phase-retry#configuredPhaseRetryTotalMax",
+      "file": "core/engine/phase-retry.ts",
+      "symbol": "ts:core/engine/phase-retry#configuredPhaseRetryTotalMax",
+      "valid_unique_captured_declaration": true
+    },
+    {
+      "node_id": "ts:core/engine/phase-retry#numericEnv",
+      "file": "core/engine/phase-retry.ts",
+      "symbol": "ts:core/engine/phase-retry#numericEnv",
+      "valid_unique_captured_declaration": true
+    },
+    {
+      "node_id": "ts:core/engine/phase-retry#retryEnv",
+      "file": "core/engine/phase-retry.ts",
+      "symbol": "ts:core/engine/phase-retry#retryEnv",
+      "valid_unique_captured_declaration": true
+    },
+    {
+      "node_id": "ts:core/engine/phase-retry#runPhaseRetryLoops",
+      "file": "core/engine/phase-retry.ts",
+      "symbol": "ts:core/engine/phase-retry#runPhaseRetryLoops",
+      "valid_unique_captured_declaration": true
+    },
+    {
+      "node_id": "ts:core/engine/phase-retry#runPhaseRetryLoops.prepareRecovery",
+      "file": "core/engine/phase-retry.ts",
+      "symbol": "ts:core/engine/phase-retry#runPhaseRetryLoops.prepareRecovery",
+      "valid_unique_captured_declaration": true
+    }
+  ],
+  "existing_call_bindings": [
+    {
+      "edge_id": "e2194e988ebd33ce84cddf79",
+      "source": "ts:core/engine/run-job-execute-dag#runVerificationInfrastructureRetryLoop",
+      "target": "ts:core/engine/solver-loop#verificationInfrastructureRetryLimit",
+      "file": "core/engine/run-job-execute-dag.ts",
+      "line": 998,
+      "valid_existing_snapshot_call_binding": true,
+      "pointer": "/rule_findings/6/evidence/0/details/assessments/0/comparison/limit_origin/call_binding",
+      "artifact": "reports/astra-iteration6/codepatchbay-summary.json",
+      "pointer_format": "RFC6901"
+    },
+    {
+      "edge_id": "319e39156ed467ecaae1b722",
+      "source": "ts:core/engine/phase-retry#runPhaseRetryLoops",
+      "target": "ts:core/engine/phase-retry#retryEnv",
+      "file": "core/engine/phase-retry.ts",
+      "line": 365,
+      "valid_existing_snapshot_call_binding": true,
+      "pointer": "/rule_findings/7/evidence/0/details/assessments/0/comparison/limit_origin/arguments/1/right/arguments/0/initializer/call_binding",
+      "artifact": "reports/astra-iteration6/codepatchbay-summary.json",
+      "pointer_format": "RFC6901"
+    },
+    {
+      "edge_id": "c2aed788e0399a03370525ea",
+      "source": "ts:core/engine/phase-retry#runPhaseRetryLoops",
+      "target": "ts:core/engine/phase-retry#configuredPhaseRetryTotalMax",
+      "file": "core/engine/phase-retry.ts",
+      "line": 369,
+      "valid_existing_snapshot_call_binding": true,
+      "pointer": "/rule_findings/7/evidence/0/details/assessments/0/comparison/limit_origin/arguments/1/right/call_binding",
+      "artifact": "reports/astra-iteration6/codepatchbay-summary.json",
+      "pointer_format": "RFC6901"
+    },
+    {
+      "edge_id": "f129ae7763e9683509b9dd7a",
+      "source": "ts:core/engine/phase-retry#configuredPhaseRetryTotalMax",
+      "target": "ts:core/engine/phase-retry#numericEnv",
+      "file": "core/engine/phase-retry.ts",
+      "line": 122,
+      "valid_existing_snapshot_call_binding": true,
+      "pointer": "/rule_findings/7/evidence/0/details/assessments/0/comparison/limit_origin/arguments/1/right/helper_source/returns/0/expression/call_binding",
+      "artifact": "reports/astra-iteration6/codepatchbay-summary.json",
+      "pointer_format": "RFC6901"
+    }
+  ],
+  "rule_reviews": [
+    {
+      "rule_id": "cpb-verification-infra-local-budget",
+      "finding_id": "b095319e741bdc50861f0ca5",
+      "status": "uncertain",
+      "source_form_complete": true,
+      "development_source_fact_difference_keys": [],
+      "graph_node_ids": [
+        "ts:core/engine/run-job-execute-dag#runVerificationInfrastructureRetryLoop",
+        "ts:core/engine/solver-loop#verificationInfrastructureRetryLimit"
+      ],
+      "existing_graph_edge_ids": [
+        "e2194e988ebd33ce84cddf79"
+      ],
+      "assessments": [
+        {
+          "index": 0,
+          "pattern": "bounded_for_loop",
+          "source_form_state": "source_backed_local_pattern",
+          "comparison": {
+            "file": "core/engine/run-job-execute-dag.ts",
+            "line": 1004,
+            "operator": "<="
+          },
+          "owner_symbol": "runVerificationInfrastructureRetryLoop",
+          "nested_callable": false,
+          "declaration_identities_match_saved_ast": true,
+          "guard_owner_matches_saved_ast": true,
+          "counter_write_count": 1,
+          "counter_write_lines": [
+            1004
+          ],
+          "counter_writes_match_full_captured_identity_scan": true,
+          "consequence_action_forms": [],
+          "for_header": {
+            "initial_literal": 1,
+            "update_operator": "+=",
+            "update_literal_amount": 1
+          },
+          "runtime_and_numeric_proof_flags": {
+            "numeric_bound_proven": false,
+            "termination_proven": false,
+            "runtime_limit_value_proven": false,
+            "runtime_counter_value_proven": false,
+            "guard_or_loop_activation_proven": false,
+            "phase_or_job_budget_equivalence_proven": false
+          }
+        }
+      ],
+      "gap_codes": [
+        "budget_numeric_values_and_execution_unknown"
+      ],
+      "whole_function_domination_proven": false,
+      "runtime_budget_consumption_proven": false,
+      "numeric_bound_proven": false,
+      "termination_proven": false
+    },
+    {
+      "rule_id": "cpb-phase-retry-local-budget",
+      "finding_id": "f2c61aee00d5ae031bcf180f",
+      "status": "uncertain",
+      "source_form_complete": true,
+      "development_source_fact_difference_keys": [],
+      "graph_node_ids": [
+        "ts:core/engine/phase-retry#configuredPhaseRetryTotalMax",
+        "ts:core/engine/phase-retry#numericEnv",
+        "ts:core/engine/phase-retry#retryEnv",
+        "ts:core/engine/phase-retry#runPhaseRetryLoops",
+        "ts:core/engine/phase-retry#runPhaseRetryLoops.prepareRecovery"
+      ],
+      "existing_graph_edge_ids": [
+        "319e39156ed467ecaae1b722",
+        "c2aed788e0399a03370525ea",
+        "f129ae7763e9683509b9dd7a"
+      ],
+      "assessments": [
+        {
+          "index": 0,
+          "pattern": "counter_exhaustion_guard",
+          "source_form_state": "source_backed_local_pattern",
+          "comparison": {
+            "file": "core/engine/phase-retry.ts",
+            "line": 396,
+            "operator": ">="
+          },
+          "owner_symbol": "runPhaseRetryLoops.prepareRecovery",
+          "nested_callable": true,
+          "declaration_identities_match_saved_ast": true,
+          "guard_owner_matches_saved_ast": true,
+          "counter_write_count": 4,
+          "counter_write_lines": [
+            530,
+            575,
+            619,
+            663
+          ],
+          "counter_writes_match_full_captured_identity_scan": true,
+          "consequence_action_forms": [
+            {
+              "statement": "expression_statement",
+              "direct_await": true
+            },
+            {
+              "statement": "return_statement",
+              "direct_await": false
+            }
+          ],
+          "for_header": null,
+          "runtime_and_numeric_proof_flags": {
+            "numeric_bound_proven": false,
+            "termination_proven": false,
+            "runtime_limit_value_proven": false,
+            "runtime_counter_value_proven": false,
+            "guard_or_loop_activation_proven": false,
+            "phase_or_job_budget_equivalence_proven": false
+          }
+        }
+      ],
+      "gap_codes": [
+        "budget_numeric_values_and_execution_unknown",
+        "budget_nested_guard_activation_unknown"
+      ],
+      "whole_function_domination_proven": false,
+      "runtime_budget_consumption_proven": false,
+      "numeric_bound_proven": false,
+      "termination_proven": false
+    }
+  ],
+  "failure_count": 0,
+  "failure_samples": [],
+  "failures_truncated": false,
+  "core_edited": false,
+  "target_executed": false,
+  "target_tests_run": false,
+  "tool_test_suite_run": false,
+  "report_pointer_format": "RFC6901 JSON Pointer into the named artifact; array indices are numeric"
+}
