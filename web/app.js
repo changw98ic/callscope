@@ -7,7 +7,7 @@ const PAGE_SIZE = 7;
 const GRAPH_LIMIT = 110;
 const GRAPH_EDGE_LIMIT = 450;
 const UNKNOWN_GRAPH_LIMIT = 8;
-const LANGUAGE_LABELS = { python: "Python", typescript: "TypeScript / JavaScript", rust: "Rust", unknown: "未标明语言" };
+const LANGUAGE_LABELS = { python: "Python", typescript: "TypeScript / JavaScript", rust: "Rust", arkts: "ArkTS", go: "Go", java: "Java", c: "C", cpp: "C++ / CUDA / Metal", csharp: "C#", razor: "Razor", php: "PHP", ruby: "Ruby", swift: "Swift", kotlin: "Kotlin", dart: "Dart", svelte: "Svelte", vue: "Vue", astro: "Astro", liquid: "Liquid", pascal: "Pascal", scala: "Scala", lua: "Lua", luau: "Luau", objc: "Objective-C", r: "R", solidity: "Solidity", nix: "Nix", yaml: "YAML / routes", twig: "Twig", xml: "XML", properties: "Properties", cfml: "CFML", cfscript: "CFScript", cfquery: "CFQuery", cobol: "COBOL", vbnet: "VB.NET", erlang: "Erlang", terraform: "Terraform / HCL", unknown: "未标明语言" };
 const TYPE_LABELS = {
   required_path: "必需路径约束", required_call: "必需调用约束",
   forbidden_call: "禁止直接调用", forbidden_path: "禁止调用路径",
@@ -27,7 +27,7 @@ const TYPE_LABELS = {
   static_local_budget: "局部重试预算来源待核对",
 };
 const SEVERITIES = { high: "高", medium: "中", low: "低", info: "信息", critical: "严重" };
-const RESOLUTIONS = { resolved: "确定调用", external: "外部调用", dynamic: "动态调用", ambiguous: "多个候选", unresolved: "未解析" };
+const RESOLUTIONS = { resolved: "确定调用", external: "外部调用", dynamic: "动态调用", ambiguous: "候选调用", unresolved: "未解析" };
 const ACTIONS = { accept_risk: "接受风险", false_positive: "标记误报", fix_planned: "计划修复" };
 const state = {
   status: null, versions: [], snapshotId: "", graph: null, findings: [], decisions: [],
@@ -88,8 +88,13 @@ function maintenanceRunLabel(maintenance) {
   return groups.join("；") || (maintenance.engine === "full" && maintenance.global_detection === "full" ? "全量解析·全量检测" : "");
 }
 function fileLanguage(file) {
-  if (/\.(py|pyi)$/i.test(file || "")) return "python";
-  if (/\.(tsx?|jsx?|mts|cts|mjs|cjs)$/i.test(file || "")) return "typescript";
+  const captured = state.graph?.files?.find(source => source.path === file);
+  if (captured?.language) return normalizeLanguage(captured.language);
+  const suffix = String(file || "").match(/\.[^./]+$/)?.[0]?.toLowerCase();
+  const capability = state.graph?.stats?.language_capabilities?.find(item => item.extensions?.includes(suffix));
+  if (capability) return normalizeLanguage(capability.language);
+  if (/\.(py|pyi|pyw)$/i.test(file || "")) return "python";
+  if (/\.(tsx?|jsx?|mts|cts|mjs|cjs|xsjs|xsjslib)$/i.test(file || "")) return "typescript";
   if (/\.rs$/i.test(file || "")) return "rust";
   return "unknown";
 }

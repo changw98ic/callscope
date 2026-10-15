@@ -1,0 +1,3387 @@
+{
+  "repository": "winwincode",
+  "target_root": "/workspace/winwincode",
+  "original_snapshot": {
+    "id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+    "project_id": "1dec368a20d2f5075901",
+    "project_name": "WinWinCode / 项目源码静态调用核对",
+    "created_at": "2026-10-14T09:30:44.996827+00:00",
+    "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+    "policy_hash": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+    "status": "partial",
+    "component_versions": {
+      "completion_summaries": "captured-completion-summaries-1",
+      "goal_contracts": {
+        "adapters": {
+          "device": {
+            "analyzer": "static-device-spec-protocol-flow-1",
+            "policy_schema": "static-device-spec-protocol-policy-v1"
+          },
+          "navigation": {
+            "analyzer": "conditional-navigation-obligations-1",
+            "policy_schema": "adapter-validated-v1"
+          }
+        },
+        "policy_schema": "static-goal-policy-v1",
+        "registry": "static-whole-judgment-registry-1"
+      },
+      "lexical_bindings": "captured-lexical-bindings-3",
+      "maintenance": {
+        "backend": "full"
+      },
+      "navigation_contracts": {
+        "analyzer": "static-navigation-contracts-2-shared",
+        "policy_schema": "static-navigation-policy-v1"
+      },
+      "port_wiring": "finite-port-wiring-2-shared",
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "report_claims": {
+        "analyzer": "captured-report-source-chains-3-architecture",
+        "policy_schema": "static-report-claim-policy-v2-documents",
+        "relation_modules": {
+          "conditional_gate_relations": "captured-conditional-gate-relations-1",
+          "documentation_relations": "captured-document-deployment-relations-1",
+          "lifecycle_ownership_relations": "captured-lifecycle-ownership-relations-1",
+          "message_identity_relations": "captured-message-identity-relations-1",
+          "record_projection_relations": "captured-record-projection-relations-1",
+          "rust_state_relations": "captured-rust-finite-state-relations-1",
+          "state_lineage_relations": "captured-conditional-lineage-publication-1"
+        }
+      },
+      "rust": {
+        "analyzer": "rust-tree-sitter-1.8-crate-attribute-context",
+        "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+      },
+      "semantic_environment": "captured-builtin-environment-1",
+      "semantic_sources": "semantic-snapshot-sources-1",
+      "static_contracts": {
+        "analyzer": "static-contracts-1",
+        "policy_schema": "static-contract-policy-v1"
+      },
+      "support_input_capture": "support-input-capture-1",
+      "tool": {
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "graph_backend": "axon-graph-core-1",
+        "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      }
+    }
+  },
+  "original_policy_file": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-policy.json",
+  "original_policy_file_sha256": "24dd004b2130a963fa2e60724203c60e41c87ee780123bc27eccffc71bae3005",
+  "effective_policy_sha256": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+  "captured_file_count": 471,
+  "captured_inputs_sha256": "6689c140acdfc99ecbad7c1535c16853d6c701a4a626aa8f8f0c7fc06c344e55",
+  "source_manifest_sha256": "cee433c75aac95b112e67adf8595304b79f786ffb019ee10b3cac961d3e51486",
+  "files": [
+    {
+      "path": "apps/client/public/runtime-config.js",
+      "raw_sha256": "e5504377f326893f2f9234d80cd0c2f35c6f263f870e6c3a51880535574ccaa3",
+      "captured_text_sha256": "e5504377f326893f2f9234d80cd0c2f35c6f263f870e6c3a51880535574ccaa3",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/application.ts",
+      "raw_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+      "captured_text_sha256": "fa99231ab15cabe394bbfaac6d7baa59313c4da44c47e5f39101d617c95aa520",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/attention-center-view-model.ts",
+      "raw_sha256": "ab880c9759dab29172ff9c6534b11c72058f68ecde2a060e4bcf2b78df687a91",
+      "captured_text_sha256": "ab880c9759dab29172ff9c6534b11c72058f68ecde2a060e4bcf2b78df687a91",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/attention-notifications.ts",
+      "raw_sha256": "4e4aa9c31e51ed17507b65e0f959f494601a15e85768195c026a249a95cd4e86",
+      "captured_text_sha256": "4e4aa9c31e51ed17507b65e0f959f494601a15e85768195c026a249a95cd4e86",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/attention-signals.ts",
+      "raw_sha256": "b6f0222bec212fd1753231ef4d8a106700bb2da0ac92ccb2a8525d3baf31a8a1",
+      "captured_text_sha256": "b6f0222bec212fd1753231ef4d8a106700bb2da0ac92ccb2a8525d3baf31a8a1",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/auth-page.ts",
+      "raw_sha256": "623a23bf09d24d3da1c02041a9dc81c651d609dd1b6cae0eebef1ae2ef8f9a80",
+      "captured_text_sha256": "623a23bf09d24d3da1c02041a9dc81c651d609dd1b6cae0eebef1ae2ef8f9a80",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/auth-view-model.ts",
+      "raw_sha256": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+      "captured_text_sha256": "ecb64232b4b931e71eb995c3b46df0e61174e95ae4f54a36b3a73b73193f0885",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/boot.ts",
+      "raw_sha256": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+      "captured_text_sha256": "eef5a73fb2a7c16027f0e54f1be59111ec5fa72edaadbed5ce6c25ae50e80e9a",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/candidate-application.ts",
+      "raw_sha256": "fc6a6b32d06a10e1e6c84987c73d413b61dbd78514a8425c9029023d61760e04",
+      "captured_text_sha256": "fc6a6b32d06a10e1e6c84987c73d413b61dbd78514a8425c9029023d61760e04",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/candidate-run-preview-control-plane.ts",
+      "raw_sha256": "badb0d69f9444af7fb39a8b47ba39bc2bfae721f71acb38e7bdcf8501d04685b",
+      "captured_text_sha256": "badb0d69f9444af7fb39a8b47ba39bc2bfae721f71acb38e7bdcf8501d04685b",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/candidate-run-preview-page.ts",
+      "raw_sha256": "b891222d3c2c12b053466fb5990beeb12c013d37b67851a377ba21e3fc425d66",
+      "captured_text_sha256": "b891222d3c2c12b053466fb5990beeb12c013d37b67851a377ba21e3fc425d66",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/candidate-run-preview-view-model.ts",
+      "raw_sha256": "00b886e84f541108c4bdccec9218dcd5856bacebec44c1263a122894c9d6d9fb",
+      "captured_text_sha256": "00b886e84f541108c4bdccec9218dcd5856bacebec44c1263a122894c9d6d9fb",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/chat-attachments.ts",
+      "raw_sha256": "7d07635de7a94a40b295dbae7dee9b67a58d4b2d7384f49ee0097c6ba1b8a65e",
+      "captured_text_sha256": "7d07635de7a94a40b295dbae7dee9b67a58d4b2d7384f49ee0097c6ba1b8a65e",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/chat-delivery-creator.ts",
+      "raw_sha256": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+      "captured_text_sha256": "7598a2537abf9474a7bbbac4a858584f6075dbe33100b4b18da41930e5aa42e8",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/chat-page.ts",
+      "raw_sha256": "e32c9af4da743f59a0ab1af6c5712e2e30d60bd79dd46986c521496461d9cace",
+      "captured_text_sha256": "e32c9af4da743f59a0ab1af6c5712e2e30d60bd79dd46986c521496461d9cace",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/chat-view-model.ts",
+      "raw_sha256": "5854294f3f6d86887f6bf9fcf78eb8421d54384aebe6d664d7fcbbadae20921d",
+      "captured_text_sha256": "5854294f3f6d86887f6bf9fcf78eb8421d54384aebe6d664d7fcbbadae20921d",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/client-occupancy-controls.ts",
+      "raw_sha256": "18a0040c5d96ad8819104ed31141c3f04f960842465c754d9741740a79dff1fa",
+      "captured_text_sha256": "18a0040c5d96ad8819104ed31141c3f04f960842465c754d9741740a79dff1fa",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/client-occupancy-facade.ts",
+      "raw_sha256": "0522db1d5f2e826255bdb1e4d3b690ae36a275b8a9e20898a6a65467881667be",
+      "captured_text_sha256": "0522db1d5f2e826255bdb1e4d3b690ae36a275b8a9e20898a6a65467881667be",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/client-occupancy-view-model.ts",
+      "raw_sha256": "f46a2eb7593bbad3726b6bca0cae0c517bb6897562545869cc915340a0d79c59",
+      "captured_text_sha256": "f46a2eb7593bbad3726b6bca0cae0c517bb6897562545869cc915340a0d79c59",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/client-surface.ts",
+      "raw_sha256": "98d938fffabfb2ec613979f2a82aa604a7b469417fac9eb3e798f16557887c14",
+      "captured_text_sha256": "98d938fffabfb2ec613979f2a82aa604a7b469417fac9eb3e798f16557887c14",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/clients-page.ts",
+      "raw_sha256": "dc90f975a074b4e0c76661c76a32cb293072111778fead959853b8d4029db147",
+      "captured_text_sha256": "dc90f975a074b4e0c76661c76a32cb293072111778fead959853b8d4029db147",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/clients-view-model.ts",
+      "raw_sha256": "b66a37e4be6e8a44ff00682f81c2cab1f53716b460707eac36f90fba3d758c1d",
+      "captured_text_sha256": "b66a37e4be6e8a44ff00682f81c2cab1f53716b460707eac36f90fba3d758c1d",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/community-control-plane-client.ts",
+      "raw_sha256": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+      "captured_text_sha256": "023a8016a6c29ab24d0d6b24fb23715d257d7e311542333d37aa9bff951e7718",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/community-knowledge-catalog.ts",
+      "raw_sha256": "a4e9cf7b1e0c42ddbaa26e0b294fdcade8804b00be7d4fb6374762c247df5a72",
+      "captured_text_sha256": "a4e9cf7b1e0c42ddbaa26e0b294fdcade8804b00be7d4fb6374762c247df5a72",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/action-bar.ts",
+      "raw_sha256": "b962eb0683514bea5e95bfb298c33d362f0eba5b3092ff7d893173cf33bcd9f8",
+      "captured_text_sha256": "b962eb0683514bea5e95bfb298c33d362f0eba5b3092ff7d893173cf33bcd9f8",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/bounded-text.ts",
+      "raw_sha256": "12ee5a9721dad6001a7cd62d04b50fea1ac0f5f15c1cdd0338d22e1a4487a535",
+      "captured_text_sha256": "12ee5a9721dad6001a7cd62d04b50fea1ac0f5f15c1cdd0338d22e1a4487a535",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/client-error-boundary.ts",
+      "raw_sha256": "08025e2188a63efcae450b64bf62e4f686d62ba59a913a8aa3e9a4fd45188c20",
+      "captured_text_sha256": "08025e2188a63efcae450b64bf62e4f686d62ba59a913a8aa3e9a4fd45188c20",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/connection-bar.ts",
+      "raw_sha256": "2fb6aeb059d27db1df763d5d914268d3539f3aa2c9005ee88da02dd050620f1d",
+      "captured_text_sha256": "2fb6aeb059d27db1df763d5d914268d3539f3aa2c9005ee88da02dd050620f1d",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/drawer.ts",
+      "raw_sha256": "d115a23c4a25fedfb22c626864a6d83d44c199c39b4b418d2d7c22835989c3be",
+      "captured_text_sha256": "d115a23c4a25fedfb22c626864a6d83d44c199c39b4b418d2d7c22835989c3be",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/empty-state.ts",
+      "raw_sha256": "ad1c8f110018e4f438fbfa279205844fa30eeacc08e1215ef81d4556c6ac293f",
+      "captured_text_sha256": "ad1c8f110018e4f438fbfa279205844fa30eeacc08e1215ef81d4556c6ac293f",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/form-field.ts",
+      "raw_sha256": "c82316f064e3f9b096e6fa4c9f2692e7ee3338e09d6eb99f82486e6289fc62eb",
+      "captured_text_sha256": "c82316f064e3f9b096e6fa4c9f2692e7ee3338e09d6eb99f82486e6289fc62eb",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/index.ts",
+      "raw_sha256": "53c74d933c16ea5137c8db7629eb3709be87c3914ac30988ec44d50eb9127a0f",
+      "captured_text_sha256": "53c74d933c16ea5137c8db7629eb3709be87c3914ac30988ec44d50eb9127a0f",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/keyed-collection.ts",
+      "raw_sha256": "02c7ec52cc84501e9d392ff5ab72f8c1ccfc17e8fd70d0fe65986f939c6a8d71",
+      "captured_text_sha256": "02c7ec52cc84501e9d392ff5ab72f8c1ccfc17e8fd70d0fe65986f939c6a8d71",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/metric.ts",
+      "raw_sha256": "bc1fae63e8dd1f041b82e1347193ad015e01723ceca449b7caee42866129b45d",
+      "captured_text_sha256": "bc1fae63e8dd1f041b82e1347193ad015e01723ceca449b7caee42866129b45d",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/split-pane.ts",
+      "raw_sha256": "37561a4b4d7b366237f20d8fe0ff49f11935470e83c98bd121019de5a3946e0f",
+      "captured_text_sha256": "37561a4b4d7b366237f20d8fe0ff49f11935470e83c98bd121019de5a3946e0f",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/tabs.ts",
+      "raw_sha256": "4de4838f587d4df5799855c797f0dd1a3a86927083b88b3b5fbafda574adaae7",
+      "captured_text_sha256": "4de4838f587d4df5799855c797f0dd1a3a86927083b88b3b5fbafda574adaae7",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/toolbar.ts",
+      "raw_sha256": "383820d2b21227639f8f5ec214591772591df26e23c515ead5a2eed7621ef612",
+      "captured_text_sha256": "383820d2b21227639f8f5ec214591772591df26e23c515ead5a2eed7621ef612",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/components/windowed-list.ts",
+      "raw_sha256": "f9efbd5e904548de0c61dbf56f2aaeded91f38a075642b13d5aa185f67a55855",
+      "captured_text_sha256": "f9efbd5e904548de0c61dbf56f2aaeded91f38a075642b13d5aa185f67a55855",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/contextual-decision-view-model.ts",
+      "raw_sha256": "fb6bf9f08659ab2bf6a089cb86d056c1bce4f6bf6ae95be840c491d38e03fa09",
+      "captured_text_sha256": "fb6bf9f08659ab2bf6a089cb86d056c1bce4f6bf6ae95be840c491d38e03fa09",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/contextual-decision.ts",
+      "raw_sha256": "19a46c26b47cd0632ab43680af1b9fb820ff3e190aa23f372bdb5f20c3c05a9d",
+      "captured_text_sha256": "19a46c26b47cd0632ab43680af1b9fb820ff3e190aa23f372bdb5f20c3c05a9d",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/core/connection-state.ts",
+      "raw_sha256": "7038b2223bdeae6d0ec815ac88e11e4c628f7edce8bf1fcc064a68ef5ea32257",
+      "captured_text_sha256": "7038b2223bdeae6d0ec815ac88e11e4c628f7edce8bf1fcc064a68ef5ea32257",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/decision-clarification-page.ts",
+      "raw_sha256": "a84c2cfe3962b039a83c5492ccb514beec0f8393e6f19a96b0a7f3a5eed2bbb9",
+      "captured_text_sha256": "a84c2cfe3962b039a83c5492ccb514beec0f8393e6f19a96b0a7f3a5eed2bbb9",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/decision-clarification-view-model.ts",
+      "raw_sha256": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+      "captured_text_sha256": "50e989adfd4bebd37f18b0045c67e58ff63d9c634065a17d833371866ee81129",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/device-page.ts",
+      "raw_sha256": "106865474c322cae43ad52245929f0592a2f211ebb1dae8a394e1d60e97598ff",
+      "captured_text_sha256": "106865474c322cae43ad52245929f0592a2f211ebb1dae8a394e1d60e97598ff",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/device-provider-encryption.ts",
+      "raw_sha256": "479d40b346294b0256c624f76e02718e755f074e1f4482781c2a3021a8a87d92",
+      "captured_text_sha256": "479d40b346294b0256c624f76e02718e755f074e1f4482781c2a3021a8a87d92",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/device-provider-panel.ts",
+      "raw_sha256": "3530f9562c38c062417a321ff9e8787d618ac259e453f709678efd1ed3ba4513",
+      "captured_text_sha256": "3530f9562c38c062417a321ff9e8787d618ac259e453f709678efd1ed3ba4513",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/diff-preview.ts",
+      "raw_sha256": "91e2c167e1b4275d523ec1621aa6a44678f00ecc89a68fee5b24f68fdb968350",
+      "captured_text_sha256": "91e2c167e1b4275d523ec1621aa6a44678f00ecc89a68fee5b24f68fdb968350",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/display-labels.ts",
+      "raw_sha256": "b953c77452dcae8a0774dfe232f42fa035b961154cdba3e1737310761fa68154",
+      "captured_text_sha256": "b953c77452dcae8a0774dfe232f42fa035b961154cdba3e1737310761fa68154",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh-ui.tsx",
+      "raw_sha256": "09f0d47f8df89de9bce7a0cf98afbcb2b63fbd192ef84751840ec34de79c86a0",
+      "captured_text_sha256": "09f0d47f8df89de9bce7a0cf98afbcb2b63fbd192ef84751840ec34de79c86a0",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/AttachmentRail.tsx",
+      "raw_sha256": "819f699df05d811dc36ccfca21fb4a3ac0ca51b69b8972285fd4fd6619ef9583",
+      "captured_text_sha256": "819f699df05d811dc36ccfca21fb4a3ac0ca51b69b8972285fd4fd6619ef9583",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/SessionBrowser.tsx",
+      "raw_sha256": "02a6aa3198dc81e78ccceaf8707ca45a8fe70f15c32e702ee613891e7605c743",
+      "captured_text_sha256": "02a6aa3198dc81e78ccceaf8707ca45a8fe70f15c32e702ee613891e7605c743",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/clipboard.ts",
+      "raw_sha256": "5da32ba8220a2f0262f52e49e94bf90f3511864d7ad3883054905750f044a3f7",
+      "captured_text_sha256": "5da32ba8220a2f0262f52e49e94bf90f3511864d7ad3883054905750f044a3f7",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/markdown/CodeBlock.tsx",
+      "raw_sha256": "e6f6d6e07bddb24fde9afa9cd5fc6efd7560bf0c099133c81d38fb100fbc00f0",
+      "captured_text_sha256": "e6f6d6e07bddb24fde9afa9cd5fc6efd7560bf0c099133c81d38fb100fbc00f0",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/markdown/MarkdownText.tsx",
+      "raw_sha256": "b4de2d925a175587f4f7e485643091a43f9db44fff78aacdda02b140fe4a6bfb",
+      "captured_text_sha256": "b4de2d925a175587f4f7e485643091a43f9db44fff78aacdda02b140fe4a6bfb",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/markdown/cjkFriendlyStrong.ts",
+      "raw_sha256": "f971d875b760112737ff4969cff43ba5f47bec63b49b477fb214959a224897a5",
+      "captured_text_sha256": "f971d875b760112737ff4969cff43ba5f47bec63b49b477fb214959a224897a5",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/markdown/highlight.ts",
+      "raw_sha256": "908044d42d19d6a763bea32da02c329ec71842de0f86df96f36f1acee5ef2068",
+      "captured_text_sha256": "908044d42d19d6a763bea32da02c329ec71842de0f86df96f36f1acee5ef2068",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/markdown/incremental.ts",
+      "raw_sha256": "c076f071d653cb5cbf9be8bc234f672634c671dec665885db64762b74d268c4f",
+      "captured_text_sha256": "c076f071d653cb5cbf9be8bc234f672634c671dec665885db64762b74d268c4f",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/markdown/parse.ts",
+      "raw_sha256": "9aec819e7680b9bb0e317950138014cb754334b3768185b4512853ffe4d47aa4",
+      "captured_text_sha256": "9aec819e7680b9bb0e317950138014cb754334b3768185b4512853ffe4d47aa4",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/dsh/markdown/render.tsx",
+      "raw_sha256": "547180cb27d4d5aab098dc32c7d908bfae1a9e80700165b804e7fabea3ca78ff",
+      "captured_text_sha256": "547180cb27d4d5aab098dc32c7d908bfae1a9e80700165b804e7fabea3ca78ff",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/editable-draft.ts",
+      "raw_sha256": "f3af251efeddf4d134790b459d4a5c5599b6f0f2d052909b4d187d3527ac95dc",
+      "captured_text_sha256": "f3af251efeddf4d134790b459d4a5c5599b6f0f2d052909b4d187d3527ac95dc",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/extensions-page.ts",
+      "raw_sha256": "25741529577fc08a0493ab8692309e313a5de449bf7159020fdd6c9ff680e9b5",
+      "captured_text_sha256": "25741529577fc08a0493ab8692309e313a5de449bf7159020fdd6c9ff680e9b5",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/format-instant.ts",
+      "raw_sha256": "32c4e278e15da559b6aa16a58ced8d4fcbe21bb6616aca3e860b2c1bb114082c",
+      "captured_text_sha256": "32c4e278e15da559b6aa16a58ced8d4fcbe21bb6616aca3e860b2c1bb114082c",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/home-dashboard-page.ts",
+      "raw_sha256": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+      "captured_text_sha256": "e0d08218021a360f0fb9c39ef18e40c6e7242c42fa6bda3207264827db6e806f",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/home-dashboard-view-model.ts",
+      "raw_sha256": "7f126a891c65b0d836f5b3d93d5a009f27b93553532df6f7e344e3731b99a24b",
+      "captured_text_sha256": "7f126a891c65b0d836f5b3d93d5a009f27b93553532df6f7e344e3731b99a24b",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/home-recent-visits.ts",
+      "raw_sha256": "fbcb9a8028444f55d0f77d6fa5e439351ed302a8eaace2bee6e588d5cd0604a1",
+      "captured_text_sha256": "fbcb9a8028444f55d0f77d6fa5e439351ed302a8eaace2bee6e588d5cd0604a1",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/index.ts",
+      "raw_sha256": "73c0688aaa022e111f2d74a9e72509146a0feefe033563fcde71798ad273cc26",
+      "captured_text_sha256": "73c0688aaa022e111f2d74a9e72509146a0feefe033563fcde71798ad273cc26",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/login-page.ts",
+      "raw_sha256": "a927a26dbc4d4e3c0469a169a4633b190db98744dd6d27847ca4c8129093c0dd",
+      "captured_text_sha256": "a927a26dbc4d4e3c0469a169a4633b190db98744dd6d27847ca4c8129093c0dd",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/login-view-model.ts",
+      "raw_sha256": "653a3104abeb2eca5a9c243c453c7559f07a749f2974dcca6374d6d2c2057a3a",
+      "captured_text_sha256": "653a3104abeb2eca5a9c243c453c7559f07a749f2974dcca6374d6d2c2057a3a",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/my-work-page.ts",
+      "raw_sha256": "64a44385a0b2f93fd8e1241627817b08445c57aa5833df9f8ae47cce1f174a15",
+      "captured_text_sha256": "64a44385a0b2f93fd8e1241627817b08445c57aa5833df9f8ae47cce1f174a15",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/my-work-view-model.ts",
+      "raw_sha256": "a56913936f4e85ff1d51628407a2ada16fc1f97f6ffe5ccec876dd1875812b06",
+      "captured_text_sha256": "a56913936f4e85ff1d51628407a2ada16fc1f97f6ffe5ccec876dd1875812b06",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/navigation-capability.ts",
+      "raw_sha256": "95cba40727b9954379a5f9bf9a8c540ace0c9497db196894f7c6732edfcb3b7a",
+      "captured_text_sha256": "95cba40727b9954379a5f9bf9a8c540ace0c9497db196894f7c6732edfcb3b7a",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/onboarding-page.ts",
+      "raw_sha256": "ebcf3c7171ef2374568422651381ca5a3abceeb5c23b21a9989205c84251ed34",
+      "captured_text_sha256": "ebcf3c7171ef2374568422651381ca5a3abceeb5c23b21a9989205c84251ed34",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/page-annotation-page.ts",
+      "raw_sha256": "9bb8ff20cdd4e22a9bcb4e5abde1797932c44a32ae6d1ac39b2cf269c7a7dc9a",
+      "captured_text_sha256": "9bb8ff20cdd4e22a9bcb4e5abde1797932c44a32ae6d1ac39b2cf269c7a7dc9a",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/page-annotation-view-model.ts",
+      "raw_sha256": "60b4523e94326143485028ea33028dbc71f61daf4a93c93a2c07b76193521390",
+      "captured_text_sha256": "60b4523e94326143485028ea33028dbc71f61daf4a93c93a2c07b76193521390",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/preferences.ts",
+      "raw_sha256": "336622ca0c22772e70969a2e006c924e939ed33edb6ffde01a01ae3c5a59b659",
+      "captured_text_sha256": "336622ca0c22772e70969a2e006c924e939ed33edb6ffde01a01ae3c5a59b659",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/projects-page.ts",
+      "raw_sha256": "89fad8ca86d467814b621ceb47a64ce3c5e8a21689ab0b379ba9faf3b76db6de",
+      "captured_text_sha256": "89fad8ca86d467814b621ceb47a64ce3c5e8a21689ab0b379ba9faf3b76db6de",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/public-redaction.ts",
+      "raw_sha256": "5ca7e33ec76a723ec8a3abd7eff32fe1693d0a83db4589a7ab2f39065c143c77",
+      "captured_text_sha256": "5ca7e33ec76a723ec8a3abd7eff32fe1693d0a83db4589a7ab2f39065c143c77",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/readiness-page.ts",
+      "raw_sha256": "b30f1f6101c564091a37f6bbcc26a8164fdb00ac31033665c5dcec32ba2a2ab9",
+      "captured_text_sha256": "b30f1f6101c564091a37f6bbcc26a8164fdb00ac31033665c5dcec32ba2a2ab9",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/readiness-view-model.ts",
+      "raw_sha256": "65e85b02f17cec977449883eed76e1876952f9421b928bc18c6ce1d2cec3b142",
+      "captured_text_sha256": "65e85b02f17cec977449883eed76e1876952f9421b928bc18c6ce1d2cec3b142",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/repositories-page.ts",
+      "raw_sha256": "c7521e845360241696569adc05e66c3471d42eb29e9c4debeeefcc117cd40ab0",
+      "captured_text_sha256": "c7521e845360241696569adc05e66c3471d42eb29e9c4debeeefcc117cd40ab0",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/repositories-view-model.ts",
+      "raw_sha256": "76bbcf690640bb9331ad0a2b9d2103ca6881b97c83b87412ab5947880ce8fd55",
+      "captured_text_sha256": "76bbcf690640bb9331ad0a2b9d2103ca6881b97c83b87412ab5947880ce8fd55",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/runtime-config.ts",
+      "raw_sha256": "3e4d8ea695263bd04c6e94f00c2aa817afca5ea8197699fbb2aefa9e10fbd1f7",
+      "captured_text_sha256": "3e4d8ea695263bd04c6e94f00c2aa817afca5ea8197699fbb2aefa9e10fbd1f7",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/settings-page.ts",
+      "raw_sha256": "c008a006275cb9933262cb6e27269cc4db40bf4f607ceabae7e8c261e17bf070",
+      "captured_text_sha256": "c008a006275cb9933262cb6e27269cc4db40bf4f607ceabae7e8c261e17bf070",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/settings-view-model.ts",
+      "raw_sha256": "c5ec385ad8fc80b148abcd221873abe76eadd2887563f9e22320a615b669c039",
+      "captured_text_sha256": "c5ec385ad8fc80b148abcd221873abe76eadd2887563f9e22320a615b669c039",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/solution-diagram.ts",
+      "raw_sha256": "770d22ac8251423696b126c943d95ff5edfff475c073c248690efcd311a3a6d5",
+      "captured_text_sha256": "770d22ac8251423696b126c943d95ff5edfff475c073c248690efcd311a3a6d5",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/strongflow-review-annotations.ts",
+      "raw_sha256": "13d29715f3a0acf1f8e7bb40948e471f2fb7736850663f5bbd1b42d69d60627d",
+      "captured_text_sha256": "13d29715f3a0acf1f8e7bb40948e471f2fb7736850663f5bbd1b42d69d60627d",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/strongflow-review-detail.ts",
+      "raw_sha256": "2abf84bab8deaff4b383cf96712d816e0f9746e840ee7327efc0b13c2ef31fc9",
+      "captured_text_sha256": "2abf84bab8deaff4b383cf96712d816e0f9746e840ee7327efc0b13c2ef31fc9",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/strongflow-review-view-model.ts",
+      "raw_sha256": "a9cc51dce2697887c864c3c40539ee2177d71bfbb6e8930b06a02ef2bfc05848",
+      "captured_text_sha256": "a9cc51dce2697887c864c3c40539ee2177d71bfbb6e8930b06a02ef2bfc05848",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/task-entry-page.ts",
+      "raw_sha256": "f3871577306664a27379b44ec34190fdc80620f7df2e0b314d2ac9ce51f52cba",
+      "captured_text_sha256": "f3871577306664a27379b44ec34190fdc80620f7df2e0b314d2ac9ce51f52cba",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/task-entry-view-model.ts",
+      "raw_sha256": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+      "captured_text_sha256": "f9cd92310022579719d608c6465c26a7b328ba27d63d0cbe0baf44d6319c5f18",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/task-run-page.ts",
+      "raw_sha256": "25e1be920db54e9d27c1be975695325c0f3255f793672ba4f2b2a51e55276863",
+      "captured_text_sha256": "25e1be920db54e9d27c1be975695325c0f3255f793672ba4f2b2a51e55276863",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/task-run-view-model.ts",
+      "raw_sha256": "467c5e9d7e315919096094db9fae92dbb49fb98f9ed10b0c35ba4a75d8edfb6a",
+      "captured_text_sha256": "467c5e9d7e315919096094db9fae92dbb49fb98f9ed10b0c35ba4a75d8edfb6a",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/usage-health-page.ts",
+      "raw_sha256": "5564e36b96798bfa7f2af50c76ae685f163ab7e26b430984f60a76c3bf0c9bbd",
+      "captured_text_sha256": "5564e36b96798bfa7f2af50c76ae685f163ab7e26b430984f60a76c3bf0c9bbd",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/usage-health-view-model.ts",
+      "raw_sha256": "a1636bc74c0dc7ad24ca434cc98b641517c5136a3559d4780491e66398d2a78f",
+      "captured_text_sha256": "a1636bc74c0dc7ad24ca434cc98b641517c5136a3559d4780491e66398d2a78f",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "apps/client/src/visual-regression.ts",
+      "raw_sha256": "b76b6595923acd0f0a81e8a85abd2bf3283ad08c60758fc7750c78dea7d10d42",
+      "captured_text_sha256": "b76b6595923acd0f0a81e8a85abd2bf3283ad08c60758fc7750c78dea7d10d42",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/helper/src/main.rs",
+      "raw_sha256": "84555da6262aedfadd3b17d2f8f0e07b4169ffe31e1f2c2a403acddeab46c2ef",
+      "captured_text_sha256": "84555da6262aedfadd3b17d2f8f0e07b4169ffe31e1f2c2a403acddeab46c2ef",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/kernel/src/lib.rs",
+      "raw_sha256": "ffdcb685328a358e681b2bc9972068493523f36b6ba5bebb9b1523c172d0d2a7",
+      "captured_text_sha256": "ffdcb685328a358e681b2bc9972068493523f36b6ba5bebb9b1523c172d0d2a7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/kernel/src/model_port.rs",
+      "raw_sha256": "52b2a5f4ffb3e52a50199168d29f65855cc347ed47fa732f95f7f82f64b7a088",
+      "captured_text_sha256": "52b2a5f4ffb3e52a50199168d29f65855cc347ed47fa732f95f7f82f64b7a088",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-api/src/lib.rs",
+      "raw_sha256": "626468e5f7a19ec621e21bce90366c754bf894e1799fe4c22b34c0a999ce6863",
+      "captured_text_sha256": "626468e5f7a19ec621e21bce90366c754bf894e1799fe4c22b34c0a999ce6863",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-audit/src/event.rs",
+      "raw_sha256": "031dd44a0cc7b6b75d9c74fdc0b665288e678d83808b20ea9f8f5dabf0736815",
+      "captured_text_sha256": "031dd44a0cc7b6b75d9c74fdc0b665288e678d83808b20ea9f8f5dabf0736815",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-audit/src/export.rs",
+      "raw_sha256": "d3df414094fa37d0786526eadeb2848eee4407dde998d6765d8155708ae52a46",
+      "captured_text_sha256": "d3df414094fa37d0786526eadeb2848eee4407dde998d6765d8155708ae52a46",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-audit/src/governance.rs",
+      "raw_sha256": "d8f4b069629bbd47c56e33499c5f00a2fef82ce276d6d2a59e6114230f1e2413",
+      "captured_text_sha256": "d8f4b069629bbd47c56e33499c5f00a2fef82ce276d6d2a59e6114230f1e2413",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-audit/src/lib.rs",
+      "raw_sha256": "de37c4ff8ba36c9a9427873f15b5bcd217c551f2ad5adee9c8bce84a0280079b",
+      "captured_text_sha256": "de37c4ff8ba36c9a9427873f15b5bcd217c551f2ad5adee9c8bce84a0280079b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-audit/src/store.rs",
+      "raw_sha256": "991948976d88c8a85062cc21a6d26420e070d303f450e1b6802e5d83dbb54d73",
+      "captured_text_sha256": "991948976d88c8a85062cc21a6d26420e070d303f450e1b6802e5d83dbb54d73",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/backup.rs",
+      "raw_sha256": "1b1ff1e7ccb4f4688e2d53604ca1e70f848dd5ce066db548bbf2bf7529b4a664",
+      "captured_text_sha256": "1b1ff1e7ccb4f4688e2d53604ca1e70f848dd5ce066db548bbf2bf7529b4a664",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/cli.rs",
+      "raw_sha256": "075b128dd9ba55f4e3053b44b295f434ca63f1d66779814a5efde4624bf3ec7b",
+      "captured_text_sha256": "075b128dd9ba55f4e3053b44b295f434ca63f1d66779814a5efde4624bf3ec7b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/community_gate.rs",
+      "raw_sha256": "e93234c68060472dfe5bacc563781e5237034027a4ede7fdd6988cef0acb42bb",
+      "captured_text_sha256": "e93234c68060472dfe5bacc563781e5237034027a4ede7fdd6988cef0acb42bb",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/device_admin.rs",
+      "raw_sha256": "fefb7a0b125f6898334183fa9722c7563110ca4e42c67dad0e269fc9e8dbb6ed",
+      "captured_text_sha256": "fefb7a0b125f6898334183fa9722c7563110ca4e42c67dad0e269fc9e8dbb6ed",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/doctor.rs",
+      "raw_sha256": "cba3ba6787077a0d1d1898ac1ad60dd7e8a13554ef343177568e77cb0e3bdbba",
+      "captured_text_sha256": "cba3ba6787077a0d1d1898ac1ad60dd7e8a13554ef343177568e77cb0e3bdbba",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/git.rs",
+      "raw_sha256": "ef1bed216560b500edc924f715ac757df964693353592b3a4c93f6beb0eadc93",
+      "captured_text_sha256": "ef1bed216560b500edc924f715ac757df964693353592b3a4c93f6beb0eadc93",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/launcher.rs",
+      "raw_sha256": "05251eaadb2abed26e659dddb75bde375622ad01918d8002744c2cc2a67fc63e",
+      "captured_text_sha256": "05251eaadb2abed26e659dddb75bde375622ad01918d8002744c2cc2a67fc63e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/lib.rs",
+      "raw_sha256": "6274f99d71bc4925e0c7906af35a28a9a2727627c91fd99dd8d3a92b4cf2d4e9",
+      "captured_text_sha256": "6274f99d71bc4925e0c7906af35a28a9a2727627c91fd99dd8d3a92b4cf2d4e9",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/main.rs",
+      "raw_sha256": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+      "captured_text_sha256": "e69258430f27c1b9fa96720881e1f61ced32bdee5e0710207b34d10faf79b14d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/model.rs",
+      "raw_sha256": "16f4539ed386876a4e3a98d89f2e01d4cc7e6a87b9c4df24c9e8eb53baba54c4",
+      "captured_text_sha256": "16f4539ed386876a4e3a98d89f2e01d4cc7e6a87b9c4df24c9e8eb53baba54c4",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-cli/src/repo_admin.rs",
+      "raw_sha256": "231cd14eb8a8234f026ef1e36cd72ff1b9a7830192ed84533a72b3b4d85ea4f1",
+      "captured_text_sha256": "231cd14eb8a8234f026ef1e36cd72ff1b9a7830192ed84533a72b3b4d85ea4f1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/domain.rs",
+      "raw_sha256": "1764a67c34499aeddf3f74edbb77ba2eba82155a894c3be86ade256fbc52b3bd",
+      "captured_text_sha256": "1764a67c34499aeddf3f74edbb77ba2eba82155a894c3be86ade256fbc52b3bd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/exchange/dedup.rs",
+      "raw_sha256": "7f4a8c275b0aa37c143a1babfd0ad7a5a632992bd5ef4eb428af5f15320f32b0",
+      "captured_text_sha256": "7f4a8c275b0aa37c143a1babfd0ad7a5a632992bd5ef4eb428af5f15320f32b0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/exchange/frame.rs",
+      "raw_sha256": "a82d0c5133417872b75ec6c2ae96b3e13d2baf6e1d50247c5874a0a34a341dd7",
+      "captured_text_sha256": "a82d0c5133417872b75ec6c2ae96b3e13d2baf6e1d50247c5874a0a34a341dd7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/exchange/inbound.rs",
+      "raw_sha256": "7d9b2a863bcdeafbda879a09b498119c53e7edfb173d8ab5faa207211ddc8ab4",
+      "captured_text_sha256": "7d9b2a863bcdeafbda879a09b498119c53e7edfb173d8ab5faa207211ddc8ab4",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/exchange/mod.rs",
+      "raw_sha256": "2ef763b58165101529936d313e5feaabc8630f6c722d22b44cdd86b0cde1b809",
+      "captured_text_sha256": "2ef763b58165101529936d313e5feaabc8630f6c722d22b44cdd86b0cde1b809",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/exchange/outbox.rs",
+      "raw_sha256": "fbbdd88bab4fc128ebab0e6005100a54d062f67a97ca1091f6b13e5c2939bf6c",
+      "captured_text_sha256": "fbbdd88bab4fc128ebab0e6005100a54d062f67a97ca1091f6b13e5c2939bf6c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/exchange/sequence.rs",
+      "raw_sha256": "1eb6afae7419184ec43d9fbcf5c91a95d6f9d59b162e5a5d1c49c8f786ac6c36",
+      "captured_text_sha256": "1eb6afae7419184ec43d9fbcf5c91a95d6f9d59b162e5a5d1c49c8f786ac6c36",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/lib.rs",
+      "raw_sha256": "711b526a0bd3f5e6315116564d35534248aabcd4ce9d5ae516991ab11d906e21",
+      "captured_text_sha256": "711b526a0bd3f5e6315116564d35534248aabcd4ce9d5ae516991ab11d906e21",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/managed_app.rs",
+      "raw_sha256": "ca4f0984dc99fb1dd9eae8f48d8ceede45df11ce334f0c21144724ffc3ebf1e6",
+      "captured_text_sha256": "ca4f0984dc99fb1dd9eae8f48d8ceede45df11ce334f0c21144724ffc3ebf1e6",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/messages.rs",
+      "raw_sha256": "1562519e3b86d0c1deedfa6ebcbe5b961f60187c77f70131d820cdfded11b23c",
+      "captured_text_sha256": "1562519e3b86d0c1deedfa6ebcbe5b961f60187c77f70131d820cdfded11b23c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/preview.rs",
+      "raw_sha256": "01e42bb5e90c52b0aec77138c469ac6cf1dfbf276f13a2f53aebfe2f31112daa",
+      "captured_text_sha256": "01e42bb5e90c52b0aec77138c469ac6cf1dfbf276f13a2f53aebfe2f31112daa",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-client-port/src/wire.rs",
+      "raw_sha256": "4603c2308131d842473301701d1da999cb375ae6e9ad5fd69e730457fbb16e59",
+      "captured_text_sha256": "4603c2308131d842473301701d1da999cb375ae6e9ad5fd69e730457fbb16e59",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/action_bridge.rs",
+      "raw_sha256": "7bd6a5334e6a6e1b259e25ac27d633df633896981d51f68fb7c198fbf80b03f0",
+      "captured_text_sha256": "7bd6a5334e6a6e1b259e25ac27d633df633896981d51f68fb7c198fbf80b03f0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/adapter.rs",
+      "raw_sha256": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+      "captured_text_sha256": "888a8a63f6c10b09d527411df8902d1644a6e04d92f6c24dc26661ad4ea13c9b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/candidate_artifact_outbox.rs",
+      "raw_sha256": "b6b9117185e822822a4d7be7142db2820ab0417047218feadb6aa049faa3c07e",
+      "captured_text_sha256": "b6b9117185e822822a4d7be7142db2820ab0417047218feadb6aa049faa3c07e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/contract.rs",
+      "raw_sha256": "fd1f5c61250f7d5a6353dd8288d52432c996576e8a60b96298b8229ee2ec5bc3",
+      "captured_text_sha256": "fd1f5c61250f7d5a6353dd8288d52432c996576e8a60b96298b8229ee2ec5bc3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/diagnostic_artifact_outbox.rs",
+      "raw_sha256": "71d42359181eeb5fc95c584d49b64dce63fdb04475a8aeb94d0d382e5386ae96",
+      "captured_text_sha256": "71d42359181eeb5fc95c584d49b64dce63fdb04475a8aeb94d0d382e5386ae96",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/helper_release.rs",
+      "raw_sha256": "8c3e0b95333bbca5cebbed8e49f28b7a15da47e1f1a06df613b50210d054e73f",
+      "captured_text_sha256": "8c3e0b95333bbca5cebbed8e49f28b7a15da47e1f1a06df613b50210d054e73f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/lib.rs",
+      "raw_sha256": "c57ca8f9200d326920beeb36aa33a22085ede40ecad63d224d0f13f94fd3da66",
+      "captured_text_sha256": "c57ca8f9200d326920beeb36aa33a22085ede40ecad63d224d0f13f94fd3da66",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/model_bridge.rs",
+      "raw_sha256": "764faf968078fac7a0442d87cc2794e6863af0bec123f1f88448c6458d213fb2",
+      "captured_text_sha256": "764faf968078fac7a0442d87cc2794e6863af0bec123f1f88448c6458d213fb2",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/model_port_client.rs",
+      "raw_sha256": "fe8b9c5a0939128f100d928ebbba325435fac305bcf10e539e2f26d4b7847867",
+      "captured_text_sha256": "fe8b9c5a0939128f100d928ebbba325435fac305bcf10e539e2f26d4b7847867",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/outbox.rs",
+      "raw_sha256": "cf63c69c631113050c2c90d6a139201514ef98f53619506ef62b46fb411cc911",
+      "captured_text_sha256": "cf63c69c631113050c2c90d6a139201514ef98f53619506ef62b46fb411cc911",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/parallel_model_runner.rs",
+      "raw_sha256": "0a970736a218de58b12867863e254df75f326ca9b91b49d5ba6689b050193991",
+      "captured_text_sha256": "0a970736a218de58b12867863e254df75f326ca9b91b49d5ba6689b050193991",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/performance.rs",
+      "raw_sha256": "11e91662610d80478fa6ffa37bf84ae85f9ca9fad59fc8324d5e25c7bdbba682",
+      "captured_text_sha256": "11e91662610d80478fa6ffa37bf84ae85f9ca9fad59fc8324d5e25c7bdbba682",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/performance_evidence.rs",
+      "raw_sha256": "019dc276dc8d8f46d21a859a63d3d14acb8a4265c839ce9335fa41359a8de92f",
+      "captured_text_sha256": "019dc276dc8d8f46d21a859a63d3d14acb8a4265c839ce9335fa41359a8de92f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/stage_product.rs",
+      "raw_sha256": "5f6cdf70cf5f4db063645b30c83cb4ed07a544623501ba474d060c685be8cea8",
+      "captured_text_sha256": "5f6cdf70cf5f4db063645b30c83cb4ed07a544623501ba474d060c685be8cea8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/store.rs",
+      "raw_sha256": "2cb07108ca2909ccd466f039778f5ed514403a1e75c3bf7578a36d987eb5e2c6",
+      "captured_text_sha256": "2cb07108ca2909ccd466f039778f5ed514403a1e75c3bf7578a36d987eb5e2c6",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-codex/src/workrun_runtime_projection.rs",
+      "raw_sha256": "1e9f48dcb0198399e2b1a6a6031cd5fca20a113721a2ac629fd7b16ad78807a1",
+      "captured_text_sha256": "1e9f48dcb0198399e2b1a6a6031cd5fca20a113721a2ac629fd7b16ad78807a1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-connector-github/src/lib.rs",
+      "raw_sha256": "db1fade0c0725017b661f1810b5ab8c644f354fb23aa4b5b195d12a9170727b5",
+      "captured_text_sha256": "db1fade0c0725017b661f1810b5ab8c644f354fb23aa4b5b195d12a9170727b5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-connector-jira/src/lib.rs",
+      "raw_sha256": "600bb8a1e6684c498ac750b37ec505b26250028ee6167e790c2a200bad076295",
+      "captured_text_sha256": "600bb8a1e6684c498ac750b37ec505b26250028ee6167e790c2a200bad076295",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-connector-linear/src/lib.rs",
+      "raw_sha256": "e611fd4b93d2a4a2cfbf0df0d6da62e3bde7a18cd2843e6c7695934175a5dbd7",
+      "captured_text_sha256": "e611fd4b93d2a4a2cfbf0df0d6da62e3bde7a18cd2843e6c7695934175a5dbd7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-connector-slack/src/lib.rs",
+      "raw_sha256": "3be5bd1991b91788fefb31cce66621773323974bf14c02b0ebf9bff315af5f76",
+      "captured_text_sha256": "3be5bd1991b91788fefb31cce66621773323974bf14c02b0ebf9bff315af5f76",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-connector-teams/src/lib.rs",
+      "raw_sha256": "cab0666bacfbf03944838130c7c4e074b00765dc79e7675bf7ddce21b99bd379",
+      "captured_text_sha256": "cab0666bacfbf03944838130c7c4e074b00765dc79e7675bf7ddce21b99bd379",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-connector-webhook/src/lib.rs",
+      "raw_sha256": "94b8dc8a9ce5c731c0b5b945b71693862c1938c0f8f7c53f5661b86008b02441",
+      "captured_text_sha256": "94b8dc8a9ce5c731c0b5b945b71693862c1938c0f8f7c53f5661b86008b02441",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/action_policy_enforcement.rs",
+      "raw_sha256": "ea648f8ee40cb8e760ca252711b7025318145a0a38a8728711bf95429467a1cc",
+      "captured_text_sha256": "ea648f8ee40cb8e760ca252711b7025318145a0a38a8728711bf95429467a1cc",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/artifact_transaction.rs",
+      "raw_sha256": "8ca03c4e4e8bc8d8234e5d213ab95f25e4d9c4b38a58554814a13389a930922c",
+      "captured_text_sha256": "8ca03c4e4e8bc8d8234e5d213ab95f25e4d9c4b38a58554814a13389a930922c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/automation_recipe.rs",
+      "raw_sha256": "1dbda6f3d169ec6c146a5ca650803d2797574b05a242e309b37bd9c019ac6cef",
+      "captured_text_sha256": "1dbda6f3d169ec6c146a5ca650803d2797574b05a242e309b37bd9c019ac6cef",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/candidate_git_release.rs",
+      "raw_sha256": "59b72794047eb70008bef4c87f104fb8f1cf54433831f08eec627ec6e7cd48db",
+      "captured_text_sha256": "59b72794047eb70008bef4c87f104fb8f1cf54433831f08eec627ec6e7cd48db",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/candidate_source.rs",
+      "raw_sha256": "960e2900af961b5863b6e65685806937e2c73ca78cb601859b725ac39f9c8838",
+      "captured_text_sha256": "960e2900af961b5863b6e65685806937e2c73ca78cb601859b725ac39f9c8838",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/chat_interaction_application.rs",
+      "raw_sha256": "481a0857fad310b1c2e648bf57c00bed2ea4b11961c1bb7f52e1999b60953053",
+      "captured_text_sha256": "481a0857fad310b1c2e648bf57c00bed2ea4b11961c1bb7f52e1999b60953053",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/chat_interaction_projection.rs",
+      "raw_sha256": "2793b8bdbc9dfd95ae6486b68d6bcd52d41e79b15d421b6243c7b754f0aabf51",
+      "captured_text_sha256": "2793b8bdbc9dfd95ae6486b68d6bcd52d41e79b15d421b6243c7b754f0aabf51",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/client_connect.rs",
+      "raw_sha256": "062a7c0fbd84c5b28535d1e5fc70530747181ba2722df07c76df983caadd7747",
+      "captured_text_sha256": "062a7c0fbd84c5b28535d1e5fc70530747181ba2722df07c76df983caadd7747",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/client_launch_grant.rs",
+      "raw_sha256": "d089dca653274e45c7efbc1970966979edfc4e04538e1b6353d6ae8884ff44f5",
+      "captured_text_sha256": "d089dca653274e45c7efbc1970966979edfc4e04538e1b6353d6ae8884ff44f5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/client_occupancy.rs",
+      "raw_sha256": "3975b2aea3de8d695df4bee10ce867d53f64b6ee4d199479f70d7f3ef3ebe3d6",
+      "captured_text_sha256": "3975b2aea3de8d695df4bee10ce867d53f64b6ee4d199479f70d7f3ef3ebe3d6",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/client_registry.rs",
+      "raw_sha256": "8b400acb39817c8f7b6be44bec476ec39ed8c28df0ae7aa6414d28eee269d1ca",
+      "captured_text_sha256": "8b400acb39817c8f7b6be44bec476ec39ed8c28df0ae7aa6414d28eee269d1ca",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/collaboration.rs",
+      "raw_sha256": "b3ad37d99a4eb8adcce159b98769f955087e44b4caf37f9f29bfbd7609b3d713",
+      "captured_text_sha256": "b3ad37d99a4eb8adcce159b98769f955087e44b4caf37f9f29bfbd7609b3d713",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/collaboration_inbox.rs",
+      "raw_sha256": "fb01c99dbcecb34853ad73e2ab9226dc087eaa44b5fbaaf854d8e036853ee93e",
+      "captured_text_sha256": "fb01c99dbcecb34853ad73e2ab9226dc087eaa44b5fbaaf854d8e036853ee93e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/collaboration_inbox_production.rs",
+      "raw_sha256": "4284fa03d126de28c44da7d5072ef73d65e369d12d1dd965a9b176933860eb72",
+      "captured_text_sha256": "4284fa03d126de28c44da7d5072ef73d65e369d12d1dd965a9b176933860eb72",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/control_plane_instance.rs",
+      "raw_sha256": "aa43705646e122bd3bd220570015b0179b899ac6d5e93ad1c29182ea43853168",
+      "captured_text_sha256": "aa43705646e122bd3bd220570015b0179b899ac6d5e93ad1c29182ea43853168",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/credential_reference.rs",
+      "raw_sha256": "33b897673b04750d83975b9bb851d5d4e8de2d71d2bc787a76f4228f66b96925",
+      "captured_text_sha256": "33b897673b04750d83975b9bb851d5d4e8de2d71d2bc787a76f4228f66b96925",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/debug_hypothesis_ledger.rs",
+      "raw_sha256": "d622eb068978abb0cb75aff1bcc8801d6592456c3e2a75a5b33a13ea4823456c",
+      "captured_text_sha256": "d622eb068978abb0cb75aff1bcc8801d6592456c3e2a75a5b33a13ea4823456c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/delivery_application.rs",
+      "raw_sha256": "7c582724d6bd1373030ffa8f98da330039b13197316b78c34439a3296d992d36",
+      "captured_text_sha256": "7c582724d6bd1373030ffa8f98da330039b13197316b78c34439a3296d992d36",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/delivery_command_transaction.rs",
+      "raw_sha256": "fb8f10fa2a2869ac3e6d44afc38be7128b14f3d0701cda34e25986517b960b7a",
+      "captured_text_sha256": "fb8f10fa2a2869ac3e6d44afc38be7128b14f3d0701cda34e25986517b960b7a",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/delivery_execution.rs",
+      "raw_sha256": "1fe5930f4fbaca786ef7b906a9b5aea62695d60a357d7bc7002cdb6cd5aa63ac",
+      "captured_text_sha256": "1fe5930f4fbaca786ef7b906a9b5aea62695d60a357d7bc7002cdb6cd5aa63ac",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/delivery_production_adapters.rs",
+      "raw_sha256": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+      "captured_text_sha256": "6dc0419ebc4fd1554e7728213dfd45cda1f5cef2d0b9888ca5ba2e2e4ceb2793",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/delivery_transaction.rs",
+      "raw_sha256": "a703ef81732443ed42d6c89e1ba17bd6857dbc4b72a4398156fd77df33c8a89b",
+      "captured_text_sha256": "a703ef81732443ed42d6c89e1ba17bd6857dbc4b72a4398156fd77df33c8a89b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/delivery_verdict_authority.rs",
+      "raw_sha256": "e5a595302cf4d6c95116c5ccb94b03a7589ee4ef6ae4b8fd8f595c717f9094e1",
+      "captured_text_sha256": "e5a595302cf4d6c95116c5ccb94b03a7589ee4ef6ae4b8fd8f595c717f9094e1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/device_execution_binding.rs",
+      "raw_sha256": "e8b60f99402f4519fe4c35e0a9f261aa6f508d8b868d80012e105bfd6a43c25c",
+      "captured_text_sha256": "e8b60f99402f4519fe4c35e0a9f261aa6f508d8b868d80012e105bfd6a43c25c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/device_scheduler.rs",
+      "raw_sha256": "23cdd2535f064b917588e867657975665e32a0eb18f49ec82682e9ab91e334f7",
+      "captured_text_sha256": "23cdd2535f064b917588e867657975665e32a0eb18f49ec82682e9ab91e334f7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/device_session_gate.rs",
+      "raw_sha256": "18e8e8f8fab155491b51775a425b1b10d48bc04ba19001998dbfe5b53a293ffd",
+      "captured_text_sha256": "18e8e8f8fab155491b51775a425b1b10d48bc04ba19001998dbfe5b53a293ffd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/durable_execution_port.rs",
+      "raw_sha256": "17d6ba99aa56ec37a5c972597f2ff4ba620b0f30d827e7b36acc6fe2faa545f0",
+      "captured_text_sha256": "17d6ba99aa56ec37a5c972597f2ff4ba620b0f30d827e7b36acc6fe2faa545f0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/execution_port_service.rs",
+      "raw_sha256": "54cfc30d2fcaf802f44a9d9954803ebc34595cd6aa9dbda814ac53a6fa73e56f",
+      "captured_text_sha256": "54cfc30d2fcaf802f44a9d9954803ebc34595cd6aa9dbda814ac53a6fa73e56f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/fusion_adjudication_host.rs",
+      "raw_sha256": "a42c69704aa9772c919edb124be3fa545e8df30dc14938742e681899a0982e14",
+      "captured_text_sha256": "a42c69704aa9772c919edb124be3fa545e8df30dc14938742e681899a0982e14",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/fusion_analysis.rs",
+      "raw_sha256": "8c5fedb970b6179825d850fb444a9e9e04f50ede8cf39d13dc4afde4cca4bf64",
+      "captured_text_sha256": "8c5fedb970b6179825d850fb444a9e9e04f50ede8cf39d13dc4afde4cca4bf64",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/fusion_compose.rs",
+      "raw_sha256": "e6b3e977c0a80e78cf71eeb1f39fe495051e41d624ac48eefb72fe4742c34c63",
+      "captured_text_sha256": "e6b3e977c0a80e78cf71eeb1f39fe495051e41d624ac48eefb72fe4742c34c63",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/gate_interaction_service.rs",
+      "raw_sha256": "8769313be0f698dc65db82bd6d45d104e705ff769e663908d456d3fe6f9ffff3",
+      "captured_text_sha256": "8769313be0f698dc65db82bd6d45d104e705ff769e663908d456d3fe6f9ffff3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/knowledge.rs",
+      "raw_sha256": "cc8c1ac501592ff1829c2f7e757489a1856cd01b14e31003d42c390e8cd02c64",
+      "captured_text_sha256": "cc8c1ac501592ff1829c2f7e757489a1856cd01b14e31003d42c390e8cd02c64",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/lib.rs",
+      "raw_sha256": "5dc8d385dbe1f45f01893cd3751b88f316f3412c95c70a22f9d646fcaef22463",
+      "captured_text_sha256": "5dc8d385dbe1f45f01893cd3751b88f316f3412c95c70a22f9d646fcaef22463",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/local_candidate.rs",
+      "raw_sha256": "b854aa5795cf6130fe0e76d243dd8b97f8b523990df319d7369191c2d5432ff3",
+      "captured_text_sha256": "b854aa5795cf6130fe0e76d243dd8b97f8b523990df319d7369191c2d5432ff3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/local_secret_store.rs",
+      "raw_sha256": "e2226453e887f930f42f2b2e4032f6570e9e761df8ba60fe06d66488cce7803a",
+      "captured_text_sha256": "e2226453e887f930f42f2b2e4032f6570e9e761df8ba60fe06d66488cce7803a",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_admission.rs",
+      "raw_sha256": "32a8b4de1430cbc8f4d4b1311b0ae2efe3d2f8adc536fe75018215ce9c76c502",
+      "captured_text_sha256": "32a8b4de1430cbc8f4d4b1311b0ae2efe3d2f8adc536fe75018215ce9c76c502",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_cost.rs",
+      "raw_sha256": "fce54cc7df7da53bdb3aaed03d2f5c4db2d68a24be8f309246b21a1d415939c6",
+      "captured_text_sha256": "fce54cc7df7da53bdb3aaed03d2f5c4db2d68a24be8f309246b21a1d415939c6",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_execution_runtime.rs",
+      "raw_sha256": "21a27ba4d42fc9665534c8c0efb1e7032c08a90d1ff8e81b5c6044a8fd4fdffa",
+      "captured_text_sha256": "21a27ba4d42fc9665534c8c0efb1e7032c08a90d1ff8e81b5c6044a8fd4fdffa",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_policy_source.rs",
+      "raw_sha256": "7e272b26e12d952947ac04f4a24249cf6e575f44a3aac9e2a1b72afd3acd6adb",
+      "captured_text_sha256": "7e272b26e12d952947ac04f4a24249cf6e575f44a3aac9e2a1b72afd3acd6adb",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_request_pool.rs",
+      "raw_sha256": "cb4119a790749cfa7c9317cbb702ceaa51dfaba7cdde671b411917c48f7454aa",
+      "captured_text_sha256": "cb4119a790749cfa7c9317cbb702ceaa51dfaba7cdde671b411917c48f7454aa",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_retry_planner.rs",
+      "raw_sha256": "dd1952e22616d7e11ee6d59ddb17932fc9caa63511f7833f441f16212d61de83",
+      "captured_text_sha256": "dd1952e22616d7e11ee6d59ddb17932fc9caa63511f7833f441f16212d61de83",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_retry_settlement.rs",
+      "raw_sha256": "0000924d4dd628719b4af359f1e101e3a9112ac03332610da57ed1e6e11d2e49",
+      "captured_text_sha256": "0000924d4dd628719b4af359f1e101e3a9112ac03332610da57ed1e6e11d2e49",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_retry_usage.rs",
+      "raw_sha256": "8b042b7fb2acf40381baad1e718c246a6f557a99261421ea12a6e4f4d53cb0c4",
+      "captured_text_sha256": "8b042b7fb2acf40381baad1e718c246a6f557a99261421ea12a6e4f4d53cb0c4",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_route_availability.rs",
+      "raw_sha256": "015207b00b21f33d9998b3abe4d2f0d718e0a336509ac9f0aaa5f226017e2bcd",
+      "captured_text_sha256": "015207b00b21f33d9998b3abe4d2f0d718e0a336509ac9f0aaa5f226017e2bcd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_settings.rs",
+      "raw_sha256": "c770d6a3fdd4f5325eec8bec52aa96c5147c5c6df7936aebb2d517eb30f6c7a8",
+      "captured_text_sha256": "c770d6a3fdd4f5325eec8bec52aa96c5147c5c6df7936aebb2d517eb30f6c7a8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/model_stream_flow_control.rs",
+      "raw_sha256": "2c513088536f89c3b0d3acf4820b256202e5ab945d2a091fe19e77ad644b3bd1",
+      "captured_text_sha256": "2c513088536f89c3b0d3acf4820b256202e5ab945d2a091fe19e77ad644b3bd1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/observer_decision_service.rs",
+      "raw_sha256": "b17547bc72cdd0bb8e250047351fc32915ba30773246b792409c823c059203e9",
+      "captured_text_sha256": "b17547bc72cdd0bb8e250047351fc32915ba30773246b792409c823c059203e9",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/page_annotation_delivery.rs",
+      "raw_sha256": "d6f80ac1b238f389aca9f341efe313e038a7188ec4c1571dc7027c6d325e98b3",
+      "captured_text_sha256": "d6f80ac1b238f389aca9f341efe313e038a7188ec4c1571dc7027c6d325e98b3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/peer_collaboration.rs",
+      "raw_sha256": "58212f39d2475704e59ac712ec61cbf4773d90d188d3a2344cd3205e101d398d",
+      "captured_text_sha256": "58212f39d2475704e59ac712ec61cbf4773d90d188d3a2344cd3205e101d398d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/product_session_api.rs",
+      "raw_sha256": "f608543d9545d80afb13b32cb04b8da2b8a1597213bde3ab5f0c9877dbbcc64b",
+      "captured_text_sha256": "f608543d9545d80afb13b32cb04b8da2b8a1597213bde3ab5f0c9877dbbcc64b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/product_session_artifacts.rs",
+      "raw_sha256": "71901a6440cb8bf717eff54efe560743c418dc801523191251727f246b8eb101",
+      "captured_text_sha256": "71901a6440cb8bf717eff54efe560743c418dc801523191251727f246b8eb101",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/product_session_chat.rs",
+      "raw_sha256": "38187a2f34ee86b408669410f4f8e57674a8e0e2a0b88eb86d681371a798cc83",
+      "captured_text_sha256": "38187a2f34ee86b408669410f4f8e57674a8e0e2a0b88eb86d681371a798cc83",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/product_session_execution_application.rs",
+      "raw_sha256": "89607daeab824a3660852f8f63453c6c36870372d6b8d60d5829bae6e6a201c7",
+      "captured_text_sha256": "89607daeab824a3660852f8f63453c6c36870372d6b8d60d5829bae6e6a201c7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/product_session_execution_job.rs",
+      "raw_sha256": "e55a1c91d33503afbbb290e5753aa3bd015ad9026393e285eb0716aa55eff11d",
+      "captured_text_sha256": "e55a1c91d33503afbbb290e5753aa3bd015ad9026393e285eb0716aa55eff11d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/product_session_service.rs",
+      "raw_sha256": "aa16fd2125398e9cf02077b5680e9a44590cb962e91348ae47ff03844335dba7",
+      "captured_text_sha256": "aa16fd2125398e9cf02077b5680e9a44590cb962e91348ae47ff03844335dba7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/provider_admission.rs",
+      "raw_sha256": "334c25c605f797a06c20c71619fc318e69a6e09c857c916031e82369a2405a4e",
+      "captured_text_sha256": "334c25c605f797a06c20c71619fc318e69a6e09c857c916031e82369a2405a4e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/provider_catalog.rs",
+      "raw_sha256": "ba46a97fdb8cbb1d0074abdbcdea30f50019781761b71424f00ca53dcd785ed4",
+      "captured_text_sha256": "ba46a97fdb8cbb1d0074abdbcdea30f50019781761b71424f00ca53dcd785ed4",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/provider_gateway.rs",
+      "raw_sha256": "e8efa87b205f37ccd5d3f32bc8bb6c2a061529a67abce6280d2cde2610892bf5",
+      "captured_text_sha256": "e8efa87b205f37ccd5d3f32bc8bb6c2a061529a67abce6280d2cde2610892bf5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/provider_policy.rs",
+      "raw_sha256": "e43773dd07577eb1e86a3e73ab3f6f66d645d45bc8cc31f16a6da94d586f0aa8",
+      "captured_text_sha256": "e43773dd07577eb1e86a3e73ab3f6f66d645d45bc8cc31f16a6da94d586f0aa8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/provider_presets.rs",
+      "raw_sha256": "6a38d3f74686e427a8e34073a511a154ec53fd3f6fc00fe04484181712a0b6d1",
+      "captured_text_sha256": "6a38d3f74686e427a8e34073a511a154ec53fd3f6fc00fe04484181712a0b6d1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/provider_production.rs",
+      "raw_sha256": "0bb8c4c6ced78c2c3b620d86063842752f4fb6797113aab652a2419515660570",
+      "captured_text_sha256": "0bb8c4c6ced78c2c3b620d86063842752f4fb6797113aab652a2419515660570",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/publication_application.rs",
+      "raw_sha256": "6afb5c621f1f663dfa09beb25a0f353a680d7195dcbb290d369d9549adaef06d",
+      "captured_text_sha256": "6afb5c621f1f663dfa09beb25a0f353a680d7195dcbb290d369d9549adaef06d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/publication_policy.rs",
+      "raw_sha256": "8bec72a1e95a77a03215cff5b6c4cdc7c930039fe1a448693a31946352a77338",
+      "captured_text_sha256": "8bec72a1e95a77a03215cff5b6c4cdc7c930039fe1a448693a31946352a77338",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/publication_preparation.rs",
+      "raw_sha256": "f6e3d19cbe9a74de5c7f1f53a5c91dceef6e7265501c76a57d5b252d194b3c62",
+      "captured_text_sha256": "f6e3d19cbe9a74de5c7f1f53a5c91dceef6e7265501c76a57d5b252d194b3c62",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/publication_production.rs",
+      "raw_sha256": "69b4af2e84bc788be6f38d53c765da53c68ac9459cc61d95f1d29c46cf6a77b8",
+      "captured_text_sha256": "69b4af2e84bc788be6f38d53c765da53c68ac9459cc61d95f1d29c46cf6a77b8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/quick_device_execution.rs",
+      "raw_sha256": "3bfd1706fc69f4a75d3338f8374bbd5abec3527dbc979737b97e978937f31be5",
+      "captured_text_sha256": "3bfd1706fc69f4a75d3338f8374bbd5abec3527dbc979737b97e978937f31be5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/recovery_router.rs",
+      "raw_sha256": "e464ea360ff2a793dc98fb9f7f654cb0db10d437b888a98bdf92fbdaa3e54d8f",
+      "captured_text_sha256": "e464ea360ff2a793dc98fb9f7f654cb0db10d437b888a98bdf92fbdaa3e54d8f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/remote_worker_pool.rs",
+      "raw_sha256": "9d28f1c5c82f8b94bf82e0f74d44c644a134ecbc98d52b83c2b4d6e4e89558dd",
+      "captured_text_sha256": "9d28f1c5c82f8b94bf82e0f74d44c644a134ecbc98d52b83c2b4d6e4e89558dd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/repository_binding.rs",
+      "raw_sha256": "0f926f98a02c15e374656b4191cc5220f68b9f89217d70ea68db2ab3c2382694",
+      "captured_text_sha256": "0f926f98a02c15e374656b4191cc5220f68b9f89217d70ea68db2ab3c2382694",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/repository_scheduler.rs",
+      "raw_sha256": "efddafdfd1826a040a17e9641eaf976506a6fbbd4da9dd4301d0021d2b6e911b",
+      "captured_text_sha256": "efddafdfd1826a040a17e9641eaf976506a6fbbd4da9dd4301d0021d2b6e911b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/responsibility_assignment.rs",
+      "raw_sha256": "406eac4a527fc1dc74daf8b72c6be3f20e83eb65344b9345336785290ccf8291",
+      "captured_text_sha256": "406eac4a527fc1dc74daf8b72c6be3f20e83eb65344b9345336785290ccf8291",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/rework_transaction.rs",
+      "raw_sha256": "aedd71aa4fc452167d61ce9ce8618540fffe80b1536efa566bb74468145c1936",
+      "captured_text_sha256": "aedd71aa4fc452167d61ce9ce8618540fffe80b1536efa566bb74468145c1936",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/runtime_event_transaction.rs",
+      "raw_sha256": "4c69f0c17e4ca7a36af74e5270b8b68f6fcf643703cb596e0ac395fd3a78afc1",
+      "captured_text_sha256": "4c69f0c17e4ca7a36af74e5270b8b68f6fcf643703cb596e0ac395fd3a78afc1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/session_binding_transaction.rs",
+      "raw_sha256": "009ba2d416ca92a5607fc3f9f9e71d73bde6c47cd7c7db2c55e945d9b15da24e",
+      "captured_text_sha256": "009ba2d416ca92a5607fc3f9f9e71d73bde6c47cd7c7db2c55e945d9b15da24e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/session_identity.rs",
+      "raw_sha256": "914fdb87e66cf1b7aea8364c765bd8bc9b70f79d4b077b25f495ec58a0ed9ddf",
+      "captured_text_sha256": "914fdb87e66cf1b7aea8364c765bd8bc9b70f79d4b077b25f495ec58a0ed9ddf",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_device_execution.rs",
+      "raw_sha256": "4ff6e62ed10b39143409f6059f211d333a497379353646344468d80747c90e73",
+      "captured_text_sha256": "4ff6e62ed10b39143409f6059f211d333a497379353646344468d80747c90e73",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_projection.rs",
+      "raw_sha256": "5b7b541c0dfa3a54a1b039f8c51bb599985fe3005992829fd1872d1114aef91d",
+      "captured_text_sha256": "5b7b541c0dfa3a54a1b039f8c51bb599985fe3005992829fd1872d1114aef91d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_projection/application.rs",
+      "raw_sha256": "566206f78c22d685d9d5e5ba7547e6715a07915603dd28c841f4c4bf44c96628",
+      "captured_text_sha256": "566206f78c22d685d9d5e5ba7547e6715a07915603dd28c841f4c4bf44c96628",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_projection/candidate_history.rs",
+      "raw_sha256": "1ae34986281fb018fb5e79dbb66ab1c7964db750d90ac9f3d65715d8341d16f4",
+      "captured_text_sha256": "1ae34986281fb018fb5e79dbb66ab1c7964db750d90ac9f3d65715d8341d16f4",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_projection/candidate_review.rs",
+      "raw_sha256": "ca05a410abf2311a58fb482359d84374ab24013066353552be36d6345789c461",
+      "captured_text_sha256": "ca05a410abf2311a58fb482359d84374ab24013066353552be36d6345789c461",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_projection/evidence_detail.rs",
+      "raw_sha256": "b646eb9cc0faa18a975056333e1032d10e26810279a76cd23f323bab59e3e933",
+      "captured_text_sha256": "b646eb9cc0faa18a975056333e1032d10e26810279a76cd23f323bab59e3e933",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_projection/mapping.rs",
+      "raw_sha256": "ed23a962956cb03ac7c19c6ddf363725b9b0f3e88cc2160a6409d1a6defbc27e",
+      "captured_text_sha256": "ed23a962956cb03ac7c19c6ddf363725b9b0f3e88cc2160a6409d1a6defbc27e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_projection/production_sources.rs",
+      "raw_sha256": "c169aa19eb47226c9fdef446419b568b15979c944e8013f87d339d6ac30548c0",
+      "captured_text_sha256": "c169aa19eb47226c9fdef446419b568b15979c944e8013f87d339d6ac30548c0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/strongflow_projection/sources.rs",
+      "raw_sha256": "f725ed3279d147cd0e45feead7a8c405ff4eeabff6f55e2553c868355e4c00c3",
+      "captured_text_sha256": "f725ed3279d147cd0e45feead7a8c405ff4eeabff6f55e2553c868355e4c00c3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/temporary_root_lease.rs",
+      "raw_sha256": "a642673e0ddb30e985197ffffc6f76c55e4633ee11d7785ef76cb660d85a3ead",
+      "captured_text_sha256": "a642673e0ddb30e985197ffffc6f76c55e4633ee11d7785ef76cb660d85a3ead",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/terminal_outcome_transaction.rs",
+      "raw_sha256": "0a7f4715a1a5751999414a9dfbabe7e1b4c63b2ceece002a31a078ec28719713",
+      "captured_text_sha256": "0a7f4715a1a5751999414a9dfbabe7e1b4c63b2ceece002a31a078ec28719713",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/vault_secret_store.rs",
+      "raw_sha256": "bd58fac0aeca14a7279f988b2f62af016960e438ca760777c45d553bf5fa423f",
+      "captured_text_sha256": "bd58fac0aeca14a7279f988b2f62af016960e438ca760777c45d553bf5fa423f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/verdict_transaction.rs",
+      "raw_sha256": "637cfd50269b9c2eda2a1a68743d6d9b25062b305510ec973e893e2b8da310b3",
+      "captured_text_sha256": "637cfd50269b9c2eda2a1a68743d6d9b25062b305510ec973e893e2b8da310b3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/work_items_transaction.rs",
+      "raw_sha256": "4d9b53fc2a1da7b1974e4479c23897a40a1ab85fc8f145b4ce30f3310b19e108",
+      "captured_text_sha256": "4d9b53fc2a1da7b1974e4479c23897a40a1ab85fc8f145b4ce30f3310b19e108",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/worker_execution_lifecycle.rs",
+      "raw_sha256": "558c2d33486449389eb6c28252c51beee53e3e6af791d55f8b7ff611cb720ca1",
+      "captured_text_sha256": "558c2d33486449389eb6c28252c51beee53e3e6af791d55f8b7ff611cb720ca1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/worker_interaction_outbound.rs",
+      "raw_sha256": "75650e4e1c5dc48af21b8075b4830959d8d7f696b06b5459a4cd6cc6160dbab1",
+      "captured_text_sha256": "75650e4e1c5dc48af21b8075b4830959d8d7f696b06b5459a4cd6cc6160dbab1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/worker_management.rs",
+      "raw_sha256": "208fefe9a6e208b913fd906266af3692dd9f41ec341fec7f391defc8c08ddbb4",
+      "captured_text_sha256": "208fefe9a6e208b913fd906266af3692dd9f41ec341fec7f391defc8c08ddbb4",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-control-plane/src/workrun_transaction.rs",
+      "raw_sha256": "9a2a0a43df398deb21b1c11add7c571de8e92c6517ecd59e2e867c0ff1a38b73",
+      "captured_text_sha256": "9a2a0a43df398deb21b1c11add7c571de8e92c6517ecd59e2e867c0ff1a38b73",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-data-export/src/lib.rs",
+      "raw_sha256": "11e5250c3114e6f90c952ad0a8cbe36a4806ee8bfd893b2c5bf86b6fb909406d",
+      "captured_text_sha256": "11e5250c3114e6f90c952ad0a8cbe36a4806ee8bfd893b2c5bf86b6fb909406d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/attention.rs",
+      "raw_sha256": "5d99fd56d259cec9aea282cdf7ea3db747e5dfa8f02a36a85c641d07369c90ed",
+      "captured_text_sha256": "5d99fd56d259cec9aea282cdf7ea3db747e5dfa8f02a36a85c641d07369c90ed",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/failure_router.rs",
+      "raw_sha256": "f9d119cac463ae1d3ca34f8de030296862de7b1cb6043db690a8cc3435c23fad",
+      "captured_text_sha256": "f9d119cac463ae1d3ca34f8de030296862de7b1cb6043db690a8cc3435c23fad",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/mod.rs",
+      "raw_sha256": "4f59d20c219789cbba9afe7650dfa800329f8b66039d9c661307fee03ba037b0",
+      "captured_text_sha256": "4f59d20c219789cbba9afe7650dfa800329f8b66039d9c661307fee03ba037b0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/session_binding.rs",
+      "raw_sha256": "aa53139e5c54fb7af3c632b80c05a34d688c1a432400358f66848e3a59f229dd",
+      "captured_text_sha256": "aa53139e5c54fb7af3c632b80c05a34d688c1a432400358f66848e3a59f229dd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/solution_review.rs",
+      "raw_sha256": "b2623b1d33050529696b697002cad99e19199b8786f69ae4da0e550417d76c99",
+      "captured_text_sha256": "b2623b1d33050529696b697002cad99e19199b8786f69ae4da0e550417d76c99",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/verdict.rs",
+      "raw_sha256": "d7ad0a88ac64e820dbfff44ce6713f3883c9fc7a4f2c22908575b0cc0b0cd4ed",
+      "captured_text_sha256": "d7ad0a88ac64e820dbfff44ce6713f3883c9fc7a4f2c22908575b0cc0b0cd4ed",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/workrun.rs",
+      "raw_sha256": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+      "captured_text_sha256": "4fd4fefee2ed35883f686928b87e711e9584934cf9360ecc85fd683b406b0b2b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/application/workrun_execution.rs",
+      "raw_sha256": "bdffd3815231c8e1682f35a2a45b3a30899d88134f616ca45d8d83a936896b18",
+      "captured_text_sha256": "bdffd3815231c8e1682f35a2a45b3a30899d88134f616ca45d8d83a936896b18",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/attention.rs",
+      "raw_sha256": "3e7158498d9deeabc7cc06efed3414cd0b7d5676f4a05c4abaf81a87b178daa5",
+      "captured_text_sha256": "3e7158498d9deeabc7cc06efed3414cd0b7d5676f4a05c4abaf81a87b178daa5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/candidate.rs",
+      "raw_sha256": "b418364b11499cb24fd9be6680dbfbd909968b6796e09d0566f5e0028f4ddf48",
+      "captured_text_sha256": "b418364b11499cb24fd9be6680dbfbd909968b6796e09d0566f5e0028f4ddf48",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/candidate/verdict_authority.rs",
+      "raw_sha256": "1f1be1c61e2759649eb9e91e40df71759b072989c732bfcd02c3d0d7714ae462",
+      "captured_text_sha256": "1f1be1c61e2759649eb9e91e40df71759b072989c732bfcd02c3d0d7714ae462",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/evidence.rs",
+      "raw_sha256": "e1eee9a9f50b08c60e254a54e04e3369630dfe4d640bfd6e97da67b4bab233bb",
+      "captured_text_sha256": "e1eee9a9f50b08c60e254a54e04e3369630dfe4d640bfd6e97da67b4bab233bb",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/mod.rs",
+      "raw_sha256": "a800b4d8c41f280282a9111b4150864070401b0efc582ad86f3d996107cfd579",
+      "captured_text_sha256": "a800b4d8c41f280282a9111b4150864070401b0efc582ad86f3d996107cfd579",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/rework.rs",
+      "raw_sha256": "57a11d98cd02e084483f03f4758ef6b13b6103fe8ec39bfe9f2e71c03eaa0c6a",
+      "captured_text_sha256": "57a11d98cd02e084483f03f4758ef6b13b6103fe8ec39bfe9f2e71c03eaa0c6a",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/session_binding.rs",
+      "raw_sha256": "06864598a9abe442753aba252e87af7c678c57a494fb41004abb46a14cee6013",
+      "captured_text_sha256": "06864598a9abe442753aba252e87af7c678c57a494fb41004abb46a14cee6013",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/spec.rs",
+      "raw_sha256": "0d2e1cfeaee1f157773ae2b3fd5bf7843428a5a0b64a757d04ce4ea87b6af72a",
+      "captured_text_sha256": "0d2e1cfeaee1f157773ae2b3fd5bf7843428a5a0b64a757d04ce4ea87b6af72a",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/verdict.rs",
+      "raw_sha256": "d3da93ff357fd8997d6288734c79d44857fd4d5f15cc2d00538ed9f6c4f87c91",
+      "captured_text_sha256": "d3da93ff357fd8997d6288734c79d44857fd4d5f15cc2d00538ed9f6c4f87c91",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/domain/verification.rs",
+      "raw_sha256": "83cadb7245d6f6a49470b9cd72ae46ae93fa4e8051cbe80a8cdb3273c48beb01",
+      "captured_text_sha256": "83cadb7245d6f6a49470b9cd72ae46ae93fa4e8051cbe80a8cdb3273c48beb01",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/lib.rs",
+      "raw_sha256": "21b4a4eedc73f679773817b5050d065144cdb04b615715af15012944453ac6de",
+      "captured_text_sha256": "21b4a4eedc73f679773817b5050d065144cdb04b615715af15012944453ac6de",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/projection/delivery.rs",
+      "raw_sha256": "5634b1108a9ffe62d1cae1fdeb9766f2d947e50610c4825e19311a05841ce4fb",
+      "captured_text_sha256": "5634b1108a9ffe62d1cae1fdeb9766f2d947e50610c4825e19311a05841ce4fb",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/projection/mod.rs",
+      "raw_sha256": "92febb91c7dbc8c4dbfe6a3b5bd6150e1061f533ec080bfe2a4de884b5374da6",
+      "captured_text_sha256": "92febb91c7dbc8c4dbfe6a3b5bd6150e1061f533ec080bfe2a4de884b5374da6",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/projection/redaction.rs",
+      "raw_sha256": "07af58d6e85e7c34aa2414ba76b2a8ed839bbd7e4b6f676193110fd35288d00c",
+      "captured_text_sha256": "07af58d6e85e7c34aa2414ba76b2a8ed839bbd7e4b6f676193110fd35288d00c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/projection/runtime.rs",
+      "raw_sha256": "f517deaf703d55953737cb57e86d533a99862c0a874492fd6e3c53239c70b38e",
+      "captured_text_sha256": "f517deaf703d55953737cb57e86d533a99862c0a874492fd6e3c53239c70b38e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/projection/solution.rs",
+      "raw_sha256": "50ba41a52ad6a37f0e9e54d0e999c5c9586cc49716f2bb91857e7bdf96ca50ae",
+      "captured_text_sha256": "50ba41a52ad6a37f0e9e54d0e999c5c9586cc49716f2bb91857e7bdf96ca50ae",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-delivery/src/store.rs",
+      "raw_sha256": "9783cea429dd0ffb6e3fb8cac1c6f5a53558319566cdca76b24a06f0e59b48d0",
+      "captured_text_sha256": "9783cea429dd0ffb6e3fb8cac1c6f5a53558319566cdca76b24a06f0e59b48d0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/apply_engine.rs",
+      "raw_sha256": "b680b18f5b987d88a9cc3a1ef192834e1e0a63ca8ca0a9adf79e4e9aafa04048",
+      "captured_text_sha256": "b680b18f5b987d88a9cc3a1ef192834e1e0a63ca8ca0a9adf79e4e9aafa04048",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/candidate_branch.rs",
+      "raw_sha256": "a7f93b120aa54740df3db58f978046eb41b69118895f347b90267e0d5d5cfb3e",
+      "captured_text_sha256": "a7f93b120aa54740df3db58f978046eb41b69118895f347b90267e0d5d5cfb3e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/candidate_registry.rs",
+      "raw_sha256": "58ed54c47ec0af78e411cb1384480c3b36a4e30b5d2835ca0ad7b008b0d86dcd",
+      "captured_text_sha256": "58ed54c47ec0af78e411cb1384480c3b36a4e30b5d2835ca0ad7b008b0d86dcd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/candidate_retention.rs",
+      "raw_sha256": "355bccc2989c47322d648204593810cd00290dde2042a6af4277f0b6533daf92",
+      "captured_text_sha256": "355bccc2989c47322d648204593810cd00290dde2042a6af4277f0b6533daf92",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/connect_code.rs",
+      "raw_sha256": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+      "captured_text_sha256": "121a789ac4605097070978175937ecd5363bde817f511c9551736e9b5c313bf2",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/daemon.rs",
+      "raw_sha256": "1a8a07bfbe42ab4d6aeb6312390a7c06aede4c8427f6917a66e0efcd4a4673c2",
+      "captured_text_sha256": "1a8a07bfbe42ab4d6aeb6312390a7c06aede4c8427f6917a66e0efcd4a4673c2",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/fencing.rs",
+      "raw_sha256": "b973fb02bf1d36990d79b4fb6604a04f300c8c36f6d9ec124655efe38d4983a0",
+      "captured_text_sha256": "b973fb02bf1d36990d79b4fb6604a04f300c8c36f6d9ec124655efe38d4983a0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/http.rs",
+      "raw_sha256": "32eb1b95a56ad28fea768fe9a173c448c1f9e0908485c476dbdaa0e1d021501c",
+      "captured_text_sha256": "32eb1b95a56ad28fea768fe9a173c448c1f9e0908485c476dbdaa0e1d021501c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/identity.rs",
+      "raw_sha256": "52ecb24a7e9a330c180475f52a103f09ad34b9c390e77400b4bbec608fd9e187",
+      "captured_text_sha256": "52ecb24a7e9a330c180475f52a103f09ad34b9c390e77400b4bbec608fd9e187",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/lib.rs",
+      "raw_sha256": "dcb1318ab4adacead0576b3d001b9f816c42e9b64027f669e7438f3a15217e36",
+      "captured_text_sha256": "dcb1318ab4adacead0576b3d001b9f816c42e9b64027f669e7438f3a15217e36",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/managed_app.rs",
+      "raw_sha256": "625bf8039f95d47ef76f48a22ef72047c91301d667c67fd0f150caebdb3e45e5",
+      "captured_text_sha256": "625bf8039f95d47ef76f48a22ef72047c91301d667c67fd0f150caebdb3e45e5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/path_confinement.rs",
+      "raw_sha256": "2108b665c5ef907e67ecc5cb018c2832c50dae9671946e33af489cd04b6578c0",
+      "captured_text_sha256": "2108b665c5ef907e67ecc5cb018c2832c50dae9671946e33af489cd04b6578c0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/preview.rs",
+      "raw_sha256": "51b7ebd89345f0db6e3df45451f16585ba6df7f067be6f537c87ae51a7e640b1",
+      "captured_text_sha256": "51b7ebd89345f0db6e3df45451f16585ba6df7f067be6f537c87ae51a7e640b1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/repository.rs",
+      "raw_sha256": "8eed1d740ea0bffb551992aa8dc2abf6db735afb526ddfc037b8c053f627029d",
+      "captured_text_sha256": "8eed1d740ea0bffb551992aa8dc2abf6db735afb526ddfc037b8c053f627029d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/repository_exchange.rs",
+      "raw_sha256": "00def9730ca1f6a4a84c9b6b787cebd7f5c0383957352897cf426cd41c654ea6",
+      "captured_text_sha256": "00def9730ca1f6a4a84c9b6b787cebd7f5c0383957352897cf426cd41c654ea6",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/repository_git.rs",
+      "raw_sha256": "a6059b29f7e9ccf8d6d221b168ac4dd4469db7802d31235133c8bc6c8bbd6604",
+      "captured_text_sha256": "a6059b29f7e9ccf8d6d221b168ac4dd4469db7802d31235133c8bc6c8bbd6604",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/service.rs",
+      "raw_sha256": "4ba940a87b4f105027fc8b42dd4affb9043f8bc9eef1485927bbed7b305e059b",
+      "captured_text_sha256": "4ba940a87b4f105027fc8b42dd4affb9043f8bc9eef1485927bbed7b305e059b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/store.rs",
+      "raw_sha256": "5222f6051bc46ffbe5e69600fddc43121ac2809736e795410e69a09c3ffce0b0",
+      "captured_text_sha256": "5222f6051bc46ffbe5e69600fddc43121ac2809736e795410e69a09c3ffce0b0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/supervisor.rs",
+      "raw_sha256": "a872feb37235ebe0e05fb4a9a418ff03810c630f5e87fe7ea42d3865843ef17c",
+      "captured_text_sha256": "a872feb37235ebe0e05fb4a9a418ff03810c630f5e87fe7ea42d3865843ef17c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-device-client/src/worker_logs.rs",
+      "raw_sha256": "645ef3fd043e778f66ff8cd6baebc194e2524f59939f3537da20d0793d59adac",
+      "captured_text_sha256": "645ef3fd043e778f66ff8cd6baebc194e2524f59939f3537da20d0793d59adac",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-domain/src/chat_attachment.rs",
+      "raw_sha256": "fa34da828c0fa9b544532f51e6a3290a61407826187bfda3bea44330e156965c",
+      "captured_text_sha256": "fa34da828c0fa9b544532f51e6a3290a61407826187bfda3bea44330e156965c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-domain/src/git_candidate_artifact.rs",
+      "raw_sha256": "edff2a3507004470b4241d4b0fe16b09786f2ec530b238d329e8b19c9e62e0cd",
+      "captured_text_sha256": "edff2a3507004470b4241d4b0fe16b09786f2ec530b238d329e8b19c9e62e0cd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-domain/src/lib.rs",
+      "raw_sha256": "b147f59f1d14a681f1d6394c161d063324653d1908b3bda56e66b8d39c5e698e",
+      "captured_text_sha256": "b147f59f1d14a681f1d6394c161d063324653d1908b3bda56e66b8d39c5e698e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-domain/src/user_account.rs",
+      "raw_sha256": "fbda42d9e51b684d497f5d9f035a7983499433b7428e8ea439d6afecb645986f",
+      "captured_text_sha256": "fbda42d9e51b684d497f5d9f035a7983499433b7428e8ea439d6afecb645986f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-domain/src/verification_command.rs",
+      "raw_sha256": "440c776c8c1828a24c3d7116e6883f77dcf403f7b62fa330bd09136786942678",
+      "captured_text_sha256": "440c776c8c1828a24c3d7116e6883f77dcf403f7b62fa330bd09136786942678",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-evidence-export/src/archive.rs",
+      "raw_sha256": "39c65f9a6909881ac7865928a4ef45e1c0b3a59f9de7d37d2ca92f8aca91d962",
+      "captured_text_sha256": "39c65f9a6909881ac7865928a4ef45e1c0b3a59f9de7d37d2ca92f8aca91d962",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-evidence-export/src/export.rs",
+      "raw_sha256": "f7c001337bf7f296aadd51b23046efbdb19044a7f9bd6605ec4eccbfdd11dcf8",
+      "captured_text_sha256": "f7c001337bf7f296aadd51b23046efbdb19044a7f9bd6605ec4eccbfdd11dcf8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-evidence-export/src/lib.rs",
+      "raw_sha256": "35d6c04adcf9985b1962ce837a189ceb657381f8718d77b017ad30cfe90088f1",
+      "captured_text_sha256": "35d6c04adcf9985b1962ce837a189ceb657381f8718d77b017ad30cfe90088f1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-evidence-export/src/model.rs",
+      "raw_sha256": "c82b9166a9e3fe697675fc5332046c79014465b22f0b17a5202f857bf84b44e1",
+      "captured_text_sha256": "c82b9166a9e3fe697675fc5332046c79014465b22f0b17a5202f857bf84b44e1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-evidence-export/src/secret.rs",
+      "raw_sha256": "dd87f3dc0af31a3f8d5108338ef6beb76884605e9049e1de1f2db15204e54f81",
+      "captured_text_sha256": "dd87f3dc0af31a3f8d5108338ef6beb76884605e9049e1de1f2db15204e54f81",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-evidence-export/src/verify.rs",
+      "raw_sha256": "d766c376086becdb5732e5c306431caa9d6bcaf41fdacd21794193c2a3cf6e49",
+      "captured_text_sha256": "d766c376086becdb5732e5c306431caa9d6bcaf41fdacd21794193c2a3cf6e49",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/action_enforcement.rs",
+      "raw_sha256": "65be2714e58861cb2c17424fbaa8856da86f615aba08bc48aa721bfce03fc8c6",
+      "captured_text_sha256": "65be2714e58861cb2c17424fbaa8856da86f615aba08bc48aa721bfce03fc8c6",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/action_gateway.rs",
+      "raw_sha256": "860f75d81e459bb7d80f99682b82abf20d2c3fe6df6e8d0760903c83f9e6d832",
+      "captured_text_sha256": "860f75d81e459bb7d80f99682b82abf20d2c3fe6df6e8d0760903c83f9e6d832",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/action_normalizer.rs",
+      "raw_sha256": "8e7c667322669a06ffdd43da4aa551e99779b0213d01be799fe3ce0a9ee0981c",
+      "captured_text_sha256": "8e7c667322669a06ffdd43da4aa551e99779b0213d01be799fe3ce0a9ee0981c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/agent_config.rs",
+      "raw_sha256": "4c8558fbf00617ee1d80f8c23e94cb22495a3c8523ecd08672f128ca593fe413",
+      "captured_text_sha256": "4c8558fbf00617ee1d80f8c23e94cb22495a3c8523ecd08672f128ca593fe413",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/capability_adapter.rs",
+      "raw_sha256": "5cf22f27daa54a98154c16a602078742473355dd977ba2c00d2c5fe4a7d06904",
+      "captured_text_sha256": "5cf22f27daa54a98154c16a602078742473355dd977ba2c00d2c5fe4a7d06904",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/change_batch_identity.rs",
+      "raw_sha256": "5c1b6b528a308af05f255533a91415f2568c566806b98f2b7573ad391dea2c6c",
+      "captured_text_sha256": "5c1b6b528a308af05f255533a91415f2568c566806b98f2b7573ad391dea2c6c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/change_batch_progress.rs",
+      "raw_sha256": "a79d72133f505be1dec23dc9343f682f0000cb6f250309574e4ff61755e3d0b4",
+      "captured_text_sha256": "a79d72133f505be1dec23dc9343f682f0000cb6f250309574e4ff61755e3d0b4",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/debug_experiment.rs",
+      "raw_sha256": "fe3c85977ae3bdc3dba2418084aed8612bb8a5e225c44bb127d1ed6b8e6e8a98",
+      "captured_text_sha256": "fe3c85977ae3bdc3dba2418084aed8612bb8a5e225c44bb127d1ed6b8e6e8a98",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/debug_hypothesis_ledger.rs",
+      "raw_sha256": "264edba8ad23eb3ae411ecb3793efbcd061b6f54f93acf2a87af6adede8c1498",
+      "captured_text_sha256": "264edba8ad23eb3ae411ecb3793efbcd061b6f54f93acf2a87af6adede8c1498",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/debug_probe_contract.rs",
+      "raw_sha256": "c3748047354452c4237020fa795df7e0e17012b2ebe56ff5d312d576a739b50b",
+      "captured_text_sha256": "c3748047354452c4237020fa795df7e0e17012b2ebe56ff5d312d576a739b50b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/debug_probe_delta_context.rs",
+      "raw_sha256": "f6879432a028dd4b72bb72e1e5d2be65c6974b381ca1f0633002ecc4856c10df",
+      "captured_text_sha256": "f6879432a028dd4b72bb72e1e5d2be65c6974b381ca1f0633002ecc4856c10df",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/diagnostic_parser.rs",
+      "raw_sha256": "2b269d95ba428593c7fef9d44f2e3bcf61169948cc06ae1323fb2b402dbb2a94",
+      "captured_text_sha256": "2b269d95ba428593c7fef9d44f2e3bcf61169948cc06ae1323fb2b402dbb2a94",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/execution_identity.rs",
+      "raw_sha256": "c2c60da811d806f747b0c8501548f61e7026bcd07dccbb340c6d28de51f0f63b",
+      "captured_text_sha256": "c2c60da811d806f747b0c8501548f61e7026bcd07dccbb340c6d28de51f0f63b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/jev_decision.rs",
+      "raw_sha256": "fb8cce9a8b4f9486551334a11441eb45c03fc6c86bfbf241e035d4a5cc63507a",
+      "captured_text_sha256": "fb8cce9a8b4f9486551334a11441eb45c03fc6c86bfbf241e035d4a5cc63507a",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/lib.rs",
+      "raw_sha256": "c7de9da05abe701a3a31a2720a46d67a952b652be863f14b81feedaf9a6a18d1",
+      "captured_text_sha256": "c7de9da05abe701a3a31a2720a46d67a952b652be863f14b81feedaf9a6a18d1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/observation_contract.rs",
+      "raw_sha256": "dde8bb3a1dbc0767c1b4760f6eafd5a468d68935f90a87ae30cabd75f71ccf5e",
+      "captured_text_sha256": "dde8bb3a1dbc0767c1b4760f6eafd5a468d68935f90a87ae30cabd75f71ccf5e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/performance_comparison.rs",
+      "raw_sha256": "753c4e50c94a498597c61663d6c83d9faf70d490f291df01a2ce4ce17d6c68d1",
+      "captured_text_sha256": "753c4e50c94a498597c61663d6c83d9faf70d490f291df01a2ce4ce17d6c68d1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/probe_result_normalizer.rs",
+      "raw_sha256": "97fae158ea221d3b5b2b8727b26122a9a8f5137082e2c0909bbb2ffd362414be",
+      "captured_text_sha256": "97fae158ea221d3b5b2b8727b26122a9a8f5137082e2c0909bbb2ffd362414be",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/repair_loop_context.rs",
+      "raw_sha256": "8097c2fa8e928c620c0664e841d32691f0337d013d8436910c7dd4a94e9ab9d5",
+      "captured_text_sha256": "8097c2fa8e928c620c0664e841d32691f0337d013d8436910c7dd4a94e9ab9d5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/replay.rs",
+      "raw_sha256": "596d40861a4f782c2ecb5ffe920a7f795eeb9b3f63cc9a396890c9acc85cd2e1",
+      "captured_text_sha256": "596d40861a4f782c2ecb5ffe920a7f795eeb9b3f63cc9a396890c9acc85cd2e1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/repository_rule_pack.rs",
+      "raw_sha256": "0c34fb8565ca9f41d9bffea2384d2f553173f47bcbe68b668437fa71c65c1009",
+      "captured_text_sha256": "0c34fb8565ca9f41d9bffea2384d2f553173f47bcbe68b668437fa71c65c1009",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/runtime_replay.rs",
+      "raw_sha256": "86f9decc14a484fa4f688aa5645625075958b92a5165b188e054b94b42a3bef0",
+      "captured_text_sha256": "86f9decc14a484fa4f688aa5645625075958b92a5165b188e054b94b42a3bef0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/runtime_trace_outbox.rs",
+      "raw_sha256": "7ad4dc3402da884fe18e3b93d042587a824f4ebee93ff57de10e46dadd7e55bc",
+      "captured_text_sha256": "7ad4dc3402da884fe18e3b93d042587a824f4ebee93ff57de10e46dadd7e55bc",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/transport.rs",
+      "raw_sha256": "8c32e713f35f55b4e418a91050a0cc149f0c318e388f18804b082a5af59ebbe3",
+      "captured_text_sha256": "8c32e713f35f55b4e418a91050a0cc149f0c318e388f18804b082a5af59ebbe3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/typed_replay.rs",
+      "raw_sha256": "fe5d043a6348b6f1164bf13d927de7e6a1e3984a48aa1bf93f7286e2cce27ce3",
+      "captured_text_sha256": "fe5d043a6348b6f1164bf13d927de7e6a1e3984a48aa1bf93f7286e2cce27ce3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-execution-port/src/validation_config.rs",
+      "raw_sha256": "baa644b71d6230234c9f56d6163e6e8ba7d827bcd0f6a8f804ce111f5a082963",
+      "captured_text_sha256": "baa644b71d6230234c9f56d6163e6e8ba7d827bcd0f6a8f804ce111f5a082963",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-fusion/src/contract.rs",
+      "raw_sha256": "a5f455b27cc8dff9e0182184b11ae52841f075085debe241dd8b152027e90d93",
+      "captured_text_sha256": "a5f455b27cc8dff9e0182184b11ae52841f075085debe241dd8b152027e90d93",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-fusion/src/lib.rs",
+      "raw_sha256": "eda60a4b5c6b6ca79054d2b0ec0073a9921218485b38e7544c6fb16afefa8b07",
+      "captured_text_sha256": "eda60a4b5c6b6ca79054d2b0ec0073a9921218485b38e7544c6fb16afefa8b07",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-fusion/src/panel.rs",
+      "raw_sha256": "5a6ad783510caa57d9df37d435c5cf863a950308b747f436505e0b1aa96d4839",
+      "captured_text_sha256": "5a6ad783510caa57d9df37d435c5cf863a950308b747f436505e0b1aa96d4839",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-fusion/src/provider.rs",
+      "raw_sha256": "cf17ed5782a796fa51446a258ce4d808086473ec8cda264004bf4e23f2dddeb7",
+      "captured_text_sha256": "cf17ed5782a796fa51446a258ce4d808086473ec8cda264004bf4e23f2dddeb7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-integration-core/src/error.rs",
+      "raw_sha256": "d2c58c2da157125cb4b5407dfeec6a420b4ee45f3d22c3895b70ade37b951bcd",
+      "captured_text_sha256": "d2c58c2da157125cb4b5407dfeec6a420b4ee45f3d22c3895b70ade37b951bcd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-integration-core/src/framework.rs",
+      "raw_sha256": "524d90fd285bb0ae0a24e44b43625b18b517797fed9a58f56449a5a02e38d691",
+      "captured_text_sha256": "524d90fd285bb0ae0a24e44b43625b18b517797fed9a58f56449a5a02e38d691",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-integration-core/src/lib.rs",
+      "raw_sha256": "54fea641b94430296cac43fd3908f117842a07a7bb921a78063222944778e8d2",
+      "captured_text_sha256": "54fea641b94430296cac43fd3908f117842a07a7bb921a78063222944778e8d2",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-integration-core/src/model.rs",
+      "raw_sha256": "8fabb9b52ec98600a0579c9d9caa1e5f9cfee75f1a78cd189a0427cec4e8449d",
+      "captured_text_sha256": "8fabb9b52ec98600a0579c9d9caa1e5f9cfee75f1a78cd189a0427cec4e8449d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-integration-core/src/ports.rs",
+      "raw_sha256": "f7da992ab395fceed847005a9c5df5ff177e31b33604e7be9db47520e147e321",
+      "captured_text_sha256": "f7da992ab395fceed847005a9c5df5ff177e31b33604e7be9db47520e147e321",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-integration-sqlite/src/lib.rs",
+      "raw_sha256": "6c50e866d4c9ccd8356be7d939d2c4cf91d2c45459d2171868f3f70616fc7dcc",
+      "captured_text_sha256": "6c50e866d4c9ccd8356be7d939d2c4cf91d2c45459d2171868f3f70616fc7dcc",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-integration-sqlite/src/slack_rate_limit.rs",
+      "raw_sha256": "a91b6f53974ea69980eb5b9d58470d1d299d75fec746794a1fa8f49c7438d8e8",
+      "captured_text_sha256": "a91b6f53974ea69980eb5b9d58470d1d299d75fec746794a1fa8f49c7438d8e8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-local/src/lib.rs",
+      "raw_sha256": "f4b2ca75247ad0fef021ccc9fcbddf40dc214a99debfc4a1acae7cd475f7b541",
+      "captured_text_sha256": "f4b2ca75247ad0fef021ccc9fcbddf40dc214a99debfc4a1acae7cd475f7b541",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-observability-core/src/lib.rs",
+      "raw_sha256": "7bedd2747fe939152e77cb3f01cef231c2cd5911551bf7615500f58b78a64c3c",
+      "captured_text_sha256": "7bedd2747fe939152e77cb3f01cef231c2cd5911551bf7615500f58b78a64c3c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-observability-sqlite/src/lib.rs",
+      "raw_sha256": "5ee82146715d810b501aa2c042cd2e97e06ad26e4e3d9e5f37e21f22a4456d7c",
+      "captured_text_sha256": "5ee82146715d810b501aa2c042cd2e97e06ad26e4e3d9e5f37e21f22a4456d7c",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/credential_leak_gate.rs",
+      "raw_sha256": "7a8fd240a2741db8cc6ba7f40f3a168988334828b8ae32d96dc3c5e345ebe551",
+      "captured_text_sha256": "7a8fd240a2741db8cc6ba7f40f3a168988334828b8ae32d96dc3c5e345ebe551",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/device_extensions.rs",
+      "raw_sha256": "86cbff25b07f6954734e2ee41303132c2f859ce3d56701549dd35241d3d83814",
+      "captured_text_sha256": "86cbff25b07f6954734e2ee41303132c2f859ce3d56701549dd35241d3d83814",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/device_model.rs",
+      "raw_sha256": "f2b70034c549a2b5c5842b9aee18c408d6b8d3a44fbe5a5ea3a65e8ea77d1937",
+      "captured_text_sha256": "f2b70034c549a2b5c5842b9aee18c408d6b8d3a44fbe5a5ea3a65e8ea77d1937",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/device_store.rs",
+      "raw_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+      "captured_text_sha256": "4f0f4c4f16348cb5440531ae2a16869ad6b0ab21468e1e057ac0e5258b25644a",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/jev.rs",
+      "raw_sha256": "9112ed0b74743c95bf8128943d76bab65a8d125bf6c8c4eb2c4923071ee671f8",
+      "captured_text_sha256": "9112ed0b74743c95bf8128943d76bab65a8d125bf6c8c4eb2c4923071ee671f8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/lib.rs",
+      "raw_sha256": "58281d4050e752ddd689a1d359161718cbaf2fed1b5ea531446f5a6a7efb7173",
+      "captured_text_sha256": "58281d4050e752ddd689a1d359161718cbaf2fed1b5ea531446f5a6a7efb7173",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/mcp_connection.rs",
+      "raw_sha256": "11a4d22252eceb89c2494f64dafb6cf92c2231027d8473d13f287d4f9b645bd3",
+      "captured_text_sha256": "11a4d22252eceb89c2494f64dafb6cf92c2231027d8473d13f287d4f9b645bd3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/provider_anthropic.rs",
+      "raw_sha256": "8d9f6efa0af84bd9becb861a7445090cb4471429f2c9a602e5f29d48ef79aa64",
+      "captured_text_sha256": "8d9f6efa0af84bd9becb861a7445090cb4471429f2c9a602e5f29d48ef79aa64",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/provider_https_sse.rs",
+      "raw_sha256": "32fff7894bccf086b8fb0278d7d4bf17103f714791605316f85d89d3f721e85a",
+      "captured_text_sha256": "32fff7894bccf086b8fb0278d7d4bf17103f714791605316f85d89d3f721e85a",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/provider_stream.rs",
+      "raw_sha256": "1ec4ea574439d34884035c473f401659969de1c9d70b9c4dee70677b47d375e1",
+      "captured_text_sha256": "1ec4ea574439d34884035c473f401659969de1c9d70b9c4dee70677b47d375e1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-provider/src/types.rs",
+      "raw_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+      "captured_text_sha256": "91e0ace2fd6d399d12d92905548278e4b02f6d553b845a45caa335d0e2fb97c2",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-publication/src/coordinator.rs",
+      "raw_sha256": "70ec62e14e99e4b7798089dcf82aef3fdb6e4d0061d6a088a921fcd1ecdfba22",
+      "captured_text_sha256": "70ec62e14e99e4b7798089dcf82aef3fdb6e4d0061d6a088a921fcd1ecdfba22",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-publication/src/facts.rs",
+      "raw_sha256": "3cc10629286c8c8c4bce3f7a2367d7431133fc345f228bc39515067eed785119",
+      "captured_text_sha256": "3cc10629286c8c8c4bce3f7a2367d7431133fc345f228bc39515067eed785119",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-publication/src/github.rs",
+      "raw_sha256": "3e21ee171a7e736ebf88604429970e6131a5ad1a0ce210ff38e8439578099f79",
+      "captured_text_sha256": "3e21ee171a7e736ebf88604429970e6131a5ad1a0ce210ff38e8439578099f79",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-publication/src/lib.rs",
+      "raw_sha256": "8330e9630f54df5c9b9975e09b542c5f627efa17a57a894de32632ce15ff0f94",
+      "captured_text_sha256": "8330e9630f54df5c9b9975e09b542c5f627efa17a57a894de32632ce15ff0f94",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-publication/src/operation.rs",
+      "raw_sha256": "8d6fc1ff50d02ddb2f53120d19901f11b6f360b3b8bac62082013c1949f87caa",
+      "captured_text_sha256": "8d6fc1ff50d02ddb2f53120d19901f11b6f360b3b8bac62082013c1949f87caa",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-publication/src/policy.rs",
+      "raw_sha256": "cd0d6d3ab1a8120c745e6190f1ca844e9105d45200b497fc8b31b086b80ae4d8",
+      "captured_text_sha256": "cd0d6d3ab1a8120c745e6190f1ca844e9105d45200b497fc8b31b086b80ae4d8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-publication/src/storage.rs",
+      "raw_sha256": "2391a51b020ab8c9b23904704de6e3027acef8ea84bd9ca2da69b186bc523b1a",
+      "captured_text_sha256": "2391a51b020ab8c9b23904704de6e3027acef8ea84bd9ca2da69b186bc523b1a",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-repository-context/src/command_index.rs",
+      "raw_sha256": "da8bc93fd9fb02a068a6b6c750df3008c0e0651e60bbf36b7553fa53df51a6f1",
+      "captured_text_sha256": "da8bc93fd9fb02a068a6b6c750df3008c0e0651e60bbf36b7553fa53df51a6f1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-repository-context/src/git_snapshot.rs",
+      "raw_sha256": "2965e1b21cdf159d1feb3d583aa211e69d14cb4cc39c6bdc7111dda2edc0e7a0",
+      "captured_text_sha256": "2965e1b21cdf159d1feb3d583aa211e69d14cb4cc39c6bdc7111dda2edc0e7a0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-repository-context/src/lib.rs",
+      "raw_sha256": "b10d3f79c2ea634267d65ad96c992a7858ab81ad10924705737328c194924661",
+      "captured_text_sha256": "b10d3f79c2ea634267d65ad96c992a7858ab81ad10924705737328c194924661",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-repository-context/src/model.rs",
+      "raw_sha256": "48f7497f1f09629d10c96c22a9d5aa9d008263bb0b8d407d5166bfca37778c8f",
+      "captured_text_sha256": "48f7497f1f09629d10c96c22a9d5aa9d008263bb0b8d407d5166bfca37778c8f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-repository-context/src/scanner.rs",
+      "raw_sha256": "72c4db48c3fedd8334c998921b6614faac0b536c96615cd37d8636fa48953967",
+      "captured_text_sha256": "72c4db48c3fedd8334c998921b6614faac0b536c96615cd37d8636fa48953967",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-s3-artifact-adapter/src/lib.rs",
+      "raw_sha256": "218c320577b15df3645ec9e9fb3fb58e8d0bce1e69d1f7c61d958391f4d1ce4f",
+      "captured_text_sha256": "218c320577b15df3645ec9e9fb3fb58e8d0bce1e69d1f7c61d958391f4d1ce4f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/application.rs",
+      "raw_sha256": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+      "captured_text_sha256": "0a705a1f36a39cebf8a8eb7cd77f8142ad7573febdc74d1bcf7b21bdb1e0bb1e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/auth_session.rs",
+      "raw_sha256": "814ae155a2398552dd080afbb1e3b9bb298e3bfba248da853c2e8822ff61b9ac",
+      "captured_text_sha256": "814ae155a2398552dd080afbb1e3b9bb298e3bfba248da853c2e8822ff61b9ac",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/client_candidates.rs",
+      "raw_sha256": "71b7422d0f5a2f3cc2d19253107eaa038c5fc927c8076a7b9d495d7ac73d38e5",
+      "captured_text_sha256": "71b7422d0f5a2f3cc2d19253107eaa038c5fc927c8076a7b9d495d7ac73d38e5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/client_connections.rs",
+      "raw_sha256": "eac807f345844d2c84b6f3d7e8eb845928a24b5090719c8533461c5e3acbd4b3",
+      "captured_text_sha256": "eac807f345844d2c84b6f3d7e8eb845928a24b5090719c8533461c5e3acbd4b3",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/client_exchange.rs",
+      "raw_sha256": "48b2258aae26639ad5ac3f784de79aa5f21661c3489b4fec6eabd3a2a8cc3805",
+      "captured_text_sha256": "48b2258aae26639ad5ac3f784de79aa5f21661c3489b4fec6eabd3a2a8cc3805",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/client_occupancy.rs",
+      "raw_sha256": "121dabc6f309cd58bae8f11ff1be862bdb9d5c070db4cf6ea34e1d3daf551d70",
+      "captured_text_sha256": "121dabc6f309cd58bae8f11ff1be862bdb9d5c070db4cf6ea34e1d3daf551d70",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/client_repositories.rs",
+      "raw_sha256": "742bbcf121003a80afbfbbd8a6deb6178ec810784640093b9ddb466f799e8142",
+      "captured_text_sha256": "742bbcf121003a80afbfbbd8a6deb6178ec810784640093b9ddb466f799e8142",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/client_sessions.rs",
+      "raw_sha256": "25d7aa3afd34b8b10ffb55555afd4bc235bf17ba89693b6e7b9f7bc03b539711",
+      "captured_text_sha256": "25d7aa3afd34b8b10ffb55555afd4bc235bf17ba89693b6e7b9f7bc03b539711",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/config.rs",
+      "raw_sha256": "81eb6181d560eb6e99488e1c4f27cd8b0bffbce25ae6f21a97281230b7237fdd",
+      "captured_text_sha256": "81eb6181d560eb6e99488e1c4f27cd8b0bffbce25ae6f21a97281230b7237fdd",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/device_providers.rs",
+      "raw_sha256": "ccca39e94ce47bf156d8977d4ef3b9a9ceebc8b3c4fac300a032d8ebaf396bf1",
+      "captured_text_sha256": "ccca39e94ce47bf156d8977d4ef3b9a9ceebc8b3c4fac300a032d8ebaf396bf1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/dispatcher.rs",
+      "raw_sha256": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+      "captured_text_sha256": "91e4431d2f389d75cea406d175267ac1888dbaa98bc139af81c558e707328eed",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/durable_event_hub.rs",
+      "raw_sha256": "1fb05e22bc6e6d7c67058eec599137c381968d6aefef3819429ff0a9abb187ae",
+      "captured_text_sha256": "1fb05e22bc6e6d7c67058eec599137c381968d6aefef3819429ff0a9abb187ae",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/lib.rs",
+      "raw_sha256": "cd0a17b196239978f24279da7c42f02d70758f37013fc138fdff69e32ea7fde1",
+      "captured_text_sha256": "cd0a17b196239978f24279da7c42f02d70758f37013fc138fdff69e32ea7fde1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/login_rate_limiter.rs",
+      "raw_sha256": "f55598ec40234bd592ae77ede7c4748a0f4a96763679868305e104067555cd95",
+      "captured_text_sha256": "f55598ec40234bd592ae77ede7c4748a0f4a96763679868305e104067555cd95",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/main.rs",
+      "raw_sha256": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+      "captured_text_sha256": "43916fbf990bb8e272b2d04cf07ee5ba955390acf8a9f968ca3731b4e245fb26",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/password_hash.rs",
+      "raw_sha256": "6c035b841e43fbad79ba4e5dd199247ce1f9d5ca46f13d3970656d5b2500cd64",
+      "captured_text_sha256": "6c035b841e43fbad79ba4e5dd199247ce1f9d5ca46f13d3970656d5b2500cd64",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/preview.rs",
+      "raw_sha256": "4cbc7919e12b09ee8062baee95f3be3d308645fdb4c30c1bfea45f8021340897",
+      "captured_text_sha256": "4cbc7919e12b09ee8062baee95f3be3d308645fdb4c30c1bfea45f8021340897",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/remote_worker_transport.rs",
+      "raw_sha256": "8ddca7b11c60d99e21c62a3ff37ab7bbbb7a93198d0e55b84a43ebeab3cc7112",
+      "captured_text_sha256": "8ddca7b11c60d99e21c62a3ff37ab7bbbb7a93198d0e55b84a43ebeab3cc7112",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/runtime.rs",
+      "raw_sha256": "a6e50ed5a862d20188b99cdbc4224f50df0446e776efa9c33358e7cff7559c47",
+      "captured_text_sha256": "a6e50ed5a862d20188b99cdbc4224f50df0446e776efa9c33358e7cff7559c47",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/server.rs",
+      "raw_sha256": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+      "captured_text_sha256": "78e479ef1f78e0b261e8d79a3ea8e90a63e540c65549502e2c3b97518d5c0207",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/transport.rs",
+      "raw_sha256": "97f14edb015293fb1cd1fd30abcff92bb4a54907bc20efb0d6d8c5fb30bc18c5",
+      "captured_text_sha256": "97f14edb015293fb1cd1fd30abcff92bb4a54907bc20efb0d6d8c5fb30bc18c5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/user_accounts.rs",
+      "raw_sha256": "561e2e6a145050f3d186800b67aecdcab091b0134fc01236274af4221e544a67",
+      "captured_text_sha256": "561e2e6a145050f3d186800b67aecdcab091b0134fc01236274af4221e544a67",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-server/src/worker_session_credentials.rs",
+      "raw_sha256": "aabf3032041c1948b32fbedbdcf091660fe43462046ca1978b50fdf038b2c826",
+      "captured_text_sha256": "aabf3032041c1948b32fbedbdcf091660fe43462046ca1978b50fdf038b2c826",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-session/src/binding.rs",
+      "raw_sha256": "50ebdb519af10ac11d22945123524a56e48cf3a39ea5474615fe53a061250d18",
+      "captured_text_sha256": "50ebdb519af10ac11d22945123524a56e48cf3a39ea5474615fe53a061250d18",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-session/src/interaction_routing.rs",
+      "raw_sha256": "dc62904b416035d297249d18a0f75cc8877d32df4b259f4669e95162a0fff2eb",
+      "captured_text_sha256": "dc62904b416035d297249d18a0f75cc8877d32df4b259f4669e95162a0fff2eb",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-session/src/lib.rs",
+      "raw_sha256": "a4b55e2750e9e549bfed0fed4456e9cc4b5b7785162bfa63147281c4f6acff7b",
+      "captured_text_sha256": "a4b55e2750e9e549bfed0fed4456e9cc4b5b7785162bfa63147281c4f6acff7b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-session/src/product_session.rs",
+      "raw_sha256": "19dcc841e2bce91a48786484965447abfbdb6e438539fc336e4e9eb214ac0034",
+      "captured_text_sha256": "19dcc841e2bce91a48786484965447abfbdb6e438539fc336e4e9eb214ac0034",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/artifact.rs",
+      "raw_sha256": "797fe5a8717cea5180b4450a03438db003ca3d14a7fb6b7eb2f1724136ba98c7",
+      "captured_text_sha256": "797fe5a8717cea5180b4450a03438db003ca3d14a7fb6b7eb2f1724136ba98c7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/artifact/metering.rs",
+      "raw_sha256": "d729689d1316fd7ece37faa7137203219998982c8a1f9919b2c3f9cff0374210",
+      "captured_text_sha256": "d729689d1316fd7ece37faa7137203219998982c8a1f9919b2c3f9cff0374210",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/client_connect.rs",
+      "raw_sha256": "139769a45684a565f7068b2b3efe694fa80abce1ee7e1687f477b0a05023b038",
+      "captured_text_sha256": "139769a45684a565f7068b2b3efe694fa80abce1ee7e1687f477b0a05023b038",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/client_downlink.rs",
+      "raw_sha256": "fd4b5e9fcbaf852a6131f44de498d5dc7448a46644db94b951dde084d31f12ba",
+      "captured_text_sha256": "fd4b5e9fcbaf852a6131f44de498d5dc7448a46644db94b951dde084d31f12ba",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/client_launch_grant.rs",
+      "raw_sha256": "232581287e0909d82196c8c9cd208b4545d3af8bcb659cd69213addd62b0786b",
+      "captured_text_sha256": "232581287e0909d82196c8c9cd208b4545d3af8bcb659cd69213addd62b0786b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/client_occupancy.rs",
+      "raw_sha256": "8ad32c27272e0fd0fb5f4cd2643e847a66c7f6b250c15c9f20c68d89fb5a5573",
+      "captured_text_sha256": "8ad32c27272e0fd0fb5f4cd2643e847a66c7f6b250c15c9f20c68d89fb5a5573",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/client_registry.rs",
+      "raw_sha256": "bb0306f06f0eeccb696680f0efa25386062c4d65004041ea9c598eb872c36a40",
+      "captured_text_sha256": "bb0306f06f0eeccb696680f0efa25386062c4d65004041ea9c598eb872c36a40",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/control_plane_instances.rs",
+      "raw_sha256": "86f7f9633598372138211a7dfa5f998acf796605075fba2bbe0212846359e0c7",
+      "captured_text_sha256": "86f7f9633598372138211a7dfa5f998acf796605075fba2bbe0212846359e0c7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/delivery.rs",
+      "raw_sha256": "e73833f4946191613d7048d5c97c5fe3e1555cda24571bdb61aa70102ff8872e",
+      "captured_text_sha256": "e73833f4946191613d7048d5c97c5fe3e1555cda24571bdb61aa70102ff8872e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/device_execution_binding.rs",
+      "raw_sha256": "cae009a11c02f723411a85bb4ba071be148c2bdf7ce91b2f3c38a7bc24c21c97",
+      "captured_text_sha256": "cae009a11c02f723411a85bb4ba071be148c2bdf7ce91b2f3c38a7bc24c21c97",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/device_scheduler.rs",
+      "raw_sha256": "f608347cd06a2fdb5128725752c3745c31ee8711163dea00b03f0e50ae1de415",
+      "captured_text_sha256": "f608347cd06a2fdb5128725752c3745c31ee8711163dea00b03f0e50ae1de415",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/execution_admission.rs",
+      "raw_sha256": "b4f546265e5082fef8c9687b9ce70fd5a3ef316ef076205ae6ee9d5589269ddb",
+      "captured_text_sha256": "b4f546265e5082fef8c9687b9ce70fd5a3ef316ef076205ae6ee9d5589269ddb",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/execution_queue.rs",
+      "raw_sha256": "80a824f4a632592ddfe50cf82e6633bd640f9c32a99f23a4eb05c069d44b4bbf",
+      "captured_text_sha256": "80a824f4a632592ddfe50cf82e6633bd640f9c32a99f23a4eb05c069d44b4bbf",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/execution_registry.rs",
+      "raw_sha256": "a0bcd381c0695780d43a654695b86efc8f30471e0755bd8b815dc4612afaf037",
+      "captured_text_sha256": "a0bcd381c0695780d43a654695b86efc8f30471e0755bd8b815dc4612afaf037",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/execution_scope_replacement.rs",
+      "raw_sha256": "274e7f923d53d1972ac7d5a6289ee5ba9153440a2d281036a5bc9359ca9de206",
+      "captured_text_sha256": "274e7f923d53d1972ac7d5a6289ee5ba9153440a2d281036a5bc9359ca9de206",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/git_candidate_retention.rs",
+      "raw_sha256": "554f225c3e1c55624fe6ab31ba90865e8792981599ffa2a7c3b7b934d3285a49",
+      "captured_text_sha256": "554f225c3e1c55624fe6ab31ba90865e8792981599ffa2a7c3b7b934d3285a49",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/git_source.rs",
+      "raw_sha256": "6a8121f2b8941e40e68145438d942a4d1e8c1243c8ee86bf56647458971fbca1",
+      "captured_text_sha256": "6a8121f2b8941e40e68145438d942a4d1e8c1243c8ee86bf56647458971fbca1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/lib.rs",
+      "raw_sha256": "ecf66daf90062b04d6ffd6a7f2fa773fb69c6ea34b67dc610be97d4f471389d0",
+      "captured_text_sha256": "ecf66daf90062b04d6ffd6a7f2fa773fb69c6ea34b67dc610be97d4f471389d0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/local_candidate.rs",
+      "raw_sha256": "66f97e724dbdf310e56080c9cdcd3bd894ae1a8dac6e239663aa75d19abf4765",
+      "captured_text_sha256": "66f97e724dbdf310e56080c9cdcd3bd894ae1a8dac6e239663aa75d19abf4765",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/managed_app.rs",
+      "raw_sha256": "a0015cce7b292a7377ae6a015f8f80bfbc45cf6353100e0f26dc42dedf4fda8d",
+      "captured_text_sha256": "a0015cce7b292a7377ae6a015f8f80bfbc45cf6353100e0f26dc42dedf4fda8d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/provider_exchange.rs",
+      "raw_sha256": "acf121ba2ba8dd255eae567dc0b026d3e0b9192df1bb81a14d5704ba668c23db",
+      "captured_text_sha256": "acf121ba2ba8dd255eae567dc0b026d3e0b9192df1bb81a14d5704ba668c23db",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/publication.rs",
+      "raw_sha256": "9bde38a899a588283d528d1c881c19c0b20c6e1139add8add6a16247562ccfe8",
+      "captured_text_sha256": "9bde38a899a588283d528d1c881c19c0b20c6e1139add8add6a16247562ccfe8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/repository_binding.rs",
+      "raw_sha256": "bd94032f3e2ad41eb31c2742fb386278f6eac7634370f4ace42b6091912f7da0",
+      "captured_text_sha256": "bd94032f3e2ad41eb31c2742fb386278f6eac7634370f4ace42b6091912f7da0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/repository_scheduler.rs",
+      "raw_sha256": "2f284929de87045b7f81c868b50e6443bed7ae59e8d8a18f4a628a651e785241",
+      "captured_text_sha256": "2f284929de87045b7f81c868b50e6443bed7ae59e8d8a18f4a628a651e785241",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/repository_scheduler_replacement.rs",
+      "raw_sha256": "490771ade6260a6570ea4c26490c07f41ca5d7b2a247c7e73b2ecc25b5899af5",
+      "captured_text_sha256": "490771ade6260a6570ea4c26490c07f41ca5d7b2a247c7e73b2ecc25b5899af5",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/scheduler_policy.rs",
+      "raw_sha256": "b6fd8686a517fa014c5517ad20a0ef7c5f4221646213540580797060eaea2e42",
+      "captured_text_sha256": "b6fd8686a517fa014c5517ad20a0ef7c5f4221646213540580797060eaea2e42",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/user_accounts.rs",
+      "raw_sha256": "ecf00aeb80d2168a095f68a7b8935ad1019bbb481c90f40df4556b17a0be4130",
+      "captured_text_sha256": "ecf00aeb80d2168a095f68a7b8935ad1019bbb481c90f40df4556b17a0be4130",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/worker_fleet_inventory.rs",
+      "raw_sha256": "72f7cdffca8a5357894a992112f9d096d69b024965300786670082a17c71ead2",
+      "captured_text_sha256": "72f7cdffca8a5357894a992112f9d096d69b024965300786670082a17c71ead2",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/worker_fleet_operations.rs",
+      "raw_sha256": "de5e0a72820870b279d0212f88e9612667368e0c59cc4fcf22b7e32057ba54c2",
+      "captured_text_sha256": "de5e0a72820870b279d0212f88e9612667368e0c59cc4fcf22b7e32057ba54c2",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/worker_outbound_queue.rs",
+      "raw_sha256": "3683d33a91cc6b4b770c61721b224041e0a0103094e09d4a7d797eecfb81b525",
+      "captured_text_sha256": "3683d33a91cc6b4b770c61721b224041e0a0103094e09d4a7d797eecfb81b525",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/worker_placement.rs",
+      "raw_sha256": "9d3a75b9fbbc937f8c7c7cf88a7b7988dd46b8b22fc67fb40b0334f51a363fd7",
+      "captured_text_sha256": "9d3a75b9fbbc937f8c7c7cf88a7b7988dd46b8b22fc67fb40b0334f51a363fd7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/worker_registry.rs",
+      "raw_sha256": "910a23529c6cd6114ab854d54863e4e336ddd13300902456949667fa62632e47",
+      "captured_text_sha256": "910a23529c6cd6114ab854d54863e4e336ddd13300902456949667fa62632e47",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/worker_session_credential.rs",
+      "raw_sha256": "0d66d0cd47b62c32e09606644a72c256c5c7b18bdf526237a9cf5c3fbea42a15",
+      "captured_text_sha256": "0d66d0cd47b62c32e09606644a72c256c5c7b18bdf526237a9cf5c3fbea42a15",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-storage/src/worker_session_slots.rs",
+      "raw_sha256": "dd557269f17e4d52636d44d918bccfb3a504a75d0d32aeb12c235f27d51ac6ff",
+      "captured_text_sha256": "dd557269f17e4d52636d44d918bccfb3a504a75d0d32aeb12c235f27d51ac6ff",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/action_enforcement.rs",
+      "raw_sha256": "59d6401d4429a77194aa00353084235aa1d0bf6c479d07d572b0d529fa88a1c4",
+      "captured_text_sha256": "59d6401d4429a77194aa00353084235aa1d0bf6c479d07d572b0d529fa88a1c4",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/candidate_ref.rs",
+      "raw_sha256": "585f69c78d183dee8e1afbed8caf09cca564d4edbe42f6225d570107d6de32c1",
+      "captured_text_sha256": "585f69c78d183dee8e1afbed8caf09cca564d4edbe42f6225d570107d6de32c1",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/change_batch_store.rs",
+      "raw_sha256": "0298e0d4734833da7962190ee4dbc5f2f3350c2118482f46ac3fa8fb56215bb7",
+      "captured_text_sha256": "0298e0d4734833da7962190ee4dbc5f2f3350c2118482f46ac3fa8fb56215bb7",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/context_safety.rs",
+      "raw_sha256": "ce96101e8a4c56bb6dd4cb5cc405cfd0f851baaf464ae79c6cd9d5ce8964a367",
+      "captured_text_sha256": "ce96101e8a4c56bb6dd4cb5cc405cfd0f851baaf464ae79c6cd9d5ce8964a367",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/debug_experiment.rs",
+      "raw_sha256": "42f7cb6e50497f9e9752238a97d46de6dd5802418ac55087ab337bd447aa2336",
+      "captured_text_sha256": "42f7cb6e50497f9e9752238a97d46de6dd5802418ac55087ab337bd447aa2336",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/debug_probe_context.rs",
+      "raw_sha256": "73460b94750ac0ebcea6e519a7b92bcbdf1ebf2d8bfa20ec3ffa17cff352ba9f",
+      "captured_text_sha256": "73460b94750ac0ebcea6e519a7b92bcbdf1ebf2d8bfa20ec3ffa17cff352ba9f",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/device_model.rs",
+      "raw_sha256": "040b363a5c5714e788121c5345d2c5ac28b984178befc915c9a8e0d540b8ee4d",
+      "captured_text_sha256": "040b363a5c5714e788121c5345d2c5ac28b984178befc915c9a8e0d540b8ee4d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/handoff_snapshot.rs",
+      "raw_sha256": "2144d95f92f6e59c235ec09043a660d73c835d96e904acabb58bddc878de5afc",
+      "captured_text_sha256": "2144d95f92f6e59c235ec09043a660d73c835d96e904acabb58bddc878de5afc",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/lib.rs",
+      "raw_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+      "captured_text_sha256": "13b6fa9a2a0b697ba48c350ccfd1fa856d70e392d8a1e6239aeb132e45b145d6",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/main.rs",
+      "raw_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+      "captured_text_sha256": "b411e70451b7dfd76fd59cdedba9f7bab7a40b694fb47bc6299da7709b28690d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/managed_session.rs",
+      "raw_sha256": "f7ce61001e543a4bc9d1d2155fb8fea993c16968fe09aa2d3393c024674c8b99",
+      "captured_text_sha256": "f7ce61001e543a4bc9d1d2155fb8fea993c16968fe09aa2d3393c024674c8b99",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/probe_evidence.rs",
+      "raw_sha256": "d818583ac54fc8a0ede68380aa2fc8fb6cf00185101a0a0c47d712e265f72610",
+      "captured_text_sha256": "d818583ac54fc8a0ede68380aa2fc8fb6cf00185101a0a0c47d712e265f72610",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/probe_process.rs",
+      "raw_sha256": "4c950317bae9bd5a111b9efcbba6c406a7d7bfd9f4785cc746275d9c35c2117b",
+      "captured_text_sha256": "4c950317bae9bd5a111b9efcbba6c406a7d7bfd9f4785cc746275d9c35c2117b",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/probe_reducer.rs",
+      "raw_sha256": "09b1b318c4ec48fe8b0726f96c307eab714873bd7b3686e8dc2a48365916ce5e",
+      "captured_text_sha256": "09b1b318c4ec48fe8b0726f96c307eab714873bd7b3686e8dc2a48365916ce5e",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/probe_scheduler.rs",
+      "raw_sha256": "7db625341cbf8a4e2262b33911a0a4dfdf6a120b3b72660f0357701c34d0511d",
+      "captured_text_sha256": "7db625341cbf8a4e2262b33911a0a4dfdf6a120b3b72660f0357701c34d0511d",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/remote_transport.rs",
+      "raw_sha256": "257cb62def2299bb83c457f0d794fcb0c4f3ce8a48d649d9ddd2077e5d877121",
+      "captured_text_sha256": "257cb62def2299bb83c457f0d794fcb0c4f3ce8a48d649d9ddd2077e5d877121",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/stage_product.rs",
+      "raw_sha256": "aba04c25e24694655241e9a225373377b9fcc414edf24bb2a812accaf98c46b2",
+      "captured_text_sha256": "aba04c25e24694655241e9a225373377b9fcc414edf24bb2a812accaf98c46b2",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/validation_artifact.rs",
+      "raw_sha256": "0b8c40235b64082cfe8408e4e360b103ad8099ddeecc5e644866adb288d07bf0",
+      "captured_text_sha256": "0b8c40235b64082cfe8408e4e360b103ad8099ddeecc5e644866adb288d07bf0",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/validation_diagnostics.rs",
+      "raw_sha256": "69240631103ab95cdd67ddb7ccce75f009d2d8c447585778b7b538b0e17e6ef8",
+      "captured_text_sha256": "69240631103ab95cdd67ddb7ccce75f009d2d8c447585778b7b538b0e17e6ef8",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/workspace.rs",
+      "raw_sha256": "b9defef5ef0f2f81ab474c4650957d8cbbeeed35a43e392d0fc9628d875e00aa",
+      "captured_text_sha256": "b9defef5ef0f2f81ab474c4650957d8cbbeeed35a43e392d0fc9628d875e00aa",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "crates/winwincode-worker/src/workspace_runtime.rs",
+      "raw_sha256": "07467cdd1826d28ebb862ac9ef8ddcca9309c92bd61e1c10e8db6a632d51d562",
+      "captured_text_sha256": "07467cdd1826d28ebb862ac9ef8ddcca9309c92bd61e1c10e8db6a632d51d562",
+      "language": "rust",
+      "capture_status": "captured"
+    },
+    {
+      "path": "deploy/serve-client.mjs",
+      "raw_sha256": "c2897edfaffd35749e850416592db4b498343c20790b95efb410997607e7a0d7",
+      "captured_text_sha256": "c2897edfaffd35749e850416592db4b498343c20790b95efb410997607e7a0d7",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "docs/engineering-runtime/runtime-contract.design.check.mjs",
+      "raw_sha256": "6a157843a06826fa6c15d609f0e11149e05fc2db13077e6adfb6e3183e36668c",
+      "captured_text_sha256": "6a157843a06826fa6c15d609f0e11149e05fc2db13077e6adfb6e3183e36668c",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "jev-runtime-spec/js/main.js",
+      "raw_sha256": "de9c2b546a51186882d30307632bc028b9815d48dd528307849a3b580cc14aef",
+      "captured_text_sha256": "de9c2b546a51186882d30307632bc028b9815d48dd528307849a3b580cc14aef",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-core/src/query-cache.ts",
+      "raw_sha256": "05001dca54a0a4338f2548c8ded49b38d3f9fb9af8804061a5cb39efe15f1163",
+      "captured_text_sha256": "05001dca54a0a4338f2548c8ded49b38d3f9fb9af8804061a5cb39efe15f1163",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-core/src/scope-context.ts",
+      "raw_sha256": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+      "captured_text_sha256": "333d15ba1dd557c23211064915a1265523d753218a33f9fcc6c4d79e1b28565d",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-ui/src/button.ts",
+      "raw_sha256": "b3d01adaf5c742f0e24788e0e6e85b478a25e70827db5889d4625781454f4fc6",
+      "captured_text_sha256": "b3d01adaf5c742f0e24788e0e6e85b478a25e70827db5889d4625781454f4fc6",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-ui/src/error-state.ts",
+      "raw_sha256": "9932f3c4c7ae98d24e8ad537862bf229d088ac7d0bada4594b32beaa473e856b",
+      "captured_text_sha256": "9932f3c4c7ae98d24e8ad537862bf229d088ac7d0bada4594b32beaa473e856b",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-ui/src/index.ts",
+      "raw_sha256": "5caae965b4182bd25c9626a0f0778b6b57d1893e50fb8a03f6ffcef2e5c5dd69",
+      "captured_text_sha256": "5caae965b4182bd25c9626a0f0778b6b57d1893e50fb8a03f6ffcef2e5c5dd69",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-ui/src/mounted-view.ts",
+      "raw_sha256": "01d80bfa37e6d6585a9bdbb2a9a345884fca624d93b16a2f8158c65f9ca7b937",
+      "captured_text_sha256": "01d80bfa37e6d6585a9bdbb2a9a345884fca624d93b16a2f8158c65f9ca7b937",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-ui/src/page-header.ts",
+      "raw_sha256": "eb3922d613aa72ff8608a2769b4bdceb1a32008e57cf5667dbef8115b3c9ba9c",
+      "captured_text_sha256": "eb3922d613aa72ff8608a2769b4bdceb1a32008e57cf5667dbef8115b3c9ba9c",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-ui/src/panel.ts",
+      "raw_sha256": "ac923789059628f36884632236136df45eba19d0c9aa4ce457344f93c5df5183",
+      "captured_text_sha256": "ac923789059628f36884632236136df45eba19d0c9aa4ce457344f93c5df5183",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/browser-ui/src/status-badge.ts",
+      "raw_sha256": "09130acf7bcc9d22c6f661ae38816cff72c71a16d1bc6a0db98de9386dc98eec",
+      "captured_text_sha256": "09130acf7bcc9d22c6f661ae38816cff72c71a16d1bc6a0db98de9386dc98eec",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/contracts/src/browser-control.ts",
+      "raw_sha256": "7d08583d5904fc0ad64480d29e31d993273401cae3e6d8abe4eca3e8515d026a",
+      "captured_text_sha256": "7d08583d5904fc0ad64480d29e31d993273401cae3e6d8abe4eca3e8515d026a",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/contracts/src/client-control.ts",
+      "raw_sha256": "429ad053cdf71952aac12eca214e36276f86e4c5de7d8556eca28c16a1665186",
+      "captured_text_sha256": "429ad053cdf71952aac12eca214e36276f86e4c5de7d8556eca28c16a1665186",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/contracts/src/fusion.ts",
+      "raw_sha256": "6ed57e67a6b3c4e0a159bce44111a56fc38c711585df625a167a55fbb9245014",
+      "captured_text_sha256": "6ed57e67a6b3c4e0a159bce44111a56fc38c711585df625a167a55fbb9245014",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/contracts/src/index.ts",
+      "raw_sha256": "bfd732f721817332d38e867d6b0971239ccd0dc13e1c43eddd55d089afcce718",
+      "captured_text_sha256": "bfd732f721817332d38e867d6b0971239ccd0dc13e1c43eddd55d089afcce718",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/contracts/src/runtime-events.ts",
+      "raw_sha256": "744d433ae04c267e1ccff4bb13dddc635929ffed6802e1032dcc96e58dd25003",
+      "captured_text_sha256": "744d433ae04c267e1ccff4bb13dddc635929ffed6802e1032dcc96e58dd25003",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/contracts/src/strongflow-role.ts",
+      "raw_sha256": "5a9bafacf81b86374a537166b243b231180b3f7d209b9f751f114d3b5104b281",
+      "captured_text_sha256": "5a9bafacf81b86374a537166b243b231180b3f7d209b9f751f114d3b5104b281",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/control-plane-client/src/index.ts",
+      "raw_sha256": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+      "captured_text_sha256": "a38d9414eb0869ca6d758040b3240c9bcf388fb6261b1c54078be9052db2b1b6",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/strongflow/src/credential-boundary.ts",
+      "raw_sha256": "2a2f884beb92b651617bd58710be1040245c776ce1615463e2f8d7178d794960",
+      "captured_text_sha256": "2a2f884beb92b651617bd58710be1040245c776ce1615463e2f8d7178d794960",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "packages/strongflow/src/index.ts",
+      "raw_sha256": "9d0b6e9a097dd3a5b0951a0d5a5e4c8059938cebf40599c7f5c1d2852c26e266",
+      "captured_text_sha256": "9d0b6e9a097dd3a5b0951a0d5a5e4c8059938cebf40599c7f5c1d2852c26e266",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "schema/winwincode-export/v1/canonical-json.js",
+      "raw_sha256": "5ed60a4348d169246ba0fadd32d1cda3ede0f44daaef8e420736377e846fd851",
+      "captured_text_sha256": "5ed60a4348d169246ba0fadd32d1cda3ede0f44daaef8e420736377e846fd851",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "schema/winwincode-export/v1/parse-bounded.js",
+      "raw_sha256": "95513ad7d79966358b730700f9b40a0a40152a2c31013445f1a923f1cdb5df7e",
+      "captured_text_sha256": "95513ad7d79966358b730700f9b40a0a40152a2c31013445f1a923f1cdb5df7e",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "schema/winwincode-export/v1/validate.js",
+      "raw_sha256": "0229ef6d0d7b632dfe3cd39e8c25eb848f1b122b5e275e7dcf5d7e517d35d6dc",
+      "captured_text_sha256": "0229ef6d0d7b632dfe3cd39e8c25eb848f1b122b5e275e7dcf5d7e517d35d6dc",
+      "language": "typescript",
+      "capture_status": "captured"
+    },
+    {
+      "path": "winwincode-bd-tracks/js/main.js",
+      "raw_sha256": "fcc2332c5c048f33da69b22e1b452a746b961916f42fd5ce527a0b3fcf54c9ae",
+      "captured_text_sha256": "fcc2332c5c048f33da69b22e1b452a746b961916f42fd5ce527a0b3fcf54c9ae",
+      "language": "typescript",
+      "capture_status": "captured"
+    }
+  ],
+  "native_capture_counts": {
+    "python": 0,
+    "typescript": 120,
+    "rust": 351
+  }
+}

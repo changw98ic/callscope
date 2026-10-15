@@ -1,0 +1,13 @@
+{
+  "artifact": "n0vel-scan.json.gz",
+  "encoding": "gzip",
+  "compressed_bytes": 37711147,
+  "compressed_sha256": "bac7d4ad44f598597a6177e820acb1e0630f9123e764359f8aa6552aa98ec63c",
+  "original_path": "n0vel-scan.json",
+  "original_bytes": 568005966,
+  "original_sha256": "9654e2bd8afc3b853236c52e3ad05aae217c5d282af5c65f44727e786e6121b8",
+  "decompressed_bytes_verified": true,
+  "contains": "Complete normal CLI export, with no saved source/graph/finding records omitted",
+  "restore_command": "gzip -dc n0vel-scan.json.gz > n0vel-scan.json",
+  "database_stays_local": "/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3"
+}

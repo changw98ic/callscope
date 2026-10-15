@@ -2,7 +2,7 @@
 
 CallScope 的扩展目标是增加静态分析能力并保留证据一致性。扩展不得导入目标模块、执行目标代码、调用目标构建/测试工具、安装目标依赖或启动沙箱。工具自身的固定语法库与目标项目依赖分开管理。
 
-当前接口是可读的 Python 模块边界，不是动态插件加载系统。v0.14 默认 Python AST，选配 TypeScript/TSX/JS-family 与 Rust 前端；Axon 提供确定图索引，CocoIndex 可选缓存语言前端。新增适配器随工具明确注册；配置只能是数据，不定义脚本或可执行回调。scope2 核心/策略已冻结，两库正常纯静态冷/热分析及正式报告已保存、数据库已关闭；下文历史查询和结果不升级为 v0.14 成果。
+当前接口是固定注册的工具模块边界，不是动态插件加载系统。v0.15 默认 `analysis.languages:["all"]`，展开为 38 个规范语言/格式 ID：保留 Python、TypeScript 家族与 Rust，新增语言结构提取直接复用固定 CodeGraph。Axon 提供确定图索引，CocoIndex 可选缓存语言前端；CodeGraph 候选不进入确定邻接。完整目录、Node.js 20–24 和元数据/模板边界见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。配置只能是数据，不定义脚本或可执行回调。v0.14 scope2 冻结结果继续属于原版本，以下历史查询不升级为 v0.15 验收。
 
 v0.13 历史正式依据为 [CPB 自动报告](../reports/astra-iteration11/codepatchbay-automatic-report.md)、[WWC 自动报告](../reports/astra-iteration11/winwincode-automatic-report.md)及各自 [CPB integration](../reports/astra-iteration11/codepatchbay-integration.json)、[WWC integration](../reports/astra-iteration11/winwincode-integration.json)。13+18 条所选链的保存状态均为 `scoped_source_relations_supported`；[正式账本](../reports/astra-iteration11/goal-ledger.json)保存五项 `scoped_static_judgment_reproduced`、complete/full 均 true、必要缺口为空，30项必要关系全部 supported、未闭关系为空。[判断证据](../reports/astra-iteration11/GOAL_JUDGMENT_EVIDENCE.json)包含704项真实引用。31条、五判断和30关系各有范围，均不作为全文覆盖率或全部功能通过数；资源写者仍保留 partial ownership assessment，wire/外部效果/一般状态空间仍有明确边界。
 
@@ -33,9 +33,11 @@ def analyze_project(root: str | Path, config: dict | None = None,
     ...
 ```
 
-统一入口位于 `callscope/analysis.py`；`callscope/analyzer.py` 保留兼容入口及 Python 前端。当前配置接受 Python、TypeScript、Rust，默认仅 Python。新增语言需同时扩展配置校验、源码扩展名库存和服务分派，不能只增加一个文件就宣称支持。
+统一入口位于 `callscope/analysis.py`；`callscope/analyzer.py` 保留兼容入口及 Python 前端。`language_catalog.py` 统一规范 ID、别名、扩展名、特殊路径和能力层级，`all` 展开为整个目录；显式历史语言列表不自动扩展。JavaScript/TSX/JSX 归入原 TypeScript 调度，不能再注册重复扫描。未知后缀只盘点路径；已识别但未配置或无前端的输入保留 unsupported。
 
-`source_reader.py` 负责一次安全捕获，Python 消费 `captured_files`，TS/Rust 前端接口为：
+新增语言需同时明确 catalog 层级、配置/服务分派、捕获规则、组件身份及缓存初始化。复用 CodeGraph 时在 `codegraph_frontend.py` 转换已捕获文本、源码身份、位置、状态与候选，不能把上游 confidence 或唯一候选转为 resolved。YAML/Twig/XML/properties、模板和嵌入语言分别保留元数据/局部结构边界；注册和语法可加载不表示已完成真实项目验证。
+
+`source_reader.py` 负责一次安全捕获，Python 消费 `captured_files`；TS/Rust 与 CodeGraph 桥接沿用以下返回协议，具体版本由各组件提供：
 
 ```python
 ANALYZER_VERSION: str
@@ -47,6 +49,8 @@ def analyze_files(files: list[SourceFile], root: Path, config: dict) -> dict:
 ```
 
 适配器不得重新读取或执行目标源码，不修改调用方的 `SourceFile` 对象；通过新的文件对象返回解析状态。最终身份由统一入口生成，语言前端不独立发布快照。
+
+CodeGraph worker 只接收相对路径和文本/哈希，不序列化真实目标根。新增项目清单须先通过安全捕获进入快照；虚拟文件系统之外的解析需求保留 unknown。使用 `ensure_runtime()` 初始化固定 Node 工具，不为这些新增语言调用 Python `language_parser()`。保存 `metadata.language` 为规范调度 ID，实际方言另存 `upstream_language`，避免跨语言统计和缓存串包。
 
 推荐步骤：
 

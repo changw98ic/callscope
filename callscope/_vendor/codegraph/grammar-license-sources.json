@@ -1,0 +1,821 @@
+{
+  "schema_version": 1,
+  "scope": "31 vendored grammar WASM resources only; license-source preservation, not a whole dependency or reproducible-build audit",
+  "codegraph": {
+    "repository": "https://github.com/colbymchenry/codegraph",
+    "commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+  },
+  "summary": {
+    "assets": 31,
+    "grammar_license_texts": 28,
+    "all_assets_have_preserved_grammar_family_license": true,
+    "all_binary_to_grammar_source_mappings_verified": false,
+    "missing_license_texts": [],
+    "source_attribution_gaps": [
+      "CFML/CFScript/CFQuery and Pascal: grammar-family repositories identified, but exact provenance of the bundled WASM to those repositories/revisions is not recorded in inspected CodeGraph sources.",
+      "Erlang: WhatsApp/ELP lineage is documented, but the bundled grammar revision is not recorded.",
+      "Objective-C: tree-sitter-wasms dependency is a version range; the resolved binary build revision was not recovered.",
+      "ArkTS LICENSE was obtained from the current repository; CodeGraph declares npm 0.2.0 but its corresponding license commit was not independently pinned.",
+      "No WASM build was executed or compared against a rebuilt grammar."
+    ]
+  },
+  "retrieval": {
+    "method": "GitHub connector fetch_file; existing vendored source and package metadata read locally",
+    "date": "2026-10-15",
+    "package_license_scope": "tree-sitter-wasms Unlicense covers its packaging project, not the individual grammar licenses"
+  },
+  "licenses": {
+    "arkts": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-arkts-LICENSE",
+      "sha256": "048e4dcb7a71fb725495ebb3e7052d0e76dcb6705b828af8b9b461df10bcd8ca",
+      "repository": "harmony-contrib/tree-sitter-arkts",
+      "license_url": "https://github.com/harmony-contrib/tree-sitter-arkts/blob/master/LICENSE",
+      "license_git_blob_sha": "7da2fb887e32a2847be151d8163eb4c44fcc69ea",
+      "license_ref": "default branch at retrieval",
+      "local_git_blob_sha": "7da2fb887e32a2847be151d8163eb4c44fcc69ea",
+      "format": "verbatim"
+    },
+    "c": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-c-LICENSE",
+      "sha256": "2e0110e07abef7c2548b26ec9d6969775617ca539a0dc8dbeeb14d6452c711d1",
+      "repository": "tree-sitter/tree-sitter-c",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-c/blob/v0.24.2/LICENSE",
+      "license_git_blob_sha": "4b52d191cead337b11e274b79459a86f1b5a7779",
+      "license_ref": "v0.24.2",
+      "local_git_blob_sha": "4b52d191cead337b11e274b79459a86f1b5a7779",
+      "format": "verbatim"
+    },
+    "c-sharp": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-c-sharp-LICENSE",
+      "sha256": "778fb7d63b8c1844da315648c02f325c4713a6f4a5d19644fd413421422776d3",
+      "repository": "tree-sitter/tree-sitter-c-sharp",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-c-sharp/blob/v0.23.5/LICENSE",
+      "license_git_blob_sha": "c8921f694d834542874bd0403afe97adb8f5dab3",
+      "license_ref": "v0.23.5",
+      "local_git_blob_sha": "c8921f694d834542874bd0403afe97adb8f5dab3",
+      "format": "verbatim"
+    },
+    "cfml": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-cfml-LICENSE",
+      "sha256": "7e17ba5e26b0438ca04ebf2d9e7931da3080509da6625e117f6feb943ecf767a",
+      "repository": "cfmleditor/tree-sitter-cfml",
+      "license_url": "https://github.com/cfmleditor/tree-sitter-cfml/blob/master/LICENSE",
+      "license_git_blob_sha": "aaf7a85db9f6e80c1ade3484da50e719087fe4a8",
+      "license_ref": "default branch at retrieval",
+      "local_git_blob_sha": "aaf7a85db9f6e80c1ade3484da50e719087fe4a8",
+      "format": "verbatim"
+    },
+    "cobol": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-cobol-LICENSE",
+      "sha256": "d724405ce238a22c0d35769c5a36b386ad5958192efe8bbb304fb2896254575f",
+      "repository": "yutaro-sakamoto/tree-sitter-cobol",
+      "license_url": "https://github.com/yutaro-sakamoto/tree-sitter-cobol/blob/e99dbdc3d800d5fa2796476efd60af91f6b43d93/LICENSE",
+      "license_git_blob_sha": "ff8ed93cb0dd57d68feeefe4829dbc9083584b5e",
+      "license_ref": "e99dbdc3d800d5fa2796476efd60af91f6b43d93",
+      "local_git_blob_sha": "ff8ed93cb0dd57d68feeefe4829dbc9083584b5e",
+      "format": "verbatim"
+    },
+    "cpp": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-cpp-LICENSE",
+      "sha256": "2e0110e07abef7c2548b26ec9d6969775617ca539a0dc8dbeeb14d6452c711d1",
+      "repository": "tree-sitter/tree-sitter-cpp",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-cpp/blob/v0.23.4/LICENSE",
+      "license_git_blob_sha": "4b52d191cead337b11e274b79459a86f1b5a7779",
+      "license_ref": "v0.23.4",
+      "local_git_blob_sha": "4b52d191cead337b11e274b79459a86f1b5a7779",
+      "format": "verbatim"
+    },
+    "dart": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-dart-LICENSE",
+      "sha256": "1fd4573a610b50eedd4fb5c5c3690299f4e1071753d6475bed4a8aaa087fe0a8",
+      "repository": "UserNobody14/tree-sitter-dart",
+      "license_url": "https://github.com/UserNobody14/tree-sitter-dart/blob/d4d8f3e337d8/LICENSE",
+      "license_git_blob_sha": "9633f23d30fc86c9ee3914c25ae356a92c8a191c",
+      "license_ref": "d4d8f3e337d8",
+      "local_git_blob_sha": "c2f9b4139622a4a6174c25afcfd4226a4c4b6cb3",
+      "format": "full original text; one additional final LF"
+    },
+    "erlang": {
+      "license": "Apache-2.0",
+      "path": "dependency-notices/tree-sitter-erlang-LICENSE",
+      "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c",
+      "repository": "WhatsApp/tree-sitter-erlang",
+      "license_url": "https://github.com/WhatsApp/tree-sitter-erlang/blob/main/LICENSE",
+      "license_git_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "license_ref": "default branch at retrieval",
+      "local_git_blob_sha": "57bc88a15a0ee8266c259b2667e64608d3f7e292",
+      "format": "full original text; one additional final LF"
+    },
+    "go": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-go-LICENSE",
+      "sha256": "2e0110e07abef7c2548b26ec9d6969775617ca539a0dc8dbeeb14d6452c711d1",
+      "repository": "tree-sitter/tree-sitter-go",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-go/blob/v0.23.4/LICENSE",
+      "license_git_blob_sha": "4b52d191cead337b11e274b79459a86f1b5a7779",
+      "license_ref": "v0.23.4",
+      "local_git_blob_sha": "4b52d191cead337b11e274b79459a86f1b5a7779",
+      "format": "verbatim"
+    },
+    "java": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-java-LICENSE",
+      "sha256": "52ed137b039cd9c46409bc22e89938af911c95b157feae2d040b51e6084369a7",
+      "repository": "tree-sitter/tree-sitter-java",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-java/blob/v0.23.5/LICENSE",
+      "license_git_blob_sha": "4e0446f76ca7d380d615e31b5500711df66a9ea2",
+      "license_ref": "v0.23.5",
+      "local_git_blob_sha": "4e0446f76ca7d380d615e31b5500711df66a9ea2",
+      "format": "verbatim"
+    },
+    "javascript": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-javascript-LICENSE",
+      "sha256": "2e0110e07abef7c2548b26ec9d6969775617ca539a0dc8dbeeb14d6452c711d1",
+      "repository": "tree-sitter/tree-sitter-javascript",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-javascript/blob/v0.25.0/LICENSE",
+      "license_git_blob_sha": "4b52d191cead337b11e274b79459a86f1b5a7779",
+      "license_ref": "v0.25.0",
+      "local_git_blob_sha": "4b52d191cead337b11e274b79459a86f1b5a7779",
+      "format": "verbatim"
+    },
+    "kotlin": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-kotlin-LICENSE",
+      "sha256": "948495f61768f7de26bcc61113d8cd95f50bbc15adb678c28c941c6c8fcd5903",
+      "repository": "fwcd/tree-sitter-kotlin",
+      "license_url": "https://github.com/fwcd/tree-sitter-kotlin/blob/0.3.8/LICENSE",
+      "license_git_blob_sha": "777756371d981380e00992bed77f52d220d7d6f5",
+      "license_ref": "0.3.8",
+      "local_git_blob_sha": "777756371d981380e00992bed77f52d220d7d6f5",
+      "format": "verbatim"
+    },
+    "lua": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-lua-LICENSE",
+      "sha256": "9a32b02e4c917b1ce6b5e79d8ea81e25cefd7f27d89c7235f2afb262c06cf32e",
+      "repository": "tree-sitter-grammars/tree-sitter-lua",
+      "license_url": "https://github.com/tree-sitter-grammars/tree-sitter-lua/blob/816840c592/LICENSE.md",
+      "license_git_blob_sha": "ff0407e77c183db53bf525741a76314e15e8f6ea",
+      "license_ref": "816840c592",
+      "local_git_blob_sha": "ff0407e77c183db53bf525741a76314e15e8f6ea",
+      "format": "verbatim"
+    },
+    "luau": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-luau-LICENSE",
+      "sha256": "099c44248f8cf353123211318680e93465587c005a4b3730ce8cb5334de043d6",
+      "repository": "tree-sitter-grammars/tree-sitter-luau",
+      "license_url": "https://github.com/tree-sitter-grammars/tree-sitter-luau/blob/v1.2.0/LICENSE",
+      "license_git_blob_sha": "5af536362c15275bb3a57445bc5be23b349cd1de",
+      "license_ref": "v1.2.0",
+      "local_git_blob_sha": "5af536362c15275bb3a57445bc5be23b349cd1de",
+      "format": "verbatim"
+    },
+    "nix": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-nix-LICENSE",
+      "sha256": "c1b72e50266464ec5118d26200e17bf1f472d142e62ab637e1ffc23986657a78",
+      "repository": "nix-community/tree-sitter-nix",
+      "license_url": "https://github.com/nix-community/tree-sitter-nix/blob/3d0173d/LICENSE",
+      "license_git_blob_sha": "cfa8a0f54529fd8761bfe49111becff3d30fdd09",
+      "license_ref": "3d0173d",
+      "local_git_blob_sha": "cfa8a0f54529fd8761bfe49111becff3d30fdd09",
+      "format": "verbatim"
+    },
+    "objc": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-objc-LICENSE",
+      "sha256": "099c44248f8cf353123211318680e93465587c005a4b3730ce8cb5334de043d6",
+      "repository": "tree-sitter-grammars/tree-sitter-objc",
+      "license_url": "https://github.com/tree-sitter-grammars/tree-sitter-objc/blob/v2.1.0/LICENSE",
+      "license_git_blob_sha": "5af536362c15275bb3a57445bc5be23b349cd1de",
+      "license_ref": "v2.1.0",
+      "local_git_blob_sha": "5af536362c15275bb3a57445bc5be23b349cd1de",
+      "format": "verbatim"
+    },
+    "pascal": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-pascal-LICENSE",
+      "sha256": "2e2fcc500eacb15b76c11fd2229aebf0a5b4c8ed476f068447c6dce778a17ac9",
+      "repository": "Isopod/tree-sitter-pascal",
+      "license_url": "https://github.com/Isopod/tree-sitter-pascal/blob/master/LICENSE",
+      "license_git_blob_sha": "9f44cc5b43fa0dd6ce8c9dc0f2eacf447068d31c",
+      "license_ref": "default branch at retrieval",
+      "local_git_blob_sha": "9f44cc5b43fa0dd6ce8c9dc0f2eacf447068d31c",
+      "format": "verbatim"
+    },
+    "php": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-php-LICENSE",
+      "sha256": "664764fabf40c0b318e06324a5a12379092a2df25b8cbf2415f71bc0bb352346",
+      "repository": "tree-sitter/tree-sitter-php",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-php/blob/v0.24.2/LICENSE",
+      "license_git_blob_sha": "513857dd3fbca4e33bb8ee0d70cd5c2aee163eae",
+      "license_ref": "v0.24.2",
+      "local_git_blob_sha": "513857dd3fbca4e33bb8ee0d70cd5c2aee163eae",
+      "format": "verbatim"
+    },
+    "python": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-python-LICENSE",
+      "sha256": "d724405ce238a22c0d35769c5a36b386ad5958192efe8bbb304fb2896254575f",
+      "repository": "tree-sitter/tree-sitter-python",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-python/blob/v0.23.6/LICENSE",
+      "license_git_blob_sha": "ff8ed93cb0dd57d68feeefe4829dbc9083584b5e",
+      "license_ref": "v0.23.6",
+      "local_git_blob_sha": "ff8ed93cb0dd57d68feeefe4829dbc9083584b5e",
+      "format": "verbatim"
+    },
+    "r": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-r-LICENSE",
+      "sha256": "de2e49529f03d573bc3fa229dc83acfe22c63a5ad1766b289563edfd45b72dea",
+      "repository": "r-lib/tree-sitter-r",
+      "license_url": "https://github.com/r-lib/tree-sitter-r/blob/v1.2.0/LICENSE",
+      "license_git_blob_sha": "04e174fb42f98e51a3e9fdadc2927f1016d9ab5a",
+      "license_ref": "v1.2.0",
+      "local_git_blob_sha": "04e174fb42f98e51a3e9fdadc2927f1016d9ab5a",
+      "format": "verbatim"
+    },
+    "ruby": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-ruby-LICENSE",
+      "sha256": "ee006f02a3d856df282e409be2a86e24a65bb573a98b9c28343771141351bb6b",
+      "repository": "tree-sitter/tree-sitter-ruby",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-ruby/blob/v0.23.1/LICENSE",
+      "license_git_blob_sha": "2a79f435f473717691c5e2b356fbf3e758ba930d",
+      "license_ref": "v0.23.1",
+      "local_git_blob_sha": "2a79f435f473717691c5e2b356fbf3e758ba930d",
+      "format": "verbatim"
+    },
+    "rust": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-rust-LICENSE",
+      "sha256": "31d5b6f4243d5c7c6e1c4ebbbb9f6407bd1457a08bcc4f706521710341acba36",
+      "repository": "tree-sitter/tree-sitter-rust",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-rust/blob/v0.24.2/LICENSE",
+      "license_git_blob_sha": "ceaf3c9adca54f7d3242593dd4db8065b1611699",
+      "license_ref": "v0.24.2",
+      "local_git_blob_sha": "ceaf3c9adca54f7d3242593dd4db8065b1611699",
+      "format": "verbatim"
+    },
+    "scala": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-scala-LICENSE",
+      "sha256": "1f95ed26e1f4074074c9c7083e61c0a9e4c3b9f435745044995f3beb4ed28575",
+      "repository": "tree-sitter/tree-sitter-scala",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-scala/blob/v0.26.2/LICENSE",
+      "license_git_blob_sha": "bd0a4d6c7d625591c54e1f023b93af2a4650271a",
+      "license_ref": "v0.26.2",
+      "local_git_blob_sha": "bd0a4d6c7d625591c54e1f023b93af2a4650271a",
+      "format": "verbatim"
+    },
+    "solidity": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-solidity-LICENSE",
+      "sha256": "0d905ead06fddc885334f5ed0c539ef7505035f2b3ffe586739aab058a78ea9e",
+      "repository": "JoranHonig/tree-sitter-solidity",
+      "license_url": "https://github.com/JoranHonig/tree-sitter-solidity/blob/b239a95f94cfcc6e7b3e961bc73a28d55e214f02/LICENSE",
+      "license_git_blob_sha": "9ced3c1a5b45875a29ec4a6a72efaa579d19bbed",
+      "license_ref": "b239a95f94cfcc6e7b3e961bc73a28d55e214f02",
+      "local_git_blob_sha": "4d6ae8f25271ce65f8a9b4fb3c260719441ae773",
+      "format": "full original text; one additional final LF"
+    },
+    "swift": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-swift-LICENSE",
+      "sha256": "3533cec129bb4bba015c0d61d86dd7c3b7e82110e4d2ff7837a01eff5bad5ccc",
+      "repository": "alex-pinkus/tree-sitter-swift",
+      "license_url": "https://github.com/alex-pinkus/tree-sitter-swift/blob/0.7.3/LICENSE",
+      "license_git_blob_sha": "f158d7005311344ac316830fe68492214e1645e6",
+      "license_ref": "0.7.3",
+      "local_git_blob_sha": "f158d7005311344ac316830fe68492214e1645e6",
+      "format": "verbatim"
+    },
+    "terraform": {
+      "license": "Apache-2.0",
+      "path": "dependency-notices/tree-sitter-terraform-LICENSE",
+      "sha256": "c95bae1d1ce0235ecccd3560b772ec1efb97f348a79f0fbe0a634f0c2ccefe2c",
+      "repository": "tree-sitter-grammars/tree-sitter-hcl",
+      "license_url": "https://github.com/tree-sitter-grammars/tree-sitter-hcl/blob/v1.2.0/LICENSE",
+      "license_git_blob_sha": "261eeb9e9f8b2b4b0d119366dda99c6fd7d35c64",
+      "license_ref": "v1.2.0",
+      "local_git_blob_sha": "57bc88a15a0ee8266c259b2667e64608d3f7e292",
+      "format": "full original text; one additional final LF"
+    },
+    "typescript": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-typescript-LICENSE",
+      "sha256": "49bf33cf78ef5897e4e161ce1517df7de1ae5042a65b6bcfd44401e0fc606559",
+      "repository": "tree-sitter/tree-sitter-typescript",
+      "license_url": "https://github.com/tree-sitter/tree-sitter-typescript/blob/v0.23.2/LICENSE",
+      "license_git_blob_sha": "aa9f858db5722d9576104726471b11cc0e31f131",
+      "license_ref": "v0.23.2",
+      "local_git_blob_sha": "aa9f858db5722d9576104726471b11cc0e31f131",
+      "format": "verbatim"
+    },
+    "vbnet": {
+      "license": "MIT",
+      "path": "dependency-notices/tree-sitter-vbnet-LICENSE",
+      "sha256": "fa7ab39bcf92c216d429e8aa8be8a5a40db85bfbe4ff14a7bb0ecbbcca937454",
+      "repository": "govindbanura/tree-sitter-vbnet",
+      "license_url": "https://github.com/govindbanura/tree-sitter-vbnet/blob/538b7087bf80e86004531b392fe1186379c0a2b5/LICENSE",
+      "license_git_blob_sha": "84146ad442d1aab3ced4c55207fea459727b4b00",
+      "license_ref": "538b7087bf80e86004531b392fe1186379c0a2b5",
+      "local_git_blob_sha": "84146ad442d1aab3ced4c55207fea459727b4b00",
+      "format": "verbatim"
+    }
+  },
+  "additional_copyright": {
+    "erlang": {
+      "path": "dependency-notices/tree-sitter-erlang-COPYRIGHT",
+      "sha256": "3259530d0daf6de4e405c917c7cced13689fe8d8542ea48258b0bf10b06190e3",
+      "source": "https://github.com/WhatsApp/tree-sitter-erlang/blob/main/grammar.js",
+      "source_file_git_blob_sha": "d36f3b75ffa8ef57988c133873bb8c990e002b41",
+      "extraction": "Original leading copyright/Apache notice comment, lines 1-15"
+    }
+  },
+  "notice_search": [
+    {
+      "repository": "tree-sitter-grammars/tree-sitter-hcl",
+      "ref": "v1.2.0",
+      "path": "NOTICE",
+      "result": "GitHub 404; no root NOTICE at that requested ref retrieved"
+    },
+    {
+      "repository": "WhatsApp/tree-sitter-erlang",
+      "ref": "default branch at retrieval",
+      "path": "NOTICE",
+      "result": "GitHub 404; no root NOTICE at that requested ref retrieved"
+    }
+  ],
+  "grammar_family_package_evidence": {
+    "cfml": {
+      "url": "https://github.com/cfmleditor/tree-sitter-cfml/blob/master/package.json",
+      "git_blob_sha": "b8616b69223ce492f150921be91d718b7c135f8e",
+      "name": "@cfmleditor/tree-sitter-cfml",
+      "version_at_retrieval": "0.26.43",
+      "license": "MIT",
+      "binary_version_not_inferred": true
+    },
+    "pascal": {
+      "url": "https://github.com/Isopod/tree-sitter-pascal/blob/master/package.json",
+      "git_blob_sha": "83ec9b30b7c582f936fd83d5519a46de58aad97c",
+      "name": "tree-sitter-pascal",
+      "version_at_retrieval": "0.10.2",
+      "license": "MIT",
+      "binary_version_not_inferred": true
+    }
+  },
+  "assets": [
+    {
+      "language": "arkts",
+      "path": "grammars/tree-sitter-arkts.wasm.gz",
+      "sha256": "d4ef0ef0720da6fead896c93d1df1923d7f6f72f35e0091def8930be479a3bb7",
+      "raw_sha256": "db0812971109457d22b3fe9dcdb1cd8e614fba2a338e220670bd254485753623",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-arkts.wasm",
+      "notices": [
+        "arkts",
+        "typescript",
+        "javascript"
+      ],
+      "grammar_revision": "npm tree-sitter-arkts@0.2.0",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declares_package_version",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "c",
+      "path": "grammars/tree-sitter-c.wasm.gz",
+      "sha256": "81b9f75999f06eeef4911ec62a91ff4c76fd929fdf9756a06b369e3d21023536",
+      "raw_sha256": "a271e584616c7c3c0ac663f01cd05dd5f1a6c2ce6d4cd23096548985a95d0ccb",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-c.wasm",
+      "notices": [
+        "c"
+      ],
+      "grammar_revision": "v0.24.2 / b780e47",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "c_sharp",
+      "path": "grammars/tree-sitter-c_sharp.wasm.gz",
+      "sha256": "937cbc0a3bc04fa009c8168b4439dd30a4c8b9af17380e14a736afac2245138d",
+      "raw_sha256": "6f69e1cae44e1c32c1eccc170dc5a9778fb94ff716f71113fe1f8c4299aa2f40",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-c_sharp.wasm",
+      "notices": [
+        "c-sharp"
+      ],
+      "grammar_revision": "v0.23.5",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "cfml",
+      "path": "grammars/tree-sitter-cfml.wasm.gz",
+      "sha256": "edc3287586bf69f9f60efee944e7cfc0835da358cd1331e3ed5333543d7d039f",
+      "raw_sha256": "17aeb294c58dd47045b470fc082ccceac3100c8e548b13764d4f3987a062322f",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-cfml.wasm",
+      "notices": [
+        "cfml"
+      ],
+      "grammar_revision": null,
+      "source_evidence": "upstream/src/extraction/grammars.ts; grammar-family package below",
+      "attribution_status": "grammar_family_attribution_only_binary_source_revision_unverified",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "cfquery",
+      "path": "grammars/tree-sitter-cfquery.wasm.gz",
+      "sha256": "ed2e79dec0566958fcb4310c88b43a097f4107f5b5ed98a6dd9785a8a14c9772",
+      "raw_sha256": "9d4eaaec46eec7e6400d4b8d6c85fac7dfe33867ed5b4e5c218dfa7851c32558",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-cfquery.wasm",
+      "notices": [
+        "cfml"
+      ],
+      "grammar_revision": null,
+      "source_evidence": "upstream/src/extraction/grammars.ts; grammar-family package below",
+      "attribution_status": "grammar_family_attribution_only_binary_source_revision_unverified",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "cfscript",
+      "path": "grammars/tree-sitter-cfscript.wasm.gz",
+      "sha256": "6c40c02f183648595c0e759588686f34b87808444115336212460f0193ad356d",
+      "raw_sha256": "e381db5d2b8a7744fc7d8e51b0a14ff03f86c8ff497cdfe32d1da467f19d4096",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-cfscript.wasm",
+      "notices": [
+        "cfml"
+      ],
+      "grammar_revision": null,
+      "source_evidence": "upstream/src/extraction/grammars.ts; grammar-family package below",
+      "attribution_status": "grammar_family_attribution_only_binary_source_revision_unverified",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "cobol",
+      "path": "grammars/tree-sitter-cobol.wasm.gz",
+      "sha256": "84281fd9e6d4a73964a7497f0df9866acb5b75affaa92ecbc78ebfcbcecd5f32",
+      "raw_sha256": "a72425462f3fffc827dee97498b613ddd2d3d56e20c1e3913a6538d7026d3155",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-cobol.wasm",
+      "notices": [
+        "cobol"
+      ],
+      "grammar_revision": "e99dbdc3d800d5fa2796476efd60af91f6b43d93 plus CodeGraph patch",
+      "source_evidence": "upstream/docs/grammars/tree-sitter-cobol.md",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "cpp",
+      "path": "grammars/tree-sitter-cpp.wasm.gz",
+      "sha256": "858f96190fc675c2d2aca98c74d7bebe37e2ba394a2154165a8adbf507214792",
+      "raw_sha256": "70f5e2b9976dad56bdcd1fafcb3af8c839c7a92e7beaa437162bcf45f390e83d",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-cpp.wasm",
+      "notices": [
+        "cpp",
+        "c"
+      ],
+      "grammar_revision": "v0.23.4 / f41e1a0",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "dart",
+      "path": "grammars/tree-sitter-dart.wasm.gz",
+      "sha256": "4a603493100794c9db11032c25eb67b44d607c3eb7d1611886e53f2b7a559c80",
+      "raw_sha256": "7f5364e4256cf7e55efd01dd52421ef2663caa8061b82659b7e4bf61064545ec",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-dart.wasm",
+      "notices": [
+        "dart"
+      ],
+      "grammar_revision": "d4d8f3e337d8; WASM copied from tree-sitter-wasms@0.1.13 with originally unpinned dependency",
+      "source_evidence": "upstream/codegraph-kernel/build.rs",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "erlang",
+      "path": "grammars/tree-sitter-erlang.wasm.gz",
+      "sha256": "061efcf070e9297867c99ac9386beda0145c41f5d34f500ef67f8fe77222ad9b",
+      "raw_sha256": "dbab33f03e07b89f4385fcdd48d87d86ba35c82a0a426788d55b8c25410bc491",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-erlang.wasm",
+      "notices": [
+        "erlang"
+      ],
+      "grammar_revision": null,
+      "source_evidence": "upstream/docs/design/rust-kernel-migration-plan.md; upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_identifies_WhatsApp_ELP_grammar_revision_not_recorded",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "go",
+      "path": "grammars/tree-sitter-go.wasm.gz",
+      "sha256": "06a587a7470f3d3dd35d49b1b8e32ac9083905dd8c817206278738537b8c2b21",
+      "raw_sha256": "4eda5d91c99ca981e88bc7d3d33f0db166b4bab0a84d0021a9abf39b364c78ef",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-go.wasm",
+      "notices": [
+        "go"
+      ],
+      "grammar_revision": "v0.23.4 / 3c3775f",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "java",
+      "path": "grammars/tree-sitter-java.wasm.gz",
+      "sha256": "96b0029cbc0ccde0acee50cd5d09bc3d1b746a35b049d96cd99bf1821c21c7ee",
+      "raw_sha256": "181a6fbc34d7864a551d91c13882fc33007e923b3c81a4bdbe7fa47492090077",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-java.wasm",
+      "notices": [
+        "java"
+      ],
+      "grammar_revision": "v0.23.5 / 94703d5",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "javascript",
+      "path": "grammars/tree-sitter-javascript.wasm.gz",
+      "sha256": "69aa9e4a7b727ca2d62e77612b96a064bd3e0ab531ca7d1b082fb7dabc42089b",
+      "raw_sha256": "7978e62bcc851ab1d1f6dcd4678f9eda79df2b3b3490e75f81dd819d9bccccfa",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-javascript.wasm",
+      "notices": [
+        "javascript"
+      ],
+      "grammar_revision": "v0.25.0 / 44c892e",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "kotlin",
+      "path": "grammars/tree-sitter-kotlin.wasm.gz",
+      "sha256": "18ed579f8e3fa3605b948aad16dcf0cd9b6d0aec719605f18d2103822949f059",
+      "raw_sha256": "e2ef7c0c83e5fd4bece547d2acd41b9f89da2fed5644d74be139b9765d4c74af",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-kotlin.wasm",
+      "notices": [
+        "kotlin"
+      ],
+      "grammar_revision": "0.3.8 / e1a2d5a plus CodeGraph scanner patch",
+      "source_evidence": "upstream/codegraph-kernel/build.rs; upstream/docs/grammars/tree-sitter-kotlin.patch",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "lua",
+      "path": "grammars/tree-sitter-lua.wasm.gz",
+      "sha256": "f25cac28d8678419d92c79501eac04d6b63c7e9253d59b18b5c91fad95e67138",
+      "raw_sha256": "6d95607fc7d78964cfdf065ccb1ba76be5ed217c5ec0d0a3cace13c59fa1ae43",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-lua.wasm",
+      "notices": [
+        "lua"
+      ],
+      "grammar_revision": "v0.4.1 / 816840c592",
+      "source_evidence": "upstream/codegraph-kernel/build.rs",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "luau",
+      "path": "grammars/tree-sitter-luau.wasm.gz",
+      "sha256": "7557d7870fff461993e718c6baf58f0f1d1c9a4afde8b2a2e53b49021a812338",
+      "raw_sha256": "f1647052518f2bdfae8e8c0b033ffdeca1193d69d11c78ba20f84c8374fd0fe3",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-luau.wasm",
+      "notices": [
+        "luau",
+        "lua"
+      ],
+      "grammar_revision": "v1.2.0",
+      "source_evidence": "upstream/docs/design/lua-luau-kernel-port-checklist.md",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "nix",
+      "path": "grammars/tree-sitter-nix.wasm.gz",
+      "sha256": "a9220df6864b1ee211ebd3cfa1315eb89b04ad5a87c49bd715bf7775dcdae7f0",
+      "raw_sha256": "4acffa1c013df751193a21ce429777ca214c7d3a7e3665085b6df00dad8869f0",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-nix.wasm",
+      "notices": [
+        "nix"
+      ],
+      "grammar_revision": "3d0173d",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "objc",
+      "path": "grammars/tree-sitter-objc.wasm.gz",
+      "sha256": "e361087a9d87181b20152664d73a865e4d1c6fda1669b0c1c473bde881b3e3d2",
+      "raw_sha256": "7c1b5bfdca7e64b6c63b6040bb7ba0afc347df116f9030ca32f8535d7377f6ff",
+      "bytes_source": "tree-sitter-wasms@0.1.13:out/tree-sitter-objc.wasm",
+      "notices": [
+        "objc",
+        "c"
+      ],
+      "grammar_revision": "package dependency range ^2.1.0; LICENSE fetched at v2.1.0",
+      "source_evidence": "dependency-notices/tree-sitter-wasms-package.json",
+      "attribution_status": "package_dependency_range_not_resolved_build_commit",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "pascal",
+      "path": "grammars/tree-sitter-pascal.wasm.gz",
+      "sha256": "e6b7d02b2d2690199c6a1538f6060e495e6b6daaa3d64a59e8057db42dadbb8f",
+      "raw_sha256": "be3634fca99c19f5e1035a1a9c7d93d6ee82b35e6d5024f02be4883b71329c3e",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-pascal.wasm",
+      "notices": [
+        "pascal"
+      ],
+      "grammar_revision": null,
+      "source_evidence": "upstream/src/extraction/grammars.ts; grammar-family package below",
+      "attribution_status": "grammar_family_attribution_only_binary_source_revision_unverified",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "php",
+      "path": "grammars/tree-sitter-php.wasm.gz",
+      "sha256": "1723712cd7e86d3b2023e9593cd200e68c975360c55df95732a6f189ad24a4d7",
+      "raw_sha256": "6545a9a110bc878e26ed329950147e190c83da038bb17e999de646fe6c4d6c82",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-php.wasm",
+      "notices": [
+        "php"
+      ],
+      "grammar_revision": "v0.24.2 / 5b5627f",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "python",
+      "path": "grammars/tree-sitter-python.wasm.gz",
+      "sha256": "0de2d0361e2b5e4d5d26dedf50015a1d88dee0b00fda90d5ec485ff5ae54050e",
+      "raw_sha256": "a7fdc587e77bd729b9f5b783c659be23c896e305a2c374472bed7114d9e01fac",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-python.wasm",
+      "notices": [
+        "python"
+      ],
+      "grammar_revision": "v0.23.6 / bffb65a",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "r",
+      "path": "grammars/tree-sitter-r.wasm.gz",
+      "sha256": "5e65562a26a299adf4b6864a18022335a6cfa48b5703f1238c19893c5d842ce0",
+      "raw_sha256": "2a8f5acd1c53d91e0ec5c01a6830d8ac7f5a7f96f0ac4b3768c016c8e9d07711",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-r.wasm",
+      "notices": [
+        "r"
+      ],
+      "grammar_revision": "v1.2.0",
+      "source_evidence": "upstream/codegraph-kernel/Cargo.toml",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "ruby",
+      "path": "grammars/tree-sitter-ruby.wasm.gz",
+      "sha256": "d5085e1b8ee886e9415ee967bf08ad1d7680c0bfe478008f12f133d89cb2c390",
+      "raw_sha256": "4cb5a4b12870876ca864c1e92fe1f5cd47036b2adc083e9306488af88867dbb4",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-ruby.wasm",
+      "notices": [
+        "ruby"
+      ],
+      "grammar_revision": "v0.23.1 / 71bd32f",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "rust",
+      "path": "grammars/tree-sitter-rust.wasm.gz",
+      "sha256": "fa1627498799a88ab73641778ca63e79a7c13b7f4207f689be4569b86d942313",
+      "raw_sha256": "206031e0f67fb41ecae505868ca3bb917df7375031aebafd2f97314a849713fe",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-rust.wasm",
+      "notices": [
+        "rust"
+      ],
+      "grammar_revision": "v0.24.2 / 77a3747",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "scala",
+      "path": "grammars/tree-sitter-scala.wasm.gz",
+      "sha256": "00fdeb3ffb506ea21d9e85b293b27e37859401b10ed7b44cabd1f9d82d669358",
+      "raw_sha256": "37d7fe5a91ca98941dc05493b0c05a0df0f36df5035890fa00b02497c68aaac3",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-scala.wasm",
+      "notices": [
+        "scala"
+      ],
+      "grammar_revision": "v0.26.2 release WASM",
+      "source_evidence": "upstream/codegraph-kernel/build.rs",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "solidity",
+      "path": "grammars/tree-sitter-solidity.wasm.gz",
+      "sha256": "87d63be6c945ce11bc32a9d60e3b1586e286fe67792ec9196373701e3ddcb1bb",
+      "raw_sha256": "160745e470f234cae903a9ba445d19e758d0b02e1197401fc765976c6254d2b6",
+      "bytes_source": "tree-sitter-wasms@0.1.13:out/tree-sitter-solidity.wasm",
+      "notices": [
+        "solidity"
+      ],
+      "grammar_revision": "b239a95f94cfcc6e7b3e961bc73a28d55e214f02",
+      "source_evidence": "dependency-notices/tree-sitter-wasms-package.json",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "swift",
+      "path": "grammars/tree-sitter-swift.wasm.gz",
+      "sha256": "4159d39c3ce2c41b0e2b139a6e0a7433d758655490738d29a60c2219cef4458f",
+      "raw_sha256": "cc77a63b8487956270e2f385e29a03ba0773ba532a3c8a8844a26b4c98793843",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-swift.wasm",
+      "notices": [
+        "swift"
+      ],
+      "grammar_revision": "crate tree-sitter-swift@0.7.3; generated sources differ from git tag parser",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declares_crate_tarball_not_tag_generated_parser",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "terraform",
+      "path": "grammars/tree-sitter-terraform.wasm.gz",
+      "sha256": "bd8d2f5f46e0820ec15ec23a86ed01d0f9b0046235f9f7d22a2e5ded87bd1df9",
+      "raw_sha256": "0d9ef3ae926acc0411bfecba9b34df4ea659061917b96455570a45a70824e890",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-terraform.wasm",
+      "notices": [
+        "terraform"
+      ],
+      "grammar_revision": "@tree-sitter-grammars/tree-sitter-hcl@1.2.0",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "tsx",
+      "path": "grammars/tree-sitter-tsx.wasm.gz",
+      "sha256": "081fffd8e0262b115fc67fc9ce810d9b75020a826ffa004dd6e919a14aeaaf18",
+      "raw_sha256": "8f647a1b2cafe9ab00fb2056d79021d2a144ba17a72f45511072311c1b05d08e",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-tsx.wasm",
+      "notices": [
+        "typescript",
+        "javascript"
+      ],
+      "grammar_revision": "v0.23.2 / f975a62",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "typescript",
+      "path": "grammars/tree-sitter-typescript.wasm.gz",
+      "sha256": "73a6957c767863a944b015f36f80d6307ca9ffb0f9d1ac42bdab334d1e5361ec",
+      "raw_sha256": "3a44d634c9840dccec36f33b99592bd086a2f940e9cd80c64347c45b7dce662f",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-typescript.wasm",
+      "notices": [
+        "typescript",
+        "javascript"
+      ],
+      "grammar_revision": "v0.23.2 / f975a62",
+      "source_evidence": "upstream/src/extraction/grammars.ts",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    },
+    {
+      "language": "vbnet",
+      "path": "grammars/tree-sitter-vbnet.wasm.gz",
+      "sha256": "47bdcdf4d51f8ab1bc5efad71dda84436021d61b492d9ca70eac8c3befeaa70b",
+      "raw_sha256": "5a8aa2911e28e43e22b077ae56c8143ccfe52485bb6719152b60e2e66a1a9e53",
+      "bytes_source": "codegraph:src/extraction/wasm/tree-sitter-vbnet.wasm",
+      "notices": [
+        "vbnet"
+      ],
+      "grammar_revision": "538b7087bf80e86004531b392fe1186379c0a2b5 plus CodeGraph patch",
+      "source_evidence": "upstream/docs/grammars/tree-sitter-vbnet.md",
+      "attribution_status": "upstream_declared_revision_license_fetched_at_corresponding_ref",
+      "binary_rebuild_verified": false
+    }
+  ]
+}

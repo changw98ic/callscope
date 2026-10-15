@@ -1,6 +1,6 @@
 # Third-party notices / 第三方声明
 
-CallScope v0.3.0 直接使用以下上游组件。本文记录来源、版本、改动与许可证依据，不替代各组件完整许可证。CallScope 分发配置保留 Axon 许可证、来源元数据及本声明；CocoIndex 作为可选工具依赖安装，其官方发行包保留自己的许可证及依赖声明。
+CallScope v0.15.0 直接使用以下上游组件；Axon/CocoIndex 接入始于 v0.3，CodeGraph 接入始于 v0.15。本文记录来源、版本、改动与许可证依据，不替代各组件完整许可证。CallScope 分发配置保留各 vendored 组件的许可证、来源元数据及本声明；CocoIndex 作为可选工具依赖安装，其官方发行包保留自己的许可证及依赖声明。
 
 ## Axon graph core
 
@@ -29,7 +29,23 @@ Copyright (c) harshkedia177. Axon graph core is distributed under the MIT Licens
 
 ## Optional parser and runtime dependencies
 
+### CodeGraph 与随包 WASM/runtime
+
+- 项目：[colbymchenry/codegraph](https://github.com/colbymchenry/codegraph)，声明版本 `1.6.2`。
+- 固定提交：`8f1f842b5b828175992d2ce2cdf673b955b2cce9`。
+- 原许可：MIT，Copyright (c) 2026 Colby Mchenry；完整原文保留于 [`upstream/LICENSE`](callscope/_vendor/codegraph/upstream/LICENSE)。
+- 原样复用来源文件共 323 个，清单与 SHA256 位于 [`UPSTREAM.json`](callscope/_vendor/codegraph/UPSTREAM.json)。上游文件未改写；CallScope 独立提供固定文本协议、候选关系桥接及 Python 适配器，`worker.cjs` 为保存的工具桥接产物。
+- 语法分发为 31 份压缩 WASM、32 个语言映射。压缩及解压 SHA256 单独保存；不能因 CodeGraph 的 MIT 许可推定每份 grammar 同为 MIT。
+- Terraform/HCL grammar 为 Apache-2.0，完整条款保留于 [`tree-sitter-terraform-LICENSE`](callscope/_vendor/codegraph/dependency-notices/tree-sitter-terraform-LICENSE)；Erlang grammar 同为 Apache-2.0，条款保留于 [`tree-sitter-erlang-LICENSE`](callscope/_vendor/codegraph/dependency-notices/tree-sitter-erlang-LICENSE)。它们不被重新许可为 CallScope 的 MIT。
+- 随包工具运行依赖 `web-tree-sitter==0.25.10`、`jsonc-parser==3.3.1`、`picomatch==4.0.3` 为 MIT，其条款与发行元数据分别保留于 [`dependency-notices/`](callscope/_vendor/codegraph/dependency-notices/)。`tree-sitter-wasms==0.1.13` 提供部分固定语法，其发行包声明为 Unlicense，完整条款和 package.json 独立保留；该包许可不能代替每份 grammar 的来源许可。
+- COBOL、VB.NET 等语法的上游来源和补丁说明继续保留于 [`upstream/docs/grammars/`](callscope/_vendor/codegraph/upstream/docs/grammars/)，单项语法许可须结合其来源及随包条款阅读。
+- 外部 Node.js 20–24 不随 CallScope 分发；Node 项目及其依赖许可按实际安装的发行包保留。`esbuild==0.21.5` 只用于生成工具 bundle，不是目标项目依赖或扫描时构建步骤。
+- [`ARTIFACTS.json`](callscope/_vendor/codegraph/ARTIFACTS.json) 记录保存的分发文件身份；具体提取与候选边界见 [CodeGraph 复用说明](docs/CODEGRAPH_REUSE.md)。语言已注册或语法可加载均不表示该语言已在真实项目完成验证。
+- 31 份语法资源的逐项许可、版权全文及来源记录见 [`grammar-license-sources.json`](callscope/_vendor/codegraph/grammar-license-sources.json)。部分上游资源未锁定精确语法构建 revision；清单保留这一来源边界，不声称全部二进制均已从源码重建核验。
+
+### 原 TypeScript/Rust 与 CocoIndex 可选依赖
+
 TypeScript/Rust 工具依赖在 `pyproject.toml` 的 `languages` extras 声明：Tree-sitter 0.25.2、TypeScript grammar 0.23.2、Rust grammar 0.24.0。CocoIndex 位于 `maintenance` extras。`requirements-maintenance.lock` 记录本次隔离工具环境的实际依赖版本，不含目标项目依赖，也不声明已锁定 wheel 哈希或完成供应链验收。
 
-这些依赖各自的官方发行包保留其许可证。本工具没有复制目标仓库的依赖、运行代码或测试；上游组件的其他能力也不扩大 CallScope 的纯静态产品边界。
+这些依赖各自的官方发行包保留其许可证。工具不安装被分析目标的依赖，不执行其代码或测试；静态分析产物可能包含为证据保存的目标原文，仍受该目标原许可约束。上游组件的其他能力不扩大 CallScope 的纯静态产品边界。
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "callscope"
-version = "0.14.0"
+version = "0.15.0"
 description = "Versioned static call-structure analysis with source evidence"
 requires-python = ">=3.11"
 dependencies = []
@@ -22,7 +22,7 @@ include-package-data = true
 
 [tool.setuptools.package-data]
 "callscope._vendor.axon" = ["LICENSE.txt", "UPSTREAM.json", "pyproject.upstream.toml"]
-"callscope" = ["third_party/*.txt", "third_party/*.json", "third_party/*.md"]
+"callscope" = ["third_party/*.txt", "third_party/*.json", "third_party/*.md", "_vendor/codegraph/**/*"]
 
 [tool.setuptools.data-files]
 "share/callscope/web" = ["web/index.html", "web/app.js", "web/styles.css"]

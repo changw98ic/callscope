@@ -1,8 +1,8 @@
-# Axon / CocoIndex 上游代码复用
+# Axon / CocoIndex / CodeGraph 上游代码复用
 
-本文对应 CallScope v0.14.0；Axon/CocoIndex 的复用起于 v0.3，固定来源与许可保持。Axon 图核心进入路径查询和检测器的确定邻接索引；CocoIndex 官方库可选维护语言前端结果的持久 memo。项目源码仍只作为已捕获的文本数据，不导入目标模块、不执行目标代码、不运行测试或构建。
+本文对应 CallScope v0.15.0；Axon/CocoIndex 的复用起于 v0.3，CodeGraph 全语言结构提取接入始于 v0.15。Axon 图核心提供确定邻接，CocoIndex 可选维护语言前端 memo，CodeGraph 新增前端提供带原始源码身份的结构和候选关系。默认语言选择为 `all`，38 个规范语言/格式 ID 及保守层级见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。项目源码仍只作为捕获文本，不导入目标模块、不执行目标代码、不运行测试或构建。
 
-当前 scope2 的[核心与策略已冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)，两库正常纯静态冷/热分析及正式报告已保存、数据库已关闭。正式轮次使用 `full` 引擎，两轮均重算且各库同 ID、created=true/false；不把历史 CocoIndex 缓存记录当成本轮缓存收益或功能验收。
+v0.14 scope2 的[核心与策略已冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)，两库正常纯静态冷/热分析及正式报告已保存、数据库已关闭。该轮使用 `full` 引擎，两轮均重算且各库同 ID、created=true/false；这些是历史有限范围结果，不因 v0.15 新增语言而改写或扩成新语言验证。
 
 ## 实际复用位置
 
@@ -10,6 +10,7 @@
 |---|---|---|---|
 | Axon | 提交 `2b386fb38a468201ab2ec825ddea5ebf4c33f513`，上游版本 `1.0.1` | `callscope/_vendor/axon/model.py`、`graph.py`；适配器 `axon_adapter.py` | 节点标签、关系类型、有向邻接索引；`GraphIndex` 的确定内部调用邻接由此生成 |
 | CocoIndex | 官方包 `cocoindex==1.0.25` | `cocoindex_runner.py`、`cocoindex_worker.py` 使用官方发行库 | `@coco.fn(memo=True)`、`Environment`、`App.update_blocking` 持久复用语言前端结果 |
+| CodeGraph | 提交 `8f1f842b5b828175992d2ce2cdf673b955b2cce9`，声明版本 `1.6.2` | `_vendor/codegraph/`；适配器 `codegraph_frontend.py` | 原样来源文件 323 个、压缩语法 31 份/32 个映射；新增语言结构提取及 candidate-only 候选解析，不生成确定 CALLS |
 
 Axon 来源为 [harshkedia177/axon](https://github.com/harshkedia177/axon)。仅两个图核心文件随 CallScope 保存，改动为 `graph.py` 的模型导入改为包内相对路径，以及两个文件的末尾空白格式。`UPSTREAM.json` 保存来源、改动和本地文件哈希，`pyproject.upstream.toml` 保存上游许可与作者声明。
 
@@ -31,9 +32,11 @@ python -m callscope scan examples/order_service --engine cocoindex --json
 python -m callscope serve examples/order_service --engine cocoindex --watch
 ```
 
-本工作区已有 `.analysis-tools/runtime` 隔离工具环境，实际依赖版本记录于 [requirements-maintenance.lock](../requirements-maintenance.lock)。这些命令属于工具安装或纯静态分析，不运行被分析项目。`full` 的 Python 分析不需安装额外包，Axon 图核心随工具提供。
+本工作区已有 `.analysis-tools/runtime` 隔离工具环境，实际依赖版本记录于 [requirements-maintenance.lock](../requirements-maintenance.lock)。这些命令属于工具安装或纯静态分析，不运行被分析项目。显式仅 Python 的 `full` 分析不需额外包；默认 `all` 中 CodeGraph 新前端需 Node.js 20–24，原 TS/Rust 需固定 Python 语法库。Axon 图核心及 CodeGraph worker/压缩语法随工具保存。
 
 父进程全量安全捕获源码，通过 stdin JSON 交给固定 worker，worker 用 `python -I` 启动。隔离模式限制 Python 导入搜索路径；worker 显式加载本工具包，消费已捕获文本，运行固定注册的静态前端。项目配置是数据，不能定义变换代码或可执行插件。
+
+CodeGraph 另由固定 Node worker 消费相对路径、捕获文本及哈希，不接收真实目标根路径；候选解析使用虚拟根和捕获文件系统。CocoIndex 初始化这些前端时检查固定 Node 工具运行时，不调用 Python Tree-sitter 加载新增语言。语法错误、元数据提取、运行时失败及未验证语言分开记录；上游候选 confidence 不授予确定性。
 
 父进程校验请求指纹、工具身份、引擎协议、语言集合、返回文件集合、内容及哈希；worker 在缓存查找前初始化需要的语法解析器。主进程与 worker 实际 Python/前端/语法库版本分别参与相应输入身份，不能用主进程版本冒充 worker 版本。
 
@@ -54,7 +57,7 @@ CocoIndex 缓存路径为快照数据库绝对路径后加 `.cocoindex`，与发
 
 ## 身份、发布与扩展
 
-`analysis_inputs.tool_identity()` 对 CallScope 包内全部 Python 源文件计算内容身份，包含随包 Axon 文件；同时记录 Axon 固定提交和适配器版本。`stats.component_versions.tool` 保存该身份，`maintenance` 保存后端版本/协议/粒度，语言项保存实际执行前端的版本。规范组合进入 `parser_version` 及快照 ID。不同引擎的身份可以不同，不能把跨引擎快照自动当成同一输入。
+`analysis_inputs.tool_identity()` 对 CallScope 包内全部 Python 源文件及 CodeGraph 保存资源计算内容身份，包含随包 Axon 文件；同时记录上游固定提交和适配器版本。CodeGraph 组件另存 worker 哈希、协议与语法/运行库来源。`stats.component_versions.tool` 保存工具身份，`maintenance` 保存后端版本/协议/粒度，语言项保存实际执行前端版本。规范组合进入 `parser_version` 及快照 ID。不同引擎的身份可以不同，不能把跨引擎快照自动当成同一输入。
 
 `recomputed_languages`、`reused_languages`、`uncached_languages` 等运行计数仅在 `publication.maintenance` 和服务状态中，不写入不可变 `stats`，所以冷缓存和热缓存不会因计数差异破坏同一快照的幂等发布。
 
@@ -65,6 +68,8 @@ CocoIndex 缓存路径为快照数据库绝对路径后加 `.cocoindex`，与发
 ## 许可证与历史记录
 
 Axon 上游声明 MIT，固定提交没有独立 LICENSE 文件。本工具保存标准 MIT 条款和上游作者署名，并明确该文件不是上游 LICENSE 的复制品。CocoIndex 为 Apache-2.0，完整条款及官方 wheel 自带依赖声明分别保留。详细依据见 [THIRD_PARTY_NOTICES.md](../THIRD_PARTY_NOTICES.md)。
+
+CodeGraph 上游源码为 MIT，原 LICENSE 和署名保留；Terraform/HCL、Erlang grammar 的 Apache-2.0 条款独立保留，runtime 与其他 grammar 不因项目根许可而统一重标。完整来源及分发文件身份见 [CodeGraph 复用说明](CODEGRAPH_REUSE.md)。
 
 `reports/real-repositories/` 中两个真实仓库的 v0.2.0 快照、数值和独立审查是历史产物，不因后续接入改写。新版引擎的正常源码扫描也不能称为目标代码测试通过。本轮不执行目标、测试或构建。
 

@@ -1,0 +1,1146 @@
+{
+  "generated_at": "2026-10-15T06:28:50.782442+00:00",
+  "tool_version": "0.15.0",
+  "registered_frontend_ids": 38,
+  "new_codegraph_ids": 35,
+  "real_source_observed_ids": 8,
+  "not_observed_on_real_projects": [
+    "arkts",
+    "go",
+    "java",
+    "csharp",
+    "razor",
+    "php",
+    "ruby",
+    "kotlin",
+    "svelte",
+    "vue",
+    "astro",
+    "liquid",
+    "pascal",
+    "scala",
+    "lua",
+    "luau",
+    "objc",
+    "r",
+    "solidity",
+    "nix",
+    "twig",
+    "xml",
+    "properties",
+    "cfml",
+    "cfscript",
+    "cfquery",
+    "cobol",
+    "vbnet",
+    "erlang",
+    "terraform"
+  ],
+  "interpretation": "Registration, grammar loading, source parsing/candidate extraction, native compatibility and functional completeness are separate. No result here is a measured defect recall or a language-wide guarantee.",
+  "languages": [
+    {
+      "language": "python",
+      "frontend": "native",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "bounded_static_relations",
+      "extensions": [
+        ".py",
+        ".pyw"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": null,
+      "upstream_code_imported": false,
+      "existing_native_frontend_retained": true,
+      "upstream_grammar_load_checks": {
+        "python": true
+      },
+      "n0vel_real_source_scan": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 65,
+        "edges": 262,
+        "external_callback_boundaries": 38,
+        "external_calls": 95,
+        "files_failed": 0,
+        "files_parsed": 5,
+        "files_total": 5,
+        "nodes": 37,
+        "resolved_calls": 102,
+        "unresolved_calls": 0
+      },
+      "old_repository_native_compatibility": [
+        {
+          "repository": "codepatchbay",
+          "files": 2,
+          "states": {
+            "parsed": 2
+          },
+          "comparison": "full native output records unchanged"
+        }
+      ],
+      "real_source_observed": true,
+      "actual_validation_status": "bounded_real_source_static_evidence",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "typescript",
+      "frontend": "native",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "bounded_static_relations",
+      "extensions": [
+        ".cjs",
+        ".cts",
+        ".js",
+        ".jsx",
+        ".mjs",
+        ".mts",
+        ".ts",
+        ".tsx",
+        ".xsjs",
+        ".xsjslib"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": null,
+      "upstream_code_imported": false,
+      "existing_native_frontend_retained": true,
+      "upstream_grammar_load_checks": {
+        "typescript": true,
+        "tsx": true,
+        "javascript": true,
+        "jsx": true
+      },
+      "n0vel_real_source_scan": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 12,
+        "edges": 20,
+        "external_callback_boundaries": 7,
+        "external_calls": 8,
+        "files_failed": 0,
+        "files_parsed": 1,
+        "files_total": 1,
+        "nodes": 7,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "old_repository_native_compatibility": [
+        {
+          "repository": "codepatchbay",
+          "files": 328,
+          "states": {
+            "parsed": 328
+          },
+          "comparison": "full native output records unchanged"
+        },
+        {
+          "repository": "winwincode",
+          "files": 120,
+          "states": {
+            "parsed": 120
+          },
+          "comparison": "full native output records unchanged"
+        }
+      ],
+      "real_source_observed": true,
+      "actual_validation_status": "bounded_real_source_static_evidence",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "rust",
+      "frontend": "native",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "bounded_static_relations",
+      "extensions": [
+        ".rs"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": null,
+      "upstream_code_imported": false,
+      "existing_native_frontend_retained": true,
+      "upstream_grammar_load_checks": {
+        "rust": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [
+        {
+          "repository": "winwincode",
+          "files": 351,
+          "states": {
+            "parsed": 345,
+            "parse_error": 6
+          },
+          "comparison": "full native output records unchanged"
+        }
+      ],
+      "real_source_observed": true,
+      "actual_validation_status": "bounded_real_source_static_evidence",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "arkts",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".ets"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "arkts": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "go",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".go"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "go": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "java",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".java"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "java": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "c",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".c",
+        ".h"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "c": true
+      },
+      "n0vel_real_source_scan": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 2,
+        "edges": 2,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 3,
+        "files_parsed": 2,
+        "files_total": 5,
+        "nodes": 10,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "old_repository_native_compatibility": [],
+      "real_source_observed": true,
+      "actual_validation_status": "bounded_real_source_static_evidence",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "cpp",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".cc",
+        ".cpp",
+        ".cu",
+        ".cuh",
+        ".cxx",
+        ".hpp",
+        ".hxx",
+        ".metal"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "cpp": true
+      },
+      "n0vel_real_source_scan": {
+        "ambiguous_calls": 39,
+        "dynamic_calls": 161,
+        "edges": 200,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 5,
+        "files_parsed": 5,
+        "files_total": 10,
+        "nodes": 97,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "old_repository_native_compatibility": [],
+      "real_source_observed": true,
+      "actual_validation_status": "bounded_real_source_static_evidence",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "csharp",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".cs"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "csharp": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "razor",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".cshtml",
+        ".razor"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "php",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".inc",
+        ".install",
+        ".module",
+        ".php",
+        ".theme"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "php": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "ruby",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".rake",
+        ".rb"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "ruby": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "swift",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".swift"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "swift": true
+      },
+      "n0vel_real_source_scan": {
+        "ambiguous_calls": 3,
+        "dynamic_calls": 29,
+        "edges": 32,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 4,
+        "files_total": 4,
+        "nodes": 25,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "old_repository_native_compatibility": [],
+      "real_source_observed": true,
+      "actual_validation_status": "bounded_real_source_static_evidence",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "kotlin",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".kt",
+        ".kts"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "kotlin": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "dart",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".dart"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "dart": true
+      },
+      "n0vel_real_source_scan": {
+        "ambiguous_calls": 39466,
+        "dynamic_calls": 54869,
+        "edges": 94335,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 27,
+        "files_parsed": 864,
+        "files_total": 891,
+        "nodes": 18943,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "old_repository_native_compatibility": [],
+      "real_source_observed": true,
+      "actual_validation_status": "bounded_real_source_static_evidence",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "svelte",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".svelte"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "vue",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".vue"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "astro",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".astro"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "liquid",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".liquid"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "pascal",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".dfm",
+        ".dpk",
+        ".dpr",
+        ".fmx",
+        ".lpr",
+        ".pas"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "pascal": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "scala",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".sc",
+        ".scala"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "scala": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "lua",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".lua"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "lua": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "luau",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".luau"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "luau": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "objc",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".m",
+        ".mm"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "objc": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "r",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".r"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "r": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "solidity",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".sol"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "solidity": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "nix",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".nix"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "nix": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "yaml",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "file_or_metadata",
+      "extensions": [
+        ".yaml",
+        ".yml"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 7,
+        "files_parsed": 0,
+        "files_total": 7,
+        "nodes": 7,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "old_repository_native_compatibility": [],
+      "real_source_observed": true,
+      "actual_validation_status": "bounded_real_source_static_evidence",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "twig",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "file_or_metadata",
+      "extensions": [
+        ".twig"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "xml",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "file_or_metadata",
+      "extensions": [
+        ".xml"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "properties",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "file_or_metadata",
+      "extensions": [
+        ".properties"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {},
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "cfml",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".cfc",
+        ".cfm"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "cfml": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "cfscript",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".cfs"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "cfscript": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "cfquery",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [],
+      "embedded_only": true,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "cfquery": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "cobol",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".cbl",
+        ".cob",
+        ".cobol",
+        ".cpy"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "cobol": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "vbnet",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".vb"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "vbnet": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "erlang",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".erl",
+        ".escript",
+        ".hrl"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "erlang": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    },
+    {
+      "language": "terraform",
+      "frontend": "codegraph",
+      "registered": true,
+      "available": null,
+      "availability_status": "runtime_not_checked",
+      "verification_status": "not_validated_for_this_project",
+      "analysis_level": "structural_extraction",
+      "extensions": [
+        ".tf",
+        ".tfvars",
+        ".tofu"
+      ],
+      "embedded_only": false,
+      "functional_completeness_proven": false,
+      "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+      "upstream_code_imported": true,
+      "existing_native_frontend_retained": false,
+      "upstream_grammar_load_checks": {
+        "terraform": true
+      },
+      "n0vel_real_source_scan": null,
+      "old_repository_native_compatibility": [],
+      "real_source_observed": false,
+      "actual_validation_status": "not_scanned_on_real_project",
+      "whole_language_semantics_verified": false
+    }
+  ],
+  "target_executed": false,
+  "tests_run": false,
+  "target_builds_run": false,
+  "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+  "tool_identity": {
+    "source_hash": "638a0a3974e1b84c5a6b94d271a8a85ede94e54dda1e35d09f8033fdc4370214",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+    "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+  }
+}

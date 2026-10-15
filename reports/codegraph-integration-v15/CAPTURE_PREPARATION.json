@@ -1,0 +1,207 @@
+{
+  "old_core_archive": "/workspace/callscope/reports/astra-iteration12-scope2/frozen-core-source",
+  "old_core_freeze": "/workspace/callscope/reports/astra-iteration12-scope2/CORE_FREEZE.json",
+  "old_tool_identity": {
+    "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+  },
+  "old_frozen_python_files_verified": 65,
+  "captures": [
+    {
+      "repository": "codepatchbay",
+      "target_root": "/workspace/codepatchbay",
+      "original_snapshot": {
+        "id": "dd5d4e3cc349b57eb87d0f810a415560bfd5f6b1022a990a35190a44d0e50ebb",
+        "project_id": "ac6694a563ea5a6ef75f",
+        "project_name": "CodePatchBay — static source review",
+        "created_at": "2026-10-14T08:38:50.429143+00:00",
+        "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+        "policy_hash": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887",
+        "status": "partial",
+        "component_versions": {
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-2-shared",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "budget_contracts": {
+            "analyzer": "static-local-budget-contracts-1",
+            "policy_schema": "static-local-budget-policy-v1"
+          },
+          "completion_summaries": "captured-completion-summaries-1",
+          "field_contracts": {
+            "analyzer": "static-field-contracts-4-ir",
+            "policy_schema": "static-field-policy-v2"
+          },
+          "field_relations": "captured-field-source-relations-1",
+          "field_summaries": "finite-field-summaries-5-ir",
+          "goal_contracts": {
+            "adapters": {
+              "atomicity": {
+                "analyzer": "source-derived-atomicity-completion-1",
+                "policy_schema": "adapter-validated-v1"
+              },
+              "pipeline": {
+                "analyzer": "finite-parameter-record-budget-flow-1",
+                "policy_schema": "parameter-record-budget-policy-1"
+              },
+              "status": {
+                "analyzer": "finite-status-classification-1",
+                "policy_schema": "static-status-policy-v1"
+              }
+            },
+            "policy_schema": "static-goal-policy-v1",
+            "registry": "static-whole-judgment-registry-1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-3",
+          "maintenance": {
+            "backend": "full"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "report_claims": {
+            "analyzer": "captured-report-source-chains-3-architecture",
+            "policy_schema": "static-report-claim-policy-v2-documents",
+            "relation_modules": {
+              "conditional_gate_relations": "captured-conditional-gate-relations-1",
+              "documentation_relations": "captured-document-deployment-relations-1",
+              "lifecycle_ownership_relations": "captured-lifecycle-ownership-relations-1",
+              "message_identity_relations": "captured-message-identity-relations-1",
+              "record_projection_relations": "captured-record-projection-relations-1",
+              "rust_state_relations": "captured-rust-finite-state-relations-1",
+              "state_lineage_relations": "captured-conditional-lineage-publication-1"
+            }
+          },
+          "semantic_environment": "captured-builtin-environment-1",
+          "semantic_ir": "finite-immutable-semantic-ir-3",
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          }
+        }
+      },
+      "original_policy_file": "/workspace/callscope/reports/astra-iteration12-scope2/codepatchbay-policy.json",
+      "original_policy_file_sha256": "f3f0ba2eecdeb156eea3d4038e5e8ac2dd03b7ee94f9e989b9ce8d9f994a174f",
+      "effective_policy_sha256": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887",
+      "captured_file_count": 333,
+      "captured_inputs_sha256": "a1271bf025f4ab478e237d4cc02ddcdef96b059e8cc98a9c91713d7601c63cc3",
+      "source_manifest_sha256": "9c1ce370bd36d0df3bd7554f8e383d7d949659e7ceb3ad1f0252c101986b0b79",
+      "native_capture_counts": {
+        "python": 2,
+        "typescript": 328,
+        "rust": 0
+      }
+    },
+    {
+      "repository": "winwincode",
+      "target_root": "/workspace/winwincode",
+      "original_snapshot": {
+        "id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+        "project_id": "1dec368a20d2f5075901",
+        "project_name": "WinWinCode / 项目源码静态调用核对",
+        "created_at": "2026-10-14T09:30:44.996827+00:00",
+        "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+        "policy_hash": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+        "status": "partial",
+        "component_versions": {
+          "completion_summaries": "captured-completion-summaries-1",
+          "goal_contracts": {
+            "adapters": {
+              "device": {
+                "analyzer": "static-device-spec-protocol-flow-1",
+                "policy_schema": "static-device-spec-protocol-policy-v1"
+              },
+              "navigation": {
+                "analyzer": "conditional-navigation-obligations-1",
+                "policy_schema": "adapter-validated-v1"
+              }
+            },
+            "policy_schema": "static-goal-policy-v1",
+            "registry": "static-whole-judgment-registry-1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-3",
+          "maintenance": {
+            "backend": "full"
+          },
+          "navigation_contracts": {
+            "analyzer": "static-navigation-contracts-2-shared",
+            "policy_schema": "static-navigation-policy-v1"
+          },
+          "port_wiring": "finite-port-wiring-2-shared",
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "report_claims": {
+            "analyzer": "captured-report-source-chains-3-architecture",
+            "policy_schema": "static-report-claim-policy-v2-documents",
+            "relation_modules": {
+              "conditional_gate_relations": "captured-conditional-gate-relations-1",
+              "documentation_relations": "captured-document-deployment-relations-1",
+              "lifecycle_ownership_relations": "captured-lifecycle-ownership-relations-1",
+              "message_identity_relations": "captured-message-identity-relations-1",
+              "record_projection_relations": "captured-record-projection-relations-1",
+              "rust_state_relations": "captured-rust-finite-state-relations-1",
+              "state_lineage_relations": "captured-conditional-lineage-publication-1"
+            }
+          },
+          "rust": {
+            "analyzer": "rust-tree-sitter-1.8-crate-attribute-context",
+            "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+          },
+          "semantic_environment": "captured-builtin-environment-1",
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        }
+      },
+      "original_policy_file": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-policy.json",
+      "original_policy_file_sha256": "24dd004b2130a963fa2e60724203c60e41c87ee780123bc27eccffc71bae3005",
+      "effective_policy_sha256": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+      "captured_file_count": 471,
+      "captured_inputs_sha256": "6689c140acdfc99ecbad7c1535c16853d6c701a4a626aa8f8f0c7fc06c344e55",
+      "source_manifest_sha256": "cee433c75aac95b112e67adf8595304b79f786ffb019ee10b3cac961d3e51486",
+      "native_capture_counts": {
+        "python": 0,
+        "typescript": 120,
+        "rust": 351
+      }
+    }
+  ],
+  "target_code_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "detectors_or_goal_scans_run": false
+}

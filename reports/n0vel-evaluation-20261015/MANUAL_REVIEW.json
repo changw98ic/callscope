@@ -1,0 +1,78 @@
+{
+  "reviewed_paths_are_bounded": true,
+  "basis": "source call, field, exception and state relations",
+  "not_an_automatic_detection_result": true,
+  "findings": [
+    {
+      "id": "NV-MANUAL-01",
+      "classification": "statically_supported_conditional_failure_path",
+      "title": "初始快照保存失败后运行 token 留存，同场景重试与取消均可能被阻止",
+      "condition": "从 idle/completed 等非 running/blocked 状态开始，同场景首次 snapshot 持久保存抛错，之后没有其他重置操作",
+      "chain": [
+        "WorkbenchOrchestrator.prepareAiGeneration",
+        "StoryGenerationRunStore.runCurrentScene",
+        "_beginRun",
+        "_setSnapshot",
+        "_persistSnapshot",
+        "StoryGenerationRunStorage.save"
+      ],
+      "basis": [
+        "run_store:319 sets token before the try at 408",
+        "snapshot_persistence:82 awaits storage before in-memory assignment at 87",
+        "run_store:294 returns on retained token",
+        "run_store:643 returns false for old non-running/non-blocked status",
+        "workbench finally clears only its own generating flag"
+      ],
+      "counterevidence": [
+        "successful initial snapshot makes later cancellation possible",
+        "another-scene new run, project lifecycle reset, rebuilding store or restart can recover"
+      ],
+      "runtime_reproduced": false,
+      "detected_by_callscope": false
+    },
+    {
+      "id": "NV-MANUAL-02",
+      "classification": "conditional_requirement_and_wiring_risk",
+      "title": "纳入生成的改稿请求未接到候选采纳的 feedback lease 消费",
+      "condition": "产品期望采纳候选时自动消费已处理的改稿请求；否则只是当前手动处理边界",
+      "basis": [
+        "revisionRequested requests are selected and their notes reach runtime metadata",
+        "acceptCurrentCandidate omits feedbackLeases",
+        "GenerationCommitRequest defaults feedbackLeases to []",
+        "coordinator returns empty document for empty leases and does not save it",
+        "lib-wide lexical searches found definitions but no references invoking claimFeedbackLeases or markRevisionRequestsInProgress"
+      ],
+      "counterevidence": [
+        "AuthorFeedbackStore.accept and resolve provide separate manual handling",
+        "no assertion that the missing field alone proves an unwanted product policy"
+      ],
+      "runtime_reproduced": false,
+      "detected_by_callscope": false
+    },
+    {
+      "id": "NV-MANUAL-03",
+      "classification": "statically_supported_conditional_failure_path",
+      "title": "作者采纳事务成功后的 snapshot 保存失败会返回一般失败，跳过本次 outbox 调度",
+      "condition": "coordinator.accept already committed and returned, then subsequent _setSnapshot throws",
+      "basis": [
+        "coordinator:185 commits before returning success",
+        "run_store:748 awaits independent snapshot save",
+        "workbench:389 catches error and reports candidate acceptance incomplete",
+        "run_store:758 outbox scheduling is after the failing await"
+      ],
+      "counterevidence": [
+        "durable receipt and transaction remain committed",
+        "same-key retry returns prior receipt",
+        "outbox row is durable/retryable; no claim of permanent index loss"
+      ],
+      "runtime_reproduced": false,
+      "detected_by_callscope": false
+    }
+  ],
+  "positive_counterevidence": [
+    "candidate finalizer checks proof, exact text and quality gates",
+    "coordinator uses BEGIN IMMEDIATE, CAS, idempotent receipts and transactional outbox"
+  ],
+  "whole_project_review_complete": false,
+  "runtime_verified": false
+}

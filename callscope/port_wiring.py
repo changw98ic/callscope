@@ -33,7 +33,7 @@ _FUNCTIONS = frozenset({"function_declaration", "generator_function_declaration"
 _NODE_GAPS = frozenset({"duplicate_definition", "multiple_module_contexts",
     "conditional_definition", "attribute_macros_unknown", "declaration_only",
     "binding_uncertain", "module_identity_collision"})
-_EXTENSIONS = (".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs", ".mts", ".cts")
+_EXTENSIONS = (".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs", ".mts", ".cts", ".xsjs", ".xsjslib")
 _OBJECT_PROTOTYPE_KEYS = frozenset({"constructor", "toString", "toLocaleString", "valueOf",
     "hasOwnProperty", "isPrototypeOf", "propertyIsEnumerable", "__proto__", "__defineGetter__",
     "__defineSetter__", "__lookupGetter__", "__lookupSetter__"})

@@ -1,0 +1,52 @@
+{
+  "snapshot_ids": [
+    "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+    "6431019a8543eb3ec888d30948e08dca817fe2c9fc9bd725f37201da363f7ef1"
+  ],
+  "sections": {
+    "nodes": {
+      "equal": true,
+      "sha256": [
+        "4f08430947ecfae69e036d868e19a7853e96224df043178c97b7cba16138b2d5",
+        "4f08430947ecfae69e036d868e19a7853e96224df043178c97b7cba16138b2d5"
+      ]
+    },
+    "edges": {
+      "equal": true,
+      "sha256": [
+        "7267812f388800c32f19d2fe4425567ade253550896678cf22fd7f2ea4b3cb7b",
+        "7267812f388800c32f19d2fe4425567ade253550896678cf22fd7f2ea4b3cb7b"
+      ]
+    },
+    "files": {
+      "equal": true,
+      "sha256": [
+        "d7507aae8b9e3f57e67aa4a4bc52b43ee9199c96875697210771fe7b769c08b0",
+        "d7507aae8b9e3f57e67aa4a4bc52b43ee9199c96875697210771fe7b769c08b0"
+      ]
+    },
+    "diagnostics": {
+      "equal": true,
+      "sha256": [
+        "0655c2940c46066c27950f8e4dc3070287d305aef5824db01e54f0ed2825ae14",
+        "0655c2940c46066c27950f8e4dc3070287d305aef5824db01e54f0ed2825ae14"
+      ]
+    },
+    "config": {
+      "equal": true,
+      "sha256": [
+        "d729c9a576532af273257c9690849b74410ebc2e1126512bfa4c244bcb491011",
+        "d729c9a576532af273257c9690849b74410ebc2e1126512bfa4c244bcb491011"
+      ]
+    },
+    "input_evidence": {
+      "equal": true,
+      "sha256": [
+        "a91e682421f2557de9b687e91e874ccf5ce8aa243029f11616641fe8c75b4751",
+        "a91e682421f2557de9b687e91e874ccf5ce8aa243029f11616641fe8c75b4751"
+      ]
+    }
+  },
+  "all_sections_equal": true,
+  "meaning": "Full and actual CocoIndex runs contain identical saved source and graph sections. Snapshot identities differ by backend provenance."
+}

@@ -1,0 +1,14 @@
+{
+  "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+  "unmodified_source_files": 323,
+  "source_files_verified": 323,
+  "upstream_extensions": 78,
+  "extension_mismatches": [],
+  "registered_frontend_ids": 38,
+  "added_codegraph_frontend_ids": 35,
+  "compressed_grammar_resources": 31,
+  "grammar_variants": 32,
+  "validation_type": "Source/resource identity and registry inspection; no project behavior or fixture tests",
+  "target_executed": false,
+  "target_tests_run": false
+}

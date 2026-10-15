@@ -1,10 +1,10 @@
 # CallScope · 静态调用结构完整性分析
 
-公开源代码分发：项目原创代码使用 [MIT License](LICENSE)，上游与分析样本来源见[开源声明](OPEN_SOURCE_NOTICES.md)。本仓库保存源码、文档与报告；当前完整大 JSON 证据分段压缩存放，克隆后运行 `python scripts/restore_report_artifacts.py` 还原原路径和原始字节。数据库和缓存留在原工作区，完整保存范围见[发布说明](publication/README.md)。以下为原项目说明；增加发布入口前的 README 原文另存于 `publication/workspace-original/README.md`。
+本仓库保存源码、文档与静态分析证据。v0.14 历史大 JSON 按原字节分段压缩保存，克隆后可运行 `python scripts/restore_report_artifacts.py` 还原；数据库和缓存不进入 Git，范围见[发布说明](publication/README.md)。初始导出身份仅描述 v0.14 发布，不代表当前源码；初始 README 原文另存于 `publication/workspace-original/README.md`。
 
-CallScope 只读项目源码，构建版本化调用图，并按有限合同分析字段、状态、导航、消息与协议、预算和查重保护关系。当前正式版本为 v0.14.0，增加具体职责解释、文档与部署来源对照，以及条件状态沿革和发布边界。两库正常纯静态冷/暖重算及自动报告均已保存；完成依据是原报告实际内容与证据的对应，不能按版本号关闭目标。当前状态见[目标记录](reports/astra-iteration12/CURRENT_GOAL.json)，原内容的正式逐项对应见[内容对照](reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)。
+CallScope 只读项目源码，构建版本化调用图，并按有限合同分析字段、状态、导航、消息与协议、预算和查重保护关系。当前版本为 v0.15.0，直接复用 CodeGraph 的语言提取器和固定语法，默认选择全部 38 个规范语言/格式前端；新增调用关系保留为候选。v0.14 的两库正常纯静态冷/暖重算、职责解释和文档对照仍保留原冻结身份，其有限内容的完成依据见[目标记录](reports/astra-iteration12/CURRENT_GOAL.json)和[正式内容对照](reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)。
 
-默认分析 Python，可选 TypeScript/TSX、JavaScript 家族与 Rust 静态前端。字段适配器使用公共不可变 IR；确定图索引复用 Axon，可选 CocoIndex 引擎持久缓存语言前端。提供 CLI、本地网页、HTTP、MCP 和冻结源码观察核对命令。
+默认 `analysis.languages: ["all"]`，包含保留的 Python、TypeScript/JavaScript 家族、Rust 前端，以及 CodeGraph 的 35 个新增语言/格式 ID（含 Dart）。语言列表、Node.js 20–24 依赖和结构/元数据边界见 [CodeGraph 复用说明](docs/CODEGRAPH_REUSE.md)。字段适配器继续使用有限的公共不可变 IR，不因语言接入自动获得新语言字段语义；确定图索引复用 Axon，可选 CocoIndex 持久缓存语言前端。提供 CLI、本地网页、HTTP、MCP 和冻结源码观察核对命令。
 
 **系统不执行目标代码，不导入目标模块，不运行测试，不触发构建，不提供沙箱或动态 trace。** 路径存在只能说明静态调用图存在相应连接，不能保证实际执行顺序、分支覆盖、参数、输出、业务正确性或一般意义上的功能完整性。
 
@@ -21,7 +21,15 @@ python -m callscope report --db .callscope/demo.sqlite3 --snapshot SNAPSHOT_ID -
 
 报告读取已保存的图、源码与发现，不重新扫描目标。它分列架构结构、完整条件判断、主要功能链、局部证据、条件与未审范围；HTTP `GET /api/v1/report` 和 MCP `get_project_report` 提供同一报告。配置条数、源码事实数、五项判断完成数和解析比例均不代表全文报告或项目功能覆盖率；当前报告明确保留 `whole_report_reproduction_claimed=false`。
 
-## v0.14.0 正式结果
+## v0.15.0：CodeGraph 全语言前端
+
+固定复用上游提交 `8f1f842b5b828175992d2ce2cdf673b955b2cce9`：323 个来源文件、31 份压缩 WASM 和 32 个 grammar 映射。新增前端在正常 `scan` 流程消费已捕获文本；不向 Node worker 提供真实目标根，不执行目标代码、测试或构建。所有新增调用绑定均为 candidate-only，不因唯一候选或较高 confidence 成为确定 `CALLS`。
+
+38 个规范 ID 包含模板和 YAML/Twig/XML/properties 等元数据格式，并非 38 套完整语义分析器。注册、运行时语法可用性、实际项目扫描和有限合同支持分别记录；未实际扫描的语言不声称已验证。新项目结果另存其实际扫描记录，不把 v0.14 两库数字转述为本版验收。完整选择表、状态口径、来源与许可见 [CODEGRAPH_REUSE.md](docs/CODEGRAPH_REUSE.md)。
+
+真实 n0vel 固定提交扫描已选入全部 891 个 Dart 文件，完整解析 864 个；`lib/` 为 513/536（约 95.7%，其余保留语法缺口）。两库原前端的 801 文件、43,492 节点、232,510 边完整记录保持一致。新增调用仍为候选，不能将这些数字解释为功能覆盖率。完整结果与尚未实扫的 30 个语言/格式 ID 见 [本轮报告](reports/codegraph-integration-v15/REPORT.md)。
+
+## v0.14.0 历史正式结果
 
 直接阅读 [CodePatchBay 自动报告](reports/astra-iteration12-scope2/codepatchbay-automatic-report.md)和 [WinWinCode 自动报告](reports/astra-iteration12-scope2/winwincode-automatic-report.md)。正常 CLI、HTTP 和 MCP 共用报告生成器 v3，正文展示实际字段、实参交接、guard、条件表、反证和源码位置，完整 JSON 保留全部原始证据与精确引用。
 
@@ -94,7 +102,7 @@ Rust 前端修正了 crate 内置编译限制属性的误分类。上一版三�
 
 ## 快速使用
 
-需要 Python 3.11 或更新版本，以及支持 `dir_fd`、文件描述符目录扫描和禁止跟随符号链接接口的 Linux/POSIX 环境。首版未适配 Windows 原生环境。Python 全量模式在仓库根目录直接运行，无需安装额外 Python 包；Axon 的纯 Python 图核心已随工具保存：
+需要 Python 3.11 或更新版本，以及支持 `dir_fd`、文件描述符目录扫描和禁止跟随符号链接接口的 Linux/POSIX 环境。首版未适配 Windows 原生环境。默认全语言选择中，CodeGraph 前端需要 Node.js 20–24，TS/Rust 原前端需要下述可选工具语法库；仅显式 Python 的全量分析无需额外 Python 包。Axon 图核心和 CodeGraph 语法/worker 已随工具保存：
 
 ```sh
 python -m callscope scan examples/order_service --engine full --json
@@ -134,7 +142,7 @@ python -m callscope serve examples/order_service --engine cocoindex --port 8787 
 
 缓存粒度是语言整体：同一语言内文件新增、删除、改名或内容变化后，重新解析并绑定该语言全部选入文件；完整配置、工具源码身份和 worker 实际解析组件版本也参与缓存键。其他语言可复用缓存，但全局规则、可达性及调用环检测每轮重新计算。`read_error` 所在语言不写入 memo；解析器运行失败或协议/证据身份不一致时本轮不发布新快照。`auto` 选中 CocoIndex 后的运行失败不会静默切换为另一引擎。维护计数位于 `publication.maintenance` 和服务状态，不进入不可变快照统计。
 
-Axon 接入随所有引擎启用：`GraphIndex` 使用其节点、关系及有向邻接索引，供路径查询和检测器访问确定内部调用。调用绑定、未知传播及规则判断由 CallScope 负责。来源、固定版本与实际改动见 [上游代码复用说明](docs/UPSTREAM_REUSE.md) 和 [第三方声明](THIRD_PARTY_NOTICES.md)。
+Axon 接入随所有引擎启用：`GraphIndex` 使用其节点、关系及有向邻接索引，供路径查询和检测器访问确定内部调用。CodeGraph 新前端候选不进入该确定邻接。调用绑定、未知传播及规则判断由 CallScope 负责。来源、固定版本与实际改动见 [上游代码复用说明](docs/UPSTREAM_REUSE.md)、[CodeGraph 复用说明](docs/CODEGRAPH_REUSE.md)和 [第三方声明](THIRD_PARTY_NOTICES.md)。
 
 扫描将快照和发现保存到当前工作目录下的 `.callscope/callscope.sqlite3`。CLI 的 `--db PATH` 可以指定同一份数据库；不同工作目录下运行时要明确指定路径。
 
@@ -146,7 +154,7 @@ python -m callscope anomalies --db .callscope/demo.sqlite3 --json
 
 `path` 默认使用数据库最新快照，返回一条确定调用关系组成的路径及分析完整性信息。它不是执行轨迹，也不枚举所有调用路径。
 
-手动修改目标目录的源码后再次扫描，会形成新的分析快照。相同项目、源码、配置、分析器、检测器、模式、工具源码及后端/解析组件身份的重复扫描不会发布重复快照。`parser_version` 保存这些组件身份的规范组合，`stats.component_versions` 提供结构化信息；不同维护引擎或版本属于不同分析输入，缓存命中次数不改变快照身份。`scan --json` 返回 `{snapshot, findings, publication}`，快照 ID 位于 `snapshot.id`。使用两个分析快照 ID 比较：
+手动修改目标目录的源码后再次扫描，会形成新的分析快照。相同项目、源码、配置、分析器、检测器、模式、工具源码及后端/解析组件身份的重复扫描不会发布重复快照。v0.15 的 `parser_version` 为完整组件映射的 `components-sha256:` 摘要，完整信息在 `stats.component_versions` 保存一次；不同维护引擎或版本属于不同分析输入，缓存命中次数不改变快照身份。`scan --json` 返回 `{snapshot, findings, publication}`，快照 ID 位于 `snapshot.id`。使用两个分析快照 ID 比较：
 
 ```sh
 python -m callscope diff OLD_SNAPSHOT_ID NEW_SNAPSHOT_ID --db .callscope/demo.sqlite3
@@ -247,7 +255,7 @@ v0.5 可显式注册 `serde-1.0.228-declared-helper-v1` 和独立 `rust-core-cmp
 
 完整规则语义和不确定性边界见 [静态分析与约束说明](docs/STATIC_SCOPE.md)。
 
-多语言项目显式设置 `analysis.languages`，并给工作区包及 crate 提供静态入口映射。例如将下面字段合入项目配置：
+默认 `analysis.languages: ["all"]`；需要缩小范围或保留旧策略时显式选择语言。下例只选择原三套前端，并给工作区包及 crate 提供静态入口映射，可将字段合入项目配置：
 
 ```json
 {

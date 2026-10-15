@@ -16,7 +16,7 @@ from typing import Any
 
 from .models import Finding, GraphSnapshot
 
-VERSION = "captured-project-analysis-report-3"
+VERSION = "captured-project-analysis-report-4"
 
 _PRESENTATION_VERSION = "captured-relation-presentation-2"
 _DISPLAY_LIMITS = {"section_nodes": 224, "depth": 8, "list_items": 6,
@@ -250,7 +250,7 @@ def _project_declarations(snapshot: GraphSnapshot) -> dict:
     documentation=[]
     gaps=[]
     for path,record in sorted(snapshot.input_evidence.items()):
-        selected=path=="package.json" or path=="README.md" or path=="docs/architecture.md" or path.endswith("Cargo.toml")
+        selected=path=="package.json" or path=="README.md" or path=="docs/architecture.md" or path.endswith(("Cargo.toml", "pubspec.yaml"))
         if not selected:
             continue
         text=record.get("content","")
@@ -277,6 +277,11 @@ def _project_declarations(snapshot: GraphSnapshot) -> dict:
                     "workspace_exclusions":workspace.get("exclude",[]) if isinstance(workspace,dict) else [],
                     "workspace_package":workspace.get("package",{}) if isinstance(workspace,dict) else {},
                     "declared_dependencies":data.get("dependencies",{}),"dependency_availability_verified":False})
+            elif path.endswith("pubspec.yaml"):
+                manifests.append({**identity,"format":"yaml","structured_fields_not_parsed":True,
+                    "saved_input_locator":{"snapshot_id":snapshot.id,"input_path":path},
+                    "dependency_availability_verified":False,
+                    "meaning":"Authenticated inert manifest reference; YAML fields and package dependencies are not interpreted."})
             else:
                 headings=[{"line":number,"text":line} for number,line in enumerate(text.splitlines(),1)
                     if line.startswith("# ") or line.startswith("## ")]
@@ -286,6 +291,92 @@ def _project_declarations(snapshot: GraphSnapshot) -> dict:
             gaps.append({**identity,"reason":str(error)})
     return {"manifests":manifests,"documentation":documentation,"gaps":gaps,
         "meaning":"Captured declarations and headings describe project inputs, not verified products, installed dependencies or executed commands."}
+
+
+def _codegraph_candidate_evidence(snapshot: GraphSnapshot, by_id: dict) -> dict[str, Any]:
+    """Bounded presentation of saved candidates, never a binding inference."""
+    limits = {"call_sites": 24, "targets_per_site": 8, "nodes": 12,
+              "metadata_owners": 12, "expression_characters": 512}
+    node_kinds, languages, relation_kinds, resolutions = Counter(), Counter(), Counter(), Counter()
+    node_examples, metadata_examples, examples = [], [], []
+    node_count = candidate_sites = unbound_sites = candidate_targets = non_call_count = structural_count = 0
+    for node in snapshot.nodes:
+        if node.metadata.get("frontend") != "codegraph":
+            continue
+        node_count += 1
+        node_kinds[node.kind] += 1
+        languages[node.metadata.get("language", "unknown")] += 1
+        locator = {"snapshot_id": snapshot.id, "node_id": node.id}
+        if len(node_examples) < limits["nodes"]:
+            node_examples.append({"node_id": node.id, "name": node.name,
+                "file": node.file, "line": node.line, "kind": node.kind,
+                "language": node.metadata.get("language"), "source_hash": node.metadata.get("source_hash"),
+                "saved_graph_locator": locator})
+        non_calls = node.metadata.get("codegraph_relations", [])
+        structure = node.metadata.get("codegraph_structure", [])
+        non_call_count += len(non_calls)
+        structural_count += len(structure)
+        if (non_calls or structure) and len(metadata_examples) < limits["metadata_owners"]:
+            metadata_examples.append({"node_id": node.id, "file": node.file, "line": node.line,
+                "non_call_relations": len(non_calls), "structural_relations": len(structure),
+                "saved_graph_locator": locator,
+                "metadata_fields": [key for key in ("codegraph_relations", "codegraph_structure")
+                    if node.metadata.get(key)]})
+    for edge in snapshot.edges:
+        if edge.metadata.get("frontend") != "codegraph":
+            continue
+        relation_kinds[edge.metadata.get("relation_kind", "unknown")] += 1
+        resolutions[edge.resolution] += 1
+        candidate_sites += bool(edge.candidates)
+        unbound_sites += not bool(edge.candidates)
+        candidate_targets += len(edge.candidates)
+        if len(examples) >= limits["call_sites"]:
+            if any(bool(item["candidate_count"]) == bool(edge.candidates) for item in examples):
+                continue
+            # Retain an actual example from both categories when both exist.
+            examples.pop()
+        targets = []
+        for identifier in edge.candidates[:limits["targets_per_site"]]:
+            matches = by_id.get(identifier, [])
+            target = {"node_id": identifier, "saved_node_matches": len(matches),
+                "saved_graph_locator": {"snapshot_id": snapshot.id, "node_id": identifier}}
+            if len(matches) == 1:
+                node = matches[0]
+                target.update({"name": node.name, "file": node.file, "line": node.line,
+                    "kind": node.kind, "source_hash": node.metadata.get("source_hash")})
+                upstream = [item for item in edge.metadata.get("upstream_candidates", [])
+                    if item.get("target") == node.metadata.get("upstream_id")]
+                target["upstream_ranking"] = [{key: item[key] for key in
+                    ("confidence", "resolvedBy", "resolved_by", "edgeKind", "edge_kind") if key in item}
+                    for item in upstream[:limits["targets_per_site"]]]
+                target["upstream_ranking_total"] = len(upstream)
+            targets.append(target)
+        examples.append({"edge_id": edge.id, "source_node_id": edge.source,
+            "expression": edge.expression[:limits["expression_characters"]],
+            "expression_truncated": len(edge.expression) > limits["expression_characters"],
+            "file": edge.file, "line": edge.line, "column": edge.column,
+            "source_hash": edge.metadata.get("source_hash"),
+            "relation_kind": edge.metadata.get("relation_kind"), "resolution": edge.resolution,
+            "candidate_only": True, "candidate_count": len(edge.candidates), "targets": targets,
+            "targets_truncated": len(edge.candidates) > len(targets),
+            "saved_graph_locator": {"snapshot_id": snapshot.id, "edge_id": edge.id},
+            "full_expression_field": "expression", "full_candidates_field": "candidates",
+            "upstream_ranking_field": "metadata.upstream_candidates"})
+    total = candidate_sites + unbound_sites
+    return {"snapshot_id": snapshot.id, "presentation_only": True, "candidate_only": True,
+        "counts": {"nodes": node_count, "call_sites": total, "candidate_call_sites": candidate_sites,
+            "unbound_call_sites": unbound_sites, "candidate_targets": candidate_targets,
+            "non_call_relations_in_node_metadata": non_call_count,
+            "structural_relations_in_node_metadata": structural_count},
+        "node_kinds": dict(sorted(node_kinds.items())), "nodes_by_language": dict(sorted(languages.items())),
+        "relation_kinds": dict(sorted(relation_kinds.items())), "resolutions": dict(sorted(resolutions.items())),
+        "examples": examples, "node_examples": node_examples, "metadata_owner_examples": metadata_examples,
+        "limits": limits, "examples_truncated": total > len(examples),
+        "sampling": "First saved call-like records, replacing the final example with the first missing candidate/unbound category when available; not representative or additional coverage.",
+        "confidence_meaning": "Heuristic upstream ranking, not a probability, deterministic binding, or functional completion.",
+        "call_site_meaning": "Saved CodeGraph call-like edges; relation_kind distinguishes calls, instantiation and function references.",
+        "metadata_meaning": "Non-call and structural relations remain in saved node metadata; they are not promoted to call edges.",
+        "locator_meaning": "Use snapshot_id and the complete edge_id or node_id to retrieve full saved graph evidence."}
 
 
 def build_project_report(snapshot: GraphSnapshot, findings: list[Finding]) -> dict[str, Any]:
@@ -300,10 +391,11 @@ def build_project_report(snapshot: GraphSnapshot, findings: list[Finding]) -> di
 
     for source in snapshot.files:
         key = area(source.path)
-        entry = areas.setdefault(key,{"directory":key,"files":0,"parsed":0,"languages":Counter(),"node_types":Counter()})
+        entry = areas.setdefault(key,{"directory":key,"files":0,"parsed":0,"languages":Counter(),"node_types":Counter(),"file_statuses":Counter()})
         entry["files"]+=1
         entry["parsed"]+=source.status=="parsed"
         entry["languages"][source.language]+=1
+        entry["file_statuses"][source.status]+=1
     for node in snapshot.nodes:
         if node.file:
             key=area(node.file)
@@ -374,17 +466,32 @@ def build_project_report(snapshot: GraphSnapshot, findings: list[Finding]) -> di
         for (kind,sources),rules in source_selections.items() if len(rules)>1 and sources]
     support=[{key:value for key,value in record.items() if key not in {"content"}}
              for _,record in sorted(snapshot.input_evidence.items())]
+    statuses_by_language = defaultdict(Counter)
+    for source in snapshot.files:
+        statuses_by_language[source.language][source.status] += 1
     report = {"version":VERSION,"snapshot":{"id":snapshot.id,"project_id":snapshot.project_id,
         "project_name":snapshot.project_name,"created_at":snapshot.created_at,"source_hash":snapshot.source_hash,
         "policy_hash":snapshot.policy_hash,"status":snapshot.status,"component_versions":snapshot.stats.get("component_versions",{})},
+        "stats": {key: snapshot.stats.get(key) for key in
+            ("by_language", "language_capabilities", "file_inventory",
+             "content_language_classification_changes", "content_language_classification_failed")},
+        "codegraph_candidate_evidence": _codegraph_candidate_evidence(snapshot, by_id),
         "coverage":{"files_selected":len(snapshot.files),"files_parsed":sum(item.status=="parsed" for item in snapshot.files),
             "file_statuses":dict(sorted(Counter(item.status for item in snapshot.files).items())),
+            "file_statuses_by_language": {language: dict(sorted(counts.items()))
+                for language, counts in sorted(statuses_by_language.items())},
+            "file_status_meanings": {
+                "parsed": "Grammar parsing completed; no functional correctness or deterministic call binding is implied.",
+                "captured_metadata": "File or metadata captured without a general symbol-level parser.",
+                "structural_extracted": "Custom/template structure extracted; complete embedded syntax validation is not established.",
+                "parse_error": "Parser/frontend reported an error; any retained structural evidence is partial."},
+            "saved_stats_meaning": "Saved snapshot values, not current runtime capability probes. Legacy files_failed counts all non-parsed statuses, including metadata/structural extraction; missing saved fields remain null.",
             "unparsed_files":[{"file":item.path,"hash":item.hash,"language":item.language,"status":item.status,"error":item.error}
                 for item in snapshot.files if item.status!="parsed"],
             "support_inputs":support,"selection_scope":snapshot.stats.get("source_roots",snapshot.config.get("analysis",{}).get("source_roots",[])),
             "excluded":snapshot.config.get("analysis",{}).get("exclude",[]),
             "meaning":"Captured source and parser scope only; no function or business coverage percentage is inferred."},
-        "architecture":{"areas":[{**item,"languages":dict(sorted(item["languages"].items())),"node_types":dict(sorted(item["node_types"].items()))}
+        "architecture":{"areas":[{**item,"languages":dict(sorted(item["languages"].items())),"node_types":dict(sorted(item["node_types"].items())),"file_statuses":dict(sorted(item["file_statuses"].items()))}
             for _,item in sorted(areas.items())],
             "dependencies":[{"from":left,"to":right,**item,"examples_are_sampled":item["edge_count"]>len(item["examples"])}
                 for (left,right),item in sorted(dependencies.items())],

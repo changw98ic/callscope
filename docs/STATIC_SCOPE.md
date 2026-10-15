@@ -6,9 +6,17 @@ CallScope 检查源码产生的调用关系及显式有限源码合同。声明�
 
 没有明确约束时，系统可以描述图和图的变化，但不能可靠地推断缺少某项功能。存在同名函数也不意味着它已被正确注册或调用。
 
-## v0.14 当前正式结果与有限静态范围
+## v0.15 当前语言接入边界
 
-当前实现为 `static-multilang-14` / `call-rules-13-architecture-explanations`，快照 schema 2，scope2 的[核心与策略已冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)。两库正常纯静态冷/热分析及正式报告已保存、数据库已关闭，快照范围仍 partial。原 26 观察比较与发布身份已核对；原已读有限源码报告内容已完成[正式读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)，complete=true、已知有限内容缺口为空，原未审范围和 source-only 效果未知保留。下文 v0.13 数字保持历史身份，不用于预填本轮结论。
+默认 `analysis.languages:["all"]` 选择 38 个规范语言/格式 ID：原 Python、TypeScript/JavaScript 家族、Rust 前端保留，其他语言直接复用固定 CodeGraph 提取代码和 WASM。详细列表及来源见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。Node.js 20–24 属于工具运行环境，不安装目标依赖，不运行目标、测试或构建。
+
+新增调用关系均为 candidate-only，唯一候选或高 confidence 也不变成确定 CALLS。YAML/Twig/XML/properties、模板及嵌入语法保留文件/元数据或局部结构层级；有节点、结构提取成功、grammar 可加载与完整语法解析不是同一结论。未知后缀独立盘点，不把未选入源码从分母排除后宣称项目功能完整。
+
+语言注册、运行时可用性、实际项目扫描与有限合同支持分别记录，未扫描语言仍未验证。新增语言不自动获得原 TS/Rust 字段 IR、完整判断或职责解释。这里不预填新项目解析率或功能覆盖率；下文 v0.14 结果保留原冻结来源和有限验收范围。
+
+## v0.14 历史正式结果与有限静态范围
+
+该版实现为 `static-multilang-14` / `call-rules-13-architecture-explanations`，快照 schema 2，scope2 的[核心与策略已冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)。两库正常纯静态冷/热分析及正式报告已保存、数据库已关闭，快照范围仍 partial。原 26 观察比较与发布身份已核对；原已读有限源码报告内容已完成[正式读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)，complete=true、已知有限内容缺口为空，原未审范围和 source-only 效果未知保留。下文 v0.13 数字保持历史身份，不用于预填新版本结论。
 
 v0.14 增加真实字段/条件链、职责解释与文档部署对照。条件式状态沿袭提取实际状态 guard、事件字面字段、形参绑定和后续 queue 同源字段；发布边界区分源码模式/布尔 opt-in、callee return guard 与 opaque effect。对象未知 spread/成员不被当作已知值，局部状态及嵌套分支不冒充入口配置或必经门。顺序关系不证明 callback 激活、持久化、实际授权或远端成功。
 

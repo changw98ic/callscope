@@ -1,0 +1,678 @@
+{
+  "generated_at": "2026-10-15T06:08:49.472986+00:00",
+  "scope": "real complete old-policy native frontend input; exact nodes/edges/file-state/diagnostic and stats comparison only",
+  "old_core_archive": "/workspace/callscope/reports/astra-iteration12-scope2/frozen-core-source",
+  "old_core_freeze": "/workspace/callscope/reports/astra-iteration12-scope2/CORE_FREEZE.json",
+  "old_frozen_python_files_verified": 65,
+  "old_tool_identity": {
+    "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+    "graph_backend": "axon-graph-core-1",
+    "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+  },
+  "current_tool_identities": [
+    "5d93716e222ae70b139ac66ca343b24a6234ac1e0065655682a7cd9843fb1520",
+    "99e81564980e5cf92209443fbae2a0153d1a99d413289038a40da23f916e36d7"
+  ],
+  "current_native_dependencies_unchanged_during_each_run": true,
+  "global_freeze_scope": "native frontend dependencies frozen; unrelated report/vendor-notice files allowed to change, global hash is observed not release-frozen",
+  "all_pairs_equal": true,
+  "captured_native_files_compared": 801,
+  "nodes_compared": 43492,
+  "edges_compared": 232510,
+  "results": [
+    {
+      "repository": "codepatchbay",
+      "language": "python",
+      "input_file_count": 2,
+      "input_capture_sha256": "044888ba530012aca8112876d13cbf124ec767acfc2565e7169c3cf66493a7bb",
+      "input_source_manifest_sha256": "c853a23317d2f88a619a0ddf00a59f7780ba6077d3f7123acd2fd0343f35671c",
+      "old_tool_identity": {
+        "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+      },
+      "current_tool_identity": {
+        "source_hash": "5d93716e222ae70b139ac66ca343b24a6234ac1e0065655682a7cd9843fb1520",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "current_tool_identity_after": {
+        "source_hash": "5d93716e222ae70b139ac66ca343b24a6234ac1e0065655682a7cd9843fb1520",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "current_native_dependency_hashes": {
+        "__init__.py": "58b47350d492396dad1a556b26d08adb961701b08b896fba19715a7aa04a33f5",
+        "analysis.py": "c07c51006e3df4ac5e68af3d721737294a9c8bcf4d2b980d11cc17059d9ec003",
+        "analyzer.py": "da3a2177cf267f161fb115b242db2b3bc6400833e0de7d34077defaae9a79c2b",
+        "models.py": "03625a264ce7ec40227ab1fec0822b60e9753763d925a8c66895975f190db5c9",
+        "config.py": "6da614ed7e6159a479e4b15d964cf485676ba5ef78a1422b809cdb2251738c2a",
+        "parsers.py": "ec155507887c35fab93654c35e0a94746a179c5f8f5e74d3b9570cdb0e973407",
+        "typescript_analyzer.py": "24a97124236cad7eba71ac897b609f6617df5849183b304422ef3372116a0cdd",
+        "rust_analyzer.py": "cbe6f73c6e97c1514ab8f31e604c92ec5bec905668206d213565bc22780e9bdd",
+        "syntax_projection.py": "3d40b850fc9f62af6f30c3213928ad5b48ea258111c510f5245216760bbc8c2f",
+        "rust_helpers.py": "71ffdf4d0f5785106c1de6f24ec782665f82882aa455f1c09a2b6714cbf6cca7",
+        "rust_source_context.py": "6a19a263acde90b1421690b4267bc77e7c9d55d492062eb2cff79bbe50dc53b9",
+        "source_reader.py": "801fb6df1de3aae034257296804a7e9d0f07b94e266367185f213034a238de7f",
+        "language_catalog.py": "5dd2c8db3f6d868f382d1ea99c8edc5c803b366e0aa9d3c51970fa0971b55594",
+        "input_capture.py": "608948041d09c4008bbbabaf558c66449a3db2edd92c1bc257f8632cb332d9ed"
+      },
+      "current_native_dependencies_unchanged": true,
+      "global_tool_identity_unchanged": true,
+      "old_frontend_versions": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "current_frontend_versions": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "sections": {
+        "nodes": {
+          "equal": true,
+          "old_count": 28,
+          "current_count": 28,
+          "old_sha256": "254dd947d38ea555f7516d89d9fa59f675fe8a612f50fd381f296cb04613629e",
+          "current_sha256": "254dd947d38ea555f7516d89d9fa59f675fe8a612f50fd381f296cb04613629e",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "edges": {
+          "equal": true,
+          "old_count": 74,
+          "current_count": 74,
+          "old_sha256": "7160e14c5477aa66ce7d42418850833a554381a444e74cd18802153fb6ba8db3",
+          "current_sha256": "7160e14c5477aa66ce7d42418850833a554381a444e74cd18802153fb6ba8db3",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "files": {
+          "equal": true,
+          "old_count": 2,
+          "current_count": 2,
+          "old_sha256": "885fe8e00e41cecf34afc051877bce529f2a63be010534864545103f5d7ea737",
+          "current_sha256": "885fe8e00e41cecf34afc051877bce529f2a63be010534864545103f5d7ea737",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "diagnostics": {
+          "equal": true,
+          "old_count": 0,
+          "current_count": 0,
+          "old_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "current_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        }
+      },
+      "stats_equal": true,
+      "old_stats_sha256": "b8284864165dad2bf1981cef542d87d5d098e02737ea2ca788a45bb01342ceb9",
+      "current_stats_sha256": "b8284864165dad2bf1981cef542d87d5d098e02737ea2ca788a45bb01342ceb9",
+      "output_file_statuses": {
+        "parsed": 2
+      },
+      "all_compared_output_equal": true,
+      "old_summary_file_sha256": "8b3a1157dab19893112e38c134b5bf6c7a11b6ad6ce60d940d27b0c207f0e2ee",
+      "current_summary_file_sha256": "231d9191a43d9fef24819f5fea84c1701d4696a329a162ad4921ce8f7712d6cb"
+    },
+    {
+      "repository": "codepatchbay",
+      "language": "typescript",
+      "input_file_count": 328,
+      "input_capture_sha256": "044888ba530012aca8112876d13cbf124ec767acfc2565e7169c3cf66493a7bb",
+      "input_source_manifest_sha256": "748fdcce14a25aa84e1df2cc5718d7b706a954271834fdc3c59df9dbc057c937",
+      "old_tool_identity": {
+        "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+      },
+      "current_tool_identity": {
+        "source_hash": "5d93716e222ae70b139ac66ca343b24a6234ac1e0065655682a7cd9843fb1520",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "current_tool_identity_after": {
+        "source_hash": "99e81564980e5cf92209443fbae2a0153d1a99d413289038a40da23f916e36d7",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "current_native_dependency_hashes": {
+        "__init__.py": "58b47350d492396dad1a556b26d08adb961701b08b896fba19715a7aa04a33f5",
+        "analysis.py": "c07c51006e3df4ac5e68af3d721737294a9c8bcf4d2b980d11cc17059d9ec003",
+        "analyzer.py": "da3a2177cf267f161fb115b242db2b3bc6400833e0de7d34077defaae9a79c2b",
+        "models.py": "03625a264ce7ec40227ab1fec0822b60e9753763d925a8c66895975f190db5c9",
+        "config.py": "6da614ed7e6159a479e4b15d964cf485676ba5ef78a1422b809cdb2251738c2a",
+        "parsers.py": "ec155507887c35fab93654c35e0a94746a179c5f8f5e74d3b9570cdb0e973407",
+        "typescript_analyzer.py": "24a97124236cad7eba71ac897b609f6617df5849183b304422ef3372116a0cdd",
+        "rust_analyzer.py": "cbe6f73c6e97c1514ab8f31e604c92ec5bec905668206d213565bc22780e9bdd",
+        "syntax_projection.py": "3d40b850fc9f62af6f30c3213928ad5b48ea258111c510f5245216760bbc8c2f",
+        "rust_helpers.py": "71ffdf4d0f5785106c1de6f24ec782665f82882aa455f1c09a2b6714cbf6cca7",
+        "rust_source_context.py": "6a19a263acde90b1421690b4267bc77e7c9d55d492062eb2cff79bbe50dc53b9",
+        "source_reader.py": "801fb6df1de3aae034257296804a7e9d0f07b94e266367185f213034a238de7f",
+        "language_catalog.py": "5dd2c8db3f6d868f382d1ea99c8edc5c803b366e0aa9d3c51970fa0971b55594",
+        "input_capture.py": "608948041d09c4008bbbabaf558c66449a3db2edd92c1bc257f8632cb332d9ed"
+      },
+      "current_native_dependencies_unchanged": true,
+      "global_tool_identity_unchanged": false,
+      "old_frontend_versions": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      },
+      "current_frontend_versions": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      },
+      "sections": {
+        "nodes": {
+          "equal": true,
+          "old_count": 11057,
+          "current_count": 11057,
+          "old_sha256": "cdb4cc6d0e148c52bfdb45476f021d097bf32ee22c0082c260510029858d4f35",
+          "current_sha256": "cdb4cc6d0e148c52bfdb45476f021d097bf32ee22c0082c260510029858d4f35",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "edges": {
+          "equal": true,
+          "old_count": 60497,
+          "current_count": 60497,
+          "old_sha256": "b973d7c269e424b7712433328f4ad1574365079729d38d2788182aba6ed0e49d",
+          "current_sha256": "b973d7c269e424b7712433328f4ad1574365079729d38d2788182aba6ed0e49d",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "files": {
+          "equal": true,
+          "old_count": 328,
+          "current_count": 328,
+          "old_sha256": "74a696c9ce8de803f9c23746e00fbebe75a30e25db6404f0b03901bce87950fb",
+          "current_sha256": "74a696c9ce8de803f9c23746e00fbebe75a30e25db6404f0b03901bce87950fb",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "diagnostics": {
+          "equal": true,
+          "old_count": 5,
+          "current_count": 5,
+          "old_sha256": "ee911fa9bd23a51095faedd0710d8cc357ca79d58df0ac1751c225ec777dea25",
+          "current_sha256": "ee911fa9bd23a51095faedd0710d8cc357ca79d58df0ac1751c225ec777dea25",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        }
+      },
+      "stats_equal": true,
+      "old_stats_sha256": "69a16bf4a2c76070f8469d6c34f0b6582ecbd476ade5bf98ae5e8589446b1589",
+      "current_stats_sha256": "69a16bf4a2c76070f8469d6c34f0b6582ecbd476ade5bf98ae5e8589446b1589",
+      "output_file_statuses": {
+        "parsed": 328
+      },
+      "all_compared_output_equal": true,
+      "old_summary_file_sha256": "670e259eec6e308531f306ac112ffe467eaa1ddf4f745ea1923eb62aabc1fef1",
+      "current_summary_file_sha256": "f8ac0447671322e0bb9fb1fcc16058102a0aefd70d6a92658e86cde1068b1107"
+    },
+    {
+      "repository": "winwincode",
+      "language": "typescript",
+      "input_file_count": 120,
+      "input_capture_sha256": "3e2a3129976d3f065f639ef5125488985e295a4fab4038adbf252cba560cd972",
+      "input_source_manifest_sha256": "e95de13168fc3c111e13b122f36342e38b3e3f9520aac4a688f299227ca3b8bf",
+      "old_tool_identity": {
+        "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+      },
+      "current_tool_identity": {
+        "source_hash": "5d93716e222ae70b139ac66ca343b24a6234ac1e0065655682a7cd9843fb1520",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "current_tool_identity_after": {
+        "source_hash": "5d93716e222ae70b139ac66ca343b24a6234ac1e0065655682a7cd9843fb1520",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "current_native_dependency_hashes": {
+        "__init__.py": "58b47350d492396dad1a556b26d08adb961701b08b896fba19715a7aa04a33f5",
+        "analysis.py": "c07c51006e3df4ac5e68af3d721737294a9c8bcf4d2b980d11cc17059d9ec003",
+        "analyzer.py": "da3a2177cf267f161fb115b242db2b3bc6400833e0de7d34077defaae9a79c2b",
+        "models.py": "03625a264ce7ec40227ab1fec0822b60e9753763d925a8c66895975f190db5c9",
+        "config.py": "6da614ed7e6159a479e4b15d964cf485676ba5ef78a1422b809cdb2251738c2a",
+        "parsers.py": "ec155507887c35fab93654c35e0a94746a179c5f8f5e74d3b9570cdb0e973407",
+        "typescript_analyzer.py": "24a97124236cad7eba71ac897b609f6617df5849183b304422ef3372116a0cdd",
+        "rust_analyzer.py": "cbe6f73c6e97c1514ab8f31e604c92ec5bec905668206d213565bc22780e9bdd",
+        "syntax_projection.py": "3d40b850fc9f62af6f30c3213928ad5b48ea258111c510f5245216760bbc8c2f",
+        "rust_helpers.py": "71ffdf4d0f5785106c1de6f24ec782665f82882aa455f1c09a2b6714cbf6cca7",
+        "rust_source_context.py": "6a19a263acde90b1421690b4267bc77e7c9d55d492062eb2cff79bbe50dc53b9",
+        "source_reader.py": "801fb6df1de3aae034257296804a7e9d0f07b94e266367185f213034a238de7f",
+        "language_catalog.py": "5dd2c8db3f6d868f382d1ea99c8edc5c803b366e0aa9d3c51970fa0971b55594",
+        "input_capture.py": "608948041d09c4008bbbabaf558c66449a3db2edd92c1bc257f8632cb332d9ed"
+      },
+      "current_native_dependencies_unchanged": true,
+      "global_tool_identity_unchanged": true,
+      "old_frontend_versions": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      },
+      "current_frontend_versions": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      },
+      "sections": {
+        "nodes": {
+          "equal": true,
+          "old_count": 2936,
+          "current_count": 2936,
+          "old_sha256": "26eb3e4c480bd86270fae07a81cb5f610259bd2ebf9d53a19f5adcd6d6b97511",
+          "current_sha256": "26eb3e4c480bd86270fae07a81cb5f610259bd2ebf9d53a19f5adcd6d6b97511",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "edges": {
+          "equal": true,
+          "old_count": 11042,
+          "current_count": 11042,
+          "old_sha256": "7486250faea2230cd3e3ed1bfb33485a36c9b24a6d6a9b2c46bf19d1bbd0a13a",
+          "current_sha256": "7486250faea2230cd3e3ed1bfb33485a36c9b24a6d6a9b2c46bf19d1bbd0a13a",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "files": {
+          "equal": true,
+          "old_count": 120,
+          "current_count": 120,
+          "old_sha256": "121df2a18b8e7f57975dfc1918568cfaefb90d3a09490f8eba0ae04abf84f58a",
+          "current_sha256": "121df2a18b8e7f57975dfc1918568cfaefb90d3a09490f8eba0ae04abf84f58a",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "diagnostics": {
+          "equal": true,
+          "old_count": 6,
+          "current_count": 6,
+          "old_sha256": "e452d7b9ecc8880834ee26bea055428ce35b480473d71d43d90f16533e8b9a16",
+          "current_sha256": "e452d7b9ecc8880834ee26bea055428ce35b480473d71d43d90f16533e8b9a16",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        }
+      },
+      "stats_equal": true,
+      "old_stats_sha256": "4d04d702bd63dbfd18439adcf3314fe63abf66a99a006cbcb0d7c2db7535ba4a",
+      "current_stats_sha256": "4d04d702bd63dbfd18439adcf3314fe63abf66a99a006cbcb0d7c2db7535ba4a",
+      "output_file_statuses": {
+        "parsed": 120
+      },
+      "all_compared_output_equal": true,
+      "old_summary_file_sha256": "dca4534a6c1b38904762a671178f087e4a3840f6e60d3f76854f95f353fa5d06",
+      "current_summary_file_sha256": "cd446c29aa6d349ca18b66d2de7d6c577002dacb53df11e0964cfad079673497"
+    },
+    {
+      "repository": "winwincode",
+      "language": "rust",
+      "input_file_count": 351,
+      "input_capture_sha256": "3e2a3129976d3f065f639ef5125488985e295a4fab4038adbf252cba560cd972",
+      "input_source_manifest_sha256": "179b5120d57a9c092320cf8a13af6d0a924b41b7dbfdb53ce6d18c86baf7a2a4",
+      "old_tool_identity": {
+        "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+      },
+      "current_tool_identity": {
+        "source_hash": "5d93716e222ae70b139ac66ca343b24a6234ac1e0065655682a7cd9843fb1520",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "current_tool_identity_after": {
+        "source_hash": "99e81564980e5cf92209443fbae2a0153d1a99d413289038a40da23f916e36d7",
+        "graph_backend": "axon-graph-core-1",
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "current_native_dependency_hashes": {
+        "__init__.py": "58b47350d492396dad1a556b26d08adb961701b08b896fba19715a7aa04a33f5",
+        "analysis.py": "c07c51006e3df4ac5e68af3d721737294a9c8bcf4d2b980d11cc17059d9ec003",
+        "analyzer.py": "da3a2177cf267f161fb115b242db2b3bc6400833e0de7d34077defaae9a79c2b",
+        "models.py": "03625a264ce7ec40227ab1fec0822b60e9753763d925a8c66895975f190db5c9",
+        "config.py": "6da614ed7e6159a479e4b15d964cf485676ba5ef78a1422b809cdb2251738c2a",
+        "parsers.py": "ec155507887c35fab93654c35e0a94746a179c5f8f5e74d3b9570cdb0e973407",
+        "typescript_analyzer.py": "24a97124236cad7eba71ac897b609f6617df5849183b304422ef3372116a0cdd",
+        "rust_analyzer.py": "cbe6f73c6e97c1514ab8f31e604c92ec5bec905668206d213565bc22780e9bdd",
+        "syntax_projection.py": "3d40b850fc9f62af6f30c3213928ad5b48ea258111c510f5245216760bbc8c2f",
+        "rust_helpers.py": "71ffdf4d0f5785106c1de6f24ec782665f82882aa455f1c09a2b6714cbf6cca7",
+        "rust_source_context.py": "6a19a263acde90b1421690b4267bc77e7c9d55d492062eb2cff79bbe50dc53b9",
+        "source_reader.py": "801fb6df1de3aae034257296804a7e9d0f07b94e266367185f213034a238de7f",
+        "language_catalog.py": "5dd2c8db3f6d868f382d1ea99c8edc5c803b366e0aa9d3c51970fa0971b55594",
+        "input_capture.py": "608948041d09c4008bbbabaf558c66449a3db2edd92c1bc257f8632cb332d9ed"
+      },
+      "current_native_dependencies_unchanged": true,
+      "global_tool_identity_unchanged": false,
+      "old_frontend_versions": {
+        "analyzer": "rust-tree-sitter-1.8-crate-attribute-context",
+        "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+      },
+      "current_frontend_versions": {
+        "analyzer": "rust-tree-sitter-1.8-crate-attribute-context",
+        "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+      },
+      "sections": {
+        "nodes": {
+          "equal": true,
+          "old_count": 29471,
+          "current_count": 29471,
+          "old_sha256": "64f7ee9f816e73854dfb907ce87ce0184c0b11c266858b77f6579948268ba42b",
+          "current_sha256": "64f7ee9f816e73854dfb907ce87ce0184c0b11c266858b77f6579948268ba42b",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "edges": {
+          "equal": true,
+          "old_count": 160897,
+          "current_count": 160897,
+          "old_sha256": "9ca134adb2331a03b12e59a79f81e26333888b08b6c8e774740c06ba25ac7576",
+          "current_sha256": "9ca134adb2331a03b12e59a79f81e26333888b08b6c8e774740c06ba25ac7576",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "files": {
+          "equal": true,
+          "old_count": 351,
+          "current_count": 351,
+          "old_sha256": "627a8ae59e276dfe29926050119f3a8b6cdbf803704e57e90aec66955201149f",
+          "current_sha256": "627a8ae59e276dfe29926050119f3a8b6cdbf803704e57e90aec66955201149f",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        },
+        "diagnostics": {
+          "equal": true,
+          "old_count": 158,
+          "current_count": 158,
+          "old_sha256": "ad7b0d8f9fb7bc6e16ab8f927c949959e4b6d49a31d074e53c7a6be9dbff844b",
+          "current_sha256": "ad7b0d8f9fb7bc6e16ab8f927c949959e4b6d49a31d074e53c7a6be9dbff844b",
+          "removed_or_changed_records": 0,
+          "added_or_changed_records": 0,
+          "removed_or_changed_sample": [],
+          "added_or_changed_sample": []
+        }
+      },
+      "stats_equal": true,
+      "old_stats_sha256": "87035e0ef4cb96b0c21688f30f0b0b068b7fc94afa3e2f1b07269dfb2ad98316",
+      "current_stats_sha256": "87035e0ef4cb96b0c21688f30f0b0b068b7fc94afa3e2f1b07269dfb2ad98316",
+      "output_file_statuses": {
+        "parsed": 345,
+        "parse_error": 6
+      },
+      "all_compared_output_equal": true,
+      "old_summary_file_sha256": "3c34cfe4b61c19e3c4edaadcb998e35235b7044b70e725a969c6c2faf69e9e31",
+      "current_summary_file_sha256": "17aa96ac9f3665572baf22b76ed4fb1d9a1ba782c84bdffd5fad5b05cb5f41a5"
+    }
+  ],
+  "captures": [
+    {
+      "repository": "codepatchbay",
+      "target_root": "/workspace/codepatchbay",
+      "original_snapshot": {
+        "id": "dd5d4e3cc349b57eb87d0f810a415560bfd5f6b1022a990a35190a44d0e50ebb",
+        "project_id": "ac6694a563ea5a6ef75f",
+        "project_name": "CodePatchBay — static source review",
+        "created_at": "2026-10-14T08:38:50.429143+00:00",
+        "source_hash": "4e07250709288887cd79ae51b5f23f0239e054bc1db40371f7e7d0609148791b",
+        "policy_hash": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887",
+        "status": "partial",
+        "component_versions": {
+          "atomicity_contracts": {
+            "analyzer": "static-atomicity-contracts-2-shared",
+            "policy_schema": "static-atomicity-policy-v1"
+          },
+          "budget_contracts": {
+            "analyzer": "static-local-budget-contracts-1",
+            "policy_schema": "static-local-budget-policy-v1"
+          },
+          "completion_summaries": "captured-completion-summaries-1",
+          "field_contracts": {
+            "analyzer": "static-field-contracts-4-ir",
+            "policy_schema": "static-field-policy-v2"
+          },
+          "field_relations": "captured-field-source-relations-1",
+          "field_summaries": "finite-field-summaries-5-ir",
+          "goal_contracts": {
+            "adapters": {
+              "atomicity": {
+                "analyzer": "source-derived-atomicity-completion-1",
+                "policy_schema": "adapter-validated-v1"
+              },
+              "pipeline": {
+                "analyzer": "finite-parameter-record-budget-flow-1",
+                "policy_schema": "parameter-record-budget-policy-1"
+              },
+              "status": {
+                "analyzer": "finite-status-classification-1",
+                "policy_schema": "static-status-policy-v1"
+              }
+            },
+            "policy_schema": "static-goal-policy-v1",
+            "registry": "static-whole-judgment-registry-1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-3",
+          "maintenance": {
+            "backend": "full"
+          },
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "report_claims": {
+            "analyzer": "captured-report-source-chains-3-architecture",
+            "policy_schema": "static-report-claim-policy-v2-documents",
+            "relation_modules": {
+              "conditional_gate_relations": "captured-conditional-gate-relations-1",
+              "documentation_relations": "captured-document-deployment-relations-1",
+              "lifecycle_ownership_relations": "captured-lifecycle-ownership-relations-1",
+              "message_identity_relations": "captured-message-identity-relations-1",
+              "record_projection_relations": "captured-record-projection-relations-1",
+              "rust_state_relations": "captured-rust-finite-state-relations-1",
+              "state_lineage_relations": "captured-conditional-lineage-publication-1"
+            }
+          },
+          "semantic_environment": "captured-builtin-environment-1",
+          "semantic_ir": "finite-immutable-semantic-ir-3",
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          },
+          "value_contracts": {
+            "analyzer": "static-value-contracts-1",
+            "policy_schema": "static-value-policy-v1"
+          }
+        }
+      },
+      "original_policy_file": "/workspace/callscope/reports/astra-iteration12-scope2/codepatchbay-policy.json",
+      "original_policy_file_sha256": "f3f0ba2eecdeb156eea3d4038e5e8ac2dd03b7ee94f9e989b9ce8d9f994a174f",
+      "effective_policy_sha256": "7dc3b17d71cc3bdd409886e636bc17268dd92ad191933b38258c83931a87e887",
+      "captured_file_count": 333,
+      "captured_inputs_sha256": "a1271bf025f4ab478e237d4cc02ddcdef96b059e8cc98a9c91713d7601c63cc3",
+      "source_manifest_sha256": "9c1ce370bd36d0df3bd7554f8e383d7d949659e7ceb3ad1f0252c101986b0b79",
+      "native_capture_counts": {
+        "python": 2,
+        "typescript": 328,
+        "rust": 0
+      }
+    },
+    {
+      "repository": "winwincode",
+      "target_root": "/workspace/winwincode",
+      "original_snapshot": {
+        "id": "cc327a390837a897be93cdd4bdd4d9ad652c47f70f0b0dbfbbf89a52b463d372",
+        "project_id": "1dec368a20d2f5075901",
+        "project_name": "WinWinCode / 项目源码静态调用核对",
+        "created_at": "2026-10-14T09:30:44.996827+00:00",
+        "source_hash": "eb8e7cae7c2cd2b0503495033cc9a2a98c6e16b3d54b5a2f95dbdca24d118ab2",
+        "policy_hash": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+        "status": "partial",
+        "component_versions": {
+          "completion_summaries": "captured-completion-summaries-1",
+          "goal_contracts": {
+            "adapters": {
+              "device": {
+                "analyzer": "static-device-spec-protocol-flow-1",
+                "policy_schema": "static-device-spec-protocol-policy-v1"
+              },
+              "navigation": {
+                "analyzer": "conditional-navigation-obligations-1",
+                "policy_schema": "adapter-validated-v1"
+              }
+            },
+            "policy_schema": "static-goal-policy-v1",
+            "registry": "static-whole-judgment-registry-1"
+          },
+          "lexical_bindings": "captured-lexical-bindings-3",
+          "maintenance": {
+            "backend": "full"
+          },
+          "navigation_contracts": {
+            "analyzer": "static-navigation-contracts-2-shared",
+            "policy_schema": "static-navigation-policy-v1"
+          },
+          "port_wiring": "finite-port-wiring-2-shared",
+          "python": {
+            "analyzer": "python-ast-3-captured",
+            "parser": "cpython-3.12.14"
+          },
+          "report_claims": {
+            "analyzer": "captured-report-source-chains-3-architecture",
+            "policy_schema": "static-report-claim-policy-v2-documents",
+            "relation_modules": {
+              "conditional_gate_relations": "captured-conditional-gate-relations-1",
+              "documentation_relations": "captured-document-deployment-relations-1",
+              "lifecycle_ownership_relations": "captured-lifecycle-ownership-relations-1",
+              "message_identity_relations": "captured-message-identity-relations-1",
+              "record_projection_relations": "captured-record-projection-relations-1",
+              "rust_state_relations": "captured-rust-finite-state-relations-1",
+              "state_lineage_relations": "captured-conditional-lineage-publication-1"
+            }
+          },
+          "rust": {
+            "analyzer": "rust-tree-sitter-1.8-crate-attribute-context",
+            "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+          },
+          "semantic_environment": "captured-builtin-environment-1",
+          "semantic_sources": "semantic-snapshot-sources-1",
+          "static_contracts": {
+            "analyzer": "static-contracts-1",
+            "policy_schema": "static-contract-policy-v1"
+          },
+          "support_input_capture": "support-input-capture-1",
+          "tool": {
+            "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+            "graph_backend": "axon-graph-core-1",
+            "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc"
+          },
+          "typescript": {
+            "analyzer": "typescript-tree-sitter-call-2-projection-1",
+            "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+            "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+          }
+        }
+      },
+      "original_policy_file": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-policy.json",
+      "original_policy_file_sha256": "24dd004b2130a963fa2e60724203c60e41c87ee780123bc27eccffc71bae3005",
+      "effective_policy_sha256": "47aa40e4904639bec88bb3d5b74cd7ebb69954bab81a3ff93dda81b959603499",
+      "captured_file_count": 471,
+      "captured_inputs_sha256": "6689c140acdfc99ecbad7c1535c16853d6c701a4a626aa8f8f0c7fc06c344e55",
+      "source_manifest_sha256": "cee433c75aac95b112e67adf8595304b79f786ffb019ee10b3cac961d3e51486",
+      "native_capture_counts": {
+        "python": 0,
+        "typescript": 120,
+        "rust": 351
+      }
+    }
+  ],
+  "historical_reference_readback": [
+    {
+      "repository": "codepatchbay",
+      "matched_historical_reference_entries": 19,
+      "missing": [],
+      "mismatched": [],
+      "historical_reference_document": "/workspace/callscope/reports/astra-iteration12-scope2/codepatchbay-baseline-source-checks.json"
+    },
+    {
+      "repository": "winwincode",
+      "matched_historical_reference_entries": 17,
+      "missing": [],
+      "mismatched": [],
+      "historical_reference_document": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-baseline-source-checks.json"
+    }
+  ],
+  "non_claims": [
+    "not whole-goal/report revalidation",
+    "not target runtime, test or build validation",
+    "not proof of functional completeness",
+    "not validation of new CodeGraph languages",
+    "not a new-language .pyw/.xsjs fixture or extension correctness claim"
+  ],
+  "target_code_executed": false,
+  "target_imported": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "detectors_or_goal_scans_run": false,
+  "revalidation_round": {
+    "reason": "native dependencies refrozen after captured CodeGraph .h/.inc content-classification wiring changes",
+    "saved_capture_reused": true,
+    "old_frontend_rerun": false,
+    "current_native_pairs_rerun": 4,
+    "source_reader_classification_dispatch_exercised": false,
+    "global_tool_hash_observed_only": true,
+    "whole_goal_revalidation": false
+  }
+}

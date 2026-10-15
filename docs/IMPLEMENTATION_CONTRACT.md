@@ -1,12 +1,12 @@
-# CallScope v0.14.0 共享协议
+# CallScope v0.15.0 共享协议
 
-当前实现身份为 `static-multilang-14` / `call-rules-13-architecture-explanations`，scope2 的[核心与策略已冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)。两库正常纯静态冷/热分析和正式报告已保存、数据库已关闭；原观察比较及发布身份已核对。原已读有限源码报告内容的[正式读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)已完成，complete=true、已知有限内容缺口为空；运行/全程序和原未审范围仍不在结论内，v0.13 及更早观察保持原身份。
+当前实现身份为 `static-multilang-15-codegraph` / `call-rules-13-architecture-explanations`，默认 `all`，按共享目录展开 38 个规范语言/格式 ID。CodeGraph 来源、Node.js 20–24 与候选/元数据层级见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。v0.14 scope2 的[核心与策略冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)、两库静态结果和[原有限内容正式读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)保持历史身份；complete=true 仅限该版已读有限范围，不扩成新语言验证、全程序或运行证明。
 
-产品硬边界：只读目标项目源码，纯静态调用结构分析；禁止导入目标模块、执行目标代码、运行测试、触发目标构建、沙箱、动态 trace。实现期间也不运行任何测试。Python 采用 AST，TypeScript/JavaScript 和 Rust 采用可选 Tree-sitter 语法库。确定调用邻接直接使用随包保存的 Axon 图核心；可选 CocoIndex 1.0.25 持久缓存语言前端结果。每次全量捕获源码、全量检测，不采用三跳增量或逐文件语义失效。多语言前端协议见 [MULTILANGUAGE_CONTRACT.md](MULTILANGUAGE_CONTRACT.md)，复用来源及粒度见 [UPSTREAM_REUSE.md](UPSTREAM_REUSE.md)。
+产品硬边界：只读目标项目源码，纯静态调用结构分析；禁止导入目标模块、执行目标代码、运行测试、触发目标构建、沙箱、动态 trace。实现期间也不运行任何测试。Python 采用 AST，TypeScript/JavaScript 和 Rust 保留可选 Tree-sitter 前端，35 个新增规范 ID 由随包 CodeGraph 工具提取结构/元数据与候选。确定调用邻接使用随包 Axon，新 CodeGraph 候选不得进入该邻接；可选 CocoIndex 1.0.25 持久缓存语言前端结果。每次全量捕获源码、全量检测，不采用三跳增量或逐文件语义失效。多语言协议见 [MULTILANGUAGE_CONTRACT.md](MULTILANGUAGE_CONTRACT.md)，复用来源及粒度见 [UPSTREAM_REUSE.md](UPSTREAM_REUSE.md)。
 
 共享数据结构在 `callscope/models.py`。Python 节点 ID 与 qualname 使用 `module.qualname`（模块顶层节点使用 `module:<module>`）；TS/Rust 使用带语言前缀的文件路径与词法限定名。重名、动态、候选关系必须显式标记，不能猜测为确定关系。相对源码路径采用 POSIX 格式。时间为 UTC ISO8601。
 
-当前 GraphSnapshot schema 为 2，分析器为 `static-multilang-14`，检测器为 `call-rules-13-architecture-explanations`；项目 config.schema_version 与冻结 baseline.schema_version 仍为 1。`input_evidence:{relative_path:{path,hash,content,status,error,kind,text_hash,size_bytes}}`，`analysis.support_inputs` 为显式相对路径数组。只读捕获原文、原字节 hash 与 UTF-8 文本 hash，失败显式记录且不 memo；代码/辅助同路径身份冲突拒绝发布。完整辅助记录进入 snapshot 与缓存身份。旧快照缺字段按 `{}` 兼容，不读取当前文件补历史，不构造 parsed SourceFile/Node 或增加 files_parsed。辅助原文可供显式文档部署比较使用，但不是 AST 或 CALLS 证据。
+当前 GraphSnapshot schema 为 2，分析器为 `static-multilang-15-codegraph`，检测器为 `call-rules-13-architecture-explanations`；项目 config.schema_version 与冻结 baseline.schema_version 仍为 1。`input_evidence:{relative_path:{path,hash,content,status,error,kind,text_hash,size_bytes}}`，`analysis.support_inputs` 为显式相对路径数组。新增 CodeGraph 的固定项目清单也在安全捕获后保存到辅助证据。只读捕获原文、原字节 hash 与 UTF-8 文本 hash，失败显式记录且不 memo；代码/辅助同路径身份冲突拒绝发布。完整辅助记录进入 snapshot 与缓存身份。旧快照缺字段按 `{}` 兼容，不读取当前文件补历史，也不因辅助原文增加源码解析成功数。
 
 TypeScript前端版本为 `typescript-tree-sitter-call-2-projection-1`，有限适配版本 `ts-syntax-projection-1`；只派生解析缓冲区，不改SourceFile内容或原文件hash。模块metadata.syntax_projection包含原/派生文本UTF-8哈希、source_file_sha256、原/派生errors、edit范围与证据、采用状态和恒等位置映射；Node/Edge通过source_projection_node/source_parse_mode/syntax_projection_version关联。只适配明确类型上下文的qualified import类型、类型对象abstract属性及确认字面量区域NUL，未知语法/模板插值代码/运行时import不转成确定关系。原parser错误与部分适配诊断和统计必须可查，详细范围见 [STATIC_SCOPE.md](STATIC_SCOPE.md)。
 
@@ -16,11 +16,13 @@ v0.4的Rust基础前端 `rust-tree-sitter-1.5-concrete-self` 仅绑定非泛型�
 
 新增rust-generic-same-impl-lexical-v1只绑定同一泛型固有impl AST身份内直接self.method()/Self::static_method()的唯一捕获声明。额外方法泛型/where/impl Trait/参数属性、cfg/opaque/可见宏、turbofish、实参数量、借用及trait/default/Deref竞争不闭合时拒绝。Edge.metadata.generic_impl_binding保存model_id、same_impl_identity（file/source_hash/header/字节范围/声明）、source/target方法和声明、参数计数、残留边界及假设。generic_instantiation_verified=false、bounds_not_verified=true、argument_types_verified=false、execution_verified=false、compiler_namespace_complete=false、macro_expansion_performed=false。字段接收者和一般泛型/trait目标不靠此模型确定。
 
-配置 `.callscope.json`：`schema_version:1`；`project:{name}`；`analysis:{languages:[python],source_roots:[.],exclude:[...],max_file_bytes:1048576}`；`layers:{层名:[模块或符号glob]}`；`entrypoints:[符号glob]`；`rules:[{id,kind,from,to,severity,description}]`。kind 为 `required_path`、`required_call`、`forbidden_call`、`forbidden_path`。规则端点用节点 ID/qualname 的 glob。缺失和无法解析不是同一状态。
+配置 `.callscope.json`：`schema_version:1`；`project:{name}`；`analysis:{languages:[all],source_roots:[.],exclude:[...],max_file_bytes:1048576}`；`layers:{层名:[模块或符号glob]}`；`entrypoints:[符号glob]`；`rules:[{id,kind,from,to,severity,description}]`。`all` 单独使用并展开全部规范 ID，显式旧语言列表保持其选择。kind 为 `required_path`、`required_call`、`forbidden_call`、`forbidden_path`。规则端点用节点 ID/qualname 的 glob。缺失和无法解析不是同一状态。
 
-分析器 API：`analyze_project(root: str|Path, config: dict|None=None, *, frontend_runner=None) -> GraphSnapshot`，入口位于 `callscope/analyzer.py`，多语言编排位于 `callscope/analysis.py`。未提供 runner 时全量运行注册前端。源码只捕获一次，所有前端消费这同一份文本；不 exec/eval/import 目标程序。语法库只能从工具依赖目录或 Python 安装目录加载。保存扫描时的源码供不可变证据查询。snapshot ID 由项目身份、源码内容、分析器/模式/检测器版本、配置和组件身份共同确定。`parser_version` 保存工具源码内容哈希、Axon 提交/适配器版本、维护后端版本及实际前端/宿主/语法库版本的规范组合；`stats.component_versions` 提供结构化内容。未知历史版本不能获得完整可比性保证。项目身份使用 `models.project_id_for(root)`。纯图信息保存在 snapshot，检测结果分开。
+分析器 API：`analyze_project(root: str|Path, config: dict|None=None, *, frontend_runner=None) -> GraphSnapshot`，入口位于 `callscope/analyzer.py`，多语言编排位于 `callscope/analysis.py`。未提供 runner 时全量运行已选择前端。源码只捕获一次，各前端消费捕获文本；不 exec/eval/import 目标程序。原语法库从工具依赖加载，CodeGraph 语法/Node worker 从随包资源加载；Node 不接收真实目标根。保存扫描时的源码供不可变证据查询。snapshot ID 由项目身份、源码内容、分析器/模式/检测器版本、配置和组件身份共同确定。`parser_version` 保存工具源码、CodeGraph vendored 资源、上游提交、维护后端及实际语言组件身份；`stats.component_versions` 提供结构化内容。未知历史版本不能获得完整可比性保证。项目身份使用 `models.project_id_for(root)`。纯图信息保存在 snapshot，检测结果分开。
 
 服务和 CLI 引擎：`AnalysisService(..., engine=auto)`；`scan`、`serve`、`mcp` 支持 `--engine auto|full|cocoindex`。auto 有工具 CocoIndex 依赖时选用它，否则 full；选用后的运行错误不静默降级。CocoIndexRunner 调用固定 `python -I` worker，输入为已捕获源码的 JSON 数据；项目配置不能提供运行代码。runner 返回 `{results,versions,maintenance}`，其中 results 按请求语言包含原有前端返回模型。父进程核对请求指纹、引擎协议、工具身份、语言及文件集合、内容和哈希后使用结果。
+
+v0.15 将 `parser_version` 保存为 `components-sha256:<完整组件映射 SHA256>`，完整映射在 `stats.component_versions` 保存一次。`service.graph()` 增加 `files:[{path,hash,language,status,error}]`，不内联源码；UI 以保存分类为准识别语言和特殊模板路径。该 additive 字段不改写旧快照内容，也不代表文件均完整解析。
 
 缓存语义：一个语言的全部选入文件为一个 bundle，参数包含语言、root、完整文件记录、全 policy 和实际工具/解析身份。该语言任一文件增删改名或内容变化，整语言重算与重绑；未变语言可复用缓存。全配置或组件身份变化也改变键。read_error 所在语言不写 memo；源码 parse_error 可保留为部分静态结果，解析器初始化/运行失败则本轮任务失败，不发布快照。所有引擎全局检测每轮全量重算。缓存位于快照数据库绝对路径后加 `.cocoindex`，保存源码及派生内容。运行计数仅在 publication.maintenance 和 status.analysis.maintenance，不进入不可变 stats。服务加载后的工具源码变化要求重启。
 

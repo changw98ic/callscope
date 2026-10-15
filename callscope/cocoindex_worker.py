@@ -28,6 +28,7 @@ def main():
     from callscope.cocoindex_runner import COCOINDEX_VERSION, PROTOCOL_VERSION, canonical, request_fingerprint
     from callscope.models import SourceFile, project_id_for
     from callscope.parsers import language_parser
+    from callscope.language_catalog import CODEGRAPH_LANGUAGES
 
     if coco.__version__ != COCOINDEX_VERSION:
         raise RuntimeError(f"需要 CocoIndex {COCOINDEX_VERSION}，实际为 {coco.__version__}")
@@ -49,6 +50,9 @@ def main():
                 language_parser("tsx")
             elif language == "rust":
                 language_parser("rust")
+            elif language in CODEGRAPH_LANGUAGES:
+                from callscope.codegraph_frontend import ensure_runtime
+                ensure_runtime()
     computed = []
     uncached = []
 
@@ -56,7 +60,8 @@ def main():
         files = [SourceFile(**value) for value in json.loads(files_json)]
         result = execute_frontend(language, files, Path(root), json.loads(policy_json))
         # Runtime/initialization failures are not memoizable static evidence.
-        transient_codes = {"ts_parser_failure", "rust_parser_unavailable", "rust_parser_failure", "language_frontend_failed"}
+        transient_codes = {"ts_parser_failure", "rust_parser_unavailable", "rust_parser_failure", "language_frontend_failed",
+                           "codegraph_runtime_unavailable", "codegraph_frontend_failed", "codegraph_parser_failure"}
         if any(item.code in transient_codes for item in result["diagnostics"]):
             raise RuntimeError("语言前端运行失败，未缓存该结果；请查看解析依赖或重新扫描")
         computed.append(language)

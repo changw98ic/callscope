@@ -1,0 +1,2454 @@
+{
+  "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+  "source_hash": "a158abb1c85f8af04c3b76b4f0990beae3cf7085f6b85851460a0b3e97eddee2",
+  "policy_hash": "d729c9a576532af273257c9690849b74410ebc2e1126512bfa4c244bcb491011",
+  "parser_version": "components-sha256:fea31f0f96ea7cc66e881dbcc9f14238a233b39c2a0c62afdb25991430f04e41",
+  "stats": {
+    "ambiguous_calls": 39508,
+    "ambiguous_symbols": 229,
+    "atomicity_contracts_count": 0,
+    "budget_contracts_count": 0,
+    "by_language": {
+      "arkts": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "astro": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "c": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 2,
+        "edges": 2,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 3,
+        "files_parsed": 2,
+        "files_total": 5,
+        "nodes": 10,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cfml": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cfquery": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cfscript": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cobol": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cpp": {
+        "ambiguous_calls": 39,
+        "dynamic_calls": 161,
+        "edges": 200,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 5,
+        "files_parsed": 5,
+        "files_total": 10,
+        "nodes": 97,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "csharp": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "dart": {
+        "ambiguous_calls": 39466,
+        "dynamic_calls": 54869,
+        "edges": 94335,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 27,
+        "files_parsed": 864,
+        "files_total": 891,
+        "nodes": 18943,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "erlang": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "go": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "java": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "kotlin": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "liquid": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "lua": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "luau": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "nix": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "objc": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "pascal": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "php": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "properties": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "python": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 65,
+        "edges": 262,
+        "external_callback_boundaries": 38,
+        "external_calls": 95,
+        "files_failed": 0,
+        "files_parsed": 5,
+        "files_total": 5,
+        "nodes": 37,
+        "resolved_calls": 102,
+        "unresolved_calls": 0
+      },
+      "r": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "razor": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "ruby": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "rust": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "scala": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "solidity": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "svelte": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "swift": {
+        "ambiguous_calls": 3,
+        "dynamic_calls": 29,
+        "edges": 32,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 4,
+        "files_total": 4,
+        "nodes": 25,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "terraform": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "twig": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "typescript": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 12,
+        "edges": 20,
+        "external_callback_boundaries": 7,
+        "external_calls": 8,
+        "files_failed": 0,
+        "files_parsed": 1,
+        "files_total": 1,
+        "nodes": 7,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "vbnet": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "vue": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "xml": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "yaml": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 7,
+        "files_parsed": 0,
+        "files_total": 7,
+        "nodes": 7,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      }
+    },
+    "call_resolution_incomplete": true,
+    "codegraph_project_manifests": [
+      "pubspec.yaml"
+    ],
+    "component_versions": {
+      "arkts": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "astro": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "c": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cfml": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cfquery": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cfscript": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cobol": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cpp": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "csharp": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "dart": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "erlang": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "go": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "java": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "kotlin": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "liquid": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "lua": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "luau": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "maintenance": {
+        "backend": "full"
+      },
+      "nix": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "objc": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "pascal": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "php": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "properties": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "r": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "razor": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "ruby": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "rust": {
+        "analyzer": "rust-tree-sitter-1.8-crate-attribute-context",
+        "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+      },
+      "scala": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "solidity": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "support_input_capture": "support-input-capture-1",
+      "svelte": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "swift": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "terraform": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "tool": {
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "graph_backend": "axon-graph-core-1",
+        "source_hash": "638a0a3974e1b84c5a6b94d271a8a85ede94e54dda1e35d09f8033fdc4370214"
+      },
+      "twig": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      },
+      "vbnet": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "vue": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "xml": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "yaml": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      }
+    },
+    "content_language_classification_changes": [
+      {
+        "content_language": "cpp",
+        "extension_language": "c",
+        "path": "windows/runner/flutter_window.h"
+      },
+      {
+        "content_language": "cpp",
+        "extension_language": "c",
+        "path": "windows/runner/win32_window.h"
+      }
+    ],
+    "content_language_classification_failed": false,
+    "coverage_incomplete": true,
+    "dynamic_calls": 55138,
+    "edges": 94851,
+    "entrypoints_count": 0,
+    "excluded_paths": [
+      ".git"
+    ],
+    "external_callback_boundaries": 45,
+    "external_calls": 103,
+    "field_contracts_count": 0,
+    "file_inventory": {
+      "meaning": "No-follow file-path inventory only; unrecognized files are not parsed source or functional coverage.",
+      "recognized_source_files": 927,
+      "regular_files_seen": 1075,
+      "unrecognized_files": [
+        {
+          "extension": "",
+          "path": ".gitignore"
+        },
+        {
+          "extension": "",
+          "path": ".metadata"
+        },
+        {
+          "extension": ".md",
+          "path": "AGENTS.md"
+        },
+        {
+          "extension": ".md",
+          "path": "FLOW.md"
+        },
+        {
+          "extension": "",
+          "path": "Makefile"
+        },
+        {
+          "extension": ".md",
+          "path": "README.md"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "agent-experience/index.jsonl"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/README.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/chapters/chapter-01.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/chapters/chapter-02.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/chapters/chapter-03.md"
+        },
+        {
+          "extension": ".json",
+          "path": "artifacts/real_validation/three_chapter_repaired/manifest.json"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/outline/three_chapter_outline.md"
+        },
+        {
+          "extension": ".json",
+          "path": "artifacts/real_validation/three_chapter_repaired/reports/deterministic-repair-audit.json"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/reports/deterministic-repair-audit.md"
+        },
+        {
+          "extension": ".json",
+          "path": "artifacts/real_validation/three_chapter_repaired/reports/production-pre-quality-evidence.json"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/chapters/chapter-01.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/chapters/chapter-02.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/chapters/chapter-03.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/outline/three_chapter_outline.md"
+        },
+        {
+          "extension": ".json",
+          "path": "artifacts/real_validation/three_chapter_run/reports/quality-report.json"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/reports/quality-report.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/01_xuanhuan.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/02_qihuan.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/03_wuxia.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/04_xianxia.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/05_dushi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/06_xianshi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/07_junshi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/08_lishi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/09_youxi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/10_tiyu.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/11_kehuan.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/12_zhutian_wuxian.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/13_xuanyi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/14_qingxiaoshuo.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/15_duanpian.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/README.md"
+        },
+        {
+          "extension": ".png",
+          "path": "assets/icons/app_icon.png"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/001.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/002.txt"
+        },
+        {
+          "extension": ".json",
+          "path": "assets/novels/source_manifest.json"
+        },
+        {
+          "extension": ".json",
+          "path": "assets/novels/source_manifest.schema.json"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/【网站：小诺.我爱你】诡秘之主.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/剑来-烽火戏诸侯.txt"
+        },
+        {
+          "extension": ".md",
+          "path": "assets/novels/引言：玄幻网文创作的核心挑战与机遇.md"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/徐纵.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/我身体里有只鬼-utf8.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/我身体里有只鬼.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/杜大脸.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/胡涵.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/胡玮.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/薛琪清.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/诸葛齐.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/谢晓曼.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/谢钧.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/郑小小.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/陆子明.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/魏骑光.txt"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/agent-engineering-evaluation-spec.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/architecture-improvement-roadmap.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/architecture.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/assets/ASSET_MANIFEST.md"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/cta-card.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/novel-writer-preview.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/real-desktop-ai-review.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-01.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-02.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-03.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-04.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-05.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/social-preview.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/summary-card.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/title-card.png"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/chapter-generation-recovery-spec.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/desktop-preview-builds.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/execution-roadmap.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/growth-roadmap.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/literary-quality-system-spec.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/literary-quality-wp3a-three-arm-experiment-contract.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/migrations/literary-quality-wp0-source-admission.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/milestone-0-protocol.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/openai-compatible-providers.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/prd.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/sample-project-moon-tide.md"
+        },
+        {
+          "extension": ".json",
+          "path": "docs/schema-compatibility-matrix.json"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/trial-readiness.md"
+        },
+        {
+          "extension": ".pen",
+          "path": "editor.pen"
+        },
+        {
+          "extension": "",
+          "path": "linux/.gitignore"
+        },
+        {
+          "extension": ".txt",
+          "path": "linux/CMakeLists.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "linux/flutter/CMakeLists.txt"
+        },
+        {
+          "extension": ".cmake",
+          "path": "linux/flutter/generated_plugins.cmake"
+        },
+        {
+          "extension": ".txt",
+          "path": "linux/runner/CMakeLists.txt"
+        },
+        {
+          "extension": "",
+          "path": "macos/.gitignore"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Flutter/Flutter-Debug.xcconfig"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Flutter/Flutter-Release.xcconfig"
+        },
+        {
+          "extension": ".pbxproj",
+          "path": "macos/Runner.xcodeproj/project.pbxproj"
+        },
+        {
+          "extension": ".plist",
+          "path": "macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"
+        },
+        {
+          "extension": ".xcscheme",
+          "path": "macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme"
+        },
+        {
+          "extension": ".xcworkspacedata",
+          "path": "macos/Runner.xcworkspace/contents.xcworkspacedata"
+        },
+        {
+          "extension": ".plist",
+          "path": "macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"
+        },
+        {
+          "extension": ".json",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png"
+        },
+        {
+          "extension": ".xib",
+          "path": "macos/Runner/Base.lproj/MainMenu.xib"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Runner/Configs/AppInfo.xcconfig"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Runner/Configs/Debug.xcconfig"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Runner/Configs/Release.xcconfig"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Runner/Configs/Warnings.xcconfig"
+        },
+        {
+          "extension": ".entitlements",
+          "path": "macos/Runner/DebugProfile.entitlements"
+        },
+        {
+          "extension": ".plist",
+          "path": "macos/Runner/Info.plist"
+        },
+        {
+          "extension": ".entitlements",
+          "path": "macos/Runner/Release.entitlements"
+        },
+        {
+          "extension": ".lock",
+          "path": "pubspec.lock"
+        },
+        {
+          "extension": ".json",
+          "path": "test/fixtures/golden_prompts/scene_prompt_projection_fixtures.json"
+        },
+        {
+          "extension": ".json",
+          "path": "test/fixtures/sample_project_fixture.json"
+        },
+        {
+          "extension": ".json",
+          "path": "test/fixtures/story_quality/dev_v1/calibration-development.json"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/causal_mainline_hard.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/craft_weakness.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/effective_deviation.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/high_score_disguised_bad.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/motivation_relationship.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/pov_knowledge.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/pretty_hollow.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/style_choice.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/world_object_time.jsonl"
+        },
+        {
+          "extension": ".json",
+          "path": "test/fixtures/story_quality/dev_v1/manifest.json"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/provenance.jsonl"
+        },
+        {
+          "extension": ".txt",
+          "path": "test/fixtures/unicode-17.0.0/NormalizationTest.txt"
+        },
+        {
+          "extension": ".png",
+          "path": "web/favicon.png"
+        },
+        {
+          "extension": ".png",
+          "path": "web/icons/Icon-192.png"
+        },
+        {
+          "extension": ".png",
+          "path": "web/icons/Icon-512.png"
+        },
+        {
+          "extension": ".png",
+          "path": "web/icons/Icon-maskable-192.png"
+        },
+        {
+          "extension": ".png",
+          "path": "web/icons/Icon-maskable-512.png"
+        },
+        {
+          "extension": ".html",
+          "path": "web/index.html"
+        },
+        {
+          "extension": ".json",
+          "path": "web/manifest.json"
+        },
+        {
+          "extension": "",
+          "path": "windows/.gitignore"
+        },
+        {
+          "extension": ".txt",
+          "path": "windows/CMakeLists.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "windows/flutter/CMakeLists.txt"
+        },
+        {
+          "extension": ".cmake",
+          "path": "windows/flutter/generated_plugins.cmake"
+        },
+        {
+          "extension": ".txt",
+          "path": "windows/runner/CMakeLists.txt"
+        },
+        {
+          "extension": ".rc",
+          "path": "windows/runner/Runner.rc"
+        },
+        {
+          "extension": ".ico",
+          "path": "windows/runner/resources/app_icon.ico"
+        },
+        {
+          "extension": ".manifest",
+          "path": "windows/runner/runner.exe.manifest"
+        }
+      ]
+    },
+    "files_failed": 46,
+    "files_parsed": 881,
+    "files_total": 927,
+    "frontend_stats": {
+      "arkts": {},
+      "astro": {},
+      "c": {
+        "analyzer_version": "codegraph-captured-structure-1",
+        "boundaries": [
+          "candidate-only; upstream confidence is not a measured correctness probability",
+          "no framework discovery, framework routes or cross-file synthesis passes",
+          "no database-backed deferred conformance or inherited callback pass",
+          "no private Razor-using or qualified CFML-component resolver",
+          "no complete private upstream builtin/external prefilter",
+          "Dart conditional imports retain alternatives without choosing a runtime platform",
+          "unknown Dart library scope can make upstream visibility permissive"
+        ],
+        "call_resolution_incomplete": true,
+        "candidate_relations": 0,
+        "coverage_incomplete": true,
+        "deterministic_call_binding": false,
+        "native_kernel_used": false,
+        "non_call_relations": 5,
+        "project_reads": "captured-text-only; actual target path never provided",
+        "resolution_errors": 0,
+        "structural_extraction": true,
+        "target_executed": false,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cfml": {},
+      "cfquery": {},
+      "cfscript": {},
+      "cobol": {},
+      "cpp": {
+        "analyzer_version": "codegraph-captured-structure-1",
+        "boundaries": [
+          "candidate-only; upstream confidence is not a measured correctness probability",
+          "no framework discovery, framework routes or cross-file synthesis passes",
+          "no database-backed deferred conformance or inherited callback pass",
+          "no private Razor-using or qualified CFML-component resolver",
+          "no complete private upstream builtin/external prefilter",
+          "Dart conditional imports retain alternatives without choosing a runtime platform",
+          "unknown Dart library scope can make upstream visibility permissive"
+        ],
+        "call_resolution_incomplete": true,
+        "candidate_relations": 44,
+        "coverage_incomplete": true,
+        "deterministic_call_binding": false,
+        "native_kernel_used": false,
+        "non_call_relations": 35,
+        "project_reads": "captured-text-only; actual target path never provided",
+        "resolution_errors": 0,
+        "structural_extraction": true,
+        "target_executed": false,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "csharp": {},
+      "dart": {
+        "analyzer_version": "codegraph-captured-structure-1",
+        "boundaries": [
+          "candidate-only; upstream confidence is not a measured correctness probability",
+          "no framework discovery, framework routes or cross-file synthesis passes",
+          "no database-backed deferred conformance or inherited callback pass",
+          "no private Razor-using or qualified CFML-component resolver",
+          "no complete private upstream builtin/external prefilter",
+          "Dart conditional imports retain alternatives without choosing a runtime platform",
+          "unknown Dart library scope can make upstream visibility permissive"
+        ],
+        "call_resolution_incomplete": true,
+        "candidate_relations": 67216,
+        "coverage_incomplete": true,
+        "deterministic_call_binding": false,
+        "native_kernel_used": false,
+        "non_call_relations": 98981,
+        "project_reads": "captured-text-only; actual target path never provided",
+        "resolution_errors": 0,
+        "structural_extraction": true,
+        "target_executed": false,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "erlang": {},
+      "go": {},
+      "java": {},
+      "kotlin": {},
+      "liquid": {},
+      "lua": {},
+      "luau": {},
+      "nix": {},
+      "objc": {},
+      "pascal": {},
+      "php": {},
+      "properties": {},
+      "python": {
+        "ambiguous_calls": 0,
+        "ambiguous_symbols": 0,
+        "attribute_invalidations": [],
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": false,
+        "dynamic_calls": 65,
+        "edges": 262,
+        "excluded_paths": [],
+        "external_callback_boundaries": 38,
+        "external_calls": 95,
+        "files_failed": 0,
+        "files_parsed": 5,
+        "files_total": 5,
+        "incomplete": true,
+        "limitations": [
+          "不证明分支可执行、调用顺序、返回值或业务结果",
+          "不执行代码/测试/构建，不验证外部依赖可用性",
+          "回调、反射、工厂返回值、对象字段及复杂继承保留未知",
+          "静态绑定不涵盖任意 monkey patch 和运行时模块替换",
+          "构造器内部调用保持未知，不推断初始化路径"
+        ],
+        "nodes": 37,
+        "parser_version": "cpython-3.12.14",
+        "resolution_model": "static lexical binding; no runtime execution",
+        "resolved_calls": 102,
+        "scan_errors": [],
+        "source_roots": [
+          "."
+        ],
+        "stubs_not_analyzed": [],
+        "symlinks_skipped": [],
+        "unknown_attribute_writes": [],
+        "unresolved_calls": 0
+      },
+      "r": {},
+      "razor": {},
+      "ruby": {},
+      "rust": {},
+      "scala": {},
+      "solidity": {},
+      "svelte": {},
+      "swift": {
+        "analyzer_version": "codegraph-captured-structure-1",
+        "boundaries": [
+          "candidate-only; upstream confidence is not a measured correctness probability",
+          "no framework discovery, framework routes or cross-file synthesis passes",
+          "no database-backed deferred conformance or inherited callback pass",
+          "no private Razor-using or qualified CFML-component resolver",
+          "no complete private upstream builtin/external prefilter",
+          "Dart conditional imports retain alternatives without choosing a runtime platform",
+          "unknown Dart library scope can make upstream visibility permissive"
+        ],
+        "call_resolution_incomplete": true,
+        "candidate_relations": 3,
+        "coverage_incomplete": false,
+        "deterministic_call_binding": false,
+        "native_kernel_used": false,
+        "non_call_relations": 18,
+        "project_reads": "captured-text-only; actual target path never provided",
+        "resolution_errors": 0,
+        "structural_extraction": true,
+        "target_executed": false,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "terraform": {},
+      "twig": {},
+      "typescript": {
+        "ambiguous_calls": 0,
+        "ambiguous_symbols": 0,
+        "analyzer_version": "typescript-tree-sitter-call-2-projection-1",
+        "call_resolution_incomplete": true,
+        "coverage_incomplete": false,
+        "dynamic_calls": 12,
+        "edges": 20,
+        "external_callback_boundaries": 7,
+        "external_calls": 8,
+        "files_failed": 0,
+        "files_parsed": 1,
+        "files_total": 1,
+        "incomplete": true,
+        "language": "typescript",
+        "limitations": [
+          "仅捕获源码中的显式词法/ES模块调用；不执行目标",
+          "类型/接口不证明对象运行时目标",
+          "对象方法、构造、回调、JSX生命周期、动态import/CommonJS保持未知",
+          "不证明分支、顺序、返回值、加载成功或业务结果"
+        ],
+        "nodes": 7,
+        "parser_version": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14;ts-syntax-projection-1",
+        "raw_parse_error_files": 0,
+        "resolved_calls": 0,
+        "syntax_projected_files": 0,
+        "syntax_projection_edits_by_rule": {},
+        "syntax_projection_partial_files": 0,
+        "syntax_projection_version": "ts-syntax-projection-1",
+        "unresolved_calls": 0
+      },
+      "vbnet": {},
+      "vue": {},
+      "xml": {},
+      "yaml": {
+        "analyzer_version": "codegraph-captured-structure-1",
+        "boundaries": [
+          "candidate-only; upstream confidence is not a measured correctness probability",
+          "no framework discovery, framework routes or cross-file synthesis passes",
+          "no database-backed deferred conformance or inherited callback pass",
+          "no private Razor-using or qualified CFML-component resolver",
+          "no complete private upstream builtin/external prefilter",
+          "Dart conditional imports retain alternatives without choosing a runtime platform",
+          "unknown Dart library scope can make upstream visibility permissive"
+        ],
+        "call_resolution_incomplete": false,
+        "candidate_relations": 0,
+        "coverage_incomplete": true,
+        "deterministic_call_binding": false,
+        "native_kernel_used": false,
+        "non_call_relations": 0,
+        "project_reads": "captured-text-only; actual target path never provided",
+        "resolution_errors": 0,
+        "structural_extraction": true,
+        "target_executed": false,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      }
+    },
+    "goal_contracts_count": 0,
+    "incomplete": true,
+    "language_capabilities": [
+      {
+        "analysis_level": "bounded_static_relations",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".py",
+          ".pyw"
+        ],
+        "frontend": "native",
+        "functional_completeness_proven": false,
+        "language": "python",
+        "registered": true,
+        "upstream_commit": null,
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "bounded_static_relations",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cjs",
+          ".cts",
+          ".js",
+          ".jsx",
+          ".mjs",
+          ".mts",
+          ".ts",
+          ".tsx",
+          ".xsjs",
+          ".xsjslib"
+        ],
+        "frontend": "native",
+        "functional_completeness_proven": false,
+        "language": "typescript",
+        "registered": true,
+        "upstream_commit": null,
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "bounded_static_relations",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".rs"
+        ],
+        "frontend": "native",
+        "functional_completeness_proven": false,
+        "language": "rust",
+        "registered": true,
+        "upstream_commit": null,
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".ets"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "arkts",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".go"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "go",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".java"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "java",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".c",
+          ".h"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "c",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cc",
+          ".cpp",
+          ".cu",
+          ".cuh",
+          ".cxx",
+          ".hpp",
+          ".hxx",
+          ".metal"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cpp",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cs"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "csharp",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cshtml",
+          ".razor"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "razor",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".inc",
+          ".install",
+          ".module",
+          ".php",
+          ".theme"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "php",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".rake",
+          ".rb"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "ruby",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".swift"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "swift",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".kt",
+          ".kts"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "kotlin",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".dart"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "dart",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".svelte"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "svelte",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".vue"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "vue",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".astro"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "astro",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".liquid"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "liquid",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".dfm",
+          ".dpk",
+          ".dpr",
+          ".fmx",
+          ".lpr",
+          ".pas"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "pascal",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".sc",
+          ".scala"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "scala",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".lua"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "lua",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".luau"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "luau",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".m",
+          ".mm"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "objc",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".r"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "r",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".sol"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "solidity",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".nix"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "nix",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "file_or_metadata",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".yaml",
+          ".yml"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "yaml",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "file_or_metadata",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".twig"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "twig",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "file_or_metadata",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".xml"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "xml",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "file_or_metadata",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".properties"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "properties",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cfc",
+          ".cfm"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cfml",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cfs"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cfscript",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": true,
+        "extensions": [],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cfquery",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cbl",
+          ".cob",
+          ".cobol",
+          ".cpy"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cobol",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".vb"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "vbnet",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".erl",
+          ".escript",
+          ".hrl"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "erlang",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".tf",
+          ".tfvars",
+          ".tofu"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "terraform",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      }
+    ],
+    "languages_requested": [
+      "python",
+      "typescript",
+      "rust",
+      "arkts",
+      "go",
+      "java",
+      "c",
+      "cpp",
+      "csharp",
+      "razor",
+      "php",
+      "ruby",
+      "swift",
+      "kotlin",
+      "dart",
+      "svelte",
+      "vue",
+      "astro",
+      "liquid",
+      "pascal",
+      "scala",
+      "lua",
+      "luau",
+      "objc",
+      "r",
+      "solidity",
+      "nix",
+      "yaml",
+      "twig",
+      "xml",
+      "properties",
+      "cfml",
+      "cfscript",
+      "cfquery",
+      "cobol",
+      "vbnet",
+      "erlang",
+      "terraform"
+    ],
+    "limitations": [
+      "静态路径不证明条件、调用顺序、值、输出或功能正确性",
+      "回调、对象/trait 分派、宏和跨语言运行机制保留未知",
+      "配置排除的第三方、测试及生成源码不在覆盖承诺中",
+      "快照是读取到的源码集合，不是工作区原子捕获"
+    ],
+    "navigation_contracts_count": 0,
+    "nodes": 19126,
+    "report_claims_count": 0,
+    "resolution_model": "explicit static lexical bindings; no target execution",
+    "resolved_calls": 102,
+    "rules_count": 0,
+    "scan_errors": [],
+    "source_roots": [
+      "."
+    ],
+    "static_contracts_count": 0,
+    "support_input_capture_version": "support-input-capture-1",
+    "support_inputs_count": 1,
+    "support_inputs_incomplete": false,
+    "supported_languages": [
+      "python",
+      "typescript",
+      "rust",
+      "arkts",
+      "go",
+      "java",
+      "c",
+      "cpp",
+      "csharp",
+      "razor",
+      "php",
+      "ruby",
+      "swift",
+      "kotlin",
+      "dart",
+      "svelte",
+      "vue",
+      "astro",
+      "liquid",
+      "pascal",
+      "scala",
+      "lua",
+      "luau",
+      "objc",
+      "r",
+      "solidity",
+      "nix",
+      "yaml",
+      "twig",
+      "xml",
+      "properties",
+      "cfml",
+      "cfscript",
+      "cfquery",
+      "cobol",
+      "vbnet",
+      "erlang",
+      "terraform"
+    ],
+    "symlinks_skipped": [],
+    "unresolved_calls": 0,
+    "unsupported_files": [
+      {
+        "language": "shell",
+        "path": "scripts/macos_clang_wrapper.sh"
+      },
+      {
+        "language": "shell",
+        "path": "scripts/macos_flutter_assemble.sh"
+      },
+      {
+        "language": "shell",
+        "path": "scripts/package_macos_preview.sh"
+      },
+      {
+        "language": "shell",
+        "path": "scripts/verify_macos.sh"
+      }
+    ],
+    "value_contracts_count": 0
+  },
+  "dart_by_directory": {
+    "lib": {
+      "parsed": 513,
+      "parse_error": 23
+    },
+    "scripts": {
+      "parsed": 1
+    },
+    "test": {
+      "parsed": 315,
+      "parse_error": 3
+    },
+    "tool": {
+      "parsed": 35,
+      "parse_error": 1
+    }
+  },
+  "finding_types_and_statuses": [
+    {
+      "type": "external_callback_boundary",
+      "status": "uncertain",
+      "count": 45
+    },
+    {
+      "type": "unresolved_call",
+      "status": "uncertain",
+      "count": 94646
+    }
+  ]
+}

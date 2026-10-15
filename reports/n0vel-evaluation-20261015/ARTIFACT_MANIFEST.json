@@ -1,0 +1,79 @@
+{
+  "artifacts": [
+    {
+      "path": "COMMAND_RECORD.json",
+      "bytes": 1858,
+      "sha256": "7f13d0e3a23996892eadc3e3d53b3611030bba03b6b7d96d5d9e8355df45ec34"
+    },
+    {
+      "path": "EVALUATION.json",
+      "bytes": 2855,
+      "sha256": "7fd5e4caca88ccae05f1cb4c6d6e7bf3a71f4ca94330634e4d7a0a3869851956"
+    },
+    {
+      "path": "MANUAL_REVIEW.json",
+      "bytes": 3691,
+      "sha256": "9429786298eee0c9b6f278f1339707b4c618c169ec95b55993777b1ad0cf1aa8"
+    },
+    {
+      "path": "MANUAL_SOURCE_REFERENCES.json",
+      "bytes": 39747,
+      "sha256": "cbaffe8cca0ef1651ff224aabe4cb15b8c8db28aa0cde8dc963b56de6bd9149f"
+    },
+    {
+      "path": "READBACK.json",
+      "bytes": 305,
+      "sha256": "a133fa169f20d482c58e830325bd859bd76578a7389e439ffca641f110cbc798"
+    },
+    {
+      "path": "REPORT.md",
+      "bytes": 10333,
+      "sha256": "0da10cc6391ff115b96cee2c1101f1826bfb232ad9db5ba3bb111c3f74f7469b"
+    },
+    {
+      "path": "SOURCE_INVENTORY.json",
+      "bytes": 258841,
+      "sha256": "08896f17203d98362ba21ed8ba1124264b349bb9a47a87e1bec50cbedb879523"
+    },
+    {
+      "path": "baseline-report.json",
+      "bytes": 18367,
+      "sha256": "cec750e972212b41cffbb9895213dcd2008bc66fbba3adeb8b21adbf35e7054b"
+    },
+    {
+      "path": "baseline-report.md",
+      "bytes": 4726,
+      "sha256": "c87b5203213d5a50f3daded10675a427cf2c7786420d56e17121658549d71440"
+    },
+    {
+      "path": "baseline-scan.json",
+      "bytes": 816555,
+      "sha256": "85694460330e2b228ee6bc0254faf0c161a588b15c2c09721af7a43afdcf3b72"
+    },
+    {
+      "path": "baseline.sqlite3",
+      "bytes": 819200,
+      "sha256": "6c30f38fc79c92f147f78b0bf92fe53d7e5b09d1c623abb88c4dc859176b22d1"
+    },
+    {
+      "path": "baseline.sqlite3-shm",
+      "bytes": 32768,
+      "sha256": "fd4c9fda9cd3f9ae7c962b0ddf37232294d55580e1aa165aa06129b8549389eb"
+    },
+    {
+      "path": "baseline.sqlite3-wal",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "repeat-scan.json",
+      "bytes": 816556,
+      "sha256": "13080bc67a8040a2ebe53cbe7da4019ce7e8c8cb70e4c43bcaad0241b434ba7d"
+    },
+    {
+      "path": "scan-config.json",
+      "bytes": 161,
+      "sha256": "09879c8d4045be176cc4c6a4a0681fbb2a415a979fadba815c460dd000349376"
+    }
+  ]
+}

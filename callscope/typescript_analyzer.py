@@ -23,7 +23,7 @@ from .syntax_projection import PROJECTION_VERSION, parse_with_projection
 ANALYZER_VERSION = "typescript-tree-sitter-call-2-projection-1"
 PARSER_VERSION = parser_version("typescript") + ";" + parser_version("tsx") + ";" + PROJECTION_VERSION
 
-_EXTENSIONS = (".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs", ".mts", ".cts")
+_EXTENSIONS = (".ts", ".tsx", ".js", ".jsx", ".mjs", ".cjs", ".mts", ".cts", ".xsjs", ".xsjslib")
 _FUNCTIONS = {"function_declaration", "generator_function_declaration", "function_expression", "generator_function", "arrow_function"}
 _TYPE_ONLY = {
     "type_annotation", "type_alias_declaration", "interface_declaration", "type_parameters",

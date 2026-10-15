@@ -1,6 +1,8 @@
 # 全项目调用结构完整性分析系统
 
-文档版本：v1.1。实现名称：CallScope v0.14.0。状态：scope2 的[核心与策略已冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)，两库正常纯静态冷/热分析及项目报告 v3 已保存，数据库已关闭。当前正式结果位于 scope2；iteration12 首候选未完成，开发查询不充当本轮成果。原报告已读有限源码内容的[正式读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)已完成，complete=true、已知有限内容缺口为空；不证明全程序功能、运行成功或超越原全文，v0.13 及更早结果保持历史身份。
+文档版本：v1.1，补充 v0.15 语言接入。实现名称：CallScope v0.15.0。默认 `all` 选择 38 个规范语言/格式 ID，保留原三套前端并直接复用固定 CodeGraph 新语言结构提取。v0.14 scope2 的[核心与策略冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)、两库正常冷/热静态报告与[原有限内容正式读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)保持历史身份；complete=true 只限该版已读有限内容，不证明新语言验证、全程序功能、运行成功或超越原全文。
+
+v0.15 使用分析器 `static-multilang-15-codegraph`，检测器仍为 `call-rules-13-architecture-explanations`，schema 2。CodeGraph 固定提交为 `8f1f842b5b828175992d2ce2cdf673b955b2cce9`，保存 323 份来源文件及 31 份压缩语法/32 映射，工具运行要求 Node.js 20–24。完整目录、来源与候选/元数据层级见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。下文 v0.14 及更早结果不因新增注册而重新验收。
 
 ## 1. 目标与判断边界
 
@@ -12,13 +14,13 @@ v0.12 在字段不可变IR、局部预算和有限装配分析之上，增加五
 
 v0.13 在上述协议上新增八种源码关系类型，分别处理有限 Rust 状态选择、条件门、事件到索引投影、可信命令来源、unsupported 记录保留、消息/记录身份、浏览器异步生命周期及资源写者来源。它们从已认证保存 CST、词法声明、字段/记录、现有调用绑定和显式模型生成关系，不把完整分析降成调用路径是否存在，也不将任意字段流、一般 heap、全领域状态机或执行结果纳入承诺。分析器为 `static-multilang-13`，检测器为 `call-rules-12-report-relations`，schema 保持 2。
 
-v0.14 保留这些关系，并增加条件式状态沿袭、发布边界和文档部署对照。它将实际记录构造、字段写入、已绑定参数交接、拒绝 guard、return 与正常源码顺序组织为职责解释，而不是按目录或函数名填写职责。报告使用 `captured-project-analysis-report-3`，当前分析器为 `static-multilang-14`、检测器为 `call-rules-13-architecture-explanations`，快照 schema 仍为 2。
+v0.14 保留这些关系，并增加条件式状态沿袭、发布边界和文档部署对照。它将实际记录构造、字段写入、已绑定参数交接、拒绝 guard、return 与正常源码顺序组织为职责解释，而不是按目录或函数名填写职责。报告使用 `captured-project-analysis-report-3`，该版分析器为 `static-multilang-14`、检测器为 `call-rules-13-architecture-explanations`，快照 schema 为 2。
 
 条件式状态沿袭把实际状态谓词、事件字面字段与后续 queue 入参中的旧任务来源连接起来；发布分析区分源码模式/布尔 opt-in、真实提前返回、选项到 callee 形参的绑定以及 opaque transport。未知 spread 后的覆盖、未识别对象成员、局部状态与嵌套分支不补成已知前缀条件。它不把源码先后顺序写成回调激活、必然入队、授权成功或远端发布成功。
 
 文档部署对照读取快照显式捕获的文档和所选 Rust 来源。有限条款模型保留标题、段落、否定、引述和部署限定，把 Control Plane 内部唯一、Device 本地 provider/凭据字节材料、Worker 模型流分支分别呈现。材料不是凭据引用，字节容器不能证明凭据长期性，本地消费分支不能证明绕过 ExecutionPort 协议。正式文档比较及职责解释已保存在 scope2 报告；原 14 行职责、十主链领域和文档三方面已完成实际正文与来源对照，不由所选关系数量推定。
 
-当前正式来源见 [CPB 报告](../reports/astra-iteration12-scope2/codepatchbay-automatic-report.md)与 [WWC 报告](../reports/astra-iteration12-scope2/winwincode-automatic-report.md)，可从 [CPB 摘要](../reports/astra-iteration12-scope2/codepatchbay-analysis-summary.md)、[WWC 摘要](../reports/astra-iteration12-scope2/winwincode-analysis-summary.md)开始阅读。CPB 保存三判断/18 必要关系及 16 条所选支持链，WWC 为两判断/12 必要关系及 20 条所选支持链；职责操作为 15,223 与 10,023，共享引用检查失败均为 0。两库快照范围仍 partial，这些数量不是功能覆盖率。
+v0.14 历史正式来源见 [CPB 报告](../reports/astra-iteration12-scope2/codepatchbay-automatic-report.md)与 [WWC 报告](../reports/astra-iteration12-scope2/winwincode-automatic-report.md)，可从 [CPB 摘要](../reports/astra-iteration12-scope2/codepatchbay-analysis-summary.md)、[WWC 摘要](../reports/astra-iteration12-scope2/winwincode-analysis-summary.md)开始阅读。CPB 保存三判断/18 必要关系及 16 条所选支持链，WWC 为两判断/12 必要关系及 20 条所选支持链；职责操作为 15,223 与 10,023，共享引用检查失败均为 0。两库快照范围仍 partial，这些数量不是功能覆盖率。
 
 [原 26 观察比较](../reports/astra-iteration12-scope2/ORIGINAL_BASELINE_COMPARISON.json)保持 10 reproduced/3 unknown/13 evidence_only、changes=[]；[发布身份](../reports/astra-iteration12-scope2/PUBLICATION_IDENTITY.json)verified=true，65 份核心与冻结身份一致。[原报告有限内容的完成读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)单独保存 complete=true，依据是实际正文及来源对照，不由这些身份核对或计数自动授予。
 
@@ -73,7 +75,7 @@ flowchart LR
   G --> I[独立人工处置记录]
 ```
 
-统一源码读取器用安全文件描述符捕获文本，Python 前端用 `ast.parse`，可选 TypeScript/TSX 与 Rust 前端用固定 Tree-sitter 语法库。各前端消费同一批已捕获文本，Python 也不再次读取工作区。周期监听每次全量捕获，前端按选择的引擎全量重算或复用语言缓存；检测每轮全量计算，并对相同分析输入去重，不执行保存文件里的内容。源码快照、调用图与检测结果在发布时绑定；用户查询历史版本时读取保存的源码，不读取已经改变的当前文件来充当旧证据。
+统一源码读取器用安全文件描述符捕获文本。Python 用 `ast.parse`，原 TypeScript/TSX 与 Rust 用固定 Python Tree-sitter 库；新语言由随包 CodeGraph Node worker 提取结构与候选，不接收真实目标根。各前端消费捕获文本，不再次读取目标工作区。周期监听每次全量捕获，前端按所选引擎全量重算或复用语言缓存；检测每轮全量计算，对相同分析输入去重，不执行保存文件内容。源码快照、调用图与检测结果在发布时绑定；历史查询读取保存源码，不读取已改变的当前文件充当旧证据。
 
 Axon 的上游 `KnowledgeGraph` 提供节点、关系与有向邻接索引，`GraphIndex` 的确定内部调用邻接由其实际索引生成。CocoIndex 官方库以持久 memo 管理语言前端结果。固定来源、许可证和适配方式见 [UPSTREAM_REUSE.md](UPSTREAM_REUSE.md)。
 
@@ -93,7 +95,7 @@ Axon 的上游 `KnowledgeGraph` 提供节点、关系与有向邻接索引，`Gr
 | `Evidence` | 静态规则、源码位置、调用边与路径等支持信息 |
 | 人工处置 | 单独关联快照与发现，记录行动、原因、操作者、时间及有效期 |
 
-首版不构建 CFG、DFG、类型图、完整 CPG 或运行行为图。Python 限定名采用 `module.qualname`，模块节点采用 `module:<module>`；TS/Rust 使用语言、相对文件身份与词法限定名组合，如 `ts:apps/client/src/page#mountPage.render`、`rust:crates/core/src/lib#Type.method`，模块节点加 `module:` 前缀。源码位置使用相对路径。
+当前不构建完整 CFG、DFG、类型图、CPG 或运行行为图。Python 限定名采用 `module.qualname`，模块节点采用 `module:<module>`；TS/Rust 使用语言、相对文件身份与词法限定名组合，如 `ts:apps/client/src/page#mountPage.render`、`rust:crates/core/src/lib#Type.method`。CodeGraph 节点增加 `cg:<规范语言>:` 身份前缀，并保留上游身份与源码 hash；实际方言另存 metadata。源码位置使用相对路径。
 
 限定名用于快照内定位与结构比较，不是跨重命名永久身份。移动或重命名符号可能呈现为删除和新增；系统不猜测实体血缘。重复定义、动态替换和歧义应保留诊断或不确定性，不偷偷合并成一个确定目标。
 
@@ -109,7 +111,9 @@ Axon 的上游 `KnowledgeGraph` 提供节点、关系与有向邻接索引，`Gr
 4. 将可确定的调用绑定到符号；保留动态、外部或歧义关系。
 5. 记录语法错误、读取失败、超限文件和其他覆盖缺口。
 
-`callscope/analysis.py` 组织多语言分析，`source_reader.py` 捕获源码，`parsers.py` 从 CallScope 工具目录或 Python 安装目录加载语法依赖。不会将目标目录当成语法库搜索路径。默认只请求 Python；`analysis.languages` 可选 Python、TypeScript、Rust，其中 TypeScript 前端包含 JS/JSX/MJS/CJS/MTS/CTS。
+`callscope/analysis.py` 组织多语言分析，`source_reader.py` 捕获源码，`language_catalog.py` 统一目录与选择。默认 `analysis.languages:["all"]` 展开 38 个规范语言/格式 ID，显式历史列表不自动扩展；TypeScript 包含 JS/JSX/TSX 等家族，不重复扫描。原语法库从工具依赖加载，新增 CodeGraph 语法/worker 从随包资源加载，不把目标目录作为工具依赖搜索路径。
+
+YAML/Twig/XML/properties、模板及嵌入脚本分别保留文件/元数据或局部结构层级。普通未知扩展名独立盘点，Dart 等已识别文件必须进入捕获或 unsupported 范围，不能静默遗漏后宣称覆盖完整。CodeGraph 候选始终不形成确定 CALLS，confidence 只用于上游排序；语法可用、文件结构提取、实际项目验证及有限合同支持分开记录。
 
 TypeScript 工作区入口由 `analysis.module_aliases` 显式指定，Rust crate 根由 `analysis.rust_crates` 显式指定；相对导入和明确重导出在前端支持范围内解析，不启动 TypeScript/Rust 编译器。具体非泛型 impl 内 self/Self 可有限绑定唯一固有方法，并记录类型、接收者、目标与 impl 声明依据；具体 trait impl 内调用固有目标不等于 trait 目标分派已解决。v0.6 另有同一个泛型固有 impl AST 身份内的直接 self/Self 词法模型，不验证实例化、bounds 或实参类型；一般泛型/where、字段接收者、dyn/trait、Deref、配置条件、宏及跨语言运行通信保持未知或超出模型边界。
 
@@ -127,7 +131,7 @@ v0.4 为固定 TypeScript 语法库增加有限派生解析：qualified import �
 
 ## 5. 检测引擎
 
-当前实现显式调用规则、SCC、局部源码合同、固定完整判断注册、源码链、有限关系与职责解释。v0.14.0 快照 schema 为 2，分析器 `static-multilang-14`、检测器 `call-rules-13-architecture-explanations`；旧版本保存结果保持原分析身份。项目配置和冻结基准仍各用 v1 格式。
+当前实现显式调用规则、SCC、局部源码合同、固定完整判断注册、源码链、有限关系与职责解释。v0.15.0 快照 schema 为 2，分析器 `static-multilang-15-codegraph`、检测器 `call-rules-13-architecture-explanations`；旧版本保存结果保持原分析身份。新语言结构接入不自动移植 TS/Rust 的合同与有限 IR。项目配置和冻结基准仍各用 v1 格式。
 
 `goal_contracts` 通过固定白名单适配器生成状态、参数管线、导航、Device 协议及有限查重窗口判断。注册层要求完整必要义务、实际来源/策略/合同身份、模型适用性和无预算缺口；局部事实不能补齐缺失义务。判断保存为 `static_goal_judgment`，status 为 uncertain，完整性与支持性分别读取 `complete_assessment`、`full_goal_supported` 和 `assessment`。完整反证可收窄原判断，不能为达到完成数而隐藏。
 
@@ -224,7 +228,7 @@ v0.13 的项目报告格式为 `captured-project-analysis-report-2`。其 `funct
 
 ## 6. 快照一致性与发布
 
-快照 ID 由项目身份、被扫描的源码、分析配置、分析器、检测器、模式及工具/后端/解析组件身份共同确定。`parser_version` 保存规范组合，`stats.component_versions` 提供结构化信息。工具身份包含包内 Python 源码内容哈希、Axon 固定提交及适配器版本；维护后端和实际 worker 语言组件身份也纳入组合。只有源码 commit 不能充分代表分析输入，切换引擎也不能自动视为相同分析输入。
+快照 ID 由项目身份、被扫描的源码、分析配置、分析器、检测器、模式及工具/后端/解析组件身份共同确定。`parser_version` 保存规范组合，`stats.component_versions` 提供结构化信息。工具身份包含包内 Python 源码、CodeGraph 保存资源及上游提交、Axon 固定提交和适配器版本；维护后端与实际 worker 语言组件身份也纳入组合。只有源码 commit 不能充分代表分析输入，切换引擎不能自动视为相同分析输入。
 
 缓存命中、重算和不缓存语言列表仅放在扫描返回的 `publication.maintenance` 及服务状态，不进入不可变快照统计。冷缓存与热缓存的运行计数变化不会改变相同输入的快照身份。
 
@@ -300,7 +304,7 @@ v0.12 的后续扩展按原全文报告的功能域和反证缺段推进，先�
 
 | v1.0 设想 | v1.1 决定 |
 |---|---|
-| 全语言统一 CPG、六类异常并行推进 | 显式静态调用结构：默认 Python，可选 TypeScript/JS-family 与 Rust 前端 |
+| 全语言统一 CPG、六类异常并行推进 | 默认 38 个规范语言/格式 ID 的静态选择；原三套有限前端保留，新增 CodeGraph 仅结构/元数据及候选，不构成统一完整语义 |
 | 执行验证、沙箱、trace、行为 diff | 全部移除；仅保留静态证据与结构 diff |
 | T1–T5 信任乘数、统一异常评分 | 来源和依据显式记录，不引入任意通用置信度公式 |
 | 三跳传播保障增量完整性 | 全量捕获；可复用语言整体前端，检测每轮全量；更细语义失效范围另行设计 |

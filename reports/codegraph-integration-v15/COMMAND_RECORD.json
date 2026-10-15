@@ -1,0 +1,106 @@
+[
+  {
+    "stage": "full_cli_scan",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "callscope",
+      "scan",
+      "/tmp/callscope-n0vel-evaluation/target",
+      "--db",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3",
+      "--engine",
+      "full",
+      "--output",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel-scan.json"
+    ],
+    "started_at": "2026-10-15T06:20:40.011938+00:00",
+    "finished_at": "2026-10-15T06:23:03.482871+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "full_repeat",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "from callscope.service import AnalysisService\nfrom pathlib import Path\nimport json\nservice = AnalysisService('/tmp/callscope-n0vel-evaluation/target', '/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3', engine='full')\ntry:\n    result = service.scan()\n    Path('/tmp/callscope-codegraph-build/formal-v15/full_repeat.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + chr(10))\n    print(json.dumps({'snapshot_id': result['snapshot_id'], 'created': result['created'],\n        'finding_count': result['finding_count'], 'maintenance': result['maintenance']}))\nfinally:\n    service.store.close()\n"
+    ],
+    "started_at": "2026-10-15T06:23:03.490182+00:00",
+    "finished_at": "2026-10-15T06:24:46.871855+00:00",
+    "exit_code": 0,
+    "stdout": "{\"snapshot_id\": \"7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea\", \"created\": false, \"finding_count\": 94691, \"maintenance\": {\"engine\": \"full\", \"global_detection\": \"full\"}}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "default_auto_cold",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "from callscope.service import AnalysisService\nfrom pathlib import Path\nimport json\nservice = AnalysisService('/tmp/callscope-n0vel-evaluation/target', '/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3', engine='auto')\ntry:\n    result = service.scan()\n    Path('/tmp/callscope-codegraph-build/formal-v15/default_auto_cold.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + chr(10))\n    print(json.dumps({'snapshot_id': result['snapshot_id'], 'created': result['created'],\n        'finding_count': result['finding_count'], 'maintenance': result['maintenance']}))\nfinally:\n    service.store.close()\n"
+    ],
+    "started_at": "2026-10-15T06:24:46.875428+00:00",
+    "finished_at": "2026-10-15T06:26:47.320121+00:00",
+    "exit_code": 0,
+    "stdout": "{\"snapshot_id\": \"6431019a8543eb3ec888d30948e08dca817fe2c9fc9bd725f37201da363f7ef1\", \"created\": true, \"finding_count\": 94691, \"maintenance\": {\"engine\": \"cocoindex\", \"version\": \"1.0.25\", \"recomputed_languages\": [\"arkts\", \"astro\", \"c\", \"cfml\", \"cfquery\", \"cfscript\", \"cobol\", \"cpp\", \"csharp\", \"dart\", \"erlang\", \"go\", \"java\", \"kotlin\", \"liquid\", \"lua\", \"luau\", \"nix\", \"objc\", \"pascal\", \"php\", \"properties\", \"python\", \"r\", \"razor\", \"ruby\", \"rust\", \"scala\", \"solidity\", \"svelte\", \"swift\", \"terraform\", \"twig\", \"typescript\", \"vbnet\", \"vue\", \"xml\", \"yaml\"], \"reused_languages\": [], \"uncached_languages\": [], \"global_detection\": \"full\"}}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "default_auto_warm",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "from callscope.service import AnalysisService\nfrom pathlib import Path\nimport json\nservice = AnalysisService('/tmp/callscope-n0vel-evaluation/target', '/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3', engine='auto')\ntry:\n    result = service.scan()\n    Path('/tmp/callscope-codegraph-build/formal-v15/default_auto_warm.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + chr(10))\n    print(json.dumps({'snapshot_id': result['snapshot_id'], 'created': result['created'],\n        'finding_count': result['finding_count'], 'maintenance': result['maintenance']}))\nfinally:\n    service.store.close()\n"
+    ],
+    "started_at": "2026-10-15T06:26:47.323601+00:00",
+    "finished_at": "2026-10-15T06:27:39.733805+00:00",
+    "exit_code": 0,
+    "stdout": "{\"snapshot_id\": \"6431019a8543eb3ec888d30948e08dca817fe2c9fc9bd725f37201da363f7ef1\", \"created\": false, \"finding_count\": 94691, \"maintenance\": {\"engine\": \"cocoindex\", \"version\": \"1.0.25\", \"recomputed_languages\": [], \"reused_languages\": [\"arkts\", \"astro\", \"c\", \"cfml\", \"cfquery\", \"cfscript\", \"cobol\", \"cpp\", \"csharp\", \"dart\", \"erlang\", \"go\", \"java\", \"kotlin\", \"liquid\", \"lua\", \"luau\", \"nix\", \"objc\", \"pascal\", \"php\", \"properties\", \"python\", \"r\", \"razor\", \"ruby\", \"rust\", \"scala\", \"solidity\", \"svelte\", \"swift\", \"terraform\", \"twig\", \"typescript\", \"vbnet\", \"vue\", \"xml\", \"yaml\"], \"uncached_languages\": [], \"global_detection\": \"full\"}}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "normal_cli_report_json",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "callscope",
+      "report",
+      "--db",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3",
+      "--snapshot",
+      "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+      "--format",
+      "json",
+      "--output",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel-report.json"
+    ],
+    "started_at": "2026-10-15T06:27:39.739776+00:00",
+    "finished_at": "2026-10-15T06:28:04.234910+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "normal_cli_report_markdown",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "callscope",
+      "report",
+      "--db",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3",
+      "--snapshot",
+      "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+      "--format",
+      "markdown",
+      "--output",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel-report.md"
+    ],
+    "started_at": "2026-10-15T06:28:04.237156+00:00",
+    "finished_at": "2026-10-15T06:28:25.934025+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

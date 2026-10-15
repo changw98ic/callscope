@@ -16,6 +16,7 @@ from .parsers import parser_version
 from .source_reader import scan_sources
 from .analysis_inputs import tool_identity
 from .input_capture import capture_support_inputs, INPUT_CAPTURE_VERSION
+from .language_catalog import CODEGRAPH_LANGUAGES, SUPPORTED_LANGUAGES, language_capabilities
 
 
 def _digest(value):
@@ -46,6 +47,9 @@ def frontend_versions(language):
         from . import typescript_analyzer as frontend
     elif language == "rust":
         from . import rust_analyzer as frontend
+    elif language in CODEGRAPH_LANGUAGES:
+        from .codegraph_frontend import component_versions
+        return component_versions()
     else:
         raise ValueError(f"未注册语言前端：{language}")
     versions = {"analyzer": frontend.ANALYZER_VERSION, "parser": parser_version(language)}
@@ -68,9 +72,42 @@ def execute_frontend(language, files, project_root, policy):
         from . import typescript_analyzer as frontend
     elif language == "rust":
         from . import rust_analyzer as frontend
+    elif language in CODEGRAPH_LANGUAGES:
+        from . import codegraph_frontend as frontend
     else:
         raise ValueError(f"未注册语言前端：{language}")
     return frontend.analyze_files(files, project_root, policy)
+
+
+def _capture_frontend_manifests(project_root, captured, scope, policy, evidence):
+    """Read fixed manifest names as data, using the same no-follow capture.
+
+    A Dart package name and similar lookup inputs must belong to the snapshot;
+    upstream resolution never gets a real target directory to read later.
+    """
+    if not any(source.status == 'captured' and source.language in CODEGRAPH_LANGUAGES for source in captured):
+        return []
+    names = {'pubspec.yaml', 'pubspec_overrides.yaml', 'package.json', 'tsconfig.json',
+             'jsconfig.json', 'go.mod', 'go.work', 'Cargo.toml', 'compile_commands.json',
+             'composer.json', 'Directory.Build.props', 'Directory.Build.targets'}
+    by_path = {source.path: source for source in captured}
+    paths = set(by_path) | {item['path'] for item in scope.get('file_inventory', {}).get('unrecognized_files', [])}
+    selected = sorted(p for p in paths if Path(p).name in names or Path(p).suffix in {'.csproj', '.vbproj', '.props'})
+    missing = [p for p in selected if p not in evidence]
+    reused = [p for p in missing if p in by_path and by_path[p].status == 'captured']
+    for path in reused:
+        source = by_path[path]
+        evidence[path] = {'path': path, 'hash': source.hash, 'content': source.content,
+                          'text_hash': hashlib.sha256(source.content.encode()).hexdigest(),
+                          'status': 'captured', 'error': None, 'kind': 'support_input',
+                          'capture_reason': 'codegraph_project_manifest', 'size_bytes': len(source.content.encode())}
+    remaining = [p for p in missing if p not in reused]
+    records, diagnostics = capture_support_inputs(project_root, remaining, policy['analysis']['max_file_bytes'])
+    for value in records.values():
+        value['capture_reason'] = 'codegraph_project_manifest'
+    evidence.update(records)
+    scope['codegraph_project_manifests'] = selected
+    return diagnostics
 
 
 def analyze_project(root: str | Path, config: dict | None = None, *, frontend_runner=None) -> GraphSnapshot:
@@ -82,10 +119,12 @@ def analyze_project(root: str | Path, config: dict | None = None, *, frontend_ru
         raise ValueError(f"项目根不存在：{project_root}")
     policy = deepcopy(load_config(project_root) if config is None else validate_config(config))
     policy["analysis"].pop("_captured_support_inputs", None)
+    policy["analysis"].pop("_captured_codegraph_inputs", None)
     captured, diagnostics, scope = scan_sources(project_root, policy)
     input_evidence, input_diagnostics = capture_support_inputs(
         project_root, policy["analysis"]["support_inputs"], policy["analysis"]["max_file_bytes"])
     diagnostics.extend(input_diagnostics)
+    diagnostics.extend(_capture_frontend_manifests(project_root, captured, scope, policy, input_evidence))
     for source in captured:
         support = input_evidence.get(source.path)
         if support is not None and support["status"] == "captured":
@@ -94,6 +133,7 @@ def analyze_project(root: str | Path, config: dict | None = None, *, frontend_ru
     runtime_policy = deepcopy(policy)
     # This internal value always comes from safe capture, never caller data.
     runtime_policy["analysis"]["_captured_support_inputs"] = input_evidence
+    runtime_policy["analysis"]["_captured_codegraph_inputs"] = input_evidence
     languages = policy["analysis"]["languages"]
     implementation = tool_identity()
     prepared = frontend_runner.run(project_root, runtime_policy, captured, implementation) if frontend_runner else None
@@ -204,7 +244,9 @@ def analyze_project(root: str | Path, config: dict | None = None, *, frontend_ru
         )
     overall = _language_stats(files, nodes, edges)
     support_incomplete = any(record["status"] != "captured" for record in input_evidence.values())
-    coverage = bool(failed_paths or support_incomplete or scope["symlinks_skipped"] or scope["scan_errors"] or any(value.get("coverage_incomplete") for value in frontend_stats.values()))
+    coverage = bool(failed_paths or support_incomplete or scope["symlinks_skipped"] or scope["scan_errors"]
+                    or scope.get("content_language_classification_failed")
+                    or any(value.get("coverage_incomplete") for value in frontend_stats.values()))
     ambiguous = sum(bool(node.metadata.get("duplicate_definition")) for node in nodes)
     call_incomplete = bool(overall["dynamic_calls"] or overall["ambiguous_calls"] or overall["unresolved_calls"] or overall["external_callback_boundaries"] or ambiguous
                            or any(value.get("call_resolution_incomplete") for value in frontend_stats.values()))
@@ -213,16 +255,20 @@ def analyze_project(root: str | Path, config: dict | None = None, *, frontend_ru
         diagnostics.append(Diagnostic("warning", "no_parsed_sources", "扫描范围没有可完整解析的实现源码，不能认为项目已经分析。"))
     incomplete = coverage or call_incomplete
     versions = json.dumps(component_versions, ensure_ascii=True, sort_keys=True, separators=(",", ":"))
+    # This opaque identity is repeated in every evidence record. Keep the full
+    # authenticated component map once in stats rather than copying it per call.
+    version_identity = "components-sha256:" + hashlib.sha256(versions.encode()).hexdigest()
     source_hash = _digest({"files": [(source.path, source.hash, source.status, source.module, source.error) for source in files], "scope": scope,
                            "support_inputs": input_evidence})
     policy_hash = _digest(policy)
     project_id = project_id_for(project_root)
     snapshot_id = _digest({"project_id": project_id, "source_hash": source_hash, "policy_hash": policy_hash,
                           "analyzer_version": ANALYZER_VERSION, "detector_version": DETECTOR_VERSION,
-                          "schema_version": SCHEMA_VERSION, "parser_version": versions})
+                          "schema_version": SCHEMA_VERSION, "parser_version": version_identity})
     stats = {
         **scope, **overall, "by_language": by_language, "languages_requested": languages,
-        "supported_languages": ["python", "typescript", "rust"], "frontend_stats": frontend_stats,
+        "supported_languages": list(SUPPORTED_LANGUAGES), "language_capabilities": language_capabilities(),
+        "frontend_stats": frontend_stats,
         "component_versions": component_versions, "rules_count": len(policy.get("rules", [])),
         "entrypoints_count": len(policy.get("entrypoints", [])), "ambiguous_symbols": ambiguous,
         "static_contracts_count": len(policy.get("static_contracts", [])),
@@ -246,5 +292,5 @@ def analyze_project(root: str | Path, config: dict | None = None, *, frontend_ru
     return GraphSnapshot(snapshot_id, project_id, policy["project"].get("name") or project_root.name,
                          str(project_root), datetime.now(timezone.utc).isoformat(), source_hash, ANALYZER_VERSION,
                          policy_hash, "partial" if incomplete else "complete", nodes, edges, files, diagnostics, stats, policy,
-                         detector_version=DETECTOR_VERSION, schema_version=SCHEMA_VERSION, parser_version=versions,
+                         detector_version=DETECTOR_VERSION, schema_version=SCHEMA_VERSION, parser_version=version_identity,
                          input_evidence=input_evidence)

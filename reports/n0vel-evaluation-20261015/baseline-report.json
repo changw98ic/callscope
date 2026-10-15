@@ -1,0 +1,502 @@
+{
+  "version": "captured-project-analysis-report-3",
+  "snapshot": {
+    "id": "3b37d1364b982bf3ddde3ff89db3b3d426a8b40b25dae818d9070b68cf8ace7c",
+    "project_id": "47f5ef8284b35893d4b2",
+    "project_name": "n0vel",
+    "created_at": "2026-10-15T01:57:53.058512+00:00",
+    "source_hash": "4e6601c7311b09faf6b69af8ce5ed49fbf6d6008daaad799b038c5c77bf5ce6a",
+    "policy_hash": "dde37080b9f2a2dd346c0d6e87a1bf2cef93467f52907d50c9d405cf02477f6f",
+    "status": "partial",
+    "component_versions": {
+      "maintenance": {
+        "backend": "full"
+      },
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "rust": {
+        "analyzer": "rust-tree-sitter-1.8-crate-attribute-context",
+        "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+      },
+      "support_input_capture": "support-input-capture-1",
+      "tool": {
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "graph_backend": "axon-graph-core-1",
+        "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      }
+    }
+  },
+  "coverage": {
+    "files_selected": 29,
+    "files_parsed": 6,
+    "file_statuses": {
+      "parsed": 6,
+      "unsupported": 23
+    },
+    "unparsed_files": [
+      {
+        "file": "linux/flutter/generated_plugin_registrant.cc",
+        "hash": "7861b227b10a10cc1d7643f82a246b7db35b503f2d9ff1d3c906136e6c260dce",
+        "language": "cpp",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "linux/flutter/generated_plugin_registrant.h",
+        "hash": "00f93bb5b1faefdede8f6065df327522900fb0b8efee86bacf424fd947ed14bb",
+        "language": "c",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "linux/runner/main.cc",
+        "hash": "ea23f7cdf74091d63bba29ef60486370b766157b848f0cfe62bd8b1c1695a0c1",
+        "language": "cpp",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "linux/runner/my_application.cc",
+        "hash": "6bca8329dc17dcf47bc2b570fb5a219e968915c5a2400facbaa260f7369ad5ad",
+        "language": "cpp",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "linux/runner/my_application.h",
+        "hash": "a044da4b485c93d0e1a79c62356b22c8856dd2bab537ffb6a9446fc905131316",
+        "language": "c",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "macos/Flutter/GeneratedPluginRegistrant.swift",
+        "hash": "9ebc54b4d21464b875d1289b3dd5e44cd7e68930dbd6e8c7f954e438eb6ad499",
+        "language": "swift",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "macos/Runner/AppDelegate.swift",
+        "hash": "ce9dbe45a57c59e85519da50a26c471615b9c8cdd85a8f4a39d2e480e62a4af4",
+        "language": "swift",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "macos/Runner/MainFlutterWindow.swift",
+        "hash": "c16586a8abaadf31682b814b90f2282301f2eb17cb45a0e7805a64ea73218305",
+        "language": "swift",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "macos/RunnerTests/RunnerTests.swift",
+        "hash": "c5443f83593c0e1067d4ded75c6113093b77590a4cafe55fef02ddb32e1ccfa9",
+        "language": "swift",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "scripts/macos_clang_wrapper.sh",
+        "hash": "0f59304e99c6caa404c6367bd4cf8ef17bfcc6be2bdd8f8dafe025e26e765e30",
+        "language": "shell",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "scripts/macos_flutter_assemble.sh",
+        "hash": "21e1003bf4cf04f62acb3e3e72b5a9d3d74581bb7c97a1c032f311fd17ac52c7",
+        "language": "shell",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "scripts/package_macos_preview.sh",
+        "hash": "6a1a24221459c7aedf9127cc1f72dcd4c89ec09e7ef4c98fe9023f016045719f",
+        "language": "shell",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "scripts/verify_macos.sh",
+        "hash": "efc3d8f628dab13c78da3bf682f00fb3e1eaf0e966c47eb3a68de84fd478d2ce",
+        "language": "shell",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/flutter/generated_plugin_registrant.cc",
+        "hash": "82e02567f2faf5e732dc92a2fb0d01104f7ba8c48973f8cfd41a860b4fac3f3b",
+        "language": "cpp",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/flutter/generated_plugin_registrant.h",
+        "hash": "dbc11635d7b1ba1887adf40df5b83d634e9c3ab0bee34510c71528bb4d73602a",
+        "language": "c",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/runner/flutter_window.cpp",
+        "hash": "dd185884c0b5301d400b58f12ebb36b1c8b326531597e531b40e44a6eeb0e943",
+        "language": "cpp",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/runner/flutter_window.h",
+        "hash": "38e0fcd3a0b83895852ec295cb70d90179c0dcd40d58f065eb5232a4ecd84898",
+        "language": "c",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/runner/main.cpp",
+        "hash": "ab319e54e753697dceb7a13ae8e46002bf5b665ea2dfc03ca536f4d90a186288",
+        "language": "cpp",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/runner/resource.h",
+        "hash": "1fa98588b04561590ba1cf0521ab86a9db4a878312f21c9d5861d965ddd8d1ae",
+        "language": "c",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/runner/utils.cpp",
+        "hash": "dc2ee94d43116f959a4abd42557f71d07acc631abbffe03b11489dbeed35bedb",
+        "language": "cpp",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/runner/utils.h",
+        "hash": "95a7f7dddb832997cefa937a96f89472332277e75734a5de553610760b744b03",
+        "language": "c",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/runner/win32_window.cpp",
+        "hash": "9065f31ccf746cf8b390121f958f9e959033af864aed779597066625ed56bc36",
+        "language": "cpp",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "windows/runner/win32_window.h",
+        "hash": "7dd03746b19dcf3542829b2f6e8ed40a2714ce5f2cb3b0e23f0118a2fcf62d62",
+        "language": "c",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      }
+    ],
+    "support_inputs": [],
+    "selection_scope": [
+      "."
+    ],
+    "excluded": [
+      ".git",
+      ".venv",
+      "venv",
+      "__pycache__",
+      "node_modules",
+      ".callscope",
+      "build",
+      "dist"
+    ],
+    "meaning": "Captured source and parser scope only; no function or business coverage percentage is inferred."
+  },
+  "architecture": {
+    "areas": [
+      {
+        "directory": "artifacts/sample_chapters",
+        "files": 1,
+        "parsed": 1,
+        "languages": {
+          "python": 1
+        },
+        "node_types": {
+          "function": 5,
+          "module": 1
+        }
+      },
+      {
+        "directory": "docs/assets",
+        "files": 1,
+        "parsed": 1,
+        "languages": {
+          "python": 1
+        },
+        "node_types": {
+          "function": 12,
+          "module": 1
+        }
+      },
+      {
+        "directory": "linux/flutter",
+        "files": 2,
+        "parsed": 0,
+        "languages": {
+          "c": 1,
+          "cpp": 1
+        },
+        "node_types": {}
+      },
+      {
+        "directory": "linux/runner",
+        "files": 3,
+        "parsed": 0,
+        "languages": {
+          "c": 1,
+          "cpp": 2
+        },
+        "node_types": {}
+      },
+      {
+        "directory": "macos/Flutter",
+        "files": 1,
+        "parsed": 0,
+        "languages": {
+          "swift": 1
+        },
+        "node_types": {}
+      },
+      {
+        "directory": "macos/Runner",
+        "files": 2,
+        "parsed": 0,
+        "languages": {
+          "swift": 2
+        },
+        "node_types": {}
+      },
+      {
+        "directory": "macos/RunnerTests",
+        "files": 1,
+        "parsed": 0,
+        "languages": {
+          "swift": 1
+        },
+        "node_types": {}
+      },
+      {
+        "directory": "scripts",
+        "files": 8,
+        "parsed": 4,
+        "languages": {
+          "python": 3,
+          "shell": 4,
+          "typescript": 1
+        },
+        "node_types": {
+          "class": 1,
+          "function": 12,
+          "method": 2,
+          "module": 4
+        }
+      },
+      {
+        "directory": "windows/flutter",
+        "files": 2,
+        "parsed": 0,
+        "languages": {
+          "c": 1,
+          "cpp": 1
+        },
+        "node_types": {}
+      },
+      {
+        "directory": "windows/runner",
+        "files": 8,
+        "parsed": 0,
+        "languages": {
+          "c": 4,
+          "cpp": 4
+        },
+        "node_types": {}
+      }
+    ],
+    "dependencies": [],
+    "captured_writer_references": [],
+    "meaning": "Directory composition and authenticated resolved graph references; these do not infer responsibilities or runtime reachability.",
+    "responsibility_explanations": {
+      "version": "captured-architecture-responsibilities-1",
+      "operation_extractor_version": "captured-responsibility-source-operations-1",
+      "snapshot_identity": {
+        "snapshot_id": "3b37d1364b982bf3ddde3ff89db3b3d426a8b40b25dae818d9070b68cf8ace7c",
+        "source_hash": "4e6601c7311b09faf6b69af8ce5ed49fbf6d6008daaad799b038c5c77bf5ce6a",
+        "policy_hash": "dde37080b9f2a2dd346c0d6e87a1bf2cef93467f52907d50c9d405cf02477f6f"
+      },
+      "operation_extraction_identity": {
+        "snapshot_id": "3b37d1364b982bf3ddde3ff89db3b3d426a8b40b25dae818d9070b68cf8ace7c",
+        "source_hash": "4e6601c7311b09faf6b69af8ce5ed49fbf6d6008daaad799b038c5c77bf5ce6a",
+        "policy_hash": "dde37080b9f2a2dd346c0d6e87a1bf2cef93467f52907d50c9d405cf02477f6f"
+      },
+      "operations": [],
+      "declaration_explanations": [],
+      "source_location_index": {},
+      "evidence_reference_index": {},
+      "source_index_pointer_scope": "this_responsibility_explanation_object",
+      "explicit_source_transfers": [],
+      "normal_source_orders": [],
+      "authenticated_interface_reuse": [],
+      "communication_boundaries": {
+        "authenticated_ordinary_call_argument_refs": [],
+        "opaque_call_argument_refs": [],
+        "message_literal_field_refs": [],
+        "zero_argument_call_refs": [],
+        "ordinary_call_count_is_not_wire_coverage": true,
+        "matching_literals_promoted_to_wire_connection": false,
+        "cross_language_or_process_calls_created": false,
+        "meaning": "Ordinary authenticated calls, opaque effect/dispatch frontiers and captured message fields are separate. A matching method or literal does not establish a transport or end-to-end identity relation."
+      },
+      "computed_source_contract_seams": [],
+      "navigation": [],
+      "analysis_gaps": [],
+      "explanation_source_gaps": [],
+      "operation_extraction_scope": {
+        "selected_declaration_count": 0,
+        "selected_declarations_are_navigation_not_behavior": true,
+        "source_selections": [],
+        "whole_repository_operations_enumerated": false,
+        "input_report_text_used_as_expected_answer": false,
+        "finding_ids_are_navigation_context": true,
+        "ordinary_call_bindings_and_opaque_ports_are_separate": true,
+        "protocol_literal_fields_do_not_establish_wire_connectivity": true,
+        "source_bodies_and_old_fact_trees_duplicated": false,
+        "non_cst_fact_counts": {},
+        "non_cst_document_facts_are_valid_separate_evidence_not_operation_cst": true
+      },
+      "operation_extraction_flags": {
+        "source_operations_only": true,
+        "unique_fact_owner_proven": false,
+        "authorization_proven": false,
+        "opaque_storage_effects_known": false,
+        "wire_or_runtime_value_identity_proven": false,
+        "creates_calls_edge": false,
+        "target_executed": false,
+        "target_tests_run": false,
+        "target_build_run": false
+      },
+      "operation_extraction_budget": {
+        "visited_nodes": 0,
+        "operations": 0,
+        "relationships": 0,
+        "limits": {
+          "selected_declarations": 512,
+          "visited_nodes": 262144,
+          "operations": 16384,
+          "relationships": 32768,
+          "source_references_per_operation": 96,
+          "source_text_characters": 384
+        },
+        "incomplete": false
+      },
+      "presentation_limits": {
+        "statements_per_declaration": 24,
+        "relationship_examples": 384,
+        "field_examples": 12,
+        "source_characters": 360,
+        "reuse_examples": 128
+      },
+      "assessment": {
+        "state": "unknown",
+        "explanation_generated_from_actual_operations": false,
+        "source_directories_used_to_assign_responsibility": false,
+        "method_names_used_to_infer_responsibility": false,
+        "reference_report_text_used_as_evidence": false,
+        "whole_report_reproduced": false,
+        "whole_repository_ownership_proven": false,
+        "unique_fact_owner_proven": false,
+        "all_operations_authorized_proven": false,
+        "runtime_or_physical_effects_verified": false,
+        "functional_coverage_percentage_computed": false
+      },
+      "meaning": "Exact declarations are explained by actual captured record/field operations, authenticated argument handoffs and explicit guard/source relations. Business labels are navigation only; execution, delivery and projection are not collapsed into one success.",
+      "unreviewed_scope": [
+        "all writers or all routes outside selected captured scopes",
+        "arbitrary heap aliases, hidden effects, callback activation and runtime reaching values",
+        "complete authorization, physical persistence, provider success and full recovery state machines"
+      ],
+      "target_executed": false,
+      "target_tests_run": false,
+      "target_build_run": false
+    }
+  },
+  "project_declarations": {
+    "manifests": [],
+    "documentation": [],
+    "gaps": [],
+    "meaning": "Captured declarations and headings describe project inputs, not verified products, installed dependencies or executed commands."
+  },
+  "judgments": [],
+  "functional_chains": [],
+  "source_relation_index": {
+    "version": "captured-relation-presentation-2",
+    "entries": [],
+    "presentation_only": true,
+    "meaning": "Navigation index into saved source-relation findings; contains no additional assessment or functional coverage claim."
+  },
+  "overlapping_source_selections": [],
+  "configured_local_assessments": [],
+  "graph_observation_counts": [
+    {
+      "type": "external_callback_boundary",
+      "status": "uncertain",
+      "count": 45
+    },
+    {
+      "type": "unresolved_call",
+      "status": "uncertain",
+      "count": 77
+    }
+  ],
+  "report_scope": {
+    "whole_report_reproduction_claimed": false,
+    "unmodeled_functional_domains_are_not_approved": true,
+    "meaning": "Configured complete judgments, conditional source chains, local assessments and structural inventory remain separate. Missing analysis is not supplied by reference-report text."
+  },
+  "diagnostics": [
+    {
+      "level": "warning",
+      "code": "unsupported_sources",
+      "message": "扫描范围包含未分析语言文件：{'c': 7, 'cpp': 8, 'shell': 4, 'swift': 4}",
+      "file": "",
+      "line": 0
+    }
+  ],
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "runtime_functionality_verified": false,
+  "report_components": {
+    "generator": "captured-project-analysis-report-3",
+    "presentation": "captured-relation-presentation-2",
+    "markdown": "captured-human-report-markdown-1",
+    "responsibility_explanations": "captured-architecture-responsibilities-1",
+    "responsibility_operations": "captured-responsibility-source-operations-1",
+    "current_semantic_parser_versions": {
+      "typescript": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+    },
+    "generating_tool_identity": {
+      "source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+      "graph_backend": "axon-graph-core-1",
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513"
+    },
+    "meaning": "Report generation versions are separate from the saved snapshot's analysis versions. Explanations interpret captured source; existing findings are not upgraded."
+  },
+  "documentation_comparisons": []
+}

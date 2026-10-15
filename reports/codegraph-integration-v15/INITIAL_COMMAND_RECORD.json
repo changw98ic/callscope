@@ -1,0 +1,119 @@
+[
+  {
+    "stage": "full_cli_scan",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "callscope",
+      "scan",
+      "/tmp/callscope-n0vel-evaluation/target",
+      "--db",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3",
+      "--engine",
+      "full",
+      "--output",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel-scan.json"
+    ],
+    "started_at": "2026-10-15T06:09:27.214790+00:00",
+    "finished_at": "2026-10-15T06:12:08.106966+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "full_repeat",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "from callscope.service import AnalysisService\nfrom pathlib import Path\nimport json\nservice=AnalysisService('/tmp/callscope-n0vel-evaluation/target','/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3',engine='full')\ntry:\n result=service.scan()\n Path('/tmp/callscope-codegraph-build/formal-v15/full_repeat.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')\n print(json.dumps({'snapshot_id':result['snapshot_id'],'created':result['created'],'finding_count':result['finding_count'],'maintenance':result['maintenance']}))\nfinally: service.store.close()\n"
+    ],
+    "started_at": "2026-10-15T06:12:08.109606+00:00",
+    "finished_at": "2026-10-15T06:12:08.158520+00:00",
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "  File \"<string>\", line 7\n    Path('/tmp/callscope-codegraph-build/formal-v15/full_repeat.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n                                                                                                                                 ^\nSyntaxError: unterminated string literal (detected at line 7)\n"
+  },
+  {
+    "stage": "full_repeat",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "from callscope.service import AnalysisService\nfrom pathlib import Path\nimport json\nservice = AnalysisService('/tmp/callscope-n0vel-evaluation/target', '/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3', engine='full')\ntry:\n    result = service.scan()\n    Path('/tmp/callscope-codegraph-build/formal-v15/full_repeat.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + chr(10))\n    print(json.dumps({'snapshot_id': result['snapshot_id'], 'created': result['created'],\n        'finding_count': result['finding_count'], 'maintenance': result['maintenance']}))\nfinally:\n    service.store.close()\n"
+    ],
+    "started_at": "2026-10-15T06:12:45.857642+00:00",
+    "finished_at": "2026-10-15T06:14:44.235305+00:00",
+    "exit_code": 0,
+    "stdout": "{\"snapshot_id\": \"3e0a1e41f8ea0535f409caf2f32e761fa2ab29c25c46344e6dc393a3be856690\", \"created\": false, \"finding_count\": 94691, \"maintenance\": {\"engine\": \"full\", \"global_detection\": \"full\"}}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "default_auto_cold",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "from callscope.service import AnalysisService\nfrom pathlib import Path\nimport json\nservice = AnalysisService('/tmp/callscope-n0vel-evaluation/target', '/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3', engine='auto')\ntry:\n    result = service.scan()\n    Path('/tmp/callscope-codegraph-build/formal-v15/default_auto_cold.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + chr(10))\n    print(json.dumps({'snapshot_id': result['snapshot_id'], 'created': result['created'],\n        'finding_count': result['finding_count'], 'maintenance': result['maintenance']}))\nfinally:\n    service.store.close()\n"
+    ],
+    "started_at": "2026-10-15T06:14:44.237002+00:00",
+    "finished_at": "2026-10-15T06:17:03.482995+00:00",
+    "exit_code": 0,
+    "stdout": "{\"snapshot_id\": \"5cf505c3dd6b25de283115e02b37a33af9b9bd64f7beb6e77928bfc70316f440\", \"created\": true, \"finding_count\": 94691, \"maintenance\": {\"engine\": \"cocoindex\", \"version\": \"1.0.25\", \"recomputed_languages\": [\"arkts\", \"astro\", \"c\", \"cfml\", \"cfquery\", \"cfscript\", \"cobol\", \"cpp\", \"csharp\", \"dart\", \"erlang\", \"go\", \"java\", \"kotlin\", \"liquid\", \"lua\", \"luau\", \"nix\", \"objc\", \"pascal\", \"php\", \"properties\", \"python\", \"r\", \"razor\", \"ruby\", \"rust\", \"scala\", \"solidity\", \"svelte\", \"swift\", \"terraform\", \"twig\", \"typescript\", \"vbnet\", \"vue\", \"xml\", \"yaml\"], \"reused_languages\": [], \"uncached_languages\": [], \"global_detection\": \"full\"}}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "default_auto_warm",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "from callscope.service import AnalysisService\nfrom pathlib import Path\nimport json\nservice = AnalysisService('/tmp/callscope-n0vel-evaluation/target', '/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3', engine='auto')\ntry:\n    result = service.scan()\n    Path('/tmp/callscope-codegraph-build/formal-v15/default_auto_warm.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + chr(10))\n    print(json.dumps({'snapshot_id': result['snapshot_id'], 'created': result['created'],\n        'finding_count': result['finding_count'], 'maintenance': result['maintenance']}))\nfinally:\n    service.store.close()\n"
+    ],
+    "started_at": "2026-10-15T06:17:03.488167+00:00",
+    "finished_at": "2026-10-15T06:17:59.421667+00:00",
+    "exit_code": 0,
+    "stdout": "{\"snapshot_id\": \"5cf505c3dd6b25de283115e02b37a33af9b9bd64f7beb6e77928bfc70316f440\", \"created\": false, \"finding_count\": 94691, \"maintenance\": {\"engine\": \"cocoindex\", \"version\": \"1.0.25\", \"recomputed_languages\": [], \"reused_languages\": [\"arkts\", \"astro\", \"c\", \"cfml\", \"cfquery\", \"cfscript\", \"cobol\", \"cpp\", \"csharp\", \"dart\", \"erlang\", \"go\", \"java\", \"kotlin\", \"liquid\", \"lua\", \"luau\", \"nix\", \"objc\", \"pascal\", \"php\", \"properties\", \"python\", \"r\", \"razor\", \"ruby\", \"rust\", \"scala\", \"solidity\", \"svelte\", \"swift\", \"terraform\", \"twig\", \"typescript\", \"vbnet\", \"vue\", \"xml\", \"yaml\"], \"uncached_languages\": [], \"global_detection\": \"full\"}}\n",
+    "stderr": ""
+  },
+  {
+    "stage": "normal_cli_report_json",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "callscope",
+      "report",
+      "--db",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3",
+      "--snapshot",
+      "3e0a1e41f8ea0535f409caf2f32e761fa2ab29c25c46344e6dc393a3be856690",
+      "--format",
+      "json",
+      "--output",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel-report.json"
+    ],
+    "started_at": "2026-10-15T06:17:59.430053+00:00",
+    "finished_at": "2026-10-15T06:18:17.616536+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "stage": "normal_cli_report_markdown",
+    "args": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-m",
+      "callscope",
+      "report",
+      "--db",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel.sqlite3",
+      "--snapshot",
+      "3e0a1e41f8ea0535f409caf2f32e761fa2ab29c25c46344e6dc393a3be856690",
+      "--format",
+      "markdown",
+      "--output",
+      "/tmp/callscope-codegraph-build/formal-v15/n0vel-report.md"
+    ],
+    "started_at": "2026-10-15T06:18:17.618677+00:00",
+    "finished_at": "2026-10-15T06:18:35.779321+00:00",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

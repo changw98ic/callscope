@@ -1,0 +1,16 @@
+[
+  {
+    "repository": "codepatchbay",
+    "matched_historical_reference_entries": 19,
+    "missing": [],
+    "mismatched": [],
+    "historical_reference_document": "/workspace/callscope/reports/astra-iteration12-scope2/codepatchbay-baseline-source-checks.json"
+  },
+  {
+    "repository": "winwincode",
+    "matched_historical_reference_entries": 17,
+    "missing": [],
+    "mismatched": [],
+    "historical_reference_document": "/workspace/callscope/reports/astra-iteration12-scope2/winwincode-baseline-source-checks.json"
+  }
+]

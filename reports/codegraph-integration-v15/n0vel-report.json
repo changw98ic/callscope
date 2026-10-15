@@ -1,0 +1,4561 @@
+{
+  "version": "captured-project-analysis-report-4",
+  "snapshot": {
+    "id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+    "project_id": "47f5ef8284b35893d4b2",
+    "project_name": "target",
+    "created_at": "2026-10-15T06:21:51.313067+00:00",
+    "source_hash": "a158abb1c85f8af04c3b76b4f0990beae3cf7085f6b85851460a0b3e97eddee2",
+    "policy_hash": "d729c9a576532af273257c9690849b74410ebc2e1126512bfa4c244bcb491011",
+    "status": "partial",
+    "component_versions": {
+      "arkts": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "astro": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "c": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cfml": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cfquery": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cfscript": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cobol": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "cpp": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "csharp": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "dart": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "erlang": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "go": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "java": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "kotlin": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "liquid": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "lua": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "luau": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "maintenance": {
+        "backend": "full"
+      },
+      "nix": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "objc": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "pascal": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "php": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "properties": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "python": {
+        "analyzer": "python-ast-3-captured",
+        "parser": "cpython-3.12.14"
+      },
+      "r": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "razor": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "ruby": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "rust": {
+        "analyzer": "rust-tree-sitter-1.8-crate-attribute-context",
+        "parser": "tree-sitter-0.25.2+tree-sitter-rust-0.24.0+cpython-3.12.14"
+      },
+      "scala": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "solidity": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "support_input_capture": "support-input-capture-1",
+      "svelte": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "swift": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "terraform": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "tool": {
+        "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+        "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "graph_backend": "axon-graph-core-1",
+        "source_hash": "638a0a3974e1b84c5a6b94d271a8a85ede94e54dda1e35d09f8033fdc4370214"
+      },
+      "twig": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "typescript": {
+        "analyzer": "typescript-tree-sitter-call-2-projection-1",
+        "parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14",
+        "tsx_parser": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+      },
+      "vbnet": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "vue": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "xml": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      },
+      "yaml": {
+        "analyzer": "codegraph-captured-structure-1",
+        "bridge_sha256": "dfcd9bc39d6268bc2a5eae8d0da9b78bd288f674ba6d81cda2cc88a4da7d299d",
+        "node_runtime": "v24.19.0",
+        "parser": "codegraph-wasm-0.25.10",
+        "protocol": "callscope-codegraph-1",
+        "resolution_level": "upstream_candidates_only",
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+      }
+    }
+  },
+  "stats": {
+    "by_language": {
+      "arkts": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "astro": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "c": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 2,
+        "edges": 2,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 3,
+        "files_parsed": 2,
+        "files_total": 5,
+        "nodes": 10,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cfml": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cfquery": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cfscript": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cobol": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "cpp": {
+        "ambiguous_calls": 39,
+        "dynamic_calls": 161,
+        "edges": 200,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 5,
+        "files_parsed": 5,
+        "files_total": 10,
+        "nodes": 97,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "csharp": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "dart": {
+        "ambiguous_calls": 39466,
+        "dynamic_calls": 54869,
+        "edges": 94335,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 27,
+        "files_parsed": 864,
+        "files_total": 891,
+        "nodes": 18943,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "erlang": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "go": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "java": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "kotlin": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "liquid": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "lua": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "luau": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "nix": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "objc": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "pascal": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "php": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "properties": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "python": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 65,
+        "edges": 262,
+        "external_callback_boundaries": 38,
+        "external_calls": 95,
+        "files_failed": 0,
+        "files_parsed": 5,
+        "files_total": 5,
+        "nodes": 37,
+        "resolved_calls": 102,
+        "unresolved_calls": 0
+      },
+      "r": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "razor": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "ruby": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "rust": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "scala": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "solidity": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "svelte": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "swift": {
+        "ambiguous_calls": 3,
+        "dynamic_calls": 29,
+        "edges": 32,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 4,
+        "files_total": 4,
+        "nodes": 25,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "terraform": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "twig": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "typescript": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 12,
+        "edges": 20,
+        "external_callback_boundaries": 7,
+        "external_calls": 8,
+        "files_failed": 0,
+        "files_parsed": 1,
+        "files_total": 1,
+        "nodes": 7,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "vbnet": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "vue": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "xml": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 0,
+        "files_parsed": 0,
+        "files_total": 0,
+        "nodes": 0,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      },
+      "yaml": {
+        "ambiguous_calls": 0,
+        "dynamic_calls": 0,
+        "edges": 0,
+        "external_callback_boundaries": 0,
+        "external_calls": 0,
+        "files_failed": 7,
+        "files_parsed": 0,
+        "files_total": 7,
+        "nodes": 7,
+        "resolved_calls": 0,
+        "unresolved_calls": 0
+      }
+    },
+    "language_capabilities": [
+      {
+        "analysis_level": "bounded_static_relations",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".py",
+          ".pyw"
+        ],
+        "frontend": "native",
+        "functional_completeness_proven": false,
+        "language": "python",
+        "registered": true,
+        "upstream_commit": null,
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "bounded_static_relations",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cjs",
+          ".cts",
+          ".js",
+          ".jsx",
+          ".mjs",
+          ".mts",
+          ".ts",
+          ".tsx",
+          ".xsjs",
+          ".xsjslib"
+        ],
+        "frontend": "native",
+        "functional_completeness_proven": false,
+        "language": "typescript",
+        "registered": true,
+        "upstream_commit": null,
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "bounded_static_relations",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".rs"
+        ],
+        "frontend": "native",
+        "functional_completeness_proven": false,
+        "language": "rust",
+        "registered": true,
+        "upstream_commit": null,
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".ets"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "arkts",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".go"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "go",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".java"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "java",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".c",
+          ".h"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "c",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cc",
+          ".cpp",
+          ".cu",
+          ".cuh",
+          ".cxx",
+          ".hpp",
+          ".hxx",
+          ".metal"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cpp",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cs"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "csharp",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cshtml",
+          ".razor"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "razor",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".inc",
+          ".install",
+          ".module",
+          ".php",
+          ".theme"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "php",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".rake",
+          ".rb"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "ruby",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".swift"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "swift",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".kt",
+          ".kts"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "kotlin",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".dart"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "dart",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".svelte"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "svelte",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".vue"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "vue",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".astro"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "astro",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".liquid"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "liquid",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".dfm",
+          ".dpk",
+          ".dpr",
+          ".fmx",
+          ".lpr",
+          ".pas"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "pascal",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".sc",
+          ".scala"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "scala",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".lua"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "lua",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".luau"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "luau",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".m",
+          ".mm"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "objc",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".r"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "r",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".sol"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "solidity",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".nix"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "nix",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "file_or_metadata",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".yaml",
+          ".yml"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "yaml",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "file_or_metadata",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".twig"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "twig",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "file_or_metadata",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".xml"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "xml",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "file_or_metadata",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".properties"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "properties",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cfc",
+          ".cfm"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cfml",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cfs"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cfscript",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": true,
+        "extensions": [],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cfquery",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".cbl",
+          ".cob",
+          ".cobol",
+          ".cpy"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "cobol",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".vb"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "vbnet",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".erl",
+          ".escript",
+          ".hrl"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "erlang",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      },
+      {
+        "analysis_level": "structural_extraction",
+        "availability_status": "runtime_not_checked",
+        "available": null,
+        "embedded_only": false,
+        "extensions": [
+          ".tf",
+          ".tfvars",
+          ".tofu"
+        ],
+        "frontend": "codegraph",
+        "functional_completeness_proven": false,
+        "language": "terraform",
+        "registered": true,
+        "upstream_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9",
+        "verification_status": "not_validated_for_this_project"
+      }
+    ],
+    "file_inventory": {
+      "meaning": "No-follow file-path inventory only; unrecognized files are not parsed source or functional coverage.",
+      "recognized_source_files": 927,
+      "regular_files_seen": 1075,
+      "unrecognized_files": [
+        {
+          "extension": "",
+          "path": ".gitignore"
+        },
+        {
+          "extension": "",
+          "path": ".metadata"
+        },
+        {
+          "extension": ".md",
+          "path": "AGENTS.md"
+        },
+        {
+          "extension": ".md",
+          "path": "FLOW.md"
+        },
+        {
+          "extension": "",
+          "path": "Makefile"
+        },
+        {
+          "extension": ".md",
+          "path": "README.md"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "agent-experience/index.jsonl"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/README.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/chapters/chapter-01.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/chapters/chapter-02.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/chapters/chapter-03.md"
+        },
+        {
+          "extension": ".json",
+          "path": "artifacts/real_validation/three_chapter_repaired/manifest.json"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/outline/three_chapter_outline.md"
+        },
+        {
+          "extension": ".json",
+          "path": "artifacts/real_validation/three_chapter_repaired/reports/deterministic-repair-audit.json"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_repaired/reports/deterministic-repair-audit.md"
+        },
+        {
+          "extension": ".json",
+          "path": "artifacts/real_validation/three_chapter_repaired/reports/production-pre-quality-evidence.json"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/chapters/chapter-01.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/chapters/chapter-02.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/chapters/chapter-03.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/outline/three_chapter_outline.md"
+        },
+        {
+          "extension": ".json",
+          "path": "artifacts/real_validation/three_chapter_run/reports/quality-report.json"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/real_validation/three_chapter_run/reports/quality-report.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/01_xuanhuan.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/02_qihuan.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/03_wuxia.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/04_xianxia.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/05_dushi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/06_xianshi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/07_junshi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/08_lishi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/09_youxi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/10_tiyu.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/11_kehuan.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/12_zhutian_wuxian.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/13_xuanyi.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/14_qingxiaoshuo.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/15_duanpian.md"
+        },
+        {
+          "extension": ".md",
+          "path": "artifacts/sample_chapters/qidian_main/README.md"
+        },
+        {
+          "extension": ".png",
+          "path": "assets/icons/app_icon.png"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/001.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/002.txt"
+        },
+        {
+          "extension": ".json",
+          "path": "assets/novels/source_manifest.json"
+        },
+        {
+          "extension": ".json",
+          "path": "assets/novels/source_manifest.schema.json"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/【网站：小诺.我爱你】诡秘之主.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/剑来-烽火戏诸侯.txt"
+        },
+        {
+          "extension": ".md",
+          "path": "assets/novels/引言：玄幻网文创作的核心挑战与机遇.md"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/徐纵.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/我身体里有只鬼-utf8.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/我身体里有只鬼.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/杜大脸.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/胡涵.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/胡玮.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/薛琪清.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/诸葛齐.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/谢晓曼.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/谢钧.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/郑小小.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/陆子明.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "assets/novels/魏骑光.txt"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/agent-engineering-evaluation-spec.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/architecture-improvement-roadmap.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/architecture.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/assets/ASSET_MANIFEST.md"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/cta-card.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/novel-writer-preview.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/real-desktop-ai-review.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-01.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-02.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-03.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-04.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/section-overlay-05.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/social-preview.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/summary-card.png"
+        },
+        {
+          "extension": ".png",
+          "path": "docs/assets/title-card.png"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/chapter-generation-recovery-spec.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/desktop-preview-builds.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/execution-roadmap.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/growth-roadmap.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/literary-quality-system-spec.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/literary-quality-wp3a-three-arm-experiment-contract.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/migrations/literary-quality-wp0-source-admission.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/milestone-0-protocol.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/openai-compatible-providers.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/prd.md"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/sample-project-moon-tide.md"
+        },
+        {
+          "extension": ".json",
+          "path": "docs/schema-compatibility-matrix.json"
+        },
+        {
+          "extension": ".md",
+          "path": "docs/trial-readiness.md"
+        },
+        {
+          "extension": ".pen",
+          "path": "editor.pen"
+        },
+        {
+          "extension": "",
+          "path": "linux/.gitignore"
+        },
+        {
+          "extension": ".txt",
+          "path": "linux/CMakeLists.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "linux/flutter/CMakeLists.txt"
+        },
+        {
+          "extension": ".cmake",
+          "path": "linux/flutter/generated_plugins.cmake"
+        },
+        {
+          "extension": ".txt",
+          "path": "linux/runner/CMakeLists.txt"
+        },
+        {
+          "extension": "",
+          "path": "macos/.gitignore"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Flutter/Flutter-Debug.xcconfig"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Flutter/Flutter-Release.xcconfig"
+        },
+        {
+          "extension": ".pbxproj",
+          "path": "macos/Runner.xcodeproj/project.pbxproj"
+        },
+        {
+          "extension": ".plist",
+          "path": "macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"
+        },
+        {
+          "extension": ".xcscheme",
+          "path": "macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme"
+        },
+        {
+          "extension": ".xcworkspacedata",
+          "path": "macos/Runner.xcworkspace/contents.xcworkspacedata"
+        },
+        {
+          "extension": ".plist",
+          "path": "macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist"
+        },
+        {
+          "extension": ".json",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png"
+        },
+        {
+          "extension": ".png",
+          "path": "macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png"
+        },
+        {
+          "extension": ".xib",
+          "path": "macos/Runner/Base.lproj/MainMenu.xib"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Runner/Configs/AppInfo.xcconfig"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Runner/Configs/Debug.xcconfig"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Runner/Configs/Release.xcconfig"
+        },
+        {
+          "extension": ".xcconfig",
+          "path": "macos/Runner/Configs/Warnings.xcconfig"
+        },
+        {
+          "extension": ".entitlements",
+          "path": "macos/Runner/DebugProfile.entitlements"
+        },
+        {
+          "extension": ".plist",
+          "path": "macos/Runner/Info.plist"
+        },
+        {
+          "extension": ".entitlements",
+          "path": "macos/Runner/Release.entitlements"
+        },
+        {
+          "extension": ".lock",
+          "path": "pubspec.lock"
+        },
+        {
+          "extension": ".json",
+          "path": "test/fixtures/golden_prompts/scene_prompt_projection_fixtures.json"
+        },
+        {
+          "extension": ".json",
+          "path": "test/fixtures/sample_project_fixture.json"
+        },
+        {
+          "extension": ".json",
+          "path": "test/fixtures/story_quality/dev_v1/calibration-development.json"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/causal_mainline_hard.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/craft_weakness.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/effective_deviation.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/high_score_disguised_bad.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/motivation_relationship.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/pov_knowledge.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/pretty_hollow.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/style_choice.jsonl"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/fixtures/world_object_time.jsonl"
+        },
+        {
+          "extension": ".json",
+          "path": "test/fixtures/story_quality/dev_v1/manifest.json"
+        },
+        {
+          "extension": ".jsonl",
+          "path": "test/fixtures/story_quality/dev_v1/provenance.jsonl"
+        },
+        {
+          "extension": ".txt",
+          "path": "test/fixtures/unicode-17.0.0/NormalizationTest.txt"
+        },
+        {
+          "extension": ".png",
+          "path": "web/favicon.png"
+        },
+        {
+          "extension": ".png",
+          "path": "web/icons/Icon-192.png"
+        },
+        {
+          "extension": ".png",
+          "path": "web/icons/Icon-512.png"
+        },
+        {
+          "extension": ".png",
+          "path": "web/icons/Icon-maskable-192.png"
+        },
+        {
+          "extension": ".png",
+          "path": "web/icons/Icon-maskable-512.png"
+        },
+        {
+          "extension": ".html",
+          "path": "web/index.html"
+        },
+        {
+          "extension": ".json",
+          "path": "web/manifest.json"
+        },
+        {
+          "extension": "",
+          "path": "windows/.gitignore"
+        },
+        {
+          "extension": ".txt",
+          "path": "windows/CMakeLists.txt"
+        },
+        {
+          "extension": ".txt",
+          "path": "windows/flutter/CMakeLists.txt"
+        },
+        {
+          "extension": ".cmake",
+          "path": "windows/flutter/generated_plugins.cmake"
+        },
+        {
+          "extension": ".txt",
+          "path": "windows/runner/CMakeLists.txt"
+        },
+        {
+          "extension": ".rc",
+          "path": "windows/runner/Runner.rc"
+        },
+        {
+          "extension": ".ico",
+          "path": "windows/runner/resources/app_icon.ico"
+        },
+        {
+          "extension": ".manifest",
+          "path": "windows/runner/runner.exe.manifest"
+        }
+      ]
+    },
+    "content_language_classification_changes": [
+      {
+        "content_language": "cpp",
+        "extension_language": "c",
+        "path": "windows/runner/flutter_window.h"
+      },
+      {
+        "content_language": "cpp",
+        "extension_language": "c",
+        "path": "windows/runner/win32_window.h"
+      }
+    ],
+    "content_language_classification_failed": false
+  },
+  "codegraph_candidate_evidence": {
+    "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+    "presentation_only": true,
+    "candidate_only": true,
+    "counts": {
+      "nodes": 19082,
+      "call_sites": 94569,
+      "candidate_call_sites": 39508,
+      "unbound_call_sites": 55061,
+      "candidate_targets": 39508,
+      "non_call_relations_in_node_metadata": 99039,
+      "structural_relations_in_node_metadata": 19526
+    },
+    "node_kinds": {
+      "class": 1868,
+      "constant": 1094,
+      "enum": 195,
+      "enum_member": 926,
+      "function": 3006,
+      "import": 5373,
+      "method": 5658,
+      "module": 917,
+      "struct": 3,
+      "type_alias": 42
+    },
+    "nodes_by_language": {
+      "c": 10,
+      "cpp": 97,
+      "dart": 18943,
+      "swift": 25,
+      "yaml": 7
+    },
+    "relation_kinds": {
+      "calls": 92193,
+      "function_ref": 2370,
+      "instantiates": 6
+    },
+    "resolutions": {
+      "ambiguous": 39508,
+      "dynamic": 55061
+    },
+    "examples": [
+      {
+        "edge_id": "edge:cg:10972861529968aa9e5e00b3f4ec",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "WidgetsFlutterBinding.ensureInitialized",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 20,
+        "column": 43,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:10972861529968aa9e5e00b3f4ec"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:199f1b6a301e27a265a0cee6880b",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "StateError",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 23,
+        "column": 22,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:199f1b6a301e27a265a0cee6880b"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:5d018c6f7b53be2683acdd46247e",
+        "source_node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+        "expression": "trim",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 26,
+        "column": 51,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:5d018c6f7b53be2683acdd46247e"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:d815aa0c3ed7abb25414f6d3c8c0",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "trim",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 26,
+        "column": 51,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:d815aa0c3ed7abb25414f6d3c8c0"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:db3b076c2bf05444898492d7e47d",
+        "source_node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+        "expression": "trim",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 26,
+        "column": 51,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:db3b076c2bf05444898492d7e47d"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:25f198d8f711577a3977dbd73393",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "StateError",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 27,
+        "column": 42,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:25f198d8f711577a3977dbd73393"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:70341ef496f509ecdf919e26c5c5",
+        "source_node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+        "expression": "StateError",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 27,
+        "column": 42,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:70341ef496f509ecdf919e26c5c5"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:71fa74b82b3f64180ce40feb49d1",
+        "source_node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+        "expression": "StateError",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 27,
+        "column": 42,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:71fa74b82b3f64180ce40feb49d1"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:3714a884cd13cb388c53b1e5fe86",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "agentEvaluationRealReleaseConfigurationFromEnvironment",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 32,
+        "column": 62,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:function:df02e933c51faef8851dd5b67fa3eaae",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:function:df02e933c51faef8851dd5b67fa3eaae"
+            },
+            "name": "agentEvaluationRealReleaseConfigurationFromEnvironment",
+            "file": "lib/features/story_generation/data/evaluation/agent_evaluation_private_holdout_runner.dart",
+            "line": 402,
+            "kind": "function",
+            "source_hash": "6a99cb0ba277a7779747e03fb34af0d8118e25942323265eccd1f2b6531aa071",
+            "upstream_ranking": [
+              {
+                "confidence": 0.9,
+                "resolved_by": "exact-match"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:3714a884cd13cb388c53b1e5fe86"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:e3eeb6ed59afc4928f279bf06b5c",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "value",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 33,
+        "column": 23,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9"
+            },
+            "name": "value",
+            "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+            "line": 25,
+            "kind": "function",
+            "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+            "upstream_ranking": [
+              {
+                "confidence": 0.9,
+                "resolved_by": "exact-match"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:e3eeb6ed59afc4928f279bf06b5c"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:b92397641020d95f3e46b40d3764",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "base64Decode",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 38,
+        "column": 41,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:b92397641020d95f3e46b40d3764"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:7abec824e6368ad4ade790ea262c",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "value",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 39,
+        "column": 8,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "function_ref",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9"
+            },
+            "name": "value",
+            "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+            "line": 25,
+            "kind": "function",
+            "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+            "upstream_ranking": [
+              {
+                "confidence": 0.9,
+                "resolved_by": "function-ref"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:7abec824e6368ad4ade790ea262c"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:eae10b481bcd91a0cc525b389dbe",
+        "source_node_id": "cg:dart:file:lib/agent_evaluation_private_holdout_runtime.dart",
+        "expression": "value",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 39,
+        "column": 8,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "function_ref",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9"
+            },
+            "name": "value",
+            "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+            "line": 25,
+            "kind": "function",
+            "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+            "upstream_ranking": [
+              {
+                "confidence": 0.9,
+                "resolved_by": "function-ref"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:eae10b481bcd91a0cc525b389dbe"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:a5268e15f45dcba68360d9e65011",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "value",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 39,
+        "column": 13,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9"
+            },
+            "name": "value",
+            "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+            "line": 25,
+            "kind": "function",
+            "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+            "upstream_ranking": [
+              {
+                "confidence": 0.9,
+                "resolved_by": "exact-match"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:a5268e15f45dcba68360d9e65011"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:c65cbeb14f6e1a78f767aa635b92",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "jsonDecode",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 41,
+        "column": 41,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:c65cbeb14f6e1a78f767aa635b92"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:47b7cb106a5e9581d4e59f121cc9",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "value",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 42,
+        "column": 13,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9"
+            },
+            "name": "value",
+            "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+            "line": 25,
+            "kind": "function",
+            "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+            "upstream_ranking": [
+              {
+                "confidence": 0.9,
+                "resolved_by": "exact-match"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:47b7cb106a5e9581d4e59f121cc9"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:4d7c0aa6b096af72a214be0797e0",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "int.tryParse",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 44,
+        "column": 36,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:4d7c0aa6b096af72a214be0797e0"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:045dc802166419dd7268b8cfbaf0",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "value",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 45,
+        "column": 13,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9"
+            },
+            "name": "value",
+            "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+            "line": 25,
+            "kind": "function",
+            "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+            "upstream_ranking": [
+              {
+                "confidence": 0.9,
+                "resolved_by": "exact-match"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:045dc802166419dd7268b8cfbaf0"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:d341ecca8da2b7b2adfb02ed5d27",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "argumentsDecoded.any",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 49,
+        "column": 30,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:d341ecca8da2b7b2adfb02ed5d27"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:8a4c9fc76cda1eeaf26e4d14bd65",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "StateError",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 51,
+        "column": 24,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:8a4c9fc76cda1eeaf26e4d14bd65"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:d4640bafbb8e494c14f1f25fd3ec",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "trim",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 54,
+        "column": 75,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "dynamic",
+        "candidate_only": true,
+        "candidate_count": 0,
+        "targets": [],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:d4640bafbb8e494c14f1f25fd3ec"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:0b070a73966b25550ec53cd6a2d1",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "AgentEvaluationExternalCustodyTrustRegistry.production",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 56,
+        "column": 64,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:method:42f5617a4ab863eb524b9e63275fa747",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:method:42f5617a4ab863eb524b9e63275fa747"
+            },
+            "name": "production",
+            "file": "lib/features/story_generation/data/evaluation/agent_evaluation_external_custody_trust_store.dart",
+            "line": 199,
+            "kind": "method",
+            "source_hash": "856001702249ba1bd551a03c49e8d7aee3faa39fc33b0bae30b9b51d82085427",
+            "upstream_ranking": [
+              {
+                "confidence": 0.85,
+                "resolved_by": "qualified-name"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:0b070a73966b25550ec53cd6a2d1"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:3157c16412722b6d192e4f07e27b",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "AgentEvaluationExternalCustodyAttestationPayload.fromCanonicalJson",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 58,
+        "column": 76,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:method:cbf51b6a9940cedb6f1cea14950f18d6",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:method:cbf51b6a9940cedb6f1cea14950f18d6"
+            },
+            "name": "fromCanonicalJson",
+            "file": "lib/features/story_generation/data/evaluation/agent_evaluation_spec_evidence.dart",
+            "line": 616,
+            "kind": "method",
+            "source_hash": "f2e30daac3a97a916b6c3bf053c6a45cad3724d505e60efff8c5afb759aee11b",
+            "upstream_ranking": [
+              {
+                "confidence": 0.85,
+                "resolved_by": "qualified-name"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:3157c16412722b6d192e4f07e27b"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      },
+      {
+        "edge_id": "edge:cg:d3a67e30faed653dc64012e0f5f0",
+        "source_node_id": "cg:dart:function:4cc7d22fefd8b58227b3f8c47f590cc5",
+        "expression": "value",
+        "expression_truncated": false,
+        "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+        "line": 59,
+        "column": 17,
+        "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+        "relation_kind": "calls",
+        "resolution": "ambiguous",
+        "candidate_only": true,
+        "candidate_count": 1,
+        "targets": [
+          {
+            "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9",
+            "saved_node_matches": 1,
+            "saved_graph_locator": {
+              "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+              "node_id": "cg:dart:function:5983fdc87184e2d0cea8488b30f734c9"
+            },
+            "name": "value",
+            "file": "lib/agent_evaluation_private_holdout_runtime.dart",
+            "line": 25,
+            "kind": "function",
+            "source_hash": "c603a589ea78b415c7bcbe415e9b999015b4643ae0b84e581deceb079add4dc7",
+            "upstream_ranking": [
+              {
+                "confidence": 0.9,
+                "resolved_by": "exact-match"
+              }
+            ],
+            "upstream_ranking_total": 1
+          }
+        ],
+        "targets_truncated": false,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "edge_id": "edge:cg:d3a67e30faed653dc64012e0f5f0"
+        },
+        "full_expression_field": "expression",
+        "full_candidates_field": "candidates",
+        "upstream_ranking_field": "metadata.upstream_candidates"
+      }
+    ],
+    "node_examples": [
+      {
+        "node_id": "cg:c:file:linux/flutter/generated_plugin_registrant.h",
+        "name": "generated_plugin_registrant.h",
+        "file": "linux/flutter/generated_plugin_registrant.h",
+        "line": 1,
+        "kind": "module",
+        "language": "c",
+        "source_hash": "00f93bb5b1faefdede8f6065df327522900fb0b8efee86bacf424fd947ed14bb",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:linux/flutter/generated_plugin_registrant.h"
+        }
+      },
+      {
+        "node_id": "cg:c:file:linux/runner/my_application.h",
+        "name": "my_application.h",
+        "file": "linux/runner/my_application.h",
+        "line": 1,
+        "kind": "module",
+        "language": "c",
+        "source_hash": "a044da4b485c93d0e1a79c62356b22c8856dd2bab537ffb6a9446fc905131316",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:linux/runner/my_application.h"
+        }
+      },
+      {
+        "node_id": "cg:c:file:windows/flutter/generated_plugin_registrant.h",
+        "name": "generated_plugin_registrant.h",
+        "file": "windows/flutter/generated_plugin_registrant.h",
+        "line": 1,
+        "kind": "module",
+        "language": "c",
+        "source_hash": "dbc11635d7b1ba1887adf40df5b83d634e9c3ab0bee34510c71528bb4d73602a",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:windows/flutter/generated_plugin_registrant.h"
+        }
+      },
+      {
+        "node_id": "cg:c:file:windows/runner/resource.h",
+        "name": "resource.h",
+        "file": "windows/runner/resource.h",
+        "line": 1,
+        "kind": "module",
+        "language": "c",
+        "source_hash": "1fa98588b04561590ba1cf0521ab86a9db4a878312f21c9d5861d965ddd8d1ae",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:windows/runner/resource.h"
+        }
+      },
+      {
+        "node_id": "cg:c:file:windows/runner/utils.h",
+        "name": "utils.h",
+        "file": "windows/runner/utils.h",
+        "line": 1,
+        "kind": "module",
+        "language": "c",
+        "source_hash": "95a7f7dddb832997cefa937a96f89472332277e75734a5de553610760b744b03",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:windows/runner/utils.h"
+        }
+      },
+      {
+        "node_id": "cg:c:import:50fcfdf940adaaf81ca91d63fa41a41f",
+        "name": "vector",
+        "file": "windows/runner/utils.h",
+        "line": 5,
+        "kind": "import",
+        "language": "c",
+        "source_hash": "95a7f7dddb832997cefa937a96f89472332277e75734a5de553610760b744b03",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:import:50fcfdf940adaaf81ca91d63fa41a41f"
+        }
+      },
+      {
+        "node_id": "cg:c:import:51490c8d8f8e69e3a8a82fcc1d4d2bcf",
+        "name": "gtk/gtk.h",
+        "file": "linux/runner/my_application.h",
+        "line": 4,
+        "kind": "import",
+        "language": "c",
+        "source_hash": "a044da4b485c93d0e1a79c62356b22c8856dd2bab537ffb6a9446fc905131316",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:import:51490c8d8f8e69e3a8a82fcc1d4d2bcf"
+        }
+      },
+      {
+        "node_id": "cg:c:import:53656577b253f52cbed39da8bb6a03c7",
+        "name": "flutter_linux/flutter_linux.h",
+        "file": "linux/flutter/generated_plugin_registrant.h",
+        "line": 10,
+        "kind": "import",
+        "language": "c",
+        "source_hash": "00f93bb5b1faefdede8f6065df327522900fb0b8efee86bacf424fd947ed14bb",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:import:53656577b253f52cbed39da8bb6a03c7"
+        }
+      },
+      {
+        "node_id": "cg:c:import:8fc649967821c48317be4b35ca8324ce",
+        "name": "string",
+        "file": "windows/runner/utils.h",
+        "line": 4,
+        "kind": "import",
+        "language": "c",
+        "source_hash": "95a7f7dddb832997cefa937a96f89472332277e75734a5de553610760b744b03",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:import:8fc649967821c48317be4b35ca8324ce"
+        }
+      },
+      {
+        "node_id": "cg:c:import:d4980aa63d2b825ee5e93e9852a59e58",
+        "name": "flutter/plugin_registry.h",
+        "file": "windows/flutter/generated_plugin_registrant.h",
+        "line": 10,
+        "kind": "import",
+        "language": "c",
+        "source_hash": "dbc11635d7b1ba1887adf40df5b83d634e9c3ab0bee34510c71528bb4d73602a",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:import:d4980aa63d2b825ee5e93e9852a59e58"
+        }
+      },
+      {
+        "node_id": "cg:cpp:class:0f8e91898116242da89b2df17f84e7c4",
+        "name": "FlutterWindow",
+        "file": "windows/runner/flutter_window.h",
+        "line": 12,
+        "kind": "class",
+        "language": "cpp",
+        "source_hash": "38e0fcd3a0b83895852ec295cb70d90179c0dcd40d58f065eb5232a4ecd84898",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:class:0f8e91898116242da89b2df17f84e7c4"
+        }
+      },
+      {
+        "node_id": "cg:cpp:class:b9739a6128c7210a9bcdea98d5861cf2",
+        "name": "WindowClassRegistrar",
+        "file": "windows/runner/win32_window.cpp",
+        "line": 59,
+        "kind": "class",
+        "language": "cpp",
+        "source_hash": "9065f31ccf746cf8b390121f958f9e959033af864aed779597066625ed56bc36",
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:class:b9739a6128c7210a9bcdea98d5861cf2"
+        }
+      }
+    ],
+    "metadata_owner_examples": [
+      {
+        "node_id": "cg:c:file:linux/flutter/generated_plugin_registrant.h",
+        "file": "linux/flutter/generated_plugin_registrant.h",
+        "line": 1,
+        "non_call_relations": 1,
+        "structural_relations": 1,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:linux/flutter/generated_plugin_registrant.h"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:c:file:linux/runner/my_application.h",
+        "file": "linux/runner/my_application.h",
+        "line": 1,
+        "non_call_relations": 1,
+        "structural_relations": 1,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:linux/runner/my_application.h"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:c:file:windows/flutter/generated_plugin_registrant.h",
+        "file": "windows/flutter/generated_plugin_registrant.h",
+        "line": 1,
+        "non_call_relations": 1,
+        "structural_relations": 1,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:windows/flutter/generated_plugin_registrant.h"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:c:file:windows/runner/utils.h",
+        "file": "windows/runner/utils.h",
+        "line": 1,
+        "non_call_relations": 2,
+        "structural_relations": 2,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:c:file:windows/runner/utils.h"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:cpp:class:0f8e91898116242da89b2df17f84e7c4",
+        "file": "windows/runner/flutter_window.h",
+        "line": 12,
+        "non_call_relations": 1,
+        "structural_relations": 1,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:class:0f8e91898116242da89b2df17f84e7c4"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:cpp:class:b9739a6128c7210a9bcdea98d5861cf2",
+        "file": "windows/runner/win32_window.cpp",
+        "line": 59,
+        "non_call_relations": 0,
+        "structural_relations": 5,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:class:b9739a6128c7210a9bcdea98d5861cf2"
+        },
+        "metadata_fields": [
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:cpp:class:da754f8625bf3883e4d6b63f0c5ebdac",
+        "file": "windows/runner/win32_window.h",
+        "line": 13,
+        "non_call_relations": 0,
+        "structural_relations": 3,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:class:da754f8625bf3883e4d6b63f0c5ebdac"
+        },
+        "metadata_fields": [
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:cpp:file:linux/flutter/generated_plugin_registrant.cc",
+        "file": "linux/flutter/generated_plugin_registrant.cc",
+        "line": 1,
+        "non_call_relations": 1,
+        "structural_relations": 2,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:file:linux/flutter/generated_plugin_registrant.cc"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:cpp:file:linux/runner/main.cc",
+        "file": "linux/runner/main.cc",
+        "line": 1,
+        "non_call_relations": 1,
+        "structural_relations": 2,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:file:linux/runner/main.cc"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:cpp:file:linux/runner/my_application.cc",
+        "file": "linux/runner/my_application.cc",
+        "line": 1,
+        "non_call_relations": 4,
+        "structural_relations": 14,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:file:linux/runner/my_application.cc"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:cpp:file:windows/flutter/generated_plugin_registrant.cc",
+        "file": "windows/flutter/generated_plugin_registrant.cc",
+        "line": 1,
+        "non_call_relations": 1,
+        "structural_relations": 2,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:file:windows/flutter/generated_plugin_registrant.cc"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      },
+      {
+        "node_id": "cg:cpp:file:windows/runner/flutter_window.cpp",
+        "file": "windows/runner/flutter_window.cpp",
+        "line": 1,
+        "non_call_relations": 3,
+        "structural_relations": 8,
+        "saved_graph_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "node_id": "cg:cpp:file:windows/runner/flutter_window.cpp"
+        },
+        "metadata_fields": [
+          "codegraph_relations",
+          "codegraph_structure"
+        ]
+      }
+    ],
+    "limits": {
+      "call_sites": 24,
+      "targets_per_site": 8,
+      "nodes": 12,
+      "metadata_owners": 12,
+      "expression_characters": 512
+    },
+    "examples_truncated": true,
+    "sampling": "First saved call-like records, replacing the final example with the first missing candidate/unbound category when available; not representative or additional coverage.",
+    "confidence_meaning": "Heuristic upstream ranking, not a probability, deterministic binding, or functional completion.",
+    "call_site_meaning": "Saved CodeGraph call-like edges; relation_kind distinguishes calls, instantiation and function references.",
+    "metadata_meaning": "Non-call and structural relations remain in saved node metadata; they are not promoted to call edges.",
+    "locator_meaning": "Use snapshot_id and the complete edge_id or node_id to retrieve full saved graph evidence."
+  },
+  "coverage": {
+    "files_selected": 927,
+    "files_parsed": 881,
+    "file_statuses": {
+      "captured_metadata": 7,
+      "parse_error": 35,
+      "parsed": 881,
+      "unsupported": 4
+    },
+    "file_statuses_by_language": {
+      "c": {
+        "parse_error": 3,
+        "parsed": 2
+      },
+      "cpp": {
+        "parse_error": 5,
+        "parsed": 5
+      },
+      "dart": {
+        "parse_error": 27,
+        "parsed": 864
+      },
+      "python": {
+        "parsed": 5
+      },
+      "shell": {
+        "unsupported": 4
+      },
+      "swift": {
+        "parsed": 4
+      },
+      "typescript": {
+        "parsed": 1
+      },
+      "yaml": {
+        "captured_metadata": 7
+      }
+    },
+    "file_status_meanings": {
+      "parsed": "Grammar parsing completed; no functional correctness or deterministic call binding is implied.",
+      "captured_metadata": "File or metadata captured without a general symbol-level parser.",
+      "structural_extracted": "Custom/template structure extracted; complete embedded syntax validation is not established.",
+      "parse_error": "Parser/frontend reported an error; any retained structural evidence is partial."
+    },
+    "saved_stats_meaning": "Saved snapshot values, not current runtime capability probes. Legacy files_failed counts all non-parsed statuses, including metadata/structural extraction; missing saved fields remain null.",
+    "unparsed_files": [
+      {
+        "file": ".github/ISSUE_TEMPLATE/author-feedback.yml",
+        "hash": "4ae11548d557f525ded76bbfa10726f8c538c32f069a5b564d73164693a96791",
+        "language": "yaml",
+        "status": "captured_metadata",
+        "error": "File/metadata tracking only; this input has no general symbol-level parser"
+      },
+      {
+        "file": ".github/workflows/docs-check.yml",
+        "hash": "7c9f899394e24f09015f461470f20cba96b4fd851313221e0660e5cdde57812b",
+        "language": "yaml",
+        "status": "captured_metadata",
+        "error": "File/metadata tracking only; this input has no general symbol-level parser"
+      },
+      {
+        "file": ".github/workflows/flutter-analyze-test.yml",
+        "hash": "f775ead26ebfcc0089236ce7f072e33dd0cb9cbe8ea5d20558b329dba1cd004a",
+        "language": "yaml",
+        "status": "captured_metadata",
+        "error": "File/metadata tracking only; this input has no general symbol-level parser"
+      },
+      {
+        "file": ".github/workflows/verify-macos.yml",
+        "hash": "91c0e48daa6ac977a16694906b6775b708965feecded34ba526bdc3749ccda6e",
+        "language": "yaml",
+        "status": "captured_metadata",
+        "error": "File/metadata tracking only; this input has no general symbol-level parser"
+      },
+      {
+        "file": ".github/workflows/verify-windows.yml",
+        "hash": "9b6c1d6e6734520051d3340a7b5d3fcbde839e9024eda3cb648cd0e0b5a48d8c",
+        "language": "yaml",
+        "status": "captured_metadata",
+        "error": "File/metadata tracking only; this input has no general symbol-level parser"
+      },
+      {
+        "file": "analysis_options.yaml",
+        "hash": "2421b39364a43eacbddcd242ce7ac96a69fe743e3850342b9f01a996d94576e1",
+        "language": "yaml",
+        "status": "captured_metadata",
+        "error": "File/metadata tracking only; this input has no general symbol-level parser"
+      },
+      {
+        "file": "lib/app/llm/app_llm_call_trace.dart",
+        "hash": "003796ce572609b214c267c98e6e40e9899638e8fe705bf66d5ee0f1afc7e081",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/app/llm/app_llm_output_schema.dart",
+        "hash": "741ac35af1994633766112d35f8f77c5df94e9288605a615be688f8ca68d6bfe",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/app/llm/app_llm_prompt_renderer.dart",
+        "hash": "5317210209d5c0cf257644139d1f452c58131e9e35db0a425e7a48e45384e012",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/app/llm/app_llm_providers.dart",
+        "hash": "e9c6a076caaf87a52e5f2e3efab3cc17e0d1c147e8590ba461181ee0c3bf7646",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/app/llm/gateway_interceptor.dart",
+        "hash": "10a6a0db2c92b8bf027658e2327f5bbc42fe408857a7f15432f6a62a21a0d1e9",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/app/rag/local_rag_storage.dart",
+        "hash": "a4e15298882822af0c5403176ab3a8fb1fb22c6c1f016fde3943e353fe4e72d1",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/app/state/ai_request_service.dart",
+        "hash": "436b4b761a47ef4ab7927d3e76670a5033d4bce4c269744caf41a7c17f55343d",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/app/state/app_workspace_store.dart",
+        "hash": "5fd935373314dc2e15dde78e5f735a975c88b6ce5b57b8109c395e31eed636c4",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/domain/json_utils.dart",
+        "hash": "9bd94e683d9d951fb42a33483225e48e25bf93b2eba041c46d172d8f101206df",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/domain/settings.dart",
+        "hash": "d4a984531ae3ca6400449aa1090d5953953d6e9d79556ee834aa24fe020e282e",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/import_export/data/project_transfer_models.dart",
+        "hash": "13ca0c23d65e004837fc8555179d99277e549d452e123885c6de907febc33d1b",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/import_export/data/standard_format_exporter.dart",
+        "hash": "bd1ad83bcd275cd0eafc35f7e98e8b9a9657d0e8321ad9c80d211db25fd6e6d9",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/evaluation/agent_evaluation_external_signer.dart",
+        "hash": "bee142e750ecfca0e71b81b61ea9266a8a7b5dbcd3511e9f249ec154d7df2332",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/evaluation/agent_evaluation_metered_client.dart",
+        "hash": "0d6852971a683e13b51f543d8f2e2b690d5e2762335407b955e8dfaa574fd8e1",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/evaluation/agent_evaluation_typed_evidence.dart",
+        "hash": "c05a08b473ce6a23c824745c3a6c317968c966756faf6f1661b1e27e4e842952",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/generation_ledger.dart",
+        "hash": "3881483a4c236b9349de379216feecfa169ba8811c7b4aeb6715c2a27f86afef",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/generation_ledger_models.dart",
+        "hash": "4453d504afbc995fe67ddfe0ec952db32d003be13ae5a90085488ea5adc22960",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/pipeline_stage_runner_impl.dart",
+        "hash": "e4ebbb3ab5ef3320c2b49baba25bb2cbf945bd827aecb7a169e1ce49d461cf1c",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/roleplay_session_store_io.dart",
+        "hash": "8d823095cc854cf796093ed23dcf14dfa12ae93fa3075449164c32ee9b6a9d3e",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/scene_brief_builder.dart",
+        "hash": "d076dd99099051fc6602020c8afe1c3fafd6cdddf18715b6a0fef742d2b88462",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/data/story_prompt_templates.dart",
+        "hash": "484dbe630dce75130b2a3b4372fcf78dd90ac28576c5e59d9ce96270604b786a",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/story_generation/domain/outline_plan_models.dart",
+        "hash": "75a284ba8d682729d5ce44765fc1b2542af134dcf38ffd18ff97a6cbdd9ce891",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "lib/features/workbench/presentation/workbench_shell_actions.dart",
+        "hash": "7cd91ce353bf66ba90553671c45e6a83bdbd2619d568168d2d62154ce12c574c",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "linux/runner/main.cc",
+        "hash": "ea23f7cdf74091d63bba29ef60486370b766157b848f0cfe62bd8b1c1695a0c1",
+        "language": "cpp",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "linux/runner/my_application.cc",
+        "hash": "6bca8329dc17dcf47bc2b570fb5a219e968915c5a2400facbaa260f7369ad5ad",
+        "language": "cpp",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "linux/runner/my_application.h",
+        "hash": "a044da4b485c93d0e1a79c62356b22c8856dd2bab537ffb6a9446fc905131316",
+        "language": "c",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "pubspec.yaml",
+        "hash": "ae53b1c1711cb77fcf1fd85649d8964417b7e93c2bcd637f54553db732b4ac47",
+        "language": "yaml",
+        "status": "captured_metadata",
+        "error": "File/metadata tracking only; this input has no general symbol-level parser"
+      },
+      {
+        "file": "scripts/macos_clang_wrapper.sh",
+        "hash": "0f59304e99c6caa404c6367bd4cf8ef17bfcc6be2bdd8f8dafe025e26e765e30",
+        "language": "shell",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "scripts/macos_flutter_assemble.sh",
+        "hash": "21e1003bf4cf04f62acb3e3e72b5a9d3d74581bb7c97a1c032f311fd17ac52c7",
+        "language": "shell",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "scripts/package_macos_preview.sh",
+        "hash": "6a1a24221459c7aedf9127cc1f72dcd4c89ec09e7ef4c98fe9023f016045719f",
+        "language": "shell",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "scripts/verify_macos.sh",
+        "hash": "efc3d8f628dab13c78da3bf682f00fb3e1eaf0e966c47eb3a68de84fd478d2ce",
+        "language": "shell",
+        "status": "unsupported",
+        "error": "此源码语言不在当前分析能力或配置范围中"
+      },
+      {
+        "file": "test/agent_evaluation_report_test.dart",
+        "hash": "c93c686ccf35ccf4ba8b896cf3ac8699ae0d8f8eb736e2025985d0826302c9c7",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "test/real_chapter_generation_commit_gate_test.dart",
+        "hash": "0a41827ee7fae311a28c915c0e5cdf1468151afe5c7c25b679d68c97b7eae5fe",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "test/repaired_three_chapter_artifact_test.dart",
+        "hash": "f72def54ae8f6b67f3e9b3e6576fbe977c3f2096b18782e1ec3db81077163fce",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "tool/real_chain_probe.dart",
+        "hash": "9cfb55dfb847912641aa80be8f2ef7181e92fbd9b278da9525351232b547a938",
+        "language": "dart",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "windows/flutter/generated_plugin_registrant.h",
+        "hash": "dbc11635d7b1ba1887adf40df5b83d634e9c3ab0bee34510c71528bb4d73602a",
+        "language": "c",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "windows/runner/main.cpp",
+        "hash": "ab319e54e753697dceb7a13ae8e46002bf5b665ea2dfc03ca536f4d90a186288",
+        "language": "cpp",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "windows/runner/utils.h",
+        "hash": "95a7f7dddb832997cefa937a96f89472332277e75734a5de553610760b744b03",
+        "language": "c",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "windows/runner/win32_window.cpp",
+        "hash": "9065f31ccf746cf8b390121f958f9e959033af864aed779597066625ed56bc36",
+        "language": "cpp",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      },
+      {
+        "file": "windows/runner/win32_window.h",
+        "hash": "7dd03746b19dcf3542829b2f6e8ed40a2714ce5f2cb3b0e23f0118a2fcf62d62",
+        "language": "cpp",
+        "status": "parse_error",
+        "error": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial"
+      }
+    ],
+    "support_inputs": [
+      {
+        "capture_reason": "codegraph_project_manifest",
+        "error": null,
+        "hash": "ae53b1c1711cb77fcf1fd85649d8964417b7e93c2bcd637f54553db732b4ac47",
+        "kind": "support_input",
+        "path": "pubspec.yaml",
+        "size_bytes": 3926,
+        "status": "captured",
+        "text_hash": "ae53b1c1711cb77fcf1fd85649d8964417b7e93c2bcd637f54553db732b4ac47"
+      }
+    ],
+    "selection_scope": [
+      "."
+    ],
+    "excluded": [
+      ".git",
+      ".venv",
+      "venv",
+      "__pycache__",
+      "node_modules",
+      ".callscope",
+      "build",
+      "dist"
+    ],
+    "meaning": "Captured source and parser scope only; no function or business coverage percentage is inferred."
+  },
+  "architecture": {
+    "areas": [
+      {
+        "directory": ".",
+        "files": 2,
+        "parsed": 0,
+        "languages": {
+          "yaml": 2
+        },
+        "node_types": {
+          "module": 2
+        },
+        "file_statuses": {
+          "captured_metadata": 2
+        }
+      },
+      {
+        "directory": ".github/ISSUE_TEMPLATE",
+        "files": 1,
+        "parsed": 0,
+        "languages": {
+          "yaml": 1
+        },
+        "node_types": {
+          "module": 1
+        },
+        "file_statuses": {
+          "captured_metadata": 1
+        }
+      },
+      {
+        "directory": ".github/workflows",
+        "files": 4,
+        "parsed": 0,
+        "languages": {
+          "yaml": 4
+        },
+        "node_types": {
+          "module": 4
+        },
+        "file_statuses": {
+          "captured_metadata": 4
+        }
+      },
+      {
+        "directory": "artifacts/sample_chapters",
+        "files": 1,
+        "parsed": 1,
+        "languages": {
+          "python": 1
+        },
+        "node_types": {
+          "function": 5,
+          "module": 1
+        },
+        "file_statuses": {
+          "parsed": 1
+        }
+      },
+      {
+        "directory": "docs/assets",
+        "files": 1,
+        "parsed": 1,
+        "languages": {
+          "python": 1
+        },
+        "node_types": {
+          "function": 12,
+          "module": 1
+        },
+        "file_statuses": {
+          "parsed": 1
+        }
+      },
+      {
+        "directory": "lib",
+        "files": 3,
+        "parsed": 3,
+        "languages": {
+          "dart": 3
+        },
+        "node_types": {
+          "constant": 1,
+          "function": 12,
+          "import": 47,
+          "module": 3
+        },
+        "file_statuses": {
+          "parsed": 3
+        }
+      },
+      {
+        "directory": "lib/app",
+        "files": 202,
+        "parsed": 194,
+        "languages": {
+          "dart": 202
+        },
+        "node_types": {
+          "class": 444,
+          "constant": 331,
+          "enum": 45,
+          "enum_member": 203,
+          "function": 612,
+          "import": 811,
+          "method": 1552,
+          "module": 202,
+          "type_alias": 12
+        },
+        "file_statuses": {
+          "parse_error": 8,
+          "parsed": 194
+        }
+      },
+      {
+        "directory": "lib/domain",
+        "files": 8,
+        "parsed": 6,
+        "languages": {
+          "dart": 8
+        },
+        "node_types": {
+          "class": 17,
+          "constant": 6,
+          "enum": 10,
+          "enum_member": 54,
+          "function": 27,
+          "import": 2,
+          "method": 65,
+          "module": 8
+        },
+        "file_statuses": {
+          "parse_error": 2,
+          "parsed": 6
+        }
+      },
+      {
+        "directory": "lib/features",
+        "files": 323,
+        "parsed": 310,
+        "languages": {
+          "dart": 323
+        },
+        "node_types": {
+          "class": 1095,
+          "constant": 576,
+          "enum": 136,
+          "enum_member": 661,
+          "function": 1080,
+          "import": 1834,
+          "method": 3343,
+          "module": 323,
+          "type_alias": 26
+        },
+        "file_statuses": {
+          "parse_error": 13,
+          "parsed": 310
+        }
+      },
+      {
+        "directory": "linux/flutter",
+        "files": 2,
+        "parsed": 2,
+        "languages": {
+          "c": 1,
+          "cpp": 1
+        },
+        "node_types": {
+          "function": 1,
+          "import": 2,
+          "module": 2
+        },
+        "file_statuses": {
+          "parsed": 2
+        }
+      },
+      {
+        "directory": "linux/runner",
+        "files": 3,
+        "parsed": 0,
+        "languages": {
+          "c": 1,
+          "cpp": 2
+        },
+        "node_types": {
+          "function": 10,
+          "import": 6,
+          "module": 3,
+          "struct": 1
+        },
+        "file_statuses": {
+          "parse_error": 3
+        }
+      },
+      {
+        "directory": "macos/Flutter",
+        "files": 1,
+        "parsed": 1,
+        "languages": {
+          "swift": 1
+        },
+        "node_types": {
+          "function": 1,
+          "import": 2,
+          "module": 1
+        },
+        "file_statuses": {
+          "parsed": 1
+        }
+      },
+      {
+        "directory": "macos/Runner",
+        "files": 2,
+        "parsed": 2,
+        "languages": {
+          "swift": 2
+        },
+        "node_types": {
+          "class": 2,
+          "constant": 2,
+          "import": 4,
+          "method": 5,
+          "module": 2
+        },
+        "file_statuses": {
+          "parsed": 2
+        }
+      },
+      {
+        "directory": "macos/RunnerTests",
+        "files": 1,
+        "parsed": 1,
+        "languages": {
+          "swift": 1
+        },
+        "node_types": {
+          "class": 1,
+          "import": 3,
+          "method": 1,
+          "module": 1
+        },
+        "file_statuses": {
+          "parsed": 1
+        }
+      },
+      {
+        "directory": "scripts",
+        "files": 9,
+        "parsed": 5,
+        "languages": {
+          "dart": 1,
+          "python": 3,
+          "shell": 4,
+          "typescript": 1
+        },
+        "node_types": {
+          "class": 1,
+          "function": 22,
+          "import": 9,
+          "method": 2,
+          "module": 5
+        },
+        "file_statuses": {
+          "parsed": 5,
+          "unsupported": 4
+        }
+      },
+      {
+        "directory": "test",
+        "files": 280,
+        "parsed": 277,
+        "languages": {
+          "dart": 280
+        },
+        "node_types": {
+          "class": 235,
+          "constant": 128,
+          "enum": 1,
+          "enum_member": 2,
+          "function": 1003,
+          "import": 2237,
+          "method": 474,
+          "module": 280,
+          "type_alias": 1
+        },
+        "file_statuses": {
+          "parse_error": 3,
+          "parsed": 277
+        }
+      },
+      {
+        "directory": "test/app",
+        "files": 2,
+        "parsed": 2,
+        "languages": {
+          "dart": 2
+        },
+        "node_types": {
+          "class": 1,
+          "function": 3,
+          "import": 7,
+          "method": 3,
+          "module": 2
+        },
+        "file_statuses": {
+          "parsed": 2
+        }
+      },
+      {
+        "directory": "test/contracts",
+        "files": 9,
+        "parsed": 9,
+        "languages": {
+          "dart": 9
+        },
+        "node_types": {
+          "class": 6,
+          "function": 12,
+          "import": 26,
+          "method": 16,
+          "module": 9
+        },
+        "file_statuses": {
+          "parsed": 9
+        }
+      },
+      {
+        "directory": "test/fake",
+        "files": 3,
+        "parsed": 3,
+        "languages": {
+          "dart": 3
+        },
+        "node_types": {
+          "class": 4,
+          "import": 12,
+          "method": 19,
+          "module": 3
+        },
+        "file_statuses": {
+          "parsed": 3
+        }
+      },
+      {
+        "directory": "test/pipeline",
+        "files": 7,
+        "parsed": 7,
+        "languages": {
+          "dart": 7
+        },
+        "node_types": {
+          "class": 5,
+          "constant": 3,
+          "function": 22,
+          "import": 51,
+          "method": 12,
+          "module": 7
+        },
+        "file_statuses": {
+          "parsed": 7
+        }
+      },
+      {
+        "directory": "test/test_support",
+        "files": 17,
+        "parsed": 17,
+        "languages": {
+          "dart": 17
+        },
+        "node_types": {
+          "class": 27,
+          "constant": 17,
+          "enum": 2,
+          "enum_member": 4,
+          "function": 34,
+          "import": 131,
+          "method": 79,
+          "module": 17,
+          "type_alias": 2
+        },
+        "file_statuses": {
+          "parsed": 17
+        }
+      },
+      {
+        "directory": "tool",
+        "files": 36,
+        "parsed": 35,
+        "languages": {
+          "dart": 36
+        },
+        "node_types": {
+          "class": 28,
+          "constant": 30,
+          "enum": 1,
+          "enum_member": 2,
+          "function": 172,
+          "import": 159,
+          "method": 60,
+          "module": 36
+        },
+        "file_statuses": {
+          "parse_error": 1,
+          "parsed": 35
+        }
+      },
+      {
+        "directory": "windows/flutter",
+        "files": 2,
+        "parsed": 1,
+        "languages": {
+          "c": 1,
+          "cpp": 1
+        },
+        "node_types": {
+          "function": 1,
+          "import": 2,
+          "module": 2
+        },
+        "file_statuses": {
+          "parse_error": 1,
+          "parsed": 1
+        }
+      },
+      {
+        "directory": "windows/runner",
+        "files": 8,
+        "parsed": 4,
+        "languages": {
+          "c": 2,
+          "cpp": 6
+        },
+        "node_types": {
+          "class": 3,
+          "function": 6,
+          "import": 28,
+          "method": 29,
+          "module": 8,
+          "struct": 2,
+          "type_alias": 1
+        },
+        "file_statuses": {
+          "parse_error": 4,
+          "parsed": 4
+        }
+      }
+    ],
+    "dependencies": [],
+    "captured_writer_references": [],
+    "meaning": "Directory composition and authenticated resolved graph references; these do not infer responsibilities or runtime reachability.",
+    "responsibility_explanations": {
+      "version": "captured-architecture-responsibilities-1",
+      "operation_extractor_version": "captured-responsibility-source-operations-1",
+      "snapshot_identity": {
+        "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+        "source_hash": "a158abb1c85f8af04c3b76b4f0990beae3cf7085f6b85851460a0b3e97eddee2",
+        "policy_hash": "d729c9a576532af273257c9690849b74410ebc2e1126512bfa4c244bcb491011"
+      },
+      "operation_extraction_identity": {
+        "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+        "source_hash": "a158abb1c85f8af04c3b76b4f0990beae3cf7085f6b85851460a0b3e97eddee2",
+        "policy_hash": "d729c9a576532af273257c9690849b74410ebc2e1126512bfa4c244bcb491011"
+      },
+      "operations": [],
+      "declaration_explanations": [],
+      "source_location_index": {},
+      "evidence_reference_index": {},
+      "source_index_pointer_scope": "this_responsibility_explanation_object",
+      "explicit_source_transfers": [],
+      "normal_source_orders": [],
+      "authenticated_interface_reuse": [],
+      "communication_boundaries": {
+        "authenticated_ordinary_call_argument_refs": [],
+        "opaque_call_argument_refs": [],
+        "message_literal_field_refs": [],
+        "zero_argument_call_refs": [],
+        "ordinary_call_count_is_not_wire_coverage": true,
+        "matching_literals_promoted_to_wire_connection": false,
+        "cross_language_or_process_calls_created": false,
+        "meaning": "Ordinary authenticated calls, opaque effect/dispatch frontiers and captured message fields are separate. A matching method or literal does not establish a transport or end-to-end identity relation."
+      },
+      "computed_source_contract_seams": [],
+      "navigation": [],
+      "analysis_gaps": [],
+      "explanation_source_gaps": [],
+      "operation_extraction_scope": {
+        "selected_declaration_count": 0,
+        "selected_declarations_are_navigation_not_behavior": true,
+        "source_selections": [],
+        "whole_repository_operations_enumerated": false,
+        "input_report_text_used_as_expected_answer": false,
+        "finding_ids_are_navigation_context": true,
+        "ordinary_call_bindings_and_opaque_ports_are_separate": true,
+        "protocol_literal_fields_do_not_establish_wire_connectivity": true,
+        "source_bodies_and_old_fact_trees_duplicated": false,
+        "non_cst_fact_counts": {},
+        "non_cst_document_facts_are_valid_separate_evidence_not_operation_cst": true
+      },
+      "operation_extraction_flags": {
+        "source_operations_only": true,
+        "unique_fact_owner_proven": false,
+        "authorization_proven": false,
+        "opaque_storage_effects_known": false,
+        "wire_or_runtime_value_identity_proven": false,
+        "creates_calls_edge": false,
+        "target_executed": false,
+        "target_tests_run": false,
+        "target_build_run": false
+      },
+      "operation_extraction_budget": {
+        "visited_nodes": 0,
+        "operations": 0,
+        "relationships": 0,
+        "limits": {
+          "selected_declarations": 512,
+          "visited_nodes": 262144,
+          "operations": 16384,
+          "relationships": 32768,
+          "source_references_per_operation": 96,
+          "source_text_characters": 384
+        },
+        "incomplete": false
+      },
+      "presentation_limits": {
+        "statements_per_declaration": 24,
+        "relationship_examples": 384,
+        "field_examples": 12,
+        "source_characters": 360,
+        "reuse_examples": 128
+      },
+      "assessment": {
+        "state": "unknown",
+        "explanation_generated_from_actual_operations": false,
+        "source_directories_used_to_assign_responsibility": false,
+        "method_names_used_to_infer_responsibility": false,
+        "reference_report_text_used_as_evidence": false,
+        "whole_report_reproduced": false,
+        "whole_repository_ownership_proven": false,
+        "unique_fact_owner_proven": false,
+        "all_operations_authorized_proven": false,
+        "runtime_or_physical_effects_verified": false,
+        "functional_coverage_percentage_computed": false
+      },
+      "meaning": "Exact declarations are explained by actual captured record/field operations, authenticated argument handoffs and explicit guard/source relations. Business labels are navigation only; execution, delivery and projection are not collapsed into one success.",
+      "unreviewed_scope": [
+        "all writers or all routes outside selected captured scopes",
+        "arbitrary heap aliases, hidden effects, callback activation and runtime reaching values",
+        "complete authorization, physical persistence, provider success and full recovery state machines"
+      ],
+      "target_executed": false,
+      "target_tests_run": false,
+      "target_build_run": false
+    }
+  },
+  "project_declarations": {
+    "manifests": [
+      {
+        "file": "pubspec.yaml",
+        "source_file_sha256": "ae53b1c1711cb77fcf1fd85649d8964417b7e93c2bcd637f54553db732b4ac47",
+        "text_sha256": "ae53b1c1711cb77fcf1fd85649d8964417b7e93c2bcd637f54553db732b4ac47",
+        "origin": "captured-project-declaration",
+        "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+        "format": "yaml",
+        "structured_fields_not_parsed": true,
+        "saved_input_locator": {
+          "snapshot_id": "7165ea038f8a8783b2f1a0c8f0075d9cd84e784ebde6a9f84c10e850076b7dea",
+          "input_path": "pubspec.yaml"
+        },
+        "dependency_availability_verified": false,
+        "meaning": "Authenticated inert manifest reference; YAML fields and package dependencies are not interpreted."
+      }
+    ],
+    "documentation": [],
+    "gaps": [],
+    "meaning": "Captured declarations and headings describe project inputs, not verified products, installed dependencies or executed commands."
+  },
+  "judgments": [],
+  "functional_chains": [],
+  "source_relation_index": {
+    "version": "captured-relation-presentation-2",
+    "entries": [],
+    "presentation_only": true,
+    "meaning": "Navigation index into saved source-relation findings; contains no additional assessment or functional coverage claim."
+  },
+  "overlapping_source_selections": [],
+  "configured_local_assessments": [],
+  "graph_observation_counts": [
+    {
+      "type": "external_callback_boundary",
+      "status": "uncertain",
+      "count": 45
+    },
+    {
+      "type": "unresolved_call",
+      "status": "uncertain",
+      "count": 94646
+    }
+  ],
+  "report_scope": {
+    "whole_report_reproduction_claimed": false,
+    "unmodeled_functional_domains_are_not_approved": true,
+    "meaning": "Configured complete judgments, conditional source chains, local assessments and structural inventory remain separate. Missing analysis is not supplied by reference-report text."
+  },
+  "diagnostics": [
+    {
+      "level": "warning",
+      "code": "codegraph_duplicate_symbols",
+      "message": "Upstream repeated symbol identities are marked duplicate; candidate relations remain uncertain",
+      "file": "",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "unsupported_sources",
+      "message": "扫描范围包含未分析语言文件：{'shell': 4}",
+      "file": "",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "codegraph_metadata_only",
+      "message": "File/metadata tracking only; this input has no general symbol-level parser",
+      "file": ".github/ISSUE_TEMPLATE/author-feedback.yml",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "codegraph_metadata_only",
+      "message": "File/metadata tracking only; this input has no general symbol-level parser",
+      "file": ".github/workflows/docs-check.yml",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "codegraph_metadata_only",
+      "message": "File/metadata tracking only; this input has no general symbol-level parser",
+      "file": ".github/workflows/flutter-analyze-test.yml",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "codegraph_metadata_only",
+      "message": "File/metadata tracking only; this input has no general symbol-level parser",
+      "file": ".github/workflows/verify-macos.yml",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "codegraph_metadata_only",
+      "message": "File/metadata tracking only; this input has no general symbol-level parser",
+      "file": ".github/workflows/verify-windows.yml",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "codegraph_metadata_only",
+      "message": "File/metadata tracking only; this input has no general symbol-level parser",
+      "file": "analysis_options.yaml",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/app/llm/app_llm_call_trace.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/app/llm/app_llm_output_schema.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/app/llm/app_llm_prompt_renderer.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/app/llm/app_llm_providers.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/app/llm/gateway_interceptor.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/app/rag/local_rag_storage.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/app/state/ai_request_service.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/app/state/app_workspace_store.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/domain/json_utils.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/domain/settings.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/import_export/data/project_transfer_models.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/import_export/data/standard_format_exporter.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/evaluation/agent_evaluation_external_signer.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/evaluation/agent_evaluation_metered_client.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/evaluation/agent_evaluation_typed_evidence.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/generation_ledger.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/generation_ledger_models.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/pipeline_stage_runner_impl.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/roleplay_session_store_io.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/scene_brief_builder.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/data/story_prompt_templates.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/story_generation/domain/outline_plan_models.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "lib/features/workbench/presentation/workbench_shell_actions.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "linux/runner/main.cc",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "linux/runner/my_application.cc",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "linux/runner/my_application.h",
+      "line": 0
+    },
+    {
+      "level": "info",
+      "code": "codegraph_metadata_only",
+      "message": "File/metadata tracking only; this input has no general symbol-level parser",
+      "file": "pubspec.yaml",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "test/agent_evaluation_report_test.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "test/real_chapter_generation_commit_gate_test.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "test/repaired_three_chapter_artifact_test.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "tool/real_chain_probe.dart",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "windows/flutter/generated_plugin_registrant.h",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "windows/runner/main.cpp",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "windows/runner/utils.h",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "windows/runner/win32_window.cpp",
+      "line": 0
+    },
+    {
+      "level": "warning",
+      "code": "codegraph_syntax_partial",
+      "message": "Upstream grammar has syntax errors; retained structural/candidate evidence is partial",
+      "file": "windows/runner/win32_window.h",
+      "line": 0
+    }
+  ],
+  "target_executed": false,
+  "target_tests_run": false,
+  "target_build_run": false,
+  "runtime_functionality_verified": false,
+  "report_components": {
+    "generator": "captured-project-analysis-report-4",
+    "presentation": "captured-relation-presentation-2",
+    "markdown": "captured-human-report-markdown-2",
+    "responsibility_explanations": "captured-architecture-responsibilities-1",
+    "responsibility_operations": "captured-responsibility-source-operations-1",
+    "current_semantic_parser_versions": {
+      "typescript": "tree-sitter-0.25.2+tree-sitter-typescript-0.23.2+cpython-3.12.14"
+    },
+    "generating_tool_identity": {
+      "source_hash": "638a0a3974e1b84c5a6b94d271a8a85ede94e54dda1e35d09f8033fdc4370214",
+      "graph_backend": "axon-graph-core-1",
+      "axon_commit": "2b386fb38a468201ab2ec825ddea5ebf4c33f513",
+      "codegraph_commit": "8f1f842b5b828175992d2ce2cdf673b955b2cce9"
+    },
+    "meaning": "Report generation versions are separate from the saved snapshot's analysis versions. Explanations interpret captured source; existing findings are not upgraded."
+  },
+  "documentation_comparisons": []
+}

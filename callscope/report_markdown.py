@@ -9,7 +9,7 @@ import html
 import json
 from typing import Any
 
-VERSION = "captured-human-report-markdown-1"
+VERSION = "captured-human-report-markdown-2"
 _LIMITS = {"semantic_rows": 18, "source_order_steps": 12,
     "declaration_summaries": 512, "conditions": 8, "value_characters": 300}
 _HIDDEN = frozenset({"id", "origin", "location", "source_locations", "parse_identity", "parse_provenance",
@@ -190,6 +190,102 @@ def _chain(chain: dict, index: int, entry: dict) -> list[str]:
     return lines
 
 
+def _language_coverage(report: dict) -> list[str]:
+    stats, coverage = report.get("stats", {}), report.get("coverage", {})
+    lines = ["### 语言、文件状态与发现范围", "",
+        "以下使用快照保存的统计与能力登记。注册语言、前端可用、语法解析和功能验证分别记录；"
+        "没有保存的字段保持未知，不使用当前环境补写历史结果。", "",
+        "`parsed` 表示语法解析完成；`captured_metadata` 仅有文件或元数据；"
+        "`structural_extracted` 表示已有结构提取但未建立完整嵌入语法校验；"
+        "`parse_error` 表示解析或前端失败，保留的结构只能作为局部证据。", "",
+        "| 保存状态 | 文件数 |", "| --- | --- |"]
+    lines.extend("| " + _cell(status) + " | " + str(count) + " |"
+        for status, count in sorted(coverage.get("file_statuses", {}).items()))
+    lines.extend(["", "| 语言 | 文件 | parsed | captured_metadata | structural_extracted | parse_error | 全部状态 | 节点 | 图引用 |",
+        "| --- | --- | --- | --- | --- | --- | --- | --- | --- |"])
+    by_language = stats.get("by_language") or {}
+    statuses = coverage.get("file_statuses_by_language", {})
+    for language in sorted(set(by_language) | set(statuses)):
+        counts, states = by_language.get(language, {}), statuses.get(language, {})
+        row = [language, counts.get("files_total", sum(states.values())),
+            *[states.get(state, 0) for state in ("parsed", "captured_metadata", "structural_extracted", "parse_error")],
+            states, counts.get("nodes", "未保存"), counts.get("edges", "未保存")]
+        lines.append("| " + " | ".join(_cell(value) for value in row) + " |")
+    lines.extend(["", "完整语言统计：`/stats/by_language`；逐语言实际文件状态：`/coverage/file_statuses_by_language`。"
+        "旧统计字段 `files_failed` 包含所有非 parsed 状态，不能把元数据捕获或结构提取一概解释为解析错误。", ""])
+    capabilities = stats.get("language_capabilities")
+    if isinstance(capabilities, list):
+        lines.extend(["| 语言 | 前端 | 已注册 | 可用值 / 检查状态 | 项目验证状态 | 能力层次 |",
+            "| --- | --- | --- | --- | --- | --- |"])
+        for item in capabilities:
+            row = [item.get("language"), item.get("frontend"), item.get("registered"),
+                {"available": item.get("available"), "status": item.get("availability_status")},
+                item.get("verification_status"), item.get("analysis_level")]
+            lines.append("| " + " | ".join(_cell(value) for value in row) + " |")
+    else:
+        lines.append("此快照未保存 language_capabilities。")
+    lines.extend(["", "完整登记（含扩展名与上游版本）：`/stats/language_capabilities`。登记或一次结构提取不表示该语言的全部语法和功能已经验证。", ""])
+    inventory = stats.get("file_inventory")
+    if isinstance(inventory, dict):
+        unknown = inventory.get("unrecognized_files", [])
+        lines.extend(["文件清单：发现普通文件 " + _code(inventory.get("regular_files_seen"))
+            + "；识别为源码 " + _code(inventory.get("recognized_source_files"))
+            + "；未识别 " + str(len(unknown)) + "。完整保存值：`/stats/file_inventory`。", "",
+            "| 未识别文件示例（最多 24） | 扩展名 | 完整记录 |", "| --- | --- | --- |"])
+        lines.extend("| " + _cell(item.get("path")) + " | " + _cell(item.get("extension"))
+            + " | " + _cell("/stats/file_inventory/unrecognized_files/" + str(index)) + " |"
+            for index, item in enumerate(unknown[:24]))
+        lines.extend(["", "文件清单记录扫描范围内的路径；未识别文件没有因此获得源码解析或功能覆盖。", ""])
+    else:
+        lines.extend(["此快照未保存 file_inventory。", ""])
+    return lines
+
+
+def _codegraph_evidence(report: dict) -> list[str]:
+    evidence = report.get("codegraph_candidate_evidence")
+    if not isinstance(evidence, dict):
+        return []
+    counts = evidence.get("counts", {})
+    lines = ["### CodeGraph 保存的结构与候选关系", "",
+        "真实保存节点 " + str(counts.get("nodes", 0)) + "；候选调用类站点 "
+        + str(counts.get("candidate_call_sites", 0)) + "；未绑定站点 "
+        + str(counts.get("unbound_call_sites", 0)) + "；候选目标关系 "
+        + str(counts.get("candidate_targets", 0)) + "。", "",
+        "调用类站点包括调用、实例化和函数引用，具体类别保留在 relation_kind。"
+        "这些关系只提供候选，不升级为确定调用或功能完成。confidence 是启发式排序分数，不是正确概率。", "",
+        "| 节点类型 | 保存数量 |", "| --- | --- |"]
+    lines.extend("| " + _cell(kind) + " | " + str(count) + " |"
+        for kind, count in evidence.get("node_kinds", {}).items())
+    lines.extend(["", "| 真实节点示例 | 源码位置 | 类型 | 完整节点 ID |", "| --- | --- | --- | --- |"])
+    lines.extend("| " + _cell(item.get("name")) + " | " + _cell(_location(item)) + " | "
+        + _cell(item.get("kind")) + " | " + _cell(item.get("node_id")) + " |"
+        for item in evidence.get("node_examples", []))
+    lines.extend(["", "最多展示 24 个保存站点，每站点最多 8 个候选目标；按快照顺序取样，并在两类均存在时保留候选与未绑定示例，不代表覆盖率。"
+        "完整边使用本报告快照 ID 与下列完整 edge_id 定位，完整表达式与候选仍保留在图中。", "",
+        "| 保存表达式 | 源码位置 | 类别 / 保存状态 | 候选数 | 完整 edge_id | 报告样例引用 |",
+        "| --- | --- | --- | --- | --- | --- |"])
+    for index, item in enumerate(evidence.get("examples", [])):
+        ref = "/codegraph_candidate_evidence/examples/" + str(index)
+        row = [item.get("expression"), _location(item),
+            {"kind": item.get("relation_kind"), "resolution": item.get("resolution")},
+            item.get("candidate_count"), item.get("edge_id"), ref]
+        lines.append("| " + " | ".join(_cell(value) for value in row) + " |")
+    lines.extend(["", "| 站点 edge_id | 候选目标 | 候选位置 | 上游启发式排序 | 完整候选记录 |",
+        "| --- | --- | --- | --- | --- |"])
+    for index, item in enumerate(evidence.get("examples", [])):
+        for target_index, target in enumerate(item.get("targets", [])):
+            row = [item.get("edge_id"), {"name": target.get("name"), "node_id": target.get("node_id")},
+                _location(target), target.get("upstream_ranking", []),
+                "/codegraph_candidate_evidence/examples/" + str(index) + "/targets/" + str(target_index)]
+            lines.append("| " + " | ".join(_cell(value) for value in row) + " |")
+    lines.extend(["", "非调用关系 " + str(counts.get("non_call_relations_in_node_metadata", 0))
+        + " 条、结构关系 " + str(counts.get("structural_relations_in_node_metadata", 0))
+        + " 条，保留在节点 metadata.codegraph_relations / metadata.codegraph_structure，未转成调用边。"
+        "节点定位示例：`/codegraph_candidate_evidence/metadata_owner_examples`；"
+        "完整汇总与采样上限：`/codegraph_candidate_evidence`。", ""])
+    return lines
+
+
 def render_markdown(report: dict) -> str:
     snapshot, coverage = report["snapshot"], report["coverage"]
     lines = ["# " + str(snapshot["project_name"]) + "：自动静态分析报告", "",
@@ -233,7 +329,10 @@ def render_markdown(report: dict) -> str:
         lines.extend(_chain(chain, index, entries[index] if index < len(entries) else {}))
     lines.extend(["## 捕获范围与未审边界", "",
         "选入 " + str(coverage["files_selected"]) + " 份源码，解析 " + str(coverage["files_parsed"]) + " 份。"
-        "这是源码捕获与语法解析范围，不能换算成功能完整率。", "",
+        "这是源码捕获与语法解析范围，不能换算成功能完整率。", ""])
+    lines.extend(_language_coverage(report))
+    lines.extend(_codegraph_evidence(report))
+    lines.extend([
         "| 区域 | 文件 | 已解析 |", "| --- | --- | --- |"])
     lines.extend("| " + _cell(item["directory"]) + " | " + str(item["files"]) + " | " + str(item["parsed"]) + " |"
         for item in report["architecture"]["areas"])

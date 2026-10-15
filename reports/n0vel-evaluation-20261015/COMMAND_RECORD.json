@@ -1,0 +1,75 @@
+{
+  "workdir": "/workspace/callscope",
+  "environment_overrides": {
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "executed_cli_commands": [
+    {
+      "argv": [
+        "python",
+        "-m",
+        "callscope",
+        "scan",
+        "/tmp/callscope-n0vel-evaluation/target",
+        "--config",
+        "/tmp/callscope-n0vel-evaluation/all-supported.json",
+        "--db",
+        "/tmp/callscope-n0vel-evaluation/results/baseline.sqlite3",
+        "--engine",
+        "full",
+        "--output",
+        "/tmp/callscope-n0vel-evaluation/results/baseline-scan.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "callscope",
+        "report",
+        "--db",
+        "/tmp/callscope-n0vel-evaluation/results/baseline.sqlite3",
+        "--format",
+        "markdown",
+        "--output",
+        "/tmp/callscope-n0vel-evaluation/results/baseline-report.md"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "callscope",
+        "report",
+        "--db",
+        "/tmp/callscope-n0vel-evaluation/results/baseline.sqlite3",
+        "--format",
+        "json",
+        "--output",
+        "/tmp/callscope-n0vel-evaluation/results/baseline-report.json"
+      ],
+      "exit_code": 0
+    },
+    {
+      "argv": [
+        "python",
+        "-m",
+        "callscope",
+        "scan",
+        "/tmp/callscope-n0vel-evaluation/target",
+        "--config",
+        "/tmp/callscope-n0vel-evaluation/all-supported.json",
+        "--db",
+        "/tmp/callscope-n0vel-evaluation/results/baseline.sqlite3",
+        "--engine",
+        "full",
+        "--output",
+        "/tmp/callscope-n0vel-evaluation/results/repeat-scan.json"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "verification": "Git metadata and byte/hash inspection only; no execution of target scripts"
+}

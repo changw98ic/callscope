@@ -1,8 +1,14 @@
 # 自动项目分析报告
 
-## v0.14：具体职责与文档部署对照
+## v0.15：新语言结构与候选的报告边界
 
-当前版本已接入正常 `build_project_report` / CLI / HTTP / MCP 报告路径。两库正常 full 冷/暖分析和自动报告已保存：[CPB](../reports/astra-iteration12-scope2/codepatchbay-automatic-report.md)、[WWC](../reports/astra-iteration12-scope2/winwincode-automatic-report.md)。原报告有限内容按[正式内容对照](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)核到实际正文与来源；开发查询或字段存在不能代替正式证据。
+默认 `all` 选择 38 个规范语言/格式 ID，新增语言由固定 CodeGraph 前端提供捕获源码结构与候选关系。完整清单、实际复用范围、Node.js 20–24 和身份协议见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。新增候选不能进入确定 CALLS 邻接；已有 TS/Rust 的完整判断、字段 IR、职责解释和文档比较不会因文件可解析自动扩展为新语言同级报告。
+
+报告继续从保存快照和发现生成，保留调度语言、上游方言、元数据/模板局部结构、语法缺口、候选及未建模范围。文件数、节点数、候选数量和解析比例不构成功能完整性覆盖率。没有实际扫描证据的语言保持未验证；本说明不预填新项目结果。下文 v0.14/v0.13 数字继续属于历史冻结范围，不改写原验收状态。
+
+## v0.14 历史结果：具体职责与文档部署对照
+
+v0.14 已接入正常 `build_project_report` / CLI / HTTP / MCP 报告路径。两库正常 full 冷/暖分析和自动报告已保存：[CPB](../reports/astra-iteration12-scope2/codepatchbay-automatic-report.md)、[WWC](../reports/astra-iteration12-scope2/winwincode-automatic-report.md)。原报告有限内容按[正式内容对照](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)核到实际正文与来源；开发查询或字段存在不能代替正式证据。
 
 CPB 保存3项原判断/18项必要关系、16条源码关系、15,223个实际来源操作；WWC保存2项原判断/12项必要关系、20条源码关系、10,023个实际来源操作。五项判断及30项必要关系全部支持，所选关系均为限定源码支持；图仍为partial、解析为330/333与465/471。各数量只说明保存范围，不是全仓库功能覆盖率。
 

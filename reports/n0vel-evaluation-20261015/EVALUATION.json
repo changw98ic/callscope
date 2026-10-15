@@ -1,0 +1,93 @@
+{
+  "evaluated_at": "2026-10-15T02:01:47.648021+00:00",
+  "repository": "https://github.com/changw98ic/n0vel",
+  "branch": "master",
+  "commit": "f846a62ecdd03158dbd5bff34e1afb7b816d10f9",
+  "checkout": "/tmp/callscope-n0vel-evaluation/target",
+  "target_working_tree_clean": true,
+  "tool_version": "0.14.0",
+  "tool_source_hash": "a198491ce936c91ce7a1c848789cf9fb27c5fc720b90ae81725c2ddf65f779dc",
+  "tool_core_unchanged_from_published_freeze": true,
+  "tool_core_files_verified": 65,
+  "snapshot_id": "3b37d1364b982bf3ddde3ff89db3b3d426a8b40b25dae818d9070b68cf8ace7c",
+  "source_hash": "4e6601c7311b09faf6b69af8ce5ed49fbf6d6008daaad799b038c5c77bf5ce6a",
+  "policy_hash": "dde37080b9f2a2dd346c0d6e87a1bf2cef93467f52907d50c9d405cf02477f6f",
+  "status": "partial",
+  "tracked_files": 1075,
+  "tracked_dart_files": 891,
+  "dart_physical_lines": 343554,
+  "dart_by_directory": {
+    "lib": {
+      "files": 536,
+      "physical_lines": 197559
+    },
+    "scripts": {
+      "files": 1,
+      "physical_lines": 378
+    },
+    "test": {
+      "files": 318,
+      "physical_lines": 137757
+    },
+    "tool": {
+      "files": 36,
+      "physical_lines": 7860
+    }
+  },
+  "dart_files_captured": 0,
+  "dart_files_parsed": 0,
+  "dart_lib_files_parsed": 0,
+  "dart_file_parse_fraction": {
+    "numerator": 0,
+    "denominator": 891
+  },
+  "dart_lib_file_parse_fraction": {
+    "numerator": 0,
+    "denominator": 536
+  },
+  "selected_files": 29,
+  "parsed_files": 6,
+  "known_unsupported_files": 23,
+  "dart_files_missing_from_unsupported_inventory": 891,
+  "parsed_paths": [
+    "artifacts/sample_chapters/qidian_main/verify_samples.py",
+    "docs/assets/generate_tier_a.py",
+    "scripts/filter_xcodebuild_test_output.py",
+    "scripts/kimi-proxy.mjs",
+    "scripts/test_filter_xcodebuild_test_output.py",
+    "scripts/validate_docs_bundle.py"
+  ],
+  "nodes": 44,
+  "edges": 282,
+  "resolved_calls": 102,
+  "external_calls": 103,
+  "dynamic_calls": 77,
+  "findings_count": 122,
+  "finding_types": {
+    "external_callback_boundary": 45,
+    "unresolved_call": 77
+  },
+  "finding_statuses": {
+    "uncertain": 122
+  },
+  "confirmed_automatic_functional_defects": 0,
+  "goal_contracts_configured": 0,
+  "report_claims_configured": 0,
+  "manual_risk_candidates": 3,
+  "manual_candidates_automatically_reproduced": 0,
+  "function_coverage": null,
+  "defect_recall": null,
+  "false_positive_rate": null,
+  "primary_language_functional_analysis": "not_supported",
+  "current_tool_suitable_for_n0vel_core_assessment": false,
+  "same_snapshot_on_repeat_full_scan": true,
+  "same_findings_on_repeat_full_scan": true,
+  "second_scan_created_duplicate": false,
+  "target_execution": false,
+  "target_import": false,
+  "target_tests": false,
+  "target_build": false,
+  "target_dependency_install": false,
+  "tool_tests": false,
+  "detector_or_target_source_modified": false
+}

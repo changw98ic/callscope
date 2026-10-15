@@ -7,7 +7,7 @@ import sys
 from typing import Any
 
 SCHEMA_VERSION = "2"
-ANALYZER_VERSION = "static-multilang-14"
+ANALYZER_VERSION = "static-multilang-15-codegraph"
 DETECTOR_VERSION = "call-rules-13-architecture-explanations"
 PARSER_VERSION = f"{sys.implementation.name}-{sys.version_info.major}.{sys.version_info.minor}.{sys.version_info.micro}"
 

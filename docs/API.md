@@ -1,6 +1,10 @@
 # CLI 与 HTTP API
 
-所有操作围绕纯静态分析快照。当前正式版本 v0.14：schema 2、分析器 `static-multilang-14`、检测器 `call-rules-13-architecture-explanations`。两库正常冷/暖重算及报告已保存于 [scope2](../reports/astra-iteration12-scope2/CORE_FREEZE.json)；下方旧版结果保留其原身份。扫描只读目标源码，不执行目标、测试或构建。
+所有操作围绕纯静态分析快照。当前版本 v0.15：schema 2、分析器 `static-multilang-15-codegraph`、检测器 `call-rules-13-architecture-explanations`。默认语言选择为 `all`，保留原三套前端并接入 CodeGraph 新语言/格式。v0.14 两库冷/暖重算及报告仍保存于 [scope2](../reports/astra-iteration12-scope2/CORE_FREEZE.json)，不改写其冻结身份。扫描只读目标源码，不执行目标、测试或构建。
+
+`capabilities.languages` 从共享注册表导出全部 38 个规范 ID；`language_catalog` 分别给出注册、运行时可用性未知和项目未验证状态，`language_runtime_probed=false` 不表示工具依赖已加载。`analysis_level` 区分原有限静态关系、新增结构提取和文件/元数据；不将已注册格式当作完整语义能力。配置 `analysis.languages:["all"]` 单独使用，或显式选择规范 ID/保守别名；完整目录及 Node.js 20–24 要求见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。
+
+新增 CodeGraph 节点保留 `metadata.language` 与 `upstream_language`。其调用关系的 `target` 保持 null，候选有无分别表现为 ambiguous/dynamic；confidence 不作正确率，也不形成确定路径。`stats.file_inventory` 盘点未知后缀路径，元数据、模板局部结构和语法缺口须与完整解析分列。报告解析比例仅描述对应源码选择，不能称为项目功能覆盖率；新项目数字以实际保存扫描为准。
 
 新增项目报告入口从保存证据生成架构结构、完整条件判断、主要功能链、反证和未审范围。基准是原两份分析报告，没有重复 Astra 审批步骤；见 [自动项目分析报告](AUTOMATED_REPORTS.md)。
 
@@ -8,7 +12,7 @@ v0.14 的正常报告增加 `architecture.responsibility_explanations`、`docume
 
 `capabilities.source_relations` 增加 `conditional_state_lineage`、`conditional_publication_boundary`；`document_comparisons=[document_deployment_consistency]`、`architecture_explanations=authenticated_captured_operations_and_handoffs` 表示已安装能力，并不表示当前仓库已经支持或配置。报告规则协议 `static-report-claim-policy-v2-documents` 兼容原规则；仅文档比较规则必须额外声明数据定位 `documents: [{role, file}]`，其余规则仍拒绝该字段。辅助文档须已捕获并按字节/text hash 与坐标认证，文档不产生伪造 AST 或 CALLS。
 
-## v0.14 正式保存结果
+## v0.14 历史正式保存结果
 
 | 仓库 | 正常自动报告 | 扫描身份与重复发布记录 | 所选源码关系 |
 | --- | --- | --- | --- |
@@ -146,7 +150,7 @@ CLI `report` 默认生成 Markdown，也可用 `--format json`；未指定 `--sn
 | `decide FINDING_ID` | `--snapshot ID`、`--action ACTION`、`--reason TEXT`、`--expires-at ISO8601`、`--db PATH` |
 | `mcp ROOT` | `--config PATH`、`--db PATH`、`--engine auto\|full\|cocoindex`；stdio 服务 |
 
-`scan` 持久化快照及发现；`--json` 输出 `{snapshot, findings, publication}`，`--output` 将完整报告写到指定文件。快照包含 `analyzer_version`、`detector_version`、`schema_version` 和 `parser_version`；后者保存工具源码、图/维护后端及实际语言解析组件身份的规范组合，同样参与身份计算。`stats.component_versions` 为结构化明细。维护运行计数位于 `publication.maintenance`，不进入不可变 `stats`。`path`、`anomalies` 未指定快照时使用数据库最新快照。切换数据库或项目后，应显式指定快照，避免把其他项目的结果当作当前项目。
+`scan` 持久化快照及发现；`--json` 输出 `{snapshot, findings, publication}`，`--output` 将完整报告写到指定文件。快照包含 `analyzer_version`、`detector_version`、`schema_version` 和 `parser_version`。v0.15 的 `parser_version` 为 `components-sha256:<完整组件映射 SHA256>`，用于比较和身份计算；完整映射在 `stats.component_versions` 保存一次，避免每个 Finding 重复大段组件 JSON。维护运行计数位于 `publication.maintenance`，不进入不可变 `stats`。`path`、`anomalies` 未指定快照时使用数据库最新快照。切换数据库或项目后，应显式指定快照，避免把其他项目的结果当作当前项目。
 
 引擎参数默认 `auto`：工具目录或当前 Python 安装中存在固定 CocoIndex 依赖时选用它，否则使用 `full`。`full` 每轮重算前端；`cocoindex` 使用 CocoIndex `1.0.25` 持久复用语言整体结果，依赖缺失时失败。选定 CocoIndex 后的运行失败不静默切换为 `full`。所有引擎使用 Axon 确定调用图索引，检测始终全量。缓存粒度及输入身份见 [上游复用说明](UPSTREAM_REUSE.md)。
 
@@ -210,7 +214,7 @@ python -m callscope baseline reports/astra-baseline/capability-baseline.json --d
 | GET | `/status` | 当前项目及分析服务状态 |
 | GET | `/report?snapshot_id=...` | 从保存图和发现生成项目报告 JSON |
 | GET | `/versions` | 快照列表 |
-| GET | `/graph?snapshot_id=...` | 指定版本的节点、调用边、诊断和统计 |
+| GET | `/graph?snapshot_id=...` | 指定版本的节点、调用边、文件分类、诊断和统计 |
 | GET | `/anomalies?snapshot_id=...&severity=...&type=...&q=...` | 发现筛选 |
 | GET | `/anomalies/{id}?snapshot_id=...` | 单项发现与静态证据 |
 | GET | `/evidence/source?snapshot_id=...&file=...&line=...` | 保存于指定快照的源码 |
@@ -224,7 +228,7 @@ python -m callscope baseline reports/astra-baseline/capability-baseline.json --d
 | POST | `/decisions` | 追加人工处置 |
 | GET | `/audit` | 检查本地处置记录哈希链一致性；不是不可篡改证明 |
 
-`/graph` 返回结构为 `{snapshot, nodes, edges, diagnostics, stats}`，不在图接口内联完整源码；`/anomalies` 为 `{snapshot_id, items}`；`/versions` 为 `{items}`；`/config` 为 `{config, config_path}`。
+`/graph` 返回结构为 `{snapshot, nodes, edges, files, diagnostics, stats}`。新增 `files` 仅含 `path/hash/language/status/error`，不内联源码；UI 以真实捕获分类展示扩展语言及模板特殊路径，不按最后一个文件后缀猜测语言。完整源码仍通过证据接口读取。`/anomalies` 为 `{snapshot_id, items}`；`/versions` 为 `{items}`；`/config` 为 `{config, config_path}`。
 
 `GET /status` 新增 `capabilities.static_contracts=[literal_set_consistency,required_object_fields]` 和 `support_input_capture=true`。合同finding类型为 `static_contract_literal_set_consistency` / `static_contract_required_object_fields`，仍从anomalies接口读取。metadata包含contract_hash、provenance、applicability、source_fact_confirmed与runtime_proof=false；evidence.details包含source_fact、源hash/位置、guard及反证、unknown。conditional适用性始终uncertain，不能用source_fact_confirmed替代条件证明。
 

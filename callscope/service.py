@@ -15,6 +15,7 @@ from .models import GraphSnapshot, project_id_for
 from .store import Store
 from .cocoindex_runner import CocoIndexRunner, trusted_interpreter
 from .analysis_inputs import tool_identity
+from .language_catalog import SUPPORTED_LANGUAGES, language_capabilities
 
 _LOADED_TOOL_IDENTITY = tool_identity()
 
@@ -112,7 +113,9 @@ class AnalysisService:
             "project": {"id": self.project_id, "name": name, "root": str(self.root)},
             "latest_snapshot": _metadata(latest) if latest else None,
             "analysis": state,
-            "capabilities": {"mode": "static", "languages": ["python", "typescript", "rust"], "execution": False,
+            "capabilities": {"mode": "static", "languages": list(SUPPORTED_LANGUAGES),
+                             "language_catalog": language_capabilities(), "language_runtime_probed": False,
+                             "execution": False,
                              "tests": False, "incremental_computation": self._frontend_runner is not None,
                              "incremental_granularity": "language" if self._frontend_runner else None,
                              "maintenance_engine": self._engine, "global_detection": "full",
@@ -157,6 +160,8 @@ class AnalysisService:
         snapshot = self.snapshot(snapshot_id)
         return {"snapshot": _metadata(snapshot), "nodes": [asdict(n) for n in snapshot.nodes],
                 "edges": [asdict(e) for e in snapshot.edges], "diagnostics": [asdict(d) for d in snapshot.diagnostics],
+                "files": [{"path": source.path, "hash": source.hash, "language": source.language,
+                           "status": source.status, "error": source.error} for source in snapshot.files],
                 "stats": snapshot.stats}
 
     def project_report(self, snapshot_id: str | None = None) -> dict[str, Any]:

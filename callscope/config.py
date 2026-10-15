@@ -5,11 +5,13 @@ import json
 from pathlib import Path
 from typing import Any
 
+from .language_catalog import normalize_languages
+
 DEFAULT_CONFIG: dict[str, Any] = {
     "schema_version": 1,
     "project": {"name": ""},
     "analysis": {
-        "languages": ["python"],
+        "languages": ["all"],
         "source_roots": ["."],
         "exclude": [".git", ".venv", "venv", "__pycache__", "node_modules", ".callscope", "build", "dist"],
         "max_file_bytes": 1048576,
@@ -51,9 +53,7 @@ def validate_config(value: Any) -> dict[str, Any]:
     result["analysis"].update(analysis)
     section = result["analysis"]
     languages = _strings(section["languages"], "analysis.languages", nonempty=True)
-    if len(languages) != len(set(languages)) or any(language not in {"python", "typescript", "rust"} for language in languages):
-        raise ValueError("languages 仅支持 python/typescript/rust，不能重复；typescript 包含 JS/TSX")
-    section["languages"] = languages
+    section["languages"] = normalize_languages(languages)
     roots = _strings(section["source_roots"], "analysis.source_roots", nonempty=True)
     for item in roots:
         path = Path(item)

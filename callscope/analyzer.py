@@ -1162,6 +1162,9 @@ def _module_name(path: Path, source_root: Path, package_root: bool) -> str:
 
 
 def _importable_path(path: Path, source_root: Path, package_root: bool) -> bool:
+    # .pyw is a script input, not an ordinary importlib source-module suffix.
+    if path.suffix != ".py":
+        return False
     parts = list(path.relative_to(source_root).with_suffix("").parts)
     if parts[-1] == "__init__":
         parts.pop()

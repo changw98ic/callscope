@@ -1,5 +1,15 @@
 # 真实仓库静态评估：多语言共享协议
 
+## v0.15 当前语言协议
+
+默认 `analysis.languages:["all"]`，按 `language_catalog.py` 展开为 38 个规范语言/格式 ID。Python、TypeScript/JS 家族、Rust 保留原前端；35 个新 ID 直接复用固定 CodeGraph 提取代码。上游提交、完整目录、323 份来源文件、31 份压缩语法/32 映射和 Node.js 20–24 要求见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。显式历史配置保持原选择，不把旧两库结果重记为新语言验收。
+
+`codegraph_frontend.py` 沿用下述 `nodes/edges/files/diagnostics/stats` 返回协议，但它不使用 Python `language_parser()`：固定 Node worker 仅消费相对路径、捕获文本和哈希。规范调度标签保存在 `metadata.language`，上游方言保存在 `upstream_language`。新增候选始终 `target=None`、ambiguous/dynamic；原 TS/Rust 有限 IR 或判断不自动移植到新语言。
+
+YAML/Twig/XML/properties 为文件或限定元数据层，模板与嵌入脚本需保守区分结构提取和完整语法解析。注册、工具可用、实际仓库扫描、合同支持分别记录；目录数量不构成功能覆盖率。未知后缀独立盘点，不冒充源码。下文两个原仓库任务范围及代理分工为 v0.2 接入历史，保留来源而非新增执行或审批要求。
+
+## 原 TS/Rust 接入范围
+
 本轮目标是只读分析 WinWinCode 与 CodePatchBay 的真实源码，不执行目标模块、脚本、构建或测试。不修改这两个仓库。报告、约束配置和数据库放在 CallScope 的 `reports/real-repositories/`。
 
 语言前端使用已捕获的源码文本与固定的 Tree-sitter 语法库，不启动 TypeScript 编译器、Rust 编译器或目标框架。

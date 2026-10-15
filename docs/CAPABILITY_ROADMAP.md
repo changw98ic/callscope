@@ -2,9 +2,15 @@
 
 依据：[Astra CodePatchBay v1](../reports/astra-baseline/CODEPATCHBAY_ANALYSIS.md)、[WinWinCode v1](../reports/astra-baseline/WINWINCODE_ANALYSIS.md) 和 [26 项冻结观察](../reports/astra-baseline/capability-baseline.json)。这些报告和基准保持冻结；后续工具结果另存，不改原观察来迁就实现。
 
-本路线以支持范围内功能闭环和正确判断优先，可扩展性其次，性能最后。当前实现为 v0.14.0，scope2 的[核心与策略已冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)，两库正常纯静态冷/热分析及正式报告已完成并关闭数据库。[原已读有限源码内容正式读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)已完成，complete=true、已知有限内容缺口为空；v0.13 正式结果保留在下方历史记录。固定范围仍是原两份完整分析报告中的有限内容，不设置重复 Astra 审批，也不把五项/30 义务追踪当成全文分母。
+本路线以支持范围内功能闭环和正确判断优先，可扩展性其次，性能最后。当前 v0.15.0 扩展真实项目语言接入；原 v0.14 scope2 的[核心与策略冻结](../reports/astra-iteration12-scope2/CORE_FREEZE.json)、两库冷/热静态结果和[原有限内容正式读回](../reports/astra-iteration12-scope2/ORIGINAL_REPORT_COMPLETION.md)保持原身份，complete=true、已知有限内容缺口为空。不设置重复 Astra 审批，也不把五项/30 义务追踪当成全文分母。
 
-## v0.14 已实现内容与正式结果状态
+## v0.15：复用全语言结构提取，分别确认真实适用性
+
+正常扫描默认 `all`，通过共享目录选择 38 个规范语言/格式 ID。原三套前端保留，其他 35 个 ID 复用固定 CodeGraph 的实际代码与语法；来源、完整目录、Node.js 20–24、323 份来源文件和 31 份压缩语法/32 映射见 [CODEGRAPH_REUSE.md](CODEGRAPH_REUSE.md)。
+
+本轮优先解决主体语言未进入候选盘点的问题，保留项目源码身份、候选及未知。新增关系保持 candidate-only，元数据/模板不冒充完整语义，未扫描语言不标已验证。后续能力改进应以真实项目保存的解析缺口、调用候选和未建模合同为依据；接入数量、grammar 可加载与解析比例均不能替代功能完整性证据。新项目数字由实际扫描报告单独保存，不借用 v0.14 两库结果。
+
+## v0.14 历史已实现内容与正式结果状态
 
 本轮承接 [v0.13 范围差距](../reports/astra-iteration11/REPORT_SCOPE_GAPS.md)中的职责解释与文档部署对照，同时补原 CPB 事件/交付段落的条件式状态沿袭和发布边界。实现已进入固定分析和正常报告路径，不以新字段或规则数量宣布全文目标完成。
 

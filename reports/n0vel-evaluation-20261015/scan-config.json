@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "project": {
+    "name": "n0vel"
+  },
+  "analysis": {
+    "languages": [
+      "python",
+      "typescript",
+      "rust"
+    ]
+  }
+}

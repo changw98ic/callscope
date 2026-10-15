@@ -1,0 +1,11 @@
+{
+  "source_references_verified": 19,
+  "local_report_links_verified": 9,
+  "missing_links": [],
+  "saved_database_quick_check": "ok",
+  "target_working_tree_clean": true,
+  "tool_core_unchanged": true,
+  "primary_language_coverage": "0/891; lib 0/536",
+  "target_executed": false,
+  "tests_run": false
+}
